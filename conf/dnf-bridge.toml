@@ -1,6 +1,7 @@
 archs = [
     "x86_64_v2",
     "aarch64",
+    "riscv64",
 ]
 
 # # this package is available in Alma and EPEL with same version and different checksums
@@ -48,6 +49,10 @@ exclude_packages = [
 
 [[repo]]
 name = "epel-10-kitten"
+
+# EPEL 10 publishes no riscv64 tree (404 on 10/riscv64/repodata), and
+# neither does the AlmaLinux EPEL rebuild
+skip_archs = ["riscv64"]
 
 # Main mirrors are on repo.almalinux.org for current releases and
 # vault.almalinux.org for EOL'd.  Since that depends on the release
