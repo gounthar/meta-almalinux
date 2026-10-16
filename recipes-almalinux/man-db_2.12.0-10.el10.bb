@@ -10,27 +10,28 @@ PACKAGES = " \
  man-db-cron \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/man-db-2.12.0-10.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/man-db-2.12.0-10.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7d913b2bb7e0e09caa4644a9264cfb86ccab4825701e0bd332a7e9e1938a46da"
 
-URI_x86_64_v2_man-db = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/man-db-2.12.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_man-db;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_man-db}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/man-db-2.12.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_man-db;unpack=0"
 SRC_URI[x86_64_v2_man-db.sha256sum] = "60bc47bceade8e2a9431cadb3954e36b8526ed11d895613806d951a45987beba"
-RPROVIDES:man-db:x86_64_v2 = "virtual//usr/bin/man"
+RPROVIDES:man-db:append:x86_64_v2 = " virtual//usr/bin/man"
 
-URI_x86_64_v2_man-db-cron = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/man-db-cron-2.12.0-10.el10.noarch.rpm;name=x86_64_v2_man-db-cron;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_man-db-cron}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/man-db-cron-2.12.0-10.el10.noarch.rpm;name=x86_64_v2_man-db-cron;unpack=0"
 SRC_URI[x86_64_v2_man-db-cron.sha256sum] = "42a6152ab5994e9ef90a68066cb6b0ac6bc5f790a18a5a6199a3fb5a39856f47"
 
-URI_aarch64_man-db = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/man-db-2.12.0-10.el10.aarch64.rpm;name=aarch64_man-db;unpack=0"
-SRC_URI:append = " ${URI_aarch64_man-db}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/man-db-2.12.0-10.el10.aarch64.rpm;name=aarch64_man-db;unpack=0"
 SRC_URI[aarch64_man-db.sha256sum] = "a1376c34dee8d5535ef6874f90d0de33b8e6a7100474f636064875278e3a0b45"
-RPROVIDES:man-db:aarch64 = "virtual//usr/bin/man"
+RPROVIDES:man-db:append:aarch64 = " virtual//usr/bin/man"
 
-URI_aarch64_man-db-cron = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/man-db-cron-2.12.0-10.el10.noarch.rpm;name=aarch64_man-db-cron;unpack=0"
-SRC_URI:append = " ${URI_aarch64_man-db-cron}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/man-db-cron-2.12.0-10.el10.noarch.rpm;name=aarch64_man-db-cron;unpack=0"
 SRC_URI[aarch64_man-db-cron.sha256sum] = "42a6152ab5994e9ef90a68066cb6b0ac6bc5f790a18a5a6199a3fb5a39856f47"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/man-db-2.12.0-10.el10.riscv64.rpm;name=riscv64_man-db;unpack=0"
+SRC_URI[riscv64_man-db.sha256sum] = "b86f071b3e2a17017ea5c7f7f4f5e8a0837515c9c79468ead63835f8e6c7dffe"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/man-db-cron-2.12.0-10.el10.noarch.rpm;name=riscv64_man-db-cron;unpack=0"
+SRC_URI[riscv64_man-db-cron.sha256sum] = "42a6152ab5994e9ef90a68066cb6b0ac6bc5f790a18a5a6199a3fb5a39856f47"
 
 RDEPENDS:man-db = " \
  alternatives \
@@ -50,7 +51,3 @@ RDEPENDS:man-db-cron = " \
  crontabs \
  man-db \
  "
-
-PROVIDES:append:x86_64_v2 = " rpm/virtual//usr/bin/man"
-
-PROVIDES:append:aarch64 = " rpm/virtual//usr/bin/man"

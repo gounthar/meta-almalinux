@@ -9,17 +9,17 @@ PACKAGES = " \
  libphodav \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/phodav-3.0-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/phodav-3.0-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "9c7c352b5b2781e1cb34f7d413372a4d88064ba13929b0a6c19feffb06d7c21d"
 
-URI_x86_64_v2_libphodav = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libphodav-3.0-6.el10.x86_64_v2.rpm;name=x86_64_v2_libphodav;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libphodav}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libphodav-3.0-6.el10.x86_64_v2.rpm;name=x86_64_v2_libphodav;unpack=0"
 SRC_URI[x86_64_v2_libphodav.sha256sum] = "d89d159fa8a5631b872ad8b0ef144fd321c498869a157bda71f82e8ded45764b"
 
-URI_aarch64_libphodav = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libphodav-3.0-6.el10.aarch64.rpm;name=aarch64_libphodav;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libphodav}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libphodav-3.0-6.el10.aarch64.rpm;name=aarch64_libphodav;unpack=0"
 SRC_URI[aarch64_libphodav.sha256sum] = "64826e477b500c465dd1469407b85f2487696bfeaa2a8828d76fb0be6414c434"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libphodav-3.0-6.el10.riscv64.rpm;name=riscv64_libphodav;unpack=0"
+SRC_URI[riscv64_libphodav.sha256sum] = "b0664f88ce873ca8485d4434705b5a9a022f19377232be6659c4fcd3f98a77a3"
 
 RDEPENDS:libphodav = " \
  glib2 \

@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-munge_macro"
 PV = "0.4.7"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-munge_macro+default-devel \
  rust-munge_macro-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-munge_macro+default-devel \
+ rust-munge_macro-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-munge_macro-0.4.7-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-munge_macro-0.4.7-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6f7b530bbd3bcdbb03c44011320bbb58543a5ad442cbce61885e844c4c42713f"
 
-URI_x86_64_v2_rust-munge_macro+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-munge_macro+default-devel-0.4.7-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-munge_macro+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-munge_macro+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-munge_macro+default-devel-0.4.7-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-munge_macro+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-munge_macro+default-devel.sha256sum] = "7b8eca81c7fa06fd239d485a5f8e3d45e9489b272b2149d7d297492375d1b36b"
 
-URI_x86_64_v2_rust-munge_macro-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-munge_macro-devel-0.4.7-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-munge_macro-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-munge_macro-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-munge_macro-devel-0.4.7-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-munge_macro-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-munge_macro-devel.sha256sum] = "e7579acadcb0ce6f1914ca14e692a9162e07b97c73b5b1febee31a803be01e25"
 
-URI_aarch64_rust-munge_macro+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-munge_macro+default-devel-0.4.7-1.el10_2.noarch.rpm;name=aarch64_rust-munge_macro+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-munge_macro+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-munge_macro+default-devel-0.4.7-1.el10_2.noarch.rpm;name=aarch64_rust-munge_macro+default-devel;unpack=0"
 SRC_URI[aarch64_rust-munge_macro+default-devel.sha256sum] = "05a7964cf261317228c820034e6effaca6e18131d8670d5aed0aa919140ef3a7"
 
-URI_aarch64_rust-munge_macro-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-munge_macro-devel-0.4.7-1.el10_2.noarch.rpm;name=aarch64_rust-munge_macro-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-munge_macro-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-munge_macro-devel-0.4.7-1.el10_2.noarch.rpm;name=aarch64_rust-munge_macro-devel;unpack=0"
 SRC_URI[aarch64_rust-munge_macro-devel.sha256sum] = "01d65c532ef14624d0de562677d3a23ace61a75c0c0e6cf30afaa4022a8abddb"
 
 RDEPENDS:rust-munge_macro+default-devel = " \

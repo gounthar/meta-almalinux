@@ -5,12 +5,17 @@ inherit dnf-bridge
 PN = "byobu"
 PV = "6.14"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  byobu \
- "
+"
+PACKAGES:aarch64 = " \
+ byobu \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/b/byobu-6.14-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/b/byobu-6.14-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "abea4f14f946d6178eaa2ca16b84ff352aece5dbd3513afb48a0139e376b8e70"
 
 ## Requires (x86_64_v2) that were seen as not satisfiable in original repo:
@@ -19,12 +24,10 @@ SRC_URI[src.sha256sum] = "abea4f14f946d6178eaa2ca16b84ff352aece5dbd3513afb48a013
 ## Requires (aarch64) that were seen as not satisfiable in original repo:
 # - byobu: tmux
 
-URI_x86_64_v2_byobu = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/byobu-6.14-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_byobu;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_byobu}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/byobu-6.14-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_byobu;unpack=0"
 SRC_URI[x86_64_v2_byobu.sha256sum] = "587d9eb20b4ba1e12f9624d71637decec87cadeaa4898bd01381eab58ee35c8d"
 
-URI_aarch64_byobu = "${EPEL_MIRROR}/aarch64/Packages/b/byobu-6.14-1.el10_2.noarch.rpm;name=aarch64_byobu;unpack=0"
-SRC_URI:append = " ${URI_aarch64_byobu}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/b/byobu-6.14-1.el10_2.noarch.rpm;name=aarch64_byobu;unpack=0"
 SRC_URI[aarch64_byobu.sha256sum] = "c71d7f498d95d0806871266c51597443146020bf5dc8d1fd72780b690924b6b3"
 
 RDEPENDS:byobu = " \

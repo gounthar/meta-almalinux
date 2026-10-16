@@ -15,65 +15,71 @@ PACKAGES = " \
  gvfs-smb \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gvfs-1.54.4-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gvfs-1.54.4-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "98eb27bb53f68d0ede2731bd44ec724dbd9591dd3680c231a24e7b3b65232d1c"
 
-URI_x86_64_v2_gvfs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gvfs-1.54.4-5.el10.x86_64_v2.rpm;name=x86_64_v2_gvfs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gvfs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gvfs-1.54.4-5.el10.x86_64_v2.rpm;name=x86_64_v2_gvfs;unpack=0"
 SRC_URI[x86_64_v2_gvfs.sha256sum] = "e728c706fa3d0cd621590040f7e484aa0f9e6d36c580c545d886de824b0e17e2"
 
-URI_x86_64_v2_gvfs-client = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gvfs-client-1.54.4-5.el10.x86_64_v2.rpm;name=x86_64_v2_gvfs-client;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gvfs-client}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gvfs-client-1.54.4-5.el10.x86_64_v2.rpm;name=x86_64_v2_gvfs-client;unpack=0"
 SRC_URI[x86_64_v2_gvfs-client.sha256sum] = "68d1f339475e7e8444fb216afaf0ef24520536b1c024432af6a50eaba0e164d9"
 
-URI_x86_64_v2_gvfs-fuse = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gvfs-fuse-1.54.4-5.el10.x86_64_v2.rpm;name=x86_64_v2_gvfs-fuse;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gvfs-fuse}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gvfs-fuse-1.54.4-5.el10.x86_64_v2.rpm;name=x86_64_v2_gvfs-fuse;unpack=0"
 SRC_URI[x86_64_v2_gvfs-fuse.sha256sum] = "5d5b4e8a277e36f7a8ef58a00ea040203525436c9b1e952fba38c1525fddfb6b"
 
-URI_x86_64_v2_gvfs-goa = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gvfs-goa-1.54.4-5.el10.x86_64_v2.rpm;name=x86_64_v2_gvfs-goa;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gvfs-goa}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gvfs-goa-1.54.4-5.el10.x86_64_v2.rpm;name=x86_64_v2_gvfs-goa;unpack=0"
 SRC_URI[x86_64_v2_gvfs-goa.sha256sum] = "20d6ace938557eee11befab6485230f0d1f5c9cf7fb0923d70fc1bb4e8f37d96"
 
-URI_x86_64_v2_gvfs-gphoto2 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gvfs-gphoto2-1.54.4-5.el10.x86_64_v2.rpm;name=x86_64_v2_gvfs-gphoto2;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gvfs-gphoto2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gvfs-gphoto2-1.54.4-5.el10.x86_64_v2.rpm;name=x86_64_v2_gvfs-gphoto2;unpack=0"
 SRC_URI[x86_64_v2_gvfs-gphoto2.sha256sum] = "0e3daa66fd863fbe90dd97970a0438f0903e31e39b179c15f2b5ce14b99f71ff"
 
-URI_x86_64_v2_gvfs-mtp = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gvfs-mtp-1.54.4-5.el10.x86_64_v2.rpm;name=x86_64_v2_gvfs-mtp;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gvfs-mtp}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gvfs-mtp-1.54.4-5.el10.x86_64_v2.rpm;name=x86_64_v2_gvfs-mtp;unpack=0"
 SRC_URI[x86_64_v2_gvfs-mtp.sha256sum] = "9fe1c86e23a45990df5fddf7f81d5b256b978d9817720165502d652f061ad593"
 
-URI_x86_64_v2_gvfs-smb = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gvfs-smb-1.54.4-5.el10.x86_64_v2.rpm;name=x86_64_v2_gvfs-smb;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gvfs-smb}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gvfs-smb-1.54.4-5.el10.x86_64_v2.rpm;name=x86_64_v2_gvfs-smb;unpack=0"
 SRC_URI[x86_64_v2_gvfs-smb.sha256sum] = "dac990689a031121749562c2d21b1b95fc7eed67d47b775fbf8c80e054e4a941"
 
-URI_aarch64_gvfs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gvfs-1.54.4-5.el10.aarch64.rpm;name=aarch64_gvfs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gvfs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gvfs-1.54.4-5.el10.aarch64.rpm;name=aarch64_gvfs;unpack=0"
 SRC_URI[aarch64_gvfs.sha256sum] = "16f0053c811bf60a0205f479e8d04c7fb1e027991b51bfbbd893333601094782"
 
-URI_aarch64_gvfs-client = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gvfs-client-1.54.4-5.el10.aarch64.rpm;name=aarch64_gvfs-client;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gvfs-client}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gvfs-client-1.54.4-5.el10.aarch64.rpm;name=aarch64_gvfs-client;unpack=0"
 SRC_URI[aarch64_gvfs-client.sha256sum] = "942bcf5dad4fdc63cdb9c77a3d9688c0465d3c50b17e1e03b13f99f0828f20ae"
 
-URI_aarch64_gvfs-fuse = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gvfs-fuse-1.54.4-5.el10.aarch64.rpm;name=aarch64_gvfs-fuse;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gvfs-fuse}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gvfs-fuse-1.54.4-5.el10.aarch64.rpm;name=aarch64_gvfs-fuse;unpack=0"
 SRC_URI[aarch64_gvfs-fuse.sha256sum] = "474d8ccf107a00a1d1ed044c3bcad3bc37b58ed15faa9595c719f0368e1d972a"
 
-URI_aarch64_gvfs-goa = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gvfs-goa-1.54.4-5.el10.aarch64.rpm;name=aarch64_gvfs-goa;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gvfs-goa}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gvfs-goa-1.54.4-5.el10.aarch64.rpm;name=aarch64_gvfs-goa;unpack=0"
 SRC_URI[aarch64_gvfs-goa.sha256sum] = "19d5941885fe88a793cb775fc715f14bcbda1a3c62bce79d80c3d1eec9b21d90"
 
-URI_aarch64_gvfs-gphoto2 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gvfs-gphoto2-1.54.4-5.el10.aarch64.rpm;name=aarch64_gvfs-gphoto2;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gvfs-gphoto2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gvfs-gphoto2-1.54.4-5.el10.aarch64.rpm;name=aarch64_gvfs-gphoto2;unpack=0"
 SRC_URI[aarch64_gvfs-gphoto2.sha256sum] = "e761b9930dd55ffd8d7c9c2212b39b2faa7f3c5a805057f4f7d2b7a084da3c75"
 
-URI_aarch64_gvfs-mtp = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gvfs-mtp-1.54.4-5.el10.aarch64.rpm;name=aarch64_gvfs-mtp;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gvfs-mtp}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gvfs-mtp-1.54.4-5.el10.aarch64.rpm;name=aarch64_gvfs-mtp;unpack=0"
 SRC_URI[aarch64_gvfs-mtp.sha256sum] = "34937c7e7e3449a64daea21cb0303a7407d409d4e15e619e5ec81d11621ba99d"
 
-URI_aarch64_gvfs-smb = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gvfs-smb-1.54.4-5.el10.aarch64.rpm;name=aarch64_gvfs-smb;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gvfs-smb}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gvfs-smb-1.54.4-5.el10.aarch64.rpm;name=aarch64_gvfs-smb;unpack=0"
 SRC_URI[aarch64_gvfs-smb.sha256sum] = "8f0dc8b577b720164aeb96a950b4e25dec5a68551949f3fc88fd5d350860fe30"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gvfs-1.54.4-5.el10.riscv64.rpm;name=riscv64_gvfs;unpack=0"
+SRC_URI[riscv64_gvfs.sha256sum] = "b78b659ef5344457ab51e5fd6e7a152e8ff242a9fe77e689d67883848dc3b103"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gvfs-client-1.54.4-5.el10.riscv64.rpm;name=riscv64_gvfs-client;unpack=0"
+SRC_URI[riscv64_gvfs-client.sha256sum] = "5bc5e9cfe0d90aa0d7b116ec02bdce802a3c9670a2c8427871ce4d13071d7bd6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gvfs-fuse-1.54.4-5.el10.riscv64.rpm;name=riscv64_gvfs-fuse;unpack=0"
+SRC_URI[riscv64_gvfs-fuse.sha256sum] = "1b766a5430566ec8f97cf3a9f8403cb6843fb0305644e9125a1cb638be81af61"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gvfs-goa-1.54.4-5.el10.riscv64.rpm;name=riscv64_gvfs-goa;unpack=0"
+SRC_URI[riscv64_gvfs-goa.sha256sum] = "969318c0e4c8622d614458d2f33ebdc681f8eb6e36532df0a3045215dd1428a6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gvfs-gphoto2-1.54.4-5.el10.riscv64.rpm;name=riscv64_gvfs-gphoto2;unpack=0"
+SRC_URI[riscv64_gvfs-gphoto2.sha256sum] = "93082d1ddb99584a2e40fdf88e8cf2fdd95d6000ed6f9f416e283fa214f10beb"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gvfs-mtp-1.54.4-5.el10.riscv64.rpm;name=riscv64_gvfs-mtp;unpack=0"
+SRC_URI[riscv64_gvfs-mtp.sha256sum] = "32ea105af0541deb7ba6a2aa121830043fb1d8be5a2afa399d7773ffad4719bc"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gvfs-smb-1.54.4-5.el10.riscv64.rpm;name=riscv64_gvfs-smb;unpack=0"
+SRC_URI[riscv64_gvfs-smb.sha256sum] = "e3cdf8dc00341365c49bb99ffde8981f1baccfa727c3d0c4b51d51788f5fcef5"
 
 RDEPENDS:gvfs = " \
  avahi-glib \

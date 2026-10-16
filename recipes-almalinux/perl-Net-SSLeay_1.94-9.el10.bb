@@ -9,17 +9,17 @@ PACKAGES = " \
  perl-Net-SSLeay \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/perl-Net-SSLeay-1.94-9.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/perl-Net-SSLeay-1.94-9.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b15791f12ce8c09d8e197366c0b21232ea32a1cee70ec1e20d4bbe6e57c6971f"
 
-URI_x86_64_v2_perl-Net-SSLeay = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-Net-SSLeay-1.94-9.el10.x86_64_v2.rpm;name=x86_64_v2_perl-Net-SSLeay;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Net-SSLeay}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-Net-SSLeay-1.94-9.el10.x86_64_v2.rpm;name=x86_64_v2_perl-Net-SSLeay;unpack=0"
 SRC_URI[x86_64_v2_perl-Net-SSLeay.sha256sum] = "5417c4e7d7a0fca40054e91ab614640a5206ab8d6092f51cbe53e8d9059dab80"
 
-URI_aarch64_perl-Net-SSLeay = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-Net-SSLeay-1.94-9.el10.aarch64.rpm;name=aarch64_perl-Net-SSLeay;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Net-SSLeay}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-Net-SSLeay-1.94-9.el10.aarch64.rpm;name=aarch64_perl-Net-SSLeay;unpack=0"
 SRC_URI[aarch64_perl-Net-SSLeay.sha256sum] = "c6566757c38be5e0c5f0f46ce7209e19c4276a70236c65ef99736009b71ff40d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/perl-Net-SSLeay-1.94-9.el10.riscv64.rpm;name=riscv64_perl-Net-SSLeay;unpack=0"
+SRC_URI[riscv64_perl-Net-SSLeay.sha256sum] = "2e8f1304c03ba277423cb23e45c26ee2082f44601d5d55128d5e5f7c4d92bd82"
 
 RDEPENDS:perl-Net-SSLeay = " \
  glibc \

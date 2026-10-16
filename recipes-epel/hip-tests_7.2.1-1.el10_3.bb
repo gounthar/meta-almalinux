@@ -11,13 +11,14 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/h/hip-tests-7.2.1-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/h/hip-tests-7.2.1-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c2316318a1894b96a85cc9171394bc339f17ac521cdc13a8fd531a953d5e776f"
 
-URI_x86_64_v2_hip-tests = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/hip-tests-7.2.1-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_hip-tests;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_hip-tests}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/hip-tests-7.2.1-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_hip-tests;unpack=0"
 SRC_URI[x86_64_v2_hip-tests.sha256sum] = "0d90d86c392827ada3c199f9038eb7c54114978222b6f6cc96377ad7dc5faa93"
 
 RDEPENDS:hip-tests = " \

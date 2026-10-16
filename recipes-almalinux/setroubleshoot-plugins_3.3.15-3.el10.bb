@@ -9,17 +9,17 @@ PACKAGES = " \
  setroubleshoot-plugins \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/setroubleshoot-plugins-3.3.15-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/setroubleshoot-plugins-3.3.15-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "beee02d6aa12e911e0b2d84c58aed8e25427204674c8077f4f90e4da3dc2ba36"
 
-URI_x86_64_v2_setroubleshoot-plugins = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/setroubleshoot-plugins-3.3.15-3.el10.noarch.rpm;name=x86_64_v2_setroubleshoot-plugins;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_setroubleshoot-plugins}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/setroubleshoot-plugins-3.3.15-3.el10.noarch.rpm;name=x86_64_v2_setroubleshoot-plugins;unpack=0"
 SRC_URI[x86_64_v2_setroubleshoot-plugins.sha256sum] = "4b127b8c2fd92e715a79dd06369974299cd7ad37f1cdde7024209ac80fcb15bc"
 
-URI_aarch64_setroubleshoot-plugins = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/setroubleshoot-plugins-3.3.15-3.el10.noarch.rpm;name=aarch64_setroubleshoot-plugins;unpack=0"
-SRC_URI:append = " ${URI_aarch64_setroubleshoot-plugins}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/setroubleshoot-plugins-3.3.15-3.el10.noarch.rpm;name=aarch64_setroubleshoot-plugins;unpack=0"
 SRC_URI[aarch64_setroubleshoot-plugins.sha256sum] = "4b127b8c2fd92e715a79dd06369974299cd7ad37f1cdde7024209ac80fcb15bc"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/setroubleshoot-plugins-3.3.15-3.el10.noarch.rpm;name=riscv64_setroubleshoot-plugins;unpack=0"
+SRC_URI[riscv64_setroubleshoot-plugins.sha256sum] = "4b127b8c2fd92e715a79dd06369974299cd7ad37f1cdde7024209ac80fcb15bc"
 
 RDEPENDS:setroubleshoot-plugins = " \
  "

@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-uu_tac"
 PV = "0.7.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-uu_tac+default-devel \
  rust-uu_tac-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-uu_tac+default-devel \
+ rust-uu_tac-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-uu_tac-0.7.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-uu_tac-0.7.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8b0040623c677fa748a7ffa2a0b35b6af39a64089e17518dc0baab383eb29c40"
 
-URI_x86_64_v2_rust-uu_tac+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_tac+default-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_tac+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_tac+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_tac+default-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_tac+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_tac+default-devel.sha256sum] = "d211fdae3c1a20dadd8f2e599b4714e13bc3bbf4c4231eb4a3f57eba75f6df2d"
 
-URI_x86_64_v2_rust-uu_tac-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_tac-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_tac-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_tac-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_tac-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_tac-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_tac-devel.sha256sum] = "d53f0c343180d4498f9a71059f8517b77958d029a229cc1ca21e2ebe7762d863"
 
-URI_aarch64_rust-uu_tac+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_tac+default-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_tac+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_tac+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_tac+default-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_tac+default-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_tac+default-devel.sha256sum] = "c81a9f1b297d25180358fdbe8b3da4d0b46d0f07871a18175ecdbc280d2c35b1"
 
-URI_aarch64_rust-uu_tac-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_tac-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_tac-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_tac-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_tac-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_tac-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_tac-devel.sha256sum] = "3f1c7df7cac43b8a8be07029d814e0a6807796521899f58e2579c4f029fb7230"
 
 RDEPENDS:rust-uu_tac+default-devel = " \

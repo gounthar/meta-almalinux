@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "kdenlive"
 PV = "26.04.3"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  kdenlive \
- "
+"
+PACKAGES:aarch64 = " \
+ kdenlive \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/k/kdenlive-26.04.3-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/k/kdenlive-26.04.3-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "ea4329bacf837350727c31ed51f41b545c020e8dbf33a0e682d0fb7abadc7a00"
 
-URI_x86_64_v2_kdenlive = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/kdenlive-26.04.3-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_kdenlive;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_kdenlive}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/kdenlive-26.04.3-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_kdenlive;unpack=0"
 SRC_URI[x86_64_v2_kdenlive.sha256sum] = "14542a41519572642d7720b47bba468e685dc24023da86429535e22b6bd851ba"
 
-URI_aarch64_kdenlive = "${EPEL_MIRROR}/aarch64/Packages/k/kdenlive-26.04.3-1.el10_3.aarch64.rpm;name=aarch64_kdenlive;unpack=0"
-SRC_URI:append = " ${URI_aarch64_kdenlive}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/k/kdenlive-26.04.3-1.el10_3.aarch64.rpm;name=aarch64_kdenlive;unpack=0"
 SRC_URI[aarch64_kdenlive.sha256sum] = "392516cc84d377105f2dd56a22a44f3e9934678f51b2ef97348eedbad6f0892d"
 
 RDEPENDS:kdenlive = " \

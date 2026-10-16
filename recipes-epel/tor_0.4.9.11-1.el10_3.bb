@@ -5,23 +5,26 @@ inherit dnf-bridge
 PN = "tor"
 PV = "0.4.9.11"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  tor \
- "
+"
+PACKAGES:aarch64 = " \
+ tor \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/t/tor-0.4.9.11-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/t/tor-0.4.9.11-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a5431a3165740584cffcbdc2f7fc226b081228e3e52772142ad47243333b8411"
 
 ## Requires (aarch64) that were seen as not satisfiable in original repo:
 # - tor: libcap.so.2()(64bit)
 
-URI_x86_64_v2_tor = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/tor-0.4.9.11-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_tor;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_tor}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/tor-0.4.9.11-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_tor;unpack=0"
 SRC_URI[x86_64_v2_tor.sha256sum] = "e30db042f321f4c9d32cfde6646217a0d07750daa21e47450306a3f7ef0a08bc"
 
-URI_aarch64_tor = "${EPEL_MIRROR}/aarch64/Packages/t/tor-0.4.9.11-1.el10_3.aarch64.rpm;name=aarch64_tor;unpack=0"
-SRC_URI:append = " ${URI_aarch64_tor}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/t/tor-0.4.9.11-1.el10_3.aarch64.rpm;name=aarch64_tor;unpack=0"
 SRC_URI[aarch64_tor.sha256sum] = "28e161fc6be873db760bee0d8e2aad03655b06205df78c1d4acb82bba42ea088"
 
 RDEPENDS:tor:x86_64_v2 = " \

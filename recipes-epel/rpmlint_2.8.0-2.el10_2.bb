@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "rpmlint"
 PV = "2.8.0"
 PR = "2.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rpmlint \
- "
+"
+PACKAGES:aarch64 = " \
+ rpmlint \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rpmlint-2.8.0-2.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rpmlint-2.8.0-2.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6a867438cf7c3faa8e94cc0ae19b281649580f3382bfc7a58bf728e4fcf95615"
 
-URI_x86_64_v2_rpmlint = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rpmlint-2.8.0-2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rpmlint;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rpmlint}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rpmlint-2.8.0-2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rpmlint;unpack=0"
 SRC_URI[x86_64_v2_rpmlint.sha256sum] = "4158e5ee048f188f9dc3c2ab0052d9f45e661ecc8853a37560b04212aa818636"
 
-URI_aarch64_rpmlint = "${EPEL_MIRROR}/aarch64/Packages/r/rpmlint-2.8.0-2.el10_2.noarch.rpm;name=aarch64_rpmlint;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rpmlint}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rpmlint-2.8.0-2.el10_2.noarch.rpm;name=aarch64_rpmlint;unpack=0"
 SRC_URI[aarch64_rpmlint.sha256sum] = "eedfd871c719da9aac4a4bda8997d59dd69c2cd0f0ede3e00e44bbe6856f9538"
 
 RDEPENDS:rpmlint = " \

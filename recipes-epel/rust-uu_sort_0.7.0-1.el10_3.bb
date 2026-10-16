@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "rust-uu_sort"
 PV = "0.7.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-uu_sort+default-devel \
  rust-uu_sort+i18n-collator-devel \
  rust-uu_sort-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-uu_sort+default-devel \
+ rust-uu_sort+i18n-collator-devel \
+ rust-uu_sort-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-uu_sort-0.7.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-uu_sort-0.7.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "87c5b7652fbc57155457dbe73a56bad998cc96e18f2478af6a1105de65a50f41"
 
-URI_x86_64_v2_rust-uu_sort+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_sort+default-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_sort+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_sort+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_sort+default-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_sort+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_sort+default-devel.sha256sum] = "6c5bb8f7400be98fb272af97e04b84562191031b2fcf4e3d4583c24fce86abc8"
 
-URI_x86_64_v2_rust-uu_sort+i18n-collator-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_sort+i18n-collator-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_sort+i18n-collator-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_sort+i18n-collator-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_sort+i18n-collator-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_sort+i18n-collator-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_sort+i18n-collator-devel.sha256sum] = "eaa41a02890c203fd50d86d6cf439ca0377dcbd00b9ffd13316aac143f7fbcac"
 
-URI_x86_64_v2_rust-uu_sort-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_sort-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_sort-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_sort-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_sort-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_sort-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_sort-devel.sha256sum] = "14808e361655ffa86092009874fc88383428e105427cb59426399f73ba4a78c6"
 
-URI_aarch64_rust-uu_sort+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_sort+default-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_sort+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_sort+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_sort+default-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_sort+default-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_sort+default-devel.sha256sum] = "104265e57476004a17bbe0b5acc49a9c50b6eb01968f576996ee22e11d9bf145"
 
-URI_aarch64_rust-uu_sort+i18n-collator-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_sort+i18n-collator-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_sort+i18n-collator-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_sort+i18n-collator-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_sort+i18n-collator-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_sort+i18n-collator-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_sort+i18n-collator-devel.sha256sum] = "ee8853703446928dfeea75bd289f654a294a8b2e5440e80a9d30269629d0cc37"
 
-URI_aarch64_rust-uu_sort-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_sort-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_sort-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_sort-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_sort-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_sort-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_sort-devel.sha256sum] = "28845256498bf4eec923fd497dc7485d65f53e5c1942da5d3023875928a00351"
 
 RDEPENDS:rust-uu_sort+default-devel = " \

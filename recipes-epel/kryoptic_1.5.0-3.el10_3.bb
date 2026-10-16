@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "kryoptic"
 PV = "1.5.0"
 PR = "3.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  kryoptic \
  kryoptic-tools \
- "
+"
+PACKAGES:aarch64 = " \
+ kryoptic \
+ kryoptic-tools \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/k/kryoptic-1.5.0-3.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/k/kryoptic-1.5.0-3.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b1532c489a8b0187b240b9e355a5721019a192abba58446e35937872a4c31a66"
 
-URI_x86_64_v2_kryoptic = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/kryoptic-1.5.0-3.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_kryoptic;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_kryoptic}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/kryoptic-1.5.0-3.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_kryoptic;unpack=0"
 SRC_URI[x86_64_v2_kryoptic.sha256sum] = "403f509a48cb47d40bfe1d565e2ad5779ecf2a80cfd51354cf54dea754ff3434"
 
-URI_x86_64_v2_kryoptic-tools = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/kryoptic-tools-1.5.0-3.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_kryoptic-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_kryoptic-tools}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/kryoptic-tools-1.5.0-3.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_kryoptic-tools;unpack=0"
 SRC_URI[x86_64_v2_kryoptic-tools.sha256sum] = "0590b8c07a3c9bdcd2cca232b40ddbdfb9d133830ba37b4bd4861165c06c5cd3"
 
-URI_aarch64_kryoptic = "${EPEL_MIRROR}/aarch64/Packages/k/kryoptic-1.5.0-3.el10_3.aarch64.rpm;name=aarch64_kryoptic;unpack=0"
-SRC_URI:append = " ${URI_aarch64_kryoptic}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/k/kryoptic-1.5.0-3.el10_3.aarch64.rpm;name=aarch64_kryoptic;unpack=0"
 SRC_URI[aarch64_kryoptic.sha256sum] = "e70fd09fc47573f47eb2fdf21ce226cbd6720b9851623d07160c811aa9f2eb28"
 
-URI_aarch64_kryoptic-tools = "${EPEL_MIRROR}/aarch64/Packages/k/kryoptic-tools-1.5.0-3.el10_3.aarch64.rpm;name=aarch64_kryoptic-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_kryoptic-tools}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/k/kryoptic-tools-1.5.0-3.el10_3.aarch64.rpm;name=aarch64_kryoptic-tools;unpack=0"
 SRC_URI[aarch64_kryoptic-tools.sha256sum] = "076d343c4890b284ffa0428d2963f29bf4c6729bbb833e2f1f59670a3d7af44e"
 
 RDEPENDS:kryoptic = " \

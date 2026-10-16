@@ -10,25 +10,26 @@ PACKAGES = " \
  xdg-desktop-portal-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/xdg-desktop-portal-1.20.0-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/xdg-desktop-portal-1.20.0-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c7e258c2ea654d97eb9ae6e547cb40e989bf7930a850a4f8a1bdaf7b5afe9406"
 
-URI_x86_64_v2_xdg-desktop-portal = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/xdg-desktop-portal-1.20.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_xdg-desktop-portal;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_xdg-desktop-portal}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/xdg-desktop-portal-1.20.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_xdg-desktop-portal;unpack=0"
 SRC_URI[x86_64_v2_xdg-desktop-portal.sha256sum] = "77ce12ed213e63a1da518a1399e6bd63176b308c229acb9246442927771d4707"
 
-URI_x86_64_v2_xdg-desktop-portal-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/xdg-desktop-portal-devel-1.20.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_xdg-desktop-portal-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_xdg-desktop-portal-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/xdg-desktop-portal-devel-1.20.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_xdg-desktop-portal-devel;unpack=0"
 SRC_URI[x86_64_v2_xdg-desktop-portal-devel.sha256sum] = "62c224f07830388fc61bcecee8b03695e1dcaf739ce948e97a7152fc6955eb61"
 
-URI_aarch64_xdg-desktop-portal = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/xdg-desktop-portal-1.20.0-2.el10.aarch64.rpm;name=aarch64_xdg-desktop-portal;unpack=0"
-SRC_URI:append = " ${URI_aarch64_xdg-desktop-portal}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/xdg-desktop-portal-1.20.0-2.el10.aarch64.rpm;name=aarch64_xdg-desktop-portal;unpack=0"
 SRC_URI[aarch64_xdg-desktop-portal.sha256sum] = "a435704d4c56b8388eb8842282100129729053c82d32d7219851efd12a657a23"
 
-URI_aarch64_xdg-desktop-portal-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/xdg-desktop-portal-devel-1.20.0-2.el10.aarch64.rpm;name=aarch64_xdg-desktop-portal-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_xdg-desktop-portal-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/xdg-desktop-portal-devel-1.20.0-2.el10.aarch64.rpm;name=aarch64_xdg-desktop-portal-devel;unpack=0"
 SRC_URI[aarch64_xdg-desktop-portal-devel.sha256sum] = "b4b3ebabf5769bdacc22d0b4b23085e9a60f9fc93e6e065fd9698b00d81b8ec6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/xdg-desktop-portal-1.20.0-2.el10.riscv64.rpm;name=riscv64_xdg-desktop-portal;unpack=0"
+SRC_URI[riscv64_xdg-desktop-portal.sha256sum] = "5fc7b290aba1a3721295c32ad595b2d103cb4a82172f03d3cfbefd6933a409ce"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/xdg-desktop-portal-devel-1.20.0-2.el10.riscv64.rpm;name=riscv64_xdg-desktop-portal-devel;unpack=0"
+SRC_URI[riscv64_xdg-desktop-portal-devel.sha256sum] = "6fac674a4a60f4669282f9282f517527249e2600f408a65ebd7e5cc86e98f1a9"
 
 RDEPENDS:xdg-desktop-portal = " \
  bash \

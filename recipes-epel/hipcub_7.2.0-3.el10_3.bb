@@ -11,13 +11,14 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/h/hipcub-7.2.0-3.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/h/hipcub-7.2.0-3.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8548ce6e49f236cfb9b591adec9b3349046f655c196a1fba84c179fbbe9a43f1"
 
-URI_x86_64_v2_hipcub-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/hipcub-devel-7.2.0-3.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_hipcub-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_hipcub-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/hipcub-devel-7.2.0-3.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_hipcub-devel;unpack=0"
 SRC_URI[x86_64_v2_hipcub-devel.sha256sum] = "2a155bfa98a212e1a8e97d6d548bd40fd23e93c8ec4284d7a907bd77f7d7e94c"
 
 RDEPENDS:hipcub-devel = " \

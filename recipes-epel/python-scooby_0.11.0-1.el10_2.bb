@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-scooby"
 PV = "0.11.0"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-scooby \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-scooby \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-scooby-0.11.0-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-scooby-0.11.0-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "83a1965b4d3bf5b192413f54130de36dc03b610f589e8015f413c5f3ce51f3ea"
 
-URI_x86_64_v2_python3-scooby = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-scooby-0.11.0-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-scooby;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-scooby}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-scooby-0.11.0-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-scooby;unpack=0"
 SRC_URI[x86_64_v2_python3-scooby.sha256sum] = "754a65a432b144380a9e590b26c017cb4ba9701bae73381e7e7b8955c6dec939"
 
-URI_aarch64_python3-scooby = "${EPEL_MIRROR}/aarch64/Packages/p/python3-scooby-0.11.0-1.el10_2.noarch.rpm;name=aarch64_python3-scooby;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-scooby}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-scooby-0.11.0-1.el10_2.noarch.rpm;name=aarch64_python3-scooby;unpack=0"
 SRC_URI[aarch64_python3-scooby.sha256sum] = "2313c573f2eb1efe0cb201bad8956e1e0ca30c78412f3376a40d5a0c02c71d16"
 
 RDEPENDS:python3-scooby = " \

@@ -11,33 +11,35 @@ PACKAGES = " \
  stratisd-tools \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/stratisd-3.9.1-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/stratisd-3.9.1-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6bbcdecd438e38de36313e9f07154fd090be44b667bc1775879370a81c17839b"
 
-URI_x86_64_v2_stratisd = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/stratisd-3.9.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_stratisd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_stratisd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/stratisd-3.9.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_stratisd;unpack=0"
 SRC_URI[x86_64_v2_stratisd.sha256sum] = "2c9180152d924f21e5b7319cf0d4889d205e91c3e3c2002c4ca6a21ad8dde230"
 
-URI_x86_64_v2_stratisd-dracut = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/stratisd-dracut-3.9.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_stratisd-dracut;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_stratisd-dracut}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/stratisd-dracut-3.9.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_stratisd-dracut;unpack=0"
 SRC_URI[x86_64_v2_stratisd-dracut.sha256sum] = "1a752feb90c5e5c3ddebc8e545703d0b91443dfe1f0c6c798804df235705ef97"
 
-URI_x86_64_v2_stratisd-tools = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/stratisd-tools-3.9.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_stratisd-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_stratisd-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/stratisd-tools-3.9.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_stratisd-tools;unpack=0"
 SRC_URI[x86_64_v2_stratisd-tools.sha256sum] = "fcbd05fdb21022dc045a647302e9c5f3cc5739aa637aa8ce7131154974234016"
 
-URI_aarch64_stratisd = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/stratisd-3.9.1-1.el10.aarch64.rpm;name=aarch64_stratisd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_stratisd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/stratisd-3.9.1-1.el10.aarch64.rpm;name=aarch64_stratisd;unpack=0"
 SRC_URI[aarch64_stratisd.sha256sum] = "065eb365142cd066f6fc033580bdcd2f43ed766c6ab734f69307db25e8dde4a6"
 
-URI_aarch64_stratisd-dracut = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/stratisd-dracut-3.9.1-1.el10.aarch64.rpm;name=aarch64_stratisd-dracut;unpack=0"
-SRC_URI:append = " ${URI_aarch64_stratisd-dracut}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/stratisd-dracut-3.9.1-1.el10.aarch64.rpm;name=aarch64_stratisd-dracut;unpack=0"
 SRC_URI[aarch64_stratisd-dracut.sha256sum] = "dee66a2971596686da9d7f87369b18018aba43848e7367daaa556c3b24392cbd"
 
-URI_aarch64_stratisd-tools = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/stratisd-tools-3.9.1-1.el10.aarch64.rpm;name=aarch64_stratisd-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_stratisd-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/stratisd-tools-3.9.1-1.el10.aarch64.rpm;name=aarch64_stratisd-tools;unpack=0"
 SRC_URI[aarch64_stratisd-tools.sha256sum] = "099bdc6201e13ffe8e6b85663a8dc732397a74219f751b6e6e63657c5d68c420"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/stratisd-3.9.1-1.el10.riscv64.rpm;name=riscv64_stratisd;unpack=0"
+SRC_URI[riscv64_stratisd.sha256sum] = "9ab646a5c6988200eb62f59fdfd5b35c2dd9b2f1027f03fd09caed5ac9e202b6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/stratisd-dracut-3.9.1-1.el10.riscv64.rpm;name=riscv64_stratisd-dracut;unpack=0"
+SRC_URI[riscv64_stratisd-dracut.sha256sum] = "c7e39fbd7fde7e549a732adf092a887ef29ad728837264d9900b89644fe57903"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/stratisd-tools-3.9.1-1.el10.riscv64.rpm;name=riscv64_stratisd-tools;unpack=0"
+SRC_URI[riscv64_stratisd-tools.sha256sum] = "329bb8df5c71ebc3368d069734eca1e94359267cd77b38402031b005c0dde16d"
 
 RDEPENDS:stratisd = " \
  bash \

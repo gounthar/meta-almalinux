@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-DateTime-Calendar-Julian"
 PV = "0.107"
 PR = "9.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-DateTime-Calendar-Julian \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-DateTime-Calendar-Julian \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-DateTime-Calendar-Julian-0.107-9.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-DateTime-Calendar-Julian-0.107-9.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "aa81c629ed32fb143262ff3a9f448c59af59b705a7156e06d5ef00f27b6872fe"
 
-URI_x86_64_v2_perl-DateTime-Calendar-Julian = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-DateTime-Calendar-Julian-0.107-9.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-DateTime-Calendar-Julian;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-DateTime-Calendar-Julian}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-DateTime-Calendar-Julian-0.107-9.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-DateTime-Calendar-Julian;unpack=0"
 SRC_URI[x86_64_v2_perl-DateTime-Calendar-Julian.sha256sum] = "1d2eb9a0ee1193671ae7b8190bd3712f3697848876e3df70c0722ba780b26257"
 
-URI_aarch64_perl-DateTime-Calendar-Julian = "${EPEL_MIRROR}/aarch64/Packages/p/perl-DateTime-Calendar-Julian-0.107-9.el10_3.noarch.rpm;name=aarch64_perl-DateTime-Calendar-Julian;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-DateTime-Calendar-Julian}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-DateTime-Calendar-Julian-0.107-9.el10_3.noarch.rpm;name=aarch64_perl-DateTime-Calendar-Julian;unpack=0"
 SRC_URI[aarch64_perl-DateTime-Calendar-Julian.sha256sum] = "7c2de28ba24ced8960282114762751f063df9d53e47fc42a1928ab770e5cf62d"
 
 RDEPENDS:perl-DateTime-Calendar-Julian = " \

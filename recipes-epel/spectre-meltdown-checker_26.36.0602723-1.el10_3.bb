@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "spectre-meltdown-checker"
 PV = "26.36.0602723"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  spectre-meltdown-checker \
- "
+"
+PACKAGES:aarch64 = " \
+ spectre-meltdown-checker \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/s/spectre-meltdown-checker-26.36.0602723-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/s/spectre-meltdown-checker-26.36.0602723-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f44fce673612205c8a86f5e6124256230fdca8251d3dbc7af6bbc3ffb537b8d9"
 
-URI_x86_64_v2_spectre-meltdown-checker = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/spectre-meltdown-checker-26.36.0602723-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_spectre-meltdown-checker;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_spectre-meltdown-checker}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/spectre-meltdown-checker-26.36.0602723-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_spectre-meltdown-checker;unpack=0"
 SRC_URI[x86_64_v2_spectre-meltdown-checker.sha256sum] = "36ea9fed553ac20ae6973f77d0f2b04612836bea36c99adb1810f86ac57e44d3"
 
-URI_aarch64_spectre-meltdown-checker = "${EPEL_MIRROR}/aarch64/Packages/s/spectre-meltdown-checker-26.36.0602723-1.el10_3.noarch.rpm;name=aarch64_spectre-meltdown-checker;unpack=0"
-SRC_URI:append = " ${URI_aarch64_spectre-meltdown-checker}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/s/spectre-meltdown-checker-26.36.0602723-1.el10_3.noarch.rpm;name=aarch64_spectre-meltdown-checker;unpack=0"
 SRC_URI[aarch64_spectre-meltdown-checker.sha256sum] = "ddb9c51cb13a6f9bc6dd14898712726cf48bcc1f3af3943a7fcff5196df0e915"
 
 RDEPENDS:spectre-meltdown-checker = " \

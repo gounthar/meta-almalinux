@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "atari800"
 PV = "6.0.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  atari800 \
- "
+"
+PACKAGES:aarch64 = " \
+ atari800 \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/a/atari800-6.0.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/a/atari800-6.0.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "81974b7f6775060c2594885e0b4653f3e3d60ff4250aa41a3080c54f74b0f37d"
 
-URI_x86_64_v2_atari800 = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/atari800-6.0.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_atari800;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_atari800}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/atari800-6.0.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_atari800;unpack=0"
 SRC_URI[x86_64_v2_atari800.sha256sum] = "5416fdb1b60a0402d61b06a9a6009df6f77e460e4f5947adeb1f24cfb82d6f13"
 
-URI_aarch64_atari800 = "${EPEL_MIRROR}/aarch64/Packages/a/atari800-6.0.0-1.el10_3.aarch64.rpm;name=aarch64_atari800;unpack=0"
-SRC_URI:append = " ${URI_aarch64_atari800}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/a/atari800-6.0.0-1.el10_3.aarch64.rpm;name=aarch64_atari800;unpack=0"
 SRC_URI[aarch64_atari800.sha256sum] = "979e3e69f163830a1a72cb4d2519fd0eb648d33d1ddb4977cf28c403a0eed7cd"
 
 RDEPENDS:atari800 = " \

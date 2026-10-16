@@ -11,33 +11,35 @@ PACKAGES = " \
  rsync-rrsync \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/rsync-3.4.4-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/rsync-3.4.4-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e8e1f1ddd2c1c9a4d22028724abe65170341ab30d8acb2c301e18c52d1dc4b37"
 
-URI_x86_64_v2_rsync = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/rsync-3.4.4-1.el10.x86_64_v2.rpm;name=x86_64_v2_rsync;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rsync}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/rsync-3.4.4-1.el10.x86_64_v2.rpm;name=x86_64_v2_rsync;unpack=0"
 SRC_URI[x86_64_v2_rsync.sha256sum] = "9f16a649a175f16c2094e6167a4417079dccd13dc5ec8672218c63dee7875136"
 
-URI_x86_64_v2_rsync-daemon = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/rsync-daemon-3.4.4-1.el10.noarch.rpm;name=x86_64_v2_rsync-daemon;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rsync-daemon}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/rsync-daemon-3.4.4-1.el10.noarch.rpm;name=x86_64_v2_rsync-daemon;unpack=0"
 SRC_URI[x86_64_v2_rsync-daemon.sha256sum] = "4e6a008fe8401f93aa88e8f3d978aa112af41c6d1dcaca70bf93647ed16e54ef"
 
-URI_x86_64_v2_rsync-rrsync = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/rsync-rrsync-3.4.4-1.el10.noarch.rpm;name=x86_64_v2_rsync-rrsync;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rsync-rrsync}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/rsync-rrsync-3.4.4-1.el10.noarch.rpm;name=x86_64_v2_rsync-rrsync;unpack=0"
 SRC_URI[x86_64_v2_rsync-rrsync.sha256sum] = "7eb809b739f18ef35a3ee5b4daa4186e104eec015562a8730ed2534f1e6838db"
 
-URI_aarch64_rsync = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/rsync-3.4.4-1.el10.aarch64.rpm;name=aarch64_rsync;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rsync}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/rsync-3.4.4-1.el10.aarch64.rpm;name=aarch64_rsync;unpack=0"
 SRC_URI[aarch64_rsync.sha256sum] = "a2c9437aaea6b53d691052b0c0123020ce464bbdbd74a82feb5f570c7ddaedf5"
 
-URI_aarch64_rsync-daemon = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/rsync-daemon-3.4.4-1.el10.noarch.rpm;name=aarch64_rsync-daemon;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rsync-daemon}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/rsync-daemon-3.4.4-1.el10.noarch.rpm;name=aarch64_rsync-daemon;unpack=0"
 SRC_URI[aarch64_rsync-daemon.sha256sum] = "4e6a008fe8401f93aa88e8f3d978aa112af41c6d1dcaca70bf93647ed16e54ef"
 
-URI_aarch64_rsync-rrsync = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/rsync-rrsync-3.4.4-1.el10.noarch.rpm;name=aarch64_rsync-rrsync;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rsync-rrsync}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/rsync-rrsync-3.4.4-1.el10.noarch.rpm;name=aarch64_rsync-rrsync;unpack=0"
 SRC_URI[aarch64_rsync-rrsync.sha256sum] = "7eb809b739f18ef35a3ee5b4daa4186e104eec015562a8730ed2534f1e6838db"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/rsync-3.4.4-1.el10.riscv64.rpm;name=riscv64_rsync;unpack=0"
+SRC_URI[riscv64_rsync.sha256sum] = "5c4ecab9f0041365c58437d43cbcacaf4327c7eaa61a5fee9668a7c2399c068a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/rsync-daemon-3.4.4-1.el10.noarch.rpm;name=riscv64_rsync-daemon;unpack=0"
+SRC_URI[riscv64_rsync-daemon.sha256sum] = "4e6a008fe8401f93aa88e8f3d978aa112af41c6d1dcaca70bf93647ed16e54ef"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/rsync-rrsync-3.4.4-1.el10.noarch.rpm;name=riscv64_rsync-rrsync;unpack=0"
+SRC_URI[riscv64_rsync-rrsync.sha256sum] = "7eb809b739f18ef35a3ee5b4daa4186e104eec015562a8730ed2534f1e6838db"
 
 RDEPENDS:rsync = " \
  bash \

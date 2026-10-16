@@ -9,17 +9,17 @@ PACKAGES = " \
  sblim-wbemcli \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/sblim-wbemcli-1.6.3-30.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/sblim-wbemcli-1.6.3-30.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e618bfad53b6d19713d53e4a938d949a38f25a0a12cf9a7685d60a9907137576"
 
-URI_x86_64_v2_sblim-wbemcli = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sblim-wbemcli-1.6.3-30.el10.x86_64_v2.rpm;name=x86_64_v2_sblim-wbemcli;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_sblim-wbemcli}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sblim-wbemcli-1.6.3-30.el10.x86_64_v2.rpm;name=x86_64_v2_sblim-wbemcli;unpack=0"
 SRC_URI[x86_64_v2_sblim-wbemcli.sha256sum] = "81fce9826e78b71b19a41897dc2aa2bab7921a76fb351e6919810caa875aa35a"
 
-URI_aarch64_sblim-wbemcli = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/sblim-wbemcli-1.6.3-30.el10.aarch64.rpm;name=aarch64_sblim-wbemcli;unpack=0"
-SRC_URI:append = " ${URI_aarch64_sblim-wbemcli}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/sblim-wbemcli-1.6.3-30.el10.aarch64.rpm;name=aarch64_sblim-wbemcli;unpack=0"
 SRC_URI[aarch64_sblim-wbemcli.sha256sum] = "3a6b18bc276412decef911c6768a52b3bb21fadd200ae0be749a45a6696719c7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/sblim-wbemcli-1.6.3-30.el10.riscv64.rpm;name=riscv64_sblim-wbemcli;unpack=0"
+SRC_URI[riscv64_sblim-wbemcli.sha256sum] = "4a9baf0490d034bd4064c2356a10290d826567da8b18b1b18d80b1f67bfae7aa"
 
 RDEPENDS:sblim-wbemcli = " \
  curl \

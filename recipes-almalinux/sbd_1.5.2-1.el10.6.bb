@@ -9,17 +9,17 @@ PACKAGES = " \
  sbd \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/sbd-1.5.2-1.el10.6.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/sbd-1.5.2-1.el10.6.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7a6d9866921df6ddc77fb84775bb8480a0876fdac65e5bca03b46f0bf400ee81"
 
-URI_x86_64_v2_sbd = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sbd-1.5.2-1.el10.6.x86_64_v2.rpm;name=x86_64_v2_sbd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_sbd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sbd-1.5.2-1.el10.6.x86_64_v2.rpm;name=x86_64_v2_sbd;unpack=0"
 SRC_URI[x86_64_v2_sbd.sha256sum] = "46526e19d64471e071c95f7e8968e9819c614100a370fede7b54fb047334a06b"
 
-URI_aarch64_sbd = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/sbd-1.5.2-1.el10.6.aarch64.rpm;name=aarch64_sbd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_sbd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/sbd-1.5.2-1.el10.6.aarch64.rpm;name=aarch64_sbd;unpack=0"
 SRC_URI[aarch64_sbd.sha256sum] = "d3134220dc5a41590a0954f7a65817d3cc0aa3d93719af5777e1790ce1a0bb98"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/sbd-1.5.2-1.el10.6.riscv64.rpm;name=riscv64_sbd;unpack=0"
+SRC_URI[riscv64_sbd.sha256sum] = "e3684ea22f51b4ccd3d4f988febab53ee253f14cea36d3373332bdc9f734bf3b"
 
 RDEPENDS:sbd = " \
  bash \

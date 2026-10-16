@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-dav1d"
 PV = "0.11.1"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-dav1d+default-devel \
  rust-dav1d-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-dav1d+default-devel \
+ rust-dav1d-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-dav1d-0.11.1-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-dav1d-0.11.1-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "0c4d0ae3147bd1571eae877b7dade1b6a48307ab711ceae441768d6031fd151a"
 
-URI_x86_64_v2_rust-dav1d+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-dav1d+default-devel-0.11.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-dav1d+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-dav1d+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-dav1d+default-devel-0.11.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-dav1d+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-dav1d+default-devel.sha256sum] = "6bbeaab333eeed0a33a53f476e7bd1c7f19d75f928d19bc7eae26288fa987b0f"
 
-URI_x86_64_v2_rust-dav1d-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-dav1d-devel-0.11.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-dav1d-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-dav1d-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-dav1d-devel-0.11.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-dav1d-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-dav1d-devel.sha256sum] = "c513936bb9a2565a77123c20b3d8676a387792ede6f530bdc07bdef231f05c1c"
 
-URI_aarch64_rust-dav1d+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-dav1d+default-devel-0.11.1-1.el10_2.noarch.rpm;name=aarch64_rust-dav1d+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-dav1d+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-dav1d+default-devel-0.11.1-1.el10_2.noarch.rpm;name=aarch64_rust-dav1d+default-devel;unpack=0"
 SRC_URI[aarch64_rust-dav1d+default-devel.sha256sum] = "998d6fdf97dbf6341b06155319e0f9c1893b1b8d0922133bf1675ca14a05d7d6"
 
-URI_aarch64_rust-dav1d-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-dav1d-devel-0.11.1-1.el10_2.noarch.rpm;name=aarch64_rust-dav1d-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-dav1d-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-dav1d-devel-0.11.1-1.el10_2.noarch.rpm;name=aarch64_rust-dav1d-devel;unpack=0"
 SRC_URI[aarch64_rust-dav1d-devel.sha256sum] = "27cd157cc8cbab305546da9cd6de5d35e8de2cdf9007ecc1ecbef7cc358aab3d"
 
 RDEPENDS:rust-dav1d+default-devel = " \

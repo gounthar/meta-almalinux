@@ -11,33 +11,35 @@ PACKAGES = " \
  coreos-installer-dracut \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/rust-coreos-installer-0.26.0-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/rust-coreos-installer-0.26.0-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "876bc42c2260a87eb9b7e6f54ea79dfcfd426c27fc40377689d68bec7809ad5f"
 
-URI_x86_64_v2_coreos-installer = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/coreos-installer-0.26.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_coreos-installer;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_coreos-installer}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/coreos-installer-0.26.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_coreos-installer;unpack=0"
 SRC_URI[x86_64_v2_coreos-installer.sha256sum] = "169aa3d5f31221e7ba7c0468581e4f5b76af16632ee742ad1a7a884ff88cae63"
 
-URI_x86_64_v2_coreos-installer-bootinfra = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/coreos-installer-bootinfra-0.26.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_coreos-installer-bootinfra;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_coreos-installer-bootinfra}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/coreos-installer-bootinfra-0.26.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_coreos-installer-bootinfra;unpack=0"
 SRC_URI[x86_64_v2_coreos-installer-bootinfra.sha256sum] = "4cc818ad5bab5387eb9ee41c52b7b8282f68487a16975ab0c919fd24d4dcebeb"
 
-URI_x86_64_v2_coreos-installer-dracut = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/coreos-installer-dracut-0.26.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_coreos-installer-dracut;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_coreos-installer-dracut}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/coreos-installer-dracut-0.26.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_coreos-installer-dracut;unpack=0"
 SRC_URI[x86_64_v2_coreos-installer-dracut.sha256sum] = "42cda7aab59a70198165820249b9e6fc7cd4f0a7c8fb40c0b721fdbdd6747532"
 
-URI_aarch64_coreos-installer = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/coreos-installer-0.26.0-1.el10.aarch64.rpm;name=aarch64_coreos-installer;unpack=0"
-SRC_URI:append = " ${URI_aarch64_coreos-installer}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/coreos-installer-0.26.0-1.el10.aarch64.rpm;name=aarch64_coreos-installer;unpack=0"
 SRC_URI[aarch64_coreos-installer.sha256sum] = "806e74885eaaf1d5f3cce2e1ce6c73bd8da40686ac146ed9c0192b4c54714790"
 
-URI_aarch64_coreos-installer-bootinfra = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/coreos-installer-bootinfra-0.26.0-1.el10.aarch64.rpm;name=aarch64_coreos-installer-bootinfra;unpack=0"
-SRC_URI:append = " ${URI_aarch64_coreos-installer-bootinfra}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/coreos-installer-bootinfra-0.26.0-1.el10.aarch64.rpm;name=aarch64_coreos-installer-bootinfra;unpack=0"
 SRC_URI[aarch64_coreos-installer-bootinfra.sha256sum] = "eeacf80c59262548543f36e3e3037c86eca31abafdf3371e3f2466368bfb7382"
 
-URI_aarch64_coreos-installer-dracut = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/coreos-installer-dracut-0.26.0-1.el10.aarch64.rpm;name=aarch64_coreos-installer-dracut;unpack=0"
-SRC_URI:append = " ${URI_aarch64_coreos-installer-dracut}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/coreos-installer-dracut-0.26.0-1.el10.aarch64.rpm;name=aarch64_coreos-installer-dracut;unpack=0"
 SRC_URI[aarch64_coreos-installer-dracut.sha256sum] = "a93eec25ec491201d7655e92611ccb8ab4edfaedb365cef67433483143177851"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/coreos-installer-0.26.0-1.el10.riscv64.rpm;name=riscv64_coreos-installer;unpack=0"
+SRC_URI[riscv64_coreos-installer.sha256sum] = "0b2ab9755073dd0d40e480b9f703cad059a5241e46bbec4dbbfd7cd2896268e3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/coreos-installer-bootinfra-0.26.0-1.el10.riscv64.rpm;name=riscv64_coreos-installer-bootinfra;unpack=0"
+SRC_URI[riscv64_coreos-installer-bootinfra.sha256sum] = "b0ff1b3a88cf7064c7106471906490dc64a29ffdfc86783979d60f27138ca737"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/coreos-installer-dracut-0.26.0-1.el10.riscv64.rpm;name=riscv64_coreos-installer-dracut;unpack=0"
+SRC_URI[riscv64_coreos-installer-dracut.sha256sum] = "6dcd77f9e346013543a1fe3b35ebcfe8f9d084341dd8f04aa3fcaaa508bbcfe7"
 
 RDEPENDS:coreos-installer = " \
  glibc \

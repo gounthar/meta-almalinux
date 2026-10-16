@@ -10,17 +10,17 @@ PACKAGES = " \
  perl-Time-HiRes \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/perl-Time-HiRes-1.9777-511.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/perl-Time-HiRes-1.9777-511.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "acf560edda9c5c71bc406417c785562c209b323c55a22bb1032e8819355185e3"
 
-URI_x86_64_v2_perl-Time-HiRes = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-Time-HiRes-1.9777-511.el10.x86_64_v2.rpm;name=x86_64_v2_perl-Time-HiRes;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Time-HiRes}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-Time-HiRes-1.9777-511.el10.x86_64_v2.rpm;name=x86_64_v2_perl-Time-HiRes;unpack=0"
 SRC_URI[x86_64_v2_perl-Time-HiRes.sha256sum] = "3455b85c9e797a4b5d52bca28472e18b989c80bf048fc6b155a6192633c5088d"
 
-URI_aarch64_perl-Time-HiRes = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-Time-HiRes-1.9777-511.el10.aarch64.rpm;name=aarch64_perl-Time-HiRes;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Time-HiRes}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-Time-HiRes-1.9777-511.el10.aarch64.rpm;name=aarch64_perl-Time-HiRes;unpack=0"
 SRC_URI[aarch64_perl-Time-HiRes.sha256sum] = "4d9efaaa85e93e7bd81637a404f9f9ec3a752b47d1d9af1071803e5b64d8c5bd"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/perl-Time-HiRes-1.9777-511.el10.riscv64.rpm;name=riscv64_perl-Time-HiRes;unpack=0"
+SRC_URI[riscv64_perl-Time-HiRes.sha256sum] = "4fd643df194b9dd96209413d354e868041ba4c5382c7fa50cb2f6b859a3fcdae"
 
 RDEPENDS:perl-Time-HiRes = " \
  glibc \

@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-ExtUtils-Depends"
 PV = "0.8001"
 PR = "7.el10_0"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-ExtUtils-Depends \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-ExtUtils-Depends \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-ExtUtils-Depends-0.8001-7.el10_0.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-ExtUtils-Depends-0.8001-7.el10_0.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3df7bcbef646a5fb53d1265460ba895af338fef7e2f59f2528809b068064c504"
 
-URI_x86_64_v2_perl-ExtUtils-Depends = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-ExtUtils-Depends-0.8001-7.el10_0.alma_altarch.noarch.rpm;name=x86_64_v2_perl-ExtUtils-Depends;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-ExtUtils-Depends}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-ExtUtils-Depends-0.8001-7.el10_0.alma_altarch.noarch.rpm;name=x86_64_v2_perl-ExtUtils-Depends;unpack=0"
 SRC_URI[x86_64_v2_perl-ExtUtils-Depends.sha256sum] = "4db6d188ffbbd33c519b1658ecdb87e7a88d1de42b9d1962fed10270a2ee3365"
 
-URI_aarch64_perl-ExtUtils-Depends = "${EPEL_MIRROR}/aarch64/Packages/p/perl-ExtUtils-Depends-0.8001-7.el10_0.noarch.rpm;name=aarch64_perl-ExtUtils-Depends;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-ExtUtils-Depends}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-ExtUtils-Depends-0.8001-7.el10_0.noarch.rpm;name=aarch64_perl-ExtUtils-Depends;unpack=0"
 SRC_URI[aarch64_perl-ExtUtils-Depends.sha256sum] = "f97be6057916a704cc1abff22f9cede9da929cbe07e7e0956f5f2145fc280646"
 
 RDEPENDS:perl-ExtUtils-Depends = " \

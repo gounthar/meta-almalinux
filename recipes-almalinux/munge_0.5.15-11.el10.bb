@@ -11,33 +11,35 @@ PACKAGES = " \
  munge-libs \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/munge-0.5.15-11.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/munge-0.5.15-11.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "51a1d2f0019878c1439f2bde86d9fec5dbd6c87297bf93e5f2748ff23dedc858"
 
-URI_x86_64_v2_munge = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/munge-0.5.15-11.el10.x86_64_v2.rpm;name=x86_64_v2_munge;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_munge}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/munge-0.5.15-11.el10.x86_64_v2.rpm;name=x86_64_v2_munge;unpack=0"
 SRC_URI[x86_64_v2_munge.sha256sum] = "da276cd5bc36aaae709b5a22033ee2c34184c9ddb21d34939b81aa330241af54"
 
-URI_x86_64_v2_munge-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/munge-devel-0.5.15-11.el10.x86_64_v2.rpm;name=x86_64_v2_munge-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_munge-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/munge-devel-0.5.15-11.el10.x86_64_v2.rpm;name=x86_64_v2_munge-devel;unpack=0"
 SRC_URI[x86_64_v2_munge-devel.sha256sum] = "e76d7701def808d09e0c585634f8f832c545ddf5ef4cdf8f2df3330c82509fe8"
 
-URI_x86_64_v2_munge-libs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/munge-libs-0.5.15-11.el10.x86_64_v2.rpm;name=x86_64_v2_munge-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_munge-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/munge-libs-0.5.15-11.el10.x86_64_v2.rpm;name=x86_64_v2_munge-libs;unpack=0"
 SRC_URI[x86_64_v2_munge-libs.sha256sum] = "d5c8e91ca1099e7d1dccbbbd0134a7e051a3a7af5e9e6d4bc01f6c08bd7849dd"
 
-URI_aarch64_munge = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/munge-0.5.15-11.el10.aarch64.rpm;name=aarch64_munge;unpack=0"
-SRC_URI:append = " ${URI_aarch64_munge}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/munge-0.5.15-11.el10.aarch64.rpm;name=aarch64_munge;unpack=0"
 SRC_URI[aarch64_munge.sha256sum] = "e6e6354e911eae7c3dab405434b02517e960a79e487cf1ff32fdaa790c9788fd"
 
-URI_aarch64_munge-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/munge-devel-0.5.15-11.el10.aarch64.rpm;name=aarch64_munge-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_munge-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/munge-devel-0.5.15-11.el10.aarch64.rpm;name=aarch64_munge-devel;unpack=0"
 SRC_URI[aarch64_munge-devel.sha256sum] = "1614408ce468394f6b4a8c1add18fb8f6eed12845d10aaf81566238a3f80854c"
 
-URI_aarch64_munge-libs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/munge-libs-0.5.15-11.el10.aarch64.rpm;name=aarch64_munge-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_munge-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/munge-libs-0.5.15-11.el10.aarch64.rpm;name=aarch64_munge-libs;unpack=0"
 SRC_URI[aarch64_munge-libs.sha256sum] = "82745f143543cea9fb2099ddd7e759b5f286266ed496bdd936d95c6ab26799a3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/munge-0.5.15-11.el10.riscv64.rpm;name=riscv64_munge;unpack=0"
+SRC_URI[riscv64_munge.sha256sum] = "d7aa143abe27fec3e6dd1e2914335ef99ad1cee4d9db3faafc7d661ea84e5929"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/munge-devel-0.5.15-11.el10.riscv64.rpm;name=riscv64_munge-devel;unpack=0"
+SRC_URI[riscv64_munge-devel.sha256sum] = "bb3c6efbb8bffa4fbead9f940b271ef81a012e42b17b1812c28e77e78657458b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/munge-libs-0.5.15-11.el10.riscv64.rpm;name=riscv64_munge-libs;unpack=0"
+SRC_URI[riscv64_munge-libs.sha256sum] = "1de05582f3c6bd61b078b82dfd7b27b746561330a7ac3d21db4ba6b33125a3b9"
 
 RDEPENDS:munge = " \
  bash \

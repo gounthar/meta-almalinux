@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rpkg"
 PV = "1.70"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-rpkg \
  rpkg-common \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-rpkg \
+ rpkg-common \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rpkg-1.70-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rpkg-1.70-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "855979ed41ac4a876bd2c98185002ae91a5a3ff548e9d21bd65c1901ac63488f"
 
-URI_x86_64_v2_python3-rpkg = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-rpkg-1.70-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-rpkg;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-rpkg}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-rpkg-1.70-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-rpkg;unpack=0"
 SRC_URI[x86_64_v2_python3-rpkg.sha256sum] = "ba94e8a97ad85bd7c63d8a2b99a72ede721f23fe01999a5cfda0cfffb1f6701b"
 
-URI_x86_64_v2_rpkg-common = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rpkg-common-1.70-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rpkg-common;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rpkg-common}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rpkg-common-1.70-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rpkg-common;unpack=0"
 SRC_URI[x86_64_v2_rpkg-common.sha256sum] = "76beb52a4b2fc36f033bf09300a786e7e04309b940b489ebdc400e362e275a65"
 
-URI_aarch64_python3-rpkg = "${EPEL_MIRROR}/aarch64/Packages/p/python3-rpkg-1.70-1.el10_3.noarch.rpm;name=aarch64_python3-rpkg;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-rpkg}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-rpkg-1.70-1.el10_3.noarch.rpm;name=aarch64_python3-rpkg;unpack=0"
 SRC_URI[aarch64_python3-rpkg.sha256sum] = "77153e27b73473aa6ef5a1bbfc58ef9e14f49b0e659d6efd7790c4bc12c825a9"
 
-URI_aarch64_rpkg-common = "${EPEL_MIRROR}/aarch64/Packages/r/rpkg-common-1.70-1.el10_3.noarch.rpm;name=aarch64_rpkg-common;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rpkg-common}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rpkg-common-1.70-1.el10_3.noarch.rpm;name=aarch64_rpkg-common;unpack=0"
 SRC_URI[aarch64_rpkg-common.sha256sum] = "067ca860fd527abaa435afda2f59a0bf0f9abf1d803764f3f7626db9b83d19b7"
 
 RDEPENDS:python3-rpkg = " \

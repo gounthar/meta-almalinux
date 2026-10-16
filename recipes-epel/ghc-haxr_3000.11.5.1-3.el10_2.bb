@@ -16,37 +16,32 @@ PACKAGES:aarch64 = " \
  ghc-haxr-doc \
  ghc-haxr-prof \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/g/ghc-haxr-3000.11.5.1-3.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/g/ghc-haxr-3000.11.5.1-3.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "55c9a66e1d6cb169aa34a489be7af2f7ff9c56e44471a1bc1100573d92ddbc67"
 
-URI_x86_64_v2_ghc-haxr = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-haxr-3000.11.5.1-3.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-haxr;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-haxr}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-haxr-3000.11.5.1-3.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-haxr;unpack=0"
 SRC_URI[x86_64_v2_ghc-haxr.sha256sum] = "3b29344d4541b4131e177aa483bc148d58256802272896e91259ced6bb95d379"
 
-URI_x86_64_v2_ghc-haxr-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-haxr-devel-3000.11.5.1-3.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-haxr-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-haxr-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-haxr-devel-3000.11.5.1-3.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-haxr-devel;unpack=0"
 SRC_URI[x86_64_v2_ghc-haxr-devel.sha256sum] = "16c61b6c886b1943b14c304c9ed84ca510788fc939cfc1f8f222ea8b90866da6"
 
-URI_x86_64_v2_ghc-haxr-doc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-haxr-doc-3000.11.5.1-3.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_ghc-haxr-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-haxr-doc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-haxr-doc-3000.11.5.1-3.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_ghc-haxr-doc;unpack=0"
 SRC_URI[x86_64_v2_ghc-haxr-doc.sha256sum] = "921e840519121ce2aa9cc71d6690108524c61fb6a95137d21af68dcd34b23be5"
 
-URI_aarch64_ghc-haxr = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-haxr-3000.11.5.1-3.el10_2.aarch64.rpm;name=aarch64_ghc-haxr;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-haxr}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-haxr-3000.11.5.1-3.el10_2.aarch64.rpm;name=aarch64_ghc-haxr;unpack=0"
 SRC_URI[aarch64_ghc-haxr.sha256sum] = "6978904d511a7f3d501e2c383a12aeb4a9874f3953a3f81cd076b6732e1a20a4"
 
-URI_aarch64_ghc-haxr-devel = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-haxr-devel-3000.11.5.1-3.el10_2.aarch64.rpm;name=aarch64_ghc-haxr-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-haxr-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-haxr-devel-3000.11.5.1-3.el10_2.aarch64.rpm;name=aarch64_ghc-haxr-devel;unpack=0"
 SRC_URI[aarch64_ghc-haxr-devel.sha256sum] = "96b547d1374671c481c2daf5f8826ee96ba7259ab637857634f736e0b1342be4"
 
-URI_aarch64_ghc-haxr-doc = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-haxr-doc-3000.11.5.1-3.el10_2.noarch.rpm;name=aarch64_ghc-haxr-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-haxr-doc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-haxr-doc-3000.11.5.1-3.el10_2.noarch.rpm;name=aarch64_ghc-haxr-doc;unpack=0"
 SRC_URI[aarch64_ghc-haxr-doc.sha256sum] = "4e4dfba70b08a385538e74b5cf6bf2e473e81c15dd999a932788ac56acb79618"
 
-URI_aarch64_ghc-haxr-prof = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-haxr-prof-3000.11.5.1-3.el10_2.aarch64.rpm;name=aarch64_ghc-haxr-prof;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-haxr-prof}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-haxr-prof-3000.11.5.1-3.el10_2.aarch64.rpm;name=aarch64_ghc-haxr-prof;unpack=0"
 SRC_URI[aarch64_ghc-haxr-prof.sha256sum] = "333c7722588434afa6a7ba3a8db8fd24d5299f89495265329abb68b8d688bff6"
 
 RDEPENDS:ghc-haxr = " \

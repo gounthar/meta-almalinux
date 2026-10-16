@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "BackupPC"
 PV = "4.4.0"
 PR = "20.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  BackupPC \
- "
+"
+PACKAGES:aarch64 = " \
+ BackupPC \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/b/BackupPC-4.4.0-20.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/b/BackupPC-4.4.0-20.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e930ea58e367652f62db5ae870673fb0b67baa5086b5d440a32436b6330ea74e"
 
-URI_x86_64_v2_BackupPC = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/BackupPC-4.4.0-20.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_BackupPC;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_BackupPC}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/BackupPC-4.4.0-20.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_BackupPC;unpack=0"
 SRC_URI[x86_64_v2_BackupPC.sha256sum] = "d87bdf2db2114fb07da1e99ee6619674632ce2f7983f77e6a55e364dff917c75"
 
-URI_aarch64_BackupPC = "${EPEL_MIRROR}/aarch64/Packages/b/BackupPC-4.4.0-20.el10_2.aarch64.rpm;name=aarch64_BackupPC;unpack=0"
-SRC_URI:append = " ${URI_aarch64_BackupPC}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/b/BackupPC-4.4.0-20.el10_2.aarch64.rpm;name=aarch64_BackupPC;unpack=0"
 SRC_URI[aarch64_BackupPC.sha256sum] = "819318fee96fb0ef67b8472d12062cb162864a1d35a78f492dc3950fa0a69663"
 
 RDEPENDS:BackupPC = " \

@@ -12,41 +12,44 @@ PACKAGES = " \
  libX11-xcb \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libX11-1.8.13-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libX11-1.8.13-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b31a9cb998b1f773441d1dd637ca6ca49311838cc2e51b06337504a880be960e"
 
-URI_x86_64_v2_libX11 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libX11-1.8.13-1.el10.x86_64_v2.rpm;name=x86_64_v2_libX11;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libX11}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libX11-1.8.13-1.el10.x86_64_v2.rpm;name=x86_64_v2_libX11;unpack=0"
 SRC_URI[x86_64_v2_libX11.sha256sum] = "c850eba3b4973535c3f8f97df2daa31c6812a868169ba66574876a85bcc3c033"
 
-URI_x86_64_v2_libX11-common = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libX11-common-1.8.13-1.el10.noarch.rpm;name=x86_64_v2_libX11-common;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libX11-common}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libX11-common-1.8.13-1.el10.noarch.rpm;name=x86_64_v2_libX11-common;unpack=0"
 SRC_URI[x86_64_v2_libX11-common.sha256sum] = "22d29794916c2ec5e0c2902df6d9340d20e33ab977c90c06231b12e97b3405bc"
 
-URI_x86_64_v2_libX11-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libX11-devel-1.8.13-1.el10.x86_64_v2.rpm;name=x86_64_v2_libX11-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libX11-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libX11-devel-1.8.13-1.el10.x86_64_v2.rpm;name=x86_64_v2_libX11-devel;unpack=0"
 SRC_URI[x86_64_v2_libX11-devel.sha256sum] = "0590af9adcad475aa9e0d36aae6472abc8c46625cc60f12a263ac6d4160a3879"
 
-URI_x86_64_v2_libX11-xcb = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libX11-xcb-1.8.13-1.el10.x86_64_v2.rpm;name=x86_64_v2_libX11-xcb;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libX11-xcb}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libX11-xcb-1.8.13-1.el10.x86_64_v2.rpm;name=x86_64_v2_libX11-xcb;unpack=0"
 SRC_URI[x86_64_v2_libX11-xcb.sha256sum] = "9c999063a9958f2982e7ca235462a56e25e606a8345ad41609a3a637e16b4c2d"
 
-URI_aarch64_libX11 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libX11-1.8.13-1.el10.aarch64.rpm;name=aarch64_libX11;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libX11}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libX11-1.8.13-1.el10.aarch64.rpm;name=aarch64_libX11;unpack=0"
 SRC_URI[aarch64_libX11.sha256sum] = "898b7d0902ce130df31577d38159b21aaadf9f4d17570500da62105eaabd692e"
 
-URI_aarch64_libX11-common = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libX11-common-1.8.13-1.el10.noarch.rpm;name=aarch64_libX11-common;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libX11-common}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libX11-common-1.8.13-1.el10.noarch.rpm;name=aarch64_libX11-common;unpack=0"
 SRC_URI[aarch64_libX11-common.sha256sum] = "22d29794916c2ec5e0c2902df6d9340d20e33ab977c90c06231b12e97b3405bc"
 
-URI_aarch64_libX11-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libX11-devel-1.8.13-1.el10.aarch64.rpm;name=aarch64_libX11-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libX11-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libX11-devel-1.8.13-1.el10.aarch64.rpm;name=aarch64_libX11-devel;unpack=0"
 SRC_URI[aarch64_libX11-devel.sha256sum] = "65628915b45a15c327e7e918e8ada3111c5b81931c9c503d2f3751f57dbc1bdd"
 
-URI_aarch64_libX11-xcb = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libX11-xcb-1.8.13-1.el10.aarch64.rpm;name=aarch64_libX11-xcb;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libX11-xcb}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libX11-xcb-1.8.13-1.el10.aarch64.rpm;name=aarch64_libX11-xcb;unpack=0"
 SRC_URI[aarch64_libX11-xcb.sha256sum] = "026b5710da88a0110658f1c9f47616c351c240ce68eedb9fbbda87fd66a7480d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libX11-1.8.13-1.el10.riscv64.rpm;name=riscv64_libX11;unpack=0"
+SRC_URI[riscv64_libX11.sha256sum] = "129e16c0353e978f5f97a8772cc61f86256d23e5a69a9062671e6330ddec5c3f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libX11-common-1.8.13-1.el10.noarch.rpm;name=riscv64_libX11-common;unpack=0"
+SRC_URI[riscv64_libX11-common.sha256sum] = "22d29794916c2ec5e0c2902df6d9340d20e33ab977c90c06231b12e97b3405bc"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libX11-devel-1.8.13-1.el10.riscv64.rpm;name=riscv64_libX11-devel;unpack=0"
+SRC_URI[riscv64_libX11-devel.sha256sum] = "8dcfe61c5b9b45b4a04bdae0abe62291e3f0cfd7a7b52dcfc75781cf184934cb"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libX11-xcb-1.8.13-1.el10.riscv64.rpm;name=riscv64_libX11-xcb;unpack=0"
+SRC_URI[riscv64_libX11-xcb.sha256sum] = "1df5946433e9a2340e051078b0a97b4471ba5654b67de5df2b4a5c1fb641f410"
 
 RDEPENDS:libX11 = " \
  glibc \

@@ -10,25 +10,26 @@ PACKAGES = " \
  qt6-qtlanguageserver-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtlanguageserver-6.10.1-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtlanguageserver-6.10.1-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1a76b5b3bbe9fe54c64c5e2fb3fcf93038c28dafee286b9c00c25d64a5b8ca61"
 
-URI_x86_64_v2_qt6-qtlanguageserver = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtlanguageserver-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtlanguageserver;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtlanguageserver}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtlanguageserver-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtlanguageserver;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtlanguageserver.sha256sum] = "abfdc1666717ef8bbba5c021d34ae0a7ee50e2c2c9fa61e368247e08d6f9a488"
 
-URI_x86_64_v2_qt6-qtlanguageserver-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtlanguageserver-devel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtlanguageserver-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtlanguageserver-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtlanguageserver-devel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtlanguageserver-devel;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtlanguageserver-devel.sha256sum] = "06cbfd8f24159bd4e1e86d8bfd90626917ffaf3605da6440f853c912dd1611d0"
 
-URI_aarch64_qt6-qtlanguageserver = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtlanguageserver-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtlanguageserver;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtlanguageserver}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtlanguageserver-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtlanguageserver;unpack=0"
 SRC_URI[aarch64_qt6-qtlanguageserver.sha256sum] = "4fd9eaa636902a4cbf77966a37e583c295ce609af48a66010f98dc8285151545"
 
-URI_aarch64_qt6-qtlanguageserver-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtlanguageserver-devel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtlanguageserver-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtlanguageserver-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtlanguageserver-devel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtlanguageserver-devel;unpack=0"
 SRC_URI[aarch64_qt6-qtlanguageserver-devel.sha256sum] = "a727ad793e0fe36c25b36c6416060453e11cce20b8d1fed23d12bf97639339f4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtlanguageserver-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtlanguageserver;unpack=0"
+SRC_URI[riscv64_qt6-qtlanguageserver.sha256sum] = "cc79649ecc1a75af27b48ae7515bca70ad9c5929aef4c7f45dc14609386af20a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtlanguageserver-devel-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtlanguageserver-devel;unpack=0"
+SRC_URI[riscv64_qt6-qtlanguageserver-devel.sha256sum] = "ef07345017814cdf60e9c1663c1d6d47a2baf7a77fdcca53bb8baab55d3dd312"
 
 RDEPENDS:qt6-qtlanguageserver = " \
  qt6-qtbase \

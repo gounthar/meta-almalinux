@@ -9,17 +9,17 @@ PACKAGES = " \
  postgresql18-pgaudit \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/postgresql18-pgaudit-18.0-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/postgresql18-pgaudit-18.0-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b6baf60e66b4cac927213b3470aa84fb2642a3ea2bc6548ae8f5e2fcd17434f4"
 
-URI_x86_64_v2_postgresql18-pgaudit = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postgresql18-pgaudit-18.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_postgresql18-pgaudit;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_postgresql18-pgaudit}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postgresql18-pgaudit-18.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_postgresql18-pgaudit;unpack=0"
 SRC_URI[x86_64_v2_postgresql18-pgaudit.sha256sum] = "89096619c516cf24d209fe85da4989a3873e98bc4330f5dee775c9a6603ba7ce"
 
-URI_aarch64_postgresql18-pgaudit = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postgresql18-pgaudit-18.0-1.el10.aarch64.rpm;name=aarch64_postgresql18-pgaudit;unpack=0"
-SRC_URI:append = " ${URI_aarch64_postgresql18-pgaudit}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postgresql18-pgaudit-18.0-1.el10.aarch64.rpm;name=aarch64_postgresql18-pgaudit;unpack=0"
 SRC_URI[aarch64_postgresql18-pgaudit.sha256sum] = "eea17bfe0b556abde36e36dd85b2ba7b18a7c9b7b2bd35b688291f8f84d53cae"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/postgresql18-pgaudit-18.0-1.el10.riscv64.rpm;name=riscv64_postgresql18-pgaudit;unpack=0"
+SRC_URI[riscv64_postgresql18-pgaudit.sha256sum] = "f7c3497d1efe91d63a916b21f3e09545711a906a308a9006f9c34885cddb95b4"
 
 RDEPENDS:postgresql18-pgaudit = " \
  glibc \

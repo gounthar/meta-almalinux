@@ -9,17 +9,17 @@ PACKAGES = " \
  perl-Clone \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/perl-Clone-0.46-10.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/perl-Clone-0.46-10.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "98adfcf702c601c5daa6f26b977c7b895c9c1b463b95c0d6e7fac0719d3293ba"
 
-URI_x86_64_v2_perl-Clone = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-Clone-0.46-10.el10.x86_64_v2.rpm;name=x86_64_v2_perl-Clone;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Clone}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-Clone-0.46-10.el10.x86_64_v2.rpm;name=x86_64_v2_perl-Clone;unpack=0"
 SRC_URI[x86_64_v2_perl-Clone.sha256sum] = "0031f4eaebdec1500d629a2541a99fb63013814d75d2bc7542f22011248cdeb4"
 
-URI_aarch64_perl-Clone = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-Clone-0.46-10.el10.aarch64.rpm;name=aarch64_perl-Clone;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Clone}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-Clone-0.46-10.el10.aarch64.rpm;name=aarch64_perl-Clone;unpack=0"
 SRC_URI[aarch64_perl-Clone.sha256sum] = "28295be0ef259f42d9dd2cab8523548e0eba8a7195b44be5c184dc6502627262"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/perl-Clone-0.46-10.el10.riscv64.rpm;name=riscv64_perl-Clone;unpack=0"
+SRC_URI[riscv64_perl-Clone.sha256sum] = "c3c4f196254bd2bb722bd55c60da3719f0d1b1ee51828125a717c28be1e40a39"
 
 RDEPENDS:perl-Clone = " \
  glibc \

@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-onefetch-image"
 PV = "2.27.1"
 PR = "2.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-onefetch-image+default-devel \
  rust-onefetch-image-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-onefetch-image+default-devel \
+ rust-onefetch-image-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-onefetch-image-2.27.1-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-onefetch-image-2.27.1-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "55b898fc45b7b69b0cf5dbd2f845e5650fda50eed6279a040e8be46d0c2aac7d"
 
-URI_x86_64_v2_rust-onefetch-image+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-onefetch-image+default-devel-2.27.1-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-onefetch-image+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-onefetch-image+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-onefetch-image+default-devel-2.27.1-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-onefetch-image+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-onefetch-image+default-devel.sha256sum] = "4f5033537a01ad2b502cc143d48b43a68ba2206294629ebcabb4bd4eba245da9"
 
-URI_x86_64_v2_rust-onefetch-image-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-onefetch-image-devel-2.27.1-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-onefetch-image-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-onefetch-image-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-onefetch-image-devel-2.27.1-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-onefetch-image-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-onefetch-image-devel.sha256sum] = "ba3e216c7ca2a3c3adc002d5034b87b08b41e7125d2d1ce5dc692909bb7d40e9"
 
-URI_aarch64_rust-onefetch-image+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-onefetch-image+default-devel-2.27.1-2.el10_3.noarch.rpm;name=aarch64_rust-onefetch-image+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-onefetch-image+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-onefetch-image+default-devel-2.27.1-2.el10_3.noarch.rpm;name=aarch64_rust-onefetch-image+default-devel;unpack=0"
 SRC_URI[aarch64_rust-onefetch-image+default-devel.sha256sum] = "20090a101dc6cf34e1c7565655d1ce8d4521899c0c2fa8c33b00de2c3f8683b1"
 
-URI_aarch64_rust-onefetch-image-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-onefetch-image-devel-2.27.1-2.el10_3.noarch.rpm;name=aarch64_rust-onefetch-image-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-onefetch-image-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-onefetch-image-devel-2.27.1-2.el10_3.noarch.rpm;name=aarch64_rust-onefetch-image-devel;unpack=0"
 SRC_URI[aarch64_rust-onefetch-image-devel.sha256sum] = "6a75ecc6caac4873828de2438f27c46292d61b2f6b369faa140b903c5f8484b4"
 
 RDEPENDS:rust-onefetch-image+default-devel = " \

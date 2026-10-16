@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-virtualenv"
 PV = "20.31.2"
 PR = "4.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-virtualenv \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-virtualenv \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-virtualenv-20.31.2-4.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-virtualenv-20.31.2-4.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8fd7533153426ac8b5f2d1b1f27887ca6290bf5cf716b1a12f4dd947dfeafca2"
 
-URI_x86_64_v2_python3-virtualenv = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-virtualenv-20.31.2-4.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-virtualenv;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-virtualenv}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-virtualenv-20.31.2-4.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-virtualenv;unpack=0"
 SRC_URI[x86_64_v2_python3-virtualenv.sha256sum] = "dd505fffda155c642344902f2fdd48c7ee209f2ec3a394686ce0ecbaeece90b2"
 
-URI_aarch64_python3-virtualenv = "${EPEL_MIRROR}/aarch64/Packages/p/python3-virtualenv-20.31.2-4.el10_2.noarch.rpm;name=aarch64_python3-virtualenv;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-virtualenv}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-virtualenv-20.31.2-4.el10_2.noarch.rpm;name=aarch64_python3-virtualenv;unpack=0"
 SRC_URI[aarch64_python3-virtualenv.sha256sum] = "ca2b2c95db5e8e6a8dcfdf53558d5fab4bf51b78699836e4c8516a88e9091030"
 
 RDEPENDS:python3-virtualenv = " \

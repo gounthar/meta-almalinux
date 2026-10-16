@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "guile30"
 PV = "3.0.11"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  guile30 \
  guile30-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ guile30 \
+ guile30-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/g/guile30-3.0.11-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/g/guile30-3.0.11-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "bb042e5fdf3be5d13cc82734f24b05691cc9c5da43272ccc67533e7a46b8ee2a"
 
-URI_x86_64_v2_guile30 = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/guile30-3.0.11-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_guile30;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_guile30}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/guile30-3.0.11-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_guile30;unpack=0"
 SRC_URI[x86_64_v2_guile30.sha256sum] = "2f224c86d84c6c17c8610d2f0628e0df35a1d1586bfe0e6ebb0c0e671c194e5e"
 
-URI_x86_64_v2_guile30-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/guile30-devel-3.0.11-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_guile30-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_guile30-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/guile30-devel-3.0.11-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_guile30-devel;unpack=0"
 SRC_URI[x86_64_v2_guile30-devel.sha256sum] = "b8e58f50d8d428412e7698ad571fa33f29abf4b17500fea89194846252439782"
 
-URI_aarch64_guile30 = "${EPEL_MIRROR}/aarch64/Packages/g/guile30-3.0.11-1.el10_2.aarch64.rpm;name=aarch64_guile30;unpack=0"
-SRC_URI:append = " ${URI_aarch64_guile30}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/guile30-3.0.11-1.el10_2.aarch64.rpm;name=aarch64_guile30;unpack=0"
 SRC_URI[aarch64_guile30.sha256sum] = "aabf127bc0ec20f0fdd0014fd813d849bacf9f3db30b005835bc4ed93596dc58"
 
-URI_aarch64_guile30-devel = "${EPEL_MIRROR}/aarch64/Packages/g/guile30-devel-3.0.11-1.el10_2.aarch64.rpm;name=aarch64_guile30-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_guile30-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/guile30-devel-3.0.11-1.el10_2.aarch64.rpm;name=aarch64_guile30-devel;unpack=0"
 SRC_URI[aarch64_guile30-devel.sha256sum] = "6a381e43b6c50c25a33f6698d4288761c832cb842b0da7295c2aee04f2ac6ef4"
 
 RDEPENDS:guile30 = " \

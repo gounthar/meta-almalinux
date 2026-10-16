@@ -9,17 +9,17 @@ PACKAGES = " \
  python3-kmod \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/python-kmod-0.9.2-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/python-kmod-0.9.2-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "dd28fc0b6ca6f7d0ce71ba818ac29cf9ed583b34eb767f969994a5ff837a3a22"
 
-URI_x86_64_v2_python3-kmod = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/python3-kmod-0.9.2-6.el10.x86_64_v2.rpm;name=x86_64_v2_python3-kmod;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-kmod}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/python3-kmod-0.9.2-6.el10.x86_64_v2.rpm;name=x86_64_v2_python3-kmod;unpack=0"
 SRC_URI[x86_64_v2_python3-kmod.sha256sum] = "c9e2298f2f9faf06de184d76a5a02ef9c062c8650ed0d57f8d8671d75982bb60"
 
-URI_aarch64_python3-kmod = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/python3-kmod-0.9.2-6.el10.aarch64.rpm;name=aarch64_python3-kmod;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-kmod}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/python3-kmod-0.9.2-6.el10.aarch64.rpm;name=aarch64_python3-kmod;unpack=0"
 SRC_URI[aarch64_python3-kmod.sha256sum] = "2db49050d40b3e6feaea9f7af2716050de9f32d73cf2c1b0f234a707d460c771"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/python3-kmod-0.9.2-6.el10.riscv64.rpm;name=riscv64_python3-kmod;unpack=0"
+SRC_URI[riscv64_python3-kmod.sha256sum] = "24cda41e4bef5a59d05698da748066d780c235be84928522c97797bc3ee97d66"
 
 RDEPENDS:python3-kmod = " \
  glibc \

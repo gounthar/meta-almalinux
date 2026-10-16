@@ -11,33 +11,35 @@ PACKAGES = " \
  enchant2-voikko \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/enchant2-2.6.9-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/enchant2-2.6.9-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "299c74e11ccd5cdf7e00c6ca89160fd321cd3de25c741c64908fa0b58ca3e8a9"
 
-URI_x86_64_v2_enchant2 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/enchant2-2.6.9-1.el10.x86_64_v2.rpm;name=x86_64_v2_enchant2;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_enchant2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/enchant2-2.6.9-1.el10.x86_64_v2.rpm;name=x86_64_v2_enchant2;unpack=0"
 SRC_URI[x86_64_v2_enchant2.sha256sum] = "13f6583f624ca1795e74e6c57d2dfe04db22fb46794086e38fce1f7220e25d76"
 
-URI_x86_64_v2_enchant2-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/enchant2-devel-2.6.9-1.el10.x86_64_v2.rpm;name=x86_64_v2_enchant2-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_enchant2-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/enchant2-devel-2.6.9-1.el10.x86_64_v2.rpm;name=x86_64_v2_enchant2-devel;unpack=0"
 SRC_URI[x86_64_v2_enchant2-devel.sha256sum] = "20b1b560e4d7230d46146a45c315414f4579059ef15fb42fc82e942095455e55"
 
-URI_x86_64_v2_enchant2-voikko = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/enchant2-voikko-2.6.9-1.el10.x86_64_v2.rpm;name=x86_64_v2_enchant2-voikko;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_enchant2-voikko}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/enchant2-voikko-2.6.9-1.el10.x86_64_v2.rpm;name=x86_64_v2_enchant2-voikko;unpack=0"
 SRC_URI[x86_64_v2_enchant2-voikko.sha256sum] = "5ff05b29382b9c1da447d8ceb2425203b7001d54760f6cce37cae6007c753df0"
 
-URI_aarch64_enchant2 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/enchant2-2.6.9-1.el10.aarch64.rpm;name=aarch64_enchant2;unpack=0"
-SRC_URI:append = " ${URI_aarch64_enchant2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/enchant2-2.6.9-1.el10.aarch64.rpm;name=aarch64_enchant2;unpack=0"
 SRC_URI[aarch64_enchant2.sha256sum] = "2379ebb8c8670ee606125313a361a3d8945fb83894fb3eb786410262677f98fe"
 
-URI_aarch64_enchant2-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/enchant2-devel-2.6.9-1.el10.aarch64.rpm;name=aarch64_enchant2-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_enchant2-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/enchant2-devel-2.6.9-1.el10.aarch64.rpm;name=aarch64_enchant2-devel;unpack=0"
 SRC_URI[aarch64_enchant2-devel.sha256sum] = "b8c771048cc4ffcee607dbbf288fea08704ccfbbdb2f0afd6ffaf5fd52f836d4"
 
-URI_aarch64_enchant2-voikko = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/enchant2-voikko-2.6.9-1.el10.aarch64.rpm;name=aarch64_enchant2-voikko;unpack=0"
-SRC_URI:append = " ${URI_aarch64_enchant2-voikko}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/enchant2-voikko-2.6.9-1.el10.aarch64.rpm;name=aarch64_enchant2-voikko;unpack=0"
 SRC_URI[aarch64_enchant2-voikko.sha256sum] = "6518216b0342c9583d68474dc53a6594eb7be28f97d7b3ae7ebd0c7781ec62d0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/enchant2-2.6.9-1.el10.riscv64.rpm;name=riscv64_enchant2;unpack=0"
+SRC_URI[riscv64_enchant2.sha256sum] = "2e9a5b6ec4a3249730fa80d17a95f2e42328a4a6f155c231dc4086ff91dc82b2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/enchant2-devel-2.6.9-1.el10.riscv64.rpm;name=riscv64_enchant2-devel;unpack=0"
+SRC_URI[riscv64_enchant2-devel.sha256sum] = "72064f23e4b2dfaf32e385dc49c31d3628ec72c0751010899dbcce41a77d9982"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/enchant2-voikko-2.6.9-1.el10.riscv64.rpm;name=riscv64_enchant2-voikko;unpack=0"
+SRC_URI[riscv64_enchant2-voikko.sha256sum] = "24569cfdb767c7d868a1c1803fb5ed669188c13ef3cf22f17772be651a447d1c"
 
 RDEPENDS:enchant2 = " \
  glib2 \

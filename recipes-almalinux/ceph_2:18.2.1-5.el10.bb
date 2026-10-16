@@ -14,49 +14,53 @@ PACKAGES = " \
  librbd1 \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/ceph-18.2.1-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/ceph-18.2.1-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "68f6a0fe2f40a93185a4e2753027001ccc3ac9e8ee847ebf03868313a0e5eac3"
 
-URI_x86_64_v2_librados-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/librados-devel-18.2.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_librados-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_librados-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/librados-devel-18.2.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_librados-devel;unpack=0"
 SRC_URI[x86_64_v2_librados-devel.sha256sum] = "045b791f5683312961d0372ee49aa9a997f7bd7e6bb04dbc944b7404b13c2227"
 
-URI_x86_64_v2_librados2 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/librados2-18.2.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_librados2;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_librados2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/librados2-18.2.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_librados2;unpack=0"
 SRC_URI[x86_64_v2_librados2.sha256sum] = "7bc6251c1bcefcb0361574c81988afc1f082b662189d1bfa3655b9724e3cf70c"
 
-URI_x86_64_v2_libradospp-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libradospp-devel-18.2.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libradospp-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libradospp-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libradospp-devel-18.2.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libradospp-devel;unpack=0"
 SRC_URI[x86_64_v2_libradospp-devel.sha256sum] = "1a8d018ea7e3b3f3104ea5accb37ead5ba9b54d96bd03deab774266afe94b54e"
 
-URI_x86_64_v2_librbd-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/librbd-devel-18.2.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_librbd-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_librbd-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/librbd-devel-18.2.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_librbd-devel;unpack=0"
 SRC_URI[x86_64_v2_librbd-devel.sha256sum] = "5a600fad19f54fb78bec7e5d87a4ab59506433f336824d54e848b5dcb4817f87"
 
-URI_x86_64_v2_librbd1 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/librbd1-18.2.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_librbd1;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_librbd1}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/librbd1-18.2.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_librbd1;unpack=0"
 SRC_URI[x86_64_v2_librbd1.sha256sum] = "77d3c752c0ebd7ec7a93c74b5a1374b9ec3e82d5c10661fea8496f2a7a630e85"
 
-URI_aarch64_librados-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/librados-devel-18.2.1-5.el10.aarch64.rpm;name=aarch64_librados-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_librados-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/librados-devel-18.2.1-5.el10.aarch64.rpm;name=aarch64_librados-devel;unpack=0"
 SRC_URI[aarch64_librados-devel.sha256sum] = "6518fb3a1ff4aacdb84005e0e0d605f3618d008aa6c62485c27ba3cb267cc4c8"
 
-URI_aarch64_librados2 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/librados2-18.2.1-5.el10.aarch64.rpm;name=aarch64_librados2;unpack=0"
-SRC_URI:append = " ${URI_aarch64_librados2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/librados2-18.2.1-5.el10.aarch64.rpm;name=aarch64_librados2;unpack=0"
 SRC_URI[aarch64_librados2.sha256sum] = "7fc345e08183a6608a3449bcb99139807d091700ca5f397c25be6e418d6a412f"
 
-URI_aarch64_libradospp-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libradospp-devel-18.2.1-5.el10.aarch64.rpm;name=aarch64_libradospp-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libradospp-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libradospp-devel-18.2.1-5.el10.aarch64.rpm;name=aarch64_libradospp-devel;unpack=0"
 SRC_URI[aarch64_libradospp-devel.sha256sum] = "82ab2230be3bfcfc88f3df988ab3aa760329a7374bcf0e6f3e3cd5cc31913b07"
 
-URI_aarch64_librbd-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/librbd-devel-18.2.1-5.el10.aarch64.rpm;name=aarch64_librbd-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_librbd-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/librbd-devel-18.2.1-5.el10.aarch64.rpm;name=aarch64_librbd-devel;unpack=0"
 SRC_URI[aarch64_librbd-devel.sha256sum] = "e4339dc6f93b961bc2c19d65c229e6df134182bbeef7ff9f3dca7bd5bfe6f7d4"
 
-URI_aarch64_librbd1 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/librbd1-18.2.1-5.el10.aarch64.rpm;name=aarch64_librbd1;unpack=0"
-SRC_URI:append = " ${URI_aarch64_librbd1}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/librbd1-18.2.1-5.el10.aarch64.rpm;name=aarch64_librbd1;unpack=0"
 SRC_URI[aarch64_librbd1.sha256sum] = "19a941469ea8230166ea490b89b5e46a0a75ee6e3c5870abe1668c6a9678e914"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/librados-devel-18.2.1-5.el10.riscv64.rpm;name=riscv64_librados-devel;unpack=0"
+SRC_URI[riscv64_librados-devel.sha256sum] = "181e5556966f12a88ed4ec3129cc15d4c495c8c5f0364c37a12deecbbd40cf37"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/librados2-18.2.1-5.el10.riscv64.rpm;name=riscv64_librados2;unpack=0"
+SRC_URI[riscv64_librados2.sha256sum] = "81549b8997574dba8675917b874c17ccaa38c44d67687d974f2d5b120761203a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libradospp-devel-18.2.1-5.el10.riscv64.rpm;name=riscv64_libradospp-devel;unpack=0"
+SRC_URI[riscv64_libradospp-devel.sha256sum] = "6cd4ea32a42e70bf92850aa549abd9bc8889b3963e146d2d1d5e9aa9473ed1e9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/librbd-devel-18.2.1-5.el10.riscv64.rpm;name=riscv64_librbd-devel;unpack=0"
+SRC_URI[riscv64_librbd-devel.sha256sum] = "e9f22c689d2be6350d7c444aa99c04d3041b350700b14593a60fb0b4a314db7a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/librbd1-18.2.1-5.el10.riscv64.rpm;name=riscv64_librbd1;unpack=0"
+SRC_URI[riscv64_librbd1.sha256sum] = "dfdd867ccc94889132a985574fbcb291a8d089e56281fee358d13948f39cfb3b"
 
 RDEPENDS:librados-devel = " \
  glibc \
@@ -84,11 +88,28 @@ RDEPENDS:librbd-devel = " \
  libradospp-devel \
  librbd1 \
  "
-RDEPENDS:librbd1 = " \
+RDEPENDS:librbd1:x86_64_v2 = " \
  cryptsetup-libs \
  glibc \
  libgcc \
  librados2 \
  libstdc++ \
  openssl-libs \
- "
+"
+RDEPENDS:librbd1:aarch64 = " \
+ cryptsetup-libs \
+ glibc \
+ libgcc \
+ librados2 \
+ libstdc++ \
+ openssl-libs \
+"
+RDEPENDS:librbd1:riscv64 = " \
+ cryptsetup-libs \
+ glibc \
+ libatomic \
+ libgcc \
+ librados2 \
+ libstdc++ \
+ openssl-libs \
+"

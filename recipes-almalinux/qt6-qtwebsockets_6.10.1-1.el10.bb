@@ -11,39 +11,52 @@ PACKAGES = " \
  qt6-qtwebsockets-examples \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtwebsockets-6.10.1-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtwebsockets-6.10.1-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e52bf773747e53cd30913e6308d0db482965bb53e524e0a7ab4dd216b05eef3f"
 
-URI_x86_64_v2_qt6-qtwebsockets = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtwebsockets-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtwebsockets;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtwebsockets}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtwebsockets-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtwebsockets;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtwebsockets.sha256sum] = "1f60b99dc2d3a1fc3833492358862828aebfd8c03694f2077fd82e8d2beeaaab"
 
-URI_x86_64_v2_qt6-qtwebsockets-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtwebsockets-devel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtwebsockets-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtwebsockets-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtwebsockets-devel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtwebsockets-devel;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtwebsockets-devel.sha256sum] = "23150374606d3a188cf649eedac144ad60b1b8fbbbc468ae50333427952af387"
 
-URI_x86_64_v2_qt6-qtwebsockets-examples = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtwebsockets-examples-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtwebsockets-examples;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtwebsockets-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtwebsockets-examples-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtwebsockets-examples;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtwebsockets-examples.sha256sum] = "2dda9c64de2214a0335ce23869e0780eb94c5372cc7979e984dd9550d3720159"
 
-URI_aarch64_qt6-qtwebsockets = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtwebsockets-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtwebsockets;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtwebsockets}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtwebsockets-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtwebsockets;unpack=0"
 SRC_URI[aarch64_qt6-qtwebsockets.sha256sum] = "9e911057fd6d7e2f86da9a097a6fd0742d8ef45cd55e450ddfb80f0afcf31b20"
 
-URI_aarch64_qt6-qtwebsockets-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtwebsockets-devel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtwebsockets-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtwebsockets-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtwebsockets-devel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtwebsockets-devel;unpack=0"
 SRC_URI[aarch64_qt6-qtwebsockets-devel.sha256sum] = "d46b4fdfcacfab59fd7300d67adaa514f48b959bc9e1d42baf636290eefcc5bc"
 
-URI_aarch64_qt6-qtwebsockets-examples = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtwebsockets-examples-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtwebsockets-examples;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtwebsockets-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtwebsockets-examples-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtwebsockets-examples;unpack=0"
 SRC_URI[aarch64_qt6-qtwebsockets-examples.sha256sum] = "5570228fa156f3568731883d263b6e637b82b9367ce75f2df54d1e08ede2eda5"
 
-RDEPENDS:qt6-qtwebsockets = " \
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtwebsockets-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtwebsockets;unpack=0"
+SRC_URI[riscv64_qt6-qtwebsockets.sha256sum] = "4288d6bf6e28a0f20d346d5100d9ad3a4c2c38f093e33c3410dee16612d73c66"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtwebsockets-devel-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtwebsockets-devel;unpack=0"
+SRC_URI[riscv64_qt6-qtwebsockets-devel.sha256sum] = "94de56de20b37f2b0b61bca95c91c5dc9ae51f1c8ede81d1a8e207d2650579f8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/qt6-qtwebsockets-examples-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtwebsockets-examples;unpack=0"
+SRC_URI[riscv64_qt6-qtwebsockets-examples.sha256sum] = "06e20e114e99f0376708df6ac9182bbf7aabe42c1c9f566a60ef43e22c961d32"
+
+RDEPENDS:qt6-qtwebsockets:x86_64_v2 = " \
  glibc \
  libstdc++ \
  qt6-qtbase \
- "
+"
+RDEPENDS:qt6-qtwebsockets:aarch64 = " \
+ glibc \
+ libstdc++ \
+ qt6-qtbase \
+"
+RDEPENDS:qt6-qtwebsockets:riscv64 = " \
+ glibc \
+ libgcc \
+ libstdc++ \
+ qt6-qtbase \
+"
 RDEPENDS:qt6-qtwebsockets-devel = " \
  cmake-filesystem \
  glibc \

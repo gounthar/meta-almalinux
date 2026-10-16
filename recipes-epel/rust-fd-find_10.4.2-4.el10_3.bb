@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "rust-fd-find"
 PV = "10.4.2"
 PR = "4.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  fd-find \
- "
+"
+PACKAGES:aarch64 = " \
+ fd-find \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-fd-find-10.4.2-4.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-fd-find-10.4.2-4.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "0604f4d506a2cf57c56a108c9bb22cf587d628fbc166ace5c83148c8400d7cb7"
 
-URI_x86_64_v2_fd-find = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/fd-find-10.4.2-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_fd-find;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_fd-find}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/fd-find-10.4.2-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_fd-find;unpack=0"
 SRC_URI[x86_64_v2_fd-find.sha256sum] = "a015ed40b6b3aeae84e115c17c84a902e5c45f22e27dc716dcca66ed28251391"
 
-URI_aarch64_fd-find = "${EPEL_MIRROR}/aarch64/Packages/f/fd-find-10.4.2-4.el10_3.aarch64.rpm;name=aarch64_fd-find;unpack=0"
-SRC_URI:append = " ${URI_aarch64_fd-find}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/f/fd-find-10.4.2-4.el10_3.aarch64.rpm;name=aarch64_fd-find;unpack=0"
 SRC_URI[aarch64_fd-find.sha256sum] = "c054fb480cc28f88cf9e647ff074a84b44a5ab45bbdfab065d886ae5fb44465a"
 
 RDEPENDS:fd-find = " \

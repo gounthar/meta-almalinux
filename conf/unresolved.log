@@ -1,37 +1,13 @@
 Requires that were seen as not satisfiable in original repo:
 
 For arch x86_64_v2:
-(crate(float16/default) >= 0.1.0 with crate(float16/default) < 0.2.0~)
-(crate(pem/default) >= 3.0.0 with crate(pem/default) < 4.0.0~)
-(crate(pem/default) >= 3.0.2 with crate(pem/default) < 4.0.0~)
-(crate(tokio-macros/default) >= 2.7.0 with crate(tokio-macros/default) < 2.8.0~)
-(crate(toml_parser) >= 1.0.7 with crate(toml_parser) < 2.0.0~)
-(crate(toml_parser) >= 1.1.2 with crate(toml_parser) < 2.0.0~)
-(crate(toml_parser/alloc) >= 1.0.7 with crate(toml_parser/alloc) < 2.0.0~)
-(crate(toml_parser/alloc) >= 1.1.2 with crate(toml_parser/alloc) < 2.0.0~)
-(crate(toml_parser/debug) >= 1.0.5 with crate(toml_parser/debug) < 2.0.0~)
-(crate(toml_parser/debug) >= 1.0.7 with crate(toml_parser/debug) < 2.0.0~)
-(crate(toml_parser/debug) >= 1.1.2 with crate(toml_parser/debug) < 2.0.0~)
-(crate(toml_parser/default) >= 1.0.5 with crate(toml_parser/default) < 2.0.0~)
-(crate(toml_parser/default) >= 1.0.7 with crate(toml_parser/default) < 2.0.0~)
-(crate(toml_parser/default) >= 1.1.2 with crate(toml_parser/default) < 2.0.0~)
-(crate(toml_parser/std) >= 1.0.7 with crate(toml_parser/std) < 2.0.0~)
-(crate(toml_parser/std) >= 1.1.2 with crate(toml_parser/std) < 2.0.0~)
-(crate(xcursor/default) >= 0.3.1 with crate(xcursor/default) < 0.4.0~)
-(crate(xcursor/default) >= 0.3.7 with crate(xcursor/default) < 0.4.0~)
-(crate(xml-rs/default) >= 0.8.16 with crate(xml-rs/default) < 0.9.0~)
-(crate(yaml-rust2/default) >= 0.10.0 with crate(yaml-rust2/default) < 0.11.0~)
-(crate(zip) >= 8.0.0 with crate(zip) < 9.0.0~)
-(crate(zip/deflate) >= 8.0.0 with crate(zip/deflate) < 9.0.0~)
 (fedora-release-common >= 38-0.23 if fedora-release-common)
 (kernel-64k-devel-matched if kernel-64k-core)
 (kernel-rt-debug-devel if kernel-rt-debug-core)
 (kernel-rt-devel if kernel-rt-core)
-(pkgconfig(libgit2) >= 1.9.6 with pkgconfig(libgit2) < 1.10.0~)
 (python3-libdnf5 >= 5.2.0 if python3-libdnf5)
 (python3.12dist(semantic-version) < 3~~ with python3.12dist(semantic-version) >= 2.8.2)
 (python3.12dist(semantic-version) >= 2.10 with python3.12dist(semantic-version) < 2.11)
-(python3.12dist(uv) < 1~~ with python3.12dist(uv) >= 0.5.31)
 (python3.13-wheel-wheel if python3.13-setuptools-wheel < 71)
 (python3.14-wheel-wheel if python3.14-setuptools-wheel < 71)
 (sway >= 1.6 if sway)
@@ -56,18 +32,17 @@ golang(gopkg.in/tomb.v1)
 golang(gopkg.in/tomb.v2)
 golang(rsc.io/qr)
 insights-core >= 3.6.7
-kde-settings-plasma
-kde-settings-sddm
+libLLVM.so.21.1()(64bit)
+libLLVM.so.21.1(LLVM_21.1)(64bit)
 libXrdCl.so.3()(64bit)
-libXrdCl.so.6()(64bit)
 libXrdPosix.so.3()(64bit)
-libXrdPosix.so.6()(64bit)
-libXrdServer.so.6()(64bit)
-libXrdUtils.so.6()(64bit)
+libclang-cpp.so.21.1()(64bit)
+libclang-cpp.so.21.1(LLVM_21.1)(64bit)
+libclang.so.21.1()(64bit)
+libclang.so.21.1(LLVM_13)(64bit)
 libff.so.0.0.0()(64bit)
 libgeos.so.3.13.1()(64bit)
 libgeos_c.so.1()(64bit)
-libgit2.so.1.9()(64bit)
 libnutclient.so.2()(64bit)
 libnutclientstub.so.1()(64bit)
 libnutscan.so.1()(64bit)
@@ -99,14 +74,11 @@ ocamlx(Stdlib__Array) = b3215f99afe054938b4b66df456093cb
 ocamlx(Stdlib__Bigarray) = 2fb6f37865dd77a707635669254911e1
 ocamlx(Stdlib__Callback) = bafc96ea60f2aa399fe753ac0e40f764
 ocamlx(Stdlib__Gc) = 197914694cd716338b4da966236687f4
-pkgconfig(libgit2) >= 1.9
+pipewire-libs(x86-64) = 1.4.11-1.el10
 python3.12dist(nh3) >= 0.2.14
-python3.12dist(uv) >= 0.4
-python3.12dist(uv) >= 0.5.23
 sshpass
 tmux
 ubloxcfg >= 1.16-1.20260223git499048b
-xrootd-server
 
 
 For arch aarch64:
@@ -159,11 +131,75 @@ ocamlx(Stdlib__Array) = b3215f99afe054938b4b66df456093cb
 ocamlx(Stdlib__Bigarray) = 2fb6f37865dd77a707635669254911e1
 ocamlx(Stdlib__Callback) = bafc96ea60f2aa399fe753ac0e40f764
 ocamlx(Stdlib__Gc) = 197914694cd716338b4da966236687f4
+pipewire-libs(aarch-64) = 1.4.11-1.el10
 pkgconfig(libcap)
 pkgconfig(libgvc)
 python3.12dist(archspec) >= 0.2.3
-selinux-policy >= 42.1.26
 syslinux
 tmux
-virt-v2v = 1:2.12.0-1.el10
+virt-v2v = 1:2.13.6-1.el10
+
+
+For arch riscv64:
+(fedora-release-common >= 38-0.23 if fedora-release-common)
+(python3.14-wheel-wheel if python3.14-setuptools-wheel < 71)
+(sdubby > 1.0-3 if sdubby)
+augeas
+augeas-libs
+augeas-libs >= 1.12.1-0
+augeas-libs(riscv-64) >= 1.7.0
+btrfs-progs
+edk2-riscv64
+gcc-toolset-16-gcc
+gcc-toolset-16-gcc-c++
+gcc-toolset-16-gcc-gfortran
+graphviz
+grub2
+insights-core >= 3.6.7
+libcacard.so.0()(64bit)
+libcap
+libcap(riscv-64)
+libcap-devel(riscv-64)
+libcap.so.2()(64bit)
+libcdt.so.5()(64bit)
+libcgraph.so.6()(64bit)
+libgvc.so.6()(64bit)
+mingw32(libffi-8.dll)
+mingw32(libintl-8.dll)
+mingw32(libpcre2-8-0.dll)
+mingw32(zlib1.dll)
+mingw32-gettext-static
+mingw64(libffi-8.dll)
+mingw64(libintl-8.dll)
+mingw64(libpcre2-8-0.dll)
+mingw64(zlib1.dll)
+mingw64-gettext-static
+mod_security >= 2.9.6
+ocaml(CamlinternalFormatBasics) = 2ef2d91ced81f6c72f852bab8ab406e0
+ocaml(CamlinternalOO) = bf3206c1e533a97ee4e00a76bfe1dae6
+ocaml(Stdlib) = e8d9af458547c45080a71b9a6eaed658
+ocaml(Stdlib__Array) = 75e38d886ba62047f48c000ae7d8f6f4
+ocaml(Stdlib__Bigarray) = 8317b42277334e4ae5794d3cbabcaf4f
+ocaml(Stdlib__Bytes) = d5a54ebfd096c4af2a47315dda118f2d
+ocaml(Stdlib__Callback) = b855f824a6cb0f4b58dc69a6e79a49a1
+ocaml(Stdlib__Complex) = 052959c6d02e4e692e7944dd137c4095
+ocaml(Stdlib__Either) = d56b2e9ca14b69fdeef09f3b2fbd10ad
+ocaml(Stdlib__Gc) = 117a859136e8d0cad6ff77491c390228
+ocaml(Stdlib__Int32) = 9cc80815720f462a0569c994dd5f43cc
+ocaml(Stdlib__Obj) = 592f14b225bd7cf0051f4b04372640d7
+ocaml(Stdlib__Printexc) = 1e5e75f741ca414dd916c0c65b646827
+ocaml(Stdlib__Seq) = ac22688c50c848ab417492a023ff76ab
+ocaml(Stdlib__String) = cdb3775f91c0e999766c3b2a50f03a7d
+ocaml(Stdlib__Uchar) = 7eb8f0d1a7c18933885eaef3b23d79f4
+ocaml(Unix) = 59e61ff7441dfacaa24d4eed6d45eeda
+ocaml-srpm-macros
+ocamlx(CamlinternalOO) = 3bb5173e1a86ae74d96d5b3bc80f14a3
+ocamlx(Stdlib__Array) = b3215f99afe054938b4b66df456093cb
+ocamlx(Stdlib__Bigarray) = 2fb6f37865dd77a707635669254911e1
+ocamlx(Stdlib__Callback) = bafc96ea60f2aa399fe753ac0e40f764
+ocamlx(Stdlib__Gc) = 197914694cd716338b4da966236687f4
+pkgconfig(libgvc)
+syslinux
+tmux
+virt-v2v = 1:2.13.6-1.el10
 

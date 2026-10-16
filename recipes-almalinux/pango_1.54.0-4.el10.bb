@@ -10,25 +10,26 @@ PACKAGES = " \
  pango-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/pango-1.54.0-4.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/pango-1.54.0-4.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "aaf7abd4b6bcb85e24dc62b7cfbc4d4134473850f6e1a15e92a3c1d548521331"
 
-URI_x86_64_v2_pango = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/pango-1.54.0-4.el10.x86_64_v2.rpm;name=x86_64_v2_pango;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pango}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/pango-1.54.0-4.el10.x86_64_v2.rpm;name=x86_64_v2_pango;unpack=0"
 SRC_URI[x86_64_v2_pango.sha256sum] = "80aa84563732b0a4de12de8cfc9e7dd8e09eafa1097f6a96f6badf7248271b07"
 
-URI_x86_64_v2_pango-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/pango-devel-1.54.0-4.el10.x86_64_v2.rpm;name=x86_64_v2_pango-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pango-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/pango-devel-1.54.0-4.el10.x86_64_v2.rpm;name=x86_64_v2_pango-devel;unpack=0"
 SRC_URI[x86_64_v2_pango-devel.sha256sum] = "f1a78345230ef242d0ec505ccec3ab909b56d9a741f074b45d4db23e4fe1f1d7"
 
-URI_aarch64_pango = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/pango-1.54.0-4.el10.aarch64.rpm;name=aarch64_pango;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pango}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/pango-1.54.0-4.el10.aarch64.rpm;name=aarch64_pango;unpack=0"
 SRC_URI[aarch64_pango.sha256sum] = "202d90aeef01519bacd848e22a72853b8cb1dce3dc95670ee0fb4b1fa8b8db81"
 
-URI_aarch64_pango-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/pango-devel-1.54.0-4.el10.aarch64.rpm;name=aarch64_pango-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pango-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/pango-devel-1.54.0-4.el10.aarch64.rpm;name=aarch64_pango-devel;unpack=0"
 SRC_URI[aarch64_pango-devel.sha256sum] = "10b593bb53d8ee4dfb2c1109848fd43c5baefc5329cb5581c6bb5b7cb865eb0f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/pango-1.54.0-4.el10.riscv64.rpm;name=riscv64_pango;unpack=0"
+SRC_URI[riscv64_pango.sha256sum] = "1cfd83e88185928276f42bcc16ff1d7ab293294ceb152cf14d30a7f2602d8148"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/pango-devel-1.54.0-4.el10.riscv64.rpm;name=riscv64_pango-devel;unpack=0"
+SRC_URI[riscv64_pango-devel.sha256sum] = "7c9b5b0c4ef35f75cc8e85ea076ec0ba0d8956e5e3d5b773a31ec085b72924ad"
 
 RDEPENDS:pango = " \
  cairo \

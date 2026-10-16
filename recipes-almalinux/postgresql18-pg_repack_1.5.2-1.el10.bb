@@ -9,17 +9,17 @@ PACKAGES = " \
  postgresql18-pg_repack \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/postgresql18-pg_repack-1.5.2-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/postgresql18-pg_repack-1.5.2-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "9e85b88154e963b3087ecf948b6336d1a389f60883ba6bfb8ff2555abc70f245"
 
-URI_x86_64_v2_postgresql18-pg_repack = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postgresql18-pg_repack-1.5.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_postgresql18-pg_repack;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_postgresql18-pg_repack}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postgresql18-pg_repack-1.5.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_postgresql18-pg_repack;unpack=0"
 SRC_URI[x86_64_v2_postgresql18-pg_repack.sha256sum] = "53f37780aa1b64becd16221ad1759ad9755510910314f0a0cf79960f4b06f4c0"
 
-URI_aarch64_postgresql18-pg_repack = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postgresql18-pg_repack-1.5.2-1.el10.aarch64.rpm;name=aarch64_postgresql18-pg_repack;unpack=0"
-SRC_URI:append = " ${URI_aarch64_postgresql18-pg_repack}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postgresql18-pg_repack-1.5.2-1.el10.aarch64.rpm;name=aarch64_postgresql18-pg_repack;unpack=0"
 SRC_URI[aarch64_postgresql18-pg_repack.sha256sum] = "cb78e74fae1cf41e6ef04422cca3ffd8102616751b9101dae91f3068b78b7775"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/postgresql18-pg_repack-1.5.2-1.el10.riscv64.rpm;name=riscv64_postgresql18-pg_repack;unpack=0"
+SRC_URI[riscv64_postgresql18-pg_repack.sha256sum] = "36bfaf07edd43b558a489e8e40fe6dbc1a58fb3174eb13c434726d45a5b868b2"
 
 RDEPENDS:postgresql18-pg_repack = " \
  glibc \

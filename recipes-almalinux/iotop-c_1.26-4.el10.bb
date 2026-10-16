@@ -9,17 +9,17 @@ PACKAGES = " \
  iotop-c \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/iotop-c-1.26-4.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/iotop-c-1.26-4.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a4ae94a3e370730df86b0a2604cab3012488b666c1623dd240a074e02bb2027a"
 
-URI_x86_64_v2_iotop-c = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/iotop-c-1.26-4.el10.x86_64_v2.rpm;name=x86_64_v2_iotop-c;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_iotop-c}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/iotop-c-1.26-4.el10.x86_64_v2.rpm;name=x86_64_v2_iotop-c;unpack=0"
 SRC_URI[x86_64_v2_iotop-c.sha256sum] = "d6a412ffd288cdb14fb5fad44c148f014e2ea49172593b462098a257a0b72452"
 
-URI_aarch64_iotop-c = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/iotop-c-1.26-4.el10.aarch64.rpm;name=aarch64_iotop-c;unpack=0"
-SRC_URI:append = " ${URI_aarch64_iotop-c}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/iotop-c-1.26-4.el10.aarch64.rpm;name=aarch64_iotop-c;unpack=0"
 SRC_URI[aarch64_iotop-c.sha256sum] = "e8a23d663063ac303389714845caaeb3c83a696a5a99037c7a30dbe107aea24b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/iotop-c-1.26-4.el10.riscv64.rpm;name=riscv64_iotop-c;unpack=0"
+SRC_URI[riscv64_iotop-c.sha256sum] = "a9a53db4ca8a2aa8487a49458f9e2237891ba7b2f7ece2fd70ac3b9103868b77"
 
 RDEPENDS:iotop-c = " \
  glibc \

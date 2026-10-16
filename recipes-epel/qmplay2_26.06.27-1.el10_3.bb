@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "qmplay2"
 PV = "26.06.27"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  qmplay2 \
  qmplay2-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ qmplay2 \
+ qmplay2-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/q/qmplay2-26.06.27-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/q/qmplay2-26.06.27-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "edadbbfefc4134408decfc8df1235f4f4ac06331dab8b492506d43a73931931d"
 
-URI_x86_64_v2_qmplay2 = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qmplay2-26.06.27-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qmplay2;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qmplay2}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qmplay2-26.06.27-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qmplay2;unpack=0"
 SRC_URI[x86_64_v2_qmplay2.sha256sum] = "a9b095a1f6ce86151caeb8d1935b18b5e4d8b5a883af3c7ec7fbbda58a095e4c"
 
-URI_x86_64_v2_qmplay2-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qmplay2-devel-26.06.27-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qmplay2-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qmplay2-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qmplay2-devel-26.06.27-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qmplay2-devel;unpack=0"
 SRC_URI[x86_64_v2_qmplay2-devel.sha256sum] = "cd2efd483583e23c5706b5f565003666643292e813591f35481f3efa8aa4564c"
 
-URI_aarch64_qmplay2 = "${EPEL_MIRROR}/aarch64/Packages/q/qmplay2-26.06.27-1.el10_3.aarch64.rpm;name=aarch64_qmplay2;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qmplay2}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/q/qmplay2-26.06.27-1.el10_3.aarch64.rpm;name=aarch64_qmplay2;unpack=0"
 SRC_URI[aarch64_qmplay2.sha256sum] = "4df7827b16c4522bce0e7d3552a43e6bacc286583b3f9bf290b663541fdc3246"
 
-URI_aarch64_qmplay2-devel = "${EPEL_MIRROR}/aarch64/Packages/q/qmplay2-devel-26.06.27-1.el10_3.aarch64.rpm;name=aarch64_qmplay2-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qmplay2-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/q/qmplay2-devel-26.06.27-1.el10_3.aarch64.rpm;name=aarch64_qmplay2-devel;unpack=0"
 SRC_URI[aarch64_qmplay2-devel.sha256sum] = "17fb3b624ddbf2a89f3c0bc4335f141137f9fb0d5b947a1f80904776e6436e48"
 
 RDEPENDS:qmplay2 = " \

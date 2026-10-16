@@ -5,23 +5,26 @@ inherit dnf-bridge
 PN = "msmtp"
 PV = "1.8.25"
 PR = "6.el10_1"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  msmtp \
- "
+"
+PACKAGES:aarch64 = " \
+ msmtp \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/m/msmtp-1.8.25-6.el10_1.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/m/msmtp-1.8.25-6.el10_1.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "02cf256750bb3d6d3bcce4d9f4019f6332a23dd61e7a4ca34ea87e50a4394463"
 
-URI_x86_64_v2_msmtp = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/msmtp-1.8.25-6.el10_1.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_msmtp;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_msmtp}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/msmtp-1.8.25-6.el10_1.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_msmtp;unpack=0"
 SRC_URI[x86_64_v2_msmtp.sha256sum] = "7bc7d0beac141f2e79e993a55815c0ab669c3b6ee0dc71e46c8fb7a89f84765e"
-RPROVIDES:msmtp:x86_64_v2 = "virtual//usr/sbin/sendmail"
+RPROVIDES:msmtp:append:x86_64_v2 = " virtual//usr/sbin/sendmail"
 
-URI_aarch64_msmtp = "${EPEL_MIRROR}/aarch64/Packages/m/msmtp-1.8.25-6.el10_1.aarch64.rpm;name=aarch64_msmtp;unpack=0"
-SRC_URI:append = " ${URI_aarch64_msmtp}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/m/msmtp-1.8.25-6.el10_1.aarch64.rpm;name=aarch64_msmtp;unpack=0"
 SRC_URI[aarch64_msmtp.sha256sum] = "d2c0dc105b09b81e896f81052cf08e5fa787f5b076b6a782edd7426578f828d3"
-RPROVIDES:msmtp:aarch64 = "virtual//usr/sbin/sendmail"
+RPROVIDES:msmtp:append:aarch64 = " virtual//usr/sbin/sendmail"
 
 RDEPENDS:msmtp = " \
  alternatives \
@@ -32,7 +35,3 @@ RDEPENDS:msmtp = " \
  libgsasl \
  libsecret \
  "
-
-PROVIDES:append:x86_64_v2 = " rpm/virtual//usr/sbin/sendmail"
-
-PROVIDES:append:aarch64 = " rpm/virtual//usr/sbin/sendmail"

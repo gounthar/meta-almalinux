@@ -10,25 +10,26 @@ PACKAGES = " \
  Judy-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/Judy-1.0.5-38.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/Judy-1.0.5-38.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b7819a0532ca6fe4d23e5397c8cb0880f2c14c3d05a83643743dbd9bbbc115cc"
 
-URI_x86_64_v2_Judy = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/Judy-1.0.5-38.el10.x86_64_v2.rpm;name=x86_64_v2_Judy;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_Judy}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/Judy-1.0.5-38.el10.x86_64_v2.rpm;name=x86_64_v2_Judy;unpack=0"
 SRC_URI[x86_64_v2_Judy.sha256sum] = "860fe7c6a748b945c37038454ff7fab7812c95306679e89a9b60b304c3bfe2dd"
 
-URI_x86_64_v2_Judy-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/Judy-devel-1.0.5-38.el10.x86_64_v2.rpm;name=x86_64_v2_Judy-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_Judy-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/Judy-devel-1.0.5-38.el10.x86_64_v2.rpm;name=x86_64_v2_Judy-devel;unpack=0"
 SRC_URI[x86_64_v2_Judy-devel.sha256sum] = "7f01548f4e70e571256d54898649fa63a3dc843094c0008fd3af762874b0e4b3"
 
-URI_aarch64_Judy = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/Judy-1.0.5-38.el10.aarch64.rpm;name=aarch64_Judy;unpack=0"
-SRC_URI:append = " ${URI_aarch64_Judy}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/Judy-1.0.5-38.el10.aarch64.rpm;name=aarch64_Judy;unpack=0"
 SRC_URI[aarch64_Judy.sha256sum] = "aaba368c2e1709126ea60eb672dfcdd15ba9f57ad49567f53eb2144df9d19488"
 
-URI_aarch64_Judy-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/Judy-devel-1.0.5-38.el10.aarch64.rpm;name=aarch64_Judy-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_Judy-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/Judy-devel-1.0.5-38.el10.aarch64.rpm;name=aarch64_Judy-devel;unpack=0"
 SRC_URI[aarch64_Judy-devel.sha256sum] = "ff584930e04be66d25a805e73e44f7d3bc795ba07fd142ec417c0628770cec7f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/Judy-1.0.5-38.el10.riscv64.rpm;name=riscv64_Judy;unpack=0"
+SRC_URI[riscv64_Judy.sha256sum] = "3464626bdf9899749f39f78ae7dcbdcf0328d9c07053eafc36157ba2dbc3a1a0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/Judy-devel-1.0.5-38.el10.riscv64.rpm;name=riscv64_Judy-devel;unpack=0"
+SRC_URI[riscv64_Judy-devel.sha256sum] = "91a3049245c75d12bcaabbb8ae3a96d70ef8f8d62b00df230ed786adf5cdace9"
 
 RDEPENDS:Judy = " \
  glibc \

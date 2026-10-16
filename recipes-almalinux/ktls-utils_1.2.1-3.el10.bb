@@ -9,17 +9,17 @@ PACKAGES = " \
  ktls-utils \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/ktls-utils-1.2.1-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/ktls-utils-1.2.1-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d87d42c46e0ddaeef63f7d95147bba818b9f8eff805f642cd438157431a299b6"
 
-URI_x86_64_v2_ktls-utils = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/ktls-utils-1.2.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_ktls-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ktls-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/ktls-utils-1.2.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_ktls-utils;unpack=0"
 SRC_URI[x86_64_v2_ktls-utils.sha256sum] = "d796a2bb3301639dc58dd3ba3d78756b499d4d161f4b9a81abfda41fc269467d"
 
-URI_aarch64_ktls-utils = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/ktls-utils-1.2.1-3.el10.aarch64.rpm;name=aarch64_ktls-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ktls-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/ktls-utils-1.2.1-3.el10.aarch64.rpm;name=aarch64_ktls-utils;unpack=0"
 SRC_URI[aarch64_ktls-utils.sha256sum] = "f7caf081facbf3a3435a3216f9f5874a5e2c58b489d6ac7a9a92581332bc2991"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/ktls-utils-1.2.1-3.el10.riscv64.rpm;name=riscv64_ktls-utils;unpack=0"
+SRC_URI[riscv64_ktls-utils.sha256sum] = "ca46c0d75c6b52720863857ef4f4c31b82e7b1da4fdef7d24e9cc7a86963d1c3"
 
 RDEPENDS:ktls-utils = " \
  bash \

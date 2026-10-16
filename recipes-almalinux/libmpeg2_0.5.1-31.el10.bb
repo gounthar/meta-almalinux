@@ -10,25 +10,26 @@ PACKAGES = " \
  libmpeg2-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/libmpeg2-0.5.1-31.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/libmpeg2-0.5.1-31.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7f76b53d61c0184d63838d70a8da934deeceace67435844b3b17ea4e031d7a53"
 
-URI_x86_64_v2_libmpeg2 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libmpeg2-0.5.1-31.el10.x86_64_v2.rpm;name=x86_64_v2_libmpeg2;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libmpeg2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libmpeg2-0.5.1-31.el10.x86_64_v2.rpm;name=x86_64_v2_libmpeg2;unpack=0"
 SRC_URI[x86_64_v2_libmpeg2.sha256sum] = "383dc3935e52fb57266c69e06c75831b6ea50ae79ce6a369f2e69f30e5d6ff21"
 
-URI_x86_64_v2_libmpeg2-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libmpeg2-devel-0.5.1-31.el10.x86_64_v2.rpm;name=x86_64_v2_libmpeg2-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libmpeg2-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libmpeg2-devel-0.5.1-31.el10.x86_64_v2.rpm;name=x86_64_v2_libmpeg2-devel;unpack=0"
 SRC_URI[x86_64_v2_libmpeg2-devel.sha256sum] = "5d5f4d86829b2be0beaa0a270fe09b403e846fe3286acf07fd1f4211da00a369"
 
-URI_aarch64_libmpeg2 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libmpeg2-0.5.1-31.el10.aarch64.rpm;name=aarch64_libmpeg2;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libmpeg2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libmpeg2-0.5.1-31.el10.aarch64.rpm;name=aarch64_libmpeg2;unpack=0"
 SRC_URI[aarch64_libmpeg2.sha256sum] = "959d8226add8c1752cfce1d8869326e2f418097660a71fdaaac6da9124ff29a1"
 
-URI_aarch64_libmpeg2-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libmpeg2-devel-0.5.1-31.el10.aarch64.rpm;name=aarch64_libmpeg2-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libmpeg2-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libmpeg2-devel-0.5.1-31.el10.aarch64.rpm;name=aarch64_libmpeg2-devel;unpack=0"
 SRC_URI[aarch64_libmpeg2-devel.sha256sum] = "dee2ca3f4efb7e5b6b67f2c3c61d5083b411d6cf0ec1e03ed6fa4118b96f3fa5"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libmpeg2-0.5.1-31.el10.riscv64.rpm;name=riscv64_libmpeg2;unpack=0"
+SRC_URI[riscv64_libmpeg2.sha256sum] = "9b37fec8c956e628a64a70b2f84e06b6d9819842c7a4e53a666c5f59d4715365"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libmpeg2-devel-0.5.1-31.el10.riscv64.rpm;name=riscv64_libmpeg2-devel;unpack=0"
+SRC_URI[riscv64_libmpeg2-devel.sha256sum] = "5723e7a6d6a60ddcb0b25767eb3de21228efd46a00afe899a3a1637954d7c75f"
 
 RDEPENDS:libmpeg2 = " \
  glibc \

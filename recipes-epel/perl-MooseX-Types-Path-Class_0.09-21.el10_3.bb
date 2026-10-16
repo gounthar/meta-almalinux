@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-MooseX-Types-Path-Class"
 PV = "0.09"
 PR = "21.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-MooseX-Types-Path-Class \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-MooseX-Types-Path-Class \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-MooseX-Types-Path-Class-0.09-21.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-MooseX-Types-Path-Class-0.09-21.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "9de74711842f4ba9999e43d5cd44adefd27be19cceb4a01cf6f93f555563a0eb"
 
-URI_x86_64_v2_perl-MooseX-Types-Path-Class = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-MooseX-Types-Path-Class-0.09-21.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-MooseX-Types-Path-Class;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-MooseX-Types-Path-Class}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-MooseX-Types-Path-Class-0.09-21.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-MooseX-Types-Path-Class;unpack=0"
 SRC_URI[x86_64_v2_perl-MooseX-Types-Path-Class.sha256sum] = "b1489dcaf570708c96c79139e7706fe65f30d129f2277df611e5291effd606a1"
 
-URI_aarch64_perl-MooseX-Types-Path-Class = "${EPEL_MIRROR}/aarch64/Packages/p/perl-MooseX-Types-Path-Class-0.09-21.el10_3.noarch.rpm;name=aarch64_perl-MooseX-Types-Path-Class;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-MooseX-Types-Path-Class}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-MooseX-Types-Path-Class-0.09-21.el10_3.noarch.rpm;name=aarch64_perl-MooseX-Types-Path-Class;unpack=0"
 SRC_URI[aarch64_perl-MooseX-Types-Path-Class.sha256sum] = "f567294579052859070fd244c48c3845af2ba80986bf3701e79c0a621f9bf693"
 
 RDEPENDS:perl-MooseX-Types-Path-Class = " \

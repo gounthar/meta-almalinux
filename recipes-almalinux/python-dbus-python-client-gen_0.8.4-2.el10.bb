@@ -9,17 +9,17 @@ PACKAGES = " \
  python3-dbus-python-client-gen \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python-dbus-python-client-gen-0.8.4-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python-dbus-python-client-gen-0.8.4-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8369125a40503787db59e2c52f0f068dec5729625627df2e5cb06bcb3059a82e"
 
-URI_x86_64_v2_python3-dbus-python-client-gen = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-dbus-python-client-gen-0.8.4-2.el10.noarch.rpm;name=x86_64_v2_python3-dbus-python-client-gen;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-dbus-python-client-gen}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-dbus-python-client-gen-0.8.4-2.el10.noarch.rpm;name=x86_64_v2_python3-dbus-python-client-gen;unpack=0"
 SRC_URI[x86_64_v2_python3-dbus-python-client-gen.sha256sum] = "00c825182d4b4f0321162825e6a371394b2871e4cde1b7c07c6b27f63d81b8a6"
 
-URI_aarch64_python3-dbus-python-client-gen = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-dbus-python-client-gen-0.8.4-2.el10.noarch.rpm;name=aarch64_python3-dbus-python-client-gen;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-dbus-python-client-gen}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-dbus-python-client-gen-0.8.4-2.el10.noarch.rpm;name=aarch64_python3-dbus-python-client-gen;unpack=0"
 SRC_URI[aarch64_python3-dbus-python-client-gen.sha256sum] = "00c825182d4b4f0321162825e6a371394b2871e4cde1b7c07c6b27f63d81b8a6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-dbus-python-client-gen-0.8.4-2.el10.noarch.rpm;name=riscv64_python3-dbus-python-client-gen;unpack=0"
+SRC_URI[riscv64_python3-dbus-python-client-gen.sha256sum] = "00c825182d4b4f0321162825e6a371394b2871e4cde1b7c07c6b27f63d81b8a6"
 
 RDEPENDS:python3-dbus-python-client-gen = " \
  python3 \

@@ -10,28 +10,32 @@ PACKAGES = " \
  gstreamer1-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gstreamer1-1.26.7-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gstreamer1-1.26.7-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b37fcc6506c3e3479f9dece292df7ebd4e18fcf5cdf0e7e0518939396f10654a"
 
 ## Requires (aarch64) that were seen as not satisfiable in original repo:
 # - gstreamer1: libcap.so.2()(64bit)
 
-URI_x86_64_v2_gstreamer1 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gstreamer1-1.26.7-5.el10.x86_64_v2.rpm;name=x86_64_v2_gstreamer1;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gstreamer1}"
+## Requires (riscv64) that were seen as not satisfiable in original repo:
+# - gstreamer1: libcap.so.2()(64bit)
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gstreamer1-1.26.7-5.el10.x86_64_v2.rpm;name=x86_64_v2_gstreamer1;unpack=0"
 SRC_URI[x86_64_v2_gstreamer1.sha256sum] = "552782cf91b5c815e0c05e897638927f825299f0da8ed874735bc804b4daaedd"
 
-URI_x86_64_v2_gstreamer1-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gstreamer1-devel-1.26.7-5.el10.x86_64_v2.rpm;name=x86_64_v2_gstreamer1-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gstreamer1-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gstreamer1-devel-1.26.7-5.el10.x86_64_v2.rpm;name=x86_64_v2_gstreamer1-devel;unpack=0"
 SRC_URI[x86_64_v2_gstreamer1-devel.sha256sum] = "4ac5cb3ddaeb0b1c3f08185a85f6821e5ae219ad2bbe8ce42230ed03a1f8a8c6"
 
-URI_aarch64_gstreamer1 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gstreamer1-1.26.7-5.el10.aarch64.rpm;name=aarch64_gstreamer1;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gstreamer1}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gstreamer1-1.26.7-5.el10.aarch64.rpm;name=aarch64_gstreamer1;unpack=0"
 SRC_URI[aarch64_gstreamer1.sha256sum] = "c9f59f0606b1808e03cb31d1d83835aeafc770c9313bc87d5dbcad8d0852da21"
 
-URI_aarch64_gstreamer1-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gstreamer1-devel-1.26.7-5.el10.aarch64.rpm;name=aarch64_gstreamer1-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gstreamer1-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gstreamer1-devel-1.26.7-5.el10.aarch64.rpm;name=aarch64_gstreamer1-devel;unpack=0"
 SRC_URI[aarch64_gstreamer1-devel.sha256sum] = "775af7d30e7f76a6cd7e3b845a7ea3f83f2f5df1e483a633d829791de3f78d10"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gstreamer1-1.26.7-5.el10.riscv64.rpm;name=riscv64_gstreamer1;unpack=0"
+SRC_URI[riscv64_gstreamer1.sha256sum] = "aa365b51f85841f464d949fd14224b71cbb8c249fcdec12573c0f82eb0ced483"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gstreamer1-devel-1.26.7-5.el10.riscv64.rpm;name=riscv64_gstreamer1-devel;unpack=0"
+SRC_URI[riscv64_gstreamer1-devel.sha256sum] = "4dcc012797c569a44cbc9eff7c3b32bc8d1cecdf4c498d2b64b6013767327072"
 
 RDEPENDS:gstreamer1:x86_64_v2 = " \
  bash \
@@ -42,6 +46,13 @@ RDEPENDS:gstreamer1:x86_64_v2 = " \
  python3 \
 "
 RDEPENDS:gstreamer1:aarch64 = " \
+ bash \
+ glib2 \
+ glibc \
+ libgcc \
+ python3 \
+"
+RDEPENDS:gstreamer1:riscv64 = " \
  bash \
  glib2 \
  glibc \

@@ -14,57 +14,62 @@ PACKAGES = " \
  openwsman-server \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/openwsman-2.8.1-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/openwsman-2.8.1-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6d1435aaef3384b909e759b4794694464ba075909ec3d6f1eb5bd9a5b22aef1f"
 
-URI_x86_64_v2_libwsman-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libwsman-devel-2.8.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_libwsman-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libwsman-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libwsman-devel-2.8.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_libwsman-devel;unpack=0"
 SRC_URI[x86_64_v2_libwsman-devel.sha256sum] = "db7170e4efbe0a9793a66d9965ce3622c24fa5010d9781ac06a9e46ec7790662"
 
-URI_x86_64_v2_libwsman1 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libwsman1-2.8.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_libwsman1;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libwsman1}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libwsman1-2.8.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_libwsman1;unpack=0"
 SRC_URI[x86_64_v2_libwsman1.sha256sum] = "ded0b156a4b9f0b3ab3e60b3b7b26ae029191eadb7896e1b1f119a1f6b03a738"
 
-URI_x86_64_v2_openwsman-client = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/openwsman-client-2.8.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_openwsman-client;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_openwsman-client}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/openwsman-client-2.8.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_openwsman-client;unpack=0"
 SRC_URI[x86_64_v2_openwsman-client.sha256sum] = "915d792be48a6013d09695257ed29197363830633d8dcc0cde7bc9e338df21b6"
 
-URI_x86_64_v2_openwsman-python3 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/openwsman-python3-2.8.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_openwsman-python3;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_openwsman-python3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/openwsman-python3-2.8.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_openwsman-python3;unpack=0"
 SRC_URI[x86_64_v2_openwsman-python3.sha256sum] = "6fed54d69db8d2e2d1cede107156b89cdbcdf6c0cc18303ead2df52db1489d86"
 
-URI_x86_64_v2_openwsman-selinux = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/openwsman-selinux-2.8.1-3.el10.noarch.rpm;name=x86_64_v2_openwsman-selinux;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_openwsman-selinux}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/openwsman-selinux-2.8.1-3.el10.noarch.rpm;name=x86_64_v2_openwsman-selinux;unpack=0"
 SRC_URI[x86_64_v2_openwsman-selinux.sha256sum] = "d1588f09012ad53ab31b001a1aaa0a544628633e80c8ce141aa689c804b773c8"
 
-URI_x86_64_v2_openwsman-server = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/openwsman-server-2.8.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_openwsman-server;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_openwsman-server}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/openwsman-server-2.8.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_openwsman-server;unpack=0"
 SRC_URI[x86_64_v2_openwsman-server.sha256sum] = "8d5046ea3cc53c8f6f25f695fb2bd91244091efce4e0fe895d249eb777f95999"
 
-URI_aarch64_libwsman-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libwsman-devel-2.8.1-3.el10.aarch64.rpm;name=aarch64_libwsman-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libwsman-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libwsman-devel-2.8.1-3.el10.aarch64.rpm;name=aarch64_libwsman-devel;unpack=0"
 SRC_URI[aarch64_libwsman-devel.sha256sum] = "720080c15d584bc484432e8c4b523158c990b1de5ea7d999136333482fc73a6e"
 
-URI_aarch64_libwsman1 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libwsman1-2.8.1-3.el10.aarch64.rpm;name=aarch64_libwsman1;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libwsman1}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libwsman1-2.8.1-3.el10.aarch64.rpm;name=aarch64_libwsman1;unpack=0"
 SRC_URI[aarch64_libwsman1.sha256sum] = "5c092ae89d882b23037cb20d8c0fb985f867bbbdee6472dca055a6cd0fb7f771"
 
-URI_aarch64_openwsman-client = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/openwsman-client-2.8.1-3.el10.aarch64.rpm;name=aarch64_openwsman-client;unpack=0"
-SRC_URI:append = " ${URI_aarch64_openwsman-client}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/openwsman-client-2.8.1-3.el10.aarch64.rpm;name=aarch64_openwsman-client;unpack=0"
 SRC_URI[aarch64_openwsman-client.sha256sum] = "58921ce020916fe6328e68d6cc3308092846bfcf6d13948ae0fa927287f0f3db"
 
-URI_aarch64_openwsman-python3 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/openwsman-python3-2.8.1-3.el10.aarch64.rpm;name=aarch64_openwsman-python3;unpack=0"
-SRC_URI:append = " ${URI_aarch64_openwsman-python3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/openwsman-python3-2.8.1-3.el10.aarch64.rpm;name=aarch64_openwsman-python3;unpack=0"
 SRC_URI[aarch64_openwsman-python3.sha256sum] = "746b19d350de09da4cf3154e2d4b842d1560d3539eb535e640d4f3fb5a074aca"
 
-URI_aarch64_openwsman-selinux = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/openwsman-selinux-2.8.1-3.el10.noarch.rpm;name=aarch64_openwsman-selinux;unpack=0"
-SRC_URI:append = " ${URI_aarch64_openwsman-selinux}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/openwsman-selinux-2.8.1-3.el10.noarch.rpm;name=aarch64_openwsman-selinux;unpack=0"
 SRC_URI[aarch64_openwsman-selinux.sha256sum] = "d1588f09012ad53ab31b001a1aaa0a544628633e80c8ce141aa689c804b773c8"
 
-URI_aarch64_openwsman-server = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/openwsman-server-2.8.1-3.el10.aarch64.rpm;name=aarch64_openwsman-server;unpack=0"
-SRC_URI:append = " ${URI_aarch64_openwsman-server}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/openwsman-server-2.8.1-3.el10.aarch64.rpm;name=aarch64_openwsman-server;unpack=0"
 SRC_URI[aarch64_openwsman-server.sha256sum] = "9fae3467ab23b0b73c420dc06f30b00f5e57c34619c517a269497710738781a8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libwsman-devel-2.8.1-3.el10.riscv64.rpm;name=riscv64_libwsman-devel;unpack=0"
+SRC_URI[riscv64_libwsman-devel.sha256sum] = "c9fb7f7f9098a3f2d5dc53b1e889604704b6320af4e145f8a517bc350addd2b3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libwsman1-2.8.1-3.el10.riscv64.rpm;name=riscv64_libwsman1;unpack=0"
+SRC_URI[riscv64_libwsman1.sha256sum] = "f29b43f04e5c87b6b7f128259df13734f217b962cb8fb6843e18980698c6b236"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/openwsman-client-2.8.1-3.el10.riscv64.rpm;name=riscv64_openwsman-client;unpack=0"
+SRC_URI[riscv64_openwsman-client.sha256sum] = "0bebcea60f4a796c9c425d3cfa5174b22297e2c13b875301d0a53531b4c4b818"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/openwsman-python3-2.8.1-3.el10.riscv64.rpm;name=riscv64_openwsman-python3;unpack=0"
+SRC_URI[riscv64_openwsman-python3.sha256sum] = "776496560a4ae94ef0516a4bbac795d657599f85a48c5443fb59cf18228a26d9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/openwsman-selinux-2.8.1-3.el10.noarch.rpm;name=riscv64_openwsman-selinux;unpack=0"
+SRC_URI[riscv64_openwsman-selinux.sha256sum] = "d1588f09012ad53ab31b001a1aaa0a544628633e80c8ce141aa689c804b773c8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/openwsman-server-2.8.1-3.el10.riscv64.rpm;name=riscv64_openwsman-server;unpack=0"
+SRC_URI[riscv64_openwsman-server.sha256sum] = "7273e7133694ab454ea2d3f068f67581cb775557980299ea93cc7fe64b2afed6"
 
 RDEPENDS:libwsman-devel = " \
  libcurl-devel \

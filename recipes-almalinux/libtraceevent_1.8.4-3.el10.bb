@@ -10,25 +10,26 @@ PACKAGES = " \
  libtraceevent-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libtraceevent-1.8.4-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libtraceevent-1.8.4-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "9f99a6feeec92c50070a226790c52a843e6b8ab915c3e66428955741fa1638f3"
 
-URI_x86_64_v2_libtraceevent = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libtraceevent-1.8.4-3.el10.x86_64_v2.rpm;name=x86_64_v2_libtraceevent;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libtraceevent}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libtraceevent-1.8.4-3.el10.x86_64_v2.rpm;name=x86_64_v2_libtraceevent;unpack=0"
 SRC_URI[x86_64_v2_libtraceevent.sha256sum] = "3de3a39d29a127a8afec3a93619e33d36e1b2532b78ecc5ada66466e5da1e5ee"
 
-URI_x86_64_v2_libtraceevent-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libtraceevent-devel-1.8.4-3.el10.x86_64_v2.rpm;name=x86_64_v2_libtraceevent-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libtraceevent-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libtraceevent-devel-1.8.4-3.el10.x86_64_v2.rpm;name=x86_64_v2_libtraceevent-devel;unpack=0"
 SRC_URI[x86_64_v2_libtraceevent-devel.sha256sum] = "b03e7eb1009ac4ff5cc99046a9bfbcd7951e3166aef3f1c4a920b6675c7507ea"
 
-URI_aarch64_libtraceevent = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libtraceevent-1.8.4-3.el10.aarch64.rpm;name=aarch64_libtraceevent;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libtraceevent}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libtraceevent-1.8.4-3.el10.aarch64.rpm;name=aarch64_libtraceevent;unpack=0"
 SRC_URI[aarch64_libtraceevent.sha256sum] = "bbf7dce164a470cdc7aec7dec88b5eb3a81672adae580057309450368e4c0078"
 
-URI_aarch64_libtraceevent-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libtraceevent-devel-1.8.4-3.el10.aarch64.rpm;name=aarch64_libtraceevent-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libtraceevent-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libtraceevent-devel-1.8.4-3.el10.aarch64.rpm;name=aarch64_libtraceevent-devel;unpack=0"
 SRC_URI[aarch64_libtraceevent-devel.sha256sum] = "29f1ef2d4e0f9dbb935317b366094b4d0fc53363946b2c7b2d9813f1e76e0dae"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libtraceevent-1.8.4-3.el10.riscv64.rpm;name=riscv64_libtraceevent;unpack=0"
+SRC_URI[riscv64_libtraceevent.sha256sum] = "029e86b7220e4a890323d047edb7358487451e3659687f84a45262c41ce48160"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libtraceevent-devel-1.8.4-3.el10.riscv64.rpm;name=riscv64_libtraceevent-devel;unpack=0"
+SRC_URI[riscv64_libtraceevent-devel.sha256sum] = "8de03327adf8e347d0f6014e8cb5110e43cf875cac38fdfba452cec9074cd8ad"
 
 RDEPENDS:libtraceevent = " \
  glibc \

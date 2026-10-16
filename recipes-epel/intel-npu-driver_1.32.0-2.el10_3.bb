@@ -12,17 +12,17 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/i/intel-npu-driver-1.32.0-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/i/intel-npu-driver-1.32.0-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8bf49305553dcc206329e6f03c5012a488e9af4bae2cb872008d1a3048d9df2c"
 
-URI_x86_64_v2_intel-npu-driver = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/intel-npu-driver-1.32.0-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_intel-npu-driver;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_intel-npu-driver}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/intel-npu-driver-1.32.0-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_intel-npu-driver;unpack=0"
 SRC_URI[x86_64_v2_intel-npu-driver.sha256sum] = "8968fe66917458eaf86a2cb45b4110aedf65eed5def6a258fb5cec3a45975842"
 
-URI_x86_64_v2_intel-npu-driver-test = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/intel-npu-driver-test-1.32.0-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_intel-npu-driver-test;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_intel-npu-driver-test}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/intel-npu-driver-test-1.32.0-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_intel-npu-driver-test;unpack=0"
 SRC_URI[x86_64_v2_intel-npu-driver-test.sha256sum] = "139a2adfde5470b4a33df50a6fba7490a975dd8e299c0c94963632a6f236c0db"
 
 RDEPENDS:intel-npu-driver = " \

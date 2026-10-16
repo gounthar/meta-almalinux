@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "rust-astral-reqwest-retry"
 PV = "0.9.1"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-astral-reqwest-retry+default-devel \
  rust-astral-reqwest-retry+tracing-devel \
  rust-astral-reqwest-retry-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-astral-reqwest-retry+default-devel \
+ rust-astral-reqwest-retry+tracing-devel \
+ rust-astral-reqwest-retry-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-astral-reqwest-retry-0.9.1-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-astral-reqwest-retry-0.9.1-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "56238675bc5e8f6bdac68ec673a6cfb4340578ff15b2a112e365ecbafb0b3225"
 
-URI_x86_64_v2_rust-astral-reqwest-retry+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-astral-reqwest-retry+default-devel-0.9.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-astral-reqwest-retry+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-astral-reqwest-retry+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-astral-reqwest-retry+default-devel-0.9.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-astral-reqwest-retry+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-astral-reqwest-retry+default-devel.sha256sum] = "3cdc6f760df42d6cddce09c9fb3075f4600dffb21a47609929cee24d8b462f10"
 
-URI_x86_64_v2_rust-astral-reqwest-retry+tracing-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-astral-reqwest-retry+tracing-devel-0.9.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-astral-reqwest-retry+tracing-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-astral-reqwest-retry+tracing-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-astral-reqwest-retry+tracing-devel-0.9.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-astral-reqwest-retry+tracing-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-astral-reqwest-retry+tracing-devel.sha256sum] = "a225f308006c3643f7396ae45f011204e22a9de275086e25b7ef1ca9c00dd9c9"
 
-URI_x86_64_v2_rust-astral-reqwest-retry-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-astral-reqwest-retry-devel-0.9.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-astral-reqwest-retry-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-astral-reqwest-retry-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-astral-reqwest-retry-devel-0.9.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-astral-reqwest-retry-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-astral-reqwest-retry-devel.sha256sum] = "4e7e3cb7a2ff392295dbe7763a9387de2d93454a4e92705c7c28acbe1fd0a8d0"
 
-URI_aarch64_rust-astral-reqwest-retry+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-astral-reqwest-retry+default-devel-0.9.1-1.el10_3.noarch.rpm;name=aarch64_rust-astral-reqwest-retry+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-astral-reqwest-retry+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-astral-reqwest-retry+default-devel-0.9.1-1.el10_3.noarch.rpm;name=aarch64_rust-astral-reqwest-retry+default-devel;unpack=0"
 SRC_URI[aarch64_rust-astral-reqwest-retry+default-devel.sha256sum] = "9d8b85ba518ae2d74806ef7b4535638cb0e50930fbad2441e70f610aa595e663"
 
-URI_aarch64_rust-astral-reqwest-retry+tracing-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-astral-reqwest-retry+tracing-devel-0.9.1-1.el10_3.noarch.rpm;name=aarch64_rust-astral-reqwest-retry+tracing-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-astral-reqwest-retry+tracing-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-astral-reqwest-retry+tracing-devel-0.9.1-1.el10_3.noarch.rpm;name=aarch64_rust-astral-reqwest-retry+tracing-devel;unpack=0"
 SRC_URI[aarch64_rust-astral-reqwest-retry+tracing-devel.sha256sum] = "e7101cf3c97ba66cbfb0b16fc94efddf4cce0742ee6c6dd52716720fe3bdec1a"
 
-URI_aarch64_rust-astral-reqwest-retry-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-astral-reqwest-retry-devel-0.9.1-1.el10_3.noarch.rpm;name=aarch64_rust-astral-reqwest-retry-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-astral-reqwest-retry-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-astral-reqwest-retry-devel-0.9.1-1.el10_3.noarch.rpm;name=aarch64_rust-astral-reqwest-retry-devel;unpack=0"
 SRC_URI[aarch64_rust-astral-reqwest-retry-devel.sha256sum] = "1e31273b66e2f4dbf1364ebf86e33fb36c5ecc8b475721674b75c43c8fb30a56"
 
 RDEPENDS:rust-astral-reqwest-retry+default-devel = " \

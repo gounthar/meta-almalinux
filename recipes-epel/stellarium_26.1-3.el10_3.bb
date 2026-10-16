@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "stellarium"
 PV = "26.1"
 PR = "3.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  stellarium \
  stellarium-data \
- "
+"
+PACKAGES:aarch64 = " \
+ stellarium \
+ stellarium-data \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/s/stellarium-26.1-3.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/s/stellarium-26.1-3.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c5f702ee6eb240a8ddbd5d6aac17e15cd26b05d670df90d545093c7dde6a7d9e"
 
-URI_x86_64_v2_stellarium = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/stellarium-26.1-3.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_stellarium;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_stellarium}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/stellarium-26.1-3.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_stellarium;unpack=0"
 SRC_URI[x86_64_v2_stellarium.sha256sum] = "ffd3725b4a7069b6bcc8f398d868c022b67c729bcf6a20caf78b427bd5cf612b"
 
-URI_x86_64_v2_stellarium-data = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/stellarium-data-26.1-3.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_stellarium-data;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_stellarium-data}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/stellarium-data-26.1-3.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_stellarium-data;unpack=0"
 SRC_URI[x86_64_v2_stellarium-data.sha256sum] = "3e04b762b85ba0296d601932c1369db804c8e7cd52229b711e6aa206a0e20166"
 
-URI_aarch64_stellarium = "${EPEL_MIRROR}/aarch64/Packages/s/stellarium-26.1-3.el10_3.aarch64.rpm;name=aarch64_stellarium;unpack=0"
-SRC_URI:append = " ${URI_aarch64_stellarium}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/s/stellarium-26.1-3.el10_3.aarch64.rpm;name=aarch64_stellarium;unpack=0"
 SRC_URI[aarch64_stellarium.sha256sum] = "e026f248a6ae7a174bfda044033340fe36b325246923d806ebbd2faa3100fb3a"
 
-URI_aarch64_stellarium-data = "${EPEL_MIRROR}/aarch64/Packages/s/stellarium-data-26.1-3.el10_3.noarch.rpm;name=aarch64_stellarium-data;unpack=0"
-SRC_URI:append = " ${URI_aarch64_stellarium-data}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/s/stellarium-data-26.1-3.el10_3.noarch.rpm;name=aarch64_stellarium-data;unpack=0"
 SRC_URI[aarch64_stellarium-data.sha256sum] = "b75d9ab8dfb173601bbf312da843ea116f0a8bff13a41f4cfe2cac995f597541"
 
 RDEPENDS:stellarium = " \

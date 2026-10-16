@@ -10,25 +10,26 @@ PACKAGES = " \
  lcms2-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/lcms2-2.16-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/lcms2-2.16-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6fb24927e5252aee1f3a4edc2f8d5cc6809efa7618ed9e92824c1609dd10c679"
 
-URI_x86_64_v2_lcms2 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/lcms2-2.16-6.el10.x86_64_v2.rpm;name=x86_64_v2_lcms2;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lcms2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/lcms2-2.16-6.el10.x86_64_v2.rpm;name=x86_64_v2_lcms2;unpack=0"
 SRC_URI[x86_64_v2_lcms2.sha256sum] = "8b2f789aa79e8af5664cf061b649e57e664c7a629beef02e2a807fdd47ff0440"
 
-URI_x86_64_v2_lcms2-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/lcms2-devel-2.16-6.el10.x86_64_v2.rpm;name=x86_64_v2_lcms2-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lcms2-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/lcms2-devel-2.16-6.el10.x86_64_v2.rpm;name=x86_64_v2_lcms2-devel;unpack=0"
 SRC_URI[x86_64_v2_lcms2-devel.sha256sum] = "a33427ebac0117bc2ba2cd3f2720084aa82de43853ea366544a51944c7dbac13"
 
-URI_aarch64_lcms2 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/lcms2-2.16-6.el10.aarch64.rpm;name=aarch64_lcms2;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lcms2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/lcms2-2.16-6.el10.aarch64.rpm;name=aarch64_lcms2;unpack=0"
 SRC_URI[aarch64_lcms2.sha256sum] = "84cf956461037789157b9a20385b44ee9bcd9d80e37e739beaa3ca805e5dbb4c"
 
-URI_aarch64_lcms2-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/lcms2-devel-2.16-6.el10.aarch64.rpm;name=aarch64_lcms2-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lcms2-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/lcms2-devel-2.16-6.el10.aarch64.rpm;name=aarch64_lcms2-devel;unpack=0"
 SRC_URI[aarch64_lcms2-devel.sha256sum] = "a9fb420049f61e22054d921df70c1f117198a791be8cd9f54e52a28c7cc37dc7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/lcms2-2.16-6.el10.riscv64.rpm;name=riscv64_lcms2;unpack=0"
+SRC_URI[riscv64_lcms2.sha256sum] = "06030100a7b7915956573b687718741ac0851b8f030b92071ae3068e340ca99b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/lcms2-devel-2.16-6.el10.riscv64.rpm;name=riscv64_lcms2-devel;unpack=0"
+SRC_URI[riscv64_lcms2-devel.sha256sum] = "2814a50de64b29c193d6da1baf550ddb1681708e2fdd1144cc83f34292f487fe"
 
 RDEPENDS:lcms2 = " \
  glibc \

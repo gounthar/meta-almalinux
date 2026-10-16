@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-fts-sys"
 PV = "0.2.17"
 PR = "2.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-fts-sys+default-devel \
  rust-fts-sys-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-fts-sys+default-devel \
+ rust-fts-sys-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-fts-sys-0.2.17-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-fts-sys-0.2.17-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "db59787743dc3f383e5450d44d5c13d05f4e7a5ac1af72d34c9dd3c50b9c8c6f"
 
-URI_x86_64_v2_rust-fts-sys+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-fts-sys+default-devel-0.2.17-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-fts-sys+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-fts-sys+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-fts-sys+default-devel-0.2.17-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-fts-sys+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-fts-sys+default-devel.sha256sum] = "ed4345e8470faecd56f0736d57dbeee3e230b19c14568476fcb394ef677eac74"
 
-URI_x86_64_v2_rust-fts-sys-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-fts-sys-devel-0.2.17-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-fts-sys-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-fts-sys-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-fts-sys-devel-0.2.17-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-fts-sys-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-fts-sys-devel.sha256sum] = "bc75c43ee5b95fb371b3520390a11abe07c57c519c14a21feff7036756859136"
 
-URI_aarch64_rust-fts-sys+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-fts-sys+default-devel-0.2.17-2.el10_3.noarch.rpm;name=aarch64_rust-fts-sys+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-fts-sys+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-fts-sys+default-devel-0.2.17-2.el10_3.noarch.rpm;name=aarch64_rust-fts-sys+default-devel;unpack=0"
 SRC_URI[aarch64_rust-fts-sys+default-devel.sha256sum] = "4b6dc5d95538aa5c21381433d12f28bbb208b23e20055135b6e03708949bfff8"
 
-URI_aarch64_rust-fts-sys-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-fts-sys-devel-0.2.17-2.el10_3.noarch.rpm;name=aarch64_rust-fts-sys-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-fts-sys-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-fts-sys-devel-0.2.17-2.el10_3.noarch.rpm;name=aarch64_rust-fts-sys-devel;unpack=0"
 SRC_URI[aarch64_rust-fts-sys-devel.sha256sum] = "c0e7884d878716033f1f0306b3a93077242a55f12e60af3243512de35fc89cc3"
 
 RDEPENDS:rust-fts-sys+default-devel = " \

@@ -11,28 +11,32 @@ PACKAGES = " \
  doxygen-latex \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/doxygen-1.13.2-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/doxygen-1.13.2-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "edec03c9427fb8e7d921142551658fd1afcd64dafb6b231b7b99d02b95a4f4ef"
 
 ## Requires (aarch64) that were seen as not satisfiable in original repo:
 # - doxygen: graphviz
 
-URI_x86_64_v2_doxygen = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/doxygen-1.13.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_doxygen;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_doxygen}"
+## Requires (riscv64) that were seen as not satisfiable in original repo:
+# - doxygen: graphviz
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/doxygen-1.13.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_doxygen;unpack=0"
 SRC_URI[x86_64_v2_doxygen.sha256sum] = "bbf4a04c2a3cd66ac638a394ea38a3b4ad7dd5f76f19eab17a7ecdd603752164"
 
-URI_x86_64_v2_doxygen-latex = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/doxygen-latex-1.13.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_doxygen-latex;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_doxygen-latex}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/doxygen-latex-1.13.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_doxygen-latex;unpack=0"
 SRC_URI[x86_64_v2_doxygen-latex.sha256sum] = "0cdca04d50b7045edda852ec0b60d64f37c005d256024727b75adc40f051b7a3"
 
-URI_aarch64_doxygen = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/doxygen-1.13.2-1.el10.aarch64.rpm;name=aarch64_doxygen;unpack=0"
-SRC_URI:append = " ${URI_aarch64_doxygen}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/doxygen-1.13.2-1.el10.aarch64.rpm;name=aarch64_doxygen;unpack=0"
 SRC_URI[aarch64_doxygen.sha256sum] = "a8affa96dc6aec54fb4d7ea63bfcfbbe2083be2e05cb18d6c6773076e224d817"
 
-URI_aarch64_doxygen-latex = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/doxygen-latex-1.13.2-1.el10.aarch64.rpm;name=aarch64_doxygen-latex;unpack=0"
-SRC_URI:append = " ${URI_aarch64_doxygen-latex}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/doxygen-latex-1.13.2-1.el10.aarch64.rpm;name=aarch64_doxygen-latex;unpack=0"
 SRC_URI[aarch64_doxygen-latex.sha256sum] = "3967cf0ab5c456a3582cabedf2f485b4a93aee3cf157988a660ed2e63259ef91"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/doxygen-1.13.2-1.el10.riscv64.rpm;name=riscv64_doxygen;unpack=0"
+SRC_URI[riscv64_doxygen.sha256sum] = "19c039351f2b7cdb9e12ad01029bd5b46698a54cd82673340f9221dd59d2309b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/doxygen-latex-1.13.2-1.el10.riscv64.rpm;name=riscv64_doxygen-latex;unpack=0"
+SRC_URI[riscv64_doxygen-latex.sha256sum] = "c5d94f424ea4cfe1900dd4f7d1b0f8f87cf65d937f46999cac4ca6c6a7d9a3d8"
 
 RDEPENDS:doxygen:x86_64_v2 = " \
  glibc \
@@ -47,7 +51,13 @@ RDEPENDS:doxygen:aarch64 = " \
  libstdc++ \
  perl-interpreter \
 "
-RDEPENDS:doxygen-latex = " \
+RDEPENDS:doxygen:riscv64 = " \
+ glibc \
+ libgcc \
+ libstdc++ \
+ perl-interpreter \
+"
+RDEPENDS:doxygen-latex:x86_64_v2 = " \
  doxygen \
  texlive-adjustbox \
  texlive-amsfonts \
@@ -92,4 +102,90 @@ RDEPENDS:doxygen-latex = " \
  virtual/tex_inputenc.sty_ \
  virtual/tex_makeidx.sty_ \
  virtual/tex_textcomp.sty_ \
- "
+"
+RDEPENDS:doxygen-latex:aarch64 = " \
+ doxygen \
+ texlive-adjustbox \
+ texlive-amsfonts \
+ texlive-appendix \
+ texlive-bibtex \
+ texlive-caption \
+ texlive-collection-latexrecommended \
+ texlive-dvips \
+ texlive-epstopdf \
+ texlive-etoc \
+ texlive-fancyhdr \
+ texlive-fancyvrb \
+ texlive-float \
+ texlive-geometry \
+ texlive-graphics \
+ texlive-hanging \
+ texlive-hyperref \
+ texlive-iftex \
+ texlive-import \
+ texlive-listings \
+ texlive-makeindex \
+ texlive-multirow \
+ texlive-natbib \
+ texlive-newunicodechar \
+ texlive-psnfss \
+ texlive-pspicture \
+ texlive-sectsty \
+ texlive-stackengine \
+ texlive-tabu \
+ texlive-tocloft \
+ texlive-tools \
+ texlive-ulem \
+ texlive-varwidth \
+ texlive-wasy \
+ texlive-wasysym \
+ texlive-xcolor \
+ texlive-xtab \
+ virtual/tex_alltt.sty_ \
+ virtual/tex_fixltx2e.sty_ \
+ virtual/tex_fontenc.sty_ \
+ virtual/tex_ifthen.sty_ \
+ virtual/tex_inputenc.sty_ \
+ virtual/tex_makeidx.sty_ \
+ virtual/tex_textcomp.sty_ \
+"
+RDEPENDS:doxygen-latex:riscv64 = " \
+ doxygen \
+ texlive-adjustbox \
+ texlive-amsfonts \
+ texlive-appendix \
+ texlive-bibtex \
+ texlive-caption \
+ texlive-collection-latexrecommended \
+ texlive-dvips \
+ texlive-epstopdf \
+ texlive-etoc \
+ texlive-fancyhdr \
+ texlive-fancyvrb \
+ texlive-float \
+ texlive-geometry \
+ texlive-graphics \
+ texlive-hanging \
+ texlive-hyperref \
+ texlive-iftex \
+ texlive-import \
+ texlive-latex \
+ texlive-listings \
+ texlive-makeindex \
+ texlive-multirow \
+ texlive-natbib \
+ texlive-newunicodechar \
+ texlive-psnfss \
+ texlive-pspicture \
+ texlive-sectsty \
+ texlive-stackengine \
+ texlive-tabu \
+ texlive-tocloft \
+ texlive-tools \
+ texlive-ulem \
+ texlive-varwidth \
+ texlive-wasy \
+ texlive-wasysym \
+ texlive-xcolor \
+ texlive-xtab \
+"

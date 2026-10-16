@@ -11,33 +11,35 @@ PACKAGES = " \
  libverto-libev \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libverto-0.3.2-10.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libverto-0.3.2-10.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "78e2969f504cdaab132394988dc677d4f4c1507996e08a73117105703dda664c"
 
-URI_x86_64_v2_libverto = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libverto-0.3.2-10.el10.x86_64_v2.rpm;name=x86_64_v2_libverto;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libverto}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libverto-0.3.2-10.el10.x86_64_v2.rpm;name=x86_64_v2_libverto;unpack=0"
 SRC_URI[x86_64_v2_libverto.sha256sum] = "071bcc66289f7b21e58511149dd6b6304185206416bf57ece0944a2232264db5"
 
-URI_x86_64_v2_libverto-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libverto-devel-0.3.2-10.el10.x86_64_v2.rpm;name=x86_64_v2_libverto-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libverto-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libverto-devel-0.3.2-10.el10.x86_64_v2.rpm;name=x86_64_v2_libverto-devel;unpack=0"
 SRC_URI[x86_64_v2_libverto-devel.sha256sum] = "590819f10aae2415051ae48aebb5a5b40ba24ba5a84816afde58447a8efc267d"
 
-URI_x86_64_v2_libverto-libev = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libverto-libev-0.3.2-10.el10.x86_64_v2.rpm;name=x86_64_v2_libverto-libev;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libverto-libev}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libverto-libev-0.3.2-10.el10.x86_64_v2.rpm;name=x86_64_v2_libverto-libev;unpack=0"
 SRC_URI[x86_64_v2_libverto-libev.sha256sum] = "92beadd09906b193c6a71a1246ddb6216a33938e6deeee113f8846b09ab6b8ea"
 
-URI_aarch64_libverto = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libverto-0.3.2-10.el10.aarch64.rpm;name=aarch64_libverto;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libverto}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libverto-0.3.2-10.el10.aarch64.rpm;name=aarch64_libverto;unpack=0"
 SRC_URI[aarch64_libverto.sha256sum] = "51943715f9f22951a7b73941ec6b8d98b8705782f7283088890ca8a72265c94c"
 
-URI_aarch64_libverto-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libverto-devel-0.3.2-10.el10.aarch64.rpm;name=aarch64_libverto-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libverto-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libverto-devel-0.3.2-10.el10.aarch64.rpm;name=aarch64_libverto-devel;unpack=0"
 SRC_URI[aarch64_libverto-devel.sha256sum] = "61b1789465aa37f6a5eabce2d83534805b5fb86fc0ba71400bfe46226be642d6"
 
-URI_aarch64_libverto-libev = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libverto-libev-0.3.2-10.el10.aarch64.rpm;name=aarch64_libverto-libev;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libverto-libev}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libverto-libev-0.3.2-10.el10.aarch64.rpm;name=aarch64_libverto-libev;unpack=0"
 SRC_URI[aarch64_libverto-libev.sha256sum] = "05b70f9d6fc67f4b417c9f40978b5bc99e65916ca14b7849bf67d9863f873f46"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libverto-0.3.2-10.el10.riscv64.rpm;name=riscv64_libverto;unpack=0"
+SRC_URI[riscv64_libverto.sha256sum] = "e4ff3ced3f3fc5026667f94ac50a3f1bf6536d5143ff71cb8f598188f93eb0cc"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libverto-devel-0.3.2-10.el10.riscv64.rpm;name=riscv64_libverto-devel;unpack=0"
+SRC_URI[riscv64_libverto-devel.sha256sum] = "6654eb7afa4439f3860ac21865d8f319cf7db3770c4bdf9e567a278e49b37399"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libverto-libev-0.3.2-10.el10.riscv64.rpm;name=riscv64_libverto-libev;unpack=0"
+SRC_URI[riscv64_libverto-libev.sha256sum] = "b8fa901334e843d162ac6634add4d4e10c7d624c220f8aa9bd4c18348e25cc41"
 
 RDEPENDS:libverto = " \
  glibc \

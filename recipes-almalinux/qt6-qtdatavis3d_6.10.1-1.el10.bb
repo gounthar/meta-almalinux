@@ -11,41 +11,58 @@ PACKAGES = " \
  qt6-qtdatavis3d-examples \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtdatavis3d-6.10.1-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtdatavis3d-6.10.1-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f8915a908ffdafd17df61b7f446562da19b3795385474e8f5d66476bd0169116"
 
-URI_x86_64_v2_qt6-qtdatavis3d = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtdatavis3d-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtdatavis3d;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtdatavis3d}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtdatavis3d-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtdatavis3d;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtdatavis3d.sha256sum] = "f28f9ecc091b7fbc2979e337bf1c277c8293b8d702798a8cb783fb72aeec5b00"
 
-URI_x86_64_v2_qt6-qtdatavis3d-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtdatavis3d-devel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtdatavis3d-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtdatavis3d-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtdatavis3d-devel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtdatavis3d-devel;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtdatavis3d-devel.sha256sum] = "d5ada067a1c9c68d229dd63256b788f1176ac9e751e099ed272af82e518613ab"
 
-URI_x86_64_v2_qt6-qtdatavis3d-examples = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtdatavis3d-examples-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtdatavis3d-examples;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtdatavis3d-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtdatavis3d-examples-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtdatavis3d-examples;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtdatavis3d-examples.sha256sum] = "6b763a7ab83c2f36ec17ec2128d73467615abd7014f158d0696849d0b684f94b"
 
-URI_aarch64_qt6-qtdatavis3d = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtdatavis3d-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtdatavis3d;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtdatavis3d}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtdatavis3d-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtdatavis3d;unpack=0"
 SRC_URI[aarch64_qt6-qtdatavis3d.sha256sum] = "dbd7e593e752da349bbfd76996e7dbf3050189cb760664c15728a082e2b80ab4"
 
-URI_aarch64_qt6-qtdatavis3d-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtdatavis3d-devel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtdatavis3d-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtdatavis3d-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtdatavis3d-devel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtdatavis3d-devel;unpack=0"
 SRC_URI[aarch64_qt6-qtdatavis3d-devel.sha256sum] = "b7c8a17f215ba691e8686ff786ddf181ef14b557f0fbe6f15f3015f72d4ab5a7"
 
-URI_aarch64_qt6-qtdatavis3d-examples = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtdatavis3d-examples-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtdatavis3d-examples;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtdatavis3d-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtdatavis3d-examples-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtdatavis3d-examples;unpack=0"
 SRC_URI[aarch64_qt6-qtdatavis3d-examples.sha256sum] = "1132cc36953c555995e9be7fee0789e4372fba744fb0430d7bbd8d1ec50c0967"
 
-RDEPENDS:qt6-qtdatavis3d = " \
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtdatavis3d-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtdatavis3d;unpack=0"
+SRC_URI[riscv64_qt6-qtdatavis3d.sha256sum] = "c3c2df7e7145985b809c1f72ba01808730b121a45e22400a3f05190c9cc1ee03"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtdatavis3d-devel-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtdatavis3d-devel;unpack=0"
+SRC_URI[riscv64_qt6-qtdatavis3d-devel.sha256sum] = "81090f1797fef71aaa0b1d13992ae3d590fd8e72f668675034a991d0e0a4c5af"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/qt6-qtdatavis3d-examples-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtdatavis3d-examples;unpack=0"
+SRC_URI[riscv64_qt6-qtdatavis3d-examples.sha256sum] = "bd3d70adcbc7163e2f4fa91f376ec4d8c43da2b745d5f7db36074436056da833"
+
+RDEPENDS:qt6-qtdatavis3d:x86_64_v2 = " \
  glibc \
  libstdc++ \
  qt6-qtbase \
  qt6-qtbase-gui \
  qt6-qtdeclarative \
- "
+"
+RDEPENDS:qt6-qtdatavis3d:aarch64 = " \
+ glibc \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtbase-gui \
+ qt6-qtdeclarative \
+"
+RDEPENDS:qt6-qtdatavis3d:riscv64 = " \
+ glibc \
+ libgcc \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtbase-gui \
+ qt6-qtdeclarative \
+"
 RDEPENDS:qt6-qtdatavis3d-devel = " \
  cmake-filesystem \
  pkgconf-pkg-config \

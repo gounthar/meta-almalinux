@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-colcon-common-extensions"
 PV = "0.3.0"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-colcon-common-extensions \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-colcon-common-extensions \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-colcon-common-extensions-0.3.0-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-colcon-common-extensions-0.3.0-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e3d0f1d162110eb990fdc37b5f1b0fcb852e6209ce64da0e99c850d4bcec8190"
 
-URI_x86_64_v2_python3-colcon-common-extensions = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-colcon-common-extensions-0.3.0-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-colcon-common-extensions;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-colcon-common-extensions}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-colcon-common-extensions-0.3.0-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-colcon-common-extensions;unpack=0"
 SRC_URI[x86_64_v2_python3-colcon-common-extensions.sha256sum] = "c20f43f43df29597697cdd4f88800ff4e17d72e26b4232b54fc03591fa0e6956"
 
-URI_aarch64_python3-colcon-common-extensions = "${EPEL_MIRROR}/aarch64/Packages/p/python3-colcon-common-extensions-0.3.0-1.el10_2.noarch.rpm;name=aarch64_python3-colcon-common-extensions;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-colcon-common-extensions}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-colcon-common-extensions-0.3.0-1.el10_2.noarch.rpm;name=aarch64_python3-colcon-common-extensions;unpack=0"
 SRC_URI[aarch64_python3-colcon-common-extensions.sha256sum] = "525bcb91ea6a4bea1b6861ae1c98ea80179359a250aad3eb4353ca086e698699"
 
 RDEPENDS:python3-colcon-common-extensions = " \

@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "smtpping"
 PV = "1.1.5"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  smtpping \
- "
+"
+PACKAGES:aarch64 = " \
+ smtpping \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/s/smtpping-1.1.5-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/s/smtpping-1.1.5-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a89383c711eb3b32f216f8d5173c716fbeac4a196ef4f62fcae44583c5bf403b"
 
-URI_x86_64_v2_smtpping = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/smtpping-1.1.5-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_smtpping;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_smtpping}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/smtpping-1.1.5-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_smtpping;unpack=0"
 SRC_URI[x86_64_v2_smtpping.sha256sum] = "9a5f571fe1dddf4c999b6ceee1a9a155583b43773d9142e6dc65194e659eaebf"
 
-URI_aarch64_smtpping = "${EPEL_MIRROR}/aarch64/Packages/s/smtpping-1.1.5-1.el10_3.aarch64.rpm;name=aarch64_smtpping;unpack=0"
-SRC_URI:append = " ${URI_aarch64_smtpping}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/s/smtpping-1.1.5-1.el10_3.aarch64.rpm;name=aarch64_smtpping;unpack=0"
 SRC_URI[aarch64_smtpping.sha256sum] = "ce563c9cf451cdcd4a01f1286a54d1071a9a0c2be7782f8d6b6657b6082c61a6"
 
 RDEPENDS:smtpping = " \

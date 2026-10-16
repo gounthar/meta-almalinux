@@ -10,25 +10,26 @@ PACKAGES = " \
  gnupg2-smime \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/gnupg2-2.4.5-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/gnupg2-2.4.5-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1ea630f2a46fa18905f993b7aeac85bea1e7692e2402cd5eb9b39926f40f9f99"
 
-URI_x86_64_v2_gnupg2 = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/gnupg2-2.4.5-5.el10.x86_64_v2.rpm;name=x86_64_v2_gnupg2;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gnupg2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/gnupg2-2.4.5-5.el10.x86_64_v2.rpm;name=x86_64_v2_gnupg2;unpack=0"
 SRC_URI[x86_64_v2_gnupg2.sha256sum] = "1c9f5b75bfa9d8e090cff20d10c7f457938b4c8595e199228a4664f9ccd485e1"
 
-URI_x86_64_v2_gnupg2-smime = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gnupg2-smime-2.4.5-5.el10.x86_64_v2.rpm;name=x86_64_v2_gnupg2-smime;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gnupg2-smime}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gnupg2-smime-2.4.5-5.el10.x86_64_v2.rpm;name=x86_64_v2_gnupg2-smime;unpack=0"
 SRC_URI[x86_64_v2_gnupg2-smime.sha256sum] = "ae83e574bb45252c9cdd37f0f5405e668a9e55832e6563ac2e6382e1046c47a7"
 
-URI_aarch64_gnupg2 = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/gnupg2-2.4.5-5.el10.aarch64.rpm;name=aarch64_gnupg2;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gnupg2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/gnupg2-2.4.5-5.el10.aarch64.rpm;name=aarch64_gnupg2;unpack=0"
 SRC_URI[aarch64_gnupg2.sha256sum] = "7c2e57d11b3feff17f4fb778c74ff4d5119e4ccd65bfad0779c13c64f60b4970"
 
-URI_aarch64_gnupg2-smime = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gnupg2-smime-2.4.5-5.el10.aarch64.rpm;name=aarch64_gnupg2-smime;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gnupg2-smime}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gnupg2-smime-2.4.5-5.el10.aarch64.rpm;name=aarch64_gnupg2-smime;unpack=0"
 SRC_URI[aarch64_gnupg2-smime.sha256sum] = "37bdfb2195d430a008c54505b55ea355406cde4ba85105e6d181763f1556cd1d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/gnupg2-2.4.5-5.el10.riscv64.rpm;name=riscv64_gnupg2;unpack=0"
+SRC_URI[riscv64_gnupg2.sha256sum] = "900277a3b48d85d6df8d288e768d379a4ec0b6bb41b6bc97c9bfab42f1fa014f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gnupg2-smime-2.4.5-5.el10.riscv64.rpm;name=riscv64_gnupg2-smime;unpack=0"
+SRC_URI[riscv64_gnupg2-smime.sha256sum] = "46fe8ab50045ff835e7d9673ea4ff1ba20cd134c9e247775defdbdffc0a01bdf"
 
 RDEPENDS:gnupg2 = " \
  bash \

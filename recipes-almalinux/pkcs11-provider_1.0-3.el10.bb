@@ -9,17 +9,17 @@ PACKAGES = " \
  pkcs11-provider \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/pkcs11-provider-1.0-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/pkcs11-provider-1.0-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c7d7b2a67bb97f8aabb62a23f42156f5e814e05105cd5d25ac595f1e1fac49d6"
 
-URI_x86_64_v2_pkcs11-provider = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/pkcs11-provider-1.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_pkcs11-provider;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pkcs11-provider}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/pkcs11-provider-1.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_pkcs11-provider;unpack=0"
 SRC_URI[x86_64_v2_pkcs11-provider.sha256sum] = "727e193f6030441ee88e4773217136bf6ed14ab3a8c5d6e8dd33c7d502a6c72c"
 
-URI_aarch64_pkcs11-provider = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/pkcs11-provider-1.0-3.el10.aarch64.rpm;name=aarch64_pkcs11-provider;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pkcs11-provider}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/pkcs11-provider-1.0-3.el10.aarch64.rpm;name=aarch64_pkcs11-provider;unpack=0"
 SRC_URI[aarch64_pkcs11-provider.sha256sum] = "aa8c64e88738c3015c02b7db61d54a6f5dd41eb59f8f53b7d10c5536276ba365"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/pkcs11-provider-1.0-3.el10.riscv64.rpm;name=riscv64_pkcs11-provider;unpack=0"
+SRC_URI[riscv64_pkcs11-provider.sha256sum] = "df4e5bd520914a422e7aa1df58dbd775d75e59eb2802fd16d8e782feaa2e482b"
 
 RDEPENDS:pkcs11-provider = " \
  glibc \

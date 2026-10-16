@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "intel-opencl-clang"
 PV = "15.0.0"
 PR = "13.el10_0"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  intel-opencl-clang \
  intel-opencl-clang-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ intel-opencl-clang \
+ intel-opencl-clang-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/i/intel-opencl-clang-15.0.0-13.el10_0.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/i/intel-opencl-clang-15.0.0-13.el10_0.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f76e89e91151b47856af833b01fbf1a5576387fa3e7d1c561c41243e632dec13"
 
-URI_x86_64_v2_intel-opencl-clang = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/intel-opencl-clang-15.0.0-13.el10_0.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_intel-opencl-clang;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_intel-opencl-clang}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/intel-opencl-clang-15.0.0-13.el10_0.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_intel-opencl-clang;unpack=0"
 SRC_URI[x86_64_v2_intel-opencl-clang.sha256sum] = "049db852eff9f26c55adc32e05db2e8a9d591c3a1bed66d18c92e7943b3c6c27"
 
-URI_x86_64_v2_intel-opencl-clang-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/intel-opencl-clang-devel-15.0.0-13.el10_0.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_intel-opencl-clang-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_intel-opencl-clang-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/intel-opencl-clang-devel-15.0.0-13.el10_0.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_intel-opencl-clang-devel;unpack=0"
 SRC_URI[x86_64_v2_intel-opencl-clang-devel.sha256sum] = "7e8413d98bd9e4620bf9cde3fc3fa14e9ebfcda00f4c4d47573a78262b6633ce"
 
-URI_aarch64_intel-opencl-clang = "${EPEL_MIRROR}/aarch64/Packages/i/intel-opencl-clang-15.0.0-13.el10_0.aarch64.rpm;name=aarch64_intel-opencl-clang;unpack=0"
-SRC_URI:append = " ${URI_aarch64_intel-opencl-clang}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/i/intel-opencl-clang-15.0.0-13.el10_0.aarch64.rpm;name=aarch64_intel-opencl-clang;unpack=0"
 SRC_URI[aarch64_intel-opencl-clang.sha256sum] = "84adda88a9de2f2891b43b2f19c748a3dfe38a2b7012146de1ac3d6b49cd38a7"
 
-URI_aarch64_intel-opencl-clang-devel = "${EPEL_MIRROR}/aarch64/Packages/i/intel-opencl-clang-devel-15.0.0-13.el10_0.aarch64.rpm;name=aarch64_intel-opencl-clang-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_intel-opencl-clang-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/i/intel-opencl-clang-devel-15.0.0-13.el10_0.aarch64.rpm;name=aarch64_intel-opencl-clang-devel;unpack=0"
 SRC_URI[aarch64_intel-opencl-clang-devel.sha256sum] = "ee3e60eeb005f9e20d31bd3c29e92d48be98fab83d64f29a7707b2d58afa6e69"
 
 RDEPENDS:intel-opencl-clang = " \

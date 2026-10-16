@@ -10,25 +10,26 @@ PACKAGES = " \
  libcdio-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libcdio-2.1.0-15.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libcdio-2.1.0-15.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a373348fbb7b0d9ebaa1c3573232884b661c49088dd32f68280532049bf2f19e"
 
-URI_x86_64_v2_libcdio = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libcdio-2.1.0-15.el10.x86_64_v2.rpm;name=x86_64_v2_libcdio;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libcdio}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libcdio-2.1.0-15.el10.x86_64_v2.rpm;name=x86_64_v2_libcdio;unpack=0"
 SRC_URI[x86_64_v2_libcdio.sha256sum] = "cf09d95ef92fd80b8ef0d74157e8cc65e3bc505d6d303478ccb8beed8ce7add9"
 
-URI_x86_64_v2_libcdio-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libcdio-devel-2.1.0-15.el10.x86_64_v2.rpm;name=x86_64_v2_libcdio-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libcdio-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libcdio-devel-2.1.0-15.el10.x86_64_v2.rpm;name=x86_64_v2_libcdio-devel;unpack=0"
 SRC_URI[x86_64_v2_libcdio-devel.sha256sum] = "14014a3fbb0f65192d4dc6f9124240a789f5e0b5b413c9915ad5ab599928be63"
 
-URI_aarch64_libcdio = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libcdio-2.1.0-15.el10.aarch64.rpm;name=aarch64_libcdio;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libcdio}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libcdio-2.1.0-15.el10.aarch64.rpm;name=aarch64_libcdio;unpack=0"
 SRC_URI[aarch64_libcdio.sha256sum] = "e40dcb974da76dc7d8c2354d88614a493048abc0b704d48fe22719890a67c52c"
 
-URI_aarch64_libcdio-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libcdio-devel-2.1.0-15.el10.aarch64.rpm;name=aarch64_libcdio-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libcdio-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libcdio-devel-2.1.0-15.el10.aarch64.rpm;name=aarch64_libcdio-devel;unpack=0"
 SRC_URI[aarch64_libcdio-devel.sha256sum] = "6b2f8e28c80c6848d84be48fea2c691569785c0f2e165b4fc154553c36c8522f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libcdio-2.1.0-15.el10.riscv64.rpm;name=riscv64_libcdio;unpack=0"
+SRC_URI[riscv64_libcdio.sha256sum] = "04dcb4cf7e20f2828997705d004bb74cc09ab9e3c0bfcbc220578f4ecc5af3ed"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libcdio-devel-2.1.0-15.el10.riscv64.rpm;name=riscv64_libcdio-devel;unpack=0"
+SRC_URI[riscv64_libcdio-devel.sha256sum] = "d91017f11fbefebf37581676e4b89d662ac364e975919127e19eac5ccda260ce"
 
 RDEPENDS:libcdio = " \
  glibc \

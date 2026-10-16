@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "neochat"
 PV = "26.04.3"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  neochat \
- "
+"
+PACKAGES:aarch64 = " \
+ neochat \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/n/neochat-26.04.3-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/n/neochat-26.04.3-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8607b857b61f56da8495b739986eea27511882ffc231d90faf75ebd66664aa16"
 
-URI_x86_64_v2_neochat = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/neochat-26.04.3-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_neochat;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_neochat}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/neochat-26.04.3-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_neochat;unpack=0"
 SRC_URI[x86_64_v2_neochat.sha256sum] = "8705827e1fdfaf240185395c5e687f66dbd85f20a8b0aea4b0ffb3f388c63102"
 
-URI_aarch64_neochat = "${EPEL_MIRROR}/aarch64/Packages/n/neochat-26.04.3-1.el10_3.aarch64.rpm;name=aarch64_neochat;unpack=0"
-SRC_URI:append = " ${URI_aarch64_neochat}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/neochat-26.04.3-1.el10_3.aarch64.rpm;name=aarch64_neochat;unpack=0"
 SRC_URI[aarch64_neochat.sha256sum] = "7294ddb1d906bbfee616ee34ebe115d8fd48417ee5d1072ffdb26e05cfb4280b"
 
 RDEPENDS:neochat = " \

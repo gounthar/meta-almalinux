@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "forgejo"
 PV = "12.0.4"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  forgejo \
- "
+"
+PACKAGES:aarch64 = " \
+ forgejo \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/f/forgejo-12.0.4-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/f/forgejo-12.0.4-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a019a9146d2a620df454a0ffa4d6544e5223e970c762e1c782f3b43f99c5d03c"
 
-URI_x86_64_v2_forgejo = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/forgejo-12.0.4-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_forgejo;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_forgejo}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/forgejo-12.0.4-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_forgejo;unpack=0"
 SRC_URI[x86_64_v2_forgejo.sha256sum] = "39dd337266246209d14e1b436275526d7348729edb0c40811e591ac3b813810b"
 
-URI_aarch64_forgejo = "${EPEL_MIRROR}/aarch64/Packages/f/forgejo-12.0.4-1.el10_2.aarch64.rpm;name=aarch64_forgejo;unpack=0"
-SRC_URI:append = " ${URI_aarch64_forgejo}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/f/forgejo-12.0.4-1.el10_2.aarch64.rpm;name=aarch64_forgejo;unpack=0"
 SRC_URI[aarch64_forgejo.sha256sum] = "6f1c3336f5f7684d00ef3a0052b92ed6183d7b7e96e6e4c2a54e7b222fcdd3d5"
 
 RDEPENDS:forgejo = " \

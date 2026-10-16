@@ -12,17 +12,17 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/i/intel-ipsec-mb-2.0.2-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/i/intel-ipsec-mb-2.0.2-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d7e4761e925dd9b830804cb6544aa423854ca5f19af27ab53f1e51d8a5a918c8"
 
-URI_x86_64_v2_intel-ipsec-mb = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/intel-ipsec-mb-2.0.2-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_intel-ipsec-mb;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_intel-ipsec-mb}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/intel-ipsec-mb-2.0.2-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_intel-ipsec-mb;unpack=0"
 SRC_URI[x86_64_v2_intel-ipsec-mb.sha256sum] = "0dd4e75ef58ad63899fc230a123351f23e750c8dfba525082fb388e13bb40397"
 
-URI_x86_64_v2_intel-ipsec-mb-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/intel-ipsec-mb-devel-2.0.2-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_intel-ipsec-mb-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_intel-ipsec-mb-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/intel-ipsec-mb-devel-2.0.2-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_intel-ipsec-mb-devel;unpack=0"
 SRC_URI[x86_64_v2_intel-ipsec-mb-devel.sha256sum] = "22d853dbee558eb23e91781c598237dafb945266140f7b882cdb0f4f38b11e10"
 
 RDEPENDS:intel-ipsec-mb = " \

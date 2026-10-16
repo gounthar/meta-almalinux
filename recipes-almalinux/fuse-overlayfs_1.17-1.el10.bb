@@ -9,17 +9,17 @@ PACKAGES = " \
  fuse-overlayfs \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/fuse-overlayfs-1.17-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/fuse-overlayfs-1.17-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "480edbcd1923bd5d678fa261cfe436ec07bafdd3d59b8bb3c4d3ce6f095836ea"
 
-URI_x86_64_v2_fuse-overlayfs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/fuse-overlayfs-1.17-1.el10.x86_64_v2.rpm;name=x86_64_v2_fuse-overlayfs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_fuse-overlayfs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/fuse-overlayfs-1.17-1.el10.x86_64_v2.rpm;name=x86_64_v2_fuse-overlayfs;unpack=0"
 SRC_URI[x86_64_v2_fuse-overlayfs.sha256sum] = "725e17921229dfc5df28c8a51b887186cd4661436b4a56aed389b8e2f1b70e30"
 
-URI_aarch64_fuse-overlayfs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/fuse-overlayfs-1.17-1.el10.aarch64.rpm;name=aarch64_fuse-overlayfs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_fuse-overlayfs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/fuse-overlayfs-1.17-1.el10.aarch64.rpm;name=aarch64_fuse-overlayfs;unpack=0"
 SRC_URI[aarch64_fuse-overlayfs.sha256sum] = "7f690b3ccf22f9449ac276dc81d0218be3de12b241cdf7bc584f89f845a42629"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/fuse-overlayfs-1.17-1.el10.riscv64.rpm;name=riscv64_fuse-overlayfs;unpack=0"
+SRC_URI[riscv64_fuse-overlayfs.sha256sum] = "d0153e842d9db286eff5623615c8fc8424c8702f072473cdd295f345a16189eb"
 
 RDEPENDS:fuse-overlayfs = " \
  bash \

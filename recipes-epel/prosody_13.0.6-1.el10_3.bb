@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "prosody"
 PV = "13.0.6"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  prosody \
- "
+"
+PACKAGES:aarch64 = " \
+ prosody \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/prosody-13.0.6-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/prosody-13.0.6-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "5b8e166a00abaa98efc1636cda92c3357c83bfbdd09c646e6062a71d0c9e1462"
 
-URI_x86_64_v2_prosody = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/prosody-13.0.6-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_prosody;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_prosody}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/prosody-13.0.6-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_prosody;unpack=0"
 SRC_URI[x86_64_v2_prosody.sha256sum] = "bbba43d2eb42ce34fd6a5572d71d738b14fb48384eaf59783bb2019aa6becdd1"
 
-URI_aarch64_prosody = "${EPEL_MIRROR}/aarch64/Packages/p/prosody-13.0.6-1.el10_3.aarch64.rpm;name=aarch64_prosody;unpack=0"
-SRC_URI:append = " ${URI_aarch64_prosody}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/prosody-13.0.6-1.el10_3.aarch64.rpm;name=aarch64_prosody;unpack=0"
 SRC_URI[aarch64_prosody.sha256sum] = "41d69f9b4c16c495335e1b715bc33f32eda4376218c054e8fe70037298663e71"
 
 RDEPENDS:prosody = " \

@@ -9,17 +9,17 @@ PACKAGES = " \
  zsh \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/zsh-5.9-15.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/zsh-5.9-15.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f2a14d2b9fe8be8c4641ef7358855cc5983084393ae5daf34826c4e30f987cc5"
 
-URI_x86_64_v2_zsh = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/zsh-5.9-15.el10.x86_64_v2.rpm;name=x86_64_v2_zsh;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_zsh}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/zsh-5.9-15.el10.x86_64_v2.rpm;name=x86_64_v2_zsh;unpack=0"
 SRC_URI[x86_64_v2_zsh.sha256sum] = "fbde805b8823b9c19b94034cd6be1edcabeb71fc865c8d7993185f33b64fe35d"
 
-URI_aarch64_zsh = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/zsh-5.9-15.el10.aarch64.rpm;name=aarch64_zsh;unpack=0"
-SRC_URI:append = " ${URI_aarch64_zsh}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/zsh-5.9-15.el10.aarch64.rpm;name=aarch64_zsh;unpack=0"
 SRC_URI[aarch64_zsh.sha256sum] = "1e30a35832a4052bf2ac913a7ee6368156f0804e7284b4d38f1caebe2b8c8f0b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/zsh-5.9-15.el10.riscv64.rpm;name=riscv64_zsh;unpack=0"
+SRC_URI[riscv64_zsh.sha256sum] = "154ad54e1a9edec1f2b451b3448861fd6b03217510a2a421c5397a25509ae624"
 
 RDEPENDS:zsh = " \
  bash \

@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-Text-Autoformat"
 PV = "1.750000"
 PR = "16.el10_0"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-Text-Autoformat \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-Text-Autoformat \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-Text-Autoformat-1.750000-16.el10_0.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-Text-Autoformat-1.750000-16.el10_0.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "fdd9e52dd122ede97a6a671c353ec7da2551a36db6fa49114c3b883f0164ab37"
 
-URI_x86_64_v2_perl-Text-Autoformat = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Text-Autoformat-1.750000-16.el10_0.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Text-Autoformat;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Text-Autoformat}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Text-Autoformat-1.750000-16.el10_0.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Text-Autoformat;unpack=0"
 SRC_URI[x86_64_v2_perl-Text-Autoformat.sha256sum] = "ca88038ac523d18290669bedc19a50fdd2cac8cd0c7b6d3a1e919b2a3915811e"
 
-URI_aarch64_perl-Text-Autoformat = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Text-Autoformat-1.750000-16.el10_0.noarch.rpm;name=aarch64_perl-Text-Autoformat;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Text-Autoformat}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Text-Autoformat-1.750000-16.el10_0.noarch.rpm;name=aarch64_perl-Text-Autoformat;unpack=0"
 SRC_URI[aarch64_perl-Text-Autoformat.sha256sum] = "c964653b6068af0901d2eb20208e534dcf3e3417730d58359667e2cc2edfa5d6"
 
 RDEPENDS:perl-Text-Autoformat = " \

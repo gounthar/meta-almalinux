@@ -5,26 +5,39 @@ inherit dnf-bridge
 PN = "rust-float16"
 PV = "0.1.7"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-float16+default-devel \
  rust-float16+std-devel \
  rust-float16-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-float16+default-devel \
+ rust-float16+std-devel \
+ rust-float16-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-float16-0.1.7-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-float16-0.1.7-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "949f425da3115fd29b9036227ace716b3a86e0c2fdda5ee348378c4ec0dc78d3"
 
-URI_aarch64_rust-float16+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-float16+default-devel-0.1.7-1.el10_3.noarch.rpm;name=aarch64_rust-float16+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-float16+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-float16+default-devel-0.1.7-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-float16+default-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-float16+default-devel.sha256sum] = "931de42452792f3d760fca7f19b5d57e18c7ef9556f7031ae9b651a5f4d1a338"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-float16+std-devel-0.1.7-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-float16+std-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-float16+std-devel.sha256sum] = "fcc3fe640e8fa3e8c065e053ff4bcd9eb60528421d46fd0ef929054ad8a46fa4"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-float16-devel-0.1.7-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-float16-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-float16-devel.sha256sum] = "d5232bdc4006d16c98c6036fc002e04eccafc1c98851f8c3e14e04ce22353248"
+
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-float16+default-devel-0.1.7-1.el10_3.noarch.rpm;name=aarch64_rust-float16+default-devel;unpack=0"
 SRC_URI[aarch64_rust-float16+default-devel.sha256sum] = "d604b4fbc98e98ec264c146f43057351c949c5d00965d1c278bf102cfd44dcae"
 
-URI_aarch64_rust-float16+std-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-float16+std-devel-0.1.7-1.el10_3.noarch.rpm;name=aarch64_rust-float16+std-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-float16+std-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-float16+std-devel-0.1.7-1.el10_3.noarch.rpm;name=aarch64_rust-float16+std-devel;unpack=0"
 SRC_URI[aarch64_rust-float16+std-devel.sha256sum] = "ecf922304d81908f9b15a25720640910617a5e6d61ecbbddf63cf6a6e5c30bcb"
 
-URI_aarch64_rust-float16-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-float16-devel-0.1.7-1.el10_3.noarch.rpm;name=aarch64_rust-float16-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-float16-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-float16-devel-0.1.7-1.el10_3.noarch.rpm;name=aarch64_rust-float16-devel;unpack=0"
 SRC_URI[aarch64_rust-float16-devel.sha256sum] = "ec42cb44c46bb561ff14f89fa61e73554b5a127488518babc7fa646f47bb155f"
 
 RDEPENDS:rust-float16+default-devel = " \

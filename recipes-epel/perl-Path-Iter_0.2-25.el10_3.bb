@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-Path-Iter"
 PV = "0.2"
 PR = "25.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-Path-Iter \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-Path-Iter \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-Path-Iter-0.2-25.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-Path-Iter-0.2-25.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f744f9c283d366df24cc3ed35e23cde7bd1f3636d18363ba9639c23c6587461a"
 
-URI_x86_64_v2_perl-Path-Iter = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Path-Iter-0.2-25.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Path-Iter;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Path-Iter}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Path-Iter-0.2-25.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Path-Iter;unpack=0"
 SRC_URI[x86_64_v2_perl-Path-Iter.sha256sum] = "41d7763cb5a9ccd4e1b5798a05d31500685a4c925222afb8f6fcf862dac2ce7b"
 
-URI_aarch64_perl-Path-Iter = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Path-Iter-0.2-25.el10_3.noarch.rpm;name=aarch64_perl-Path-Iter;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Path-Iter}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Path-Iter-0.2-25.el10_3.noarch.rpm;name=aarch64_perl-Path-Iter;unpack=0"
 SRC_URI[aarch64_perl-Path-Iter.sha256sum] = "7c0e4a453f7133fd87f21183d0abd89d0adc6fc2cfb5234ec468e6ba976afdf6"
 
 RDEPENDS:perl-Path-Iter = " \

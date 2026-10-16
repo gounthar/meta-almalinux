@@ -9,17 +9,17 @@ PACKAGES = " \
  ttmkfdir \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/ttmkfdir-3.0.9-72.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/ttmkfdir-3.0.9-72.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e47b43af966868ce2f867da13cc229a8639d2b00d54eaa3294aba5829e84bc50"
 
-URI_x86_64_v2_ttmkfdir = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ttmkfdir-3.0.9-72.el10.x86_64_v2.rpm;name=x86_64_v2_ttmkfdir;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ttmkfdir}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ttmkfdir-3.0.9-72.el10.x86_64_v2.rpm;name=x86_64_v2_ttmkfdir;unpack=0"
 SRC_URI[x86_64_v2_ttmkfdir.sha256sum] = "7b4e7dfcf63ca1443cc369b4d9e36ec6b737f5e08c639c2754d4290a138834f2"
 
-URI_aarch64_ttmkfdir = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ttmkfdir-3.0.9-72.el10.aarch64.rpm;name=aarch64_ttmkfdir;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ttmkfdir}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ttmkfdir-3.0.9-72.el10.aarch64.rpm;name=aarch64_ttmkfdir;unpack=0"
 SRC_URI[aarch64_ttmkfdir.sha256sum] = "8e8fdecee3a488bd02822ec22491bac809bf038118381745592090e80c7e323d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/ttmkfdir-3.0.9-72.el10.riscv64.rpm;name=riscv64_ttmkfdir;unpack=0"
+SRC_URI[riscv64_ttmkfdir.sha256sum] = "ccc49c23d44ac45d09c31395ed44e1f166006dfef577c770bb59c2ed2692a514"
 
 RDEPENDS:ttmkfdir = " \
  freetype \

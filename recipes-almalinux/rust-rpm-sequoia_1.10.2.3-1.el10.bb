@@ -10,25 +10,26 @@ PACKAGES = " \
  rpm-sequoia-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/rust-rpm-sequoia-1.10.2.3-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/rust-rpm-sequoia-1.10.2.3-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "27cac3a9143a7dd787c34c68d53b53ed581e70e341714c40a31aad8e73d87989"
 
-URI_x86_64_v2_rpm-sequoia = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/rpm-sequoia-1.10.2.3-1.el10.x86_64_v2.rpm;name=x86_64_v2_rpm-sequoia;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rpm-sequoia}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/rpm-sequoia-1.10.2.3-1.el10.x86_64_v2.rpm;name=x86_64_v2_rpm-sequoia;unpack=0"
 SRC_URI[x86_64_v2_rpm-sequoia.sha256sum] = "b227ca9eba01ec7cc494d0097baf19d3bfe9c3044e7c468277ca04eecdb7abc9"
 
-URI_x86_64_v2_rpm-sequoia-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/rpm-sequoia-devel-1.10.2.3-1.el10.x86_64_v2.rpm;name=x86_64_v2_rpm-sequoia-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rpm-sequoia-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/rpm-sequoia-devel-1.10.2.3-1.el10.x86_64_v2.rpm;name=x86_64_v2_rpm-sequoia-devel;unpack=0"
 SRC_URI[x86_64_v2_rpm-sequoia-devel.sha256sum] = "d63e2301652e1337dc367ff841ebee4c5815e546894a2877c0408f8754fc764f"
 
-URI_aarch64_rpm-sequoia = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/rpm-sequoia-1.10.2.3-1.el10.aarch64.rpm;name=aarch64_rpm-sequoia;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rpm-sequoia}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/rpm-sequoia-1.10.2.3-1.el10.aarch64.rpm;name=aarch64_rpm-sequoia;unpack=0"
 SRC_URI[aarch64_rpm-sequoia.sha256sum] = "9245902584d09b626e2233249108efeabdfa509983569b369fd18fa342bb8499"
 
-URI_aarch64_rpm-sequoia-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/rpm-sequoia-devel-1.10.2.3-1.el10.aarch64.rpm;name=aarch64_rpm-sequoia-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rpm-sequoia-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/rpm-sequoia-devel-1.10.2.3-1.el10.aarch64.rpm;name=aarch64_rpm-sequoia-devel;unpack=0"
 SRC_URI[aarch64_rpm-sequoia-devel.sha256sum] = "c034eee31e60610185d595c7d16d0870b8aa290ab4c3a3e34c2e607f0566f0cd"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/rpm-sequoia-1.10.2.3-1.el10.riscv64.rpm;name=riscv64_rpm-sequoia;unpack=0"
+SRC_URI[riscv64_rpm-sequoia.sha256sum] = "c94f0a50a1533e09f3def08dfe9a55bfc04d69431487a9764934c7e93f9c291a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/rpm-sequoia-devel-1.10.2.3-1.el10.riscv64.rpm;name=riscv64_rpm-sequoia-devel;unpack=0"
+SRC_URI[riscv64_rpm-sequoia-devel.sha256sum] = "1c8ac8e171c5ad136429d2eccf96ad889c8887dd8380d3ff223ad781fa1c8f6a"
 
 RDEPENDS:rpm-sequoia = " \
  glibc \

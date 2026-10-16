@@ -11,33 +11,35 @@ PACKAGES = " \
  libtool-ltdl-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libtool-2.4.7-14.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libtool-2.4.7-14.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8d8eeb958283bf6a6b319927dc5ef33e100d431e127ff76b7983d2b28a77e6d6"
 
-URI_x86_64_v2_libtool = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libtool-2.4.7-14.el10.x86_64_v2.rpm;name=x86_64_v2_libtool;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libtool}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libtool-2.4.7-14.el10.x86_64_v2.rpm;name=x86_64_v2_libtool;unpack=0"
 SRC_URI[x86_64_v2_libtool.sha256sum] = "c4fecde58f828890b4010651c027024a2c33669bfb1acb4536b054c3449576a3"
 
-URI_x86_64_v2_libtool-ltdl = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libtool-ltdl-2.4.7-14.el10.x86_64_v2.rpm;name=x86_64_v2_libtool-ltdl;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libtool-ltdl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libtool-ltdl-2.4.7-14.el10.x86_64_v2.rpm;name=x86_64_v2_libtool-ltdl;unpack=0"
 SRC_URI[x86_64_v2_libtool-ltdl.sha256sum] = "03524fdc0743d99393b084e47be1c242d1d865dd7c694a28e478953eabdaea42"
 
-URI_x86_64_v2_libtool-ltdl-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libtool-ltdl-devel-2.4.7-14.el10.x86_64_v2.rpm;name=x86_64_v2_libtool-ltdl-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libtool-ltdl-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libtool-ltdl-devel-2.4.7-14.el10.x86_64_v2.rpm;name=x86_64_v2_libtool-ltdl-devel;unpack=0"
 SRC_URI[x86_64_v2_libtool-ltdl-devel.sha256sum] = "d1abefd5a3695b11befa6a0f6aa63eff1c18ccc764324844e4479c792ebb73f1"
 
-URI_aarch64_libtool = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libtool-2.4.7-14.el10.aarch64.rpm;name=aarch64_libtool;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libtool}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libtool-2.4.7-14.el10.aarch64.rpm;name=aarch64_libtool;unpack=0"
 SRC_URI[aarch64_libtool.sha256sum] = "a1649e176d0a146c8e84750dd17041c3a830aad43b7308dff7cdf1a7d22656d6"
 
-URI_aarch64_libtool-ltdl = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libtool-ltdl-2.4.7-14.el10.aarch64.rpm;name=aarch64_libtool-ltdl;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libtool-ltdl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libtool-ltdl-2.4.7-14.el10.aarch64.rpm;name=aarch64_libtool-ltdl;unpack=0"
 SRC_URI[aarch64_libtool-ltdl.sha256sum] = "630ddf50a248871fd629ab6c5006ab0dd69ef20b04d3e5adf9cba75d58429d15"
 
-URI_aarch64_libtool-ltdl-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libtool-ltdl-devel-2.4.7-14.el10.aarch64.rpm;name=aarch64_libtool-ltdl-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libtool-ltdl-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libtool-ltdl-devel-2.4.7-14.el10.aarch64.rpm;name=aarch64_libtool-ltdl-devel;unpack=0"
 SRC_URI[aarch64_libtool-ltdl-devel.sha256sum] = "bd470683dee3824741ed6f3ea295a6adb002a40e52ded7650dff7458776b3a3b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libtool-2.4.7-14.el10.riscv64.rpm;name=riscv64_libtool;unpack=0"
+SRC_URI[riscv64_libtool.sha256sum] = "3a7c9e3ab3e15ac6a0c5f9234fd921b4cfa4b867b8b4a0c9a231feb1a0aed634"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libtool-ltdl-2.4.7-14.el10.riscv64.rpm;name=riscv64_libtool-ltdl;unpack=0"
+SRC_URI[riscv64_libtool-ltdl.sha256sum] = "66215ccc6787a260186a8fd1111f20bbae6a90e3de4e1282442650025e449123"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libtool-ltdl-devel-2.4.7-14.el10.riscv64.rpm;name=riscv64_libtool-ltdl-devel;unpack=0"
+SRC_URI[riscv64_libtool-ltdl-devel.sha256sum] = "81bfcfb274c6c2056456d54eb9e2c93b2c0a5bc8caad4b33ff2a3597a839b8e7"
 
 RDEPENDS:libtool = " \
  autoconf \

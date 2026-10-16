@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-gix-pathspec"
 PV = "0.18.1"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-gix-pathspec+default-devel \
  rust-gix-pathspec-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-gix-pathspec+default-devel \
+ rust-gix-pathspec-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-gix-pathspec-0.18.1-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-gix-pathspec-0.18.1-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "26ac283d4bdf14e4096ce41ea21aa85b91affb2dd1a0100b69bdb66399f58453"
 
-URI_x86_64_v2_rust-gix-pathspec+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-gix-pathspec+default-devel-0.18.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-gix-pathspec+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-gix-pathspec+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-gix-pathspec+default-devel-0.18.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-gix-pathspec+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-gix-pathspec+default-devel.sha256sum] = "ff8be68dd767bc8c74ef484f9e2f2a696e25474ea418b5e799ee8c7cb8f8ff9d"
 
-URI_x86_64_v2_rust-gix-pathspec-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-gix-pathspec-devel-0.18.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-gix-pathspec-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-gix-pathspec-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-gix-pathspec-devel-0.18.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-gix-pathspec-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-gix-pathspec-devel.sha256sum] = "1347464ffc47f9137a0edc8aa1bc6d7f79dd89e6bc91095c184c7e195890d33e"
 
-URI_aarch64_rust-gix-pathspec+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-gix-pathspec+default-devel-0.18.1-1.el10_3.noarch.rpm;name=aarch64_rust-gix-pathspec+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-gix-pathspec+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-gix-pathspec+default-devel-0.18.1-1.el10_3.noarch.rpm;name=aarch64_rust-gix-pathspec+default-devel;unpack=0"
 SRC_URI[aarch64_rust-gix-pathspec+default-devel.sha256sum] = "b0463977af02cf6bb3ab5d7d55f205f1ce42af16ff044ab8c154243545d91586"
 
-URI_aarch64_rust-gix-pathspec-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-gix-pathspec-devel-0.18.1-1.el10_3.noarch.rpm;name=aarch64_rust-gix-pathspec-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-gix-pathspec-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-gix-pathspec-devel-0.18.1-1.el10_3.noarch.rpm;name=aarch64_rust-gix-pathspec-devel;unpack=0"
 SRC_URI[aarch64_rust-gix-pathspec-devel.sha256sum] = "7efee6f7b626f7cda6a9dcf9b6c40a876a07bf18040386bfa82514b833497b50"
 
 RDEPENDS:rust-gix-pathspec+default-devel = " \

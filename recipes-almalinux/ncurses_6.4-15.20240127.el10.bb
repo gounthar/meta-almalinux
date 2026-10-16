@@ -14,57 +14,62 @@ PACKAGES = " \
  ncurses-term \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/ncurses-6.4-15.20240127.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/ncurses-6.4-15.20240127.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "59d56c3c31009db28276533ad3f62344cf6a113f121abb2c3ecee88f49de992d"
 
-URI_x86_64_v2_ncurses = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/ncurses-6.4-15.20240127.el10.x86_64_v2.rpm;name=x86_64_v2_ncurses;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ncurses}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/ncurses-6.4-15.20240127.el10.x86_64_v2.rpm;name=x86_64_v2_ncurses;unpack=0"
 SRC_URI[x86_64_v2_ncurses.sha256sum] = "3e238ef2bee447b73ad06d3082c7fd7b14c0a18369a6e0c50fabefe8fff26fea"
 
-URI_x86_64_v2_ncurses-base = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/ncurses-base-6.4-15.20240127.el10.noarch.rpm;name=x86_64_v2_ncurses-base;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ncurses-base}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/ncurses-base-6.4-15.20240127.el10.noarch.rpm;name=x86_64_v2_ncurses-base;unpack=0"
 SRC_URI[x86_64_v2_ncurses-base.sha256sum] = "605613f711e9e656a552f534b25a97f5955e2aba853ab714870cee22c9e7ff7a"
 
-URI_x86_64_v2_ncurses-c++-libs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ncurses-c++-libs-6.4-15.20240127.el10.x86_64_v2.rpm;name=x86_64_v2_ncurses-c++-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ncurses-c++-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ncurses-c++-libs-6.4-15.20240127.el10.x86_64_v2.rpm;name=x86_64_v2_ncurses-c++-libs;unpack=0"
 SRC_URI[x86_64_v2_ncurses-c++-libs.sha256sum] = "7a9e18dd281b427568044dde0c96b70cbf4f9aad456997d023444f6ff926fb5e"
 
-URI_x86_64_v2_ncurses-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ncurses-devel-6.4-15.20240127.el10.x86_64_v2.rpm;name=x86_64_v2_ncurses-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ncurses-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ncurses-devel-6.4-15.20240127.el10.x86_64_v2.rpm;name=x86_64_v2_ncurses-devel;unpack=0"
 SRC_URI[x86_64_v2_ncurses-devel.sha256sum] = "0370254c40ca198255ac82f75e5ad816e45b6fcae7d94d1ab718edec2674c3a6"
 
-URI_x86_64_v2_ncurses-libs = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/ncurses-libs-6.4-15.20240127.el10.x86_64_v2.rpm;name=x86_64_v2_ncurses-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ncurses-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/ncurses-libs-6.4-15.20240127.el10.x86_64_v2.rpm;name=x86_64_v2_ncurses-libs;unpack=0"
 SRC_URI[x86_64_v2_ncurses-libs.sha256sum] = "72b98bb68bc9ff4c95902dbb89510843a8ad78509576b8533829c6eb8d4d225d"
 
-URI_x86_64_v2_ncurses-term = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ncurses-term-6.4-15.20240127.el10.noarch.rpm;name=x86_64_v2_ncurses-term;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ncurses-term}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ncurses-term-6.4-15.20240127.el10.noarch.rpm;name=x86_64_v2_ncurses-term;unpack=0"
 SRC_URI[x86_64_v2_ncurses-term.sha256sum] = "7d5c6845d3a2410007dce0383e3ce7df3e28373705c0770e0454ef0236a15f39"
 
-URI_aarch64_ncurses = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/ncurses-6.4-15.20240127.el10.aarch64.rpm;name=aarch64_ncurses;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ncurses}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/ncurses-6.4-15.20240127.el10.aarch64.rpm;name=aarch64_ncurses;unpack=0"
 SRC_URI[aarch64_ncurses.sha256sum] = "2bf3be1eb7af04886ae362260ec585714c9e4112879d01df2c055a84ce1fb725"
 
-URI_aarch64_ncurses-base = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/ncurses-base-6.4-15.20240127.el10.noarch.rpm;name=aarch64_ncurses-base;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ncurses-base}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/ncurses-base-6.4-15.20240127.el10.noarch.rpm;name=aarch64_ncurses-base;unpack=0"
 SRC_URI[aarch64_ncurses-base.sha256sum] = "605613f711e9e656a552f534b25a97f5955e2aba853ab714870cee22c9e7ff7a"
 
-URI_aarch64_ncurses-c++-libs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ncurses-c++-libs-6.4-15.20240127.el10.aarch64.rpm;name=aarch64_ncurses-c++-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ncurses-c++-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ncurses-c++-libs-6.4-15.20240127.el10.aarch64.rpm;name=aarch64_ncurses-c++-libs;unpack=0"
 SRC_URI[aarch64_ncurses-c++-libs.sha256sum] = "f87526d28a749c1c8dcad2d1a14e4ef70d56b1f8e194d48071aa3940a20c49e4"
 
-URI_aarch64_ncurses-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ncurses-devel-6.4-15.20240127.el10.aarch64.rpm;name=aarch64_ncurses-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ncurses-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ncurses-devel-6.4-15.20240127.el10.aarch64.rpm;name=aarch64_ncurses-devel;unpack=0"
 SRC_URI[aarch64_ncurses-devel.sha256sum] = "1a8d938395354f7fa06537c10116f47126da923db3ded162c85a6cb7a666978f"
 
-URI_aarch64_ncurses-libs = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/ncurses-libs-6.4-15.20240127.el10.aarch64.rpm;name=aarch64_ncurses-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ncurses-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/ncurses-libs-6.4-15.20240127.el10.aarch64.rpm;name=aarch64_ncurses-libs;unpack=0"
 SRC_URI[aarch64_ncurses-libs.sha256sum] = "13877544e571dd2ac901a214fd971e05233993626fdcc997b4ca2c8abab3505b"
 
-URI_aarch64_ncurses-term = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ncurses-term-6.4-15.20240127.el10.noarch.rpm;name=aarch64_ncurses-term;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ncurses-term}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ncurses-term-6.4-15.20240127.el10.noarch.rpm;name=aarch64_ncurses-term;unpack=0"
 SRC_URI[aarch64_ncurses-term.sha256sum] = "7d5c6845d3a2410007dce0383e3ce7df3e28373705c0770e0454ef0236a15f39"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/ncurses-6.4-15.20240127.el10.riscv64.rpm;name=riscv64_ncurses;unpack=0"
+SRC_URI[riscv64_ncurses.sha256sum] = "a030b61cecfac45f6d1a341536300c6a35e3c0c932a47cda375b30bfe25bd544"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/ncurses-base-6.4-15.20240127.el10.noarch.rpm;name=riscv64_ncurses-base;unpack=0"
+SRC_URI[riscv64_ncurses-base.sha256sum] = "605613f711e9e656a552f534b25a97f5955e2aba853ab714870cee22c9e7ff7a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/ncurses-c++-libs-6.4-15.20240127.el10.riscv64.rpm;name=riscv64_ncurses-c++-libs;unpack=0"
+SRC_URI[riscv64_ncurses-c++-libs.sha256sum] = "d6e9f9b31a945459d859eceb7b264f75e0d979e3d8784a14769227ddb3a516b5"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/ncurses-devel-6.4-15.20240127.el10.riscv64.rpm;name=riscv64_ncurses-devel;unpack=0"
+SRC_URI[riscv64_ncurses-devel.sha256sum] = "d489ebdc42a6b00ad71ac827daaae404a1d5daf697bfba5948878b25164d4a56"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/ncurses-libs-6.4-15.20240127.el10.riscv64.rpm;name=riscv64_ncurses-libs;unpack=0"
+SRC_URI[riscv64_ncurses-libs.sha256sum] = "ce7fbb7eed4c9120d66f7a1650b240e1bec7d8f53bdb8cfdf5cfb0c39e99758a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/ncurses-term-6.4-15.20240127.el10.noarch.rpm;name=riscv64_ncurses-term;unpack=0"
+SRC_URI[riscv64_ncurses-term.sha256sum] = "7d5c6845d3a2410007dce0383e3ce7df3e28373705c0770e0454ef0236a15f39"
 
 RDEPENDS:ncurses = " \
  glibc \

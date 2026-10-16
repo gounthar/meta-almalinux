@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-protox"
 PV = "0.9.1"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-protox+default-devel \
  rust-protox-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-protox+default-devel \
+ rust-protox-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-protox-0.9.1-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-protox-0.9.1-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d1fb93891eed93dcd6836de4f7eaa60d327b74cec375d3b7353b34243f622a7c"
 
-URI_x86_64_v2_rust-protox+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-protox+default-devel-0.9.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-protox+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-protox+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-protox+default-devel-0.9.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-protox+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-protox+default-devel.sha256sum] = "68d264c997b958032bfa88efb6ba20fa616a0c45c2e72152158b96721c241eb7"
 
-URI_x86_64_v2_rust-protox-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-protox-devel-0.9.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-protox-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-protox-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-protox-devel-0.9.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-protox-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-protox-devel.sha256sum] = "5a138735ee7b04cb83688a5c1c6a8045b63c66d83e606d1b1b6d46a66dbb0e6b"
 
-URI_aarch64_rust-protox+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-protox+default-devel-0.9.1-1.el10_3.noarch.rpm;name=aarch64_rust-protox+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-protox+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-protox+default-devel-0.9.1-1.el10_3.noarch.rpm;name=aarch64_rust-protox+default-devel;unpack=0"
 SRC_URI[aarch64_rust-protox+default-devel.sha256sum] = "a67f53aedac7aed3745f0b1526df63599cc6b9cc019a38571e9a337c8b700015"
 
-URI_aarch64_rust-protox-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-protox-devel-0.9.1-1.el10_3.noarch.rpm;name=aarch64_rust-protox-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-protox-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-protox-devel-0.9.1-1.el10_3.noarch.rpm;name=aarch64_rust-protox-devel;unpack=0"
 SRC_URI[aarch64_rust-protox-devel.sha256sum] = "1ef6acf9ff7339293443f6beb9bded892c12edc7e4e261e1ae88eaec1c7f7092"
 
 RDEPENDS:rust-protox+default-devel = " \

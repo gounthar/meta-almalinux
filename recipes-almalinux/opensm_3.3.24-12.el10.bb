@@ -11,33 +11,35 @@ PACKAGES = " \
  opensm-libs \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/opensm-3.3.24-12.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/opensm-3.3.24-12.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "54e54c9ccdb3b1c6c444a214ac62f2fafecab87d6dca5a6a1a73f039f71e7e5a"
 
-URI_x86_64_v2_opensm = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/opensm-3.3.24-12.el10.x86_64_v2.rpm;name=x86_64_v2_opensm;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_opensm}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/opensm-3.3.24-12.el10.x86_64_v2.rpm;name=x86_64_v2_opensm;unpack=0"
 SRC_URI[x86_64_v2_opensm.sha256sum] = "4a33036bd464dcb5666f37d458311b9fdcdc7006d3ec627cb18f77beaaa0dbcf"
 
-URI_x86_64_v2_opensm-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/opensm-devel-3.3.24-12.el10.x86_64_v2.rpm;name=x86_64_v2_opensm-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_opensm-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/opensm-devel-3.3.24-12.el10.x86_64_v2.rpm;name=x86_64_v2_opensm-devel;unpack=0"
 SRC_URI[x86_64_v2_opensm-devel.sha256sum] = "a9f21fd299677a5556a27c8127d6b3121c9f3ccfc89e16899ad5e72751049f16"
 
-URI_x86_64_v2_opensm-libs = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/opensm-libs-3.3.24-12.el10.x86_64_v2.rpm;name=x86_64_v2_opensm-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_opensm-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/opensm-libs-3.3.24-12.el10.x86_64_v2.rpm;name=x86_64_v2_opensm-libs;unpack=0"
 SRC_URI[x86_64_v2_opensm-libs.sha256sum] = "0296ed5ee8d61c41fbc0c5285b43aab986bde591dd645bc360de1bdd90bbe957"
 
-URI_aarch64_opensm = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/opensm-3.3.24-12.el10.aarch64.rpm;name=aarch64_opensm;unpack=0"
-SRC_URI:append = " ${URI_aarch64_opensm}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/opensm-3.3.24-12.el10.aarch64.rpm;name=aarch64_opensm;unpack=0"
 SRC_URI[aarch64_opensm.sha256sum] = "3b59ea02174078a6f04428845acdeb3086eda6473902b9fb7d5a50ee2e72095c"
 
-URI_aarch64_opensm-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/opensm-devel-3.3.24-12.el10.aarch64.rpm;name=aarch64_opensm-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_opensm-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/opensm-devel-3.3.24-12.el10.aarch64.rpm;name=aarch64_opensm-devel;unpack=0"
 SRC_URI[aarch64_opensm-devel.sha256sum] = "58c046a33136a7578061521a108878967fd178a1232664912d3a85727d702460"
 
-URI_aarch64_opensm-libs = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/opensm-libs-3.3.24-12.el10.aarch64.rpm;name=aarch64_opensm-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_opensm-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/opensm-libs-3.3.24-12.el10.aarch64.rpm;name=aarch64_opensm-libs;unpack=0"
 SRC_URI[aarch64_opensm-libs.sha256sum] = "bcd4660249a0e0f122f78a5504251e62481a597dd19fc7575f127674d34fa92a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/opensm-3.3.24-12.el10.riscv64.rpm;name=riscv64_opensm;unpack=0"
+SRC_URI[riscv64_opensm.sha256sum] = "382512e2eab94b3c5e020f1083f819b03b6c2e3f3b12c8130b93e06a03f06acd"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/opensm-devel-3.3.24-12.el10.riscv64.rpm;name=riscv64_opensm-devel;unpack=0"
+SRC_URI[riscv64_opensm-devel.sha256sum] = "287d70c65014940844980776504f39342e3d7af5dc6de9d7204681702f49f8e5"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/opensm-libs-3.3.24-12.el10.riscv64.rpm;name=riscv64_opensm-libs;unpack=0"
+SRC_URI[riscv64_opensm-libs.sha256sum] = "54aa0d226194ea1490efc704d96129ae8348e9ec37e1d4d1711d35b3dd034661"
 
 RDEPENDS:opensm = " \
  bash \

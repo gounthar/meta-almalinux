@@ -9,17 +9,17 @@ PACKAGES = " \
  at \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/at-3.2.5-14.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/at-3.2.5-14.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e03a8cee3a4302b90df867d684daee30736c6dbad3039056a995b74af075d8e9"
 
-URI_x86_64_v2_at = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/at-3.2.5-14.el10.x86_64_v2.rpm;name=x86_64_v2_at;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_at}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/at-3.2.5-14.el10.x86_64_v2.rpm;name=x86_64_v2_at;unpack=0"
 SRC_URI[x86_64_v2_at.sha256sum] = "2e6dcd79edc51e734bb5da01a21d965ae19a47e30644b8767bc66843dbf12ee9"
 
-URI_aarch64_at = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/at-3.2.5-14.el10.aarch64.rpm;name=aarch64_at;unpack=0"
-SRC_URI:append = " ${URI_aarch64_at}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/at-3.2.5-14.el10.aarch64.rpm;name=aarch64_at;unpack=0"
 SRC_URI[aarch64_at.sha256sum] = "0280ea5970a5ddd0aab241c09a5e8e27e5134a9d4013ebffd00fa17f7c3eecd7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/at-3.2.5-14.el10.riscv64.rpm;name=riscv64_at;unpack=0"
+SRC_URI[riscv64_at.sha256sum] = "1d3d9cc0e81dddff86e96acaa012c9af4da408d864e2349229c3f55150de74ba"
 
 RDEPENDS:at = " \
  bash \

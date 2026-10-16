@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-confy"
 PV = "0.4.0"
 PR = "15.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-confy+default-devel \
  rust-confy-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-confy+default-devel \
+ rust-confy-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-confy-0.4.0-15.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-confy-0.4.0-15.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "95c3d6837ea0a614f188643ece8c6b949c3918c8efa7624135ff35ad5332c04c"
 
-URI_x86_64_v2_rust-confy+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-confy+default-devel-0.4.0-15.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-confy+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-confy+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-confy+default-devel-0.4.0-15.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-confy+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-confy+default-devel.sha256sum] = "ecd43c15046230c275c8872a4ece80bc905acafbe6852c44596d227fdbbe40f4"
 
-URI_x86_64_v2_rust-confy-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-confy-devel-0.4.0-15.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-confy-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-confy-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-confy-devel-0.4.0-15.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-confy-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-confy-devel.sha256sum] = "fe476a6e14f86182d216a210668f40fd7c21b4942ce5460b42084d39d0afa89a"
 
-URI_aarch64_rust-confy+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-confy+default-devel-0.4.0-15.el10_2.noarch.rpm;name=aarch64_rust-confy+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-confy+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-confy+default-devel-0.4.0-15.el10_2.noarch.rpm;name=aarch64_rust-confy+default-devel;unpack=0"
 SRC_URI[aarch64_rust-confy+default-devel.sha256sum] = "6c3f80a65e8d2935349ddf7b8cccb31d16ee08aed0434d26b846b45a08da9ba1"
 
-URI_aarch64_rust-confy-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-confy-devel-0.4.0-15.el10_2.noarch.rpm;name=aarch64_rust-confy-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-confy-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-confy-devel-0.4.0-15.el10_2.noarch.rpm;name=aarch64_rust-confy-devel;unpack=0"
 SRC_URI[aarch64_rust-confy-devel.sha256sum] = "57e2072d16e20b625c492525461eaf85f5224f5590ce870899033df7f09d07e4"
 
 RDEPENDS:rust-confy+default-devel = " \

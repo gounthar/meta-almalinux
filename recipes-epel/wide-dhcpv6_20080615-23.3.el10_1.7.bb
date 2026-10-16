@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "wide-dhcpv6"
 PV = "20080615"
 PR = "23.3.el10_1.7"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  wide-dhcpv6 \
- "
+"
+PACKAGES:aarch64 = " \
+ wide-dhcpv6 \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/w/wide-dhcpv6-20080615-23.3.el10_1.7.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/w/wide-dhcpv6-20080615-23.3.el10_1.7.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "4b0f21c34c21b7423b0970880571a04e9a0030c74b7b82f310028b96183a3f9e"
 
-URI_x86_64_v2_wide-dhcpv6 = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/wide-dhcpv6-20080615-23.3.el10_1.7.alma_altarch.7.x86_64_v2.rpm;name=x86_64_v2_wide-dhcpv6;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_wide-dhcpv6}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/wide-dhcpv6-20080615-23.3.el10_1.7.alma_altarch.7.x86_64_v2.rpm;name=x86_64_v2_wide-dhcpv6;unpack=0"
 SRC_URI[x86_64_v2_wide-dhcpv6.sha256sum] = "1c228bbefc0d2b2b544038a39f8491beab5c76babc4bd0a64a05e2d1c5fe3c51"
 
-URI_aarch64_wide-dhcpv6 = "${EPEL_MIRROR}/aarch64/Packages/w/wide-dhcpv6-20080615-23.3.el10_1.7.aarch64.rpm;name=aarch64_wide-dhcpv6;unpack=0"
-SRC_URI:append = " ${URI_aarch64_wide-dhcpv6}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/w/wide-dhcpv6-20080615-23.3.el10_1.7.aarch64.rpm;name=aarch64_wide-dhcpv6;unpack=0"
 SRC_URI[aarch64_wide-dhcpv6.sha256sum] = "bc46ad15ad2064225eecf5799415412db84276ab202a2d5e7747212e2af11971"
 
 RDEPENDS:wide-dhcpv6 = " \

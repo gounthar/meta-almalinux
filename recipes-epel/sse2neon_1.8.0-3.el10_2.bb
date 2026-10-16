@@ -11,13 +11,14 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
  sse2neon-devel \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/s/sse2neon-1.8.0-3.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/s/sse2neon-1.8.0-3.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "4e4da9df2718aa901db244d51703c12385b12fa0e0e085c429d0c9ae7f994515"
 
-URI_aarch64_sse2neon-devel = "${EPEL_MIRROR}/aarch64/Packages/s/sse2neon-devel-1.8.0-3.el10_2.aarch64.rpm;name=aarch64_sse2neon-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_sse2neon-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/s/sse2neon-devel-1.8.0-3.el10_2.aarch64.rpm;name=aarch64_sse2neon-devel;unpack=0"
 SRC_URI[aarch64_sse2neon-devel.sha256sum] = "6a1a5b7f0d0d090dd03a286e6bb1c652122ed69909aa9736adc34612e0b80bc2"
 
 RDEPENDS:sse2neon-devel = " \

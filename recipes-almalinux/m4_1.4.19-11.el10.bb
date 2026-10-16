@@ -9,17 +9,17 @@ PACKAGES = " \
  m4 \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/m4-1.4.19-11.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/m4-1.4.19-11.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e8eb6a62d7e5becc14b5527d8f4b7fd0a358728aa15e71b59cd263aadf58898c"
 
-URI_x86_64_v2_m4 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/m4-1.4.19-11.el10.x86_64_v2.rpm;name=x86_64_v2_m4;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_m4}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/m4-1.4.19-11.el10.x86_64_v2.rpm;name=x86_64_v2_m4;unpack=0"
 SRC_URI[x86_64_v2_m4.sha256sum] = "8c4bcf8ab38a20ca2bc853d067b2eeffb75ca5335546b573c84c80706d8d410d"
 
-URI_aarch64_m4 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/m4-1.4.19-11.el10.aarch64.rpm;name=aarch64_m4;unpack=0"
-SRC_URI:append = " ${URI_aarch64_m4}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/m4-1.4.19-11.el10.aarch64.rpm;name=aarch64_m4;unpack=0"
 SRC_URI[aarch64_m4.sha256sum] = "fd296eb20be1ecf6c672e6aefdd28e7bd149e7452587275a06918236cd2c1bf9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/m4-1.4.19-11.el10.riscv64.rpm;name=riscv64_m4;unpack=0"
+SRC_URI[riscv64_m4.sha256sum] = "341ca4eeff0a73eb75b7357a5df4151ed1051f85490e37ac3a8a562ccf024e77"
 
 RDEPENDS:m4 = " \
  glibc \

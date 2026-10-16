@@ -10,25 +10,26 @@ PACKAGES = " \
  libnetfilter_conntrack-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libnetfilter_conntrack-1.0.9-12.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libnetfilter_conntrack-1.0.9-12.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "ea66a5b1267a1c683549845ed6e3585975f0a7796e6e6d1453f9e38fe0460c41"
 
-URI_x86_64_v2_libnetfilter_conntrack = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libnetfilter_conntrack-1.0.9-12.el10.x86_64_v2.rpm;name=x86_64_v2_libnetfilter_conntrack;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libnetfilter_conntrack}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libnetfilter_conntrack-1.0.9-12.el10.x86_64_v2.rpm;name=x86_64_v2_libnetfilter_conntrack;unpack=0"
 SRC_URI[x86_64_v2_libnetfilter_conntrack.sha256sum] = "5edc0843bcddc1a12774f1b19e9d58651fcb7ebbfa65f3785cc74d8c79e035e1"
 
-URI_x86_64_v2_libnetfilter_conntrack-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libnetfilter_conntrack-devel-1.0.9-12.el10.x86_64_v2.rpm;name=x86_64_v2_libnetfilter_conntrack-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libnetfilter_conntrack-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libnetfilter_conntrack-devel-1.0.9-12.el10.x86_64_v2.rpm;name=x86_64_v2_libnetfilter_conntrack-devel;unpack=0"
 SRC_URI[x86_64_v2_libnetfilter_conntrack-devel.sha256sum] = "d5d2f9ebc611895043d976b383613ed09cfa45d5d53e9c2b1e08cd64e30dde39"
 
-URI_aarch64_libnetfilter_conntrack = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libnetfilter_conntrack-1.0.9-12.el10.aarch64.rpm;name=aarch64_libnetfilter_conntrack;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libnetfilter_conntrack}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libnetfilter_conntrack-1.0.9-12.el10.aarch64.rpm;name=aarch64_libnetfilter_conntrack;unpack=0"
 SRC_URI[aarch64_libnetfilter_conntrack.sha256sum] = "5d11f7981001820672506fbb1f630eba73f734e6d7d78b29345915c41ebc53ea"
 
-URI_aarch64_libnetfilter_conntrack-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libnetfilter_conntrack-devel-1.0.9-12.el10.aarch64.rpm;name=aarch64_libnetfilter_conntrack-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libnetfilter_conntrack-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libnetfilter_conntrack-devel-1.0.9-12.el10.aarch64.rpm;name=aarch64_libnetfilter_conntrack-devel;unpack=0"
 SRC_URI[aarch64_libnetfilter_conntrack-devel.sha256sum] = "08701d93efb783ff41c25b3b6a562223fd1e4e56bc0e353e5e901be2009909c4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libnetfilter_conntrack-1.0.9-12.el10.riscv64.rpm;name=riscv64_libnetfilter_conntrack;unpack=0"
+SRC_URI[riscv64_libnetfilter_conntrack.sha256sum] = "d9f6ad2909eb6554171604bcb0a092e18195d56b37a4edb262972da994078ee1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libnetfilter_conntrack-devel-1.0.9-12.el10.riscv64.rpm;name=riscv64_libnetfilter_conntrack-devel;unpack=0"
+SRC_URI[riscv64_libnetfilter_conntrack-devel.sha256sum] = "ebcb74f988f977ef1b137145dc7d08754b634ccf0a4b90e3e43c21e8828a2661"
 
 RDEPENDS:libnetfilter_conntrack = " \
  glibc \

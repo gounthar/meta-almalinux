@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "osu-micro-benchmarks"
 PV = "7.5.2"
 PR = "2.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  osu-micro-benchmarks-common \
  osu-micro-benchmarks-mpich \
  osu-micro-benchmarks-openmpi \
- "
+"
+PACKAGES:aarch64 = " \
+ osu-micro-benchmarks-common \
+ osu-micro-benchmarks-mpich \
+ osu-micro-benchmarks-openmpi \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/o/osu-micro-benchmarks-7.5.2-2.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/o/osu-micro-benchmarks-7.5.2-2.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "2c049b501ff736a0f1e735a8774a51568015f56e46d75dd19b6e07c30de0f792"
 
-URI_x86_64_v2_osu-micro-benchmarks-common = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/osu-micro-benchmarks-common-7.5.2-2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_osu-micro-benchmarks-common;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_osu-micro-benchmarks-common}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/osu-micro-benchmarks-common-7.5.2-2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_osu-micro-benchmarks-common;unpack=0"
 SRC_URI[x86_64_v2_osu-micro-benchmarks-common.sha256sum] = "a1e297c6070f9ea60d4f7f77dc40968247174179bc5acce7d1cf49fe8720fde0"
 
-URI_x86_64_v2_osu-micro-benchmarks-mpich = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/osu-micro-benchmarks-mpich-7.5.2-2.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_osu-micro-benchmarks-mpich;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_osu-micro-benchmarks-mpich}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/osu-micro-benchmarks-mpich-7.5.2-2.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_osu-micro-benchmarks-mpich;unpack=0"
 SRC_URI[x86_64_v2_osu-micro-benchmarks-mpich.sha256sum] = "ff1e7d5eaa9c8237eeb50bc8603da084ba0f2ab5d51b1fdb74df11d66969a44b"
 
-URI_x86_64_v2_osu-micro-benchmarks-openmpi = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/osu-micro-benchmarks-openmpi-7.5.2-2.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_osu-micro-benchmarks-openmpi;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_osu-micro-benchmarks-openmpi}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/osu-micro-benchmarks-openmpi-7.5.2-2.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_osu-micro-benchmarks-openmpi;unpack=0"
 SRC_URI[x86_64_v2_osu-micro-benchmarks-openmpi.sha256sum] = "2a179ba26fce4b86345fa7c85cbf42678ce267c52cf5423ecfe7224a1493a396"
 
-URI_aarch64_osu-micro-benchmarks-common = "${EPEL_MIRROR}/aarch64/Packages/o/osu-micro-benchmarks-common-7.5.2-2.el10_2.noarch.rpm;name=aarch64_osu-micro-benchmarks-common;unpack=0"
-SRC_URI:append = " ${URI_aarch64_osu-micro-benchmarks-common}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/o/osu-micro-benchmarks-common-7.5.2-2.el10_2.noarch.rpm;name=aarch64_osu-micro-benchmarks-common;unpack=0"
 SRC_URI[aarch64_osu-micro-benchmarks-common.sha256sum] = "731860d05cb4d44eb522bcd907341496f6f2c8bc24df7b9647f1538552d1d901"
 
-URI_aarch64_osu-micro-benchmarks-mpich = "${EPEL_MIRROR}/aarch64/Packages/o/osu-micro-benchmarks-mpich-7.5.2-2.el10_2.aarch64.rpm;name=aarch64_osu-micro-benchmarks-mpich;unpack=0"
-SRC_URI:append = " ${URI_aarch64_osu-micro-benchmarks-mpich}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/o/osu-micro-benchmarks-mpich-7.5.2-2.el10_2.aarch64.rpm;name=aarch64_osu-micro-benchmarks-mpich;unpack=0"
 SRC_URI[aarch64_osu-micro-benchmarks-mpich.sha256sum] = "761dce5bbd75a5bd18844d9c569b15955b4a8fd4160e615c6560cad7c2fffd99"
 
-URI_aarch64_osu-micro-benchmarks-openmpi = "${EPEL_MIRROR}/aarch64/Packages/o/osu-micro-benchmarks-openmpi-7.5.2-2.el10_2.aarch64.rpm;name=aarch64_osu-micro-benchmarks-openmpi;unpack=0"
-SRC_URI:append = " ${URI_aarch64_osu-micro-benchmarks-openmpi}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/o/osu-micro-benchmarks-openmpi-7.5.2-2.el10_2.aarch64.rpm;name=aarch64_osu-micro-benchmarks-openmpi;unpack=0"
 SRC_URI[aarch64_osu-micro-benchmarks-openmpi.sha256sum] = "e027f7f98074a42f72487c5ac1235c8f7a8699d2defb218ade607a500047750b"
 
 RDEPENDS:osu-micro-benchmarks-common = " \

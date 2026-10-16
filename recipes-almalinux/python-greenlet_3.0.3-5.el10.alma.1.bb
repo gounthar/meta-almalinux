@@ -10,25 +10,26 @@ PACKAGES = " \
  python3-greenlet-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python-greenlet-3.0.3-5.el10.alma.1.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python-greenlet-3.0.3-5.el10.alma.1.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "44bf16d8a703e9bfb3d08b63922b3ea43ba7e490e6dddb9bc89c9980d9623993"
 
-URI_x86_64_v2_python3-greenlet = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-greenlet-3.0.3-5.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_python3-greenlet;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-greenlet}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-greenlet-3.0.3-5.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_python3-greenlet;unpack=0"
 SRC_URI[x86_64_v2_python3-greenlet.sha256sum] = "952fadfe958b793dc2feece1409a248a0d359b33de5cdf17cddb95438edf0232"
 
-URI_x86_64_v2_python3-greenlet-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3-greenlet-devel-3.0.3-5.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_python3-greenlet-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-greenlet-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3-greenlet-devel-3.0.3-5.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_python3-greenlet-devel;unpack=0"
 SRC_URI[x86_64_v2_python3-greenlet-devel.sha256sum] = "c5fd9004e3ad84c540771f91427e47817781ab384c74eb41dfa093275347d096"
 
-URI_aarch64_python3-greenlet = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-greenlet-3.0.3-5.el10.alma.1.aarch64.rpm;name=aarch64_python3-greenlet;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-greenlet}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-greenlet-3.0.3-5.el10.alma.1.aarch64.rpm;name=aarch64_python3-greenlet;unpack=0"
 SRC_URI[aarch64_python3-greenlet.sha256sum] = "7ece88f7c4e90577275cdf8d442a108e801bcf061f91dbf514d923a76534cfa4"
 
-URI_aarch64_python3-greenlet-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3-greenlet-devel-3.0.3-5.el10.alma.1.aarch64.rpm;name=aarch64_python3-greenlet-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-greenlet-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3-greenlet-devel-3.0.3-5.el10.alma.1.aarch64.rpm;name=aarch64_python3-greenlet-devel;unpack=0"
 SRC_URI[aarch64_python3-greenlet-devel.sha256sum] = "b83f4701abce3fc79fcdaa3a777a0fa28a3fc9c48422538fb2e2d03fc539f9d4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-greenlet-3.0.3-5.el10.alma.1.riscv64.rpm;name=riscv64_python3-greenlet;unpack=0"
+SRC_URI[riscv64_python3-greenlet.sha256sum] = "d0b24fc1c3967b7fb1725349d794c4665d3f95165142a08610ad4fd4819624a6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/python3-greenlet-devel-3.0.3-5.el10.alma.1.riscv64.rpm;name=riscv64_python3-greenlet-devel;unpack=0"
+SRC_URI[riscv64_python3-greenlet-devel.sha256sum] = "b6ffc6f0d39e81b55bdcd3c3ffc2573ded18795197359faa3f44aa872796b3f4"
 
 RDEPENDS:python3-greenlet = " \
  glibc \

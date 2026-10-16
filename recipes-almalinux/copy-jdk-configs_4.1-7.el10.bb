@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "copy-jdk-configs"
 PV = "4.1"
 PR = "7.el10"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  copy-jdk-configs \
- "
+"
+PACKAGES:aarch64 = " \
+ copy-jdk-configs \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/copy-jdk-configs-4.1-7.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/copy-jdk-configs-4.1-7.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "eccaa12f1ca0142aedf6b12b4229275caab1588fe8ac7a8729aeaee5ab6ae7ab"
 
-URI_x86_64_v2_copy-jdk-configs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/copy-jdk-configs-4.1-7.el10.noarch.rpm;name=x86_64_v2_copy-jdk-configs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_copy-jdk-configs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/copy-jdk-configs-4.1-7.el10.noarch.rpm;name=x86_64_v2_copy-jdk-configs;unpack=0"
 SRC_URI[x86_64_v2_copy-jdk-configs.sha256sum] = "09d734879e102a3b3fafacdc4c9137b7bfe81f89335ca35239ca45f70d635c8f"
 
-URI_aarch64_copy-jdk-configs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/copy-jdk-configs-4.1-7.el10.noarch.rpm;name=aarch64_copy-jdk-configs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_copy-jdk-configs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/copy-jdk-configs-4.1-7.el10.noarch.rpm;name=aarch64_copy-jdk-configs;unpack=0"
 SRC_URI[aarch64_copy-jdk-configs.sha256sum] = "09d734879e102a3b3fafacdc4c9137b7bfe81f89335ca35239ca45f70d635c8f"
 
 RDEPENDS:copy-jdk-configs = " \

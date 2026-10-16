@@ -10,25 +10,26 @@ PACKAGES = " \
  libXfixes-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libXfixes-6.0.1-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libXfixes-6.0.1-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7a3b0b136c264d465f74d2d80dde2a4d466836dc4847b11803882305f5dc17de"
 
-URI_x86_64_v2_libXfixes = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXfixes-6.0.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libXfixes;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libXfixes}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXfixes-6.0.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libXfixes;unpack=0"
 SRC_URI[x86_64_v2_libXfixes.sha256sum] = "8daf697da8567e4af27b4db62f209f6da856af34972e8602c09b475d1b4fa1e3"
 
-URI_x86_64_v2_libXfixes-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXfixes-devel-6.0.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libXfixes-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libXfixes-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXfixes-devel-6.0.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libXfixes-devel;unpack=0"
 SRC_URI[x86_64_v2_libXfixes-devel.sha256sum] = "48918edbbed1fa779715122b52333225894e0fdd72fb8827d3886bf5428a43f9"
 
-URI_aarch64_libXfixes = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXfixes-6.0.1-5.el10.aarch64.rpm;name=aarch64_libXfixes;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libXfixes}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXfixes-6.0.1-5.el10.aarch64.rpm;name=aarch64_libXfixes;unpack=0"
 SRC_URI[aarch64_libXfixes.sha256sum] = "fc82230b9396920796c9c519b09e0d0bfa6e385ae213a1e68883ec4fc6872fa2"
 
-URI_aarch64_libXfixes-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXfixes-devel-6.0.1-5.el10.aarch64.rpm;name=aarch64_libXfixes-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libXfixes-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXfixes-devel-6.0.1-5.el10.aarch64.rpm;name=aarch64_libXfixes-devel;unpack=0"
 SRC_URI[aarch64_libXfixes-devel.sha256sum] = "1f06c103ee996558253c026d28eb225e57c90b5d1636c9a1f1c44edf9cf3dda3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libXfixes-6.0.1-5.el10.riscv64.rpm;name=riscv64_libXfixes;unpack=0"
+SRC_URI[riscv64_libXfixes.sha256sum] = "914e1881ec7028acb42520342fe2b5e73553c040ac9da41ed9529ec937222269"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libXfixes-devel-6.0.1-5.el10.riscv64.rpm;name=riscv64_libXfixes-devel;unpack=0"
+SRC_URI[riscv64_libXfixes-devel.sha256sum] = "7da800eedbb8a134f8ec88d2cdc71af166ae9dcaff2b68cc5797b717bb79b522"
 
 RDEPENDS:libXfixes = " \
  glibc \

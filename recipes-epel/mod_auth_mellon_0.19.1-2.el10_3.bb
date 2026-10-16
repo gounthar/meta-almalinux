@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "mod_auth_mellon"
 PV = "0.19.1"
 PR = "2.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  mod_auth_mellon \
  mod_auth_mellon-diagnostics \
- "
+"
+PACKAGES:aarch64 = " \
+ mod_auth_mellon \
+ mod_auth_mellon-diagnostics \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/m/mod_auth_mellon-0.19.1-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/m/mod_auth_mellon-0.19.1-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "ac79505ee5d7ce270c8c0f3f5b48ff8d088855dbe9b9d1377daea3e837b416ed"
 
-URI_x86_64_v2_mod_auth_mellon = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/mod_auth_mellon-0.19.1-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_mod_auth_mellon;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mod_auth_mellon}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/mod_auth_mellon-0.19.1-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_mod_auth_mellon;unpack=0"
 SRC_URI[x86_64_v2_mod_auth_mellon.sha256sum] = "d9a2fe0803432bf96ed43089c7a25db94dba4c80e097adf7b220ac57e8412bba"
 
-URI_x86_64_v2_mod_auth_mellon-diagnostics = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/mod_auth_mellon-diagnostics-0.19.1-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_mod_auth_mellon-diagnostics;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mod_auth_mellon-diagnostics}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/mod_auth_mellon-diagnostics-0.19.1-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_mod_auth_mellon-diagnostics;unpack=0"
 SRC_URI[x86_64_v2_mod_auth_mellon-diagnostics.sha256sum] = "8fbcb895bc1ae87bd39f89786488ad1c54bfbc4100b59b9bc80582b0fe9f1f42"
 
-URI_aarch64_mod_auth_mellon = "${EPEL_MIRROR}/aarch64/Packages/m/mod_auth_mellon-0.19.1-2.el10_3.aarch64.rpm;name=aarch64_mod_auth_mellon;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mod_auth_mellon}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/m/mod_auth_mellon-0.19.1-2.el10_3.aarch64.rpm;name=aarch64_mod_auth_mellon;unpack=0"
 SRC_URI[aarch64_mod_auth_mellon.sha256sum] = "28538e2f282b574d97c0d06951cd23aeeb708663bfcfcfbf9d3f8c63189b11bc"
 
-URI_aarch64_mod_auth_mellon-diagnostics = "${EPEL_MIRROR}/aarch64/Packages/m/mod_auth_mellon-diagnostics-0.19.1-2.el10_3.aarch64.rpm;name=aarch64_mod_auth_mellon-diagnostics;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mod_auth_mellon-diagnostics}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/m/mod_auth_mellon-diagnostics-0.19.1-2.el10_3.aarch64.rpm;name=aarch64_mod_auth_mellon-diagnostics;unpack=0"
 SRC_URI[aarch64_mod_auth_mellon-diagnostics.sha256sum] = "ab8001a92f9071659093055d198c41da2d9e9aa19f1a1a076136f5e8c816d633"
 
 RDEPENDS:mod_auth_mellon = " \

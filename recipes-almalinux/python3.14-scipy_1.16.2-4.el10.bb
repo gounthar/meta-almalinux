@@ -9,17 +9,17 @@ PACKAGES = " \
  python3.14-scipy \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python3.14-scipy-1.16.2-4.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python3.14-scipy-1.16.2-4.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "26bc9791a60317b64f51473ea5525003abdb5314af145fdcf485c175774eff6e"
 
-URI_x86_64_v2_python3.14-scipy = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3.14-scipy-1.16.2-4.el10.x86_64_v2.rpm;name=x86_64_v2_python3.14-scipy;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3.14-scipy}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3.14-scipy-1.16.2-4.el10.x86_64_v2.rpm;name=x86_64_v2_python3.14-scipy;unpack=0"
 SRC_URI[x86_64_v2_python3.14-scipy.sha256sum] = "f50e6091bb72f565717f4dd54c099597e8851a5204748c84e6494a114fa297d5"
 
-URI_aarch64_python3.14-scipy = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3.14-scipy-1.16.2-4.el10.aarch64.rpm;name=aarch64_python3.14-scipy;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3.14-scipy}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3.14-scipy-1.16.2-4.el10.aarch64.rpm;name=aarch64_python3.14-scipy;unpack=0"
 SRC_URI[aarch64_python3.14-scipy.sha256sum] = "174b9f1567fa5d271a862353a53950f0ad3e88c6cbb25939bab0405c4eb14686"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3.14-scipy-1.16.2-4.el10.riscv64.rpm;name=riscv64_python3.14-scipy;unpack=0"
+SRC_URI[riscv64_python3.14-scipy.sha256sum] = "5afe8b57b4f11e5c2d285262f0a3e6cade36061615c83d4d1eea6af1713030de"
 
 RDEPENDS:python3.14-scipy = " \
  flexiblas-netlib \

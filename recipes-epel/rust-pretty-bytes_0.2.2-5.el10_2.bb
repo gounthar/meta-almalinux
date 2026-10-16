@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "rust-pretty-bytes"
 PV = "0.2.2"
 PR = "5.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  pretty-bytes \
  rust-pretty-bytes+default-devel \
  rust-pretty-bytes-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ pretty-bytes \
+ rust-pretty-bytes+default-devel \
+ rust-pretty-bytes-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-pretty-bytes-0.2.2-5.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-pretty-bytes-0.2.2-5.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3dee0cb4a3e582fc669674e651616c1c42eb0b767ed9b72ad22535ca91e0a88a"
 
-URI_x86_64_v2_pretty-bytes = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/pretty-bytes-0.2.2-5.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_pretty-bytes;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pretty-bytes}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/pretty-bytes-0.2.2-5.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_pretty-bytes;unpack=0"
 SRC_URI[x86_64_v2_pretty-bytes.sha256sum] = "eef6567bfa5d279ff7b0c6a13198fea91934d2637a6c018c7dcd9f48420cb9ea"
 
-URI_x86_64_v2_rust-pretty-bytes+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-pretty-bytes+default-devel-0.2.2-5.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-pretty-bytes+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-pretty-bytes+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-pretty-bytes+default-devel-0.2.2-5.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-pretty-bytes+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-pretty-bytes+default-devel.sha256sum] = "05c3cb5bfd092bcc4f3be3e3c7c6cb57138f8bbf0c0bc096a11c34a0888d1261"
 
-URI_x86_64_v2_rust-pretty-bytes-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-pretty-bytes-devel-0.2.2-5.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-pretty-bytes-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-pretty-bytes-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-pretty-bytes-devel-0.2.2-5.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-pretty-bytes-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-pretty-bytes-devel.sha256sum] = "9b68631d35e35519826e06bfce778e43f2840995a65371241375adda4b38ba51"
 
-URI_aarch64_pretty-bytes = "${EPEL_MIRROR}/aarch64/Packages/p/pretty-bytes-0.2.2-5.el10_2.aarch64.rpm;name=aarch64_pretty-bytes;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pretty-bytes}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/pretty-bytes-0.2.2-5.el10_2.aarch64.rpm;name=aarch64_pretty-bytes;unpack=0"
 SRC_URI[aarch64_pretty-bytes.sha256sum] = "fe1926484fb5b0d893399f9ccb9a907d8531ff7c2d001029b388d349e666ae32"
 
-URI_aarch64_rust-pretty-bytes+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-pretty-bytes+default-devel-0.2.2-5.el10_2.noarch.rpm;name=aarch64_rust-pretty-bytes+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-pretty-bytes+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-pretty-bytes+default-devel-0.2.2-5.el10_2.noarch.rpm;name=aarch64_rust-pretty-bytes+default-devel;unpack=0"
 SRC_URI[aarch64_rust-pretty-bytes+default-devel.sha256sum] = "d58760ac67d1f8d5341598f4d1a1a2ac1f483e89d0b3a861d6ef69303f7404d0"
 
-URI_aarch64_rust-pretty-bytes-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-pretty-bytes-devel-0.2.2-5.el10_2.noarch.rpm;name=aarch64_rust-pretty-bytes-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-pretty-bytes-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-pretty-bytes-devel-0.2.2-5.el10_2.noarch.rpm;name=aarch64_rust-pretty-bytes-devel;unpack=0"
 SRC_URI[aarch64_rust-pretty-bytes-devel.sha256sum] = "af2bad8d269f6e884c6f358dbe1bb540581205f07f03c90577cd80f4fa9699bb"
 
 RDEPENDS:pretty-bytes = " \

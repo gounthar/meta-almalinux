@@ -9,17 +9,17 @@ PACKAGES = " \
  vulkan-volk-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/vulkan-volk-1.4.341.0-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/vulkan-volk-1.4.341.0-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d5dc02a7737ce787695fbb76d44a77fb9ee70707f9a1e345b4414a6a5194553d"
 
-URI_x86_64_v2_vulkan-volk-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/vulkan-volk-devel-1.4.341.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_vulkan-volk-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_vulkan-volk-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/vulkan-volk-devel-1.4.341.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_vulkan-volk-devel;unpack=0"
 SRC_URI[x86_64_v2_vulkan-volk-devel.sha256sum] = "363e37e3c5d59e8a93c6b5fb9c56cded74690fd4987e790651f847b3fa85c382"
 
-URI_aarch64_vulkan-volk-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/vulkan-volk-devel-1.4.341.0-1.el10.aarch64.rpm;name=aarch64_vulkan-volk-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_vulkan-volk-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/vulkan-volk-devel-1.4.341.0-1.el10.aarch64.rpm;name=aarch64_vulkan-volk-devel;unpack=0"
 SRC_URI[aarch64_vulkan-volk-devel.sha256sum] = "a2cc8cb9c0904fe79ea34ec22d0637c5e542895fa39a77ef97b3be39a38e16c3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/vulkan-volk-devel-1.4.341.0-1.el10.riscv64.rpm;name=riscv64_vulkan-volk-devel;unpack=0"
+SRC_URI[riscv64_vulkan-volk-devel.sha256sum] = "e9f63791f36669a9556d4e13a3b3a2f102adf4925ff902517008143db5976059"
 
 RDEPENDS:vulkan-volk-devel = " \
  cmake-filesystem \

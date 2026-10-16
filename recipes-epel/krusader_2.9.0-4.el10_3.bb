@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "krusader"
 PV = "2.9.0"
 PR = "4.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  krusader \
- "
+"
+PACKAGES:aarch64 = " \
+ krusader \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/k/krusader-2.9.0-4.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/k/krusader-2.9.0-4.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f776316483703f38c4903c8d12391a2f562909d64f2e6240352b62eebb7944bf"
 
-URI_x86_64_v2_krusader = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/krusader-2.9.0-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_krusader;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_krusader}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/krusader-2.9.0-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_krusader;unpack=0"
 SRC_URI[x86_64_v2_krusader.sha256sum] = "caabdd1fc83952ffb41db97b352aab0c19375b9c143c5b0109de14d1c97c3344"
 
-URI_aarch64_krusader = "${EPEL_MIRROR}/aarch64/Packages/k/krusader-2.9.0-4.el10_3.aarch64.rpm;name=aarch64_krusader;unpack=0"
-SRC_URI:append = " ${URI_aarch64_krusader}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/k/krusader-2.9.0-4.el10_3.aarch64.rpm;name=aarch64_krusader;unpack=0"
 SRC_URI[aarch64_krusader.sha256sum] = "1bcd1ae51269ecf5a6366e775eaf6cefa5eee81c5e1b767075e41e731340df4b"
 
 RDEPENDS:krusader:x86_64_v2 = " \

@@ -14,57 +14,62 @@ PACKAGES = " \
  clevis-udisks2 \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/clevis-23-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/clevis-23-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f2e69d6ac02f4f59aea6dce0b74d7edf036012b2de6834db0964dac731cb7e38"
 
-URI_x86_64_v2_clevis = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/clevis-23-2.el10.x86_64_v2.rpm;name=x86_64_v2_clevis;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_clevis}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/clevis-23-2.el10.x86_64_v2.rpm;name=x86_64_v2_clevis;unpack=0"
 SRC_URI[x86_64_v2_clevis.sha256sum] = "0ed630078922f3fdc0505267896dc330933b34eeff28199c266e07cc359b1d04"
 
-URI_x86_64_v2_clevis-dracut = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/clevis-dracut-23-2.el10.x86_64_v2.rpm;name=x86_64_v2_clevis-dracut;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_clevis-dracut}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/clevis-dracut-23-2.el10.x86_64_v2.rpm;name=x86_64_v2_clevis-dracut;unpack=0"
 SRC_URI[x86_64_v2_clevis-dracut.sha256sum] = "5e260be771b5058d39977363ef4a3fd3ecb39ac7d1623b417d6a013ac3c4255b"
 
-URI_x86_64_v2_clevis-luks = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/clevis-luks-23-2.el10.x86_64_v2.rpm;name=x86_64_v2_clevis-luks;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_clevis-luks}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/clevis-luks-23-2.el10.x86_64_v2.rpm;name=x86_64_v2_clevis-luks;unpack=0"
 SRC_URI[x86_64_v2_clevis-luks.sha256sum] = "be6b9331da1463b12a2cbd3192a60e7e33957ea18efcc40c29cbf3765ec780b5"
 
-URI_x86_64_v2_clevis-pin-pkcs11 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/clevis-pin-pkcs11-23-2.el10.x86_64_v2.rpm;name=x86_64_v2_clevis-pin-pkcs11;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_clevis-pin-pkcs11}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/clevis-pin-pkcs11-23-2.el10.x86_64_v2.rpm;name=x86_64_v2_clevis-pin-pkcs11;unpack=0"
 SRC_URI[x86_64_v2_clevis-pin-pkcs11.sha256sum] = "381eb1a347aa6ff6ff06aede8b46a9ec5fc4aadc74618b44b78200cbf38a4a03"
 
-URI_x86_64_v2_clevis-systemd = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/clevis-systemd-23-2.el10.x86_64_v2.rpm;name=x86_64_v2_clevis-systemd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_clevis-systemd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/clevis-systemd-23-2.el10.x86_64_v2.rpm;name=x86_64_v2_clevis-systemd;unpack=0"
 SRC_URI[x86_64_v2_clevis-systemd.sha256sum] = "4fff8485dfe11ff35d3909fcf8c9531fbc38b86adb406e384deb2f6a78f45e3d"
 
-URI_x86_64_v2_clevis-udisks2 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/clevis-udisks2-23-2.el10.x86_64_v2.rpm;name=x86_64_v2_clevis-udisks2;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_clevis-udisks2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/clevis-udisks2-23-2.el10.x86_64_v2.rpm;name=x86_64_v2_clevis-udisks2;unpack=0"
 SRC_URI[x86_64_v2_clevis-udisks2.sha256sum] = "72b4c8c19fe8ebb638dbdc3a9cdaa189337def36ddc33fdc0425d361f76113fa"
 
-URI_aarch64_clevis = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/clevis-23-2.el10.aarch64.rpm;name=aarch64_clevis;unpack=0"
-SRC_URI:append = " ${URI_aarch64_clevis}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/clevis-23-2.el10.aarch64.rpm;name=aarch64_clevis;unpack=0"
 SRC_URI[aarch64_clevis.sha256sum] = "cf77689d373f06636b3461d0909fbe7f5eb641f73cb5837507538e735204ec2c"
 
-URI_aarch64_clevis-dracut = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/clevis-dracut-23-2.el10.aarch64.rpm;name=aarch64_clevis-dracut;unpack=0"
-SRC_URI:append = " ${URI_aarch64_clevis-dracut}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/clevis-dracut-23-2.el10.aarch64.rpm;name=aarch64_clevis-dracut;unpack=0"
 SRC_URI[aarch64_clevis-dracut.sha256sum] = "229df105dc50f160755fbdaa6456422b094a865e3911b84fa6688ef8588fe0ab"
 
-URI_aarch64_clevis-luks = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/clevis-luks-23-2.el10.aarch64.rpm;name=aarch64_clevis-luks;unpack=0"
-SRC_URI:append = " ${URI_aarch64_clevis-luks}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/clevis-luks-23-2.el10.aarch64.rpm;name=aarch64_clevis-luks;unpack=0"
 SRC_URI[aarch64_clevis-luks.sha256sum] = "1e30d2b0bee97221db32d4d22df9f24ff58147cece87d5e79bc1b57fd74470a2"
 
-URI_aarch64_clevis-pin-pkcs11 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/clevis-pin-pkcs11-23-2.el10.aarch64.rpm;name=aarch64_clevis-pin-pkcs11;unpack=0"
-SRC_URI:append = " ${URI_aarch64_clevis-pin-pkcs11}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/clevis-pin-pkcs11-23-2.el10.aarch64.rpm;name=aarch64_clevis-pin-pkcs11;unpack=0"
 SRC_URI[aarch64_clevis-pin-pkcs11.sha256sum] = "0af3b45ec0f963615e6d8cfe2a87b5741a11946b60e4c38c04c83b3ac38e035d"
 
-URI_aarch64_clevis-systemd = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/clevis-systemd-23-2.el10.aarch64.rpm;name=aarch64_clevis-systemd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_clevis-systemd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/clevis-systemd-23-2.el10.aarch64.rpm;name=aarch64_clevis-systemd;unpack=0"
 SRC_URI[aarch64_clevis-systemd.sha256sum] = "8156b394a48b7b49ee3d3a9a9b736f6b9923b293dcfff210af334ba84de18c51"
 
-URI_aarch64_clevis-udisks2 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/clevis-udisks2-23-2.el10.aarch64.rpm;name=aarch64_clevis-udisks2;unpack=0"
-SRC_URI:append = " ${URI_aarch64_clevis-udisks2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/clevis-udisks2-23-2.el10.aarch64.rpm;name=aarch64_clevis-udisks2;unpack=0"
 SRC_URI[aarch64_clevis-udisks2.sha256sum] = "4a767e2b451687407c3a2ba3e91a691d01c4d4ba91111b80705a9eb6e3be1973"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/clevis-23-2.el10.riscv64.rpm;name=riscv64_clevis;unpack=0"
+SRC_URI[riscv64_clevis.sha256sum] = "b363275d26866134a8581c30021f08f6c646999dfa758c08258dca6e554cc8a4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/clevis-dracut-23-2.el10.riscv64.rpm;name=riscv64_clevis-dracut;unpack=0"
+SRC_URI[riscv64_clevis-dracut.sha256sum] = "a0fbbf28979cea96577f202bb90a81aafe635c41085d2e53618af029a1353900"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/clevis-luks-23-2.el10.riscv64.rpm;name=riscv64_clevis-luks;unpack=0"
+SRC_URI[riscv64_clevis-luks.sha256sum] = "a83fd9bb1778ac47b3f47c9bae9a017e61f8016ddac537fa51d5f9270238f221"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/clevis-pin-pkcs11-23-2.el10.riscv64.rpm;name=riscv64_clevis-pin-pkcs11;unpack=0"
+SRC_URI[riscv64_clevis-pin-pkcs11.sha256sum] = "5b8290a4ba79994cd87e62c7638c5bfeb36bfe456b4ae2235cf67f8c691c79ea"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/clevis-systemd-23-2.el10.riscv64.rpm;name=riscv64_clevis-systemd;unpack=0"
+SRC_URI[riscv64_clevis-systemd.sha256sum] = "82e38aa6405434a5f03b3a1cea9629975766517b2c314cff28dcc6733c4df10b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/clevis-udisks2-23-2.el10.riscv64.rpm;name=riscv64_clevis-udisks2;unpack=0"
+SRC_URI[riscv64_clevis-udisks2.sha256sum] = "79bdb5cbfc7368b632e091e8dc3b1662826b53c2688b3a0c366c55a64a2f0bc2"
 
 RDEPENDS:clevis = " \
  bash \

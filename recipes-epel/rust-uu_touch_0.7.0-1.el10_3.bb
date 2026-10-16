@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-uu_touch"
 PV = "0.7.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-uu_touch+default-devel \
  rust-uu_touch-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-uu_touch+default-devel \
+ rust-uu_touch-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-uu_touch-0.7.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-uu_touch-0.7.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "2e5fc5cceff0943d1a769c31f229008622444116b5b323967d3dd2de2c512b18"
 
-URI_x86_64_v2_rust-uu_touch+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_touch+default-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_touch+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_touch+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_touch+default-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_touch+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_touch+default-devel.sha256sum] = "a366e5f85c4907c5fedb0483f7a0625ed01caf68a5dd411e4d5e517328784bbf"
 
-URI_x86_64_v2_rust-uu_touch-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_touch-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_touch-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_touch-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_touch-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_touch-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_touch-devel.sha256sum] = "29df4cbe239a91a18254aecdd39a93a29a02b65714dbfeaa2bd2bfc97181d5a8"
 
-URI_aarch64_rust-uu_touch+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_touch+default-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_touch+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_touch+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_touch+default-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_touch+default-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_touch+default-devel.sha256sum] = "c9cab8d877b0f936262e9905686833f14c6df8c992d0cbf877466d8c8b010647"
 
-URI_aarch64_rust-uu_touch-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_touch-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_touch-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_touch-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_touch-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_touch-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_touch-devel.sha256sum] = "600ab4b5c75e90c5aa3f7034d9bb45ed6769e6a719f28e569e7f9e3c32738990"
 
 RDEPENDS:rust-uu_touch+default-devel = " \

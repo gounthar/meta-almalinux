@@ -12,17 +12,17 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rocm-rpm-macros-7.2.0-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rocm-rpm-macros-7.2.0-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7e73160994be71506b8c1614e8ba61fd7588941efa694e5063685c716a4a32d4"
 
-URI_x86_64_v2_rocm-rpm-macros = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocm-rpm-macros-7.2.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rocm-rpm-macros;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rocm-rpm-macros}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocm-rpm-macros-7.2.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rocm-rpm-macros;unpack=0"
 SRC_URI[x86_64_v2_rocm-rpm-macros.sha256sum] = "3a22d856a69e28bd4ed51bbb1fff330b243023fbaad851f40df2339c3c6f5ecf"
 
-URI_x86_64_v2_rocm-rpm-macros-modules = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocm-rpm-macros-modules-7.2.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rocm-rpm-macros-modules;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rocm-rpm-macros-modules}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocm-rpm-macros-modules-7.2.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rocm-rpm-macros-modules;unpack=0"
 SRC_URI[x86_64_v2_rocm-rpm-macros-modules.sha256sum] = "6cb1e7b2e6ecc8b44404d576067a4e506daf7725c8d4d58bd941dc0c7c6dd0a3"
 
 RDEPENDS:rocm-rpm-macros = " \

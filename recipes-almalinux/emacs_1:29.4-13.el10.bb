@@ -14,55 +14,62 @@ PACKAGES = " \
  emacs-nw \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/emacs-29.4-13.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/emacs-29.4-13.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "87ece2287878b9bd55b632bc9edb81c66ee54f74ea4aa7af6fafc5f4c9d661f8"
 
-URI_x86_64_v2_emacs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/emacs-29.4-13.el10.x86_64_v2.rpm;name=x86_64_v2_emacs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_emacs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/emacs-29.4-13.el10.x86_64_v2.rpm;name=x86_64_v2_emacs;unpack=0"
 SRC_URI[x86_64_v2_emacs.sha256sum] = "81c11fa2a21320d33faf609661b9798af71d6c958bb7888b8921ff84bafb5a8c"
-RPROVIDES:emacs:x86_64_v2 = "virtual/emacs_bin__ge_29.4"
+RPROVIDES:emacs:append:x86_64_v2 = " virtual/emacs_bin__ge_29.4"
 
-URI_x86_64_v2_emacs-common = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/emacs-common-29.4-13.el10.x86_64_v2.rpm;name=x86_64_v2_emacs-common;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_emacs-common}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/emacs-common-29.4-13.el10.x86_64_v2.rpm;name=x86_64_v2_emacs-common;unpack=0"
 SRC_URI[x86_64_v2_emacs-common.sha256sum] = "a0b7d2a28887b02398bb06e1e19fc8c9f3f7a8d938f321eda241e56969d08f8f"
 
-URI_x86_64_v2_emacs-filesystem = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/emacs-filesystem-29.4-13.el10.noarch.rpm;name=x86_64_v2_emacs-filesystem;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_emacs-filesystem}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/emacs-filesystem-29.4-13.el10.noarch.rpm;name=x86_64_v2_emacs-filesystem;unpack=0"
 SRC_URI[x86_64_v2_emacs-filesystem.sha256sum] = "7d295d0be82e77732faada20271513ff410767751fadd1107991c026b368ac03"
 
-URI_x86_64_v2_emacs-lucid = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/emacs-lucid-29.4-13.el10.x86_64_v2.rpm;name=x86_64_v2_emacs-lucid;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_emacs-lucid}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/emacs-lucid-29.4-13.el10.x86_64_v2.rpm;name=x86_64_v2_emacs-lucid;unpack=0"
 SRC_URI[x86_64_v2_emacs-lucid.sha256sum] = "8dea361e2805486d958888d47d3284d62d502ef71a2415533a4b3bcc2ec32f6e"
-RPROVIDES:emacs-lucid:x86_64_v2 = "virtual/emacs_bin__ge_29.4"
+RPROVIDES:emacs-lucid:append:x86_64_v2 = " virtual/emacs_bin__ge_29.4"
 
-URI_x86_64_v2_emacs-nw = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/emacs-nw-29.4-13.el10.x86_64_v2.rpm;name=x86_64_v2_emacs-nw;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_emacs-nw}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/emacs-nw-29.4-13.el10.x86_64_v2.rpm;name=x86_64_v2_emacs-nw;unpack=0"
 SRC_URI[x86_64_v2_emacs-nw.sha256sum] = "bc8de57cddd2dcf382cef9f29dd6dc9cea42722fc55629c0cf1688650857ff68"
-RPROVIDES:emacs-nw:x86_64_v2 = "virtual/emacs_bin__ge_29.4"
+RPROVIDES:emacs-nw:append:x86_64_v2 = " virtual/emacs_bin__ge_29.4"
 
-URI_aarch64_emacs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/emacs-29.4-13.el10.aarch64.rpm;name=aarch64_emacs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_emacs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/emacs-29.4-13.el10.aarch64.rpm;name=aarch64_emacs;unpack=0"
 SRC_URI[aarch64_emacs.sha256sum] = "216e790de13800caff112eabbd66505a1ddba179ba8be99358c3737b621a391b"
-RPROVIDES:emacs:aarch64 = "virtual/emacs_bin__ge_29.4"
+RPROVIDES:emacs:append:aarch64 = " virtual/emacs_bin__ge_29.4"
 
-URI_aarch64_emacs-common = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/emacs-common-29.4-13.el10.aarch64.rpm;name=aarch64_emacs-common;unpack=0"
-SRC_URI:append = " ${URI_aarch64_emacs-common}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/emacs-common-29.4-13.el10.aarch64.rpm;name=aarch64_emacs-common;unpack=0"
 SRC_URI[aarch64_emacs-common.sha256sum] = "7ba9a30bca76946547fcb52720754b69ea8aca79f8e41aff51171abec1280622"
 
-URI_aarch64_emacs-filesystem = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/emacs-filesystem-29.4-13.el10.noarch.rpm;name=aarch64_emacs-filesystem;unpack=0"
-SRC_URI:append = " ${URI_aarch64_emacs-filesystem}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/emacs-filesystem-29.4-13.el10.noarch.rpm;name=aarch64_emacs-filesystem;unpack=0"
 SRC_URI[aarch64_emacs-filesystem.sha256sum] = "7d295d0be82e77732faada20271513ff410767751fadd1107991c026b368ac03"
 
-URI_aarch64_emacs-lucid = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/emacs-lucid-29.4-13.el10.aarch64.rpm;name=aarch64_emacs-lucid;unpack=0"
-SRC_URI:append = " ${URI_aarch64_emacs-lucid}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/emacs-lucid-29.4-13.el10.aarch64.rpm;name=aarch64_emacs-lucid;unpack=0"
 SRC_URI[aarch64_emacs-lucid.sha256sum] = "8caeb721ba5a7d0fbdca010ed1f6069d3a2812ab425f39c291983344ffbdef33"
-RPROVIDES:emacs-lucid:aarch64 = "virtual/emacs_bin__ge_29.4"
+RPROVIDES:emacs-lucid:append:aarch64 = " virtual/emacs_bin__ge_29.4"
 
-URI_aarch64_emacs-nw = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/emacs-nw-29.4-13.el10.aarch64.rpm;name=aarch64_emacs-nw;unpack=0"
-SRC_URI:append = " ${URI_aarch64_emacs-nw}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/emacs-nw-29.4-13.el10.aarch64.rpm;name=aarch64_emacs-nw;unpack=0"
 SRC_URI[aarch64_emacs-nw.sha256sum] = "4b7c20d5f7bb49c6cf1af48023993b8ff0358869c0624fe036edf7be70fbe0c2"
-RPROVIDES:emacs-nw:aarch64 = "virtual/emacs_bin__ge_29.4"
+RPROVIDES:emacs-nw:append:aarch64 = " virtual/emacs_bin__ge_29.4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/emacs-29.4-13.el10.riscv64.rpm;name=riscv64_emacs;unpack=0"
+SRC_URI[riscv64_emacs.sha256sum] = "35bf69e46db740c2b52cea72a7245714e0c75e860ac065a1db26e4db1ff57f49"
+RPROVIDES:emacs:append:riscv64 = " virtual/emacs_bin__ge_29.4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/emacs-common-29.4-13.el10.riscv64.rpm;name=riscv64_emacs-common;unpack=0"
+SRC_URI[riscv64_emacs-common.sha256sum] = "6847a598ce73d9f284539ce1c699a9b08b0c913bc130e9af46a0341dabb96bf6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/emacs-filesystem-29.4-13.el10.noarch.rpm;name=riscv64_emacs-filesystem;unpack=0"
+SRC_URI[riscv64_emacs-filesystem.sha256sum] = "7d295d0be82e77732faada20271513ff410767751fadd1107991c026b368ac03"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/emacs-lucid-29.4-13.el10.riscv64.rpm;name=riscv64_emacs-lucid;unpack=0"
+SRC_URI[riscv64_emacs-lucid.sha256sum] = "ba263bb598f5fb40b9e23ce18735ff8ccffd4c1c43e6706496727fa23cb068f0"
+RPROVIDES:emacs-lucid:append:riscv64 = " virtual/emacs_bin__ge_29.4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/emacs-nw-29.4-13.el10.riscv64.rpm;name=riscv64_emacs-nw;unpack=0"
+SRC_URI[riscv64_emacs-nw.sha256sum] = "e753aabebfe15b9eaba0ec27affdfe3df654729589dd35d6fe2cd0b5519aa619"
+RPROVIDES:emacs-nw:append:riscv64 = " virtual/emacs_bin__ge_29.4"
 
 RDEPENDS:emacs = " \
  alsa-lib \
@@ -177,7 +184,3 @@ RDEPENDS:emacs-nw = " \
  systemd-libs \
  zlib-ng-compat \
  "
-
-PROVIDES:append:x86_64_v2 = " rpm/virtual/emacs_bin__ge_29.4"
-
-PROVIDES:append:aarch64 = " rpm/virtual/emacs_bin__ge_29.4"

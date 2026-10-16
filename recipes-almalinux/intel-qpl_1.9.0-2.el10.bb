@@ -13,21 +13,20 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/intel-qpl-1.9.0-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/intel-qpl-1.9.0-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "22a7df5a8f10cd7d228de5c82075cad87abedc9aff321268c1c08aa113ac6a7f"
 
-URI_x86_64_v2_intel-qpl = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/intel-qpl-1.9.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_intel-qpl;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_intel-qpl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/intel-qpl-1.9.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_intel-qpl;unpack=0"
 SRC_URI[x86_64_v2_intel-qpl.sha256sum] = "a2361c1051a1b034b24a0f1054b87ba32062aea461c8f4660647b9639d5b269c"
 
-URI_x86_64_v2_intel-qpl-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/intel-qpl-devel-1.9.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_intel-qpl-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_intel-qpl-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/intel-qpl-devel-1.9.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_intel-qpl-devel;unpack=0"
 SRC_URI[x86_64_v2_intel-qpl-devel.sha256sum] = "354e408330011de8bc7d7a7f4382b5e246d9fadd6c8f1b7c22bdb77c03b23b07"
 
-URI_x86_64_v2_intel-qpl-tests = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/intel-qpl-tests-1.9.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_intel-qpl-tests;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_intel-qpl-tests}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/intel-qpl-tests-1.9.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_intel-qpl-tests;unpack=0"
 SRC_URI[x86_64_v2_intel-qpl-tests.sha256sum] = "b5f8266c94c3dac141c6b23371bff05c1c0046401073b9c9aea0011deed1f6c5"
 
 RDEPENDS:intel-qpl = " \

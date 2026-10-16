@@ -8,7 +8,6 @@ PR = "4.el10"
 PACKAGES = " \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/librtas-2.0.6-4.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/librtas-2.0.6-4.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a28b50456e560641cb5b7a0d4c062bf025ec835b57ffed13b11c71dd3fbc348f"
 

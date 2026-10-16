@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "kbrickbuster"
 PV = "26.04.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  kbrickbuster \
- "
+"
+PACKAGES:aarch64 = " \
+ kbrickbuster \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/k/kbrickbuster-26.04.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/k/kbrickbuster-26.04.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "75951007ed21e1c19ec9064b640ad1b2b4828f40d0e6b7821b1985c07e136119"
 
-URI_x86_64_v2_kbrickbuster = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/kbrickbuster-26.04.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_kbrickbuster;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_kbrickbuster}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/kbrickbuster-26.04.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_kbrickbuster;unpack=0"
 SRC_URI[x86_64_v2_kbrickbuster.sha256sum] = "73e58320b4dc7d41211313e72af0a1858c792844dc1ba8e3fa1a3843586a17d5"
 
-URI_aarch64_kbrickbuster = "${EPEL_MIRROR}/aarch64/Packages/k/kbrickbuster-26.04.0-1.el10_3.aarch64.rpm;name=aarch64_kbrickbuster;unpack=0"
-SRC_URI:append = " ${URI_aarch64_kbrickbuster}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/k/kbrickbuster-26.04.0-1.el10_3.aarch64.rpm;name=aarch64_kbrickbuster;unpack=0"
 SRC_URI[aarch64_kbrickbuster.sha256sum] = "ea84d45f14d3d1ef48cae282412bf40f05709c64159eba0dcb83d1894df29ff3"
 
 RDEPENDS:kbrickbuster = " \

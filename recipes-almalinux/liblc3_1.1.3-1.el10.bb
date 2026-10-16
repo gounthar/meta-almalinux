@@ -10,25 +10,26 @@ PACKAGES = " \
  liblc3-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/liblc3-1.1.3-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/liblc3-1.1.3-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b61b9abe14ca4efd506cc125053fcc3547b0baf7d242443c679d110628ad5eea"
 
-URI_x86_64_v2_liblc3 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/liblc3-1.1.3-1.el10.x86_64_v2.rpm;name=x86_64_v2_liblc3;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_liblc3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/liblc3-1.1.3-1.el10.x86_64_v2.rpm;name=x86_64_v2_liblc3;unpack=0"
 SRC_URI[x86_64_v2_liblc3.sha256sum] = "090601cc2447b04d0a6d8855274273709c840413a0bf4bd13a0f9dcb64935fb3"
 
-URI_x86_64_v2_liblc3-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/liblc3-devel-1.1.3-1.el10.x86_64_v2.rpm;name=x86_64_v2_liblc3-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_liblc3-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/liblc3-devel-1.1.3-1.el10.x86_64_v2.rpm;name=x86_64_v2_liblc3-devel;unpack=0"
 SRC_URI[x86_64_v2_liblc3-devel.sha256sum] = "9058fa3fa827e4e187dadddbb4f10c3ab1b0aa42f8649a061cda2d461783b105"
 
-URI_aarch64_liblc3 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/liblc3-1.1.3-1.el10.aarch64.rpm;name=aarch64_liblc3;unpack=0"
-SRC_URI:append = " ${URI_aarch64_liblc3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/liblc3-1.1.3-1.el10.aarch64.rpm;name=aarch64_liblc3;unpack=0"
 SRC_URI[aarch64_liblc3.sha256sum] = "18e33650b7a6bd744eaf62e528154c384b5051783b74c5dfd54b02865deb7f25"
 
-URI_aarch64_liblc3-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/liblc3-devel-1.1.3-1.el10.aarch64.rpm;name=aarch64_liblc3-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_liblc3-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/liblc3-devel-1.1.3-1.el10.aarch64.rpm;name=aarch64_liblc3-devel;unpack=0"
 SRC_URI[aarch64_liblc3-devel.sha256sum] = "3a0e3e210f6a1e34eea5d65b5a556b0bd3a838649eb1356dc95f8caa4d788acd"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/liblc3-1.1.3-1.el10.riscv64.rpm;name=riscv64_liblc3;unpack=0"
+SRC_URI[riscv64_liblc3.sha256sum] = "463415cde4196cb81c46dd12bb87f289c2449f8bcbdb9061107a65e1695a8abd"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/liblc3-devel-1.1.3-1.el10.riscv64.rpm;name=riscv64_liblc3-devel;unpack=0"
+SRC_URI[riscv64_liblc3-devel.sha256sum] = "e4c6fa8335ae5aa3ff8382b37772095c7a7832773a961ad15b4a82d0e62ab2f0"
 
 RDEPENDS:liblc3 = " \
  glibc \

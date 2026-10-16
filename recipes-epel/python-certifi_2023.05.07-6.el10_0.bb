@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-certifi"
 PV = "2023.05.07"
 PR = "6.el10_0"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-certifi \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-certifi \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-certifi-2023.05.07-6.el10_0.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-certifi-2023.05.07-6.el10_0.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "abdf9e546a54a1cf4e086d34f231c238ebdf90482294ee926547fe4061aa5f78"
 
-URI_x86_64_v2_python3-certifi = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-certifi-2023.05.07-6.el10_0.alma_altarch.noarch.rpm;name=x86_64_v2_python3-certifi;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-certifi}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-certifi-2023.05.07-6.el10_0.alma_altarch.noarch.rpm;name=x86_64_v2_python3-certifi;unpack=0"
 SRC_URI[x86_64_v2_python3-certifi.sha256sum] = "ba12373daa7b03aea1eb8f4adb3119832952cb0521106e3809d6cc7b9a8bfad2"
 
-URI_aarch64_python3-certifi = "${EPEL_MIRROR}/aarch64/Packages/p/python3-certifi-2023.05.07-6.el10_0.noarch.rpm;name=aarch64_python3-certifi;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-certifi}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-certifi-2023.05.07-6.el10_0.noarch.rpm;name=aarch64_python3-certifi;unpack=0"
 SRC_URI[aarch64_python3-certifi.sha256sum] = "361c9329f655d9801085059e99d4d6e84d78cc4d8e0882ce8f4ded986da61e47"
 
 RDEPENDS:python3-certifi = " \

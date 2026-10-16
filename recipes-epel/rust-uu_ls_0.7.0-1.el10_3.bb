@@ -5,56 +5,55 @@ inherit dnf-bridge
 PN = "rust-uu_ls"
 PV = "0.7.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-uu_ls+default-devel \
  rust-uu_ls+feat_selinux-devel \
  rust-uu_ls+selinux-devel \
  rust-uu_ls+smack-devel \
  rust-uu_ls-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-uu_ls+default-devel \
+ rust-uu_ls+feat_selinux-devel \
+ rust-uu_ls+selinux-devel \
+ rust-uu_ls+smack-devel \
+ rust-uu_ls-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-uu_ls-0.7.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-uu_ls-0.7.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "9595dec5118c6e20ffc1274a723353efbf96483f8ffee081e959d8ee7182bb2d"
 
-URI_x86_64_v2_rust-uu_ls+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_ls+default-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_ls+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_ls+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_ls+default-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_ls+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_ls+default-devel.sha256sum] = "59275ff7931fbf14ffd897b67327cd524f0fb115197567bda84503bb9755cf37"
 
-URI_x86_64_v2_rust-uu_ls+feat_selinux-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_ls+feat_selinux-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_ls+feat_selinux-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_ls+feat_selinux-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_ls+feat_selinux-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_ls+feat_selinux-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_ls+feat_selinux-devel.sha256sum] = "eba2f530901b32d6b97a985f6742d8f09c2959bc89de1f55c8c24737dc554553"
 
-URI_x86_64_v2_rust-uu_ls+selinux-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_ls+selinux-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_ls+selinux-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_ls+selinux-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_ls+selinux-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_ls+selinux-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_ls+selinux-devel.sha256sum] = "4dbdb0dbcc35bf4b3303009613cb97f70d4509ef0ddf93f22ab0dc9d6d00856c"
 
-URI_x86_64_v2_rust-uu_ls+smack-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_ls+smack-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_ls+smack-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_ls+smack-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_ls+smack-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_ls+smack-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_ls+smack-devel.sha256sum] = "fe5783c64d637648a6c2cfd4651fa0788102d5e28b77d615dd982c0677a0e282"
 
-URI_x86_64_v2_rust-uu_ls-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_ls-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_ls-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_ls-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_ls-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_ls-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_ls-devel.sha256sum] = "093408b9eabe9b2fa3f158748f9813cb0d77cf50fe057e45e9afd509162e5202"
 
-URI_aarch64_rust-uu_ls+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_ls+default-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_ls+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_ls+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_ls+default-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_ls+default-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_ls+default-devel.sha256sum] = "33735dd2b2c218e36f11ab8ae9a637a97eb60e5f9e623663262049a13db2a8bc"
 
-URI_aarch64_rust-uu_ls+feat_selinux-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_ls+feat_selinux-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_ls+feat_selinux-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_ls+feat_selinux-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_ls+feat_selinux-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_ls+feat_selinux-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_ls+feat_selinux-devel.sha256sum] = "08ff83d6ef2e537d1e3c7a77502cb9d4ffd01ace781fae5fadda3ebe19f948af"
 
-URI_aarch64_rust-uu_ls+selinux-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_ls+selinux-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_ls+selinux-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_ls+selinux-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_ls+selinux-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_ls+selinux-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_ls+selinux-devel.sha256sum] = "7a92faf6515032853db2d076a07f0a8861ab59989b5b790f8a8d87ae00fddf64"
 
-URI_aarch64_rust-uu_ls+smack-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_ls+smack-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_ls+smack-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_ls+smack-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_ls+smack-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_ls+smack-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_ls+smack-devel.sha256sum] = "35a1efeabbf8cf31194eb0fa0a132ce3a906d6186a2d29074080a34a7bf2240e"
 
-URI_aarch64_rust-uu_ls-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_ls-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_ls-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_ls-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_ls-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_ls-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_ls-devel.sha256sum] = "fcee3c919f46288effdeb3503e14733b5e74e1ef4f964d1d2e183889979fcbcd"
 
 RDEPENDS:rust-uu_ls+default-devel = " \

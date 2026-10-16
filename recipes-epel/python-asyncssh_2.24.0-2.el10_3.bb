@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-asyncssh"
 PV = "2.24.0"
 PR = "2.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-asyncssh \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-asyncssh \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-asyncssh-2.24.0-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-asyncssh-2.24.0-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "4ee0e78628da487e6d554f6894fd7a892db6657299591ab1fb26af29debcdefd"
 
-URI_x86_64_v2_python3-asyncssh = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-asyncssh-2.24.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-asyncssh;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-asyncssh}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-asyncssh-2.24.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-asyncssh;unpack=0"
 SRC_URI[x86_64_v2_python3-asyncssh.sha256sum] = "3e733c40860dbe627469bb745a47637fb25a797bac7e5e9e4be4c86fc7743d45"
 
-URI_aarch64_python3-asyncssh = "${EPEL_MIRROR}/aarch64/Packages/p/python3-asyncssh-2.24.0-2.el10_3.noarch.rpm;name=aarch64_python3-asyncssh;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-asyncssh}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-asyncssh-2.24.0-2.el10_3.noarch.rpm;name=aarch64_python3-asyncssh;unpack=0"
 SRC_URI[aarch64_python3-asyncssh.sha256sum] = "af051275f75f16d252a983e791a152c56ba6e9c21233adfb33f06b7fa3ef6fa6"
 
 RDEPENDS:python3-asyncssh = " \

@@ -28,169 +28,191 @@ PACKAGES = " \
  python3-blockdev \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libblockdev-3.4.0-3.el10.alma.1.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libblockdev-3.4.0-3.el10.alma.1.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c1dd3edefc2ee821c730e99eebebc2df27f3a14e97a1f1770bf32ba43ba19796"
 
-URI_x86_64_v2_libblockdev = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libblockdev}"
+## Requires (riscv64) that were seen as not satisfiable in original repo:
+# - libblockdev-btrfs: btrfs-progs
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev;unpack=0"
 SRC_URI[x86_64_v2_libblockdev.sha256sum] = "8feedd2a715a817c83dd28f9d892969b27895285f2739730c5b166bdbf8ede23"
 
-URI_x86_64_v2_libblockdev-btrfs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-btrfs-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-btrfs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libblockdev-btrfs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-btrfs-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-btrfs;unpack=0"
 SRC_URI[x86_64_v2_libblockdev-btrfs.sha256sum] = "e1bccbc7d9482d14be1afc4da413e9ab8d0a552e56f7a01ee4681a6c9f616e59"
 
-URI_x86_64_v2_libblockdev-crypto = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-crypto-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-crypto;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libblockdev-crypto}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-crypto-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-crypto;unpack=0"
 SRC_URI[x86_64_v2_libblockdev-crypto.sha256sum] = "1eb16bbce41bf2c1d009a9849409f862db63b41dd4705ebde9efac531ee1b9ea"
 
-URI_x86_64_v2_libblockdev-dm = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-dm-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-dm;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libblockdev-dm}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-dm-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-dm;unpack=0"
 SRC_URI[x86_64_v2_libblockdev-dm.sha256sum] = "e3ddc93c228131a7b088efd7f6870d7d705c9893433f98a6e84b7ff9b60036a1"
 
-URI_x86_64_v2_libblockdev-fs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-fs-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-fs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libblockdev-fs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-fs-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-fs;unpack=0"
 SRC_URI[x86_64_v2_libblockdev-fs.sha256sum] = "7ecec864b1730918a3a4ffe788a88e8f5fe931b601c824af93fedca7403a5476"
 
-URI_x86_64_v2_libblockdev-loop = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-loop-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-loop;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libblockdev-loop}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-loop-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-loop;unpack=0"
 SRC_URI[x86_64_v2_libblockdev-loop.sha256sum] = "99abbb837d7abfbbfa02c8ed64946d81ef92cfb115eb2e678d684d7ee202d004"
 
-URI_x86_64_v2_libblockdev-lvm = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-lvm-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-lvm;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libblockdev-lvm}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-lvm-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-lvm;unpack=0"
 SRC_URI[x86_64_v2_libblockdev-lvm.sha256sum] = "393fd330b78b30a0fae38a6b7112db3f4a0d8e7cc5dd7c4fde17344dcbcf5d99"
 
-URI_x86_64_v2_libblockdev-lvm-dbus = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-lvm-dbus-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-lvm-dbus;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libblockdev-lvm-dbus}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-lvm-dbus-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-lvm-dbus;unpack=0"
 SRC_URI[x86_64_v2_libblockdev-lvm-dbus.sha256sum] = "f37feca47a41149f70f86cc7734bcf1c7e63c216b0e81ee286c2a32a601adffd"
 
-URI_x86_64_v2_libblockdev-mdraid = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-mdraid-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-mdraid;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libblockdev-mdraid}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-mdraid-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-mdraid;unpack=0"
 SRC_URI[x86_64_v2_libblockdev-mdraid.sha256sum] = "e641e7e2b187c00631d0fb1ef09c9f7c117c512236da239126b15d56fd3eb6fb"
 
-URI_x86_64_v2_libblockdev-mpath = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-mpath-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-mpath;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libblockdev-mpath}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-mpath-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-mpath;unpack=0"
 SRC_URI[x86_64_v2_libblockdev-mpath.sha256sum] = "6504d9a6b57602f6281d21a901eea61cc3fc3968589b1bbe919e0075b6bfff95"
 
-URI_x86_64_v2_libblockdev-nvdimm = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-nvdimm-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-nvdimm;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libblockdev-nvdimm}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-nvdimm-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-nvdimm;unpack=0"
 SRC_URI[x86_64_v2_libblockdev-nvdimm.sha256sum] = "c92c00a0d7215442460f1c8b5b8578cfacb49229a7f871002007d10ade4b8871"
 
-URI_x86_64_v2_libblockdev-nvme = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-nvme-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-nvme;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libblockdev-nvme}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-nvme-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-nvme;unpack=0"
 SRC_URI[x86_64_v2_libblockdev-nvme.sha256sum] = "90923afb7cdec041062bc7a7a12a445546c2b7a1f890152c534a736db9df19e3"
 
-URI_x86_64_v2_libblockdev-part = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-part-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-part;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libblockdev-part}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-part-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-part;unpack=0"
 SRC_URI[x86_64_v2_libblockdev-part.sha256sum] = "5a24debc0c5e6fc43f0896ee8527ceacf72c1db4c3ef538674d00bb49e8a939b"
 
-URI_x86_64_v2_libblockdev-plugins-all = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-plugins-all-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-plugins-all;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libblockdev-plugins-all}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-plugins-all-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-plugins-all;unpack=0"
 SRC_URI[x86_64_v2_libblockdev-plugins-all.sha256sum] = "3ecb624baaa2ea10ef934b412b356a73ce2d51b837dd52a37220ea31827f05c2"
 
-URI_x86_64_v2_libblockdev-smart = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-smart-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-smart;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libblockdev-smart}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-smart-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-smart;unpack=0"
 SRC_URI[x86_64_v2_libblockdev-smart.sha256sum] = "3488e966f04bfb66826cfc6814b095d00822df3481cf3d71837e22a6d62670e2"
 
-URI_x86_64_v2_libblockdev-smartmontools = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-smartmontools-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-smartmontools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libblockdev-smartmontools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-smartmontools-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-smartmontools;unpack=0"
 SRC_URI[x86_64_v2_libblockdev-smartmontools.sha256sum] = "4e451f70925730fb341e048ed51497864bc87f488ed6b8fd0da078dd240fcf1e"
 
-URI_x86_64_v2_libblockdev-swap = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-swap-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-swap;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libblockdev-swap}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-swap-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-swap;unpack=0"
 SRC_URI[x86_64_v2_libblockdev-swap.sha256sum] = "c0bbcf9bd008df1eb1cef929c48b5dcf938edc4c75a30f4df85762c5cce1dce0"
 
-URI_x86_64_v2_libblockdev-tools = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-tools-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libblockdev-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-tools-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-tools;unpack=0"
 SRC_URI[x86_64_v2_libblockdev-tools.sha256sum] = "66222950867ccc021d4b945a8434b60861925c78541b486a22ae6be9cb754935"
 
-URI_x86_64_v2_libblockdev-utils = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-utils-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libblockdev-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libblockdev-utils-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_libblockdev-utils;unpack=0"
 SRC_URI[x86_64_v2_libblockdev-utils.sha256sum] = "e9936b38f423af7eb1efde387acfe17faaebaa6e6ddd6a49be86c63a108dff40"
 
-URI_x86_64_v2_python3-blockdev = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-blockdev-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_python3-blockdev;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-blockdev}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-blockdev-3.4.0-3.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_python3-blockdev;unpack=0"
 SRC_URI[x86_64_v2_python3-blockdev.sha256sum] = "6e3f0f91bea0b9e9fbad22fb8030d74565c0dc83e61e82d120b0d95241e5b397"
 
-URI_aarch64_libblockdev = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libblockdev}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev;unpack=0"
 SRC_URI[aarch64_libblockdev.sha256sum] = "3d4ace6b769ef441f11d03fd7d24c43e761ccab4e2ffe5ca343867d7ec5e1837"
 
-URI_aarch64_libblockdev-btrfs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-btrfs-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-btrfs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libblockdev-btrfs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-btrfs-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-btrfs;unpack=0"
 SRC_URI[aarch64_libblockdev-btrfs.sha256sum] = "7122b42d96408954099343d762947f309948ced00950973a6ede8fc9c0fcf5c4"
 
-URI_aarch64_libblockdev-crypto = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-crypto-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-crypto;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libblockdev-crypto}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-crypto-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-crypto;unpack=0"
 SRC_URI[aarch64_libblockdev-crypto.sha256sum] = "f1b309e099a35624be8560ff4e914710c803f091e71d8ad6810c056e856d8637"
 
-URI_aarch64_libblockdev-dm = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-dm-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-dm;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libblockdev-dm}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-dm-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-dm;unpack=0"
 SRC_URI[aarch64_libblockdev-dm.sha256sum] = "fd0f0284115fc0d7b5be2a078eef3c9917901627c17bfeab2b2be6a399cc320c"
 
-URI_aarch64_libblockdev-fs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-fs-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-fs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libblockdev-fs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-fs-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-fs;unpack=0"
 SRC_URI[aarch64_libblockdev-fs.sha256sum] = "1224e6fb74590095e42335d7923b4366f084a97bb2b06cf23eb0050ba4a349ed"
 
-URI_aarch64_libblockdev-loop = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-loop-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-loop;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libblockdev-loop}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-loop-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-loop;unpack=0"
 SRC_URI[aarch64_libblockdev-loop.sha256sum] = "461c259e78e3a19f63cb46d4b6358cbce69d018e7d99b46633e0d0e547bdc6a4"
 
-URI_aarch64_libblockdev-lvm = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-lvm-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-lvm;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libblockdev-lvm}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-lvm-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-lvm;unpack=0"
 SRC_URI[aarch64_libblockdev-lvm.sha256sum] = "5a6e1681e9415530a1c09e989a404fee0b3dc20dce007d8571c85a11fdedb23a"
 
-URI_aarch64_libblockdev-lvm-dbus = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-lvm-dbus-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-lvm-dbus;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libblockdev-lvm-dbus}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-lvm-dbus-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-lvm-dbus;unpack=0"
 SRC_URI[aarch64_libblockdev-lvm-dbus.sha256sum] = "8760bd336e4d7ed6d5e54f951fec4661e6d49f5ad425f723591c20912c27375e"
 
-URI_aarch64_libblockdev-mdraid = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-mdraid-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-mdraid;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libblockdev-mdraid}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-mdraid-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-mdraid;unpack=0"
 SRC_URI[aarch64_libblockdev-mdraid.sha256sum] = "153bd23ebfeb938e5f654c96b0d1d9beebb8bc1cf286da10b92f809e9b0b060f"
 
-URI_aarch64_libblockdev-mpath = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-mpath-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-mpath;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libblockdev-mpath}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-mpath-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-mpath;unpack=0"
 SRC_URI[aarch64_libblockdev-mpath.sha256sum] = "594f7a2fe60ad8db6290c62d36ca331484035a2b25891b79f944143dc1dbcd76"
 
-URI_aarch64_libblockdev-nvdimm = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-nvdimm-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-nvdimm;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libblockdev-nvdimm}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-nvdimm-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-nvdimm;unpack=0"
 SRC_URI[aarch64_libblockdev-nvdimm.sha256sum] = "13dc6ec0120ddb0bb8d86872a4a9ce05d20214ac854da8d50169b30d6cd6cc23"
 
-URI_aarch64_libblockdev-nvme = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-nvme-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-nvme;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libblockdev-nvme}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-nvme-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-nvme;unpack=0"
 SRC_URI[aarch64_libblockdev-nvme.sha256sum] = "62ff34d42b24ff1eb6e12e764781fff684d081ac25222135ba97389b44776862"
 
-URI_aarch64_libblockdev-part = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-part-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-part;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libblockdev-part}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-part-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-part;unpack=0"
 SRC_URI[aarch64_libblockdev-part.sha256sum] = "32872edeaa02c08f178b401f89056685cda9c90788064be00e561d411967a049"
 
-URI_aarch64_libblockdev-plugins-all = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-plugins-all-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-plugins-all;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libblockdev-plugins-all}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-plugins-all-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-plugins-all;unpack=0"
 SRC_URI[aarch64_libblockdev-plugins-all.sha256sum] = "17e1ffd61e436a767d7a845886569899f6ef1746fb6a5b9231a0ea9a4d9daa0d"
 
-URI_aarch64_libblockdev-smart = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-smart-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-smart;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libblockdev-smart}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-smart-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-smart;unpack=0"
 SRC_URI[aarch64_libblockdev-smart.sha256sum] = "02343eb98a12fb9f65a6e99cd4d5782cdac805b43a0515eb22f09a1731a80824"
 
-URI_aarch64_libblockdev-smartmontools = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-smartmontools-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-smartmontools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libblockdev-smartmontools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-smartmontools-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-smartmontools;unpack=0"
 SRC_URI[aarch64_libblockdev-smartmontools.sha256sum] = "e02d5c7eda3088a978413c1c5444e434bba4bc7c7453f8cae04bf7a1b7e96d7e"
 
-URI_aarch64_libblockdev-swap = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-swap-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-swap;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libblockdev-swap}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-swap-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-swap;unpack=0"
 SRC_URI[aarch64_libblockdev-swap.sha256sum] = "4d39ce00246660ccf9948480dc74cfc39f94778bbce734191749125c56a69ab5"
 
-URI_aarch64_libblockdev-tools = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-tools-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libblockdev-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-tools-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-tools;unpack=0"
 SRC_URI[aarch64_libblockdev-tools.sha256sum] = "727a9cd0466c1f930ebf7bf25d93428e026d1a191dba30f1a68d61943e31b26e"
 
-URI_aarch64_libblockdev-utils = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-utils-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libblockdev-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libblockdev-utils-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_libblockdev-utils;unpack=0"
 SRC_URI[aarch64_libblockdev-utils.sha256sum] = "2bea84c8a59896c83873f5eb6d905a9c14f6e4cd0ca887bc58e102de0e42658b"
 
-URI_aarch64_python3-blockdev = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-blockdev-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_python3-blockdev;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-blockdev}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-blockdev-3.4.0-3.el10.alma.1.aarch64.rpm;name=aarch64_python3-blockdev;unpack=0"
 SRC_URI[aarch64_python3-blockdev.sha256sum] = "b53efeb1bca33bd6f5c177d8018c03dde73b18c5a993a5ef136d75d0ba72287d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libblockdev-3.4.0-3.el10.alma.1.riscv64.rpm;name=riscv64_libblockdev;unpack=0"
+SRC_URI[riscv64_libblockdev.sha256sum] = "68401e57b39fd07e3766d63f6c9a9f3e9f9f9f87b55bdf532e0f2599c9ee001a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libblockdev-btrfs-3.4.0-3.el10.alma.1.riscv64.rpm;name=riscv64_libblockdev-btrfs;unpack=0"
+SRC_URI[riscv64_libblockdev-btrfs.sha256sum] = "531f99988b5f30e0b8f1110e319e154fb549be66f2c65140a680754d9b28cd57"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libblockdev-crypto-3.4.0-3.el10.alma.1.riscv64.rpm;name=riscv64_libblockdev-crypto;unpack=0"
+SRC_URI[riscv64_libblockdev-crypto.sha256sum] = "1b5ec3d75cb6f2704d0b58ec1242f6ebb2b466efdee30d7c37225e701b477221"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libblockdev-dm-3.4.0-3.el10.alma.1.riscv64.rpm;name=riscv64_libblockdev-dm;unpack=0"
+SRC_URI[riscv64_libblockdev-dm.sha256sum] = "f4d4f5eb2ee9b2e781fff6f5cf89cee1fa5ba1219cacac37d3e40de2d5821269"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libblockdev-fs-3.4.0-3.el10.alma.1.riscv64.rpm;name=riscv64_libblockdev-fs;unpack=0"
+SRC_URI[riscv64_libblockdev-fs.sha256sum] = "e6305d066cef74d2e9935fc2fb493dc6867a4404c6c9e880918c7abd901a6e32"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libblockdev-loop-3.4.0-3.el10.alma.1.riscv64.rpm;name=riscv64_libblockdev-loop;unpack=0"
+SRC_URI[riscv64_libblockdev-loop.sha256sum] = "4e8cbc286557626286c7a9e6ebe0d074df391c70cb0d84ed10a5bf83c81cd53c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libblockdev-lvm-3.4.0-3.el10.alma.1.riscv64.rpm;name=riscv64_libblockdev-lvm;unpack=0"
+SRC_URI[riscv64_libblockdev-lvm.sha256sum] = "bb381c5857287e2c3c81f2434925b6a467bc096d40c7ed55442c05ce16944518"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libblockdev-lvm-dbus-3.4.0-3.el10.alma.1.riscv64.rpm;name=riscv64_libblockdev-lvm-dbus;unpack=0"
+SRC_URI[riscv64_libblockdev-lvm-dbus.sha256sum] = "bc2a34c3c012c262dd5dead37002a07959bf1c6d891e50304c789935181876a1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libblockdev-mdraid-3.4.0-3.el10.alma.1.riscv64.rpm;name=riscv64_libblockdev-mdraid;unpack=0"
+SRC_URI[riscv64_libblockdev-mdraid.sha256sum] = "c3cdb7ec75e15d26981daefb33d35657793a1690060a8347c76a099c7b9e7fe4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libblockdev-mpath-3.4.0-3.el10.alma.1.riscv64.rpm;name=riscv64_libblockdev-mpath;unpack=0"
+SRC_URI[riscv64_libblockdev-mpath.sha256sum] = "b98a9744b030a951c0d3e69bbae91349c94513e362a660e0f248398f4b28ae9f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libblockdev-nvdimm-3.4.0-3.el10.alma.1.riscv64.rpm;name=riscv64_libblockdev-nvdimm;unpack=0"
+SRC_URI[riscv64_libblockdev-nvdimm.sha256sum] = "990ad45cb9f5fe33c794030c19ea3e67865d9c3f86a03666a2ea877ee8e0b1fb"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libblockdev-nvme-3.4.0-3.el10.alma.1.riscv64.rpm;name=riscv64_libblockdev-nvme;unpack=0"
+SRC_URI[riscv64_libblockdev-nvme.sha256sum] = "031a430a737cdbd8c993cffbfff6dc7c01aabec2f705c18489c6b2cb2ed0859a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libblockdev-part-3.4.0-3.el10.alma.1.riscv64.rpm;name=riscv64_libblockdev-part;unpack=0"
+SRC_URI[riscv64_libblockdev-part.sha256sum] = "5a2bc7fe3a5127adcd8e5a0cdb8b0b6938005362db7f4d8508535b4a8a8b99e7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libblockdev-plugins-all-3.4.0-3.el10.alma.1.riscv64.rpm;name=riscv64_libblockdev-plugins-all;unpack=0"
+SRC_URI[riscv64_libblockdev-plugins-all.sha256sum] = "66ca794859f26f4f6d516aa7644905eb70356d9baedfb28f78c6c053f6cd57fc"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libblockdev-smart-3.4.0-3.el10.alma.1.riscv64.rpm;name=riscv64_libblockdev-smart;unpack=0"
+SRC_URI[riscv64_libblockdev-smart.sha256sum] = "e07a53d9c2f3ce4d50a51525c3bf293e362b7aff0484f3e3345b45a01241b0dd"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libblockdev-smartmontools-3.4.0-3.el10.alma.1.riscv64.rpm;name=riscv64_libblockdev-smartmontools;unpack=0"
+SRC_URI[riscv64_libblockdev-smartmontools.sha256sum] = "0befe57db68d16fadb0367963ae2f8d6b3398a978b82e83510a327405e2b6750"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libblockdev-swap-3.4.0-3.el10.alma.1.riscv64.rpm;name=riscv64_libblockdev-swap;unpack=0"
+SRC_URI[riscv64_libblockdev-swap.sha256sum] = "023ebeb18fd7c5702985b70d8e0f976182f9c14da272fee7c3d49e32cad21f36"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libblockdev-tools-3.4.0-3.el10.alma.1.riscv64.rpm;name=riscv64_libblockdev-tools;unpack=0"
+SRC_URI[riscv64_libblockdev-tools.sha256sum] = "f835802916c5874b073458eeacaa81a14feb00cf66436eb5d937e0a64c421c00"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libblockdev-utils-3.4.0-3.el10.alma.1.riscv64.rpm;name=riscv64_libblockdev-utils;unpack=0"
+SRC_URI[riscv64_libblockdev-utils.sha256sum] = "5e42c3214e50d4554e675a9956eee7b1823eb77d7c846321cd2d76e0c5e8075f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-blockdev-3.4.0-3.el10.alma.1.riscv64.rpm;name=riscv64_python3-blockdev;unpack=0"
+SRC_URI[riscv64_python3-blockdev.sha256sum] = "3480c5f25073dca18976668d9ccb46b0822a9b120f192b12eadae1e608944389"
 
 RDEPENDS:libblockdev = " \
  glib2 \
@@ -199,7 +221,7 @@ RDEPENDS:libblockdev = " \
  libblockdev-utils \
  systemd-libs \
  "
-RDEPENDS:libblockdev-btrfs = " \
+RDEPENDS:libblockdev-btrfs:x86_64_v2 = " \
  btrfs-progs \
  glib2 \
  glibc \
@@ -207,7 +229,24 @@ RDEPENDS:libblockdev-btrfs = " \
  libblockdev-utils \
  libbytesize \
  systemd-libs \
- "
+"
+RDEPENDS:libblockdev-btrfs:aarch64 = " \
+ btrfs-progs \
+ glib2 \
+ glibc \
+ kmod-libs \
+ libblockdev-utils \
+ libbytesize \
+ systemd-libs \
+"
+RDEPENDS:libblockdev-btrfs:riscv64 = " \
+ glib2 \
+ glibc \
+ kmod-libs \
+ libblockdev-utils \
+ libbytesize \
+ systemd-libs \
+"
 RDEPENDS:libblockdev-crypto = " \
  cryptsetup-libs \
  glib2 \

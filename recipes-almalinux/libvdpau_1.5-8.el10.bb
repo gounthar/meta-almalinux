@@ -11,33 +11,35 @@ PACKAGES = " \
  libvdpau-trace \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libvdpau-1.5-8.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libvdpau-1.5-8.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6fd2cb348f404cd52054d858e25657ded4edd64b671e0baab535e6adc0450589"
 
-URI_x86_64_v2_libvdpau = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libvdpau-1.5-8.el10.x86_64_v2.rpm;name=x86_64_v2_libvdpau;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libvdpau}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libvdpau-1.5-8.el10.x86_64_v2.rpm;name=x86_64_v2_libvdpau;unpack=0"
 SRC_URI[x86_64_v2_libvdpau.sha256sum] = "47dcda58daff17054fc74116dea500b7ed831813bbafd8692e7098a9729cdf87"
 
-URI_x86_64_v2_libvdpau-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libvdpau-devel-1.5-8.el10.x86_64_v2.rpm;name=x86_64_v2_libvdpau-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libvdpau-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libvdpau-devel-1.5-8.el10.x86_64_v2.rpm;name=x86_64_v2_libvdpau-devel;unpack=0"
 SRC_URI[x86_64_v2_libvdpau-devel.sha256sum] = "c81904a28e8c4a81447e4dfa8637c81af37d5c308955e522a0d402696953d457"
 
-URI_x86_64_v2_libvdpau-trace = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libvdpau-trace-1.5-8.el10.x86_64_v2.rpm;name=x86_64_v2_libvdpau-trace;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libvdpau-trace}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libvdpau-trace-1.5-8.el10.x86_64_v2.rpm;name=x86_64_v2_libvdpau-trace;unpack=0"
 SRC_URI[x86_64_v2_libvdpau-trace.sha256sum] = "22cc706e1392e26b2d129fdcebec474bf9b42dff190a5a931076abfd78305c63"
 
-URI_aarch64_libvdpau = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libvdpau-1.5-8.el10.aarch64.rpm;name=aarch64_libvdpau;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libvdpau}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libvdpau-1.5-8.el10.aarch64.rpm;name=aarch64_libvdpau;unpack=0"
 SRC_URI[aarch64_libvdpau.sha256sum] = "0c5ec1cb21f25815827ef3a67059e2a6845ded0360237942899d039baea0507d"
 
-URI_aarch64_libvdpau-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libvdpau-devel-1.5-8.el10.aarch64.rpm;name=aarch64_libvdpau-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libvdpau-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libvdpau-devel-1.5-8.el10.aarch64.rpm;name=aarch64_libvdpau-devel;unpack=0"
 SRC_URI[aarch64_libvdpau-devel.sha256sum] = "57f2a2adda930728d27b630bc17b06f734d78c48cbfd12dc75de9e3c0343e084"
 
-URI_aarch64_libvdpau-trace = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libvdpau-trace-1.5-8.el10.aarch64.rpm;name=aarch64_libvdpau-trace;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libvdpau-trace}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libvdpau-trace-1.5-8.el10.aarch64.rpm;name=aarch64_libvdpau-trace;unpack=0"
 SRC_URI[aarch64_libvdpau-trace.sha256sum] = "7408614d0feee1dbc5d6e24138ac0719fcadaa7ef696fee5e6bab632910790ff"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libvdpau-1.5-8.el10.riscv64.rpm;name=riscv64_libvdpau;unpack=0"
+SRC_URI[riscv64_libvdpau.sha256sum] = "3b725bbc12e0e7186f7ce7e841a998272c4f8ba1df348018683e967f42c43633"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libvdpau-devel-1.5-8.el10.riscv64.rpm;name=riscv64_libvdpau-devel;unpack=0"
+SRC_URI[riscv64_libvdpau-devel.sha256sum] = "112ca99418326a5e420a74e2fc3429543850908d75a54dcf75a69ff7fd8a283f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libvdpau-trace-1.5-8.el10.riscv64.rpm;name=riscv64_libvdpau-trace;unpack=0"
+SRC_URI[riscv64_libvdpau-trace.sha256sum] = "8a5c00b49ad2010cc68a711d797b45ac914d09397440ea6db28d4cb7c2f700d2"
 
 RDEPENDS:libvdpau = " \
  glibc \

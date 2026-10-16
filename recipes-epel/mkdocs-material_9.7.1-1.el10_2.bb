@@ -5,47 +5,47 @@ inherit dnf-bridge
 PN = "mkdocs-material"
 PV = "9.7.1"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  mkdocs-material \
  mkdocs-material+git \
  mkdocs-material+imaging \
  mkdocs-material+recommended \
- "
+"
+PACKAGES:aarch64 = " \
+ mkdocs-material \
+ mkdocs-material+git \
+ mkdocs-material+imaging \
+ mkdocs-material+recommended \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/m/mkdocs-material-9.7.1-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/m/mkdocs-material-9.7.1-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6ba220fddcdce028c9ff8e28505483e995dc8bdf4a242f5363fdf8e1deeeb3c1"
 
-URI_x86_64_v2_mkdocs-material = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/mkdocs-material-9.7.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_mkdocs-material;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mkdocs-material}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/mkdocs-material-9.7.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_mkdocs-material;unpack=0"
 SRC_URI[x86_64_v2_mkdocs-material.sha256sum] = "32dc77efc8a34ceabe8e30ab2a4f2dd5b12fba9cbffd79267c3668485d9a271b"
 
-URI_x86_64_v2_mkdocs-material+git = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/mkdocs-material+git-9.7.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_mkdocs-material+git;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mkdocs-material+git}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/mkdocs-material+git-9.7.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_mkdocs-material+git;unpack=0"
 SRC_URI[x86_64_v2_mkdocs-material+git.sha256sum] = "ddbdcd74948aad0c0ddf0a646f0302d21a7a5e6c811e4006981b269825463599"
 
-URI_x86_64_v2_mkdocs-material+imaging = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/mkdocs-material+imaging-9.7.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_mkdocs-material+imaging;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mkdocs-material+imaging}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/mkdocs-material+imaging-9.7.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_mkdocs-material+imaging;unpack=0"
 SRC_URI[x86_64_v2_mkdocs-material+imaging.sha256sum] = "39bd6de642dd52db45e768935b17cf4fa430b612f956bda702c7221fd5819575"
 
-URI_x86_64_v2_mkdocs-material+recommended = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/mkdocs-material+recommended-9.7.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_mkdocs-material+recommended;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mkdocs-material+recommended}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/mkdocs-material+recommended-9.7.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_mkdocs-material+recommended;unpack=0"
 SRC_URI[x86_64_v2_mkdocs-material+recommended.sha256sum] = "bf25d508a324bd955f829327ed5d1ba37474908ca1cd30cf24c8e41991fbacef"
 
-URI_aarch64_mkdocs-material = "${EPEL_MIRROR}/aarch64/Packages/m/mkdocs-material-9.7.1-1.el10_2.noarch.rpm;name=aarch64_mkdocs-material;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mkdocs-material}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/m/mkdocs-material-9.7.1-1.el10_2.noarch.rpm;name=aarch64_mkdocs-material;unpack=0"
 SRC_URI[aarch64_mkdocs-material.sha256sum] = "758b041cbb029fe0163ca78e06e943e428811808e681c891b4315e6741641580"
 
-URI_aarch64_mkdocs-material+git = "${EPEL_MIRROR}/aarch64/Packages/m/mkdocs-material+git-9.7.1-1.el10_2.noarch.rpm;name=aarch64_mkdocs-material+git;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mkdocs-material+git}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/m/mkdocs-material+git-9.7.1-1.el10_2.noarch.rpm;name=aarch64_mkdocs-material+git;unpack=0"
 SRC_URI[aarch64_mkdocs-material+git.sha256sum] = "7fdc76f409a53971b6dad373f05d984b0935ec80e978184ac50152b20c22a844"
 
-URI_aarch64_mkdocs-material+imaging = "${EPEL_MIRROR}/aarch64/Packages/m/mkdocs-material+imaging-9.7.1-1.el10_2.noarch.rpm;name=aarch64_mkdocs-material+imaging;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mkdocs-material+imaging}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/m/mkdocs-material+imaging-9.7.1-1.el10_2.noarch.rpm;name=aarch64_mkdocs-material+imaging;unpack=0"
 SRC_URI[aarch64_mkdocs-material+imaging.sha256sum] = "73149b77bea640a4e68cea5aed5a1eed133fd6b1e030524e2dfb807dab6ae2c4"
 
-URI_aarch64_mkdocs-material+recommended = "${EPEL_MIRROR}/aarch64/Packages/m/mkdocs-material+recommended-9.7.1-1.el10_2.noarch.rpm;name=aarch64_mkdocs-material+recommended;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mkdocs-material+recommended}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/m/mkdocs-material+recommended-9.7.1-1.el10_2.noarch.rpm;name=aarch64_mkdocs-material+recommended;unpack=0"
 SRC_URI[aarch64_mkdocs-material+recommended.sha256sum] = "a8ca6e47a2b32f99828fcb21180acb03c933f65fdac62b39cb31ac809183923c"
 
 RDEPENDS:mkdocs-material = " \

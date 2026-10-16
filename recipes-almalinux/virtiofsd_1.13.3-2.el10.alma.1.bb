@@ -9,17 +9,17 @@ PACKAGES = " \
  virtiofsd \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/virtiofsd-1.13.3-2.el10.alma.1.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/virtiofsd-1.13.3-2.el10.alma.1.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "63af70964a6df264d3da297ccd0265a9b05c6c1adbdaef23aba521e3a1220ab7"
 
-URI_x86_64_v2_virtiofsd = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/virtiofsd-1.13.3-2.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_virtiofsd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_virtiofsd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/virtiofsd-1.13.3-2.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_virtiofsd;unpack=0"
 SRC_URI[x86_64_v2_virtiofsd.sha256sum] = "b5d55ad843e7fec4afe8e2f624f00bffaabc6e35aab2cb35842cff1340672a12"
 
-URI_aarch64_virtiofsd = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/virtiofsd-1.13.3-2.el10.alma.1.aarch64.rpm;name=aarch64_virtiofsd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_virtiofsd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/virtiofsd-1.13.3-2.el10.alma.1.aarch64.rpm;name=aarch64_virtiofsd;unpack=0"
 SRC_URI[aarch64_virtiofsd.sha256sum] = "853ac3bb3671dfd99b6ff3149b575feca5bf0b7185ec40c6930eed735682ce89"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/virtiofsd-1.13.3-2.el10.alma.1.riscv64.rpm;name=riscv64_virtiofsd;unpack=0"
+SRC_URI[riscv64_virtiofsd.sha256sum] = "ab44455d03f2c738b2192faad0f2413235c5dea69040bfb0d9513399e951b790"
 
 RDEPENDS:virtiofsd = " \
  glibc \

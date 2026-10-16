@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-hatch-nodejs-version"
 PV = "0.4.0"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-hatch-nodejs-version \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-hatch-nodejs-version \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-hatch-nodejs-version-0.4.0-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-hatch-nodejs-version-0.4.0-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "9c2f30da1d586fce040ea006596a735a8011206001906df91ce972b1042016f3"
 
-URI_x86_64_v2_python3-hatch-nodejs-version = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-hatch-nodejs-version-0.4.0-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-hatch-nodejs-version;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-hatch-nodejs-version}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-hatch-nodejs-version-0.4.0-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-hatch-nodejs-version;unpack=0"
 SRC_URI[x86_64_v2_python3-hatch-nodejs-version.sha256sum] = "2051ad7bf60d5f75fe7f4a0daeaed4e4e31225843f09df22121eb0ea0e567314"
 
-URI_aarch64_python3-hatch-nodejs-version = "${EPEL_MIRROR}/aarch64/Packages/p/python3-hatch-nodejs-version-0.4.0-1.el10_2.noarch.rpm;name=aarch64_python3-hatch-nodejs-version;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-hatch-nodejs-version}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-hatch-nodejs-version-0.4.0-1.el10_2.noarch.rpm;name=aarch64_python3-hatch-nodejs-version;unpack=0"
 SRC_URI[aarch64_python3-hatch-nodejs-version.sha256sum] = "830d73df73e04b7205034411931ba0e5bf073e8b692646ddf5e5db1183065e19"
 
 RDEPENDS:python3-hatch-nodejs-version = " \

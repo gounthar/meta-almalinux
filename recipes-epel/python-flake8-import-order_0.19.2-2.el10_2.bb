@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-flake8-import-order"
 PV = "0.19.2"
 PR = "2.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-flake8-import-order \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-flake8-import-order \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-flake8-import-order-0.19.2-2.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-flake8-import-order-0.19.2-2.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "ec6e919f95266762ab7fdf21dd697469b1b580453ec27bbd14696eddcc896d9a"
 
-URI_x86_64_v2_python3-flake8-import-order = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-flake8-import-order-0.19.2-2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-flake8-import-order;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-flake8-import-order}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-flake8-import-order-0.19.2-2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-flake8-import-order;unpack=0"
 SRC_URI[x86_64_v2_python3-flake8-import-order.sha256sum] = "49666a5094580d12239c466d8784c476ecf84e70b7f82196759686894b8e16a2"
 
-URI_aarch64_python3-flake8-import-order = "${EPEL_MIRROR}/aarch64/Packages/p/python3-flake8-import-order-0.19.2-2.el10_2.noarch.rpm;name=aarch64_python3-flake8-import-order;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-flake8-import-order}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-flake8-import-order-0.19.2-2.el10_2.noarch.rpm;name=aarch64_python3-flake8-import-order;unpack=0"
 SRC_URI[aarch64_python3-flake8-import-order.sha256sum] = "a5fbba25bb426348a73bd019acc5df067dad9f3bd14cff36d0dec3a76b0cefcf"
 
 RDEPENDS:python3-flake8-import-order = " \

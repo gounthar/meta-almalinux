@@ -11,40 +11,55 @@ PACKAGES = " \
  qt6-qtwebchannel-examples \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtwebchannel-6.10.1-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtwebchannel-6.10.1-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7838e955bbba70a886f13dfdbe68fe9e4077dd10b80d2a6c7e480f8c9a252b67"
 
-URI_x86_64_v2_qt6-qtwebchannel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtwebchannel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtwebchannel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtwebchannel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtwebchannel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtwebchannel;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtwebchannel.sha256sum] = "37da7731a324ffa2e731bf4e598b3db9460a14275057e37a85191cb1d2dea9ef"
 
-URI_x86_64_v2_qt6-qtwebchannel-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtwebchannel-devel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtwebchannel-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtwebchannel-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtwebchannel-devel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtwebchannel-devel;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtwebchannel-devel.sha256sum] = "ae459c7b0d17f6bd25c76f1571f08e245aade1ed0265f11e1a2463edc13ab75d"
 
-URI_x86_64_v2_qt6-qtwebchannel-examples = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtwebchannel-examples-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtwebchannel-examples;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtwebchannel-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtwebchannel-examples-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtwebchannel-examples;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtwebchannel-examples.sha256sum] = "659de8ac209ccb881d6dccce418cc0240fe223fd337cc6012f91974640fe0cbe"
 
-URI_aarch64_qt6-qtwebchannel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtwebchannel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtwebchannel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtwebchannel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtwebchannel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtwebchannel;unpack=0"
 SRC_URI[aarch64_qt6-qtwebchannel.sha256sum] = "7fc53c13c4c32ad69d9c849724b0dbde2312e15d30db27f98af6d064fa2984ed"
 
-URI_aarch64_qt6-qtwebchannel-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtwebchannel-devel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtwebchannel-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtwebchannel-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtwebchannel-devel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtwebchannel-devel;unpack=0"
 SRC_URI[aarch64_qt6-qtwebchannel-devel.sha256sum] = "b08773c18125f87e24d2afb76a08326173a9548d6193490254e10034eab8548d"
 
-URI_aarch64_qt6-qtwebchannel-examples = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtwebchannel-examples-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtwebchannel-examples;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtwebchannel-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtwebchannel-examples-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtwebchannel-examples;unpack=0"
 SRC_URI[aarch64_qt6-qtwebchannel-examples.sha256sum] = "0aa51225cefd0651f3902f1649bac20f4f94eb7a045db65c6f2c3b3a3ddd04d4"
 
-RDEPENDS:qt6-qtwebchannel = " \
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtwebchannel-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtwebchannel;unpack=0"
+SRC_URI[riscv64_qt6-qtwebchannel.sha256sum] = "43c8783751728e1b3059010fe653a0d6128d90d65101743095d531f8492836f4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtwebchannel-devel-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtwebchannel-devel;unpack=0"
+SRC_URI[riscv64_qt6-qtwebchannel-devel.sha256sum] = "133ce82d112852442229c56de672d6d7ba84e4f9118ae29adec5e5a2f7b60cab"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/qt6-qtwebchannel-examples-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtwebchannel-examples;unpack=0"
+SRC_URI[riscv64_qt6-qtwebchannel-examples.sha256sum] = "f3501cc7e6e4ab5fdc98b24e29872b8096cca4ed60eb218672e0ac91172f2bfc"
+
+RDEPENDS:qt6-qtwebchannel:x86_64_v2 = " \
  glibc \
  libstdc++ \
  qt6-qtbase \
  qt6-qtdeclarative \
- "
+"
+RDEPENDS:qt6-qtwebchannel:aarch64 = " \
+ glibc \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtdeclarative \
+"
+RDEPENDS:qt6-qtwebchannel:riscv64 = " \
+ glibc \
+ libgcc \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtdeclarative \
+"
 RDEPENDS:qt6-qtwebchannel-devel = " \
  cmake-filesystem \
  pkgconf-pkg-config \

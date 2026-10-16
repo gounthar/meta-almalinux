@@ -11,33 +11,35 @@ PACKAGES = " \
  procps-ng-i18n \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/procps-ng-4.0.4-13.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/procps-ng-4.0.4-13.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8bbaa02c7704ae6c41d18d1907ee0e9fca73c49d0df4de70cab7a1e149ba8033"
 
-URI_x86_64_v2_procps-ng = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/procps-ng-4.0.4-13.el10.x86_64_v2.rpm;name=x86_64_v2_procps-ng;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_procps-ng}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/procps-ng-4.0.4-13.el10.x86_64_v2.rpm;name=x86_64_v2_procps-ng;unpack=0"
 SRC_URI[x86_64_v2_procps-ng.sha256sum] = "8791d3baf2b55abe6272fc10c34ab89e5a04f8ffb6d52c190be00454f237aa15"
 
-URI_x86_64_v2_procps-ng-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/procps-ng-devel-4.0.4-13.el10.x86_64_v2.rpm;name=x86_64_v2_procps-ng-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_procps-ng-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/procps-ng-devel-4.0.4-13.el10.x86_64_v2.rpm;name=x86_64_v2_procps-ng-devel;unpack=0"
 SRC_URI[x86_64_v2_procps-ng-devel.sha256sum] = "e57da9ce9c0bc47ef6d8aca8f1cd1f0e567653ee4ee08b662b496f8f43a098ca"
 
-URI_x86_64_v2_procps-ng-i18n = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/procps-ng-i18n-4.0.4-13.el10.noarch.rpm;name=x86_64_v2_procps-ng-i18n;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_procps-ng-i18n}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/procps-ng-i18n-4.0.4-13.el10.noarch.rpm;name=x86_64_v2_procps-ng-i18n;unpack=0"
 SRC_URI[x86_64_v2_procps-ng-i18n.sha256sum] = "d8571899c3d53d2f2c7f9845662d61191c70b5c4a25f4f54ab54300cd68903ab"
 
-URI_aarch64_procps-ng = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/procps-ng-4.0.4-13.el10.aarch64.rpm;name=aarch64_procps-ng;unpack=0"
-SRC_URI:append = " ${URI_aarch64_procps-ng}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/procps-ng-4.0.4-13.el10.aarch64.rpm;name=aarch64_procps-ng;unpack=0"
 SRC_URI[aarch64_procps-ng.sha256sum] = "e35b166fd5c18352c18142015b380f73c17934a5c40d0a0354d575d95e79383e"
 
-URI_aarch64_procps-ng-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/procps-ng-devel-4.0.4-13.el10.aarch64.rpm;name=aarch64_procps-ng-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_procps-ng-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/procps-ng-devel-4.0.4-13.el10.aarch64.rpm;name=aarch64_procps-ng-devel;unpack=0"
 SRC_URI[aarch64_procps-ng-devel.sha256sum] = "e9b82661e86aae81a18500fb7657b4ed48be748f69b8f87220c23944969f0003"
 
-URI_aarch64_procps-ng-i18n = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/procps-ng-i18n-4.0.4-13.el10.noarch.rpm;name=aarch64_procps-ng-i18n;unpack=0"
-SRC_URI:append = " ${URI_aarch64_procps-ng-i18n}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/procps-ng-i18n-4.0.4-13.el10.noarch.rpm;name=aarch64_procps-ng-i18n;unpack=0"
 SRC_URI[aarch64_procps-ng-i18n.sha256sum] = "d8571899c3d53d2f2c7f9845662d61191c70b5c4a25f4f54ab54300cd68903ab"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/procps-ng-4.0.4-13.el10.riscv64.rpm;name=riscv64_procps-ng;unpack=0"
+SRC_URI[riscv64_procps-ng.sha256sum] = "83c28b1db1bcd0bf24eecbc74aa8e3e8804eafdc7c8d20dfd0ff2362717f138a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/procps-ng-devel-4.0.4-13.el10.riscv64.rpm;name=riscv64_procps-ng-devel;unpack=0"
+SRC_URI[riscv64_procps-ng-devel.sha256sum] = "35123d5f110f9cfe56f0b76bc76770def1dbe59bc6e55a5c6642c3993bdcffb2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/procps-ng-i18n-4.0.4-13.el10.noarch.rpm;name=riscv64_procps-ng-i18n;unpack=0"
+SRC_URI[riscv64_procps-ng-i18n.sha256sum] = "d8571899c3d53d2f2c7f9845662d61191c70b5c4a25f4f54ab54300cd68903ab"
 
 RDEPENDS:procps-ng = " \
  glibc \

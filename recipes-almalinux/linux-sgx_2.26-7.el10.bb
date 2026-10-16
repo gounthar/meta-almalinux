@@ -17,37 +17,32 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/linux-sgx-2.26-7.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/linux-sgx-2.26-7.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "319c6ffa7c8d878e9c8f18ff6611111d743b33f6d46f9acf5302c2610ede89e1"
 
-URI_x86_64_v2_sgx-common = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sgx-common-2.26-7.el10.x86_64_v2.rpm;name=x86_64_v2_sgx-common;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_sgx-common}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sgx-common-2.26-7.el10.x86_64_v2.rpm;name=x86_64_v2_sgx-common;unpack=0"
 SRC_URI[x86_64_v2_sgx-common.sha256sum] = "a6c8ff6d31a7434ffbda39111e674f59bdcd90744d391791e914bd13b7bfb604"
 
-URI_x86_64_v2_sgx-libs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sgx-libs-2.26-7.el10.x86_64_v2.rpm;name=x86_64_v2_sgx-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_sgx-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sgx-libs-2.26-7.el10.x86_64_v2.rpm;name=x86_64_v2_sgx-libs;unpack=0"
 SRC_URI[x86_64_v2_sgx-libs.sha256sum] = "ddd4911be5f27fc98c0a5ca95cd4ba576832bf4a656c1fcc6c4fd4e96cb8dc8a"
 
-URI_x86_64_v2_sgx-mpa = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sgx-mpa-2.26-7.el10.x86_64_v2.rpm;name=x86_64_v2_sgx-mpa;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_sgx-mpa}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sgx-mpa-2.26-7.el10.x86_64_v2.rpm;name=x86_64_v2_sgx-mpa;unpack=0"
 SRC_URI[x86_64_v2_sgx-mpa.sha256sum] = "1c22afa2a9ee591866f41c95e39ab437b2a13a7db665ef858f25e9b1a4a15ba8"
 
-URI_x86_64_v2_sgx-pccs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sgx-pccs-2.26-7.el10.x86_64_v2.rpm;name=x86_64_v2_sgx-pccs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_sgx-pccs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sgx-pccs-2.26-7.el10.x86_64_v2.rpm;name=x86_64_v2_sgx-pccs;unpack=0"
 SRC_URI[x86_64_v2_sgx-pccs.sha256sum] = "1f6928b14ed3007ec89cbc729488c679aa89b45513ed8a64d6b1ae2f9b0d9b05"
 
-URI_x86_64_v2_sgx-pccs-admin = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sgx-pccs-admin-2.26-7.el10.x86_64_v2.rpm;name=x86_64_v2_sgx-pccs-admin;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_sgx-pccs-admin}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sgx-pccs-admin-2.26-7.el10.x86_64_v2.rpm;name=x86_64_v2_sgx-pccs-admin;unpack=0"
 SRC_URI[x86_64_v2_sgx-pccs-admin.sha256sum] = "aea7f286c261ab240e8a0905aa4df4ed381b43e44fb5b67bca646f8f55de3c9b"
 
-URI_x86_64_v2_sgx-pckid-tool = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sgx-pckid-tool-2.26-7.el10.x86_64_v2.rpm;name=x86_64_v2_sgx-pckid-tool;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_sgx-pckid-tool}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sgx-pckid-tool-2.26-7.el10.x86_64_v2.rpm;name=x86_64_v2_sgx-pckid-tool;unpack=0"
 SRC_URI[x86_64_v2_sgx-pckid-tool.sha256sum] = "89bbc3240415a952813ab1618e6b59455a441fbf9edf1ee1f6ca17778febe42b"
 
-URI_x86_64_v2_tdx-qgs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/tdx-qgs-2.26-7.el10.x86_64_v2.rpm;name=x86_64_v2_tdx-qgs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_tdx-qgs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/tdx-qgs-2.26-7.el10.x86_64_v2.rpm;name=x86_64_v2_tdx-qgs;unpack=0"
 SRC_URI[x86_64_v2_tdx-qgs.sha256sum] = "06ebc0db065ae5cfabe6a8d4c97678ca0b96193979f200ab44866a978580d777"
 
 RDEPENDS:sgx-common = " \

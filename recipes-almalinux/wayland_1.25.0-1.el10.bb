@@ -13,49 +13,53 @@ PACKAGES = " \
  wayland-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/wayland-1.25.0-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/wayland-1.25.0-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "0d7dff8666167ef142ac2f1920e38630ba00b6c08c4d33c8cbfbd2f83b5b2ef5"
 
-URI_x86_64_v2_libwayland-client = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libwayland-client-1.25.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libwayland-client;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libwayland-client}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libwayland-client-1.25.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libwayland-client;unpack=0"
 SRC_URI[x86_64_v2_libwayland-client.sha256sum] = "3d1446ceb410c1cc3f3cbe48df361c13e13aacdabb8fbc665127f493861de130"
 
-URI_x86_64_v2_libwayland-cursor = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libwayland-cursor-1.25.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libwayland-cursor;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libwayland-cursor}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libwayland-cursor-1.25.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libwayland-cursor;unpack=0"
 SRC_URI[x86_64_v2_libwayland-cursor.sha256sum] = "1ad59a3ad4d04f514e6fa20d81d16f6d4180fd7cd1eb9065698f228a0424d544"
 
-URI_x86_64_v2_libwayland-egl = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libwayland-egl-1.25.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libwayland-egl;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libwayland-egl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libwayland-egl-1.25.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libwayland-egl;unpack=0"
 SRC_URI[x86_64_v2_libwayland-egl.sha256sum] = "cfa00c9892d17a217af0d8fe5dff7c2f20b7f75bc9ce4f55ec58f235f20a8952"
 
-URI_x86_64_v2_libwayland-server = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libwayland-server-1.25.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libwayland-server;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libwayland-server}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libwayland-server-1.25.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libwayland-server;unpack=0"
 SRC_URI[x86_64_v2_libwayland-server.sha256sum] = "8eb48b7a892d2fdae9f4f5816fa370bc70add94b56dae96f57a13aa420ececce"
 
-URI_x86_64_v2_wayland-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/wayland-devel-1.25.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_wayland-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_wayland-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/wayland-devel-1.25.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_wayland-devel;unpack=0"
 SRC_URI[x86_64_v2_wayland-devel.sha256sum] = "145de96a68e889f41444139baf319c6990e4ada668c876b8b6a5a492336401cf"
 
-URI_aarch64_libwayland-client = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libwayland-client-1.25.0-1.el10.aarch64.rpm;name=aarch64_libwayland-client;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libwayland-client}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libwayland-client-1.25.0-1.el10.aarch64.rpm;name=aarch64_libwayland-client;unpack=0"
 SRC_URI[aarch64_libwayland-client.sha256sum] = "cefdf943dbb94540ec8615dc3f26e81e5dab6fa42468faa56e3ed24f12efc77d"
 
-URI_aarch64_libwayland-cursor = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libwayland-cursor-1.25.0-1.el10.aarch64.rpm;name=aarch64_libwayland-cursor;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libwayland-cursor}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libwayland-cursor-1.25.0-1.el10.aarch64.rpm;name=aarch64_libwayland-cursor;unpack=0"
 SRC_URI[aarch64_libwayland-cursor.sha256sum] = "d37c0ad96bc86adee82308d76457ca77483efa061131cff02897f90213a7ab70"
 
-URI_aarch64_libwayland-egl = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libwayland-egl-1.25.0-1.el10.aarch64.rpm;name=aarch64_libwayland-egl;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libwayland-egl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libwayland-egl-1.25.0-1.el10.aarch64.rpm;name=aarch64_libwayland-egl;unpack=0"
 SRC_URI[aarch64_libwayland-egl.sha256sum] = "71f1cbc4af1ba3732c03e5ac0068f851218c8fe57dcb9ef8dfb9e73347564949"
 
-URI_aarch64_libwayland-server = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libwayland-server-1.25.0-1.el10.aarch64.rpm;name=aarch64_libwayland-server;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libwayland-server}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libwayland-server-1.25.0-1.el10.aarch64.rpm;name=aarch64_libwayland-server;unpack=0"
 SRC_URI[aarch64_libwayland-server.sha256sum] = "a6e6acfccd3aa7f65dfd1e1d37e41153852f96c3d184fc2af813de088944400d"
 
-URI_aarch64_wayland-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/wayland-devel-1.25.0-1.el10.aarch64.rpm;name=aarch64_wayland-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_wayland-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/wayland-devel-1.25.0-1.el10.aarch64.rpm;name=aarch64_wayland-devel;unpack=0"
 SRC_URI[aarch64_wayland-devel.sha256sum] = "c5c14e799efe83344cec9f1d7b64d003e273a898cead6a4b5a1cd3b37326973d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libwayland-client-1.25.0-1.el10.riscv64.rpm;name=riscv64_libwayland-client;unpack=0"
+SRC_URI[riscv64_libwayland-client.sha256sum] = "24db4ef1ea69eaf8f789b88940cdcda11db9efe2e17a924b847fda779aca481c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libwayland-cursor-1.25.0-1.el10.riscv64.rpm;name=riscv64_libwayland-cursor;unpack=0"
+SRC_URI[riscv64_libwayland-cursor.sha256sum] = "051cbfbd19e874143a353f8ee038a26a961403fbd479890b6ba0ed43801ec25a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libwayland-egl-1.25.0-1.el10.riscv64.rpm;name=riscv64_libwayland-egl;unpack=0"
+SRC_URI[riscv64_libwayland-egl.sha256sum] = "5ada266ccc80a04529552ed8b3cec1ce8852a84c01e55fbf59dabc660cc6bca8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libwayland-server-1.25.0-1.el10.riscv64.rpm;name=riscv64_libwayland-server;unpack=0"
+SRC_URI[riscv64_libwayland-server.sha256sum] = "f6961b904fa824321f75633289bf28753f01c1532aef1df3e68eb8dc4af33609"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/wayland-devel-1.25.0-1.el10.riscv64.rpm;name=riscv64_wayland-devel;unpack=0"
+SRC_URI[riscv64_wayland-devel.sha256sum] = "1a48c3521fe7db8d83bb396b58f5b088fab3d507b0c32dfa6127bb286c24c3de"
 
 RDEPENDS:libwayland-client = " \
  glibc \

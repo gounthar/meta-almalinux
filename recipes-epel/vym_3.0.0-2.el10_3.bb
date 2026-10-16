@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "vym"
 PV = "3.0.0"
 PR = "2.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  vym \
- "
+"
+PACKAGES:aarch64 = " \
+ vym \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/v/vym-3.0.0-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/v/vym-3.0.0-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c817cca4ecb53f1194fc30362181b324cc903b509c2b419b017c6776c9751d9e"
 
-URI_x86_64_v2_vym = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/vym-3.0.0-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_vym;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_vym}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/vym-3.0.0-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_vym;unpack=0"
 SRC_URI[x86_64_v2_vym.sha256sum] = "dab25d36c11ae5ee7613e32006ad955a6fa597d040978d4f012cb96806d5e45e"
 
-URI_aarch64_vym = "${EPEL_MIRROR}/aarch64/Packages/v/vym-3.0.0-2.el10_3.aarch64.rpm;name=aarch64_vym;unpack=0"
-SRC_URI:append = " ${URI_aarch64_vym}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/v/vym-3.0.0-2.el10_3.aarch64.rpm;name=aarch64_vym;unpack=0"
 SRC_URI[aarch64_vym.sha256sum] = "690d856da00a811cf19f1576e257b7ca66ae03ddc554ef0b29e4a925d62ecd83"
 
 RDEPENDS:vym = " \

@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-BZ-Client"
 PV = "4.9100"
 PR = "2.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-BZ-Client \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-BZ-Client \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-BZ-Client-4.9100-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-BZ-Client-4.9100-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d43336fb3bdd8b7742ec364f1bcbcdbca2d62648fbbd6329acc0c5c98c9a45cc"
 
-URI_x86_64_v2_perl-BZ-Client = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-BZ-Client-4.9100-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-BZ-Client;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-BZ-Client}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-BZ-Client-4.9100-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-BZ-Client;unpack=0"
 SRC_URI[x86_64_v2_perl-BZ-Client.sha256sum] = "9c8a2c1fb42b56d0003a852fc518c5000fe3b49631af23c0d6583e8414ac40db"
 
-URI_aarch64_perl-BZ-Client = "${EPEL_MIRROR}/aarch64/Packages/p/perl-BZ-Client-4.9100-2.el10_3.noarch.rpm;name=aarch64_perl-BZ-Client;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-BZ-Client}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-BZ-Client-4.9100-2.el10_3.noarch.rpm;name=aarch64_perl-BZ-Client;unpack=0"
 SRC_URI[aarch64_perl-BZ-Client.sha256sum] = "7900148cdd2725f3ba034fc87139b271b69ef6ca2cd8dbe141a27fbdd1dc3a27"
 
 RDEPENDS:perl-BZ-Client = " \

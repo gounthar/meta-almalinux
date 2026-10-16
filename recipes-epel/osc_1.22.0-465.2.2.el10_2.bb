@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "osc"
 PV = "1.22.0"
 PR = "465.2.2.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  osc \
- "
+"
+PACKAGES:aarch64 = " \
+ osc \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/o/osc-1.22.0-465.2.2.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/o/osc-1.22.0-465.2.2.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c9573a66a17cd81e18d89fa92eb5dd710c976668d3d62fb694011b20202f03ef"
 
-URI_x86_64_v2_osc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/osc-1.22.0-465.2.2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_osc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_osc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/osc-1.22.0-465.2.2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_osc;unpack=0"
 SRC_URI[x86_64_v2_osc.sha256sum] = "0185d71004dfa3087cbb67b782d7a3ab2dbfea4febaab07036756e54557d0b49"
 
-URI_aarch64_osc = "${EPEL_MIRROR}/aarch64/Packages/o/osc-1.22.0-465.2.2.el10_2.noarch.rpm;name=aarch64_osc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_osc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/o/osc-1.22.0-465.2.2.el10_2.noarch.rpm;name=aarch64_osc;unpack=0"
 SRC_URI[aarch64_osc.sha256sum] = "7e42ccec2129b95be3ee3a0a04ebf4d7ee71087f35598b4031b6e9bacdee5d69"
 
 RDEPENDS:osc = " \

@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "akmods"
 PV = "0.6.2"
 PR = "3.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  akmods \
- "
+"
+PACKAGES:aarch64 = " \
+ akmods \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/a/akmods-0.6.2-3.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/a/akmods-0.6.2-3.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "daab9d6f5fafc316a6d3b80630bbfbf42ef9230518ec43360827072b5df00fbd"
 
-URI_x86_64_v2_akmods = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/akmods-0.6.2-3.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_akmods;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_akmods}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/akmods-0.6.2-3.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_akmods;unpack=0"
 SRC_URI[x86_64_v2_akmods.sha256sum] = "117aef7ead849ddf0618bf92e198f2a4180eb56c1e4c6f52fad510d989b044ff"
 
-URI_aarch64_akmods = "${EPEL_MIRROR}/aarch64/Packages/a/akmods-0.6.2-3.el10_2.noarch.rpm;name=aarch64_akmods;unpack=0"
-SRC_URI:append = " ${URI_aarch64_akmods}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/a/akmods-0.6.2-3.el10_2.noarch.rpm;name=aarch64_akmods;unpack=0"
 SRC_URI[aarch64_akmods.sha256sum] = "a5b0dc7dc6e6b5f8c200a01edb65908601a5bcedfef37029c7e1d0b5686f54ca"
 
 RDEPENDS:akmods = " \

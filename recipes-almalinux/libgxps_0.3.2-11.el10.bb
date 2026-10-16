@@ -11,33 +11,35 @@ PACKAGES = " \
  libgxps-tools \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libgxps-0.3.2-11.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libgxps-0.3.2-11.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "2532655b52e3c93ef0ee68a203092a205a09895eb01f6a40171b12dfe4680460"
 
-URI_x86_64_v2_libgxps = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libgxps-0.3.2-11.el10.x86_64_v2.rpm;name=x86_64_v2_libgxps;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libgxps}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libgxps-0.3.2-11.el10.x86_64_v2.rpm;name=x86_64_v2_libgxps;unpack=0"
 SRC_URI[x86_64_v2_libgxps.sha256sum] = "126c0ae7d3db105a9e8f1996717d25c72e4c66215f8e5af2d65e7d21d62b284e"
 
-URI_x86_64_v2_libgxps-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libgxps-devel-0.3.2-11.el10.x86_64_v2.rpm;name=x86_64_v2_libgxps-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libgxps-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libgxps-devel-0.3.2-11.el10.x86_64_v2.rpm;name=x86_64_v2_libgxps-devel;unpack=0"
 SRC_URI[x86_64_v2_libgxps-devel.sha256sum] = "5aad4a703becb01902b2fdb178033bcd97deece440d3bf64158c2a847c180b45"
 
-URI_x86_64_v2_libgxps-tools = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libgxps-tools-0.3.2-11.el10.x86_64_v2.rpm;name=x86_64_v2_libgxps-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libgxps-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libgxps-tools-0.3.2-11.el10.x86_64_v2.rpm;name=x86_64_v2_libgxps-tools;unpack=0"
 SRC_URI[x86_64_v2_libgxps-tools.sha256sum] = "1fc627a16682c63bcf05b4d76f7c64199b5c25d3254b71e9bc91b1e37f7178b7"
 
-URI_aarch64_libgxps = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libgxps-0.3.2-11.el10.aarch64.rpm;name=aarch64_libgxps;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libgxps}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libgxps-0.3.2-11.el10.aarch64.rpm;name=aarch64_libgxps;unpack=0"
 SRC_URI[aarch64_libgxps.sha256sum] = "1e5e57d871a473e9e68045912a62a8a839b578ff4d3ad419827ea26f8e25cc52"
 
-URI_aarch64_libgxps-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libgxps-devel-0.3.2-11.el10.aarch64.rpm;name=aarch64_libgxps-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libgxps-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libgxps-devel-0.3.2-11.el10.aarch64.rpm;name=aarch64_libgxps-devel;unpack=0"
 SRC_URI[aarch64_libgxps-devel.sha256sum] = "e7fb84815d1af5b535c81ea07b34bc0c9f27eff3f2769064512f59bcd91821b1"
 
-URI_aarch64_libgxps-tools = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libgxps-tools-0.3.2-11.el10.aarch64.rpm;name=aarch64_libgxps-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libgxps-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libgxps-tools-0.3.2-11.el10.aarch64.rpm;name=aarch64_libgxps-tools;unpack=0"
 SRC_URI[aarch64_libgxps-tools.sha256sum] = "eedb0b16a856a3d8cb419edd0755255d2b57ccd9845ee05d832e1e3dd580ac82"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libgxps-0.3.2-11.el10.riscv64.rpm;name=riscv64_libgxps;unpack=0"
+SRC_URI[riscv64_libgxps.sha256sum] = "cfb70865b870b9225f62d5a5237335ebbf1eda06ae375de020b87c68769ee358"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libgxps-devel-0.3.2-11.el10.riscv64.rpm;name=riscv64_libgxps-devel;unpack=0"
+SRC_URI[riscv64_libgxps-devel.sha256sum] = "88efe475a042f24d9864b31bb839df4d3335a3a408955b2a7ddbf8d90f9e262e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libgxps-tools-0.3.2-11.el10.riscv64.rpm;name=riscv64_libgxps-tools;unpack=0"
+SRC_URI[riscv64_libgxps-tools.sha256sum] = "690914b45e9b34aa3324c00797925633e9fed3df479aec6e942bf88ee2d868b7"
 
 RDEPENDS:libgxps = " \
  cairo \

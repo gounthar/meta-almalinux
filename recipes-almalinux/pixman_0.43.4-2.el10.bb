@@ -10,25 +10,26 @@ PACKAGES = " \
  pixman-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/pixman-0.43.4-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/pixman-0.43.4-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "10d81f5c9438a5b1d68e2968ec6a7a32ad427f8133f73f07425d899661b55ac9"
 
-URI_x86_64_v2_pixman = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/pixman-0.43.4-2.el10.x86_64_v2.rpm;name=x86_64_v2_pixman;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pixman}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/pixman-0.43.4-2.el10.x86_64_v2.rpm;name=x86_64_v2_pixman;unpack=0"
 SRC_URI[x86_64_v2_pixman.sha256sum] = "dd8f71b80dd5f5d995fe3082ff82bf24b1e621f4613b2bccab949294a1d58a25"
 
-URI_x86_64_v2_pixman-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/pixman-devel-0.43.4-2.el10.x86_64_v2.rpm;name=x86_64_v2_pixman-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pixman-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/pixman-devel-0.43.4-2.el10.x86_64_v2.rpm;name=x86_64_v2_pixman-devel;unpack=0"
 SRC_URI[x86_64_v2_pixman-devel.sha256sum] = "91f17b9bc7d9701a196ec95a1e10f3a30f77387fa54e08914433122c54e10777"
 
-URI_aarch64_pixman = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/pixman-0.43.4-2.el10.aarch64.rpm;name=aarch64_pixman;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pixman}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/pixman-0.43.4-2.el10.aarch64.rpm;name=aarch64_pixman;unpack=0"
 SRC_URI[aarch64_pixman.sha256sum] = "d1f06cde35b758f64e32085cfe156bbfaaf2e0527a8a20f889355dd5255280ef"
 
-URI_aarch64_pixman-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/pixman-devel-0.43.4-2.el10.aarch64.rpm;name=aarch64_pixman-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pixman-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/pixman-devel-0.43.4-2.el10.aarch64.rpm;name=aarch64_pixman-devel;unpack=0"
 SRC_URI[aarch64_pixman-devel.sha256sum] = "9ade2d808df98dac7fb3b7d3752c4b5d289b7cb8d7ceb5f5ffdbabf9f11154ae"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/pixman-0.43.4-2.el10.riscv64.rpm;name=riscv64_pixman;unpack=0"
+SRC_URI[riscv64_pixman.sha256sum] = "a0dcf255fd38f8484560a16af69d839e89168160e975ca6e1cdaa72d01d0a1b3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/pixman-devel-0.43.4-2.el10.riscv64.rpm;name=riscv64_pixman-devel;unpack=0"
+SRC_URI[riscv64_pixman-devel.sha256sum] = "e76e484d8d4b0b3b20f526db1cc847ebc8039751bce6b6575ae2c8ceeec10329"
 
 RDEPENDS:pixman = " \
  glibc \

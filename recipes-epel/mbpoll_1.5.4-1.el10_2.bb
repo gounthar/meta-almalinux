@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "mbpoll"
 PV = "1.5.4"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  mbpoll \
- "
+"
+PACKAGES:aarch64 = " \
+ mbpoll \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/m/mbpoll-1.5.4-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/m/mbpoll-1.5.4-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f1e86f3788257bb6f0be940424c728e155207920993fb460215155e9c67b03ae"
 
-URI_x86_64_v2_mbpoll = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/mbpoll-1.5.4-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_mbpoll;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mbpoll}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/mbpoll-1.5.4-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_mbpoll;unpack=0"
 SRC_URI[x86_64_v2_mbpoll.sha256sum] = "c26874952c3bf62de7ea1990b9edda526fb2b9bb70cc937df48bfdcea4c3d5f4"
 
-URI_aarch64_mbpoll = "${EPEL_MIRROR}/aarch64/Packages/m/mbpoll-1.5.4-1.el10_2.aarch64.rpm;name=aarch64_mbpoll;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mbpoll}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/m/mbpoll-1.5.4-1.el10_2.aarch64.rpm;name=aarch64_mbpoll;unpack=0"
 SRC_URI[aarch64_mbpoll.sha256sum] = "c2cf5bd7d7261b2711fc8fcef37bf6853e1a6116fb04259c5950993067b6f72a"
 
 RDEPENDS:mbpoll = " \

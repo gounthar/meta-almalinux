@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "mpv"
 PV = "0.40.0"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  mpv \
  mpv-devel \
  mpv-libs \
- "
+"
+PACKAGES:aarch64 = " \
+ mpv \
+ mpv-devel \
+ mpv-libs \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/m/mpv-0.40.0-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/m/mpv-0.40.0-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e7725dafb87c249d3c06453e6d5f7a9c6d62874af9f07cdaaa770d4dbee83b4d"
 
-URI_x86_64_v2_mpv = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/mpv-0.40.0-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_mpv;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mpv}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/mpv-0.40.0-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_mpv;unpack=0"
 SRC_URI[x86_64_v2_mpv.sha256sum] = "8b3aff9d8231d5b5abfa74f4b0744f545ea336a051088045c6496704cef91f21"
 
-URI_x86_64_v2_mpv-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/mpv-devel-0.40.0-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_mpv-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mpv-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/mpv-devel-0.40.0-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_mpv-devel;unpack=0"
 SRC_URI[x86_64_v2_mpv-devel.sha256sum] = "290aa96a0497d593641bc3dacf3004982ff0db426c49a1af2676752be3ce49d9"
 
-URI_x86_64_v2_mpv-libs = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/mpv-libs-0.40.0-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_mpv-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mpv-libs}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/mpv-libs-0.40.0-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_mpv-libs;unpack=0"
 SRC_URI[x86_64_v2_mpv-libs.sha256sum] = "b3fa9ebfce3575e3fed82411417e10e1109e4bed561afff1bdf3d8772eb42ae3"
 
-URI_aarch64_mpv = "${EPEL_MIRROR}/aarch64/Packages/m/mpv-0.40.0-1.el10_2.aarch64.rpm;name=aarch64_mpv;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mpv}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/m/mpv-0.40.0-1.el10_2.aarch64.rpm;name=aarch64_mpv;unpack=0"
 SRC_URI[aarch64_mpv.sha256sum] = "32eac41c5381a1e35e95e3b5d56413faaeebd37c440ba6a8b1deab9bcb9d8b92"
 
-URI_aarch64_mpv-devel = "${EPEL_MIRROR}/aarch64/Packages/m/mpv-devel-0.40.0-1.el10_2.aarch64.rpm;name=aarch64_mpv-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mpv-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/m/mpv-devel-0.40.0-1.el10_2.aarch64.rpm;name=aarch64_mpv-devel;unpack=0"
 SRC_URI[aarch64_mpv-devel.sha256sum] = "f2c1f27847520690a6132b50e1d5aefed58d7e77885388333b2394cb2a5c27c2"
 
-URI_aarch64_mpv-libs = "${EPEL_MIRROR}/aarch64/Packages/m/mpv-libs-0.40.0-1.el10_2.aarch64.rpm;name=aarch64_mpv-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mpv-libs}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/m/mpv-libs-0.40.0-1.el10_2.aarch64.rpm;name=aarch64_mpv-libs;unpack=0"
 SRC_URI[aarch64_mpv-libs.sha256sum] = "33c2ebc168635d5be3b7046d56b7fad6bef8f0e635ab2cc8c2d1bae406b7f827"
 
 RDEPENDS:mpv = " \

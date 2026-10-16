@@ -10,29 +10,30 @@ PACKAGES = " \
  geos-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/geos-3.13.1-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/geos-3.13.1-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "afc411aaab1d3ce0d243427cc978e17ded8303cd06d173aa6b74fa2afa09ef3d"
 
 ## Requires (x86_64_v2) that were seen as not satisfiable in original repo:
 # - geos-devel: libgeos.so.3.13.1()(64bit)
 # - geos-devel: libgeos_c.so.1()(64bit)
 
-URI_x86_64_v2_geos = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/geos-3.13.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_geos;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_geos}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/geos-3.13.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_geos;unpack=0"
 SRC_URI[x86_64_v2_geos.sha256sum] = "b28cd3d911b27b455f968f949ce070f95505ae5baff71d10ac6740a97b37c22e"
 
-URI_x86_64_v2_geos-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/geos-devel-3.13.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_geos-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_geos-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/geos-devel-3.13.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_geos-devel;unpack=0"
 SRC_URI[x86_64_v2_geos-devel.sha256sum] = "bb596e9af18a91d249a81846267a269e792878c83a9e2b753f1103e973e8676c"
 
-URI_aarch64_geos = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/geos-3.13.1-1.el10.aarch64.rpm;name=aarch64_geos;unpack=0"
-SRC_URI:append = " ${URI_aarch64_geos}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/geos-3.13.1-1.el10.aarch64.rpm;name=aarch64_geos;unpack=0"
 SRC_URI[aarch64_geos.sha256sum] = "a6699210972bf1092a3497a67c4d88b71f76f45ce6780fc58eaf4f0befd7e2da"
 
-URI_aarch64_geos-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/geos-devel-3.13.1-1.el10.aarch64.rpm;name=aarch64_geos-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_geos-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/geos-devel-3.13.1-1.el10.aarch64.rpm;name=aarch64_geos-devel;unpack=0"
 SRC_URI[aarch64_geos-devel.sha256sum] = "ca4ca9b95b6187139079d4aa5852775f2af85551928c33c8b3090413b490decf"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/geos-3.13.1-1.el10.riscv64.rpm;name=riscv64_geos;unpack=0"
+SRC_URI[riscv64_geos.sha256sum] = "f1d71270f37304ac692a04ef7f201847a31f55e291c64a13268c9bc8f299f8f7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/geos-devel-3.13.1-1.el10.riscv64.rpm;name=riscv64_geos-devel;unpack=0"
+SRC_URI[riscv64_geos-devel.sha256sum] = "69243a462fef3f3fc348b7e52a062c9be776c371ec8386be3c1f8d9484ae4e19"
 
 RDEPENDS:geos = " \
  glibc \

@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-Text-BibTeX"
 PV = "0.91"
 PR = "6.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-Text-BibTeX \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-Text-BibTeX \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-Text-BibTeX-0.91-6.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-Text-BibTeX-0.91-6.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "84b7dcc92eb2f031f16c3355f7f02097c8fc0991088fbbe73c5890a1a13d70a8"
 
-URI_x86_64_v2_perl-Text-BibTeX = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Text-BibTeX-0.91-6.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_perl-Text-BibTeX;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Text-BibTeX}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Text-BibTeX-0.91-6.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_perl-Text-BibTeX;unpack=0"
 SRC_URI[x86_64_v2_perl-Text-BibTeX.sha256sum] = "c05fe3c5f6378611d9be427cca63e670fa8855cbb2c423542216cb191f550770"
 
-URI_aarch64_perl-Text-BibTeX = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Text-BibTeX-0.91-6.el10_3.aarch64.rpm;name=aarch64_perl-Text-BibTeX;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Text-BibTeX}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Text-BibTeX-0.91-6.el10_3.aarch64.rpm;name=aarch64_perl-Text-BibTeX;unpack=0"
 SRC_URI[aarch64_perl-Text-BibTeX.sha256sum] = "5d138eb2616d484fcf552e9b85a525774b5d1d495c84a16c1d5ab393b6fc99b3"
 
 RDEPENDS:perl-Text-BibTeX = " \

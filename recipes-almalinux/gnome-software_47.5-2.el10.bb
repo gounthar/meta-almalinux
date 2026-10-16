@@ -11,33 +11,35 @@ PACKAGES = " \
  gnome-software-fedora-langpacks \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gnome-software-47.5-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gnome-software-47.5-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7bd74de4b67b9f41ff5d97d0d01219768529b8fb4f550be85bab95ce05c57e84"
 
-URI_x86_64_v2_gnome-software = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gnome-software-47.5-2.el10.x86_64_v2.rpm;name=x86_64_v2_gnome-software;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gnome-software}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gnome-software-47.5-2.el10.x86_64_v2.rpm;name=x86_64_v2_gnome-software;unpack=0"
 SRC_URI[x86_64_v2_gnome-software.sha256sum] = "7e1480351c773ddc09e21a018cd38af198e985e06874a159029f869043982ad2"
 
-URI_x86_64_v2_gnome-software-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/gnome-software-devel-47.5-2.el10.x86_64_v2.rpm;name=x86_64_v2_gnome-software-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gnome-software-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/gnome-software-devel-47.5-2.el10.x86_64_v2.rpm;name=x86_64_v2_gnome-software-devel;unpack=0"
 SRC_URI[x86_64_v2_gnome-software-devel.sha256sum] = "485d9c233b4465d0d03e82cd60f3660838157d311f2daa4b0343d27810c57e50"
 
-URI_x86_64_v2_gnome-software-fedora-langpacks = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gnome-software-fedora-langpacks-47.5-2.el10.x86_64_v2.rpm;name=x86_64_v2_gnome-software-fedora-langpacks;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gnome-software-fedora-langpacks}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gnome-software-fedora-langpacks-47.5-2.el10.x86_64_v2.rpm;name=x86_64_v2_gnome-software-fedora-langpacks;unpack=0"
 SRC_URI[x86_64_v2_gnome-software-fedora-langpacks.sha256sum] = "2687798cfd940d120ab90df18a909cad6a843bd0d960521feaba177a1be9c357"
 
-URI_aarch64_gnome-software = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gnome-software-47.5-2.el10.aarch64.rpm;name=aarch64_gnome-software;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gnome-software}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gnome-software-47.5-2.el10.aarch64.rpm;name=aarch64_gnome-software;unpack=0"
 SRC_URI[aarch64_gnome-software.sha256sum] = "d2c890cdc1d0a0bc1e140d3001f5b60e1c2bcf03f736d753371bc3761b0d3e70"
 
-URI_aarch64_gnome-software-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/gnome-software-devel-47.5-2.el10.aarch64.rpm;name=aarch64_gnome-software-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gnome-software-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/gnome-software-devel-47.5-2.el10.aarch64.rpm;name=aarch64_gnome-software-devel;unpack=0"
 SRC_URI[aarch64_gnome-software-devel.sha256sum] = "a9e60ec56526f5211969a1d869565950078d48fbd4be05e3ff29e763f949d282"
 
-URI_aarch64_gnome-software-fedora-langpacks = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gnome-software-fedora-langpacks-47.5-2.el10.aarch64.rpm;name=aarch64_gnome-software-fedora-langpacks;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gnome-software-fedora-langpacks}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gnome-software-fedora-langpacks-47.5-2.el10.aarch64.rpm;name=aarch64_gnome-software-fedora-langpacks;unpack=0"
 SRC_URI[aarch64_gnome-software-fedora-langpacks.sha256sum] = "dabd201ae048b179fbbd6897ffff2de91b2b651c2e82725eaf69f7eb4a5befb1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gnome-software-47.5-2.el10.riscv64.rpm;name=riscv64_gnome-software;unpack=0"
+SRC_URI[riscv64_gnome-software.sha256sum] = "7c029baccac3aad681d76dcf26e0d3b5ef8de0f51b0265deee8f9d2e0fd1e768"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/gnome-software-devel-47.5-2.el10.riscv64.rpm;name=riscv64_gnome-software-devel;unpack=0"
+SRC_URI[riscv64_gnome-software-devel.sha256sum] = "8425b878c08d01646c4040da7f850b948355da377c73924958d2db1db1937092"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gnome-software-fedora-langpacks-47.5-2.el10.riscv64.rpm;name=riscv64_gnome-software-fedora-langpacks;unpack=0"
+SRC_URI[riscv64_gnome-software-fedora-langpacks.sha256sum] = "76f92533243f364ce0e7d517e1886a56e60ab95f7c1a5bca7927b8b37b6e8bc7"
 
 RDEPENDS:gnome-software = " \
  PackageKit-glib \

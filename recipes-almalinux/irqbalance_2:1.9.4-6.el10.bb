@@ -10,17 +10,17 @@ PACKAGES = " \
  irqbalance \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/irqbalance-1.9.4-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/irqbalance-1.9.4-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a05c4fc998919e9d20f42d8a012987b7b424b66da0e74f633418bf99c72a990c"
 
-URI_x86_64_v2_irqbalance = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/irqbalance-1.9.4-6.el10.x86_64_v2.rpm;name=x86_64_v2_irqbalance;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_irqbalance}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/irqbalance-1.9.4-6.el10.x86_64_v2.rpm;name=x86_64_v2_irqbalance;unpack=0"
 SRC_URI[x86_64_v2_irqbalance.sha256sum] = "8515b2f40caf1ef4ecb765a6b107515f8863191078af7a2e41394ddf63d893e3"
 
-URI_aarch64_irqbalance = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/irqbalance-1.9.4-6.el10.aarch64.rpm;name=aarch64_irqbalance;unpack=0"
-SRC_URI:append = " ${URI_aarch64_irqbalance}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/irqbalance-1.9.4-6.el10.aarch64.rpm;name=aarch64_irqbalance;unpack=0"
 SRC_URI[aarch64_irqbalance.sha256sum] = "a7603321f4fef89d3768f1979535ed5341f741b4ea20aa353c0b9720b4c1ac41"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/irqbalance-1.9.4-6.el10.riscv64.rpm;name=riscv64_irqbalance;unpack=0"
+SRC_URI[riscv64_irqbalance.sha256sum] = "2b92408315def15d7dc41db3da2d48f29613b5da746ca7d66afa533308e2b845"
 
 RDEPENDS:irqbalance = " \
  bash \

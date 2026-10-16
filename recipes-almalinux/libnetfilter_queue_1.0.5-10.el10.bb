@@ -10,25 +10,26 @@ PACKAGES = " \
  libnetfilter_queue-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libnetfilter_queue-1.0.5-10.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libnetfilter_queue-1.0.5-10.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1060574605abbc34c8dcfdd7778e2e5d2bd3d76d73fc69a8588ad0ae71ec5dc1"
 
-URI_x86_64_v2_libnetfilter_queue = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libnetfilter_queue-1.0.5-10.el10.x86_64_v2.rpm;name=x86_64_v2_libnetfilter_queue;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libnetfilter_queue}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libnetfilter_queue-1.0.5-10.el10.x86_64_v2.rpm;name=x86_64_v2_libnetfilter_queue;unpack=0"
 SRC_URI[x86_64_v2_libnetfilter_queue.sha256sum] = "e7964e2df37a94f34a2cc971cd75646f267b70b09027a1631aab6c1eee3686e6"
 
-URI_x86_64_v2_libnetfilter_queue-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libnetfilter_queue-devel-1.0.5-10.el10.x86_64_v2.rpm;name=x86_64_v2_libnetfilter_queue-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libnetfilter_queue-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libnetfilter_queue-devel-1.0.5-10.el10.x86_64_v2.rpm;name=x86_64_v2_libnetfilter_queue-devel;unpack=0"
 SRC_URI[x86_64_v2_libnetfilter_queue-devel.sha256sum] = "c42f2cbf8f0f487bcc5933a0f647da63c25b276ab504e3f413d92cf81773d296"
 
-URI_aarch64_libnetfilter_queue = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libnetfilter_queue-1.0.5-10.el10.aarch64.rpm;name=aarch64_libnetfilter_queue;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libnetfilter_queue}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libnetfilter_queue-1.0.5-10.el10.aarch64.rpm;name=aarch64_libnetfilter_queue;unpack=0"
 SRC_URI[aarch64_libnetfilter_queue.sha256sum] = "4b27d3e285532d12c985b12575ddbec3500f347c86eddb4692318e9c89d09f6d"
 
-URI_aarch64_libnetfilter_queue-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libnetfilter_queue-devel-1.0.5-10.el10.aarch64.rpm;name=aarch64_libnetfilter_queue-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libnetfilter_queue-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libnetfilter_queue-devel-1.0.5-10.el10.aarch64.rpm;name=aarch64_libnetfilter_queue-devel;unpack=0"
 SRC_URI[aarch64_libnetfilter_queue-devel.sha256sum] = "cea5d89494cd08cac54bc62d4b56879a481cab9f98a66ee5f8a4a44dd4977f30"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libnetfilter_queue-1.0.5-10.el10.riscv64.rpm;name=riscv64_libnetfilter_queue;unpack=0"
+SRC_URI[riscv64_libnetfilter_queue.sha256sum] = "14a9e35bd47023379018e6dd7b629322046051890aac62178aac1464b83373a0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libnetfilter_queue-devel-1.0.5-10.el10.riscv64.rpm;name=riscv64_libnetfilter_queue-devel;unpack=0"
+SRC_URI[riscv64_libnetfilter_queue-devel.sha256sum] = "adf2ea50a4eaaa000407fe07c5109310abf9ee0fadd806a1dc701b63f7563a6e"
 
 RDEPENDS:libnetfilter_queue = " \
  glibc \

@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "archlinux-keyring"
 PV = "20260612"
 PR = "2.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  archlinux-keyring \
- "
+"
+PACKAGES:aarch64 = " \
+ archlinux-keyring \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/a/archlinux-keyring-20260612-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/a/archlinux-keyring-20260612-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "5bf2411008332ffa725bdb1d0b5a03c7a9207127e5f31fb5779b4ace41deb681"
 
-URI_x86_64_v2_archlinux-keyring = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/archlinux-keyring-20260612-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_archlinux-keyring;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_archlinux-keyring}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/archlinux-keyring-20260612-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_archlinux-keyring;unpack=0"
 SRC_URI[x86_64_v2_archlinux-keyring.sha256sum] = "7b22ad4eb3081290d9ec9a703e798b3dd9f728f00ce6c5f7019cbde89a8c4fcf"
 
-URI_aarch64_archlinux-keyring = "${EPEL_MIRROR}/aarch64/Packages/a/archlinux-keyring-20260612-2.el10_3.noarch.rpm;name=aarch64_archlinux-keyring;unpack=0"
-SRC_URI:append = " ${URI_aarch64_archlinux-keyring}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/a/archlinux-keyring-20260612-2.el10_3.noarch.rpm;name=aarch64_archlinux-keyring;unpack=0"
 SRC_URI[aarch64_archlinux-keyring.sha256sum] = "6ab228fc9bc598f61cc191fb6c47608b55df3f1d1f85117257049b99c24e6251"
 
 RDEPENDS:archlinux-keyring = " \

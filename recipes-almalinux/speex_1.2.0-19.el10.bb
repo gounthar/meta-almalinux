@@ -10,25 +10,26 @@ PACKAGES = " \
  speex-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/speex-1.2.0-19.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/speex-1.2.0-19.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7eb9e75248d913d45b897aede07126e7230df337c3420127894244ab60dc9627"
 
-URI_x86_64_v2_speex = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/speex-1.2.0-19.el10.x86_64_v2.rpm;name=x86_64_v2_speex;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_speex}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/speex-1.2.0-19.el10.x86_64_v2.rpm;name=x86_64_v2_speex;unpack=0"
 SRC_URI[x86_64_v2_speex.sha256sum] = "859c73b205b9a35ba3528a9c832597bfc15ee2eba9037e1d64adf2b11414787a"
 
-URI_x86_64_v2_speex-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/speex-devel-1.2.0-19.el10.x86_64_v2.rpm;name=x86_64_v2_speex-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_speex-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/speex-devel-1.2.0-19.el10.x86_64_v2.rpm;name=x86_64_v2_speex-devel;unpack=0"
 SRC_URI[x86_64_v2_speex-devel.sha256sum] = "186c118f11a360c26d7a2d53366ff682df710ecc65aaf9e29492be9744657bea"
 
-URI_aarch64_speex = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/speex-1.2.0-19.el10.aarch64.rpm;name=aarch64_speex;unpack=0"
-SRC_URI:append = " ${URI_aarch64_speex}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/speex-1.2.0-19.el10.aarch64.rpm;name=aarch64_speex;unpack=0"
 SRC_URI[aarch64_speex.sha256sum] = "c280fa05153cd650f86dc25443224cc9b01be70be3fffff40e8a8db1a1bf7c93"
 
-URI_aarch64_speex-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/speex-devel-1.2.0-19.el10.aarch64.rpm;name=aarch64_speex-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_speex-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/speex-devel-1.2.0-19.el10.aarch64.rpm;name=aarch64_speex-devel;unpack=0"
 SRC_URI[aarch64_speex-devel.sha256sum] = "4b6d909a0ecda4ba770748bbf8f514115937b618eff6003a1a90d1ed39c1f761"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/speex-1.2.0-19.el10.riscv64.rpm;name=riscv64_speex;unpack=0"
+SRC_URI[riscv64_speex.sha256sum] = "ea1892eb54c7ea0c286528cf83da4f538ccd0c082f87bef012c20bec48ec518e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/speex-devel-1.2.0-19.el10.riscv64.rpm;name=riscv64_speex-devel;unpack=0"
+SRC_URI[riscv64_speex-devel.sha256sum] = "801209a94f57098f03997507c53b299f673112f488b9771d8c6393c0d6d3ee2f"
 
 RDEPENDS:speex = " \
  glibc \

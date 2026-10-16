@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "scsi-target-utils"
 PV = "1.0.97"
 PR = "5.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  scsi-target-utils \
- "
+"
+PACKAGES:aarch64 = " \
+ scsi-target-utils \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/s/scsi-target-utils-1.0.97-5.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/s/scsi-target-utils-1.0.97-5.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "ac0947200bdc6c5ce5f5a36a9dab01dc4dc360c4d32fa6af85bea8a74e16da8c"
 
-URI_x86_64_v2_scsi-target-utils = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/scsi-target-utils-1.0.97-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_scsi-target-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_scsi-target-utils}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/scsi-target-utils-1.0.97-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_scsi-target-utils;unpack=0"
 SRC_URI[x86_64_v2_scsi-target-utils.sha256sum] = "824dd973075d61cbcd0d31c56a7b086774e1b148fe144490e1310abbc478ac5c"
 
-URI_aarch64_scsi-target-utils = "${EPEL_MIRROR}/aarch64/Packages/s/scsi-target-utils-1.0.97-5.el10_3.aarch64.rpm;name=aarch64_scsi-target-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_scsi-target-utils}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/s/scsi-target-utils-1.0.97-5.el10_3.aarch64.rpm;name=aarch64_scsi-target-utils;unpack=0"
 SRC_URI[aarch64_scsi-target-utils.sha256sum] = "bd0fb3bf4e071d813e8ebeb9834ab4d03435cf9d827a5a755b53f119e81b58c3"
 
 RDEPENDS:scsi-target-utils = " \

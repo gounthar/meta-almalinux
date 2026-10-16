@@ -9,17 +9,17 @@ PACKAGES = " \
  nodejs-packaging \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/nodejs-packaging-2023.10-12.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/nodejs-packaging-2023.10-12.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "196e7e65a2f081f8c8a8ddf0c889bb69b4955fad3f0d99014bee8eb7555e8b88"
 
-URI_x86_64_v2_nodejs-packaging = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nodejs-packaging-2023.10-12.el10.noarch.rpm;name=x86_64_v2_nodejs-packaging;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nodejs-packaging}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nodejs-packaging-2023.10-12.el10.noarch.rpm;name=x86_64_v2_nodejs-packaging;unpack=0"
 SRC_URI[x86_64_v2_nodejs-packaging.sha256sum] = "a659c9da3e5f9c578276d6a98dbbf7168821822c5cdeaa8ce51a8e83f7b2d582"
 
-URI_aarch64_nodejs-packaging = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nodejs-packaging-2023.10-12.el10.noarch.rpm;name=aarch64_nodejs-packaging;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nodejs-packaging}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nodejs-packaging-2023.10-12.el10.noarch.rpm;name=aarch64_nodejs-packaging;unpack=0"
 SRC_URI[aarch64_nodejs-packaging.sha256sum] = "a659c9da3e5f9c578276d6a98dbbf7168821822c5cdeaa8ce51a8e83f7b2d582"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nodejs-packaging-2023.10-12.el10.noarch.rpm;name=riscv64_nodejs-packaging;unpack=0"
+SRC_URI[riscv64_nodejs-packaging.sha256sum] = "a659c9da3e5f9c578276d6a98dbbf7168821822c5cdeaa8ce51a8e83f7b2d582"
 
 RDEPENDS:nodejs-packaging = " \
  python3 \

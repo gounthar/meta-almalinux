@@ -9,17 +9,17 @@ PACKAGES = " \
  wayland-utils \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/wayland-utils-1.3.0-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/wayland-utils-1.3.0-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "74b94d5cd97c0ce98d3e4afa28f270aba815fdf8e3bae6589d9082f648ce54f3"
 
-URI_x86_64_v2_wayland-utils = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/wayland-utils-1.3.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_wayland-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_wayland-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/wayland-utils-1.3.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_wayland-utils;unpack=0"
 SRC_URI[x86_64_v2_wayland-utils.sha256sum] = "e23d83b16985a399f3ff6cc2e504dd90357a7da9e6eb0cfef79b37ba660e79b8"
 
-URI_aarch64_wayland-utils = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/wayland-utils-1.3.0-1.el10.aarch64.rpm;name=aarch64_wayland-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_wayland-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/wayland-utils-1.3.0-1.el10.aarch64.rpm;name=aarch64_wayland-utils;unpack=0"
 SRC_URI[aarch64_wayland-utils.sha256sum] = "d551de51cba837c4ca497f86ee72b8c9cda2c8abd6a092ebe4e958cebf97d75a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/wayland-utils-1.3.0-1.el10.riscv64.rpm;name=riscv64_wayland-utils;unpack=0"
+SRC_URI[riscv64_wayland-utils.sha256sum] = "46e53feb5c3a596abce8540d97e6f1ae43e6cb2a846006c2f72ad984d9387dd3"
 
 RDEPENDS:wayland-utils = " \
  glibc \

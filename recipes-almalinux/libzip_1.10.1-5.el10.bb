@@ -11,33 +11,35 @@ PACKAGES = " \
  libzip-tools \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libzip-1.10.1-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libzip-1.10.1-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "bc5819e6f21f2df604b73daf3f84c669cde8d86ddbc1216a4a6c7a754c5cf194"
 
-URI_x86_64_v2_libzip = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libzip-1.10.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libzip;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libzip}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libzip-1.10.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libzip;unpack=0"
 SRC_URI[x86_64_v2_libzip.sha256sum] = "37d5e4540b6d0e79154962bd7f7a430bf48cedca6bae44fee312dccdc35adfd7"
 
-URI_x86_64_v2_libzip-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libzip-devel-1.10.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libzip-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libzip-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libzip-devel-1.10.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libzip-devel;unpack=0"
 SRC_URI[x86_64_v2_libzip-devel.sha256sum] = "c62b473cfcdcfb4991fd07c00fbe3fa8ecc8c09e7a025ba25e4fabd312131bf7"
 
-URI_x86_64_v2_libzip-tools = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libzip-tools-1.10.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libzip-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libzip-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libzip-tools-1.10.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libzip-tools;unpack=0"
 SRC_URI[x86_64_v2_libzip-tools.sha256sum] = "d78bfe1edcc119617aceae49b81074a6cf025308f9b32ab0a2a0dbe22ab3df23"
 
-URI_aarch64_libzip = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libzip-1.10.1-5.el10.aarch64.rpm;name=aarch64_libzip;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libzip}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libzip-1.10.1-5.el10.aarch64.rpm;name=aarch64_libzip;unpack=0"
 SRC_URI[aarch64_libzip.sha256sum] = "afd1494e8ec7fdce57f529e56bb160ec22cdefa057737cd29dee02b60d988c67"
 
-URI_aarch64_libzip-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libzip-devel-1.10.1-5.el10.aarch64.rpm;name=aarch64_libzip-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libzip-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libzip-devel-1.10.1-5.el10.aarch64.rpm;name=aarch64_libzip-devel;unpack=0"
 SRC_URI[aarch64_libzip-devel.sha256sum] = "af38dff2e9116ff7d0ec79256c5c08e7b84d1c612a07fc67899ec43631048a37"
 
-URI_aarch64_libzip-tools = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libzip-tools-1.10.1-5.el10.aarch64.rpm;name=aarch64_libzip-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libzip-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libzip-tools-1.10.1-5.el10.aarch64.rpm;name=aarch64_libzip-tools;unpack=0"
 SRC_URI[aarch64_libzip-tools.sha256sum] = "aaf1ad5f7932b948c3aefd37b7302fb0428b82d6b17a8e89e28bc70748096512"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libzip-1.10.1-5.el10.riscv64.rpm;name=riscv64_libzip;unpack=0"
+SRC_URI[riscv64_libzip.sha256sum] = "d7d047ab87932eb6cc094f57bceed7a3d8de01e3c8df310ccd738e10951da7a4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libzip-devel-1.10.1-5.el10.riscv64.rpm;name=riscv64_libzip-devel;unpack=0"
+SRC_URI[riscv64_libzip-devel.sha256sum] = "7523ad493aaf422cd8e7d64db7edf480aa28d903240a9ed581c986e298aedda8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libzip-tools-1.10.1-5.el10.riscv64.rpm;name=riscv64_libzip-tools;unpack=0"
+SRC_URI[riscv64_libzip-tools.sha256sum] = "f17e1b00f1dfed7f01089b6c248601c58a70c12d746b8f639bb7578fcbc1f000"
 
 RDEPENDS:libzip = " \
  bzip2-libs \

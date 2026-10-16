@@ -10,25 +10,26 @@ PACKAGES = " \
  gd-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gd-2.3.3-22.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gd-2.3.3-22.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "0ba20e8c7b2a33b9d4ef0b766ff00494952effb8d8c91e7c05f45a65837a8ac5"
 
-URI_x86_64_v2_gd = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gd-2.3.3-22.el10.x86_64_v2.rpm;name=x86_64_v2_gd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gd-2.3.3-22.el10.x86_64_v2.rpm;name=x86_64_v2_gd;unpack=0"
 SRC_URI[x86_64_v2_gd.sha256sum] = "3c726ffc7d182026c6d2692d0dcb23909559c8bccfc25e623ee16a236ae69367"
 
-URI_x86_64_v2_gd-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gd-devel-2.3.3-22.el10.x86_64_v2.rpm;name=x86_64_v2_gd-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gd-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gd-devel-2.3.3-22.el10.x86_64_v2.rpm;name=x86_64_v2_gd-devel;unpack=0"
 SRC_URI[x86_64_v2_gd-devel.sha256sum] = "5f1b7e5e0b6eb24300e7d3430c5446ab4fb7e1d1d0e0ab78f51e06e602912d4f"
 
-URI_aarch64_gd = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gd-2.3.3-22.el10.aarch64.rpm;name=aarch64_gd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gd-2.3.3-22.el10.aarch64.rpm;name=aarch64_gd;unpack=0"
 SRC_URI[aarch64_gd.sha256sum] = "4b93f61e2f9dc53d9e6432193cc244c11ee1e161f79f0e0418d57b311ec0459a"
 
-URI_aarch64_gd-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gd-devel-2.3.3-22.el10.aarch64.rpm;name=aarch64_gd-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gd-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gd-devel-2.3.3-22.el10.aarch64.rpm;name=aarch64_gd-devel;unpack=0"
 SRC_URI[aarch64_gd-devel.sha256sum] = "2e73b08b3355d6422e80b2b479afb14d08c3372d4b058cb4a6cbec94b7692143"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gd-2.3.3-22.el10.riscv64.rpm;name=riscv64_gd;unpack=0"
+SRC_URI[riscv64_gd.sha256sum] = "28fe45dd6912fe927952af5f4a37074455eaaed0065e990738cf046ef0ee3af0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gd-devel-2.3.3-22.el10.riscv64.rpm;name=riscv64_gd-devel;unpack=0"
+SRC_URI[riscv64_gd-devel.sha256sum] = "f415835afcf61f5b179be0dec9d57e3f948e46b0a9b0192ec9cb23f1f787c4b2"
 
 RDEPENDS:gd = " \
  fontconfig \

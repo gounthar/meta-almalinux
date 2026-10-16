@@ -11,33 +11,35 @@ PACKAGES = " \
  libsoup3-doc \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libsoup3-3.6.6-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libsoup3-3.6.6-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d15f665003113aa1c59ab54c816526b8cfdf9216454f7832477756d66c0c4e36"
 
-URI_x86_64_v2_libsoup3 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libsoup3-3.6.6-1.el10.x86_64_v2.rpm;name=x86_64_v2_libsoup3;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libsoup3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libsoup3-3.6.6-1.el10.x86_64_v2.rpm;name=x86_64_v2_libsoup3;unpack=0"
 SRC_URI[x86_64_v2_libsoup3.sha256sum] = "dda86695d98b604bc36d8058aa872b2034321c75e0c76395942e7813280f40e1"
 
-URI_x86_64_v2_libsoup3-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libsoup3-devel-3.6.6-1.el10.x86_64_v2.rpm;name=x86_64_v2_libsoup3-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libsoup3-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libsoup3-devel-3.6.6-1.el10.x86_64_v2.rpm;name=x86_64_v2_libsoup3-devel;unpack=0"
 SRC_URI[x86_64_v2_libsoup3-devel.sha256sum] = "2a8642b46309f467fab25e5ce37b552993df414de4447ad9e35a3bdc67a3cbc8"
 
-URI_x86_64_v2_libsoup3-doc = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libsoup3-doc-3.6.6-1.el10.noarch.rpm;name=x86_64_v2_libsoup3-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libsoup3-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libsoup3-doc-3.6.6-1.el10.noarch.rpm;name=x86_64_v2_libsoup3-doc;unpack=0"
 SRC_URI[x86_64_v2_libsoup3-doc.sha256sum] = "f18d12f731abda3e72f7b94eafee2ff9f096a51772fa274065bac387e4cdfe39"
 
-URI_aarch64_libsoup3 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libsoup3-3.6.6-1.el10.aarch64.rpm;name=aarch64_libsoup3;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libsoup3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libsoup3-3.6.6-1.el10.aarch64.rpm;name=aarch64_libsoup3;unpack=0"
 SRC_URI[aarch64_libsoup3.sha256sum] = "88a3ef9cc422f80d2d2d9f13409771090efee87f9468cc4e525ee515c32050c3"
 
-URI_aarch64_libsoup3-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libsoup3-devel-3.6.6-1.el10.aarch64.rpm;name=aarch64_libsoup3-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libsoup3-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libsoup3-devel-3.6.6-1.el10.aarch64.rpm;name=aarch64_libsoup3-devel;unpack=0"
 SRC_URI[aarch64_libsoup3-devel.sha256sum] = "81c7d8ca70ff149be3cff36d5136d2ad4b4a27fdb3a616f31f16913a6412635d"
 
-URI_aarch64_libsoup3-doc = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libsoup3-doc-3.6.6-1.el10.noarch.rpm;name=aarch64_libsoup3-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libsoup3-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libsoup3-doc-3.6.6-1.el10.noarch.rpm;name=aarch64_libsoup3-doc;unpack=0"
 SRC_URI[aarch64_libsoup3-doc.sha256sum] = "f18d12f731abda3e72f7b94eafee2ff9f096a51772fa274065bac387e4cdfe39"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libsoup3-3.6.6-1.el10.riscv64.rpm;name=riscv64_libsoup3;unpack=0"
+SRC_URI[riscv64_libsoup3.sha256sum] = "40e8ca1e7dbcfa5009d853039d8e49248a3b7097f3448c34ffb6427f8d7358dc"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libsoup3-devel-3.6.6-1.el10.riscv64.rpm;name=riscv64_libsoup3-devel;unpack=0"
+SRC_URI[riscv64_libsoup3-devel.sha256sum] = "89cc449b2635e951d7d41fce78cb2e99e42f70feb3e1b4d8fab635df86873612"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libsoup3-doc-3.6.6-1.el10.noarch.rpm;name=riscv64_libsoup3-doc;unpack=0"
+SRC_URI[riscv64_libsoup3-doc.sha256sum] = "f18d12f731abda3e72f7b94eafee2ff9f096a51772fa274065bac387e4cdfe39"
 
 RDEPENDS:libsoup3 = " \
  glib2 \

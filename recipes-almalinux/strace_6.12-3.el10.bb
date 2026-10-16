@@ -9,17 +9,17 @@ PACKAGES = " \
  strace \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/strace-6.12-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/strace-6.12-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "df55c547be2f9a4479cce68f83839172b2b02a04ab58c08914a68df0193d00a5"
 
-URI_x86_64_v2_strace = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/strace-6.12-3.el10.x86_64_v2.rpm;name=x86_64_v2_strace;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_strace}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/strace-6.12-3.el10.x86_64_v2.rpm;name=x86_64_v2_strace;unpack=0"
 SRC_URI[x86_64_v2_strace.sha256sum] = "c66a5fd1669d90f41930a488d8643ee10713cf955137c87a4e020973d16fe5fe"
 
-URI_aarch64_strace = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/strace-6.12-3.el10.aarch64.rpm;name=aarch64_strace;unpack=0"
-SRC_URI:append = " ${URI_aarch64_strace}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/strace-6.12-3.el10.aarch64.rpm;name=aarch64_strace;unpack=0"
 SRC_URI[aarch64_strace.sha256sum] = "994fffc42b6cc68b7d97912d45c9d96cddfeda4675c0fecd4c80b3e42dda69c8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/strace-6.12-3.el10.riscv64.rpm;name=riscv64_strace;unpack=0"
+SRC_URI[riscv64_strace.sha256sum] = "f6a086263938d807e9ffb5b59ac08df0622558f6b78b18208e305d9a76373d04"
 
 RDEPENDS:strace = " \
  bash \

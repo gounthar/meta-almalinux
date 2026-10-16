@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-chrono-english"
 PV = "0.1.8"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-chrono-english+default-devel \
  rust-chrono-english-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-chrono-english+default-devel \
+ rust-chrono-english-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-chrono-english-0.1.8-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-chrono-english-0.1.8-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "37224d24a9a905ad80e92fb3d2f0d9951e0077a85dc6f8866dc5b8916da88565"
 
-URI_x86_64_v2_rust-chrono-english+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-chrono-english+default-devel-0.1.8-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-chrono-english+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-chrono-english+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-chrono-english+default-devel-0.1.8-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-chrono-english+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-chrono-english+default-devel.sha256sum] = "4dd37b1d8694c02011fd1e09224ba4d29047685b261b7b67a9a648dfc928d390"
 
-URI_x86_64_v2_rust-chrono-english-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-chrono-english-devel-0.1.8-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-chrono-english-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-chrono-english-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-chrono-english-devel-0.1.8-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-chrono-english-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-chrono-english-devel.sha256sum] = "3daf781ea900ecaaa52574a31867258c9f30890a972b6aae903854973a79a763"
 
-URI_aarch64_rust-chrono-english+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-chrono-english+default-devel-0.1.8-1.el10_3.noarch.rpm;name=aarch64_rust-chrono-english+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-chrono-english+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-chrono-english+default-devel-0.1.8-1.el10_3.noarch.rpm;name=aarch64_rust-chrono-english+default-devel;unpack=0"
 SRC_URI[aarch64_rust-chrono-english+default-devel.sha256sum] = "39ca15870c46209b0dc07a57e0b69a927042c5756c3265d5b92f937b02e70e6d"
 
-URI_aarch64_rust-chrono-english-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-chrono-english-devel-0.1.8-1.el10_3.noarch.rpm;name=aarch64_rust-chrono-english-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-chrono-english-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-chrono-english-devel-0.1.8-1.el10_3.noarch.rpm;name=aarch64_rust-chrono-english-devel;unpack=0"
 SRC_URI[aarch64_rust-chrono-english-devel.sha256sum] = "da6f5ba2b20a3592e9c3d4effc1d77c1538d958ed856096b21a50edf89a54b28"
 
 RDEPENDS:rust-chrono-english+default-devel = " \

@@ -9,17 +9,17 @@ PACKAGES = " \
  perl-XML-Parser \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/perl-XML-Parser-2.47-7.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/perl-XML-Parser-2.47-7.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d3a102fb8135b8323123400cee04179102695827c2135631be8db783891d2dd3"
 
-URI_x86_64_v2_perl-XML-Parser = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-XML-Parser-2.47-7.el10.x86_64_v2.rpm;name=x86_64_v2_perl-XML-Parser;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-XML-Parser}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-XML-Parser-2.47-7.el10.x86_64_v2.rpm;name=x86_64_v2_perl-XML-Parser;unpack=0"
 SRC_URI[x86_64_v2_perl-XML-Parser.sha256sum] = "2d4eedcf88b3fe973ab808519384d6c0132f4c6002b99d734936beda98caf12c"
 
-URI_aarch64_perl-XML-Parser = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-XML-Parser-2.47-7.el10.aarch64.rpm;name=aarch64_perl-XML-Parser;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-XML-Parser}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-XML-Parser-2.47-7.el10.aarch64.rpm;name=aarch64_perl-XML-Parser;unpack=0"
 SRC_URI[aarch64_perl-XML-Parser.sha256sum] = "32ffe61e1a97555c7d6c7f57482797fb35d67a4d591875ada42b4d50a4c42203"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/perl-XML-Parser-2.47-7.el10.riscv64.rpm;name=riscv64_perl-XML-Parser;unpack=0"
+SRC_URI[riscv64_perl-XML-Parser.sha256sum] = "6ad635170d42932a26470b1dfd54bb7547a501380498f2da1a015db34f73ff4d"
 
 RDEPENDS:perl-XML-Parser = " \
  expat \

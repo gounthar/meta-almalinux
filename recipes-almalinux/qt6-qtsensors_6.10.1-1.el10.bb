@@ -11,40 +11,55 @@ PACKAGES = " \
  qt6-qtsensors-examples \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtsensors-6.10.1-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtsensors-6.10.1-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "72b94f6df0a1beae6d875be353f91cf060f9ccb00d4cee5a14ecf91a67a92641"
 
-URI_x86_64_v2_qt6-qtsensors = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtsensors-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtsensors;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtsensors}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtsensors-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtsensors;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtsensors.sha256sum] = "0bc76841c0887a1b48c2d57ccff92ad4b61a17c3a19cbabcb9b48ecf4877b002"
 
-URI_x86_64_v2_qt6-qtsensors-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtsensors-devel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtsensors-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtsensors-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtsensors-devel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtsensors-devel;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtsensors-devel.sha256sum] = "56af528866b25d83a866e105277c5792f77c1b469a83b880cfdc877b2dd917ab"
 
-URI_x86_64_v2_qt6-qtsensors-examples = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtsensors-examples-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtsensors-examples;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtsensors-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtsensors-examples-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtsensors-examples;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtsensors-examples.sha256sum] = "ffabf609a1ae5beb8e06a8637c5cf904112fcbf9cecdd8f9362d54bd959f8585"
 
-URI_aarch64_qt6-qtsensors = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtsensors-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtsensors;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtsensors}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtsensors-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtsensors;unpack=0"
 SRC_URI[aarch64_qt6-qtsensors.sha256sum] = "d6a1a27dd8506f2b5f517e7bdf4c9d74630dbc2d232c49381ae217ae36ac9147"
 
-URI_aarch64_qt6-qtsensors-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtsensors-devel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtsensors-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtsensors-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtsensors-devel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtsensors-devel;unpack=0"
 SRC_URI[aarch64_qt6-qtsensors-devel.sha256sum] = "e1a2c315c8741a16b5762da66e226daf260c4f5dc5a7570339df06fe922a33bc"
 
-URI_aarch64_qt6-qtsensors-examples = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtsensors-examples-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtsensors-examples;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtsensors-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtsensors-examples-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtsensors-examples;unpack=0"
 SRC_URI[aarch64_qt6-qtsensors-examples.sha256sum] = "f3a2fa87929ca59dec6a8ddf3d7755f236de2c62d21832afe98fc7522a8240f8"
 
-RDEPENDS:qt6-qtsensors = " \
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtsensors-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtsensors;unpack=0"
+SRC_URI[riscv64_qt6-qtsensors.sha256sum] = "8fddd487253bc8b354982a921ee3614b430429b25ef6d7757bd34bf936238739"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtsensors-devel-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtsensors-devel;unpack=0"
+SRC_URI[riscv64_qt6-qtsensors-devel.sha256sum] = "fc5efe6b9513f8715715062b92793f78933da90da9a661108fa20d9f89c4380c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/qt6-qtsensors-examples-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtsensors-examples;unpack=0"
+SRC_URI[riscv64_qt6-qtsensors-examples.sha256sum] = "a0f0c68893b4469b9f966721a730a4599164995191af36645a5f299d99720a37"
+
+RDEPENDS:qt6-qtsensors:x86_64_v2 = " \
  glibc \
  libstdc++ \
  qt6-qtbase \
  qt6-qtdeclarative \
- "
+"
+RDEPENDS:qt6-qtsensors:aarch64 = " \
+ glibc \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtdeclarative \
+"
+RDEPENDS:qt6-qtsensors:riscv64 = " \
+ glibc \
+ libgcc \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtdeclarative \
+"
 RDEPENDS:qt6-qtsensors-devel = " \
  cmake-filesystem \
  pkgconf-pkg-config \

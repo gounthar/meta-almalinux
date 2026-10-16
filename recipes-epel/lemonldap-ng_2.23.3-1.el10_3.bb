@@ -5,7 +5,7 @@ inherit dnf-bridge
 PN = "lemonldap-ng"
 PV = "2.23.3"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  lemonldap-ng \
  lemonldap-ng-common \
  lemonldap-ng-doc \
@@ -17,102 +17,95 @@ PACKAGES = " \
  lemonldap-ng-test \
  lemonldap-ng-uwsgi-app \
  perl-Lemonldap-NG-SSOaaS-Apache-Client \
- "
+"
+PACKAGES:aarch64 = " \
+ lemonldap-ng \
+ lemonldap-ng-common \
+ lemonldap-ng-doc \
+ lemonldap-ng-fastcgi-server \
+ lemonldap-ng-handler \
+ lemonldap-ng-manager \
+ lemonldap-ng-portal \
+ lemonldap-ng-selinux \
+ lemonldap-ng-test \
+ lemonldap-ng-uwsgi-app \
+ perl-Lemonldap-NG-SSOaaS-Apache-Client \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/l/lemonldap-ng-2.23.3-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/l/lemonldap-ng-2.23.3-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "005ad9078f17fae851857689bd6ad129cf4de559e9cf458026f5663988d38b4f"
 
-URI_x86_64_v2_lemonldap-ng = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/lemonldap-ng-2.23.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_lemonldap-ng;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lemonldap-ng}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/lemonldap-ng-2.23.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_lemonldap-ng;unpack=0"
 SRC_URI[x86_64_v2_lemonldap-ng.sha256sum] = "8dcb163ba35670a994745121c73ee755b341cca5aaca6185cdb88380c6a7057a"
 
-URI_x86_64_v2_lemonldap-ng-common = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/lemonldap-ng-common-2.23.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_lemonldap-ng-common;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lemonldap-ng-common}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/lemonldap-ng-common-2.23.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_lemonldap-ng-common;unpack=0"
 SRC_URI[x86_64_v2_lemonldap-ng-common.sha256sum] = "9c207dce9ff81852e3a9bb6b257055a4ca9b806605a8fcdbc62c9738a7553bbc"
-RPROVIDES:lemonldap-ng-common:x86_64_v2 = "virtual/perl_Lemonldap__NG__Common__Conf__DefaultValues_"
+RPROVIDES:lemonldap-ng-common:append:x86_64_v2 = " virtual/perl_Lemonldap__NG__Common__Conf__DefaultValues_"
 
-URI_x86_64_v2_lemonldap-ng-doc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/lemonldap-ng-doc-2.23.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_lemonldap-ng-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lemonldap-ng-doc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/lemonldap-ng-doc-2.23.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_lemonldap-ng-doc;unpack=0"
 SRC_URI[x86_64_v2_lemonldap-ng-doc.sha256sum] = "cc4f46648cd79e2172afedfc27a098131cb4df8fc0a7fcf3f6c1e42dc2f858b9"
 
-URI_x86_64_v2_lemonldap-ng-fastcgi-server = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/lemonldap-ng-fastcgi-server-2.23.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_lemonldap-ng-fastcgi-server;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lemonldap-ng-fastcgi-server}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/lemonldap-ng-fastcgi-server-2.23.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_lemonldap-ng-fastcgi-server;unpack=0"
 SRC_URI[x86_64_v2_lemonldap-ng-fastcgi-server.sha256sum] = "64f42c3ee1a400bd61c5ebb35e52f6fc0197de94a97bcedd60f0ed32c5e89943"
 
-URI_x86_64_v2_lemonldap-ng-handler = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/lemonldap-ng-handler-2.23.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_lemonldap-ng-handler;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lemonldap-ng-handler}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/lemonldap-ng-handler-2.23.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_lemonldap-ng-handler;unpack=0"
 SRC_URI[x86_64_v2_lemonldap-ng-handler.sha256sum] = "d6f4db8a754434248ba2ffa462fadd7d5db4696a6f20a316fa580457ba7c5e05"
 
-URI_x86_64_v2_lemonldap-ng-manager = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/lemonldap-ng-manager-2.23.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_lemonldap-ng-manager;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lemonldap-ng-manager}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/lemonldap-ng-manager-2.23.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_lemonldap-ng-manager;unpack=0"
 SRC_URI[x86_64_v2_lemonldap-ng-manager.sha256sum] = "78087abfd08bece733183685c32a712a00ddf26eb7d63cf3bb1ed184729afde1"
-RPROVIDES:lemonldap-ng-manager:x86_64_v2 = "virtual/perl_Lemonldap__NG__Common__Conf__DefaultValues_"
+RPROVIDES:lemonldap-ng-manager:append:x86_64_v2 = " virtual/perl_Lemonldap__NG__Common__Conf__DefaultValues_"
 
-URI_x86_64_v2_lemonldap-ng-portal = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/lemonldap-ng-portal-2.23.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_lemonldap-ng-portal;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lemonldap-ng-portal}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/lemonldap-ng-portal-2.23.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_lemonldap-ng-portal;unpack=0"
 SRC_URI[x86_64_v2_lemonldap-ng-portal.sha256sum] = "16612bd6e1ae427b3334faa09f1d93b41b4a283226eee08d3714818e5ffabfde"
 
-URI_x86_64_v2_lemonldap-ng-selinux = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/lemonldap-ng-selinux-2.23.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_lemonldap-ng-selinux;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lemonldap-ng-selinux}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/lemonldap-ng-selinux-2.23.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_lemonldap-ng-selinux;unpack=0"
 SRC_URI[x86_64_v2_lemonldap-ng-selinux.sha256sum] = "f7bd9bf3de3a309c210445ac0d3575ceab54233ef332ec8e2ed005d639c4d111"
 
-URI_x86_64_v2_lemonldap-ng-test = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/lemonldap-ng-test-2.23.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_lemonldap-ng-test;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lemonldap-ng-test}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/lemonldap-ng-test-2.23.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_lemonldap-ng-test;unpack=0"
 SRC_URI[x86_64_v2_lemonldap-ng-test.sha256sum] = "2b798fc575106dcd644a641a0d03a04aff39727174cf47f658bbb0cadba509fa"
 
-URI_x86_64_v2_lemonldap-ng-uwsgi-app = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/lemonldap-ng-uwsgi-app-2.23.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_lemonldap-ng-uwsgi-app;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lemonldap-ng-uwsgi-app}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/lemonldap-ng-uwsgi-app-2.23.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_lemonldap-ng-uwsgi-app;unpack=0"
 SRC_URI[x86_64_v2_lemonldap-ng-uwsgi-app.sha256sum] = "4b48c8b6054ac879c04e6f98f129ebbd59eaa6d92920f56ec1afc829aca42f93"
 
-URI_x86_64_v2_perl-Lemonldap-NG-SSOaaS-Apache-Client = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Lemonldap-NG-SSOaaS-Apache-Client-2.23.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Lemonldap-NG-SSOaaS-Apache-Client;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Lemonldap-NG-SSOaaS-Apache-Client}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Lemonldap-NG-SSOaaS-Apache-Client-2.23.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Lemonldap-NG-SSOaaS-Apache-Client;unpack=0"
 SRC_URI[x86_64_v2_perl-Lemonldap-NG-SSOaaS-Apache-Client.sha256sum] = "b0d96584096f138b8a6c40d5187a1804c9b67164fd20334e0f85c7f35d1855d1"
 
-URI_aarch64_lemonldap-ng = "${EPEL_MIRROR}/aarch64/Packages/l/lemonldap-ng-2.23.3-1.el10_3.noarch.rpm;name=aarch64_lemonldap-ng;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lemonldap-ng}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/lemonldap-ng-2.23.3-1.el10_3.noarch.rpm;name=aarch64_lemonldap-ng;unpack=0"
 SRC_URI[aarch64_lemonldap-ng.sha256sum] = "e84b6f58cd0aec25cc9a2285a963ee5a30871d0c99f7ac224d3d47e2cd71a741"
 
-URI_aarch64_lemonldap-ng-common = "${EPEL_MIRROR}/aarch64/Packages/l/lemonldap-ng-common-2.23.3-1.el10_3.noarch.rpm;name=aarch64_lemonldap-ng-common;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lemonldap-ng-common}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/lemonldap-ng-common-2.23.3-1.el10_3.noarch.rpm;name=aarch64_lemonldap-ng-common;unpack=0"
 SRC_URI[aarch64_lemonldap-ng-common.sha256sum] = "c64121ec8a925c2a2997aaac041510027d8f205fefa7c0abf09c2d87359fdcc3"
-RPROVIDES:lemonldap-ng-common:aarch64 = "virtual/perl_Lemonldap__NG__Common__Conf__DefaultValues_"
+RPROVIDES:lemonldap-ng-common:append:aarch64 = " virtual/perl_Lemonldap__NG__Common__Conf__DefaultValues_"
 
-URI_aarch64_lemonldap-ng-doc = "${EPEL_MIRROR}/aarch64/Packages/l/lemonldap-ng-doc-2.23.3-1.el10_3.noarch.rpm;name=aarch64_lemonldap-ng-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lemonldap-ng-doc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/lemonldap-ng-doc-2.23.3-1.el10_3.noarch.rpm;name=aarch64_lemonldap-ng-doc;unpack=0"
 SRC_URI[aarch64_lemonldap-ng-doc.sha256sum] = "88ddfe87ec13373b0735f94d6a54cfc61c330444ba2f4d0f0f322b570d47a235"
 
-URI_aarch64_lemonldap-ng-fastcgi-server = "${EPEL_MIRROR}/aarch64/Packages/l/lemonldap-ng-fastcgi-server-2.23.3-1.el10_3.noarch.rpm;name=aarch64_lemonldap-ng-fastcgi-server;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lemonldap-ng-fastcgi-server}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/lemonldap-ng-fastcgi-server-2.23.3-1.el10_3.noarch.rpm;name=aarch64_lemonldap-ng-fastcgi-server;unpack=0"
 SRC_URI[aarch64_lemonldap-ng-fastcgi-server.sha256sum] = "7b7156e72a4a41a92d29ec1896d9f5acda60af8cdccae315a7f624c44e71e3fe"
 
-URI_aarch64_lemonldap-ng-handler = "${EPEL_MIRROR}/aarch64/Packages/l/lemonldap-ng-handler-2.23.3-1.el10_3.noarch.rpm;name=aarch64_lemonldap-ng-handler;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lemonldap-ng-handler}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/lemonldap-ng-handler-2.23.3-1.el10_3.noarch.rpm;name=aarch64_lemonldap-ng-handler;unpack=0"
 SRC_URI[aarch64_lemonldap-ng-handler.sha256sum] = "806311b1142aa41fcefae75c42c163a2ed9ff174ab7fd0a42dfd887a967e9c79"
 
-URI_aarch64_lemonldap-ng-manager = "${EPEL_MIRROR}/aarch64/Packages/l/lemonldap-ng-manager-2.23.3-1.el10_3.noarch.rpm;name=aarch64_lemonldap-ng-manager;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lemonldap-ng-manager}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/lemonldap-ng-manager-2.23.3-1.el10_3.noarch.rpm;name=aarch64_lemonldap-ng-manager;unpack=0"
 SRC_URI[aarch64_lemonldap-ng-manager.sha256sum] = "938f4f49d3f53d72cc94718c8ea5b3b8efdc5aa5fa36e73c218d3d5da34da223"
-RPROVIDES:lemonldap-ng-manager:aarch64 = "virtual/perl_Lemonldap__NG__Common__Conf__DefaultValues_"
+RPROVIDES:lemonldap-ng-manager:append:aarch64 = " virtual/perl_Lemonldap__NG__Common__Conf__DefaultValues_"
 
-URI_aarch64_lemonldap-ng-portal = "${EPEL_MIRROR}/aarch64/Packages/l/lemonldap-ng-portal-2.23.3-1.el10_3.noarch.rpm;name=aarch64_lemonldap-ng-portal;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lemonldap-ng-portal}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/lemonldap-ng-portal-2.23.3-1.el10_3.noarch.rpm;name=aarch64_lemonldap-ng-portal;unpack=0"
 SRC_URI[aarch64_lemonldap-ng-portal.sha256sum] = "e3c3cf7b9ef90882f0b775602ed2085e2a6d755b1c87282ccfe06afc428018d4"
 
-URI_aarch64_lemonldap-ng-selinux = "${EPEL_MIRROR}/aarch64/Packages/l/lemonldap-ng-selinux-2.23.3-1.el10_3.noarch.rpm;name=aarch64_lemonldap-ng-selinux;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lemonldap-ng-selinux}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/lemonldap-ng-selinux-2.23.3-1.el10_3.noarch.rpm;name=aarch64_lemonldap-ng-selinux;unpack=0"
 SRC_URI[aarch64_lemonldap-ng-selinux.sha256sum] = "4e29842e526dd5cfc836c60e48babca6d39efa2f7388d3dcba3c01c39ab44699"
 
-URI_aarch64_lemonldap-ng-test = "${EPEL_MIRROR}/aarch64/Packages/l/lemonldap-ng-test-2.23.3-1.el10_3.noarch.rpm;name=aarch64_lemonldap-ng-test;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lemonldap-ng-test}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/lemonldap-ng-test-2.23.3-1.el10_3.noarch.rpm;name=aarch64_lemonldap-ng-test;unpack=0"
 SRC_URI[aarch64_lemonldap-ng-test.sha256sum] = "996b5b6da20781b690f6f7038e859bad014ab89de9bd9188ea44af0fd99e37a2"
 
-URI_aarch64_lemonldap-ng-uwsgi-app = "${EPEL_MIRROR}/aarch64/Packages/l/lemonldap-ng-uwsgi-app-2.23.3-1.el10_3.noarch.rpm;name=aarch64_lemonldap-ng-uwsgi-app;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lemonldap-ng-uwsgi-app}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/lemonldap-ng-uwsgi-app-2.23.3-1.el10_3.noarch.rpm;name=aarch64_lemonldap-ng-uwsgi-app;unpack=0"
 SRC_URI[aarch64_lemonldap-ng-uwsgi-app.sha256sum] = "2595e986e53810acccaa156214793623ce2a5be80e8f620c565fa27c1ff028f8"
 
-URI_aarch64_perl-Lemonldap-NG-SSOaaS-Apache-Client = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Lemonldap-NG-SSOaaS-Apache-Client-2.23.3-1.el10_3.noarch.rpm;name=aarch64_perl-Lemonldap-NG-SSOaaS-Apache-Client;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Lemonldap-NG-SSOaaS-Apache-Client}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Lemonldap-NG-SSOaaS-Apache-Client-2.23.3-1.el10_3.noarch.rpm;name=aarch64_perl-Lemonldap-NG-SSOaaS-Apache-Client;unpack=0"
 SRC_URI[aarch64_perl-Lemonldap-NG-SSOaaS-Apache-Client.sha256sum] = "f2857a3169830d1833b3429cb8cb7a5d54d207760a2754e97bc1fa0a436211f3"
 
 RDEPENDS:lemonldap-ng = " \
@@ -355,7 +348,3 @@ RDEPENDS:perl-Lemonldap-NG-SSOaaS-Apache-Client = " \
  perl-constant \
  perl-libs \
  "
-
-PROVIDES:append:x86_64_v2 = " rpm/virtual/perl_Lemonldap__NG__Common__Conf__DefaultValues_"
-
-PROVIDES:append:aarch64 = " rpm/virtual/perl_Lemonldap__NG__Common__Conf__DefaultValues_"

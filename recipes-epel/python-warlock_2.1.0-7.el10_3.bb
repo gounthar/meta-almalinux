@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-warlock"
 PV = "2.1.0"
 PR = "7.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-warlock \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-warlock \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-warlock-2.1.0-7.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-warlock-2.1.0-7.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f4497a603592a437afcc1ddc89a26bd032c65a233705ee799124de584b6beafa"
 
-URI_x86_64_v2_python3-warlock = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-warlock-2.1.0-7.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-warlock;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-warlock}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-warlock-2.1.0-7.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-warlock;unpack=0"
 SRC_URI[x86_64_v2_python3-warlock.sha256sum] = "d864ae5dccf2adf806d7b64142843041daf7123489c4fcae39799f180dd2631f"
 
-URI_aarch64_python3-warlock = "${EPEL_MIRROR}/aarch64/Packages/p/python3-warlock-2.1.0-7.el10_3.noarch.rpm;name=aarch64_python3-warlock;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-warlock}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-warlock-2.1.0-7.el10_3.noarch.rpm;name=aarch64_python3-warlock;unpack=0"
 SRC_URI[aarch64_python3-warlock.sha256sum] = "b203630d0d5f38463196cb988a111dcecac5c39aff04101845610ab3a65c55ef"
 
 RDEPENDS:python3-warlock = " \

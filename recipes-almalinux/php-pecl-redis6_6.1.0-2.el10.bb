@@ -9,19 +9,19 @@ PACKAGES = " \
  php-pecl-redis6 \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/php-pecl-redis6-6.1.0-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/php-pecl-redis6-6.1.0-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "70d542f40289dac2cbdd3a68f8d8a54b8e9f3176997034aaf7fbe3fa2b98fd16"
 
-URI_x86_64_v2_php-pecl-redis6 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/php-pecl-redis6-6.1.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_php-pecl-redis6;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_php-pecl-redis6}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/php-pecl-redis6-6.1.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_php-pecl-redis6;unpack=0"
 SRC_URI[x86_64_v2_php-pecl-redis6.sha256sum] = "8f37eb834ded85753cc3a8697592dad2096db759d564fdf04dbf36ed2e14a433"
-RPROVIDES:php-pecl-redis6:x86_64_v2 = "virtual/php-pecl-redis6_or_php-pecl-redis5"
+RPROVIDES:php-pecl-redis6:append:x86_64_v2 = " virtual/php-pecl-redis6_or_php-pecl-redis5"
 
-URI_aarch64_php-pecl-redis6 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/php-pecl-redis6-6.1.0-2.el10.aarch64.rpm;name=aarch64_php-pecl-redis6;unpack=0"
-SRC_URI:append = " ${URI_aarch64_php-pecl-redis6}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/php-pecl-redis6-6.1.0-2.el10.aarch64.rpm;name=aarch64_php-pecl-redis6;unpack=0"
 SRC_URI[aarch64_php-pecl-redis6.sha256sum] = "4c4724f5e6ddb35cbdc7e800c331ac3abed51f326c1f86004babd1cb32d8d4e5"
-RPROVIDES:php-pecl-redis6:aarch64 = "virtual/php-pecl-redis6_or_php-pecl-redis5"
+RPROVIDES:php-pecl-redis6:append:aarch64 = " virtual/php-pecl-redis6_or_php-pecl-redis5"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/php-pecl-redis6-6.1.0-2.el10.riscv64.rpm;name=riscv64_php-pecl-redis6;unpack=0"
+SRC_URI[riscv64_php-pecl-redis6.sha256sum] = "e72c99344958200aa09bc1394f2db713087d58f346933586b0428309e1aecb41"
 
 RDEPENDS:php-pecl-redis6:x86_64_v2 = " \
  glibc \
@@ -37,7 +37,10 @@ RDEPENDS:php-pecl-redis6:aarch64 = " \
  php-common \
  virtual/php-json_aarch-64_ \
 "
-
-PROVIDES:append:x86_64_v2 = " rpm/virtual/php-pecl-redis6_or_php-pecl-redis5"
-
-PROVIDES:append:aarch64 = " rpm/virtual/php-pecl-redis6_or_php-pecl-redis5"
+RDEPENDS:php-pecl-redis6:riscv64 = " \
+ glibc \
+ libzstd \
+ lz4-libs \
+ php-common \
+ virtual/php-json_riscv-64_ \
+"

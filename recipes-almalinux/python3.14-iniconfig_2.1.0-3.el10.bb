@@ -9,17 +9,17 @@ PACKAGES = " \
  python3.14-iniconfig \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/python3.14-iniconfig-2.1.0-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/python3.14-iniconfig-2.1.0-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a42dd7db3ab937fa404a807f761511b5b7b681e0d29c2fdda987bb7c436bd2bc"
 
-URI_x86_64_v2_python3.14-iniconfig = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3.14-iniconfig-2.1.0-3.el10.noarch.rpm;name=x86_64_v2_python3.14-iniconfig;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3.14-iniconfig}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3.14-iniconfig-2.1.0-3.el10.noarch.rpm;name=x86_64_v2_python3.14-iniconfig;unpack=0"
 SRC_URI[x86_64_v2_python3.14-iniconfig.sha256sum] = "0023b3db3b797fb63d2850506c69d49bd56d4545e1ebe8ad714bcc6c7ee4465c"
 
-URI_aarch64_python3.14-iniconfig = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3.14-iniconfig-2.1.0-3.el10.noarch.rpm;name=aarch64_python3.14-iniconfig;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3.14-iniconfig}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3.14-iniconfig-2.1.0-3.el10.noarch.rpm;name=aarch64_python3.14-iniconfig;unpack=0"
 SRC_URI[aarch64_python3.14-iniconfig.sha256sum] = "0023b3db3b797fb63d2850506c69d49bd56d4545e1ebe8ad714bcc6c7ee4465c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/python3.14-iniconfig-2.1.0-3.el10.noarch.rpm;name=riscv64_python3.14-iniconfig;unpack=0"
+SRC_URI[riscv64_python3.14-iniconfig.sha256sum] = "0023b3db3b797fb63d2850506c69d49bd56d4545e1ebe8ad714bcc6c7ee4465c"
 
 RDEPENDS:python3.14-iniconfig = " \
  python3.14 \

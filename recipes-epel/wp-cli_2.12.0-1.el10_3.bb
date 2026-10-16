@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "wp-cli"
 PV = "2.12.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  wp-cli \
- "
+"
+PACKAGES:aarch64 = " \
+ wp-cli \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/w/wp-cli-2.12.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/w/wp-cli-2.12.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "9d137602e5118d7a67b955065aaf86856e31bcb6f47791193cc3e0db64a07b3e"
 
-URI_x86_64_v2_wp-cli = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/wp-cli-2.12.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_wp-cli;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_wp-cli}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/wp-cli-2.12.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_wp-cli;unpack=0"
 SRC_URI[x86_64_v2_wp-cli.sha256sum] = "9259607ba7e714b4dcd6b09b35808a7db6456b7d6bf006f8c4d0e286460e1968"
 
-URI_aarch64_wp-cli = "${EPEL_MIRROR}/aarch64/Packages/w/wp-cli-2.12.0-1.el10_3.noarch.rpm;name=aarch64_wp-cli;unpack=0"
-SRC_URI:append = " ${URI_aarch64_wp-cli}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/w/wp-cli-2.12.0-1.el10_3.noarch.rpm;name=aarch64_wp-cli;unpack=0"
 SRC_URI[aarch64_wp-cli.sha256sum] = "69f4b72108a5ef4103a953c2ba73965c565bab5600316f54c4fe63de7aff68e5"
 
 RDEPENDS:wp-cli = " \

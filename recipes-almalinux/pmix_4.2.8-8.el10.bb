@@ -11,33 +11,35 @@ PACKAGES = " \
  pmix-tools \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/pmix-4.2.8-8.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/pmix-4.2.8-8.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "376c273f97cd6d7b573b0536b120da45e3150760e09fe469fe8e13bf3297c36d"
 
-URI_x86_64_v2_pmix = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/pmix-4.2.8-8.el10.x86_64_v2.rpm;name=x86_64_v2_pmix;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pmix}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/pmix-4.2.8-8.el10.x86_64_v2.rpm;name=x86_64_v2_pmix;unpack=0"
 SRC_URI[x86_64_v2_pmix.sha256sum] = "335bcf9b06536c04f4bb21a771ce0b12028b0a6e55c2df067bc0eaf6715ce968"
 
-URI_x86_64_v2_pmix-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/pmix-devel-4.2.8-8.el10.x86_64_v2.rpm;name=x86_64_v2_pmix-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pmix-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/pmix-devel-4.2.8-8.el10.x86_64_v2.rpm;name=x86_64_v2_pmix-devel;unpack=0"
 SRC_URI[x86_64_v2_pmix-devel.sha256sum] = "bf9ed3ba7a9416e5ca6606075b42c6bb908ff5818f16bd0d97c2796f029d3a44"
 
-URI_x86_64_v2_pmix-tools = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/pmix-tools-4.2.8-8.el10.x86_64_v2.rpm;name=x86_64_v2_pmix-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pmix-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/pmix-tools-4.2.8-8.el10.x86_64_v2.rpm;name=x86_64_v2_pmix-tools;unpack=0"
 SRC_URI[x86_64_v2_pmix-tools.sha256sum] = "1bd9bf9cd6dd20c0252108b51baa1dd9f8d185437f96a894898459f7c026248a"
 
-URI_aarch64_pmix = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/pmix-4.2.8-8.el10.aarch64.rpm;name=aarch64_pmix;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pmix}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/pmix-4.2.8-8.el10.aarch64.rpm;name=aarch64_pmix;unpack=0"
 SRC_URI[aarch64_pmix.sha256sum] = "d6a46ed43a4129f13dd4c71bdec8972066826e1214e6ce853fcb041202843c27"
 
-URI_aarch64_pmix-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/pmix-devel-4.2.8-8.el10.aarch64.rpm;name=aarch64_pmix-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pmix-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/pmix-devel-4.2.8-8.el10.aarch64.rpm;name=aarch64_pmix-devel;unpack=0"
 SRC_URI[aarch64_pmix-devel.sha256sum] = "10c7566968cde5291df161dee635047a31ecc5cba9764f1ab1bc7e4e993c2d3a"
 
-URI_aarch64_pmix-tools = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/pmix-tools-4.2.8-8.el10.aarch64.rpm;name=aarch64_pmix-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pmix-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/pmix-tools-4.2.8-8.el10.aarch64.rpm;name=aarch64_pmix-tools;unpack=0"
 SRC_URI[aarch64_pmix-tools.sha256sum] = "20df13efa310bf9ea575e7c96a7bd0c859f7a18aa1410704b92d260db3892dbb"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/pmix-4.2.8-8.el10.riscv64.rpm;name=riscv64_pmix;unpack=0"
+SRC_URI[riscv64_pmix.sha256sum] = "029522bffcc153fd88eaf8b125ce33bbc0e21abcdea4de94e55271e3e71d2911"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/pmix-devel-4.2.8-8.el10.riscv64.rpm;name=riscv64_pmix-devel;unpack=0"
+SRC_URI[riscv64_pmix-devel.sha256sum] = "1dbe00470759ff83a5ff7c35e8c5e61dc8e2ad2d908b51c1d094b06c142b62f0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/pmix-tools-4.2.8-8.el10.riscv64.rpm;name=riscv64_pmix-tools;unpack=0"
+SRC_URI[riscv64_pmix-tools.sha256sum] = "8629f893b6d990b32770b41907ce4604a359c2879858097139dbf912740aee6f"
 
 RDEPENDS:pmix = " \
  glibc \

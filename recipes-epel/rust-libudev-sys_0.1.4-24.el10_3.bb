@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-libudev-sys"
 PV = "0.1.4"
 PR = "24.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-libudev-sys+default-devel \
  rust-libudev-sys-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-libudev-sys+default-devel \
+ rust-libudev-sys-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-libudev-sys-0.1.4-24.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-libudev-sys-0.1.4-24.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c8158cd450e5a20830cdaf946a6d3693309bdf093e0b1f4131d4c7e761ee724d"
 
-URI_x86_64_v2_rust-libudev-sys+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-libudev-sys+default-devel-0.1.4-24.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-libudev-sys+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-libudev-sys+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-libudev-sys+default-devel-0.1.4-24.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-libudev-sys+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-libudev-sys+default-devel.sha256sum] = "40dac8b8c3def87f2c1bdb2bf8ea1728b4eb87676ad1897f5547bec89e6a8fc6"
 
-URI_x86_64_v2_rust-libudev-sys-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-libudev-sys-devel-0.1.4-24.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-libudev-sys-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-libudev-sys-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-libudev-sys-devel-0.1.4-24.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-libudev-sys-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-libudev-sys-devel.sha256sum] = "754ce8fdfc4af3920a6aaff5884e362059b10e86d2a02d152ae41bb90efbcee6"
 
-URI_aarch64_rust-libudev-sys+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-libudev-sys+default-devel-0.1.4-24.el10_3.noarch.rpm;name=aarch64_rust-libudev-sys+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-libudev-sys+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-libudev-sys+default-devel-0.1.4-24.el10_3.noarch.rpm;name=aarch64_rust-libudev-sys+default-devel;unpack=0"
 SRC_URI[aarch64_rust-libudev-sys+default-devel.sha256sum] = "7d980a9dbfb929e0fb386e0d8d16bde13b8b7762c9b1bc36660e2b1caea961e5"
 
-URI_aarch64_rust-libudev-sys-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-libudev-sys-devel-0.1.4-24.el10_3.noarch.rpm;name=aarch64_rust-libudev-sys-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-libudev-sys-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-libudev-sys-devel-0.1.4-24.el10_3.noarch.rpm;name=aarch64_rust-libudev-sys-devel;unpack=0"
 SRC_URI[aarch64_rust-libudev-sys-devel.sha256sum] = "9004a9ff7e553c508dd02fb5f51c715aa8d12fe8d8d9950979e8ed1aa1050c61"
 
 RDEPENDS:rust-libudev-sys+default-devel = " \

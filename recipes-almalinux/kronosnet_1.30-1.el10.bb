@@ -10,25 +10,26 @@ PACKAGES = " \
  libknet1-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/kronosnet-1.30-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/kronosnet-1.30-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f0e95b95d3b0b739de54c19b66dec344a8967245bed5b6e664637c32f1371196"
 
-URI_x86_64_v2_libknet1 = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libknet1-1.30-1.el10.x86_64_v2.rpm;name=x86_64_v2_libknet1;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libknet1}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libknet1-1.30-1.el10.x86_64_v2.rpm;name=x86_64_v2_libknet1;unpack=0"
 SRC_URI[x86_64_v2_libknet1.sha256sum] = "362bef23e1f0ab94de96fe5131cd6a7eb56de8c7a01128778110362b97aad294"
 
-URI_x86_64_v2_libknet1-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libknet1-devel-1.30-1.el10.x86_64_v2.rpm;name=x86_64_v2_libknet1-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libknet1-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libknet1-devel-1.30-1.el10.x86_64_v2.rpm;name=x86_64_v2_libknet1-devel;unpack=0"
 SRC_URI[x86_64_v2_libknet1-devel.sha256sum] = "58d5e2c559c2cd39db78ffd463fdaa534fa8f24297960d752f88ee9937359b83"
 
-URI_aarch64_libknet1 = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libknet1-1.30-1.el10.aarch64.rpm;name=aarch64_libknet1;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libknet1}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libknet1-1.30-1.el10.aarch64.rpm;name=aarch64_libknet1;unpack=0"
 SRC_URI[aarch64_libknet1.sha256sum] = "59cd59ef7f5f17ce7e015000550b05aa5125ac65e36de3229e2c69551526752a"
 
-URI_aarch64_libknet1-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libknet1-devel-1.30-1.el10.aarch64.rpm;name=aarch64_libknet1-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libknet1-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libknet1-devel-1.30-1.el10.aarch64.rpm;name=aarch64_libknet1-devel;unpack=0"
 SRC_URI[aarch64_libknet1-devel.sha256sum] = "0e2507128154a370fc876ba2d1f067e9430db15902bdb470d126699d7ea088ff"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libknet1-1.30-1.el10.riscv64.rpm;name=riscv64_libknet1;unpack=0"
+SRC_URI[riscv64_libknet1.sha256sum] = "f53ae09ef72d1e7b30a774bce5db4ae7a51d2839c7e2b637c16d0886e370ab8d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libknet1-devel-1.30-1.el10.riscv64.rpm;name=riscv64_libknet1-devel;unpack=0"
+SRC_URI[riscv64_libknet1-devel.sha256sum] = "e194d5880bdb4444502277bf8fbb602b9e1155778ec5a6e667468674913dd2a9"
 
 RDEPENDS:libknet1 = " \
  glibc \

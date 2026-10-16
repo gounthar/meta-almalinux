@@ -10,25 +10,26 @@ PACKAGES = " \
  libdvdnav-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libdvdnav-6.1.1-10.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libdvdnav-6.1.1-10.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d65a2df2f0feaaa31c9d9896242572847824c9d792d87a8854d8effd58bace9a"
 
-URI_x86_64_v2_libdvdnav = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libdvdnav-6.1.1-10.el10.x86_64_v2.rpm;name=x86_64_v2_libdvdnav;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libdvdnav}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libdvdnav-6.1.1-10.el10.x86_64_v2.rpm;name=x86_64_v2_libdvdnav;unpack=0"
 SRC_URI[x86_64_v2_libdvdnav.sha256sum] = "6a875527039e1c6826f6c96d0d4d90d3986b16771a76e7d082bb400d02ff211d"
 
-URI_x86_64_v2_libdvdnav-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libdvdnav-devel-6.1.1-10.el10.x86_64_v2.rpm;name=x86_64_v2_libdvdnav-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libdvdnav-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libdvdnav-devel-6.1.1-10.el10.x86_64_v2.rpm;name=x86_64_v2_libdvdnav-devel;unpack=0"
 SRC_URI[x86_64_v2_libdvdnav-devel.sha256sum] = "dbf4219663c9e55911ce02e120648be4a3220d1be07b8af3419edd8591b5001b"
 
-URI_aarch64_libdvdnav = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libdvdnav-6.1.1-10.el10.aarch64.rpm;name=aarch64_libdvdnav;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libdvdnav}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libdvdnav-6.1.1-10.el10.aarch64.rpm;name=aarch64_libdvdnav;unpack=0"
 SRC_URI[aarch64_libdvdnav.sha256sum] = "c6d9c366ef27ee37d64a016ccae7d3ee6370ae230c9bb40a8846ea9cc9d8462b"
 
-URI_aarch64_libdvdnav-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libdvdnav-devel-6.1.1-10.el10.aarch64.rpm;name=aarch64_libdvdnav-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libdvdnav-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libdvdnav-devel-6.1.1-10.el10.aarch64.rpm;name=aarch64_libdvdnav-devel;unpack=0"
 SRC_URI[aarch64_libdvdnav-devel.sha256sum] = "888dbdf1ff2a601a358f5dc909ee0c096364ef0625c34c5fa776afe87264ff8e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libdvdnav-6.1.1-10.el10.riscv64.rpm;name=riscv64_libdvdnav;unpack=0"
+SRC_URI[riscv64_libdvdnav.sha256sum] = "df093ca9788c13deb432553fdefbdde604ece2c1b75147aae8fe1c6444e7291c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libdvdnav-devel-6.1.1-10.el10.riscv64.rpm;name=riscv64_libdvdnav-devel;unpack=0"
+SRC_URI[riscv64_libdvdnav-devel.sha256sum] = "b377806c6117b02f9c5b1cb9f9e027392795812cc2d73c57a3802b828ebf942e"
 
 RDEPENDS:libdvdnav = " \
  glibc \

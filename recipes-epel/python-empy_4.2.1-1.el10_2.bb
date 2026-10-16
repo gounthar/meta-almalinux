@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-empy"
 PV = "4.2.1"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-empy \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-empy \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-empy-4.2.1-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-empy-4.2.1-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7feea16ff91abd00abd1a35e812bf3e4007b7ab789e448e3dd34c4a46aaa2d7c"
 
-URI_x86_64_v2_python3-empy = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-empy-4.2.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-empy;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-empy}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-empy-4.2.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-empy;unpack=0"
 SRC_URI[x86_64_v2_python3-empy.sha256sum] = "b3f29795c34cf1ea00c0acf7f01d66c1e8e891b5252de88e9af535b44d3d3a80"
 
-URI_aarch64_python3-empy = "${EPEL_MIRROR}/aarch64/Packages/p/python3-empy-4.2.1-1.el10_2.noarch.rpm;name=aarch64_python3-empy;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-empy}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-empy-4.2.1-1.el10_2.noarch.rpm;name=aarch64_python3-empy;unpack=0"
 SRC_URI[aarch64_python3-empy.sha256sum] = "9c955a36d18540d12e53afc4365b34127e5dff65c9258b051889758d798e0d9b"
 
 RDEPENDS:python3-empy = " \

@@ -9,17 +9,17 @@ PACKAGES = " \
  spirv-headers-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/spirv-headers-1.5.5-28.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/spirv-headers-1.5.5-28.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "5e541621ae2da45bef64d886515276bc5296db0221f9f3b3b48cabc776fd6767"
 
-URI_x86_64_v2_spirv-headers-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/spirv-headers-devel-1.5.5-28.el10.noarch.rpm;name=x86_64_v2_spirv-headers-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_spirv-headers-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/spirv-headers-devel-1.5.5-28.el10.noarch.rpm;name=x86_64_v2_spirv-headers-devel;unpack=0"
 SRC_URI[x86_64_v2_spirv-headers-devel.sha256sum] = "c39390323342f8d7bfda54464e2261ab153ad5f3bdaccc54e981907641b5e170"
 
-URI_aarch64_spirv-headers-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/spirv-headers-devel-1.5.5-28.el10.noarch.rpm;name=aarch64_spirv-headers-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_spirv-headers-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/spirv-headers-devel-1.5.5-28.el10.noarch.rpm;name=aarch64_spirv-headers-devel;unpack=0"
 SRC_URI[aarch64_spirv-headers-devel.sha256sum] = "c39390323342f8d7bfda54464e2261ab153ad5f3bdaccc54e981907641b5e170"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/spirv-headers-devel-1.5.5-28.el10.noarch.rpm;name=riscv64_spirv-headers-devel;unpack=0"
+SRC_URI[riscv64_spirv-headers-devel.sha256sum] = "c39390323342f8d7bfda54464e2261ab153ad5f3bdaccc54e981907641b5e170"
 
 RDEPENDS:spirv-headers-devel = " \
  cmake-filesystem \

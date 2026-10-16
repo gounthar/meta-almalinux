@@ -16,73 +16,80 @@ PACKAGES = " \
  rrdtool-tcl \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/rrdtool-1.8.0-21.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/rrdtool-1.8.0-21.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "cf19b4b86287e36a91ae442b42eccee2336177d5483ecfb5320fc4420983d847"
 
-URI_x86_64_v2_python3-rrdtool = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3-rrdtool-1.8.0-21.el10.x86_64_v2.rpm;name=x86_64_v2_python3-rrdtool;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-rrdtool}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3-rrdtool-1.8.0-21.el10.x86_64_v2.rpm;name=x86_64_v2_python3-rrdtool;unpack=0"
 SRC_URI[x86_64_v2_python3-rrdtool.sha256sum] = "76430b634de3ae1d543661ef72715e2e5c8e727fff9dbba2e34f7d7cd5142d1e"
 
-URI_x86_64_v2_rrdtool = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/rrdtool-1.8.0-21.el10.x86_64_v2.rpm;name=x86_64_v2_rrdtool;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rrdtool}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/rrdtool-1.8.0-21.el10.x86_64_v2.rpm;name=x86_64_v2_rrdtool;unpack=0"
 SRC_URI[x86_64_v2_rrdtool.sha256sum] = "0d37d160c3f1ccfbe82400483fcdcd2c54b573e6f405366d5df786c60832f8a1"
 
-URI_x86_64_v2_rrdtool-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/rrdtool-devel-1.8.0-21.el10.x86_64_v2.rpm;name=x86_64_v2_rrdtool-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rrdtool-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/rrdtool-devel-1.8.0-21.el10.x86_64_v2.rpm;name=x86_64_v2_rrdtool-devel;unpack=0"
 SRC_URI[x86_64_v2_rrdtool-devel.sha256sum] = "67d52e2eae433dcb8a8905ceeaf8c42ea93e0ec6c8b2e8d6e9d885a93b5b97d4"
 
-URI_x86_64_v2_rrdtool-doc = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/rrdtool-doc-1.8.0-21.el10.x86_64_v2.rpm;name=x86_64_v2_rrdtool-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rrdtool-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/rrdtool-doc-1.8.0-21.el10.x86_64_v2.rpm;name=x86_64_v2_rrdtool-doc;unpack=0"
 SRC_URI[x86_64_v2_rrdtool-doc.sha256sum] = "0b14cc925ce5ec664c665efd6b074d94d2b0ac5c353f86a612d484a10e0f1556"
 
-URI_x86_64_v2_rrdtool-lua = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/rrdtool-lua-1.8.0-21.el10.x86_64_v2.rpm;name=x86_64_v2_rrdtool-lua;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rrdtool-lua}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/rrdtool-lua-1.8.0-21.el10.x86_64_v2.rpm;name=x86_64_v2_rrdtool-lua;unpack=0"
 SRC_URI[x86_64_v2_rrdtool-lua.sha256sum] = "afa797944148d0f218ee14ae3191ab2e6d2338bab598f2c32bc3c04ef84591db"
 
-URI_x86_64_v2_rrdtool-perl = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/rrdtool-perl-1.8.0-21.el10.x86_64_v2.rpm;name=x86_64_v2_rrdtool-perl;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rrdtool-perl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/rrdtool-perl-1.8.0-21.el10.x86_64_v2.rpm;name=x86_64_v2_rrdtool-perl;unpack=0"
 SRC_URI[x86_64_v2_rrdtool-perl.sha256sum] = "a217243f95e20035119743fa4d4adc55ad4e51db6740606187c44009bde3f4bd"
 
-URI_x86_64_v2_rrdtool-ruby = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/rrdtool-ruby-1.8.0-21.el10.x86_64_v2.rpm;name=x86_64_v2_rrdtool-ruby;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rrdtool-ruby}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/rrdtool-ruby-1.8.0-21.el10.x86_64_v2.rpm;name=x86_64_v2_rrdtool-ruby;unpack=0"
 SRC_URI[x86_64_v2_rrdtool-ruby.sha256sum] = "fb95550a0779600fd055bc0142697cb1d2e485ee6a324a4e9affcdab660244c2"
 
-URI_x86_64_v2_rrdtool-tcl = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/rrdtool-tcl-1.8.0-21.el10.x86_64_v2.rpm;name=x86_64_v2_rrdtool-tcl;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rrdtool-tcl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/rrdtool-tcl-1.8.0-21.el10.x86_64_v2.rpm;name=x86_64_v2_rrdtool-tcl;unpack=0"
 SRC_URI[x86_64_v2_rrdtool-tcl.sha256sum] = "5f8b3df5d04c4dd5dce84ef72431d421f27a889d42057bf98accf2234153863d"
 
-URI_aarch64_python3-rrdtool = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3-rrdtool-1.8.0-21.el10.aarch64.rpm;name=aarch64_python3-rrdtool;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-rrdtool}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3-rrdtool-1.8.0-21.el10.aarch64.rpm;name=aarch64_python3-rrdtool;unpack=0"
 SRC_URI[aarch64_python3-rrdtool.sha256sum] = "5fa4550eb86cae4a266bb20bdea16095a441fc6fd142277d50f72a8b80cb5899"
 
-URI_aarch64_rrdtool = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/rrdtool-1.8.0-21.el10.aarch64.rpm;name=aarch64_rrdtool;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rrdtool}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/rrdtool-1.8.0-21.el10.aarch64.rpm;name=aarch64_rrdtool;unpack=0"
 SRC_URI[aarch64_rrdtool.sha256sum] = "cac2cf79a02a41fc5da848d91c9f368d09c51e32ad0fb0a6bded90779d31d8ec"
 
-URI_aarch64_rrdtool-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/rrdtool-devel-1.8.0-21.el10.aarch64.rpm;name=aarch64_rrdtool-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rrdtool-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/rrdtool-devel-1.8.0-21.el10.aarch64.rpm;name=aarch64_rrdtool-devel;unpack=0"
 SRC_URI[aarch64_rrdtool-devel.sha256sum] = "ffa12ea901a6a597b9c4d59eaacf503ce4b5f6684efd71b606c3718f00e52345"
 
-URI_aarch64_rrdtool-doc = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/rrdtool-doc-1.8.0-21.el10.aarch64.rpm;name=aarch64_rrdtool-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rrdtool-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/rrdtool-doc-1.8.0-21.el10.aarch64.rpm;name=aarch64_rrdtool-doc;unpack=0"
 SRC_URI[aarch64_rrdtool-doc.sha256sum] = "3af459d6eb60283c133953896d3d95d6152249fc0bf12cc0e09c3d53daf6f6e0"
 
-URI_aarch64_rrdtool-lua = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/rrdtool-lua-1.8.0-21.el10.aarch64.rpm;name=aarch64_rrdtool-lua;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rrdtool-lua}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/rrdtool-lua-1.8.0-21.el10.aarch64.rpm;name=aarch64_rrdtool-lua;unpack=0"
 SRC_URI[aarch64_rrdtool-lua.sha256sum] = "1de7244098fa34f84d964fbb2c36c73f932ba35ad2a5535a4107cbbaaa8852cc"
 
-URI_aarch64_rrdtool-perl = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/rrdtool-perl-1.8.0-21.el10.aarch64.rpm;name=aarch64_rrdtool-perl;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rrdtool-perl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/rrdtool-perl-1.8.0-21.el10.aarch64.rpm;name=aarch64_rrdtool-perl;unpack=0"
 SRC_URI[aarch64_rrdtool-perl.sha256sum] = "35955a82ba7f3ab1ae2fc5908fe637f7e36b197b67523bffc543cdc379957ea4"
 
-URI_aarch64_rrdtool-ruby = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/rrdtool-ruby-1.8.0-21.el10.aarch64.rpm;name=aarch64_rrdtool-ruby;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rrdtool-ruby}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/rrdtool-ruby-1.8.0-21.el10.aarch64.rpm;name=aarch64_rrdtool-ruby;unpack=0"
 SRC_URI[aarch64_rrdtool-ruby.sha256sum] = "7f72443dc1d78c592f9201f0c5dfbac89d0b524654789395cd6f630f84833307"
 
-URI_aarch64_rrdtool-tcl = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/rrdtool-tcl-1.8.0-21.el10.aarch64.rpm;name=aarch64_rrdtool-tcl;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rrdtool-tcl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/rrdtool-tcl-1.8.0-21.el10.aarch64.rpm;name=aarch64_rrdtool-tcl;unpack=0"
 SRC_URI[aarch64_rrdtool-tcl.sha256sum] = "ca8c81ea892337ff074a56692633e89a536c6da7d0524260689d5aa07bf3c740"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/python3-rrdtool-1.8.0-21.el10.riscv64.rpm;name=riscv64_python3-rrdtool;unpack=0"
+SRC_URI[riscv64_python3-rrdtool.sha256sum] = "6f995758cf8cdfc86ad61e1318ab18e06666d82f56a87376f79c17d0360856c3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/rrdtool-1.8.0-21.el10.riscv64.rpm;name=riscv64_rrdtool;unpack=0"
+SRC_URI[riscv64_rrdtool.sha256sum] = "11d94be2fe4e10f4242a0a211e883ca91c0af3ef2ad5f91e62a13ed5b7ff15eb"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/rrdtool-devel-1.8.0-21.el10.riscv64.rpm;name=riscv64_rrdtool-devel;unpack=0"
+SRC_URI[riscv64_rrdtool-devel.sha256sum] = "24e73656591814f04696d5fa6e4a67242384733113631c1fed487191a0be87a1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/rrdtool-doc-1.8.0-21.el10.riscv64.rpm;name=riscv64_rrdtool-doc;unpack=0"
+SRC_URI[riscv64_rrdtool-doc.sha256sum] = "489d846da4c8a2436dc33fdfab39a94ab2f32a3c2c416fb28f9d352a29fb920e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/rrdtool-lua-1.8.0-21.el10.riscv64.rpm;name=riscv64_rrdtool-lua;unpack=0"
+SRC_URI[riscv64_rrdtool-lua.sha256sum] = "8c90e146e8a6e088e251ee9e4c7c67dc8a5e0d492adfa84645dea572c2a4f689"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/rrdtool-perl-1.8.0-21.el10.riscv64.rpm;name=riscv64_rrdtool-perl;unpack=0"
+SRC_URI[riscv64_rrdtool-perl.sha256sum] = "4056e5abcc73b984307917b144b13259a5ff373c539e3e1ff7775dc808fb30f9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/rrdtool-ruby-1.8.0-21.el10.riscv64.rpm;name=riscv64_rrdtool-ruby;unpack=0"
+SRC_URI[riscv64_rrdtool-ruby.sha256sum] = "082078d6e9d8fcc8960349a9be5fba89ab42f5dd125b8693506647b87118536a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/rrdtool-tcl-1.8.0-21.el10.riscv64.rpm;name=riscv64_rrdtool-tcl;unpack=0"
+SRC_URI[riscv64_rrdtool-tcl.sha256sum] = "aa8fa2899b7dcf6d30c882d6bbe16a716784cadb69cecfb81ddaef3316241011"
 
 RDEPENDS:python3-rrdtool = " \
  glibc \

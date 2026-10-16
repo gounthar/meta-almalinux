@@ -18,45 +18,38 @@ PACKAGES:aarch64 = " \
  ghc-html-entities-doc \
  ghc-html-entities-prof \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/c/cabal-rpm-2.3.2-8.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/c/cabal-rpm-2.3.2-8.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "5ac2796a7de9fcaaef0707ebee1f7499672b87af062e7137031d1bce05237ef2"
 
-URI_x86_64_v2_cabal-rpm = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/cabal-rpm-2.3.2-8.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_cabal-rpm;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cabal-rpm}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/cabal-rpm-2.3.2-8.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_cabal-rpm;unpack=0"
 SRC_URI[x86_64_v2_cabal-rpm.sha256sum] = "df0426d5ba05b1a14b016f11b8d4b8fd1bf93f2fb5ced7689e68a4c9d5b64eb2"
 
-URI_x86_64_v2_ghc-html-entities = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-html-entities-1.1.4.7-8.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-html-entities;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-html-entities}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-html-entities-1.1.4.7-8.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-html-entities;unpack=0"
 SRC_URI[x86_64_v2_ghc-html-entities.sha256sum] = "5499e9a88723d21ac06691ff4a0eee1c4efddd276a02741b83e305ad25a6226d"
 
-URI_x86_64_v2_ghc-html-entities-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-html-entities-devel-1.1.4.7-8.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-html-entities-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-html-entities-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-html-entities-devel-1.1.4.7-8.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-html-entities-devel;unpack=0"
 SRC_URI[x86_64_v2_ghc-html-entities-devel.sha256sum] = "95dc743acdb5b476526e506a5f662a65ca7f4a5f8d4d0cf0d54f8fbcd3b56c71"
 
-URI_x86_64_v2_ghc-html-entities-doc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-html-entities-doc-1.1.4.7-8.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_ghc-html-entities-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-html-entities-doc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-html-entities-doc-1.1.4.7-8.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_ghc-html-entities-doc;unpack=0"
 SRC_URI[x86_64_v2_ghc-html-entities-doc.sha256sum] = "ab3cc62a8cd7802427388a0edbc4eaf69a00b3789fb39d894957d9e1e8961211"
 
-URI_aarch64_cabal-rpm = "${EPEL_MIRROR}/aarch64/Packages/c/cabal-rpm-2.3.2-8.el10_2.aarch64.rpm;name=aarch64_cabal-rpm;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cabal-rpm}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/c/cabal-rpm-2.3.2-8.el10_2.aarch64.rpm;name=aarch64_cabal-rpm;unpack=0"
 SRC_URI[aarch64_cabal-rpm.sha256sum] = "938e373e7810614ad0e0a497a7c5738ef716d2aac215aab29e0c12b3b297a784"
 
-URI_aarch64_ghc-html-entities = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-html-entities-1.1.4.7-8.el10_2.aarch64.rpm;name=aarch64_ghc-html-entities;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-html-entities}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-html-entities-1.1.4.7-8.el10_2.aarch64.rpm;name=aarch64_ghc-html-entities;unpack=0"
 SRC_URI[aarch64_ghc-html-entities.sha256sum] = "88edcb77f3d9514d6d7ec00ad3126b0edcdf3e54f17a91a411e986a1a0cea060"
 
-URI_aarch64_ghc-html-entities-devel = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-html-entities-devel-1.1.4.7-8.el10_2.aarch64.rpm;name=aarch64_ghc-html-entities-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-html-entities-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-html-entities-devel-1.1.4.7-8.el10_2.aarch64.rpm;name=aarch64_ghc-html-entities-devel;unpack=0"
 SRC_URI[aarch64_ghc-html-entities-devel.sha256sum] = "66a5ecb6333d9a3b250ccd10b80c35d454de8bf47c522d48f7f2b6d902945ac7"
 
-URI_aarch64_ghc-html-entities-doc = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-html-entities-doc-1.1.4.7-8.el10_2.noarch.rpm;name=aarch64_ghc-html-entities-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-html-entities-doc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-html-entities-doc-1.1.4.7-8.el10_2.noarch.rpm;name=aarch64_ghc-html-entities-doc;unpack=0"
 SRC_URI[aarch64_ghc-html-entities-doc.sha256sum] = "4e381220434ca54ee1bbad33af5556c35c54aa8af39363d517c85b3b9841b462"
 
-URI_aarch64_ghc-html-entities-prof = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-html-entities-prof-1.1.4.7-8.el10_2.aarch64.rpm;name=aarch64_ghc-html-entities-prof;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-html-entities-prof}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-html-entities-prof-1.1.4.7-8.el10_2.aarch64.rpm;name=aarch64_ghc-html-entities-prof;unpack=0"
 SRC_URI[aarch64_ghc-html-entities-prof.sha256sum] = "787cfa256e8918d73620e476e6fc70d58ac747a03e710c83034e24430099d770"
 
 RDEPENDS:cabal-rpm = " \

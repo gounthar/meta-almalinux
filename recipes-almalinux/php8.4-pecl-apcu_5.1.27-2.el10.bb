@@ -10,27 +10,28 @@ PACKAGES = " \
  php8.4-pecl-apcu-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/php8.4-pecl-apcu-5.1.27-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/php8.4-pecl-apcu-5.1.27-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "41439a65963bfee96ca4ebf34e742952eb1029c15607a26ef3f77d13b761bc8f"
 
-URI_x86_64_v2_php8.4-pecl-apcu = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/php8.4-pecl-apcu-5.1.27-2.el10.x86_64_v2.rpm;name=x86_64_v2_php8.4-pecl-apcu;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_php8.4-pecl-apcu}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/php8.4-pecl-apcu-5.1.27-2.el10.x86_64_v2.rpm;name=x86_64_v2_php8.4-pecl-apcu;unpack=0"
 SRC_URI[x86_64_v2_php8.4-pecl-apcu.sha256sum] = "f4f6d4e4720663310c1261a84fd0d58b2289a86fc8f92f0146b218e16f05dc36"
-RPROVIDES:php8.4-pecl-apcu:x86_64_v2 = "virtual/php-pecl-apcu"
+RPROVIDES:php8.4-pecl-apcu:append:x86_64_v2 = " virtual/php-pecl-apcu"
 
-URI_x86_64_v2_php8.4-pecl-apcu-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/php8.4-pecl-apcu-devel-5.1.27-2.el10.x86_64_v2.rpm;name=x86_64_v2_php8.4-pecl-apcu-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_php8.4-pecl-apcu-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/php8.4-pecl-apcu-devel-5.1.27-2.el10.x86_64_v2.rpm;name=x86_64_v2_php8.4-pecl-apcu-devel;unpack=0"
 SRC_URI[x86_64_v2_php8.4-pecl-apcu-devel.sha256sum] = "a0fe031650bd99a34d3d7c7cf13f9ee68725b69a1a6676c69a1c444eac17d7b0"
 
-URI_aarch64_php8.4-pecl-apcu = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/php8.4-pecl-apcu-5.1.27-2.el10.aarch64.rpm;name=aarch64_php8.4-pecl-apcu;unpack=0"
-SRC_URI:append = " ${URI_aarch64_php8.4-pecl-apcu}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/php8.4-pecl-apcu-5.1.27-2.el10.aarch64.rpm;name=aarch64_php8.4-pecl-apcu;unpack=0"
 SRC_URI[aarch64_php8.4-pecl-apcu.sha256sum] = "00db106fdd82829232fc0f4c45fd013e489d7d5d5da0dae5d85b612915ef836c"
-RPROVIDES:php8.4-pecl-apcu:aarch64 = "virtual/php-pecl-apcu"
+RPROVIDES:php8.4-pecl-apcu:append:aarch64 = " virtual/php-pecl-apcu"
 
-URI_aarch64_php8.4-pecl-apcu-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/php8.4-pecl-apcu-devel-5.1.27-2.el10.aarch64.rpm;name=aarch64_php8.4-pecl-apcu-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_php8.4-pecl-apcu-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/php8.4-pecl-apcu-devel-5.1.27-2.el10.aarch64.rpm;name=aarch64_php8.4-pecl-apcu-devel;unpack=0"
 SRC_URI[aarch64_php8.4-pecl-apcu-devel.sha256sum] = "ebaece617b3a5c8c205a30d9dff708a9bcb244f9278bc530e17c857cc1b08bf2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/php8.4-pecl-apcu-5.1.27-2.el10.riscv64.rpm;name=riscv64_php8.4-pecl-apcu;unpack=0"
+SRC_URI[riscv64_php8.4-pecl-apcu.sha256sum] = "75c647f154a80552d8bc1828f56298e7b0f32d5d20d53a944ea3a0e7ec706416"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/php8.4-pecl-apcu-devel-5.1.27-2.el10.riscv64.rpm;name=riscv64_php8.4-pecl-apcu-devel;unpack=0"
+SRC_URI[riscv64_php8.4-pecl-apcu-devel.sha256sum] = "95b1f7c9e46b26cddaccf129a7e73776741dc820f3c6152e6189d2d844023ba5"
 
 RDEPENDS:php8.4-pecl-apcu = " \
  glibc \
@@ -41,7 +42,3 @@ RDEPENDS:php8.4-pecl-apcu-devel = " \
  php8.4-devel \
  php8.4-pecl-apcu \
  "
-
-PROVIDES:append:x86_64_v2 = " rpm/virtual/php-pecl-apcu"
-
-PROVIDES:append:aarch64 = " rpm/virtual/php-pecl-apcu"

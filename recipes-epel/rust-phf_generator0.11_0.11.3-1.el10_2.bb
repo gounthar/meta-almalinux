@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-phf_generator0.11"
 PV = "0.11.3"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-phf_generator0.11+default-devel \
  rust-phf_generator0.11-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-phf_generator0.11+default-devel \
+ rust-phf_generator0.11-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-phf_generator0.11-0.11.3-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-phf_generator0.11-0.11.3-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "817b9e8ac6020dc92a7397d454eea3fdbe0a528a90716978e23830fcefa7fe3f"
 
-URI_x86_64_v2_rust-phf_generator0.11+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-phf_generator0.11+default-devel-0.11.3-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-phf_generator0.11+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-phf_generator0.11+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-phf_generator0.11+default-devel-0.11.3-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-phf_generator0.11+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-phf_generator0.11+default-devel.sha256sum] = "72c0eea3a20c658c93a35314fbd0526c83c8acce0ebf48e79881af7ca6d45499"
 
-URI_x86_64_v2_rust-phf_generator0.11-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-phf_generator0.11-devel-0.11.3-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-phf_generator0.11-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-phf_generator0.11-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-phf_generator0.11-devel-0.11.3-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-phf_generator0.11-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-phf_generator0.11-devel.sha256sum] = "f9d775f48ab8c1d2f75189947e453be3bfe6b0b6ed7da3614a72687a5357dc40"
 
-URI_aarch64_rust-phf_generator0.11+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-phf_generator0.11+default-devel-0.11.3-1.el10_2.noarch.rpm;name=aarch64_rust-phf_generator0.11+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-phf_generator0.11+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-phf_generator0.11+default-devel-0.11.3-1.el10_2.noarch.rpm;name=aarch64_rust-phf_generator0.11+default-devel;unpack=0"
 SRC_URI[aarch64_rust-phf_generator0.11+default-devel.sha256sum] = "abc22ed0b79801ce72518e26f36c4607fdade5ce33e9908bffb990604c09cb01"
 
-URI_aarch64_rust-phf_generator0.11-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-phf_generator0.11-devel-0.11.3-1.el10_2.noarch.rpm;name=aarch64_rust-phf_generator0.11-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-phf_generator0.11-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-phf_generator0.11-devel-0.11.3-1.el10_2.noarch.rpm;name=aarch64_rust-phf_generator0.11-devel;unpack=0"
 SRC_URI[aarch64_rust-phf_generator0.11-devel.sha256sum] = "f4db6cc287fcdb340e7e78baac21a6454bd01d301430b512a18d9aeb6636df3e"
 
 RDEPENDS:rust-phf_generator0.11+default-devel = " \

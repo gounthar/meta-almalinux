@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-nalgebra-macros0.2"
 PV = "0.2.2"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-nalgebra-macros0.2+default-devel \
  rust-nalgebra-macros0.2-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-nalgebra-macros0.2+default-devel \
+ rust-nalgebra-macros0.2-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-nalgebra-macros0.2-0.2.2-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-nalgebra-macros0.2-0.2.2-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3377e0fee6463cb300b2d317cedaa9f53625de1be4690b383e76645047a9ef90"
 
-URI_x86_64_v2_rust-nalgebra-macros0.2+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-nalgebra-macros0.2+default-devel-0.2.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-nalgebra-macros0.2+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-nalgebra-macros0.2+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-nalgebra-macros0.2+default-devel-0.2.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-nalgebra-macros0.2+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-nalgebra-macros0.2+default-devel.sha256sum] = "dcbaaa6ed0c9ebc48d877de698ec67412131dff012571aabfa0df138ac32ddb1"
 
-URI_x86_64_v2_rust-nalgebra-macros0.2-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-nalgebra-macros0.2-devel-0.2.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-nalgebra-macros0.2-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-nalgebra-macros0.2-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-nalgebra-macros0.2-devel-0.2.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-nalgebra-macros0.2-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-nalgebra-macros0.2-devel.sha256sum] = "63cd8ff6df39b9d1ffc0df6554776c6c83edcf311b87210506bff29c0f8bb65c"
 
-URI_aarch64_rust-nalgebra-macros0.2+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-nalgebra-macros0.2+default-devel-0.2.2-1.el10_3.noarch.rpm;name=aarch64_rust-nalgebra-macros0.2+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-nalgebra-macros0.2+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-nalgebra-macros0.2+default-devel-0.2.2-1.el10_3.noarch.rpm;name=aarch64_rust-nalgebra-macros0.2+default-devel;unpack=0"
 SRC_URI[aarch64_rust-nalgebra-macros0.2+default-devel.sha256sum] = "75d5aa4571ca036528e00cb45e7cc499efd895623c2e2da3b50d60fb7879b86e"
 
-URI_aarch64_rust-nalgebra-macros0.2-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-nalgebra-macros0.2-devel-0.2.2-1.el10_3.noarch.rpm;name=aarch64_rust-nalgebra-macros0.2-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-nalgebra-macros0.2-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-nalgebra-macros0.2-devel-0.2.2-1.el10_3.noarch.rpm;name=aarch64_rust-nalgebra-macros0.2-devel;unpack=0"
 SRC_URI[aarch64_rust-nalgebra-macros0.2-devel.sha256sum] = "5504122d62f64a846ffc70b7f1da256fb70a80a900a49aa606e8f930fa46a8d2"
 
 RDEPENDS:rust-nalgebra-macros0.2+default-devel = " \

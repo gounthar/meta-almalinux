@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "fedora-repoquery"
 PV = "0.9.1"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  fedora-repoquery \
  fedora-repoquery-short \
- "
+"
+PACKAGES:aarch64 = " \
+ fedora-repoquery \
+ fedora-repoquery-short \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/f/fedora-repoquery-0.9.1-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/f/fedora-repoquery-0.9.1-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6175306dcbac2251176fafb3177415eb7d37750eabee9e824cd7b4df9934f235"
 
-URI_x86_64_v2_fedora-repoquery = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/fedora-repoquery-0.9.1-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_fedora-repoquery;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_fedora-repoquery}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/fedora-repoquery-0.9.1-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_fedora-repoquery;unpack=0"
 SRC_URI[x86_64_v2_fedora-repoquery.sha256sum] = "63c4fcc4c163e8146741893125b475418d2bc213f4641a1061b9eac6a1b0d69c"
 
-URI_x86_64_v2_fedora-repoquery-short = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/fedora-repoquery-short-0.9.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_fedora-repoquery-short;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_fedora-repoquery-short}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/fedora-repoquery-short-0.9.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_fedora-repoquery-short;unpack=0"
 SRC_URI[x86_64_v2_fedora-repoquery-short.sha256sum] = "a24f259d1d59fb3de96029497234e69e2146d4091c92ec9b1f6326800cee6aae"
 
-URI_aarch64_fedora-repoquery = "${EPEL_MIRROR}/aarch64/Packages/f/fedora-repoquery-0.9.1-1.el10_3.aarch64.rpm;name=aarch64_fedora-repoquery;unpack=0"
-SRC_URI:append = " ${URI_aarch64_fedora-repoquery}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/f/fedora-repoquery-0.9.1-1.el10_3.aarch64.rpm;name=aarch64_fedora-repoquery;unpack=0"
 SRC_URI[aarch64_fedora-repoquery.sha256sum] = "a4f0270dea72e84dab6a438bad0f65c4d1870fe7aba9cadbca4afbb9471fedde"
 
-URI_aarch64_fedora-repoquery-short = "${EPEL_MIRROR}/aarch64/Packages/f/fedora-repoquery-short-0.9.1-1.el10_3.noarch.rpm;name=aarch64_fedora-repoquery-short;unpack=0"
-SRC_URI:append = " ${URI_aarch64_fedora-repoquery-short}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/f/fedora-repoquery-short-0.9.1-1.el10_3.noarch.rpm;name=aarch64_fedora-repoquery-short;unpack=0"
 SRC_URI[aarch64_fedora-repoquery-short.sha256sum] = "443a869176b8dd1113034d4830d5638dce1c7a496dc02e6583de5543b5e336e5"
 
 RDEPENDS:fedora-repoquery = " \

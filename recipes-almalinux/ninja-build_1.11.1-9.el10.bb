@@ -9,17 +9,17 @@ PACKAGES = " \
  ninja-build \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/ninja-build-1.11.1-9.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/ninja-build-1.11.1-9.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b7ecc820bba3af655cf484f57f06da6b4f7b379bcf93503cc366074548671167"
 
-URI_x86_64_v2_ninja-build = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/ninja-build-1.11.1-9.el10.x86_64_v2.rpm;name=x86_64_v2_ninja-build;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ninja-build}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/ninja-build-1.11.1-9.el10.x86_64_v2.rpm;name=x86_64_v2_ninja-build;unpack=0"
 SRC_URI[x86_64_v2_ninja-build.sha256sum] = "3da3d855bc6cba68b05bb048cb23fc04cf8ef7525c132489e02b0f6f02103940"
 
-URI_aarch64_ninja-build = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/ninja-build-1.11.1-9.el10.aarch64.rpm;name=aarch64_ninja-build;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ninja-build}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/ninja-build-1.11.1-9.el10.aarch64.rpm;name=aarch64_ninja-build;unpack=0"
 SRC_URI[aarch64_ninja-build.sha256sum] = "f23c2fe3aa0103d509610674da3415fe7652eeaca34cd0949f5683088702e48f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/ninja-build-1.11.1-9.el10.riscv64.rpm;name=riscv64_ninja-build;unpack=0"
+SRC_URI[riscv64_ninja-build.sha256sum] = "07b72d8445bc47a57cfd5af5e3612855c2d309528e2de1a6fde27a18a45bb850"
 
 RDEPENDS:ninja-build = " \
  emacs-filesystem \

@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-multipart"
 PV = "1.3.1"
 PR = "2.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-multipart \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-multipart \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-multipart-1.3.1-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-multipart-1.3.1-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "2692b384f5eab3f11c79ff9f3858a29bea4d05b6c496b93df494c8e18078f593"
 
-URI_x86_64_v2_python3-multipart = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-multipart-1.3.1-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-multipart;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-multipart}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-multipart-1.3.1-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-multipart;unpack=0"
 SRC_URI[x86_64_v2_python3-multipart.sha256sum] = "44b6a10df81e317dc3056ea8a31c39db50ec71be573a04c278e583ec6a624476"
 
-URI_aarch64_python3-multipart = "${EPEL_MIRROR}/aarch64/Packages/p/python3-multipart-1.3.1-2.el10_3.noarch.rpm;name=aarch64_python3-multipart;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-multipart}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-multipart-1.3.1-2.el10_3.noarch.rpm;name=aarch64_python3-multipart;unpack=0"
 SRC_URI[aarch64_python3-multipart.sha256sum] = "9c33510b3c71cea1ddfdf2a0075f0393208a675b26c9e327568adb14e15d70de"
 
 RDEPENDS:python3-multipart = " \

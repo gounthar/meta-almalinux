@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "digikam"
 PV = "9.1.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  digikam \
  digikam-devel \
  digikam-libs \
- "
+"
+PACKAGES:aarch64 = " \
+ digikam \
+ digikam-devel \
+ digikam-libs \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/d/digikam-9.1.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/d/digikam-9.1.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "041114cf80538325a8ee889164816269d9ae028462208a559f780f57658141a8"
 
-URI_x86_64_v2_digikam = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/digikam-9.1.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_digikam;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_digikam}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/digikam-9.1.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_digikam;unpack=0"
 SRC_URI[x86_64_v2_digikam.sha256sum] = "ebebea325b9cb8cb8593d42aaf91eb81c33400680bb9aeb8b544d10650fcee04"
 
-URI_x86_64_v2_digikam-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/digikam-devel-9.1.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_digikam-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_digikam-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/digikam-devel-9.1.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_digikam-devel;unpack=0"
 SRC_URI[x86_64_v2_digikam-devel.sha256sum] = "e233ef3cadc1bf7823592f701320b5356593b849051f2184f8d5cea77ba5b123"
 
-URI_x86_64_v2_digikam-libs = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/digikam-libs-9.1.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_digikam-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_digikam-libs}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/digikam-libs-9.1.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_digikam-libs;unpack=0"
 SRC_URI[x86_64_v2_digikam-libs.sha256sum] = "e9805cae3ac9f338a6d315ea94f7008e2e4e226c96248d181931872f6c936d64"
 
-URI_aarch64_digikam = "${EPEL_MIRROR}/aarch64/Packages/d/digikam-9.1.0-1.el10_3.aarch64.rpm;name=aarch64_digikam;unpack=0"
-SRC_URI:append = " ${URI_aarch64_digikam}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/d/digikam-9.1.0-1.el10_3.aarch64.rpm;name=aarch64_digikam;unpack=0"
 SRC_URI[aarch64_digikam.sha256sum] = "51254616d1ef33639634f892ee074257f98ce3f12f85ad8f3ae1f0fe553fcac6"
 
-URI_aarch64_digikam-devel = "${EPEL_MIRROR}/aarch64/Packages/d/digikam-devel-9.1.0-1.el10_3.aarch64.rpm;name=aarch64_digikam-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_digikam-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/d/digikam-devel-9.1.0-1.el10_3.aarch64.rpm;name=aarch64_digikam-devel;unpack=0"
 SRC_URI[aarch64_digikam-devel.sha256sum] = "0b98a5543b4276e51bb2e235255a7c8c78157b3e00aac8dd9214d939deba9bd6"
 
-URI_aarch64_digikam-libs = "${EPEL_MIRROR}/aarch64/Packages/d/digikam-libs-9.1.0-1.el10_3.aarch64.rpm;name=aarch64_digikam-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_digikam-libs}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/d/digikam-libs-9.1.0-1.el10_3.aarch64.rpm;name=aarch64_digikam-libs;unpack=0"
 SRC_URI[aarch64_digikam-libs.sha256sum] = "aa6fcf3e0bb4951f59485c884bbae4c1240667ec483b782bf77016bd4be8c798"
 
 RDEPENDS:digikam = " \

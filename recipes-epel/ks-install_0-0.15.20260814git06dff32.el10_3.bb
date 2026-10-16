@@ -5,16 +5,17 @@ inherit dnf-bridge
 PN = "ks-install"
 PV = "0"
 PR = "0.15.20260814git06dff32.el10_3"
-PACKAGES = " \
+PACKAGES:aarch64 = " \
  ks-install \
- "
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/k/ks-install-0-0.15.20260814git06dff32.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/k/ks-install-0-0.15.20260814git06dff32.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1109ab24f8421ce025aa2736d5b0a4b68d2285c1b7721f0057cd696d6f8160bb"
 
-URI_aarch64_ks-install = "${EPEL_MIRROR}/aarch64/Packages/k/ks-install-0-0.15.20260814git06dff32.el10_3.noarch.rpm;name=aarch64_ks-install;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ks-install}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/k/ks-install-0-0.15.20260814git06dff32.el10_3.noarch.rpm;name=aarch64_ks-install;unpack=0"
 SRC_URI[aarch64_ks-install.sha256sum] = "1c42176b929265d3a078d438c652eeede4e0ec73c31439bb231831d4f03e31bd"
 
 RDEPENDS:ks-install = " \

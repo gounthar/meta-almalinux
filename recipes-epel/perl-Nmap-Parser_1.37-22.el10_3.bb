@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-Nmap-Parser"
 PV = "1.37"
 PR = "22.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-Nmap-Parser \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-Nmap-Parser \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-Nmap-Parser-1.37-22.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-Nmap-Parser-1.37-22.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "ba44e0c1f487a8e21e74b7129833ab922fd363eaac90476c11ebb46ff2b7f4ba"
 
-URI_x86_64_v2_perl-Nmap-Parser = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Nmap-Parser-1.37-22.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Nmap-Parser;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Nmap-Parser}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Nmap-Parser-1.37-22.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Nmap-Parser;unpack=0"
 SRC_URI[x86_64_v2_perl-Nmap-Parser.sha256sum] = "3d959dfe6785e16079cd77921bcfcc42385c4c81e283b0b5f42c404870b8221a"
 
-URI_aarch64_perl-Nmap-Parser = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Nmap-Parser-1.37-22.el10_3.noarch.rpm;name=aarch64_perl-Nmap-Parser;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Nmap-Parser}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Nmap-Parser-1.37-22.el10_3.noarch.rpm;name=aarch64_perl-Nmap-Parser;unpack=0"
 SRC_URI[aarch64_perl-Nmap-Parser.sha256sum] = "3038f1cac0abac7015af6e64e9ed3f84abd8db4871b8620c01921c639c803cef"
 
 RDEPENDS:perl-Nmap-Parser = " \

@@ -12,17 +12,17 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rocdbgapi-7.2.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rocdbgapi-7.2.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "59e1a6ecde21852979353aaa36c75dd3c52b35beb78e9b66355ef09763a40e4b"
 
-URI_x86_64_v2_rocdbgapi = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocdbgapi-7.2.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocdbgapi;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rocdbgapi}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocdbgapi-7.2.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocdbgapi;unpack=0"
 SRC_URI[x86_64_v2_rocdbgapi.sha256sum] = "760f9236d55ce493a2071228fb3e62d1c53566c516a58696b3018b28471810f3"
 
-URI_x86_64_v2_rocdbgapi-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocdbgapi-devel-7.2.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocdbgapi-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rocdbgapi-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocdbgapi-devel-7.2.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocdbgapi-devel;unpack=0"
 SRC_URI[x86_64_v2_rocdbgapi-devel.sha256sum] = "0807157fb6786b996b1b6009147245335512dc311d660339e4243297c67295b1"
 
 RDEPENDS:rocdbgapi = " \

@@ -11,33 +11,35 @@ PACKAGES = " \
  libicu-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/icu-74.2-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/icu-74.2-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a232491d1296a4a841670f9795d5b19df429921c8d6d03759a2e9635eb83a8da"
 
-URI_x86_64_v2_icu = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/icu-74.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_icu;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_icu}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/icu-74.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_icu;unpack=0"
 SRC_URI[x86_64_v2_icu.sha256sum] = "c897e491f47630f3b7625771bafd8796e3b408c30ff79554ac6fb75b4d089ce7"
 
-URI_x86_64_v2_libicu = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libicu-74.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_libicu;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libicu}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libicu-74.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_libicu;unpack=0"
 SRC_URI[x86_64_v2_libicu.sha256sum] = "8c2cd49ddc3fb0e66c58ff6f4eab6b25ee06cf1a7fc95faa34913e66f4e2bdfb"
 
-URI_x86_64_v2_libicu-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libicu-devel-74.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_libicu-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libicu-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libicu-devel-74.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_libicu-devel;unpack=0"
 SRC_URI[x86_64_v2_libicu-devel.sha256sum] = "0b9096d5fd8da43b07a4f048005fe55c58107cba1c18c6d5a313d71bdc43abbf"
 
-URI_aarch64_icu = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/icu-74.2-5.el10.aarch64.rpm;name=aarch64_icu;unpack=0"
-SRC_URI:append = " ${URI_aarch64_icu}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/icu-74.2-5.el10.aarch64.rpm;name=aarch64_icu;unpack=0"
 SRC_URI[aarch64_icu.sha256sum] = "8c5f097dc9c18073e7092db4dc2a2b82db39a3da28210cf52963ac9fd0bbd6f8"
 
-URI_aarch64_libicu = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libicu-74.2-5.el10.aarch64.rpm;name=aarch64_libicu;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libicu}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libicu-74.2-5.el10.aarch64.rpm;name=aarch64_libicu;unpack=0"
 SRC_URI[aarch64_libicu.sha256sum] = "7223b6311a665444b3acf0f28512d60ae4f93198b2a5db810fa31442478b3e79"
 
-URI_aarch64_libicu-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libicu-devel-74.2-5.el10.aarch64.rpm;name=aarch64_libicu-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libicu-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libicu-devel-74.2-5.el10.aarch64.rpm;name=aarch64_libicu-devel;unpack=0"
 SRC_URI[aarch64_libicu-devel.sha256sum] = "faa3fab11d2afff6042f1120ff64cbd9c79be41dc809edc80d1f1e0dd385d21e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/icu-74.2-5.el10.riscv64.rpm;name=riscv64_icu;unpack=0"
+SRC_URI[riscv64_icu.sha256sum] = "401027b7dd906fdb7cd4efcf21285395834ec5bbc9c9193d3393c5c732ca4fd9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libicu-74.2-5.el10.riscv64.rpm;name=riscv64_libicu;unpack=0"
+SRC_URI[riscv64_libicu.sha256sum] = "e97c1cce41f7c9318ad3d0d956bccf08fc3acd8e77d4c9f51df99a631893941e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libicu-devel-74.2-5.el10.riscv64.rpm;name=riscv64_libicu-devel;unpack=0"
+SRC_URI[riscv64_libicu-devel.sha256sum] = "550831b2c4fa6c99470367ae66cc1378c4edf768b39926ae31d71eecb895b5d9"
 
 RDEPENDS:icu = " \
  glibc \

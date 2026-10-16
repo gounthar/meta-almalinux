@@ -9,17 +9,17 @@ PACKAGES = " \
  desktop-file-utils \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/desktop-file-utils-0.26-15.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/desktop-file-utils-0.26-15.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "739909d044625537230be28fcd3696f362e3a1e32143e5febc58c9153b1e7cd7"
 
-URI_x86_64_v2_desktop-file-utils = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/desktop-file-utils-0.26-15.el10.x86_64_v2.rpm;name=x86_64_v2_desktop-file-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_desktop-file-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/desktop-file-utils-0.26-15.el10.x86_64_v2.rpm;name=x86_64_v2_desktop-file-utils;unpack=0"
 SRC_URI[x86_64_v2_desktop-file-utils.sha256sum] = "f4165fa511700e1f2108b417a2c286aaa5ab7da508319a83e236f82abd17da27"
 
-URI_aarch64_desktop-file-utils = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/desktop-file-utils-0.26-15.el10.aarch64.rpm;name=aarch64_desktop-file-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_desktop-file-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/desktop-file-utils-0.26-15.el10.aarch64.rpm;name=aarch64_desktop-file-utils;unpack=0"
 SRC_URI[aarch64_desktop-file-utils.sha256sum] = "f421bca8c78fa309b54a724e1485ce998defb6cc5fff613c55c739b700e50872"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/desktop-file-utils-0.26-15.el10.riscv64.rpm;name=riscv64_desktop-file-utils;unpack=0"
+SRC_URI[riscv64_desktop-file-utils.sha256sum] = "a362e846d1899c27855d6f8f1565f5c212b0924eee2de989e4977fed28fb6ca1"
 
 RDEPENDS:desktop-file-utils = " \
  bash \

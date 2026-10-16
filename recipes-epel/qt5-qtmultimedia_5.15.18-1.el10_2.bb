@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "qt5-qtmultimedia"
 PV = "5.15.18"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  qt5-qtmultimedia \
  qt5-qtmultimedia-devel \
  qt5-qtmultimedia-examples \
- "
+"
+PACKAGES:aarch64 = " \
+ qt5-qtmultimedia \
+ qt5-qtmultimedia-devel \
+ qt5-qtmultimedia-examples \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/q/qt5-qtmultimedia-5.15.18-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/q/qt5-qtmultimedia-5.15.18-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e4b9e22614dc68b903831f3f4b64fcfc0f5105909c8090bc8e9b3b6e565f5ba9"
 
-URI_x86_64_v2_qt5-qtmultimedia = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt5-qtmultimedia-5.15.18-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qt5-qtmultimedia;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt5-qtmultimedia}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt5-qtmultimedia-5.15.18-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qt5-qtmultimedia;unpack=0"
 SRC_URI[x86_64_v2_qt5-qtmultimedia.sha256sum] = "a6379797b434046c2efd1174f3bcef86c4169042582c9dce2011cdc3853dfc0b"
 
-URI_x86_64_v2_qt5-qtmultimedia-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt5-qtmultimedia-devel-5.15.18-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qt5-qtmultimedia-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt5-qtmultimedia-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt5-qtmultimedia-devel-5.15.18-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qt5-qtmultimedia-devel;unpack=0"
 SRC_URI[x86_64_v2_qt5-qtmultimedia-devel.sha256sum] = "4e4b38315814a80a04e984914c247cb1b8f40b94d955deb0321ebecb5afb2887"
 
-URI_x86_64_v2_qt5-qtmultimedia-examples = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt5-qtmultimedia-examples-5.15.18-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qt5-qtmultimedia-examples;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt5-qtmultimedia-examples}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt5-qtmultimedia-examples-5.15.18-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qt5-qtmultimedia-examples;unpack=0"
 SRC_URI[x86_64_v2_qt5-qtmultimedia-examples.sha256sum] = "a9195d0bdbe5f0a9b63339fa0cc78798bf3af1c2e83dd5162fa2783ce68180ea"
 
-URI_aarch64_qt5-qtmultimedia = "${EPEL_MIRROR}/aarch64/Packages/q/qt5-qtmultimedia-5.15.18-1.el10_2.aarch64.rpm;name=aarch64_qt5-qtmultimedia;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt5-qtmultimedia}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/q/qt5-qtmultimedia-5.15.18-1.el10_2.aarch64.rpm;name=aarch64_qt5-qtmultimedia;unpack=0"
 SRC_URI[aarch64_qt5-qtmultimedia.sha256sum] = "182e3deed79aa427eb0f53706ca2477cdfb7e3979099600986ef6a2432684a6c"
 
-URI_aarch64_qt5-qtmultimedia-devel = "${EPEL_MIRROR}/aarch64/Packages/q/qt5-qtmultimedia-devel-5.15.18-1.el10_2.aarch64.rpm;name=aarch64_qt5-qtmultimedia-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt5-qtmultimedia-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/q/qt5-qtmultimedia-devel-5.15.18-1.el10_2.aarch64.rpm;name=aarch64_qt5-qtmultimedia-devel;unpack=0"
 SRC_URI[aarch64_qt5-qtmultimedia-devel.sha256sum] = "4a4df7f1f2df3403ebf1e688ca6c69de561663c53ea4bceb3737d1cf11bbf1be"
 
-URI_aarch64_qt5-qtmultimedia-examples = "${EPEL_MIRROR}/aarch64/Packages/q/qt5-qtmultimedia-examples-5.15.18-1.el10_2.aarch64.rpm;name=aarch64_qt5-qtmultimedia-examples;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt5-qtmultimedia-examples}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/q/qt5-qtmultimedia-examples-5.15.18-1.el10_2.aarch64.rpm;name=aarch64_qt5-qtmultimedia-examples;unpack=0"
 SRC_URI[aarch64_qt5-qtmultimedia-examples.sha256sum] = "7c7055c716bb516da1ef79dae0a19c21141c1f5f0ace1a678016613bd95dbf84"
 
 RDEPENDS:qt5-qtmultimedia = " \

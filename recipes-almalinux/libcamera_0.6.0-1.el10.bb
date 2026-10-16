@@ -15,65 +15,71 @@ PACKAGES = " \
  libcamera-v4l2 \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libcamera-0.6.0-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libcamera-0.6.0-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7fcbaf76e5de444eaa78e9b86123cef6950de980f8ff31ce5faaccc43b9c519a"
 
-URI_x86_64_v2_libcamera = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libcamera-0.6.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libcamera;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libcamera}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libcamera-0.6.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libcamera;unpack=0"
 SRC_URI[x86_64_v2_libcamera.sha256sum] = "5a7fef99a7a3dba0b7f89d23e13ae7e38de22f0f95776502e974661e047d080f"
 
-URI_x86_64_v2_libcamera-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libcamera-devel-0.6.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libcamera-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libcamera-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libcamera-devel-0.6.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libcamera-devel;unpack=0"
 SRC_URI[x86_64_v2_libcamera-devel.sha256sum] = "92369f280283c3e8dd9a2043f78106a3c506eb40d9822e8d1ad477ddd947b426"
 
-URI_x86_64_v2_libcamera-gstreamer = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libcamera-gstreamer-0.6.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libcamera-gstreamer;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libcamera-gstreamer}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libcamera-gstreamer-0.6.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libcamera-gstreamer;unpack=0"
 SRC_URI[x86_64_v2_libcamera-gstreamer.sha256sum] = "2e1b209b339f425cb3b4167e0c7e2eda715c2fb81a01a85a718f4e86b4dc029f"
 
-URI_x86_64_v2_libcamera-ipa = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libcamera-ipa-0.6.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libcamera-ipa;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libcamera-ipa}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libcamera-ipa-0.6.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libcamera-ipa;unpack=0"
 SRC_URI[x86_64_v2_libcamera-ipa.sha256sum] = "f328f1b3130958f51e6460f1cf7c37537c12d32560f0f5fa78befc2a8967ae79"
 
-URI_x86_64_v2_libcamera-qcam = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libcamera-qcam-0.6.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libcamera-qcam;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libcamera-qcam}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libcamera-qcam-0.6.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libcamera-qcam;unpack=0"
 SRC_URI[x86_64_v2_libcamera-qcam.sha256sum] = "f4a50c827e163b5eaecadeb17c9b025ec210248a8e42156fd63df070e671bdba"
 
-URI_x86_64_v2_libcamera-tools = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libcamera-tools-0.6.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libcamera-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libcamera-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libcamera-tools-0.6.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libcamera-tools;unpack=0"
 SRC_URI[x86_64_v2_libcamera-tools.sha256sum] = "bdc17998fd5a1d146c6504260e014cb8bebb5a9452e4a2addc62e53f0fc316a4"
 
-URI_x86_64_v2_libcamera-v4l2 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libcamera-v4l2-0.6.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libcamera-v4l2;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libcamera-v4l2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libcamera-v4l2-0.6.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libcamera-v4l2;unpack=0"
 SRC_URI[x86_64_v2_libcamera-v4l2.sha256sum] = "7cb4b3f7c4b28d95be3e9bf8e6018454db124792386f518a5c414496b5d7c4ef"
 
-URI_aarch64_libcamera = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libcamera-0.6.0-1.el10.aarch64.rpm;name=aarch64_libcamera;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libcamera}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libcamera-0.6.0-1.el10.aarch64.rpm;name=aarch64_libcamera;unpack=0"
 SRC_URI[aarch64_libcamera.sha256sum] = "329e3f2aaee02c79a09cf128bc5a156ba4784af83f795939aac1eb0a3ef4220b"
 
-URI_aarch64_libcamera-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libcamera-devel-0.6.0-1.el10.aarch64.rpm;name=aarch64_libcamera-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libcamera-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libcamera-devel-0.6.0-1.el10.aarch64.rpm;name=aarch64_libcamera-devel;unpack=0"
 SRC_URI[aarch64_libcamera-devel.sha256sum] = "88c5ac3f51342de0745a70f0be6e3966733edc4a560e10fa8cabd7b3cc1e2a31"
 
-URI_aarch64_libcamera-gstreamer = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libcamera-gstreamer-0.6.0-1.el10.aarch64.rpm;name=aarch64_libcamera-gstreamer;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libcamera-gstreamer}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libcamera-gstreamer-0.6.0-1.el10.aarch64.rpm;name=aarch64_libcamera-gstreamer;unpack=0"
 SRC_URI[aarch64_libcamera-gstreamer.sha256sum] = "ef1b452448a4199704b8b1013d7336c8807b198ac32467690dfff0f4afd221f8"
 
-URI_aarch64_libcamera-ipa = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libcamera-ipa-0.6.0-1.el10.aarch64.rpm;name=aarch64_libcamera-ipa;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libcamera-ipa}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libcamera-ipa-0.6.0-1.el10.aarch64.rpm;name=aarch64_libcamera-ipa;unpack=0"
 SRC_URI[aarch64_libcamera-ipa.sha256sum] = "03610e4b754ddd8cbbd08ca9a9f1c44ffb5e8a75898b9708055c5d6fe072d123"
 
-URI_aarch64_libcamera-qcam = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libcamera-qcam-0.6.0-1.el10.aarch64.rpm;name=aarch64_libcamera-qcam;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libcamera-qcam}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libcamera-qcam-0.6.0-1.el10.aarch64.rpm;name=aarch64_libcamera-qcam;unpack=0"
 SRC_URI[aarch64_libcamera-qcam.sha256sum] = "c41eef4b180c1930a0e79bc4765ce23d3cd14b6e496aa65bcb0cc821c05542dc"
 
-URI_aarch64_libcamera-tools = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libcamera-tools-0.6.0-1.el10.aarch64.rpm;name=aarch64_libcamera-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libcamera-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libcamera-tools-0.6.0-1.el10.aarch64.rpm;name=aarch64_libcamera-tools;unpack=0"
 SRC_URI[aarch64_libcamera-tools.sha256sum] = "f6f36ffb272e475b9d2e79a76412b5906bb44f5672530d4f7d6484f155dcbe67"
 
-URI_aarch64_libcamera-v4l2 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libcamera-v4l2-0.6.0-1.el10.aarch64.rpm;name=aarch64_libcamera-v4l2;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libcamera-v4l2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libcamera-v4l2-0.6.0-1.el10.aarch64.rpm;name=aarch64_libcamera-v4l2;unpack=0"
 SRC_URI[aarch64_libcamera-v4l2.sha256sum] = "0913b85494f66ba6a07b3842a8334da7c11828cc768433311fe6efcd9884a599"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libcamera-0.6.0-1.el10.riscv64.rpm;name=riscv64_libcamera;unpack=0"
+SRC_URI[riscv64_libcamera.sha256sum] = "bfb3add2eee85a202b8196359b9c0ec93f616bf8b98d1d0f90081bafafdd3a39"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libcamera-devel-0.6.0-1.el10.riscv64.rpm;name=riscv64_libcamera-devel;unpack=0"
+SRC_URI[riscv64_libcamera-devel.sha256sum] = "f56766f4f10b819d77a41f70f6c9d4bdc24f8a38b8f5b8c04821bc3f957d1150"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libcamera-gstreamer-0.6.0-1.el10.riscv64.rpm;name=riscv64_libcamera-gstreamer;unpack=0"
+SRC_URI[riscv64_libcamera-gstreamer.sha256sum] = "caec2129571a10d0c37d19842982aae1baff82216b88f5157d8f1890addda4b9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libcamera-ipa-0.6.0-1.el10.riscv64.rpm;name=riscv64_libcamera-ipa;unpack=0"
+SRC_URI[riscv64_libcamera-ipa.sha256sum] = "c3c66d38d250f0b95230769074676e2e24074d08a579475e179273c7b302442b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libcamera-qcam-0.6.0-1.el10.riscv64.rpm;name=riscv64_libcamera-qcam;unpack=0"
+SRC_URI[riscv64_libcamera-qcam.sha256sum] = "9ff59ae95019be175d293bb43dd245cc1a583e8eff953bdd06801059125a7be5"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libcamera-tools-0.6.0-1.el10.riscv64.rpm;name=riscv64_libcamera-tools;unpack=0"
+SRC_URI[riscv64_libcamera-tools.sha256sum] = "94cdeda822659caa5bb01ae50a9076c5ee5347da13e7f76637ce17a911ef2169"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libcamera-v4l2-0.6.0-1.el10.riscv64.rpm;name=riscv64_libcamera-v4l2;unpack=0"
+SRC_URI[riscv64_libcamera-v4l2.sha256sum] = "0ff28f272a02869d9f3df052855d99fd67e10157a2109ae308415cb2ce47ffa7"
 
 RDEPENDS:libcamera = " \
  glibc \
@@ -112,7 +118,7 @@ RDEPENDS:libcamera-qcam = " \
  qt6-qtbase \
  qt6-qtbase-gui \
  "
-RDEPENDS:libcamera-tools = " \
+RDEPENDS:libcamera-tools:x86_64_v2 = " \
  glibc \
  libcamera \
  libdrm \
@@ -123,7 +129,31 @@ RDEPENDS:libcamera-tools = " \
  libtiff \
  libyaml \
  virtual/libSDL2-2.0.so.0___64bit_ \
- "
+"
+RDEPENDS:libcamera-tools:aarch64 = " \
+ glibc \
+ libcamera \
+ libdrm \
+ libevent \
+ libgcc \
+ libjpeg-turbo \
+ libstdc++ \
+ libtiff \
+ libyaml \
+ virtual/libSDL2-2.0.so.0___64bit_ \
+"
+RDEPENDS:libcamera-tools:riscv64 = " \
+ glibc \
+ libcamera \
+ libdrm \
+ libevent \
+ libgcc \
+ libjpeg-turbo \
+ libstdc++ \
+ libtiff \
+ libyaml \
+ sdl2-compat \
+"
 RDEPENDS:libcamera-v4l2 = " \
  bash \
  glibc \

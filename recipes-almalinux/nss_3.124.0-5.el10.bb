@@ -20,105 +20,116 @@ PACKAGES = " \
  nss-util-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/nss-3.124.0-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/nss-3.124.0-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f31b6bec5ead099a29f4a9120912c91512b82f8e6c10152feaa1fb65ee195cd7"
 
-URI_x86_64_v2_nspr = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nspr-4.39.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_nspr;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nspr}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nspr-4.39.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_nspr;unpack=0"
 SRC_URI[x86_64_v2_nspr.sha256sum] = "9f7f740b99825ba156570d1f43533ee7c209c03e6155919b936b1c79e9b61275"
 
-URI_x86_64_v2_nspr-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nspr-devel-4.39.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_nspr-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nspr-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nspr-devel-4.39.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_nspr-devel;unpack=0"
 SRC_URI[x86_64_v2_nspr-devel.sha256sum] = "dfdd16fdf44da4d74fe44d3e9b0e08ef9627f2bb36d230b5260eff64b27d5cb6"
 
-URI_x86_64_v2_nss = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss-3.124.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_nss;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nss}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss-3.124.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_nss;unpack=0"
 SRC_URI[x86_64_v2_nss.sha256sum] = "7cafbb80075d7a57558d9f19954656c4298bb1999160080e0b603aacd319d293"
 
-URI_x86_64_v2_nss-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss-devel-3.124.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_nss-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nss-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss-devel-3.124.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_nss-devel;unpack=0"
 SRC_URI[x86_64_v2_nss-devel.sha256sum] = "2ae7b344a54862d517e5695601ead9532ddfc1b9ea27be61c306978e2bfcc8ad"
 
-URI_x86_64_v2_nss-softokn = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss-softokn-3.124.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_nss-softokn;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nss-softokn}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss-softokn-3.124.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_nss-softokn;unpack=0"
 SRC_URI[x86_64_v2_nss-softokn.sha256sum] = "a0220d0a4aa91708b8b7a6f01ef16b3391ec09c6cb124b89a28c9ceb495327e6"
 
-URI_x86_64_v2_nss-softokn-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss-softokn-devel-3.124.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_nss-softokn-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nss-softokn-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss-softokn-devel-3.124.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_nss-softokn-devel;unpack=0"
 SRC_URI[x86_64_v2_nss-softokn-devel.sha256sum] = "09ba0c1262f7dc6fe0a49aa252d9dd9e0533c7e1efaa84cf02a7c609ddb4087d"
 
-URI_x86_64_v2_nss-softokn-freebl = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss-softokn-freebl-3.124.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_nss-softokn-freebl;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nss-softokn-freebl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss-softokn-freebl-3.124.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_nss-softokn-freebl;unpack=0"
 SRC_URI[x86_64_v2_nss-softokn-freebl.sha256sum] = "d6b7a5fc596ab8c9134af7ee952e438643c0f7a9416412ff4d75bd09e94dce2b"
 
-URI_x86_64_v2_nss-softokn-freebl-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss-softokn-freebl-devel-3.124.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_nss-softokn-freebl-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nss-softokn-freebl-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss-softokn-freebl-devel-3.124.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_nss-softokn-freebl-devel;unpack=0"
 SRC_URI[x86_64_v2_nss-softokn-freebl-devel.sha256sum] = "b8973a53b68682ef415c9dfc64bbecde4542a2432226969c8383f9208d56e578"
 
-URI_x86_64_v2_nss-sysinit = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss-sysinit-3.124.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_nss-sysinit;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nss-sysinit}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss-sysinit-3.124.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_nss-sysinit;unpack=0"
 SRC_URI[x86_64_v2_nss-sysinit.sha256sum] = "a8859d6537e933c4e822c02554e0e99afd115cc82b06c641101b782062c4f191"
 
-URI_x86_64_v2_nss-tools = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss-tools-3.124.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_nss-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nss-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss-tools-3.124.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_nss-tools;unpack=0"
 SRC_URI[x86_64_v2_nss-tools.sha256sum] = "2d8d2984a7437bd75e8ee2e76e969e2be42aa4d6ef6239d58b241a74e832be08"
 
-URI_x86_64_v2_nss-util = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss-util-3.124.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_nss-util;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nss-util}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss-util-3.124.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_nss-util;unpack=0"
 SRC_URI[x86_64_v2_nss-util.sha256sum] = "eb3fb80d7f937a4906d09fcb2b970052153e40d2f20c190d639b578e4415b430"
 
-URI_x86_64_v2_nss-util-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss-util-devel-3.124.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_nss-util-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nss-util-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss-util-devel-3.124.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_nss-util-devel;unpack=0"
 SRC_URI[x86_64_v2_nss-util-devel.sha256sum] = "5abd2c5b1e241df1542b2b1d5c3b5e274511f6fb01529403181b19f8ab2b1b7b"
 
-URI_aarch64_nspr = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nspr-4.39.0-5.el10.aarch64.rpm;name=aarch64_nspr;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nspr}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nspr-4.39.0-5.el10.aarch64.rpm;name=aarch64_nspr;unpack=0"
 SRC_URI[aarch64_nspr.sha256sum] = "ae83ea6685850f6e4976d7cd2ba6549eac64dce0f5d7adb45c8f537f998b0cb9"
 
-URI_aarch64_nspr-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nspr-devel-4.39.0-5.el10.aarch64.rpm;name=aarch64_nspr-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nspr-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nspr-devel-4.39.0-5.el10.aarch64.rpm;name=aarch64_nspr-devel;unpack=0"
 SRC_URI[aarch64_nspr-devel.sha256sum] = "7ef9a62b7fae84e5dd890ba251c9cfcac7b03ba1eb7323a7a565927fc50a30b5"
 
-URI_aarch64_nss = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss-3.124.0-5.el10.aarch64.rpm;name=aarch64_nss;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nss}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss-3.124.0-5.el10.aarch64.rpm;name=aarch64_nss;unpack=0"
 SRC_URI[aarch64_nss.sha256sum] = "2dd4d478893ea1d9b208375104c49884c14c43076f795168121641b8541f733c"
 
-URI_aarch64_nss-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss-devel-3.124.0-5.el10.aarch64.rpm;name=aarch64_nss-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nss-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss-devel-3.124.0-5.el10.aarch64.rpm;name=aarch64_nss-devel;unpack=0"
 SRC_URI[aarch64_nss-devel.sha256sum] = "47c048c71ef9c2092509645debde5c61d0834eeb971f42e69a42e6d03e597b02"
 
-URI_aarch64_nss-softokn = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss-softokn-3.124.0-5.el10.aarch64.rpm;name=aarch64_nss-softokn;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nss-softokn}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss-softokn-3.124.0-5.el10.aarch64.rpm;name=aarch64_nss-softokn;unpack=0"
 SRC_URI[aarch64_nss-softokn.sha256sum] = "31eed54335de7f14d6da12e74a207da908720b732da8195836ad413bee1f6c5b"
 
-URI_aarch64_nss-softokn-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss-softokn-devel-3.124.0-5.el10.aarch64.rpm;name=aarch64_nss-softokn-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nss-softokn-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss-softokn-devel-3.124.0-5.el10.aarch64.rpm;name=aarch64_nss-softokn-devel;unpack=0"
 SRC_URI[aarch64_nss-softokn-devel.sha256sum] = "069dd44801b0ef859819c973a6c280014dab3c0d8eb37358ae99237fa8f89e72"
 
-URI_aarch64_nss-softokn-freebl = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss-softokn-freebl-3.124.0-5.el10.aarch64.rpm;name=aarch64_nss-softokn-freebl;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nss-softokn-freebl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss-softokn-freebl-3.124.0-5.el10.aarch64.rpm;name=aarch64_nss-softokn-freebl;unpack=0"
 SRC_URI[aarch64_nss-softokn-freebl.sha256sum] = "a9e2d1ff2698ca71f8e734b33d49e77755e524542826710196b72d5549b78bdc"
 
-URI_aarch64_nss-softokn-freebl-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss-softokn-freebl-devel-3.124.0-5.el10.aarch64.rpm;name=aarch64_nss-softokn-freebl-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nss-softokn-freebl-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss-softokn-freebl-devel-3.124.0-5.el10.aarch64.rpm;name=aarch64_nss-softokn-freebl-devel;unpack=0"
 SRC_URI[aarch64_nss-softokn-freebl-devel.sha256sum] = "7806bce9d1e4cf2a8c621863945f03a374be74a32ab053dcd49685bc917ad426"
 
-URI_aarch64_nss-sysinit = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss-sysinit-3.124.0-5.el10.aarch64.rpm;name=aarch64_nss-sysinit;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nss-sysinit}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss-sysinit-3.124.0-5.el10.aarch64.rpm;name=aarch64_nss-sysinit;unpack=0"
 SRC_URI[aarch64_nss-sysinit.sha256sum] = "959bc1032a6c6a3b0c554d2232e10ac82bdcbce455d26cbc686d8ab3d8558dcb"
 
-URI_aarch64_nss-tools = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss-tools-3.124.0-5.el10.aarch64.rpm;name=aarch64_nss-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nss-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss-tools-3.124.0-5.el10.aarch64.rpm;name=aarch64_nss-tools;unpack=0"
 SRC_URI[aarch64_nss-tools.sha256sum] = "acac6075f95178fe72ead7324bb3f3eee9936914ccb8a0c904cea40f04a51ac9"
 
-URI_aarch64_nss-util = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss-util-3.124.0-5.el10.aarch64.rpm;name=aarch64_nss-util;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nss-util}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss-util-3.124.0-5.el10.aarch64.rpm;name=aarch64_nss-util;unpack=0"
 SRC_URI[aarch64_nss-util.sha256sum] = "7b6877561ffeb904d0101ccebccd26fbee916f175d8d4252c7f592a39b8541ce"
 
-URI_aarch64_nss-util-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss-util-devel-3.124.0-5.el10.aarch64.rpm;name=aarch64_nss-util-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nss-util-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss-util-devel-3.124.0-5.el10.aarch64.rpm;name=aarch64_nss-util-devel;unpack=0"
 SRC_URI[aarch64_nss-util-devel.sha256sum] = "3b23f008774601aabe91fbacade9bbdab4e6bb3fee22e5c7dd7792d957c7faf1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nspr-4.39.0-5.el10.riscv64.rpm;name=riscv64_nspr;unpack=0"
+SRC_URI[riscv64_nspr.sha256sum] = "5cdcd9c0b2c3794b619cbef7765af525035effff2e6dfb6d14477bd03914eaf2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nspr-devel-4.39.0-5.el10.riscv64.rpm;name=riscv64_nspr-devel;unpack=0"
+SRC_URI[riscv64_nspr-devel.sha256sum] = "c88c824014c5e1cc3a07536a2b763fcfd6cddf2805009b702392b5b94de9638d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nss-3.124.0-5.el10.riscv64.rpm;name=riscv64_nss;unpack=0"
+SRC_URI[riscv64_nss.sha256sum] = "b1854f50928582e0f669e27f917a405cfd79be7abacff60a085959f0c4110b29"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nss-devel-3.124.0-5.el10.riscv64.rpm;name=riscv64_nss-devel;unpack=0"
+SRC_URI[riscv64_nss-devel.sha256sum] = "c66abfbb0fe0499c67ccd231469f40f9796ec7a25618c274492e5616d56947fe"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nss-softokn-3.124.0-5.el10.riscv64.rpm;name=riscv64_nss-softokn;unpack=0"
+SRC_URI[riscv64_nss-softokn.sha256sum] = "55ea8ef7ed5bf67ee49f8fc0e665a545280f378abb96410ea341b751c55814dd"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nss-softokn-devel-3.124.0-5.el10.riscv64.rpm;name=riscv64_nss-softokn-devel;unpack=0"
+SRC_URI[riscv64_nss-softokn-devel.sha256sum] = "446d14a62a49627a0cb88a70488fe05812052b9b88dacd18a28dfcc85fc200e3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nss-softokn-freebl-3.124.0-5.el10.riscv64.rpm;name=riscv64_nss-softokn-freebl;unpack=0"
+SRC_URI[riscv64_nss-softokn-freebl.sha256sum] = "4e5c23a74f7c8e1df2bf9d6829f552b4f00ebe6563d0869efc343bcf4eb76354"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nss-softokn-freebl-devel-3.124.0-5.el10.riscv64.rpm;name=riscv64_nss-softokn-freebl-devel;unpack=0"
+SRC_URI[riscv64_nss-softokn-freebl-devel.sha256sum] = "1d6487f0d6c84e58c62f92971a1183f3d21be00d11ed3f443fe5268181643d96"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nss-sysinit-3.124.0-5.el10.riscv64.rpm;name=riscv64_nss-sysinit;unpack=0"
+SRC_URI[riscv64_nss-sysinit.sha256sum] = "bbf3c4a9d3c4a9d2c4fef8ef9b8b13bf39ddb3a17604b55fc3a4610ee45a61e8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nss-tools-3.124.0-5.el10.riscv64.rpm;name=riscv64_nss-tools;unpack=0"
+SRC_URI[riscv64_nss-tools.sha256sum] = "c883951ad08d621200dd3d111bb4b2152740539e1b3b4d8231b1400a544c0c9f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nss-util-3.124.0-5.el10.riscv64.rpm;name=riscv64_nss-util;unpack=0"
+SRC_URI[riscv64_nss-util.sha256sum] = "fc560dcb93f68a9f9a263f60c224a56d1d1f1b6866316e82faba838c99c9d213"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nss-util-devel-3.124.0-5.el10.riscv64.rpm;name=riscv64_nss-util-devel;unpack=0"
+SRC_URI[riscv64_nss-util-devel.sha256sum] = "797c1f106d4507ed42b4500a65df3b7566c82a054ba98db7fcc443d1a985ef46"
 
 RDEPENDS:nspr = " \
  glibc \

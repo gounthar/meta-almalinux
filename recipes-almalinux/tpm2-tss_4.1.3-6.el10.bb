@@ -11,33 +11,35 @@ PACKAGES = " \
  tpm2-tss-fapi \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/tpm2-tss-4.1.3-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/tpm2-tss-4.1.3-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "deceb93c5ed38280d8f10738b0caaa63dd6c87a0f57b4001d982a19c80d1bd25"
 
-URI_x86_64_v2_tpm2-tss = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/tpm2-tss-4.1.3-6.el10.x86_64_v2.rpm;name=x86_64_v2_tpm2-tss;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_tpm2-tss}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/tpm2-tss-4.1.3-6.el10.x86_64_v2.rpm;name=x86_64_v2_tpm2-tss;unpack=0"
 SRC_URI[x86_64_v2_tpm2-tss.sha256sum] = "d9091f6c68b93b5549b9621848f04b6e913e819b50d65d67d1aa576226befd2e"
 
-URI_x86_64_v2_tpm2-tss-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/tpm2-tss-devel-4.1.3-6.el10.x86_64_v2.rpm;name=x86_64_v2_tpm2-tss-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_tpm2-tss-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/tpm2-tss-devel-4.1.3-6.el10.x86_64_v2.rpm;name=x86_64_v2_tpm2-tss-devel;unpack=0"
 SRC_URI[x86_64_v2_tpm2-tss-devel.sha256sum] = "244171cde6ea65723587455e10885a9de8bc0dd8616575ad18d27a5e082a2f8d"
 
-URI_x86_64_v2_tpm2-tss-fapi = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/tpm2-tss-fapi-4.1.3-6.el10.x86_64_v2.rpm;name=x86_64_v2_tpm2-tss-fapi;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_tpm2-tss-fapi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/tpm2-tss-fapi-4.1.3-6.el10.x86_64_v2.rpm;name=x86_64_v2_tpm2-tss-fapi;unpack=0"
 SRC_URI[x86_64_v2_tpm2-tss-fapi.sha256sum] = "3f1ffec4442022c9493876fd02cd01bdbcd809bb582bb96c1957a51b8c3e87b2"
 
-URI_aarch64_tpm2-tss = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/tpm2-tss-4.1.3-6.el10.aarch64.rpm;name=aarch64_tpm2-tss;unpack=0"
-SRC_URI:append = " ${URI_aarch64_tpm2-tss}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/tpm2-tss-4.1.3-6.el10.aarch64.rpm;name=aarch64_tpm2-tss;unpack=0"
 SRC_URI[aarch64_tpm2-tss.sha256sum] = "1d3ae3420630ec2f15318854d8fe88412d372e0388b64280340ad8ebd0c825af"
 
-URI_aarch64_tpm2-tss-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/tpm2-tss-devel-4.1.3-6.el10.aarch64.rpm;name=aarch64_tpm2-tss-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_tpm2-tss-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/tpm2-tss-devel-4.1.3-6.el10.aarch64.rpm;name=aarch64_tpm2-tss-devel;unpack=0"
 SRC_URI[aarch64_tpm2-tss-devel.sha256sum] = "8401b6c03bdf881cb16806692310974bcaac81cb031490e9419ed3edc497151e"
 
-URI_aarch64_tpm2-tss-fapi = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/tpm2-tss-fapi-4.1.3-6.el10.aarch64.rpm;name=aarch64_tpm2-tss-fapi;unpack=0"
-SRC_URI:append = " ${URI_aarch64_tpm2-tss-fapi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/tpm2-tss-fapi-4.1.3-6.el10.aarch64.rpm;name=aarch64_tpm2-tss-fapi;unpack=0"
 SRC_URI[aarch64_tpm2-tss-fapi.sha256sum] = "b4e58c3aaecf4c87ec90f2fd42a7193c92d337e8bcefc2c965aa1f5a5c603e72"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/tpm2-tss-4.1.3-6.el10.riscv64.rpm;name=riscv64_tpm2-tss;unpack=0"
+SRC_URI[riscv64_tpm2-tss.sha256sum] = "dc81f3aa97bb3c6e742b709f7f7edc64135afb5fd3d18e54b2b02f6cf1b25474"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/tpm2-tss-devel-4.1.3-6.el10.riscv64.rpm;name=riscv64_tpm2-tss-devel;unpack=0"
+SRC_URI[riscv64_tpm2-tss-devel.sha256sum] = "30b24894e582672567b1b0c5033a8be46a68b829e6b001d2039c3f66111e8e3a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/tpm2-tss-fapi-4.1.3-6.el10.riscv64.rpm;name=riscv64_tpm2-tss-fapi;unpack=0"
+SRC_URI[riscv64_tpm2-tss-fapi.sha256sum] = "1facf7ca65786d78d88e759e9c2f2d8319682f2709a77b079e28c764591d66f1"
 
 RDEPENDS:tpm2-tss = " \
  bash \

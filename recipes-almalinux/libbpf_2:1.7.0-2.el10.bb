@@ -12,33 +12,35 @@ PACKAGES = " \
  libbpf-static \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libbpf-1.7.0-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libbpf-1.7.0-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "32adc68b383e34b4cea1dc1d03eaf0fc2132c7b6c94ff7b60c40d35e28ec745a"
 
-URI_x86_64_v2_libbpf = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libbpf-1.7.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_libbpf;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libbpf}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libbpf-1.7.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_libbpf;unpack=0"
 SRC_URI[x86_64_v2_libbpf.sha256sum] = "2843d7d0c1cdd998b7fb2138d24cbfd598193583aa51c4c720e4d958674e6029"
 
-URI_x86_64_v2_libbpf-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libbpf-devel-1.7.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_libbpf-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libbpf-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libbpf-devel-1.7.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_libbpf-devel;unpack=0"
 SRC_URI[x86_64_v2_libbpf-devel.sha256sum] = "b11e1d4a9b4b570327635899b45e35c9b8137f52cf70928f150cac34f01bb193"
 
-URI_x86_64_v2_libbpf-static = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libbpf-static-1.7.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_libbpf-static;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libbpf-static}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libbpf-static-1.7.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_libbpf-static;unpack=0"
 SRC_URI[x86_64_v2_libbpf-static.sha256sum] = "e86fb50c8185a9ea79bb3e35e4a869d322d983d08a61572005c4ebbe1c404e62"
 
-URI_aarch64_libbpf = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libbpf-1.7.0-2.el10.aarch64.rpm;name=aarch64_libbpf;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libbpf}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libbpf-1.7.0-2.el10.aarch64.rpm;name=aarch64_libbpf;unpack=0"
 SRC_URI[aarch64_libbpf.sha256sum] = "93407e4fd98399b05eb264aec17c65e190caee280c76d2c04c8f555f103e5746"
 
-URI_aarch64_libbpf-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libbpf-devel-1.7.0-2.el10.aarch64.rpm;name=aarch64_libbpf-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libbpf-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libbpf-devel-1.7.0-2.el10.aarch64.rpm;name=aarch64_libbpf-devel;unpack=0"
 SRC_URI[aarch64_libbpf-devel.sha256sum] = "a5ae8e6d4479ff6b0a2119e04ada6c1d6e7968e898a0b74c186bbdd3b8cf660b"
 
-URI_aarch64_libbpf-static = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libbpf-static-1.7.0-2.el10.aarch64.rpm;name=aarch64_libbpf-static;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libbpf-static}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libbpf-static-1.7.0-2.el10.aarch64.rpm;name=aarch64_libbpf-static;unpack=0"
 SRC_URI[aarch64_libbpf-static.sha256sum] = "f2c6ace0571736e9590c7e0a5316f7fd0f7a19d1f85ff3fede5916d345bec2c8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libbpf-1.7.0-2.el10.riscv64.rpm;name=riscv64_libbpf;unpack=0"
+SRC_URI[riscv64_libbpf.sha256sum] = "732dcfd054599d2f105abfdd88a8a7c871dabc24f491859f8ffe9c5b5326390b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libbpf-devel-1.7.0-2.el10.riscv64.rpm;name=riscv64_libbpf-devel;unpack=0"
+SRC_URI[riscv64_libbpf-devel.sha256sum] = "03c4a833e3d481813821495925f33610a267064d8659d4af831eaf326e6575de"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libbpf-static-1.7.0-2.el10.riscv64.rpm;name=riscv64_libbpf-static;unpack=0"
+SRC_URI[riscv64_libbpf-static.sha256sum] = "d6dd7676a20c1dd287ba6b6d3237f99aa13dab413c1f4431b511d945f4360105"
 
 RDEPENDS:libbpf = " \
  elfutils-libelf \

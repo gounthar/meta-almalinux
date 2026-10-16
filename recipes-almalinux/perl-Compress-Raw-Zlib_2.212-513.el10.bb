@@ -9,17 +9,17 @@ PACKAGES = " \
  perl-Compress-Raw-Zlib \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/perl-Compress-Raw-Zlib-2.212-513.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/perl-Compress-Raw-Zlib-2.212-513.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "69e4ef7f784112179f16bf675e01fc479b6584787e231e69ff6ab2884a5cc358"
 
-URI_x86_64_v2_perl-Compress-Raw-Zlib = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-Compress-Raw-Zlib-2.212-513.el10.x86_64_v2.rpm;name=x86_64_v2_perl-Compress-Raw-Zlib;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Compress-Raw-Zlib}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-Compress-Raw-Zlib-2.212-513.el10.x86_64_v2.rpm;name=x86_64_v2_perl-Compress-Raw-Zlib;unpack=0"
 SRC_URI[x86_64_v2_perl-Compress-Raw-Zlib.sha256sum] = "2d3dcb6216d5eb454ffdb857106ab58c0e774529b0ab2d40fbe550bf601869c8"
 
-URI_aarch64_perl-Compress-Raw-Zlib = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-Compress-Raw-Zlib-2.212-513.el10.aarch64.rpm;name=aarch64_perl-Compress-Raw-Zlib;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Compress-Raw-Zlib}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-Compress-Raw-Zlib-2.212-513.el10.aarch64.rpm;name=aarch64_perl-Compress-Raw-Zlib;unpack=0"
 SRC_URI[aarch64_perl-Compress-Raw-Zlib.sha256sum] = "4eb1c4bc4b51d6b2a146c17833fda4f2d29658b0b5416db50f136f79a277b0d1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/perl-Compress-Raw-Zlib-2.212-513.el10.riscv64.rpm;name=riscv64_perl-Compress-Raw-Zlib;unpack=0"
+SRC_URI[riscv64_perl-Compress-Raw-Zlib.sha256sum] = "b42e1555cae5fdde2de42c0858cfc2390066bbd0722753eb7bd7a70ee033b50a"
 
 RDEPENDS:perl-Compress-Raw-Zlib = " \
  glibc \

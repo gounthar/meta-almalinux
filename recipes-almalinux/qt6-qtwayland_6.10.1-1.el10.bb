@@ -11,35 +11,37 @@ PACKAGES = " \
  qt6-qtwayland-examples \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtwayland-6.10.1-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtwayland-6.10.1-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3f665fd94f2c87fccb9ca6eb0691ef40370244017db569315cbb9c8615f6da0d"
 
-URI_x86_64_v2_qt6-qtwayland = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtwayland-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtwayland;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtwayland}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtwayland-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtwayland;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtwayland.sha256sum] = "f379b7c3d6aae5dfe429928af22ffb79a6853a31b452b2de750336cb4f4b7fc2"
 
-URI_x86_64_v2_qt6-qtwayland-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtwayland-devel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtwayland-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtwayland-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtwayland-devel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtwayland-devel;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtwayland-devel.sha256sum] = "ca302fbcde9dc378f1dac0b90083441375042b53541c9310d8c47652ff024c51"
 
-URI_x86_64_v2_qt6-qtwayland-examples = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtwayland-examples-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtwayland-examples;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtwayland-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtwayland-examples-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtwayland-examples;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtwayland-examples.sha256sum] = "651779b385ac91e5c4900df4aeb9eb81c3d1ace89ac377167d85647f07da5c50"
 
-URI_aarch64_qt6-qtwayland = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtwayland-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtwayland;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtwayland}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtwayland-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtwayland;unpack=0"
 SRC_URI[aarch64_qt6-qtwayland.sha256sum] = "19c07423b1dec22fdb2d7ccd8f0f83f5be469f748409f3e402361c1f88b66887"
 
-URI_aarch64_qt6-qtwayland-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtwayland-devel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtwayland-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtwayland-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtwayland-devel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtwayland-devel;unpack=0"
 SRC_URI[aarch64_qt6-qtwayland-devel.sha256sum] = "7baef52eeefc26823da5aaeca631ce297b38946b77446bb8a6f239d9802aa71b"
 
-URI_aarch64_qt6-qtwayland-examples = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtwayland-examples-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtwayland-examples;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtwayland-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtwayland-examples-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtwayland-examples;unpack=0"
 SRC_URI[aarch64_qt6-qtwayland-examples.sha256sum] = "37f0a7f555680abb304c8f553882720e77443f8d45fd262a141dffbd7cfae64c"
 
-RDEPENDS:qt6-qtwayland = " \
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtwayland-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtwayland;unpack=0"
+SRC_URI[riscv64_qt6-qtwayland.sha256sum] = "51e1e8916510c412ad219cf3f9c745a19e36b7fb66807e922222c0aff96a5653"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtwayland-devel-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtwayland-devel;unpack=0"
+SRC_URI[riscv64_qt6-qtwayland-devel.sha256sum] = "7f58ed894578a3abb5159c32978613038bb562927be76d30b0e034a7762416a6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/qt6-qtwayland-examples-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtwayland-examples;unpack=0"
+SRC_URI[riscv64_qt6-qtwayland-examples.sha256sum] = "75433c1cd82f117c05c8b4205fafe5f48beac7f0fce5fe7c4b8a339ca218e9ab"
+
+RDEPENDS:qt6-qtwayland:x86_64_v2 = " \
  glibc \
  libglvnd-egl \
  libglvnd-opengl \
@@ -50,7 +52,32 @@ RDEPENDS:qt6-qtwayland = " \
  qt6-qtbase \
  qt6-qtbase-gui \
  qt6-qtdeclarative \
- "
+"
+RDEPENDS:qt6-qtwayland:aarch64 = " \
+ glibc \
+ libglvnd-egl \
+ libglvnd-opengl \
+ libstdc++ \
+ libwayland-client \
+ libwayland-server \
+ libxkbcommon \
+ qt6-qtbase \
+ qt6-qtbase-gui \
+ qt6-qtdeclarative \
+"
+RDEPENDS:qt6-qtwayland:riscv64 = " \
+ glibc \
+ libgcc \
+ libglvnd-egl \
+ libglvnd-opengl \
+ libstdc++ \
+ libwayland-client \
+ libwayland-server \
+ libxkbcommon \
+ qt6-qtbase \
+ qt6-qtbase-gui \
+ qt6-qtdeclarative \
+"
 RDEPENDS:qt6-qtwayland-devel = " \
  cmake-filesystem \
  pkgconf-pkg-config \

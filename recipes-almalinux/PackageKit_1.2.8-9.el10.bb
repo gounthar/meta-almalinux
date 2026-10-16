@@ -14,57 +14,62 @@ PACKAGES = " \
  PackageKit-gtk3-module \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/PackageKit-1.2.8-9.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/PackageKit-1.2.8-9.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1a167af0fdd881e5b6d7563a4fc13defa27dc6b9b1f1e447c8df011d215f6885"
 
-URI_x86_64_v2_PackageKit = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/PackageKit-1.2.8-9.el10.x86_64_v2.rpm;name=x86_64_v2_PackageKit;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_PackageKit}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/PackageKit-1.2.8-9.el10.x86_64_v2.rpm;name=x86_64_v2_PackageKit;unpack=0"
 SRC_URI[x86_64_v2_PackageKit.sha256sum] = "09b286368e79b67fe245f242e987cdef546d322dcd602381e7ce2d9a84aa6879"
 
-URI_x86_64_v2_PackageKit-command-not-found = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/PackageKit-command-not-found-1.2.8-9.el10.x86_64_v2.rpm;name=x86_64_v2_PackageKit-command-not-found;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_PackageKit-command-not-found}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/PackageKit-command-not-found-1.2.8-9.el10.x86_64_v2.rpm;name=x86_64_v2_PackageKit-command-not-found;unpack=0"
 SRC_URI[x86_64_v2_PackageKit-command-not-found.sha256sum] = "71bbed055aa4fbba672a728194b57e699414644a3ef29b496569d5d5ccc0a499"
 
-URI_x86_64_v2_PackageKit-glib = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/PackageKit-glib-1.2.8-9.el10.x86_64_v2.rpm;name=x86_64_v2_PackageKit-glib;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_PackageKit-glib}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/PackageKit-glib-1.2.8-9.el10.x86_64_v2.rpm;name=x86_64_v2_PackageKit-glib;unpack=0"
 SRC_URI[x86_64_v2_PackageKit-glib.sha256sum] = "2d857a1741bb329e82494412bc97169e95d8df8e597c279e8ba0dc298d14d752"
 
-URI_x86_64_v2_PackageKit-glib-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/PackageKit-glib-devel-1.2.8-9.el10.x86_64_v2.rpm;name=x86_64_v2_PackageKit-glib-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_PackageKit-glib-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/PackageKit-glib-devel-1.2.8-9.el10.x86_64_v2.rpm;name=x86_64_v2_PackageKit-glib-devel;unpack=0"
 SRC_URI[x86_64_v2_PackageKit-glib-devel.sha256sum] = "3e23cdef62d9f34ad42d0b41a7e18b85c01dd0756589f4df20263c9ff58a75c4"
 
-URI_x86_64_v2_PackageKit-gstreamer-plugin = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/PackageKit-gstreamer-plugin-1.2.8-9.el10.x86_64_v2.rpm;name=x86_64_v2_PackageKit-gstreamer-plugin;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_PackageKit-gstreamer-plugin}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/PackageKit-gstreamer-plugin-1.2.8-9.el10.x86_64_v2.rpm;name=x86_64_v2_PackageKit-gstreamer-plugin;unpack=0"
 SRC_URI[x86_64_v2_PackageKit-gstreamer-plugin.sha256sum] = "36939ff832883ff7f5458c01b63dec0f52908ba1a335f7b87c61bfd9e905b0a1"
 
-URI_x86_64_v2_PackageKit-gtk3-module = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/PackageKit-gtk3-module-1.2.8-9.el10.x86_64_v2.rpm;name=x86_64_v2_PackageKit-gtk3-module;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_PackageKit-gtk3-module}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/PackageKit-gtk3-module-1.2.8-9.el10.x86_64_v2.rpm;name=x86_64_v2_PackageKit-gtk3-module;unpack=0"
 SRC_URI[x86_64_v2_PackageKit-gtk3-module.sha256sum] = "8f42c927f56da670bae0f1164a28a39730165249dc01b11b0c26370aff6661bf"
 
-URI_aarch64_PackageKit = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/PackageKit-1.2.8-9.el10.aarch64.rpm;name=aarch64_PackageKit;unpack=0"
-SRC_URI:append = " ${URI_aarch64_PackageKit}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/PackageKit-1.2.8-9.el10.aarch64.rpm;name=aarch64_PackageKit;unpack=0"
 SRC_URI[aarch64_PackageKit.sha256sum] = "1486119a024aa81bef7f868caa75de8a8a27a4883a9f0e914cdcd665a2d24238"
 
-URI_aarch64_PackageKit-command-not-found = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/PackageKit-command-not-found-1.2.8-9.el10.aarch64.rpm;name=aarch64_PackageKit-command-not-found;unpack=0"
-SRC_URI:append = " ${URI_aarch64_PackageKit-command-not-found}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/PackageKit-command-not-found-1.2.8-9.el10.aarch64.rpm;name=aarch64_PackageKit-command-not-found;unpack=0"
 SRC_URI[aarch64_PackageKit-command-not-found.sha256sum] = "b76a6041781e2d4268ebf4cb0340e81f4ad3f30368e182e8ba5d8f2778adf64f"
 
-URI_aarch64_PackageKit-glib = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/PackageKit-glib-1.2.8-9.el10.aarch64.rpm;name=aarch64_PackageKit-glib;unpack=0"
-SRC_URI:append = " ${URI_aarch64_PackageKit-glib}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/PackageKit-glib-1.2.8-9.el10.aarch64.rpm;name=aarch64_PackageKit-glib;unpack=0"
 SRC_URI[aarch64_PackageKit-glib.sha256sum] = "9a43a632c649a68433a7e4ebdb94fa4e4226c294a4638d727f5bfec8d7f2b856"
 
-URI_aarch64_PackageKit-glib-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/PackageKit-glib-devel-1.2.8-9.el10.aarch64.rpm;name=aarch64_PackageKit-glib-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_PackageKit-glib-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/PackageKit-glib-devel-1.2.8-9.el10.aarch64.rpm;name=aarch64_PackageKit-glib-devel;unpack=0"
 SRC_URI[aarch64_PackageKit-glib-devel.sha256sum] = "9c2a2ebf4dee7b7581debe94ef58a7915b0c7f091b3825f7ffdb4cc094e52928"
 
-URI_aarch64_PackageKit-gstreamer-plugin = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/PackageKit-gstreamer-plugin-1.2.8-9.el10.aarch64.rpm;name=aarch64_PackageKit-gstreamer-plugin;unpack=0"
-SRC_URI:append = " ${URI_aarch64_PackageKit-gstreamer-plugin}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/PackageKit-gstreamer-plugin-1.2.8-9.el10.aarch64.rpm;name=aarch64_PackageKit-gstreamer-plugin;unpack=0"
 SRC_URI[aarch64_PackageKit-gstreamer-plugin.sha256sum] = "34cf1d7cc1b454bd6ae16d1c1076ec9a2213992660704aba41c7c30d8d1a83a7"
 
-URI_aarch64_PackageKit-gtk3-module = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/PackageKit-gtk3-module-1.2.8-9.el10.aarch64.rpm;name=aarch64_PackageKit-gtk3-module;unpack=0"
-SRC_URI:append = " ${URI_aarch64_PackageKit-gtk3-module}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/PackageKit-gtk3-module-1.2.8-9.el10.aarch64.rpm;name=aarch64_PackageKit-gtk3-module;unpack=0"
 SRC_URI[aarch64_PackageKit-gtk3-module.sha256sum] = "af25210d8aae2b7fd23bba9c3dca36d2bd79047280219ad86dd5eb604bdcdeaa"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/PackageKit-1.2.8-9.el10.riscv64.rpm;name=riscv64_PackageKit;unpack=0"
+SRC_URI[riscv64_PackageKit.sha256sum] = "d57ca2b47e1db7b75d9761a076d61b6fee1329927ea389e3ed501d5558c07a1d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/PackageKit-command-not-found-1.2.8-9.el10.riscv64.rpm;name=riscv64_PackageKit-command-not-found;unpack=0"
+SRC_URI[riscv64_PackageKit-command-not-found.sha256sum] = "f0dbf0d56835cff6c9c72d45daee23b7cacd9bef5c9dca7a30070ba52f6260c8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/PackageKit-glib-1.2.8-9.el10.riscv64.rpm;name=riscv64_PackageKit-glib;unpack=0"
+SRC_URI[riscv64_PackageKit-glib.sha256sum] = "bba8a112e6ef1ba78d22c5fcfb730ff2afb5d9b14a91ff4b1f8d77a2b7bdbfdf"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/PackageKit-glib-devel-1.2.8-9.el10.riscv64.rpm;name=riscv64_PackageKit-glib-devel;unpack=0"
+SRC_URI[riscv64_PackageKit-glib-devel.sha256sum] = "69abc431203e8fae4891b2a67334c9d1c05d6dec48fd4c2bcabbbd853a23be90"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/PackageKit-gstreamer-plugin-1.2.8-9.el10.riscv64.rpm;name=riscv64_PackageKit-gstreamer-plugin;unpack=0"
+SRC_URI[riscv64_PackageKit-gstreamer-plugin.sha256sum] = "67effe59b0f5bed6e13fed5b8416358023ed5613ace6840961c3c65d40952ae8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/PackageKit-gtk3-module-1.2.8-9.el10.riscv64.rpm;name=riscv64_PackageKit-gtk3-module;unpack=0"
+SRC_URI[riscv64_PackageKit-gtk3-module.sha256sum] = "ebdd1cfe191103239e73837b235c01af098fd7283beffdc795d5baae86f63168"
 
 RDEPENDS:PackageKit = " \
  PackageKit-glib \

@@ -9,17 +9,17 @@ PACKAGES = " \
  plocate \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/plocate-1.1.22-11.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/plocate-1.1.22-11.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "89d278afa7def8fad875095026a94f6ba79090541da50b6d8bf8de6a0e9f98bf"
 
-URI_x86_64_v2_plocate = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/plocate-1.1.22-11.el10.x86_64_v2.rpm;name=x86_64_v2_plocate;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_plocate}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/plocate-1.1.22-11.el10.x86_64_v2.rpm;name=x86_64_v2_plocate;unpack=0"
 SRC_URI[x86_64_v2_plocate.sha256sum] = "e8cf1f2c5b5f100f50fa09425334d4fdd0fda16d961c189b3854e1b4a220d040"
 
-URI_aarch64_plocate = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/plocate-1.1.22-11.el10.aarch64.rpm;name=aarch64_plocate;unpack=0"
-SRC_URI:append = " ${URI_aarch64_plocate}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/plocate-1.1.22-11.el10.aarch64.rpm;name=aarch64_plocate;unpack=0"
 SRC_URI[aarch64_plocate.sha256sum] = "1cd872614710a931456cb6b6d1a3bf53cbd326ce6ac56b147077911067d8dee9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/plocate-1.1.22-11.el10.riscv64.rpm;name=riscv64_plocate;unpack=0"
+SRC_URI[riscv64_plocate.sha256sum] = "69e0e5c6ae1140c7397f7a8729aa6cc9881b9ff5e1a33ee4f960f02b2fde8d1d"
 
 RDEPENDS:plocate = " \
  bash \

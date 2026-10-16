@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "openscap-report"
 PV = "0.2.9"
 PR = "3.el10"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  openscap-report \
- "
+"
+PACKAGES:aarch64 = " \
+ openscap-report \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/openscap-report-0.2.9-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/openscap-report-0.2.9-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "fd0d383984007bc695207b82922d5f8678008505ebd0ed5710ac589de1441b43"
 
-URI_x86_64_v2_openscap-report = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/openscap-report-0.2.9-3.el10.noarch.rpm;name=x86_64_v2_openscap-report;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_openscap-report}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/openscap-report-0.2.9-3.el10.noarch.rpm;name=x86_64_v2_openscap-report;unpack=0"
 SRC_URI[x86_64_v2_openscap-report.sha256sum] = "a178bb19f592b01c8bf04885836d493d268a1196be8ea6bbf4c0cb453f19d367"
 
-URI_aarch64_openscap-report = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/openscap-report-0.2.9-3.el10.noarch.rpm;name=aarch64_openscap-report;unpack=0"
-SRC_URI:append = " ${URI_aarch64_openscap-report}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/openscap-report-0.2.9-3.el10.noarch.rpm;name=aarch64_openscap-report;unpack=0"
 SRC_URI[aarch64_openscap-report.sha256sum] = "a178bb19f592b01c8bf04885836d493d268a1196be8ea6bbf4c0cb453f19d367"
 
 RDEPENDS:openscap-report = " \

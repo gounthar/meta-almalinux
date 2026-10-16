@@ -5,23 +5,26 @@ inherit dnf-bridge
 PN = "pax-utils"
 PV = "1.3.10"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  pax-utils \
- "
+"
+PACKAGES:aarch64 = " \
+ pax-utils \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/pax-utils-1.3.10-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/pax-utils-1.3.10-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "cf9cf945971a024e7edd5b8ffa3859ea84ed74e87cef6627f781911084397537"
 
 ## Requires (aarch64) that were seen as not satisfiable in original repo:
 # - pax-utils: libcap.so.2()(64bit)
 
-URI_x86_64_v2_pax-utils = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/pax-utils-1.3.10-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_pax-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pax-utils}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/pax-utils-1.3.10-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_pax-utils;unpack=0"
 SRC_URI[x86_64_v2_pax-utils.sha256sum] = "52e69aa1afd584a790cc95fa0411fb12f6edba468911f9c6f6c29d2e3097ba28"
 
-URI_aarch64_pax-utils = "${EPEL_MIRROR}/aarch64/Packages/p/pax-utils-1.3.10-1.el10_2.aarch64.rpm;name=aarch64_pax-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pax-utils}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/pax-utils-1.3.10-1.el10_2.aarch64.rpm;name=aarch64_pax-utils;unpack=0"
 SRC_URI[aarch64_pax-utils.sha256sum] = "8296d14a76771b376dd1c7590aac9a8952636ae258ce72f8525f299fd026f14e"
 
 RDEPENDS:pax-utils:x86_64_v2 = " \

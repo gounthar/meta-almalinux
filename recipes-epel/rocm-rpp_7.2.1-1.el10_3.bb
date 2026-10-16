@@ -12,17 +12,17 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rocm-rpp-7.2.1-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rocm-rpp-7.2.1-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a6c215c4f32cb59d49da3730d231540a57c1b50a58be4b613c114fc45ed33d5c"
 
-URI_x86_64_v2_rocm-rpp = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocm-rpp-7.2.1-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocm-rpp;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rocm-rpp}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocm-rpp-7.2.1-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocm-rpp;unpack=0"
 SRC_URI[x86_64_v2_rocm-rpp.sha256sum] = "e6b07f901ee0a1090f84fcbc70336124a80b8791bb1ab5cf9c37f1d8c7fe5636"
 
-URI_x86_64_v2_rocm-rpp-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocm-rpp-devel-7.2.1-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocm-rpp-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rocm-rpp-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocm-rpp-devel-7.2.1-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocm-rpp-devel;unpack=0"
 SRC_URI[x86_64_v2_rocm-rpp-devel.sha256sum] = "3cea79f662dc9a61ec08d1a34d4953e65c4462d36a40f2765d6b88f8dec66c34"
 
 RDEPENDS:rocm-rpp = " \

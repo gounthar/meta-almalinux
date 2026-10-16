@@ -9,17 +9,17 @@ PACKAGES = " \
  golang-github-cpuguy83-md2man \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/golang-github-cpuguy83-md2man-2.0.3-9.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/golang-github-cpuguy83-md2man-2.0.3-9.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "dbd880ef7f324a7ded1a760cbdf292f64736bb00c4d37c885a17daa71d13d81d"
 
-URI_x86_64_v2_golang-github-cpuguy83-md2man = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/golang-github-cpuguy83-md2man-2.0.3-9.el10.x86_64_v2.rpm;name=x86_64_v2_golang-github-cpuguy83-md2man;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_golang-github-cpuguy83-md2man}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/golang-github-cpuguy83-md2man-2.0.3-9.el10.x86_64_v2.rpm;name=x86_64_v2_golang-github-cpuguy83-md2man;unpack=0"
 SRC_URI[x86_64_v2_golang-github-cpuguy83-md2man.sha256sum] = "f9fb3644623fe21185a53a72adfb506405b32cf3cad7070030816cf2f75ea0d9"
 
-URI_aarch64_golang-github-cpuguy83-md2man = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/golang-github-cpuguy83-md2man-2.0.3-9.el10.aarch64.rpm;name=aarch64_golang-github-cpuguy83-md2man;unpack=0"
-SRC_URI:append = " ${URI_aarch64_golang-github-cpuguy83-md2man}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/golang-github-cpuguy83-md2man-2.0.3-9.el10.aarch64.rpm;name=aarch64_golang-github-cpuguy83-md2man;unpack=0"
 SRC_URI[aarch64_golang-github-cpuguy83-md2man.sha256sum] = "b7576f84d3cbba9172541fda0bac51c8d18d2eb8e6faddb29b43f08174252aa7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/golang-github-cpuguy83-md2man-2.0.3-9.el10.riscv64.rpm;name=riscv64_golang-github-cpuguy83-md2man;unpack=0"
+SRC_URI[riscv64_golang-github-cpuguy83-md2man.sha256sum] = "26600c309c3cf48fa718a4b13ca82a62f15f8cf1d5fe23b63179ca42f971b3dd"
 
 RDEPENDS:golang-github-cpuguy83-md2man = " \
  glibc \

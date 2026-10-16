@@ -9,20 +9,23 @@ PACKAGES = " \
  rtkit \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/rtkit-0.11-68.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/rtkit-0.11-68.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f7eac68b8ebaf8e678958e81b3135e6aa294c0a130abab5757626af59d46c308"
 
 ## Requires (aarch64) that were seen as not satisfiable in original repo:
 # - rtkit: libcap.so.2()(64bit)
 
-URI_x86_64_v2_rtkit = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/rtkit-0.11-68.el10.x86_64_v2.rpm;name=x86_64_v2_rtkit;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rtkit}"
+## Requires (riscv64) that were seen as not satisfiable in original repo:
+# - rtkit: libcap.so.2()(64bit)
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/rtkit-0.11-68.el10.x86_64_v2.rpm;name=x86_64_v2_rtkit;unpack=0"
 SRC_URI[x86_64_v2_rtkit.sha256sum] = "99e7225e51d3f46e51340b9ff91cfdb8f6d952f49f2567104b5a6eef39a6ce10"
 
-URI_aarch64_rtkit = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/rtkit-0.11-68.el10.aarch64.rpm;name=aarch64_rtkit;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rtkit}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/rtkit-0.11-68.el10.aarch64.rpm;name=aarch64_rtkit;unpack=0"
 SRC_URI[aarch64_rtkit.sha256sum] = "10ccb65456cfecccd7b4bbd34297a328b185300604dfc098779c0d7d4a6b8d01"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/rtkit-0.11-68.el10.riscv64.rpm;name=riscv64_rtkit;unpack=0"
+SRC_URI[riscv64_rtkit.sha256sum] = "9b857bae26c6d9582826020805c0c03c6f3e0c0666cb1399149cb7eaa51d65ed"
 
 RDEPENDS:rtkit:x86_64_v2 = " \
  bash \
@@ -35,6 +38,15 @@ RDEPENDS:rtkit:x86_64_v2 = " \
  systemd-libs \
 "
 RDEPENDS:rtkit:aarch64 = " \
+ bash \
+ dbus \
+ dbus-libs \
+ glibc \
+ polkit \
+ shadow-utils \
+ systemd-libs \
+"
+RDEPENDS:rtkit:riscv64 = " \
  bash \
  dbus \
  dbus-libs \

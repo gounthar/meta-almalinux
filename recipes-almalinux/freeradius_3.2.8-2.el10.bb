@@ -21,113 +21,125 @@ PACKAGES = " \
  python3-freeradius \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/freeradius-3.2.8-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/freeradius-3.2.8-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6f7dfa7f6673bc85507bb339756f3d53adb0a1858fd30c96266c652528c7daab"
 
-URI_x86_64_v2_freeradius = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/freeradius-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_freeradius;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_freeradius}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/freeradius-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_freeradius;unpack=0"
 SRC_URI[x86_64_v2_freeradius.sha256sum] = "c34f7dfe679945a9f94472e4b9b69d62b83d45a4f5d2df83aa46306368c7fa00"
 
-URI_x86_64_v2_freeradius-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/freeradius-devel-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_freeradius-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_freeradius-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/freeradius-devel-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_freeradius-devel;unpack=0"
 SRC_URI[x86_64_v2_freeradius-devel.sha256sum] = "ad01828d7df7d285a895a1647953beffe1bf3e21e7f38f3a7bb406675c051633"
 
-URI_x86_64_v2_freeradius-doc = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/freeradius-doc-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_freeradius-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_freeradius-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/freeradius-doc-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_freeradius-doc;unpack=0"
 SRC_URI[x86_64_v2_freeradius-doc.sha256sum] = "b5e81db3063de50bd3dda94b4e315c84f5e2df4d368130f987a6d6b5014661b2"
 
-URI_x86_64_v2_freeradius-krb5 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/freeradius-krb5-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_freeradius-krb5;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_freeradius-krb5}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/freeradius-krb5-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_freeradius-krb5;unpack=0"
 SRC_URI[x86_64_v2_freeradius-krb5.sha256sum] = "dcbb038cacd456a55e8ef0d0825662cdbf38bcb3d2bd86ff184904272c80fe26"
 
-URI_x86_64_v2_freeradius-ldap = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/freeradius-ldap-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_freeradius-ldap;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_freeradius-ldap}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/freeradius-ldap-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_freeradius-ldap;unpack=0"
 SRC_URI[x86_64_v2_freeradius-ldap.sha256sum] = "bc7d5bbd8c9b5d6386744177848afe9c446588c7ae229c97d2ad664d068aa0d9"
 
-URI_x86_64_v2_freeradius-mysql = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/freeradius-mysql-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_freeradius-mysql;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_freeradius-mysql}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/freeradius-mysql-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_freeradius-mysql;unpack=0"
 SRC_URI[x86_64_v2_freeradius-mysql.sha256sum] = "7e059a0425d7c06b0033cb5bc9c33fde168699e7c1ce4761e2908a9b31c67c0d"
 
-URI_x86_64_v2_freeradius-perl = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/freeradius-perl-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_freeradius-perl;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_freeradius-perl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/freeradius-perl-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_freeradius-perl;unpack=0"
 SRC_URI[x86_64_v2_freeradius-perl.sha256sum] = "58b63d2981fdd0610ddae6be0bec92f685de59b305fc4922834d59ed48793879"
 
-URI_x86_64_v2_freeradius-postgresql = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/freeradius-postgresql-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_freeradius-postgresql;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_freeradius-postgresql}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/freeradius-postgresql-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_freeradius-postgresql;unpack=0"
 SRC_URI[x86_64_v2_freeradius-postgresql.sha256sum] = "6731202c9b04484eed584c82da9832c8f46ece073adaeacb0fa7817cccc77c6a"
 
-URI_x86_64_v2_freeradius-rest = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/freeradius-rest-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_freeradius-rest;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_freeradius-rest}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/freeradius-rest-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_freeradius-rest;unpack=0"
 SRC_URI[x86_64_v2_freeradius-rest.sha256sum] = "c65e72ab58915764b909cc5dbbd10b9824807c7dda42426ce59f7ae369812eb9"
 
-URI_x86_64_v2_freeradius-sqlite = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/freeradius-sqlite-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_freeradius-sqlite;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_freeradius-sqlite}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/freeradius-sqlite-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_freeradius-sqlite;unpack=0"
 SRC_URI[x86_64_v2_freeradius-sqlite.sha256sum] = "8c6153b6740c25d90daa4e074086208b1b88ab34d770bd7a7dc2a19b7bdccc09"
 
-URI_x86_64_v2_freeradius-unixODBC = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/freeradius-unixODBC-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_freeradius-unixODBC;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_freeradius-unixODBC}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/freeradius-unixODBC-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_freeradius-unixODBC;unpack=0"
 SRC_URI[x86_64_v2_freeradius-unixODBC.sha256sum] = "34bc1c2f0c752e3401af59371088fb76031bb92c78a73a7b6656f50ea32e5a99"
 
-URI_x86_64_v2_freeradius-utils = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/freeradius-utils-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_freeradius-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_freeradius-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/freeradius-utils-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_freeradius-utils;unpack=0"
 SRC_URI[x86_64_v2_freeradius-utils.sha256sum] = "99a179805f353d2a2edd6dc9a3536b0e23724777a6e2a04610fec505df96a5e5"
 
-URI_x86_64_v2_python3-freeradius = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-freeradius-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_python3-freeradius;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-freeradius}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-freeradius-3.2.8-2.el10.x86_64_v2.rpm;name=x86_64_v2_python3-freeradius;unpack=0"
 SRC_URI[x86_64_v2_python3-freeradius.sha256sum] = "8e2f25dbf7a45d6f63076850bf6e998c877a70a53946ccda3bee479ed5a62ae0"
 
-URI_aarch64_freeradius = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/freeradius-3.2.8-2.el10.aarch64.rpm;name=aarch64_freeradius;unpack=0"
-SRC_URI:append = " ${URI_aarch64_freeradius}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/freeradius-3.2.8-2.el10.aarch64.rpm;name=aarch64_freeradius;unpack=0"
 SRC_URI[aarch64_freeradius.sha256sum] = "0308ab5895fbe90be3f7071fda1052ea1ebbda1f0a467a298453c2a73a52b32d"
 
-URI_aarch64_freeradius-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/freeradius-devel-3.2.8-2.el10.aarch64.rpm;name=aarch64_freeradius-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_freeradius-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/freeradius-devel-3.2.8-2.el10.aarch64.rpm;name=aarch64_freeradius-devel;unpack=0"
 SRC_URI[aarch64_freeradius-devel.sha256sum] = "8bb4fef93079a3a1b012a6f260efc81071f3860e43532056d4fa47482ffe4bd6"
 
-URI_aarch64_freeradius-doc = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/freeradius-doc-3.2.8-2.el10.aarch64.rpm;name=aarch64_freeradius-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_freeradius-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/freeradius-doc-3.2.8-2.el10.aarch64.rpm;name=aarch64_freeradius-doc;unpack=0"
 SRC_URI[aarch64_freeradius-doc.sha256sum] = "7351d4836eb9e7205f139d84bccc3c39ea14bfb5df60c6f6d020397a8368af21"
 
-URI_aarch64_freeradius-krb5 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/freeradius-krb5-3.2.8-2.el10.aarch64.rpm;name=aarch64_freeradius-krb5;unpack=0"
-SRC_URI:append = " ${URI_aarch64_freeradius-krb5}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/freeradius-krb5-3.2.8-2.el10.aarch64.rpm;name=aarch64_freeradius-krb5;unpack=0"
 SRC_URI[aarch64_freeradius-krb5.sha256sum] = "5ec00aa8645f6aef7d2cf668adf209591fe473e41084ab33c35d85429fc81b61"
 
-URI_aarch64_freeradius-ldap = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/freeradius-ldap-3.2.8-2.el10.aarch64.rpm;name=aarch64_freeradius-ldap;unpack=0"
-SRC_URI:append = " ${URI_aarch64_freeradius-ldap}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/freeradius-ldap-3.2.8-2.el10.aarch64.rpm;name=aarch64_freeradius-ldap;unpack=0"
 SRC_URI[aarch64_freeradius-ldap.sha256sum] = "029496ce17878cac37d29b158caa7b330549c9073e08a793c5439abdecb721a8"
 
-URI_aarch64_freeradius-mysql = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/freeradius-mysql-3.2.8-2.el10.aarch64.rpm;name=aarch64_freeradius-mysql;unpack=0"
-SRC_URI:append = " ${URI_aarch64_freeradius-mysql}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/freeradius-mysql-3.2.8-2.el10.aarch64.rpm;name=aarch64_freeradius-mysql;unpack=0"
 SRC_URI[aarch64_freeradius-mysql.sha256sum] = "7efe6204aa6807416c8235df6a3aad235be56a6a3c0bba8690cfbd18751b645f"
 
-URI_aarch64_freeradius-perl = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/freeradius-perl-3.2.8-2.el10.aarch64.rpm;name=aarch64_freeradius-perl;unpack=0"
-SRC_URI:append = " ${URI_aarch64_freeradius-perl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/freeradius-perl-3.2.8-2.el10.aarch64.rpm;name=aarch64_freeradius-perl;unpack=0"
 SRC_URI[aarch64_freeradius-perl.sha256sum] = "bb837513b5ad43280190e605a91d218e7158491b3c809ac0e248314bf1935361"
 
-URI_aarch64_freeradius-postgresql = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/freeradius-postgresql-3.2.8-2.el10.aarch64.rpm;name=aarch64_freeradius-postgresql;unpack=0"
-SRC_URI:append = " ${URI_aarch64_freeradius-postgresql}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/freeradius-postgresql-3.2.8-2.el10.aarch64.rpm;name=aarch64_freeradius-postgresql;unpack=0"
 SRC_URI[aarch64_freeradius-postgresql.sha256sum] = "1b24de615103f4868c28b08d78a65e3bf394002ffc60c55923dbbf6e934db5fe"
 
-URI_aarch64_freeradius-rest = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/freeradius-rest-3.2.8-2.el10.aarch64.rpm;name=aarch64_freeradius-rest;unpack=0"
-SRC_URI:append = " ${URI_aarch64_freeradius-rest}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/freeradius-rest-3.2.8-2.el10.aarch64.rpm;name=aarch64_freeradius-rest;unpack=0"
 SRC_URI[aarch64_freeradius-rest.sha256sum] = "ee38da12407314da799679d38c1d74434bf347e28e8b5ec9f3f33e53cef043a8"
 
-URI_aarch64_freeradius-sqlite = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/freeradius-sqlite-3.2.8-2.el10.aarch64.rpm;name=aarch64_freeradius-sqlite;unpack=0"
-SRC_URI:append = " ${URI_aarch64_freeradius-sqlite}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/freeradius-sqlite-3.2.8-2.el10.aarch64.rpm;name=aarch64_freeradius-sqlite;unpack=0"
 SRC_URI[aarch64_freeradius-sqlite.sha256sum] = "d5f0b31fe8dc2a7d28f579bf52a392c9fcd195f7f7f6428686c709a96496eb50"
 
-URI_aarch64_freeradius-unixODBC = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/freeradius-unixODBC-3.2.8-2.el10.aarch64.rpm;name=aarch64_freeradius-unixODBC;unpack=0"
-SRC_URI:append = " ${URI_aarch64_freeradius-unixODBC}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/freeradius-unixODBC-3.2.8-2.el10.aarch64.rpm;name=aarch64_freeradius-unixODBC;unpack=0"
 SRC_URI[aarch64_freeradius-unixODBC.sha256sum] = "7062bd955425c1626e0499bf05e1cc95df2f802658f25c63f6df27ff7b51f311"
 
-URI_aarch64_freeradius-utils = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/freeradius-utils-3.2.8-2.el10.aarch64.rpm;name=aarch64_freeradius-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_freeradius-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/freeradius-utils-3.2.8-2.el10.aarch64.rpm;name=aarch64_freeradius-utils;unpack=0"
 SRC_URI[aarch64_freeradius-utils.sha256sum] = "cffbcdf177af5a38f4520681996667aaf5cc8c020577768dabd31626aa795b73"
 
-URI_aarch64_python3-freeradius = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-freeradius-3.2.8-2.el10.aarch64.rpm;name=aarch64_python3-freeradius;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-freeradius}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-freeradius-3.2.8-2.el10.aarch64.rpm;name=aarch64_python3-freeradius;unpack=0"
 SRC_URI[aarch64_python3-freeradius.sha256sum] = "d8330d7e8a96f2a17a6a7f3a6047c1ca6d79ae091ea181c0a2e49ac2977d25db"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/freeradius-3.2.8-2.el10.riscv64.rpm;name=riscv64_freeradius;unpack=0"
+SRC_URI[riscv64_freeradius.sha256sum] = "00b1fa155df149cdba44c0d0577958f7ae217f56a7f672e14f18f92e9d5d679e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/freeradius-devel-3.2.8-2.el10.riscv64.rpm;name=riscv64_freeradius-devel;unpack=0"
+SRC_URI[riscv64_freeradius-devel.sha256sum] = "1f36c1cfca12a7a5a246aa38ad9b0c357f614ce606f2dd1ec791b87e0ea41d4b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/freeradius-doc-3.2.8-2.el10.riscv64.rpm;name=riscv64_freeradius-doc;unpack=0"
+SRC_URI[riscv64_freeradius-doc.sha256sum] = "2a02d841b155bc78e6ce163c77a1192daa08942cab6f9b3e07f9853a0a9d75de"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/freeradius-krb5-3.2.8-2.el10.riscv64.rpm;name=riscv64_freeradius-krb5;unpack=0"
+SRC_URI[riscv64_freeradius-krb5.sha256sum] = "2b1ee30c2c856aa23f04b7fecc8e3723a498c7d1a863751e0117324344a5aab8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/freeradius-ldap-3.2.8-2.el10.riscv64.rpm;name=riscv64_freeradius-ldap;unpack=0"
+SRC_URI[riscv64_freeradius-ldap.sha256sum] = "cdb5d8b402824ee94f004f262ed9e7fb3b9b0e341b338972a07a0674b7a87f28"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/freeradius-mysql-3.2.8-2.el10.riscv64.rpm;name=riscv64_freeradius-mysql;unpack=0"
+SRC_URI[riscv64_freeradius-mysql.sha256sum] = "d96d4897230a21356347bfc600368fd619b93c4254577495f65b4b091c112b18"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/freeradius-perl-3.2.8-2.el10.riscv64.rpm;name=riscv64_freeradius-perl;unpack=0"
+SRC_URI[riscv64_freeradius-perl.sha256sum] = "31e215ce4dc26e2c9505d5916ed8bc6f8cef29b865609552d6898709ffeba1d7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/freeradius-postgresql-3.2.8-2.el10.riscv64.rpm;name=riscv64_freeradius-postgresql;unpack=0"
+SRC_URI[riscv64_freeradius-postgresql.sha256sum] = "895fd02c021d98f3a642f92459813e03550567fc25ab28fd16639b15d04859c4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/freeradius-rest-3.2.8-2.el10.riscv64.rpm;name=riscv64_freeradius-rest;unpack=0"
+SRC_URI[riscv64_freeradius-rest.sha256sum] = "4967893b5926e0e1536bbba5f9c5f399743aeb09450d11b633da3f4b817e429d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/freeradius-sqlite-3.2.8-2.el10.riscv64.rpm;name=riscv64_freeradius-sqlite;unpack=0"
+SRC_URI[riscv64_freeradius-sqlite.sha256sum] = "5cb219447541dad43a8ece2baf7127fa2a50c5caa9b314e693e8bd91d5da823c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/freeradius-unixODBC-3.2.8-2.el10.riscv64.rpm;name=riscv64_freeradius-unixODBC;unpack=0"
+SRC_URI[riscv64_freeradius-unixODBC.sha256sum] = "c75960471a4f39ab320b93537eb69748d307b6e1e5494c9e43363d0d07ad2436"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/freeradius-utils-3.2.8-2.el10.riscv64.rpm;name=riscv64_freeradius-utils;unpack=0"
+SRC_URI[riscv64_freeradius-utils.sha256sum] = "1e42612920179b40c8969d45b7a10f9889d64b24daed6c0540c089897bf13594"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-freeradius-3.2.8-2.el10.riscv64.rpm;name=riscv64_python3-freeradius;unpack=0"
+SRC_URI[riscv64_python3-freeradius.sha256sum] = "482ed322fd62963de5465dc5260f3d1b0a14396ddce088f45965228656b8a260"
 
 RDEPENDS:freeradius = " \
  bash \

@@ -11,13 +11,14 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rocminfo-7.2.0-4.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rocminfo-7.2.0-4.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "cabdcc2e1fe1bf2443369a1a4f4cacb7dc76cb2178f03495f64e8cdf14d59d84"
 
-URI_x86_64_v2_rocminfo = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocminfo-7.2.0-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocminfo;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rocminfo}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocminfo-7.2.0-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocminfo;unpack=0"
 SRC_URI[x86_64_v2_rocminfo.sha256sum] = "cca38146c1e9416c60effd7b9fb2861b848cd354d0d4f034647c58176bf6b990"
 
 RDEPENDS:rocminfo = " \

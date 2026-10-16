@@ -5,29 +5,28 @@ inherit dnf-bridge
 PN = "conda"
 PV = "26.1.1"
 PR = "3.el10_3~bootstrap"
-PACKAGES = " \
+PACKAGES:aarch64 = " \
  conda \
  conda-tests \
  python3-conda \
- "
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/c/conda-26.1.1-3.el10_3~bootstrap.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/c/conda-26.1.1-3.el10_3~bootstrap.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "644e4c5451ddc530181cb3cfd5bef34e85f69dc4039ce8726d528d2d788b803b"
 
 ## Requires (aarch64) that were seen as not satisfiable in original repo:
 # - python3-conda: python3.12dist(archspec) >= 0.2.3
 
-URI_aarch64_conda = "${EPEL_MIRROR}/aarch64/Packages/c/conda-26.1.1-3.el10_3~bootstrap.noarch.rpm;name=aarch64_conda;unpack=0"
-SRC_URI:append = " ${URI_aarch64_conda}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/c/conda-26.1.1-3.el10_3~bootstrap.noarch.rpm;name=aarch64_conda;unpack=0"
 SRC_URI[aarch64_conda.sha256sum] = "9ce68481e288e9a148a391d508e5364df366a32930cfc84ed14c49dc8b52a7e7"
 
-URI_aarch64_conda-tests = "${EPEL_MIRROR}/aarch64/Packages/c/conda-tests-26.1.1-3.el10_3~bootstrap.noarch.rpm;name=aarch64_conda-tests;unpack=0"
-SRC_URI:append = " ${URI_aarch64_conda-tests}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/c/conda-tests-26.1.1-3.el10_3~bootstrap.noarch.rpm;name=aarch64_conda-tests;unpack=0"
 SRC_URI[aarch64_conda-tests.sha256sum] = "ee8f6d14faf95895a599f936506b17c16c7cf7f050af0005823ff91b1839022b"
 
-URI_aarch64_python3-conda = "${EPEL_MIRROR}/aarch64/Packages/p/python3-conda-26.1.1-3.el10_3~bootstrap.noarch.rpm;name=aarch64_python3-conda;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-conda}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-conda-26.1.1-3.el10_3~bootstrap.noarch.rpm;name=aarch64_python3-conda;unpack=0"
 SRC_URI[aarch64_python3-conda.sha256sum] = "e794b73fd5439792496c3f267a2226990efd430ef0c3226ec741bc759042a206"
 
 RDEPENDS:conda = " \

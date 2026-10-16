@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "torrent-file-editor"
 PV = "1.0.3"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  torrent-file-editor \
- "
+"
+PACKAGES:aarch64 = " \
+ torrent-file-editor \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/t/torrent-file-editor-1.0.3-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/t/torrent-file-editor-1.0.3-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6ea6f525e82551b41e75de48a9a65329a2b83eb672e76eda8ca5968f87274ba6"
 
-URI_x86_64_v2_torrent-file-editor = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/torrent-file-editor-1.0.3-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_torrent-file-editor;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_torrent-file-editor}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/torrent-file-editor-1.0.3-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_torrent-file-editor;unpack=0"
 SRC_URI[x86_64_v2_torrent-file-editor.sha256sum] = "43ad1e7d65a4d0cf37ee6dc9674202f7faace56466a5cb749fde89d17dfee0fb"
 
-URI_aarch64_torrent-file-editor = "${EPEL_MIRROR}/aarch64/Packages/t/torrent-file-editor-1.0.3-1.el10_3.aarch64.rpm;name=aarch64_torrent-file-editor;unpack=0"
-SRC_URI:append = " ${URI_aarch64_torrent-file-editor}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/t/torrent-file-editor-1.0.3-1.el10_3.aarch64.rpm;name=aarch64_torrent-file-editor;unpack=0"
 SRC_URI[aarch64_torrent-file-editor.sha256sum] = "492817fa7675141ab20f5fde34dc595c870852fba158753e13c37dd717623c85"
 
 RDEPENDS:torrent-file-editor = " \

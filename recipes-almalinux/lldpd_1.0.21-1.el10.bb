@@ -10,25 +10,26 @@ PACKAGES = " \
  lldpd-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/lldpd-1.0.21-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/lldpd-1.0.21-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1eeacfa6da0a994f5e28645e79347ade060e34ffe328320d9add508d918ac4bf"
 
-URI_x86_64_v2_lldpd = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/lldpd-1.0.21-1.el10.x86_64_v2.rpm;name=x86_64_v2_lldpd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lldpd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/lldpd-1.0.21-1.el10.x86_64_v2.rpm;name=x86_64_v2_lldpd;unpack=0"
 SRC_URI[x86_64_v2_lldpd.sha256sum] = "25fd96f56022f90c95d7987c76ebab2dea19e6ae0c72ab6cc0726ca550479ee2"
 
-URI_x86_64_v2_lldpd-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/lldpd-devel-1.0.21-1.el10.x86_64_v2.rpm;name=x86_64_v2_lldpd-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lldpd-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/lldpd-devel-1.0.21-1.el10.x86_64_v2.rpm;name=x86_64_v2_lldpd-devel;unpack=0"
 SRC_URI[x86_64_v2_lldpd-devel.sha256sum] = "a54e866d2207edb586daec58af558c691e4cb4fe9233c12635682f3d3aa0961f"
 
-URI_aarch64_lldpd = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/lldpd-1.0.21-1.el10.aarch64.rpm;name=aarch64_lldpd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lldpd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/lldpd-1.0.21-1.el10.aarch64.rpm;name=aarch64_lldpd;unpack=0"
 SRC_URI[aarch64_lldpd.sha256sum] = "01ec67eb47d2529748eeb6a0631a714a026dba3251fc4f575d58450032e502f8"
 
-URI_aarch64_lldpd-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/lldpd-devel-1.0.21-1.el10.aarch64.rpm;name=aarch64_lldpd-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lldpd-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/lldpd-devel-1.0.21-1.el10.aarch64.rpm;name=aarch64_lldpd-devel;unpack=0"
 SRC_URI[aarch64_lldpd-devel.sha256sum] = "f7622848a04d55ddd789123917cc6bd60fab578c1c81d1ffbdbf08a2aac7d9f2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/lldpd-1.0.21-1.el10.riscv64.rpm;name=riscv64_lldpd;unpack=0"
+SRC_URI[riscv64_lldpd.sha256sum] = "95786c37e2c88971f31c3002708db6a56f9d8a746e060c6bed1c3457e923e6f6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/lldpd-devel-1.0.21-1.el10.riscv64.rpm;name=riscv64_lldpd-devel;unpack=0"
+SRC_URI[riscv64_lldpd-devel.sha256sum] = "f600e6915397d1c84fa788f3feba9182cc60d7a35a6ce6176b1836545ba34105"
 
 RDEPENDS:lldpd = " \
  bash \

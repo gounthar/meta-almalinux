@@ -11,33 +11,35 @@ PACKAGES = " \
  json-c-doc \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/json-c-0.18-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/json-c-0.18-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "37ff72ae86a0784bfe60b1620da198474d870a2cb2f721b21dfe941ef5e11936"
 
-URI_x86_64_v2_json-c = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/json-c-0.18-3.el10.x86_64_v2.rpm;name=x86_64_v2_json-c;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_json-c}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/json-c-0.18-3.el10.x86_64_v2.rpm;name=x86_64_v2_json-c;unpack=0"
 SRC_URI[x86_64_v2_json-c.sha256sum] = "5a4c0d366e18ff76af370aeb4f22b01e425fe169b189ece6f070ed9214ffed9e"
 
-URI_x86_64_v2_json-c-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/json-c-devel-0.18-3.el10.x86_64_v2.rpm;name=x86_64_v2_json-c-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_json-c-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/json-c-devel-0.18-3.el10.x86_64_v2.rpm;name=x86_64_v2_json-c-devel;unpack=0"
 SRC_URI[x86_64_v2_json-c-devel.sha256sum] = "0c0c1cec69b176d10ac507b2654c2c34710624da307f54f3fdacbc24ccbcacaf"
 
-URI_x86_64_v2_json-c-doc = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/json-c-doc-0.18-3.el10.x86_64_v2.rpm;name=x86_64_v2_json-c-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_json-c-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/json-c-doc-0.18-3.el10.x86_64_v2.rpm;name=x86_64_v2_json-c-doc;unpack=0"
 SRC_URI[x86_64_v2_json-c-doc.sha256sum] = "fdc77ddc784c952c613ca855773bbcab17349be4f4123cdb2166e291dbc74b2c"
 
-URI_aarch64_json-c = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/json-c-0.18-3.el10.aarch64.rpm;name=aarch64_json-c;unpack=0"
-SRC_URI:append = " ${URI_aarch64_json-c}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/json-c-0.18-3.el10.aarch64.rpm;name=aarch64_json-c;unpack=0"
 SRC_URI[aarch64_json-c.sha256sum] = "ab88ed9bc7a2ef65d6bd97f3cbcf8929c90f3a8797403d5a2a9ffe23b8774570"
 
-URI_aarch64_json-c-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/json-c-devel-0.18-3.el10.aarch64.rpm;name=aarch64_json-c-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_json-c-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/json-c-devel-0.18-3.el10.aarch64.rpm;name=aarch64_json-c-devel;unpack=0"
 SRC_URI[aarch64_json-c-devel.sha256sum] = "2a631ddad2efc9b1704231f023ce2d2b267ccb71930a467b6405b35c25231fa6"
 
-URI_aarch64_json-c-doc = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/json-c-doc-0.18-3.el10.aarch64.rpm;name=aarch64_json-c-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_json-c-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/json-c-doc-0.18-3.el10.aarch64.rpm;name=aarch64_json-c-doc;unpack=0"
 SRC_URI[aarch64_json-c-doc.sha256sum] = "f75997efdf1cfe755f9ec9c1d505a3bc4e3f098c602f6b41fd54558d70050223"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/json-c-0.18-3.el10.riscv64.rpm;name=riscv64_json-c;unpack=0"
+SRC_URI[riscv64_json-c.sha256sum] = "7dfdc9024498dc54a87bd267fa7d821e13730e228f6d4aaad1af50f60e973886"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/json-c-devel-0.18-3.el10.riscv64.rpm;name=riscv64_json-c-devel;unpack=0"
+SRC_URI[riscv64_json-c-devel.sha256sum] = "2ac1993034a55313158b5922de29e0109e7b76a7417eeefe134c26eaf286b1bb"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/json-c-doc-0.18-3.el10.riscv64.rpm;name=riscv64_json-c-doc;unpack=0"
+SRC_URI[riscv64_json-c-doc.sha256sum] = "22c327e148a67257e95cbd163bcc4fff503a7422e0ca5cd92fa99b6220fe46b9"
 
 RDEPENDS:json-c = " \
  glibc \

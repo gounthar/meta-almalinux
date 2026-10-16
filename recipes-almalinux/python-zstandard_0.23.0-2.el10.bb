@@ -9,17 +9,17 @@ PACKAGES = " \
  python3-zstandard \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python-zstandard-0.23.0-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python-zstandard-0.23.0-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "269a4b4739275d7647d65ab7e1a8a408e09be7253dbd72e952d08e2f00644e9e"
 
-URI_x86_64_v2_python3-zstandard = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-zstandard-0.23.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_python3-zstandard;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-zstandard}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-zstandard-0.23.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_python3-zstandard;unpack=0"
 SRC_URI[x86_64_v2_python3-zstandard.sha256sum] = "38b3ed8eaa3541c742573ea4b36c4ef72da61575b57b1d8d79111b0b268f57ca"
 
-URI_aarch64_python3-zstandard = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-zstandard-0.23.0-2.el10.aarch64.rpm;name=aarch64_python3-zstandard;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-zstandard}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-zstandard-0.23.0-2.el10.aarch64.rpm;name=aarch64_python3-zstandard;unpack=0"
 SRC_URI[aarch64_python3-zstandard.sha256sum] = "3a0c2131f476cfba39d7414c186201371319f69bfaea348a8bba6a585781a998"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-zstandard-0.23.0-2.el10.riscv64.rpm;name=riscv64_python3-zstandard;unpack=0"
+SRC_URI[riscv64_python3-zstandard.sha256sum] = "1b75f1717c677ccf4429d8183458d50eefd601b17312d15814609b0706d33563"
 
 RDEPENDS:python3-zstandard = " \
  glibc \

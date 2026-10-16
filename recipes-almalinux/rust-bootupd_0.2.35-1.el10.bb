@@ -9,17 +9,17 @@ PACKAGES = " \
  bootupd \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/rust-bootupd-0.2.35-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/rust-bootupd-0.2.35-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "152158eba37fd2f9cc69f2b29ad31ac453b3104113330468932516a2bada4e6d"
 
-URI_x86_64_v2_bootupd = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/bootupd-0.2.35-1.el10.x86_64_v2.rpm;name=x86_64_v2_bootupd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_bootupd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/bootupd-0.2.35-1.el10.x86_64_v2.rpm;name=x86_64_v2_bootupd;unpack=0"
 SRC_URI[x86_64_v2_bootupd.sha256sum] = "ff82d223a1dbbe7e745ee892402eeb9fb4b33e8b27d909d27669d43dbfab3acf"
 
-URI_aarch64_bootupd = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/bootupd-0.2.35-1.el10.aarch64.rpm;name=aarch64_bootupd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_bootupd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/bootupd-0.2.35-1.el10.aarch64.rpm;name=aarch64_bootupd;unpack=0"
 SRC_URI[aarch64_bootupd.sha256sum] = "1bb76d75dc4b9b5dee9f612cda2f22b9c480bc7da68008503c9e036772ee31ac"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/bootupd-0.2.35-1.el10.riscv64.rpm;name=riscv64_bootupd;unpack=0"
+SRC_URI[riscv64_bootupd.sha256sum] = "c46ede327d9355a6f1ee07ac284dd53a2071da0bf6b17f512c80f739b97553db"
 
 RDEPENDS:bootupd = " \
  glibc \

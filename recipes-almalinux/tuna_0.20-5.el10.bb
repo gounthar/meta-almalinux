@@ -9,17 +9,17 @@ PACKAGES = " \
  tuna \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/tuna-0.20-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/tuna-0.20-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7750f87280b0d1c4e8543e19d26cee681ff0b0c4fdb3a5713d19a4b18871be00"
 
-URI_x86_64_v2_tuna = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/tuna-0.20-5.el10.noarch.rpm;name=x86_64_v2_tuna;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_tuna}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/tuna-0.20-5.el10.noarch.rpm;name=x86_64_v2_tuna;unpack=0"
 SRC_URI[x86_64_v2_tuna.sha256sum] = "43a2fa9268a98a9f9d752d389ef8fa898b4bf3ff6ac2c9205a511a80cd552f0e"
 
-URI_aarch64_tuna = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/tuna-0.20-5.el10.noarch.rpm;name=aarch64_tuna;unpack=0"
-SRC_URI:append = " ${URI_aarch64_tuna}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/tuna-0.20-5.el10.noarch.rpm;name=aarch64_tuna;unpack=0"
 SRC_URI[aarch64_tuna.sha256sum] = "43a2fa9268a98a9f9d752d389ef8fa898b4bf3ff6ac2c9205a511a80cd552f0e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/tuna-0.20-5.el10.noarch.rpm;name=riscv64_tuna;unpack=0"
+SRC_URI[riscv64_tuna.sha256sum] = "43a2fa9268a98a9f9d752d389ef8fa898b4bf3ff6ac2c9205a511a80cd552f0e"
 
 RDEPENDS:tuna = " \
  python3 \

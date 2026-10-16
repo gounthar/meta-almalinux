@@ -10,25 +10,26 @@ PACKAGES = " \
  tpm2-abrmd-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/tpm2-abrmd-3.0.0-7.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/tpm2-abrmd-3.0.0-7.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "13646ed0b7ae3189e2283473d629b63ca38f1fc5fef153b20600bcd0d23e97c9"
 
-URI_x86_64_v2_tpm2-abrmd = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/tpm2-abrmd-3.0.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_tpm2-abrmd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_tpm2-abrmd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/tpm2-abrmd-3.0.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_tpm2-abrmd;unpack=0"
 SRC_URI[x86_64_v2_tpm2-abrmd.sha256sum] = "f9a72236323bf39f02d23aafcc9a0ce83e3326d3bde9ae973210f79db1a1dd71"
 
-URI_x86_64_v2_tpm2-abrmd-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/tpm2-abrmd-devel-3.0.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_tpm2-abrmd-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_tpm2-abrmd-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/tpm2-abrmd-devel-3.0.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_tpm2-abrmd-devel;unpack=0"
 SRC_URI[x86_64_v2_tpm2-abrmd-devel.sha256sum] = "18b190da5797e84dac160dd8d46eb5ff150a367ce3b504ebc33520ec66da7ed4"
 
-URI_aarch64_tpm2-abrmd = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/tpm2-abrmd-3.0.0-7.el10.aarch64.rpm;name=aarch64_tpm2-abrmd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_tpm2-abrmd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/tpm2-abrmd-3.0.0-7.el10.aarch64.rpm;name=aarch64_tpm2-abrmd;unpack=0"
 SRC_URI[aarch64_tpm2-abrmd.sha256sum] = "32e2e33f32261827c662f0ea2bc7e13025170414087321043b21379f9286b223"
 
-URI_aarch64_tpm2-abrmd-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/tpm2-abrmd-devel-3.0.0-7.el10.aarch64.rpm;name=aarch64_tpm2-abrmd-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_tpm2-abrmd-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/tpm2-abrmd-devel-3.0.0-7.el10.aarch64.rpm;name=aarch64_tpm2-abrmd-devel;unpack=0"
 SRC_URI[aarch64_tpm2-abrmd-devel.sha256sum] = "cb42202b60211a9feb7efe0184ff14fa5845ad98ea107e21b9ee3e26fde85f97"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/tpm2-abrmd-3.0.0-7.el10.riscv64.rpm;name=riscv64_tpm2-abrmd;unpack=0"
+SRC_URI[riscv64_tpm2-abrmd.sha256sum] = "08a83830e99dfbc963427708d37dde97225d413f9630f4fa517e12bcd6766964"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/tpm2-abrmd-devel-3.0.0-7.el10.riscv64.rpm;name=riscv64_tpm2-abrmd-devel;unpack=0"
+SRC_URI[riscv64_tpm2-abrmd-devel.sha256sum] = "76d076845d01b02fb0c7b76de72617d47a88d394e31d5974bcc40bf2b0f0242f"
 
 RDEPENDS:tpm2-abrmd = " \
  bash \

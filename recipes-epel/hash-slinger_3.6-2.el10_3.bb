@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "hash-slinger"
 PV = "3.6"
 PR = "2.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  hash-slinger \
- "
+"
+PACKAGES:aarch64 = " \
+ hash-slinger \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/h/hash-slinger-3.6-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/h/hash-slinger-3.6-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1e5a533434d889c7640f1781ca5beeb40a85901be7d411a1098e1f2d26dd4b7b"
 
-URI_x86_64_v2_hash-slinger = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/hash-slinger-3.6-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_hash-slinger;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_hash-slinger}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/hash-slinger-3.6-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_hash-slinger;unpack=0"
 SRC_URI[x86_64_v2_hash-slinger.sha256sum] = "896097c3eea7f52b22afaba507dcfceb69cb9ad651b3a69241175589a4832854"
 
-URI_aarch64_hash-slinger = "${EPEL_MIRROR}/aarch64/Packages/h/hash-slinger-3.6-2.el10_3.noarch.rpm;name=aarch64_hash-slinger;unpack=0"
-SRC_URI:append = " ${URI_aarch64_hash-slinger}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/h/hash-slinger-3.6-2.el10_3.noarch.rpm;name=aarch64_hash-slinger;unpack=0"
 SRC_URI[aarch64_hash-slinger.sha256sum] = "02aee83042ac24b8848121d13a2ae98c1cfca07f5d1fd5466805cf534977e9fc"
 
 RDEPENDS:hash-slinger = " \

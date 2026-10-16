@@ -15,65 +15,71 @@ PACKAGES = " \
  libgs-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/ghostscript-10.02.1-16.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/ghostscript-10.02.1-16.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "663ffb2432ff3ee0254df3b533695f683ade08bd092cc959debdc03b45c67e3b"
 
-URI_x86_64_v2_ghostscript = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ghostscript-10.02.1-16.el10.x86_64_v2.rpm;name=x86_64_v2_ghostscript;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghostscript}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ghostscript-10.02.1-16.el10.x86_64_v2.rpm;name=x86_64_v2_ghostscript;unpack=0"
 SRC_URI[x86_64_v2_ghostscript.sha256sum] = "50ee68ec74edb315edb1f9dd211060a7e5453627677156bcf36cacbb443fa6a3"
 
-URI_x86_64_v2_ghostscript-doc = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ghostscript-doc-10.02.1-16.el10.noarch.rpm;name=x86_64_v2_ghostscript-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghostscript-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ghostscript-doc-10.02.1-16.el10.noarch.rpm;name=x86_64_v2_ghostscript-doc;unpack=0"
 SRC_URI[x86_64_v2_ghostscript-doc.sha256sum] = "98173ff51335ec48d58258d6b2528278d032a629a12b6dddf4122d2e86323e8c"
 
-URI_x86_64_v2_ghostscript-tools-dvipdf = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/ghostscript-tools-dvipdf-10.02.1-16.el10.noarch.rpm;name=x86_64_v2_ghostscript-tools-dvipdf;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghostscript-tools-dvipdf}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/ghostscript-tools-dvipdf-10.02.1-16.el10.noarch.rpm;name=x86_64_v2_ghostscript-tools-dvipdf;unpack=0"
 SRC_URI[x86_64_v2_ghostscript-tools-dvipdf.sha256sum] = "1e6857bf92b1e52bbddea1e351411c8c0e565ec013aaf0198a15f78426e56ba3"
 
-URI_x86_64_v2_ghostscript-tools-fonts = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ghostscript-tools-fonts-10.02.1-16.el10.noarch.rpm;name=x86_64_v2_ghostscript-tools-fonts;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghostscript-tools-fonts}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ghostscript-tools-fonts-10.02.1-16.el10.noarch.rpm;name=x86_64_v2_ghostscript-tools-fonts;unpack=0"
 SRC_URI[x86_64_v2_ghostscript-tools-fonts.sha256sum] = "6c0bbd9eb5ed6d389961740ad9324a1e7939d749655dfd9bc0c54e931d1bc523"
 
-URI_x86_64_v2_ghostscript-tools-printing = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ghostscript-tools-printing-10.02.1-16.el10.noarch.rpm;name=x86_64_v2_ghostscript-tools-printing;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghostscript-tools-printing}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ghostscript-tools-printing-10.02.1-16.el10.noarch.rpm;name=x86_64_v2_ghostscript-tools-printing;unpack=0"
 SRC_URI[x86_64_v2_ghostscript-tools-printing.sha256sum] = "211df00fbd487af1beaa7974f186a341ef6f99ebe4df33ad02f0ef0c28a9c1db"
 
-URI_x86_64_v2_libgs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libgs-10.02.1-16.el10.x86_64_v2.rpm;name=x86_64_v2_libgs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libgs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libgs-10.02.1-16.el10.x86_64_v2.rpm;name=x86_64_v2_libgs;unpack=0"
 SRC_URI[x86_64_v2_libgs.sha256sum] = "1593f70b90db40be0413134505cf45e2aece6359e858118b0222820aecb8f0b7"
 
-URI_x86_64_v2_libgs-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libgs-devel-10.02.1-16.el10.x86_64_v2.rpm;name=x86_64_v2_libgs-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libgs-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libgs-devel-10.02.1-16.el10.x86_64_v2.rpm;name=x86_64_v2_libgs-devel;unpack=0"
 SRC_URI[x86_64_v2_libgs-devel.sha256sum] = "b17f6902ec00de27c5b6bc7d1cea54189726d13d1d7ad739939ea1fe8061fd75"
 
-URI_aarch64_ghostscript = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ghostscript-10.02.1-16.el10.aarch64.rpm;name=aarch64_ghostscript;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghostscript}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ghostscript-10.02.1-16.el10.aarch64.rpm;name=aarch64_ghostscript;unpack=0"
 SRC_URI[aarch64_ghostscript.sha256sum] = "d8bef9e9f41296c75f406aef2fe60ad79c9a90599e7cc8b8f90c8527e4d16288"
 
-URI_aarch64_ghostscript-doc = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ghostscript-doc-10.02.1-16.el10.noarch.rpm;name=aarch64_ghostscript-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghostscript-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ghostscript-doc-10.02.1-16.el10.noarch.rpm;name=aarch64_ghostscript-doc;unpack=0"
 SRC_URI[aarch64_ghostscript-doc.sha256sum] = "98173ff51335ec48d58258d6b2528278d032a629a12b6dddf4122d2e86323e8c"
 
-URI_aarch64_ghostscript-tools-dvipdf = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/ghostscript-tools-dvipdf-10.02.1-16.el10.noarch.rpm;name=aarch64_ghostscript-tools-dvipdf;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghostscript-tools-dvipdf}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/ghostscript-tools-dvipdf-10.02.1-16.el10.noarch.rpm;name=aarch64_ghostscript-tools-dvipdf;unpack=0"
 SRC_URI[aarch64_ghostscript-tools-dvipdf.sha256sum] = "1e6857bf92b1e52bbddea1e351411c8c0e565ec013aaf0198a15f78426e56ba3"
 
-URI_aarch64_ghostscript-tools-fonts = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ghostscript-tools-fonts-10.02.1-16.el10.noarch.rpm;name=aarch64_ghostscript-tools-fonts;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghostscript-tools-fonts}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ghostscript-tools-fonts-10.02.1-16.el10.noarch.rpm;name=aarch64_ghostscript-tools-fonts;unpack=0"
 SRC_URI[aarch64_ghostscript-tools-fonts.sha256sum] = "6c0bbd9eb5ed6d389961740ad9324a1e7939d749655dfd9bc0c54e931d1bc523"
 
-URI_aarch64_ghostscript-tools-printing = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ghostscript-tools-printing-10.02.1-16.el10.noarch.rpm;name=aarch64_ghostscript-tools-printing;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghostscript-tools-printing}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ghostscript-tools-printing-10.02.1-16.el10.noarch.rpm;name=aarch64_ghostscript-tools-printing;unpack=0"
 SRC_URI[aarch64_ghostscript-tools-printing.sha256sum] = "211df00fbd487af1beaa7974f186a341ef6f99ebe4df33ad02f0ef0c28a9c1db"
 
-URI_aarch64_libgs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libgs-10.02.1-16.el10.aarch64.rpm;name=aarch64_libgs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libgs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libgs-10.02.1-16.el10.aarch64.rpm;name=aarch64_libgs;unpack=0"
 SRC_URI[aarch64_libgs.sha256sum] = "fbf1dafd51e0c9b6c68fd398e890ed1c9a2ef26f1d0049c59fb4657c41514441"
 
-URI_aarch64_libgs-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libgs-devel-10.02.1-16.el10.aarch64.rpm;name=aarch64_libgs-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libgs-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libgs-devel-10.02.1-16.el10.aarch64.rpm;name=aarch64_libgs-devel;unpack=0"
 SRC_URI[aarch64_libgs-devel.sha256sum] = "ae3f6fa0ba9bd90a5c73ee43f9319bd2441adffa672e04dbb393b464aa89ced4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/ghostscript-10.02.1-16.el10.riscv64.rpm;name=riscv64_ghostscript;unpack=0"
+SRC_URI[riscv64_ghostscript.sha256sum] = "ed528f332439fe23b0ff4252b173afbfe59ba1828c27a56e3e64e95a80ef160a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/ghostscript-doc-10.02.1-16.el10.noarch.rpm;name=riscv64_ghostscript-doc;unpack=0"
+SRC_URI[riscv64_ghostscript-doc.sha256sum] = "98173ff51335ec48d58258d6b2528278d032a629a12b6dddf4122d2e86323e8c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/ghostscript-tools-dvipdf-10.02.1-16.el10.noarch.rpm;name=riscv64_ghostscript-tools-dvipdf;unpack=0"
+SRC_URI[riscv64_ghostscript-tools-dvipdf.sha256sum] = "1e6857bf92b1e52bbddea1e351411c8c0e565ec013aaf0198a15f78426e56ba3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/ghostscript-tools-fonts-10.02.1-16.el10.noarch.rpm;name=riscv64_ghostscript-tools-fonts;unpack=0"
+SRC_URI[riscv64_ghostscript-tools-fonts.sha256sum] = "6c0bbd9eb5ed6d389961740ad9324a1e7939d749655dfd9bc0c54e931d1bc523"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/ghostscript-tools-printing-10.02.1-16.el10.noarch.rpm;name=riscv64_ghostscript-tools-printing;unpack=0"
+SRC_URI[riscv64_ghostscript-tools-printing.sha256sum] = "211df00fbd487af1beaa7974f186a341ef6f99ebe4df33ad02f0ef0c28a9c1db"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libgs-10.02.1-16.el10.riscv64.rpm;name=riscv64_libgs;unpack=0"
+SRC_URI[riscv64_libgs.sha256sum] = "3c646f069c9f728994cd56b155ffcb3661325b78bbf88866789091900b9334d6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libgs-devel-10.02.1-16.el10.riscv64.rpm;name=riscv64_libgs-devel;unpack=0"
+SRC_URI[riscv64_libgs-devel.sha256sum] = "f943eb9971e30c411820c7e5da942f345515eef336cc7a16bb12ad582b85dce3"
 
 RDEPENDS:ghostscript = " \
  bash \

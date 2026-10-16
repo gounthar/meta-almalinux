@@ -5,21 +5,31 @@ inherit dnf-bridge
 PN = "rust-cargo-config2"
 PV = "0.1.45"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-cargo-config2+default-devel \
  rust-cargo-config2-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-cargo-config2+default-devel \
+ rust-cargo-config2-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-cargo-config2-0.1.45-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-cargo-config2-0.1.45-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b306d5292cc1bc14c7012f4fea4338f827c4ade490737b16c06755ead4b7755b"
 
-URI_aarch64_rust-cargo-config2+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-cargo-config2+default-devel-0.1.45-1.el10_3.noarch.rpm;name=aarch64_rust-cargo-config2+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-cargo-config2+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-cargo-config2+default-devel-0.1.45-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-cargo-config2+default-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-cargo-config2+default-devel.sha256sum] = "fb18270959778c93f1006e1a25f64cac92813122c723332c202a026cb46f56f7"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-cargo-config2-devel-0.1.45-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-cargo-config2-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-cargo-config2-devel.sha256sum] = "9dc9893fbc0c72840ddf52f01b21f0f7060832d2d7d95be6c1eb03a8ebc379ef"
+
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-cargo-config2+default-devel-0.1.45-1.el10_3.noarch.rpm;name=aarch64_rust-cargo-config2+default-devel;unpack=0"
 SRC_URI[aarch64_rust-cargo-config2+default-devel.sha256sum] = "afb8641c23013a63cdda715ebd62e9f7411e9232758c82bd80f9e3cacd1b3fe7"
 
-URI_aarch64_rust-cargo-config2-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-cargo-config2-devel-0.1.45-1.el10_3.noarch.rpm;name=aarch64_rust-cargo-config2-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-cargo-config2-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-cargo-config2-devel-0.1.45-1.el10_3.noarch.rpm;name=aarch64_rust-cargo-config2-devel;unpack=0"
 SRC_URI[aarch64_rust-cargo-config2-devel.sha256sum] = "5c13e0c92e23e16f41bd8df7514f21e98e1f95120a2570e0f6e32bb98ac0e501"
 
 RDEPENDS:rust-cargo-config2+default-devel = " \

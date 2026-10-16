@@ -9,17 +9,17 @@ PACKAGES = " \
  sblim-sfcCommon \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/sblim-sfcCommon-1.0.1-26.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/sblim-sfcCommon-1.0.1-26.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a0d4b65e2de921e69ea63f4a80f9020c55b0945ddf5ba7efbadbd797cfdd0e73"
 
-URI_x86_64_v2_sblim-sfcCommon = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sblim-sfcCommon-1.0.1-26.el10.x86_64_v2.rpm;name=x86_64_v2_sblim-sfcCommon;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_sblim-sfcCommon}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sblim-sfcCommon-1.0.1-26.el10.x86_64_v2.rpm;name=x86_64_v2_sblim-sfcCommon;unpack=0"
 SRC_URI[x86_64_v2_sblim-sfcCommon.sha256sum] = "da1436ecbde2a581b9546703c5fca44cf97ae43566b85ce218858286ab740cd9"
 
-URI_aarch64_sblim-sfcCommon = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/sblim-sfcCommon-1.0.1-26.el10.aarch64.rpm;name=aarch64_sblim-sfcCommon;unpack=0"
-SRC_URI:append = " ${URI_aarch64_sblim-sfcCommon}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/sblim-sfcCommon-1.0.1-26.el10.aarch64.rpm;name=aarch64_sblim-sfcCommon;unpack=0"
 SRC_URI[aarch64_sblim-sfcCommon.sha256sum] = "e6ec2dd5d426ac5d4750f01238fd3df4d7171bea511286f9894c589de4074d2b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/sblim-sfcCommon-1.0.1-26.el10.riscv64.rpm;name=riscv64_sblim-sfcCommon;unpack=0"
+SRC_URI[riscv64_sblim-sfcCommon.sha256sum] = "15611a5f5d4fcccb691d0928a15bca5969401cab66c1d7da55bb93800e9b2718"
 
 RDEPENDS:sblim-sfcCommon = " \
  glibc \

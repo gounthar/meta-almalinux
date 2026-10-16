@@ -10,25 +10,26 @@ PACKAGES = " \
  libatasmart-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libatasmart-0.19-30.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libatasmart-0.19-30.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "84d8bf63bd19602736c9f0413b12dcf819b02fdf99d575e76cb5a802c737dc78"
 
-URI_x86_64_v2_libatasmart = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libatasmart-0.19-30.el10.x86_64_v2.rpm;name=x86_64_v2_libatasmart;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libatasmart}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libatasmart-0.19-30.el10.x86_64_v2.rpm;name=x86_64_v2_libatasmart;unpack=0"
 SRC_URI[x86_64_v2_libatasmart.sha256sum] = "ee928598c341207ffe579e799d2d2cd18b34efc067126a848aeb57569444ed5f"
 
-URI_x86_64_v2_libatasmart-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libatasmart-devel-0.19-30.el10.x86_64_v2.rpm;name=x86_64_v2_libatasmart-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libatasmart-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libatasmart-devel-0.19-30.el10.x86_64_v2.rpm;name=x86_64_v2_libatasmart-devel;unpack=0"
 SRC_URI[x86_64_v2_libatasmart-devel.sha256sum] = "b44221b093c9bcd28aa77e5c123ac6cd5cc829695da08f3b69f524dad09e3657"
 
-URI_aarch64_libatasmart = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libatasmart-0.19-30.el10.aarch64.rpm;name=aarch64_libatasmart;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libatasmart}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libatasmart-0.19-30.el10.aarch64.rpm;name=aarch64_libatasmart;unpack=0"
 SRC_URI[aarch64_libatasmart.sha256sum] = "3b139d326dc93b6d10a98f70c9afdb368b74e808dca88731e8fc316ecbda53a6"
 
-URI_aarch64_libatasmart-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libatasmart-devel-0.19-30.el10.aarch64.rpm;name=aarch64_libatasmart-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libatasmart-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libatasmart-devel-0.19-30.el10.aarch64.rpm;name=aarch64_libatasmart-devel;unpack=0"
 SRC_URI[aarch64_libatasmart-devel.sha256sum] = "a5da54f778f6135bcfe5e7c746fd6d75efbc3e6bda61c9e7b791ba1393dbeb95"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libatasmart-0.19-30.el10.riscv64.rpm;name=riscv64_libatasmart;unpack=0"
+SRC_URI[riscv64_libatasmart.sha256sum] = "b7180c3793957f8c3431aab60889ced4a7c8c7e715da96f635bb67cf52fbfa4a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libatasmart-devel-0.19-30.el10.riscv64.rpm;name=riscv64_libatasmart-devel;unpack=0"
+SRC_URI[riscv64_libatasmart-devel.sha256sum] = "4d3a5c776768e1804976ea599e5e852a1a09598d5c2432715f502c575cad2bdd"
 
 RDEPENDS:libatasmart = " \
  glibc \

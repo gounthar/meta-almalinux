@@ -10,25 +10,26 @@ PACKAGES = " \
  nss_wrapper-libs \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/nss_wrapper-1.1.15-7.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/nss_wrapper-1.1.15-7.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7c81433b4bc7b5277cf4e8a36273a7ec2e8e8ea880d7f4446369bab118046798"
 
-URI_x86_64_v2_nss_wrapper = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss_wrapper-1.1.15-7.el10.x86_64_v2.rpm;name=x86_64_v2_nss_wrapper;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nss_wrapper}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss_wrapper-1.1.15-7.el10.x86_64_v2.rpm;name=x86_64_v2_nss_wrapper;unpack=0"
 SRC_URI[x86_64_v2_nss_wrapper.sha256sum] = "5085da7014fcdce3e0181db771a6aae76fc31d095d02861d4484c2ed0d521558"
 
-URI_x86_64_v2_nss_wrapper-libs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss_wrapper-libs-1.1.15-7.el10.x86_64_v2.rpm;name=x86_64_v2_nss_wrapper-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nss_wrapper-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss_wrapper-libs-1.1.15-7.el10.x86_64_v2.rpm;name=x86_64_v2_nss_wrapper-libs;unpack=0"
 SRC_URI[x86_64_v2_nss_wrapper-libs.sha256sum] = "35725b8cc3d9a22ca49c208b4659a770641983a1e2798f937664c1bbcb4d4fa9"
 
-URI_aarch64_nss_wrapper = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss_wrapper-1.1.15-7.el10.aarch64.rpm;name=aarch64_nss_wrapper;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nss_wrapper}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss_wrapper-1.1.15-7.el10.aarch64.rpm;name=aarch64_nss_wrapper;unpack=0"
 SRC_URI[aarch64_nss_wrapper.sha256sum] = "04daafffa79a027405c4898b127e1b182ed6113bdd58740f44dca991fe32193d"
 
-URI_aarch64_nss_wrapper-libs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss_wrapper-libs-1.1.15-7.el10.aarch64.rpm;name=aarch64_nss_wrapper-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nss_wrapper-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss_wrapper-libs-1.1.15-7.el10.aarch64.rpm;name=aarch64_nss_wrapper-libs;unpack=0"
 SRC_URI[aarch64_nss_wrapper-libs.sha256sum] = "3f5f28be8c5cbfaf8c63d23d76717a2c620f228a71bd52e53662b5318721ba8c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nss_wrapper-1.1.15-7.el10.riscv64.rpm;name=riscv64_nss_wrapper;unpack=0"
+SRC_URI[riscv64_nss_wrapper.sha256sum] = "d0d9b7d099a5bd0c04a9f9e51cc73fa3da42599ad5958dde6e06f49ad96bdd5f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nss_wrapper-libs-1.1.15-7.el10.riscv64.rpm;name=riscv64_nss_wrapper-libs;unpack=0"
+SRC_URI[riscv64_nss_wrapper-libs.sha256sum] = "a4959c77a6d84d2648760570f4b751ebf860d7606d7315f7a722a4e0a5297975"
 
 RDEPENDS:nss_wrapper = " \
  cmake-filesystem \

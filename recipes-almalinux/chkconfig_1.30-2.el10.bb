@@ -11,33 +11,35 @@ PACKAGES = " \
  ntsysv \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/chkconfig-1.30-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/chkconfig-1.30-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6738a6bc28c8f6f3f30a7fedd72e1cdaf78738168a2032e5b8fab9f704c6691b"
 
-URI_x86_64_v2_alternatives = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/alternatives-1.30-2.el10.x86_64_v2.rpm;name=x86_64_v2_alternatives;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_alternatives}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/alternatives-1.30-2.el10.x86_64_v2.rpm;name=x86_64_v2_alternatives;unpack=0"
 SRC_URI[x86_64_v2_alternatives.sha256sum] = "598c955ec1ce6285ea0ac448d0145313f6fad770334945faf82abfd580af2ce6"
 
-URI_x86_64_v2_chkconfig = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/chkconfig-1.30-2.el10.x86_64_v2.rpm;name=x86_64_v2_chkconfig;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_chkconfig}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/chkconfig-1.30-2.el10.x86_64_v2.rpm;name=x86_64_v2_chkconfig;unpack=0"
 SRC_URI[x86_64_v2_chkconfig.sha256sum] = "452c0b0baea9fa1e804a70bcb3c02bdcc3b176efd5d811cb4d535e4cd007a674"
 
-URI_x86_64_v2_ntsysv = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ntsysv-1.30-2.el10.x86_64_v2.rpm;name=x86_64_v2_ntsysv;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ntsysv}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ntsysv-1.30-2.el10.x86_64_v2.rpm;name=x86_64_v2_ntsysv;unpack=0"
 SRC_URI[x86_64_v2_ntsysv.sha256sum] = "b6c4a0204c1a9a5f7b16ab7115b5c4d9ff73f0ffccd4814c6117b07fcb85581c"
 
-URI_aarch64_alternatives = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/alternatives-1.30-2.el10.aarch64.rpm;name=aarch64_alternatives;unpack=0"
-SRC_URI:append = " ${URI_aarch64_alternatives}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/alternatives-1.30-2.el10.aarch64.rpm;name=aarch64_alternatives;unpack=0"
 SRC_URI[aarch64_alternatives.sha256sum] = "168026a798b6cdece803762754000e56f7f96d825eb925765397f37d1b572b5f"
 
-URI_aarch64_chkconfig = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/chkconfig-1.30-2.el10.aarch64.rpm;name=aarch64_chkconfig;unpack=0"
-SRC_URI:append = " ${URI_aarch64_chkconfig}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/chkconfig-1.30-2.el10.aarch64.rpm;name=aarch64_chkconfig;unpack=0"
 SRC_URI[aarch64_chkconfig.sha256sum] = "a581aef8caa2a9e1630a4f7caba7fc8189b3fb7df7a7634f7a85c8e76fd7034e"
 
-URI_aarch64_ntsysv = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ntsysv-1.30-2.el10.aarch64.rpm;name=aarch64_ntsysv;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ntsysv}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ntsysv-1.30-2.el10.aarch64.rpm;name=aarch64_ntsysv;unpack=0"
 SRC_URI[aarch64_ntsysv.sha256sum] = "cda35f91ef9ee0de56a7e794039f0791f5512c467deb11d4c352b2c1375f8d24"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/alternatives-1.30-2.el10.riscv64.rpm;name=riscv64_alternatives;unpack=0"
+SRC_URI[riscv64_alternatives.sha256sum] = "6446460557b085e669ea1042175b51cd14c1c185ce3e3054d266fca1e9e8a878"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/chkconfig-1.30-2.el10.riscv64.rpm;name=riscv64_chkconfig;unpack=0"
+SRC_URI[riscv64_chkconfig.sha256sum] = "9e2eba8c8f5ddef3976355a6816bd47edba809b68abb6838d6973c78a188e948"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/ntsysv-1.30-2.el10.riscv64.rpm;name=riscv64_ntsysv;unpack=0"
+SRC_URI[riscv64_ntsysv.sha256sum] = "1ae0c1da1f04065a6164e04b003ef1c1b48d3960e3f55b69438f65c64c945455"
 
 RDEPENDS:alternatives = " \
  glibc \

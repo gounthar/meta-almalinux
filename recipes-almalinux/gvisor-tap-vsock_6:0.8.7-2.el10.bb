@@ -11,25 +11,26 @@ PACKAGES = " \
  gvisor-tap-vsock-gvforwarder \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gvisor-tap-vsock-0.8.7-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gvisor-tap-vsock-0.8.7-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "41ec34d633ae87c34d16279a584310446ba2ddddc78c4a979e033181fb5d5210"
 
-URI_x86_64_v2_gvisor-tap-vsock = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gvisor-tap-vsock-0.8.7-2.el10.x86_64_v2.rpm;name=x86_64_v2_gvisor-tap-vsock;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gvisor-tap-vsock}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gvisor-tap-vsock-0.8.7-2.el10.x86_64_v2.rpm;name=x86_64_v2_gvisor-tap-vsock;unpack=0"
 SRC_URI[x86_64_v2_gvisor-tap-vsock.sha256sum] = "0f45e38dfe717f8812c6dc5b105ab1519f91971d4b34e86b794dd65973dc99d4"
 
-URI_x86_64_v2_gvisor-tap-vsock-gvforwarder = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gvisor-tap-vsock-gvforwarder-0.8.7-2.el10.x86_64_v2.rpm;name=x86_64_v2_gvisor-tap-vsock-gvforwarder;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gvisor-tap-vsock-gvforwarder}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gvisor-tap-vsock-gvforwarder-0.8.7-2.el10.x86_64_v2.rpm;name=x86_64_v2_gvisor-tap-vsock-gvforwarder;unpack=0"
 SRC_URI[x86_64_v2_gvisor-tap-vsock-gvforwarder.sha256sum] = "e551a77f151854dc4c25d5277ea2cc9d790afc32f3ab714569d77f59a55cdd65"
 
-URI_aarch64_gvisor-tap-vsock = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gvisor-tap-vsock-0.8.7-2.el10.aarch64.rpm;name=aarch64_gvisor-tap-vsock;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gvisor-tap-vsock}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gvisor-tap-vsock-0.8.7-2.el10.aarch64.rpm;name=aarch64_gvisor-tap-vsock;unpack=0"
 SRC_URI[aarch64_gvisor-tap-vsock.sha256sum] = "594b2e5e80f52ddf460fddcc8d6120f57a4c4bbac25560682fbc082f3dd45d36"
 
-URI_aarch64_gvisor-tap-vsock-gvforwarder = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gvisor-tap-vsock-gvforwarder-0.8.7-2.el10.aarch64.rpm;name=aarch64_gvisor-tap-vsock-gvforwarder;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gvisor-tap-vsock-gvforwarder}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gvisor-tap-vsock-gvforwarder-0.8.7-2.el10.aarch64.rpm;name=aarch64_gvisor-tap-vsock-gvforwarder;unpack=0"
 SRC_URI[aarch64_gvisor-tap-vsock-gvforwarder.sha256sum] = "23f826448886fba51614445958c7bf6ebf7aa6ba82c50fee6aeff985427bc25c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gvisor-tap-vsock-0.8.7-2.el10.riscv64.rpm;name=riscv64_gvisor-tap-vsock;unpack=0"
+SRC_URI[riscv64_gvisor-tap-vsock.sha256sum] = "ef9a26c72ccdd2e9d8026c098d3bbd03b65120c4fbfdc37ea72021926017b1a4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gvisor-tap-vsock-gvforwarder-0.8.7-2.el10.riscv64.rpm;name=riscv64_gvisor-tap-vsock-gvforwarder;unpack=0"
+SRC_URI[riscv64_gvisor-tap-vsock-gvforwarder.sha256sum] = "6ca4d1c8397a8a09ae9143cd424097694d88479ea1c2ddb012f44ec26c035486"
 
 RDEPENDS:gvisor-tap-vsock = " \
  glibc \

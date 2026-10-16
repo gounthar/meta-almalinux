@@ -10,25 +10,26 @@ PACKAGES = " \
  python3.14-PyMySQL+rsa \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python3.14-PyMySQL-1.1.2-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python3.14-PyMySQL-1.1.2-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "fc4f411861ea11b6a5a4946c2a45637f374fbf2562c3e99926236f82c9cc4351"
 
-URI_x86_64_v2_python3.14-PyMySQL = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3.14-PyMySQL-1.1.2-1.el10.noarch.rpm;name=x86_64_v2_python3.14-PyMySQL;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3.14-PyMySQL}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3.14-PyMySQL-1.1.2-1.el10.noarch.rpm;name=x86_64_v2_python3.14-PyMySQL;unpack=0"
 SRC_URI[x86_64_v2_python3.14-PyMySQL.sha256sum] = "1932952d4196eec2fdc86b190e40c58b70dae0fe70fb01f7e6ce42f0f7dba3c3"
 
-URI_x86_64_v2_python3.14-PyMySQL+rsa = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3.14-PyMySQL+rsa-1.1.2-1.el10.noarch.rpm;name=x86_64_v2_python3.14-PyMySQL+rsa;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3.14-PyMySQL+rsa}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3.14-PyMySQL+rsa-1.1.2-1.el10.noarch.rpm;name=x86_64_v2_python3.14-PyMySQL+rsa;unpack=0"
 SRC_URI[x86_64_v2_python3.14-PyMySQL+rsa.sha256sum] = "f9345b7d3e3038a84dedef6e493198603ef2df27014d2556f34292df2e37a2cf"
 
-URI_aarch64_python3.14-PyMySQL = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3.14-PyMySQL-1.1.2-1.el10.noarch.rpm;name=aarch64_python3.14-PyMySQL;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3.14-PyMySQL}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3.14-PyMySQL-1.1.2-1.el10.noarch.rpm;name=aarch64_python3.14-PyMySQL;unpack=0"
 SRC_URI[aarch64_python3.14-PyMySQL.sha256sum] = "1932952d4196eec2fdc86b190e40c58b70dae0fe70fb01f7e6ce42f0f7dba3c3"
 
-URI_aarch64_python3.14-PyMySQL+rsa = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3.14-PyMySQL+rsa-1.1.2-1.el10.noarch.rpm;name=aarch64_python3.14-PyMySQL+rsa;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3.14-PyMySQL+rsa}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3.14-PyMySQL+rsa-1.1.2-1.el10.noarch.rpm;name=aarch64_python3.14-PyMySQL+rsa;unpack=0"
 SRC_URI[aarch64_python3.14-PyMySQL+rsa.sha256sum] = "f9345b7d3e3038a84dedef6e493198603ef2df27014d2556f34292df2e37a2cf"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3.14-PyMySQL-1.1.2-1.el10.noarch.rpm;name=riscv64_python3.14-PyMySQL;unpack=0"
+SRC_URI[riscv64_python3.14-PyMySQL.sha256sum] = "1932952d4196eec2fdc86b190e40c58b70dae0fe70fb01f7e6ce42f0f7dba3c3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3.14-PyMySQL+rsa-1.1.2-1.el10.noarch.rpm;name=riscv64_python3.14-PyMySQL+rsa;unpack=0"
+SRC_URI[riscv64_python3.14-PyMySQL+rsa.sha256sum] = "f9345b7d3e3038a84dedef6e493198603ef2df27014d2556f34292df2e37a2cf"
 
 RDEPENDS:python3.14-PyMySQL = " \
  python3.14 \

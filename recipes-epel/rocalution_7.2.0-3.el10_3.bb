@@ -12,17 +12,17 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rocalution-7.2.0-3.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rocalution-7.2.0-3.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "4aa37ae6ec2802580fd96c84bccb8f3e5f4e10090eb24ec54b8d097429eeb7b9"
 
-URI_x86_64_v2_rocalution = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocalution-7.2.0-3.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocalution;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rocalution}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocalution-7.2.0-3.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocalution;unpack=0"
 SRC_URI[x86_64_v2_rocalution.sha256sum] = "f5553ec4a9e118834f62d4c105e16d13fb943dc3a18744ea28fb033a452e5e94"
 
-URI_x86_64_v2_rocalution-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocalution-devel-7.2.0-3.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocalution-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rocalution-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocalution-devel-7.2.0-3.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocalution-devel;unpack=0"
 SRC_URI[x86_64_v2_rocalution-devel.sha256sum] = "93bb5c6179ffe6ec4a1a214601c8f23bd4c40b991c0cc8e8c92c955ad772c9e0"
 
 RDEPENDS:rocalution = " \

@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-flake8-blind-except"
 PV = "0.2.1"
 PR = "2.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-flake8-blind-except \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-flake8-blind-except \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-flake8-blind-except-0.2.1-2.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-flake8-blind-except-0.2.1-2.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f5f17a0715271c4cfa67ca50a76b78b7efb30a446a5d5264c021f985f133f974"
 
-URI_x86_64_v2_python3-flake8-blind-except = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-flake8-blind-except-0.2.1-2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-flake8-blind-except;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-flake8-blind-except}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-flake8-blind-except-0.2.1-2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-flake8-blind-except;unpack=0"
 SRC_URI[x86_64_v2_python3-flake8-blind-except.sha256sum] = "e14657042b06860a75e7d7738775f012b265222f3ff72148aeb92e67a6fc8c6e"
 
-URI_aarch64_python3-flake8-blind-except = "${EPEL_MIRROR}/aarch64/Packages/p/python3-flake8-blind-except-0.2.1-2.el10_2.noarch.rpm;name=aarch64_python3-flake8-blind-except;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-flake8-blind-except}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-flake8-blind-except-0.2.1-2.el10_2.noarch.rpm;name=aarch64_python3-flake8-blind-except;unpack=0"
 SRC_URI[aarch64_python3-flake8-blind-except.sha256sum] = "af4992978d92d464fbc91859b0c162371f6ad5d578654bb31f95cd0be4e523d4"
 
 RDEPENDS:python3-flake8-blind-except = " \

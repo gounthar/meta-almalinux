@@ -12,41 +12,44 @@ PACKAGES = " \
  OpenIPMI-libs \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/OpenIPMI-2.0.36-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/OpenIPMI-2.0.36-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "4c027edcdc2abb2cd818321032475089189faba9dc8049577c7331f5beaa1bba"
 
-URI_x86_64_v2_OpenIPMI = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/OpenIPMI-2.0.36-3.el10.x86_64_v2.rpm;name=x86_64_v2_OpenIPMI;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_OpenIPMI}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/OpenIPMI-2.0.36-3.el10.x86_64_v2.rpm;name=x86_64_v2_OpenIPMI;unpack=0"
 SRC_URI[x86_64_v2_OpenIPMI.sha256sum] = "204f5c4bd8bda8de322d325b6c3934a69002602ec5ca3f8f6f0951ad5eac4ae5"
 
-URI_x86_64_v2_OpenIPMI-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/OpenIPMI-devel-2.0.36-3.el10.x86_64_v2.rpm;name=x86_64_v2_OpenIPMI-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_OpenIPMI-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/OpenIPMI-devel-2.0.36-3.el10.x86_64_v2.rpm;name=x86_64_v2_OpenIPMI-devel;unpack=0"
 SRC_URI[x86_64_v2_OpenIPMI-devel.sha256sum] = "ea88ccfb90c9c7cbaadee0f54f16e7adfc39149d2f0003939debe89beb3d0507"
 
-URI_x86_64_v2_OpenIPMI-lanserv = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/OpenIPMI-lanserv-2.0.36-3.el10.x86_64_v2.rpm;name=x86_64_v2_OpenIPMI-lanserv;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_OpenIPMI-lanserv}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/OpenIPMI-lanserv-2.0.36-3.el10.x86_64_v2.rpm;name=x86_64_v2_OpenIPMI-lanserv;unpack=0"
 SRC_URI[x86_64_v2_OpenIPMI-lanserv.sha256sum] = "02b477857dcb425e4d6580a5f61c1a8f4031672d72e631bff64ac960000d7c2c"
 
-URI_x86_64_v2_OpenIPMI-libs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/OpenIPMI-libs-2.0.36-3.el10.x86_64_v2.rpm;name=x86_64_v2_OpenIPMI-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_OpenIPMI-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/OpenIPMI-libs-2.0.36-3.el10.x86_64_v2.rpm;name=x86_64_v2_OpenIPMI-libs;unpack=0"
 SRC_URI[x86_64_v2_OpenIPMI-libs.sha256sum] = "0be7ce5a9c5fe9fd7646c5c18e7c68e14b72473801e8a18a02121d4e3bbffab9"
 
-URI_aarch64_OpenIPMI = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/OpenIPMI-2.0.36-3.el10.aarch64.rpm;name=aarch64_OpenIPMI;unpack=0"
-SRC_URI:append = " ${URI_aarch64_OpenIPMI}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/OpenIPMI-2.0.36-3.el10.aarch64.rpm;name=aarch64_OpenIPMI;unpack=0"
 SRC_URI[aarch64_OpenIPMI.sha256sum] = "cdb22d2fb2148b903076e7739223a83982b430bf0931f00ab68cc7767152ab60"
 
-URI_aarch64_OpenIPMI-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/OpenIPMI-devel-2.0.36-3.el10.aarch64.rpm;name=aarch64_OpenIPMI-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_OpenIPMI-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/OpenIPMI-devel-2.0.36-3.el10.aarch64.rpm;name=aarch64_OpenIPMI-devel;unpack=0"
 SRC_URI[aarch64_OpenIPMI-devel.sha256sum] = "aafb680a520954c2bd6ff632a4f9af891f7eb48deab9731f6835bcfd2219ef9c"
 
-URI_aarch64_OpenIPMI-lanserv = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/OpenIPMI-lanserv-2.0.36-3.el10.aarch64.rpm;name=aarch64_OpenIPMI-lanserv;unpack=0"
-SRC_URI:append = " ${URI_aarch64_OpenIPMI-lanserv}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/OpenIPMI-lanserv-2.0.36-3.el10.aarch64.rpm;name=aarch64_OpenIPMI-lanserv;unpack=0"
 SRC_URI[aarch64_OpenIPMI-lanserv.sha256sum] = "62660a807192ff4798195bdfbd45a7da5691b42f9b75e3ba0d7777c74b4f9320"
 
-URI_aarch64_OpenIPMI-libs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/OpenIPMI-libs-2.0.36-3.el10.aarch64.rpm;name=aarch64_OpenIPMI-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_OpenIPMI-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/OpenIPMI-libs-2.0.36-3.el10.aarch64.rpm;name=aarch64_OpenIPMI-libs;unpack=0"
 SRC_URI[aarch64_OpenIPMI-libs.sha256sum] = "73e583b79a56b4578fc4b622d02d761531face69f14e7802f08da2aa342969c8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/OpenIPMI-2.0.36-3.el10.riscv64.rpm;name=riscv64_OpenIPMI;unpack=0"
+SRC_URI[riscv64_OpenIPMI.sha256sum] = "f38d25325c83320bbd44a6fcb8ced86dc1f024bdd6b7c816862e87a5721cf96e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/OpenIPMI-devel-2.0.36-3.el10.riscv64.rpm;name=riscv64_OpenIPMI-devel;unpack=0"
+SRC_URI[riscv64_OpenIPMI-devel.sha256sum] = "1111ed5cf5d88d7d208c67a9e2c6abc6d4d796533281036bcdb73c1e3b511e6d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/OpenIPMI-lanserv-2.0.36-3.el10.riscv64.rpm;name=riscv64_OpenIPMI-lanserv;unpack=0"
+SRC_URI[riscv64_OpenIPMI-lanserv.sha256sum] = "c1cfa7128753863852082f1df5800a5c345a24457adbacfbe948aad4530fb3e2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/OpenIPMI-libs-2.0.36-3.el10.riscv64.rpm;name=riscv64_OpenIPMI-libs;unpack=0"
+SRC_URI[riscv64_OpenIPMI-libs.sha256sum] = "7e15ce2fcb1ac86f77405a6870612c94588f0663510aed88bd8449c46724a2e8"
 
 RDEPENDS:OpenIPMI = " \
  OpenIPMI-libs \

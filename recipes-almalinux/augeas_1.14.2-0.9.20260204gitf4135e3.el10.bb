@@ -8,7 +8,6 @@ PR = "0.9.20260204gitf4135e3.el10"
 PACKAGES = " \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/augeas-1.14.2-0.9.20260204gitf4135e3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/augeas-1.14.2-0.9.20260204gitf4135e3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7fe2783225cfae416b4bd26033e6b1f57a4da4347276fc1fe4939b418d64e809"
 

@@ -10,25 +10,26 @@ PACKAGES = " \
  libieee1284-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libieee1284-0.2.11-46.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libieee1284-0.2.11-46.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3ca7910d36a580a46ec3aca2731bef5c42f355b5e3274f6c93b615f2525b53d2"
 
-URI_x86_64_v2_libieee1284 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libieee1284-0.2.11-46.el10.x86_64_v2.rpm;name=x86_64_v2_libieee1284;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libieee1284}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libieee1284-0.2.11-46.el10.x86_64_v2.rpm;name=x86_64_v2_libieee1284;unpack=0"
 SRC_URI[x86_64_v2_libieee1284.sha256sum] = "39df6202d2cc811115df8ee00f55cb5e0a095e265f914d1c97c98f0d94e3f74b"
 
-URI_x86_64_v2_libieee1284-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libieee1284-devel-0.2.11-46.el10.x86_64_v2.rpm;name=x86_64_v2_libieee1284-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libieee1284-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libieee1284-devel-0.2.11-46.el10.x86_64_v2.rpm;name=x86_64_v2_libieee1284-devel;unpack=0"
 SRC_URI[x86_64_v2_libieee1284-devel.sha256sum] = "382075605e8eea0d059a1e07960a2f268bddd93c6bd896bc760219059b854e30"
 
-URI_aarch64_libieee1284 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libieee1284-0.2.11-46.el10.aarch64.rpm;name=aarch64_libieee1284;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libieee1284}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libieee1284-0.2.11-46.el10.aarch64.rpm;name=aarch64_libieee1284;unpack=0"
 SRC_URI[aarch64_libieee1284.sha256sum] = "2d313212e5dc1c1ce9c542acd77fcbca0b9b97ee0155f29e115116e5bc0c87d4"
 
-URI_aarch64_libieee1284-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libieee1284-devel-0.2.11-46.el10.aarch64.rpm;name=aarch64_libieee1284-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libieee1284-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libieee1284-devel-0.2.11-46.el10.aarch64.rpm;name=aarch64_libieee1284-devel;unpack=0"
 SRC_URI[aarch64_libieee1284-devel.sha256sum] = "a1026276d27b6d69097418efe1bb4ddfd3c2da09716d04b377d5c76bddc856ff"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libieee1284-0.2.11-46.el10.riscv64.rpm;name=riscv64_libieee1284;unpack=0"
+SRC_URI[riscv64_libieee1284.sha256sum] = "287d8decb5979e806d51f4c991d8702ae8faa6aa3ff44ab82ffc332a76cb0dc3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libieee1284-devel-0.2.11-46.el10.riscv64.rpm;name=riscv64_libieee1284-devel;unpack=0"
+SRC_URI[riscv64_libieee1284-devel.sha256sum] = "735c0c3af1b4babb9ddb63f5b9239317efc77340262887084b8ea5b9d98f2ce4"
 
 RDEPENDS:libieee1284 = " \
  glibc \

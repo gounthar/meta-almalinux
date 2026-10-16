@@ -11,33 +11,35 @@ PACKAGES = " \
  libwebp-tools \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libwebp-1.3.2-10.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libwebp-1.3.2-10.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "780da43184db004eb33b3c7854bd37846b28c56b4913130128cb42069ee2715e"
 
-URI_x86_64_v2_libwebp = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libwebp-1.3.2-10.el10.x86_64_v2.rpm;name=x86_64_v2_libwebp;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libwebp}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libwebp-1.3.2-10.el10.x86_64_v2.rpm;name=x86_64_v2_libwebp;unpack=0"
 SRC_URI[x86_64_v2_libwebp.sha256sum] = "01013067813df7d320f5fa73e6e40e4270316c6eb6624bf2b236e20f3f578a3d"
 
-URI_x86_64_v2_libwebp-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libwebp-devel-1.3.2-10.el10.x86_64_v2.rpm;name=x86_64_v2_libwebp-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libwebp-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libwebp-devel-1.3.2-10.el10.x86_64_v2.rpm;name=x86_64_v2_libwebp-devel;unpack=0"
 SRC_URI[x86_64_v2_libwebp-devel.sha256sum] = "6b19e7280ee81bdfb7c247ddc7f416307dd66cd5add5d64386159fa9e0e6da99"
 
-URI_x86_64_v2_libwebp-tools = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libwebp-tools-1.3.2-10.el10.x86_64_v2.rpm;name=x86_64_v2_libwebp-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libwebp-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libwebp-tools-1.3.2-10.el10.x86_64_v2.rpm;name=x86_64_v2_libwebp-tools;unpack=0"
 SRC_URI[x86_64_v2_libwebp-tools.sha256sum] = "ef2f094487b6992e5eb0b6e6567f1190633c9765f5c88144670c37485c9d8437"
 
-URI_aarch64_libwebp = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libwebp-1.3.2-10.el10.aarch64.rpm;name=aarch64_libwebp;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libwebp}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libwebp-1.3.2-10.el10.aarch64.rpm;name=aarch64_libwebp;unpack=0"
 SRC_URI[aarch64_libwebp.sha256sum] = "6dc02fc616775dc6ded94900d45f9974c3bcc3427ca87ed95aeb579fe3bf8229"
 
-URI_aarch64_libwebp-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libwebp-devel-1.3.2-10.el10.aarch64.rpm;name=aarch64_libwebp-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libwebp-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libwebp-devel-1.3.2-10.el10.aarch64.rpm;name=aarch64_libwebp-devel;unpack=0"
 SRC_URI[aarch64_libwebp-devel.sha256sum] = "c1927e5208a569989f0c7fb26fbceeed7444ab2ed6967ab41bd2a63b7acc8019"
 
-URI_aarch64_libwebp-tools = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libwebp-tools-1.3.2-10.el10.aarch64.rpm;name=aarch64_libwebp-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libwebp-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libwebp-tools-1.3.2-10.el10.aarch64.rpm;name=aarch64_libwebp-tools;unpack=0"
 SRC_URI[aarch64_libwebp-tools.sha256sum] = "7bef11ce3a575581e26a98e15579d47cea84980de55630fd6d74154f1c5beb99"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libwebp-1.3.2-10.el10.riscv64.rpm;name=riscv64_libwebp;unpack=0"
+SRC_URI[riscv64_libwebp.sha256sum] = "5638aba27b2a5be4f24121255641511827ff0db7028338acbeed8b287427d1e0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libwebp-devel-1.3.2-10.el10.riscv64.rpm;name=riscv64_libwebp-devel;unpack=0"
+SRC_URI[riscv64_libwebp-devel.sha256sum] = "b5a3074a2a5aa9730926be11e2b47a32a3d1cbf4da9dc7f356a24fdfc129c49b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libwebp-tools-1.3.2-10.el10.riscv64.rpm;name=riscv64_libwebp-tools;unpack=0"
+SRC_URI[riscv64_libwebp-tools.sha256sum] = "571e8b96cc2bfc4aec1ac75af48a5d8d9731d6ea472049fd6baef73f5559ee01"
 
 RDEPENDS:libwebp = " \
  glibc \

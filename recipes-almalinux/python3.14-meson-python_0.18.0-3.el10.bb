@@ -9,17 +9,17 @@ PACKAGES = " \
  python3.14-meson-python \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/python3.14-meson-python-0.18.0-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/python3.14-meson-python-0.18.0-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7122eddd72d8220cc913e9ba53908bd2135967413ed17cd3d16a1d4f1f7b6cbb"
 
-URI_x86_64_v2_python3.14-meson-python = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3.14-meson-python-0.18.0-3.el10.noarch.rpm;name=x86_64_v2_python3.14-meson-python;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3.14-meson-python}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3.14-meson-python-0.18.0-3.el10.noarch.rpm;name=x86_64_v2_python3.14-meson-python;unpack=0"
 SRC_URI[x86_64_v2_python3.14-meson-python.sha256sum] = "170748d09f18ff7501cf9ad14ef6db37b84e7cc5b2d8b678866d4823b7ed662b"
 
-URI_aarch64_python3.14-meson-python = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3.14-meson-python-0.18.0-3.el10.noarch.rpm;name=aarch64_python3.14-meson-python;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3.14-meson-python}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3.14-meson-python-0.18.0-3.el10.noarch.rpm;name=aarch64_python3.14-meson-python;unpack=0"
 SRC_URI[aarch64_python3.14-meson-python.sha256sum] = "170748d09f18ff7501cf9ad14ef6db37b84e7cc5b2d8b678866d4823b7ed662b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/python3.14-meson-python-0.18.0-3.el10.noarch.rpm;name=riscv64_python3.14-meson-python;unpack=0"
+SRC_URI[riscv64_python3.14-meson-python.sha256sum] = "170748d09f18ff7501cf9ad14ef6db37b84e7cc5b2d8b678866d4823b7ed662b"
 
 RDEPENDS:python3.14-meson-python = " \
  meson \

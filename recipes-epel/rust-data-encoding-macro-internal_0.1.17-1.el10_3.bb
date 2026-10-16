@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-data-encoding-macro-internal"
 PV = "0.1.17"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-data-encoding-macro-internal+default-devel \
  rust-data-encoding-macro-internal-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-data-encoding-macro-internal+default-devel \
+ rust-data-encoding-macro-internal-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-data-encoding-macro-internal-0.1.17-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-data-encoding-macro-internal-0.1.17-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b36e53ae5c4ece118117bf57fef32f676e3f46cef5611fc9dde0d6958ec3eb7c"
 
-URI_x86_64_v2_rust-data-encoding-macro-internal+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-data-encoding-macro-internal+default-devel-0.1.17-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-data-encoding-macro-internal+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-data-encoding-macro-internal+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-data-encoding-macro-internal+default-devel-0.1.17-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-data-encoding-macro-internal+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-data-encoding-macro-internal+default-devel.sha256sum] = "d1830aba2cadb90b8c3fd7ea3ce6df3785c4d6955cb4e3410db204fbb8ae752d"
 
-URI_x86_64_v2_rust-data-encoding-macro-internal-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-data-encoding-macro-internal-devel-0.1.17-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-data-encoding-macro-internal-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-data-encoding-macro-internal-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-data-encoding-macro-internal-devel-0.1.17-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-data-encoding-macro-internal-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-data-encoding-macro-internal-devel.sha256sum] = "f52a98c2ac04f1368efd387c41a71cca01f38ee36d1d85b76da7a3c91b2ee089"
 
-URI_aarch64_rust-data-encoding-macro-internal+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-data-encoding-macro-internal+default-devel-0.1.17-1.el10_3.noarch.rpm;name=aarch64_rust-data-encoding-macro-internal+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-data-encoding-macro-internal+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-data-encoding-macro-internal+default-devel-0.1.17-1.el10_3.noarch.rpm;name=aarch64_rust-data-encoding-macro-internal+default-devel;unpack=0"
 SRC_URI[aarch64_rust-data-encoding-macro-internal+default-devel.sha256sum] = "1ce16cd3a2ce747ce076dbe0e00677ad0a00b1f1faaf6f4fc8671ce9baa8db21"
 
-URI_aarch64_rust-data-encoding-macro-internal-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-data-encoding-macro-internal-devel-0.1.17-1.el10_3.noarch.rpm;name=aarch64_rust-data-encoding-macro-internal-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-data-encoding-macro-internal-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-data-encoding-macro-internal-devel-0.1.17-1.el10_3.noarch.rpm;name=aarch64_rust-data-encoding-macro-internal-devel;unpack=0"
 SRC_URI[aarch64_rust-data-encoding-macro-internal-devel.sha256sum] = "dbd147cdbf3e2ad5d804d4cede8279f141cba994f0d5169ff0f1fca7d08cac14"
 
 RDEPENDS:rust-data-encoding-macro-internal+default-devel = " \

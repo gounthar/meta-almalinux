@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-contourpy"
 PV = "1.2.0"
 PR = "5.el10_0"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-contourpy \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-contourpy \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-contourpy-1.2.0-5.el10_0.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-contourpy-1.2.0-5.el10_0.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a8f9609d5722b19088d189fd775b7fcf9cb8422429a8078853b60d9f51134e77"
 
-URI_x86_64_v2_python3-contourpy = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-contourpy-1.2.0-5.el10_0.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_python3-contourpy;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-contourpy}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-contourpy-1.2.0-5.el10_0.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_python3-contourpy;unpack=0"
 SRC_URI[x86_64_v2_python3-contourpy.sha256sum] = "617aecd8a54ebeb7629a44c389c7369670c5e55bb8f520b0d322dd325f239117"
 
-URI_aarch64_python3-contourpy = "${EPEL_MIRROR}/aarch64/Packages/p/python3-contourpy-1.2.0-5.el10_0.aarch64.rpm;name=aarch64_python3-contourpy;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-contourpy}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-contourpy-1.2.0-5.el10_0.aarch64.rpm;name=aarch64_python3-contourpy;unpack=0"
 SRC_URI[aarch64_python3-contourpy.sha256sum] = "e421f22131bcf9b71fe83c0f8192f9e36151904f9f5986ae528bdf6feafb5a6b"
 
 RDEPENDS:python3-contourpy = " \

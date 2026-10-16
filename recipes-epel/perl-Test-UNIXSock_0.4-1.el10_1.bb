@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-Test-UNIXSock"
 PV = "0.4"
 PR = "1.el10_1"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-Test-UNIXSock \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-Test-UNIXSock \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-Test-UNIXSock-0.4-1.el10_1.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-Test-UNIXSock-0.4-1.el10_1.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "9b7aa9cff843590ff65a917fe28c21c8928332e6038f8f22348154bc42341c33"
 
-URI_x86_64_v2_perl-Test-UNIXSock = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Test-UNIXSock-0.4-1.el10_1.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Test-UNIXSock;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Test-UNIXSock}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Test-UNIXSock-0.4-1.el10_1.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Test-UNIXSock;unpack=0"
 SRC_URI[x86_64_v2_perl-Test-UNIXSock.sha256sum] = "94d3fbf349bcf4aa0b67e5364be3a46d9e99a78eb27a4c01bb312ac6059294d7"
 
-URI_aarch64_perl-Test-UNIXSock = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Test-UNIXSock-0.4-1.el10_1.noarch.rpm;name=aarch64_perl-Test-UNIXSock;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Test-UNIXSock}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Test-UNIXSock-0.4-1.el10_1.noarch.rpm;name=aarch64_perl-Test-UNIXSock;unpack=0"
 SRC_URI[aarch64_perl-Test-UNIXSock.sha256sum] = "9f404a655f4c31d0343f93a2aa4cbb57fd3bb7221bd4827229e4417b4edcc8e2"
 
 RDEPENDS:perl-Test-UNIXSock = " \

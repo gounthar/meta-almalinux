@@ -10,25 +10,26 @@ PACKAGES = " \
  libmbim-utils \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libmbim-1.30.0-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libmbim-1.30.0-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d9ae7c1eff34af2abfea0f5045b8834c7e70e6cd62508f3f4b73c4c2743cf5d3"
 
-URI_x86_64_v2_libmbim = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libmbim-1.30.0-6.el10.x86_64_v2.rpm;name=x86_64_v2_libmbim;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libmbim}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libmbim-1.30.0-6.el10.x86_64_v2.rpm;name=x86_64_v2_libmbim;unpack=0"
 SRC_URI[x86_64_v2_libmbim.sha256sum] = "74f3aa55aeb6c95a7baadbab8f8151471cced4d3dd617c07cbd40a1dac7cb378"
 
-URI_x86_64_v2_libmbim-utils = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libmbim-utils-1.30.0-6.el10.x86_64_v2.rpm;name=x86_64_v2_libmbim-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libmbim-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libmbim-utils-1.30.0-6.el10.x86_64_v2.rpm;name=x86_64_v2_libmbim-utils;unpack=0"
 SRC_URI[x86_64_v2_libmbim-utils.sha256sum] = "54ffe958296ded564fbb9effd55c27fdf55b6f280d73afcbc74b18c03894b98a"
 
-URI_aarch64_libmbim = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libmbim-1.30.0-6.el10.aarch64.rpm;name=aarch64_libmbim;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libmbim}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libmbim-1.30.0-6.el10.aarch64.rpm;name=aarch64_libmbim;unpack=0"
 SRC_URI[aarch64_libmbim.sha256sum] = "01e50bf77a91af84713cb9815e873494d8765ea745df5ef54850618401f84cc8"
 
-URI_aarch64_libmbim-utils = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libmbim-utils-1.30.0-6.el10.aarch64.rpm;name=aarch64_libmbim-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libmbim-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libmbim-utils-1.30.0-6.el10.aarch64.rpm;name=aarch64_libmbim-utils;unpack=0"
 SRC_URI[aarch64_libmbim-utils.sha256sum] = "e9fad9d9098fee6f3439e98eafefe2d883600fb978eae9573f1cde78d9549c72"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libmbim-1.30.0-6.el10.riscv64.rpm;name=riscv64_libmbim;unpack=0"
+SRC_URI[riscv64_libmbim.sha256sum] = "fd5bedfd45aa49cd9be33667eb0c4d02c0d1527486905732917b3291bea0187c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libmbim-utils-1.30.0-6.el10.riscv64.rpm;name=riscv64_libmbim-utils;unpack=0"
+SRC_URI[riscv64_libmbim-utils.sha256sum] = "d713b798e15f2dc294ddadce5e31f53191d40f59c1e487177335abeb91afa882"
 
 RDEPENDS:libmbim = " \
  glib2 \

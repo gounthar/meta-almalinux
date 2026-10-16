@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-phf_codegen"
 PV = "0.13.1"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-phf_codegen+default-devel \
  rust-phf_codegen-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-phf_codegen+default-devel \
+ rust-phf_codegen-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-phf_codegen-0.13.1-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-phf_codegen-0.13.1-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "101d814a0ad00cf804489d992547d9d94d8f34a605d85b75d0909f5ccde216d5"
 
-URI_x86_64_v2_rust-phf_codegen+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-phf_codegen+default-devel-0.13.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-phf_codegen+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-phf_codegen+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-phf_codegen+default-devel-0.13.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-phf_codegen+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-phf_codegen+default-devel.sha256sum] = "9242a2f59e98a0dbd5d53c595f17bb22c347f6fe9118aa6b9a8852b70f318384"
 
-URI_x86_64_v2_rust-phf_codegen-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-phf_codegen-devel-0.13.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-phf_codegen-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-phf_codegen-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-phf_codegen-devel-0.13.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-phf_codegen-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-phf_codegen-devel.sha256sum] = "ac195bf2dcf318225947f99470242e0f7b8b3aea98bf9d99ffde06b65a852182"
 
-URI_aarch64_rust-phf_codegen+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-phf_codegen+default-devel-0.13.1-1.el10_2.noarch.rpm;name=aarch64_rust-phf_codegen+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-phf_codegen+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-phf_codegen+default-devel-0.13.1-1.el10_2.noarch.rpm;name=aarch64_rust-phf_codegen+default-devel;unpack=0"
 SRC_URI[aarch64_rust-phf_codegen+default-devel.sha256sum] = "dd37c3f95baea085c5f8778fa935a47de46305ca62848194b0fbf8ee99dcf591"
 
-URI_aarch64_rust-phf_codegen-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-phf_codegen-devel-0.13.1-1.el10_2.noarch.rpm;name=aarch64_rust-phf_codegen-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-phf_codegen-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-phf_codegen-devel-0.13.1-1.el10_2.noarch.rpm;name=aarch64_rust-phf_codegen-devel;unpack=0"
 SRC_URI[aarch64_rust-phf_codegen-devel.sha256sum] = "00c3157b96eed0005a54e319aa2c098236f380c34978870df973d2b0174d1c99"
 
 RDEPENDS:rust-phf_codegen+default-devel = " \

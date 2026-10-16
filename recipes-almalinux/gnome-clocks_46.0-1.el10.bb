@@ -9,17 +9,17 @@ PACKAGES = " \
  gnome-clocks \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gnome-clocks-46.0-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gnome-clocks-46.0-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "2e24d3363997b53b489da4019d2c3dbfc205e7b5f527cf42ed53304aad24b15e"
 
-URI_x86_64_v2_gnome-clocks = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gnome-clocks-46.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_gnome-clocks;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gnome-clocks}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gnome-clocks-46.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_gnome-clocks;unpack=0"
 SRC_URI[x86_64_v2_gnome-clocks.sha256sum] = "f66f25cf5023af571ee635122aef3c76064f8a3c3c81e1fba0519cc47f153c1a"
 
-URI_aarch64_gnome-clocks = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gnome-clocks-46.0-1.el10.aarch64.rpm;name=aarch64_gnome-clocks;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gnome-clocks}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gnome-clocks-46.0-1.el10.aarch64.rpm;name=aarch64_gnome-clocks;unpack=0"
 SRC_URI[aarch64_gnome-clocks.sha256sum] = "6329194713b3e634d18d90dbc330f79964513b8c6a8addd0b248167d9fb4d252"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gnome-clocks-46.0-1.el10.riscv64.rpm;name=riscv64_gnome-clocks;unpack=0"
+SRC_URI[riscv64_gnome-clocks.sha256sum] = "4f0057f50baf1a2defbd90d54633ee7d3ca5f881f87ba3a34958c86ba1f2616b"
 
 RDEPENDS:gnome-clocks = " \
  geoclue2-libs \

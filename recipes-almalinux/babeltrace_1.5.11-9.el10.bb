@@ -11,33 +11,35 @@ PACKAGES = " \
  python3-babeltrace \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/babeltrace-1.5.11-9.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/babeltrace-1.5.11-9.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d29bd14395a33b0bd082c4779a70de564947ea7c88babbe52270e72c0c5d79f0"
 
-URI_x86_64_v2_libbabeltrace = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libbabeltrace-1.5.11-9.el10.x86_64_v2.rpm;name=x86_64_v2_libbabeltrace;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libbabeltrace}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libbabeltrace-1.5.11-9.el10.x86_64_v2.rpm;name=x86_64_v2_libbabeltrace;unpack=0"
 SRC_URI[x86_64_v2_libbabeltrace.sha256sum] = "9aa05d297ac2140ccd73c3fe4cd54546472a79616fe0c6b4c60a0ce0bcba2f5f"
 
-URI_x86_64_v2_libbabeltrace-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libbabeltrace-devel-1.5.11-9.el10.x86_64_v2.rpm;name=x86_64_v2_libbabeltrace-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libbabeltrace-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libbabeltrace-devel-1.5.11-9.el10.x86_64_v2.rpm;name=x86_64_v2_libbabeltrace-devel;unpack=0"
 SRC_URI[x86_64_v2_libbabeltrace-devel.sha256sum] = "eb4444709853a56f63010ecd61de5591992dbb88eb30e63fe6a94212daa42212"
 
-URI_x86_64_v2_python3-babeltrace = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3-babeltrace-1.5.11-9.el10.x86_64_v2.rpm;name=x86_64_v2_python3-babeltrace;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-babeltrace}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3-babeltrace-1.5.11-9.el10.x86_64_v2.rpm;name=x86_64_v2_python3-babeltrace;unpack=0"
 SRC_URI[x86_64_v2_python3-babeltrace.sha256sum] = "b758c5f2fea9f42b4569be18e5b3a2734960132b005c0caa2fdfc371766db579"
 
-URI_aarch64_libbabeltrace = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libbabeltrace-1.5.11-9.el10.aarch64.rpm;name=aarch64_libbabeltrace;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libbabeltrace}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libbabeltrace-1.5.11-9.el10.aarch64.rpm;name=aarch64_libbabeltrace;unpack=0"
 SRC_URI[aarch64_libbabeltrace.sha256sum] = "33f181198ec498c8126aa23caa58e5326a85da983463314e2f7b81bd827f0499"
 
-URI_aarch64_libbabeltrace-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libbabeltrace-devel-1.5.11-9.el10.aarch64.rpm;name=aarch64_libbabeltrace-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libbabeltrace-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libbabeltrace-devel-1.5.11-9.el10.aarch64.rpm;name=aarch64_libbabeltrace-devel;unpack=0"
 SRC_URI[aarch64_libbabeltrace-devel.sha256sum] = "d3ef79eb2d602fbea08fbb083d3e709a3506013de97a8b4614b2b9491f36139f"
 
-URI_aarch64_python3-babeltrace = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3-babeltrace-1.5.11-9.el10.aarch64.rpm;name=aarch64_python3-babeltrace;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-babeltrace}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3-babeltrace-1.5.11-9.el10.aarch64.rpm;name=aarch64_python3-babeltrace;unpack=0"
 SRC_URI[aarch64_python3-babeltrace.sha256sum] = "b8d8789636b38255fc3bc18e578ce48946a9b02e8cd1cce4f815c0c44bff2665"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libbabeltrace-1.5.11-9.el10.riscv64.rpm;name=riscv64_libbabeltrace;unpack=0"
+SRC_URI[riscv64_libbabeltrace.sha256sum] = "946206ce0088ee59cc27afc455ce0a3cbb0ff91d2ae15dce441f84cc8434f0a6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libbabeltrace-devel-1.5.11-9.el10.riscv64.rpm;name=riscv64_libbabeltrace-devel;unpack=0"
+SRC_URI[riscv64_libbabeltrace-devel.sha256sum] = "bdcede0e1c1ead32e127fe586b76b90b1b0ccc1abd055b522350d4a824afde20"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/python3-babeltrace-1.5.11-9.el10.riscv64.rpm;name=riscv64_python3-babeltrace;unpack=0"
+SRC_URI[riscv64_python3-babeltrace.sha256sum] = "94462bf12aaf7c40a708fd18c72ec542dc9c6d2b256a814aa2dca394dd717135"
 
 RDEPENDS:libbabeltrace = " \
  elfutils-libelf \

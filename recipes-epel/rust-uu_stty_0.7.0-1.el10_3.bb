@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-uu_stty"
 PV = "0.7.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-uu_stty+default-devel \
  rust-uu_stty-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-uu_stty+default-devel \
+ rust-uu_stty-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-uu_stty-0.7.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-uu_stty-0.7.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b8cff3491f8625fd18472b89a165ef02857c17f31def2ae2bf326e87415605ef"
 
-URI_x86_64_v2_rust-uu_stty+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_stty+default-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_stty+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_stty+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_stty+default-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_stty+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_stty+default-devel.sha256sum] = "306ddcf2b24f5e511af0c462cab3768e78180c745f54a7bc30076acd9e8bacb0"
 
-URI_x86_64_v2_rust-uu_stty-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_stty-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_stty-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_stty-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_stty-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_stty-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_stty-devel.sha256sum] = "0321777d54d95ddd9877e5188274b472884d9978c457df5c653084eff3789c2d"
 
-URI_aarch64_rust-uu_stty+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_stty+default-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_stty+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_stty+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_stty+default-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_stty+default-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_stty+default-devel.sha256sum] = "847c14d1d290bf0c3caf044a81922f57510edbdde82b899af703c628e9f66a22"
 
-URI_aarch64_rust-uu_stty-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_stty-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_stty-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_stty-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_stty-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_stty-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_stty-devel.sha256sum] = "e460773669b4b84d6f85122608c71cf29f7442a08410d2ce32b806a366a3be93"
 
 RDEPENDS:rust-uu_stty+default-devel = " \

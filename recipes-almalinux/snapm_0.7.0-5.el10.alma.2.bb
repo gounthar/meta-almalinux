@@ -11,33 +11,35 @@ PACKAGES = " \
  snapm \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/snapm-0.7.0-5.el10.alma.2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/snapm-0.7.0-5.el10.alma.2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "408b387a2464d6f2b430fb591472c611efd09a31e8de6fa30d2a3dc57ebef81c"
 
-URI_x86_64_v2_python3-snapm = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-snapm-0.7.0-5.el10.alma.2.noarch.rpm;name=x86_64_v2_python3-snapm;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-snapm}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-snapm-0.7.0-5.el10.alma.2.noarch.rpm;name=x86_64_v2_python3-snapm;unpack=0"
 SRC_URI[x86_64_v2_python3-snapm.sha256sum] = "63fc5f8dac85f60da75847cdee3481032b9625e2e36012aa9647c6a2771b9e33"
 
-URI_x86_64_v2_python3-snapm-doc = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-snapm-doc-0.7.0-5.el10.alma.2.noarch.rpm;name=x86_64_v2_python3-snapm-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-snapm-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-snapm-doc-0.7.0-5.el10.alma.2.noarch.rpm;name=x86_64_v2_python3-snapm-doc;unpack=0"
 SRC_URI[x86_64_v2_python3-snapm-doc.sha256sum] = "6778e9848005941ba441fc17d25e8eefab4ca0e6ed7b11fdf787ec46138a3413"
 
-URI_x86_64_v2_snapm = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/snapm-0.7.0-5.el10.alma.2.noarch.rpm;name=x86_64_v2_snapm;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_snapm}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/snapm-0.7.0-5.el10.alma.2.noarch.rpm;name=x86_64_v2_snapm;unpack=0"
 SRC_URI[x86_64_v2_snapm.sha256sum] = "f25f0ca2bad1cde358fa3259b6d4ca61f8a861e920d41f7eacc8088c282ede6a"
 
-URI_aarch64_python3-snapm = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-snapm-0.7.0-5.el10.alma.2.noarch.rpm;name=aarch64_python3-snapm;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-snapm}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-snapm-0.7.0-5.el10.alma.2.noarch.rpm;name=aarch64_python3-snapm;unpack=0"
 SRC_URI[aarch64_python3-snapm.sha256sum] = "63fc5f8dac85f60da75847cdee3481032b9625e2e36012aa9647c6a2771b9e33"
 
-URI_aarch64_python3-snapm-doc = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-snapm-doc-0.7.0-5.el10.alma.2.noarch.rpm;name=aarch64_python3-snapm-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-snapm-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-snapm-doc-0.7.0-5.el10.alma.2.noarch.rpm;name=aarch64_python3-snapm-doc;unpack=0"
 SRC_URI[aarch64_python3-snapm-doc.sha256sum] = "6778e9848005941ba441fc17d25e8eefab4ca0e6ed7b11fdf787ec46138a3413"
 
-URI_aarch64_snapm = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/snapm-0.7.0-5.el10.alma.2.noarch.rpm;name=aarch64_snapm;unpack=0"
-SRC_URI:append = " ${URI_aarch64_snapm}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/snapm-0.7.0-5.el10.alma.2.noarch.rpm;name=aarch64_snapm;unpack=0"
 SRC_URI[aarch64_snapm.sha256sum] = "f25f0ca2bad1cde358fa3259b6d4ca61f8a861e920d41f7eacc8088c282ede6a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-snapm-0.7.0-5.el10.alma.2.noarch.rpm;name=riscv64_python3-snapm;unpack=0"
+SRC_URI[riscv64_python3-snapm.sha256sum] = "63fc5f8dac85f60da75847cdee3481032b9625e2e36012aa9647c6a2771b9e33"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-snapm-doc-0.7.0-5.el10.alma.2.noarch.rpm;name=riscv64_python3-snapm-doc;unpack=0"
+SRC_URI[riscv64_python3-snapm-doc.sha256sum] = "6778e9848005941ba441fc17d25e8eefab4ca0e6ed7b11fdf787ec46138a3413"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/snapm-0.7.0-5.el10.alma.2.noarch.rpm;name=riscv64_snapm;unpack=0"
+SRC_URI[riscv64_snapm.sha256sum] = "f25f0ca2bad1cde358fa3259b6d4ca61f8a861e920d41f7eacc8088c282ede6a"
 
 RDEPENDS:python3-snapm = " \
  python3 \

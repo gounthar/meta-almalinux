@@ -10,25 +10,26 @@ PACKAGES = " \
  xcb-util-image-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/xcb-util-image-0.4.1-7.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/xcb-util-image-0.4.1-7.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1dde9c72cbfbb93e6bbd7c4edbf0829d59457e0210931153bfb979ffade461e7"
 
-URI_x86_64_v2_xcb-util-image = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/xcb-util-image-0.4.1-7.el10.x86_64_v2.rpm;name=x86_64_v2_xcb-util-image;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_xcb-util-image}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/xcb-util-image-0.4.1-7.el10.x86_64_v2.rpm;name=x86_64_v2_xcb-util-image;unpack=0"
 SRC_URI[x86_64_v2_xcb-util-image.sha256sum] = "181893ac6ce831141869a79253526881cbba5e02b613079295b0d817cdef5d72"
 
-URI_x86_64_v2_xcb-util-image-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/xcb-util-image-devel-0.4.1-7.el10.x86_64_v2.rpm;name=x86_64_v2_xcb-util-image-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_xcb-util-image-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/xcb-util-image-devel-0.4.1-7.el10.x86_64_v2.rpm;name=x86_64_v2_xcb-util-image-devel;unpack=0"
 SRC_URI[x86_64_v2_xcb-util-image-devel.sha256sum] = "3cfa8ca61232bd0edd746476de3cde293d26bb35d34fcb910047880b5153d057"
 
-URI_aarch64_xcb-util-image = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/xcb-util-image-0.4.1-7.el10.aarch64.rpm;name=aarch64_xcb-util-image;unpack=0"
-SRC_URI:append = " ${URI_aarch64_xcb-util-image}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/xcb-util-image-0.4.1-7.el10.aarch64.rpm;name=aarch64_xcb-util-image;unpack=0"
 SRC_URI[aarch64_xcb-util-image.sha256sum] = "a8d7509c394f7ff4e2d65f8ab8c0793856daaa39449dfff445ee9918bfa07340"
 
-URI_aarch64_xcb-util-image-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/xcb-util-image-devel-0.4.1-7.el10.aarch64.rpm;name=aarch64_xcb-util-image-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_xcb-util-image-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/xcb-util-image-devel-0.4.1-7.el10.aarch64.rpm;name=aarch64_xcb-util-image-devel;unpack=0"
 SRC_URI[aarch64_xcb-util-image-devel.sha256sum] = "72f9ffb96958988e604d93376dabd841cd52faeab92449b7c45ee2e9724ea1eb"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/xcb-util-image-0.4.1-7.el10.riscv64.rpm;name=riscv64_xcb-util-image;unpack=0"
+SRC_URI[riscv64_xcb-util-image.sha256sum] = "e712be35fc55a3b946f7f13a0d880327a4d85330e653fa48f6f5ef942922a50d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/xcb-util-image-devel-0.4.1-7.el10.riscv64.rpm;name=riscv64_xcb-util-image-devel;unpack=0"
+SRC_URI[riscv64_xcb-util-image-devel.sha256sum] = "f0fc32ca314d6c82748c7c66b41b75cd5d51499f9adc04422d2fea8e64415b21"
 
 RDEPENDS:xcb-util-image = " \
  glibc \

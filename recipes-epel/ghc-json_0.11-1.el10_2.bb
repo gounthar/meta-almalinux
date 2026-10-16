@@ -16,37 +16,32 @@ PACKAGES:aarch64 = " \
  ghc-json-doc \
  ghc-json-prof \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/g/ghc-json-0.11-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/g/ghc-json-0.11-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b4c1f691f53862cbfeda231b08c7f48dd124b9f9222eb64dbedb47ce495bee0b"
 
-URI_x86_64_v2_ghc-json = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-json-0.11-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-json;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-json}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-json-0.11-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-json;unpack=0"
 SRC_URI[x86_64_v2_ghc-json.sha256sum] = "385bc2878c7f9649af4961974d7e574eb314c200f6f364a3fba3ff2c6c657bbd"
 
-URI_x86_64_v2_ghc-json-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-json-devel-0.11-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-json-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-json-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-json-devel-0.11-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-json-devel;unpack=0"
 SRC_URI[x86_64_v2_ghc-json-devel.sha256sum] = "af4f8bf7fe1294a6844feb8ac0fbf8c175fbe70caa48cfc57c8173bd49f738ae"
 
-URI_x86_64_v2_ghc-json-doc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-json-doc-0.11-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_ghc-json-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-json-doc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-json-doc-0.11-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_ghc-json-doc;unpack=0"
 SRC_URI[x86_64_v2_ghc-json-doc.sha256sum] = "e24fb25aeffacba5a90e0e061ea3abacd6cec93d99ec1097d234e7b74d21aa57"
 
-URI_aarch64_ghc-json = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-json-0.11-1.el10_2.aarch64.rpm;name=aarch64_ghc-json;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-json}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-json-0.11-1.el10_2.aarch64.rpm;name=aarch64_ghc-json;unpack=0"
 SRC_URI[aarch64_ghc-json.sha256sum] = "89c04702f2974e5ab7ffabac95247960bc638d1157335a4800ccb80ee626c4f3"
 
-URI_aarch64_ghc-json-devel = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-json-devel-0.11-1.el10_2.aarch64.rpm;name=aarch64_ghc-json-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-json-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-json-devel-0.11-1.el10_2.aarch64.rpm;name=aarch64_ghc-json-devel;unpack=0"
 SRC_URI[aarch64_ghc-json-devel.sha256sum] = "0b466c618bdad837d0994e28d461b7110338af5fa8badf0af59bb1dc927dc3bb"
 
-URI_aarch64_ghc-json-doc = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-json-doc-0.11-1.el10_2.noarch.rpm;name=aarch64_ghc-json-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-json-doc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-json-doc-0.11-1.el10_2.noarch.rpm;name=aarch64_ghc-json-doc;unpack=0"
 SRC_URI[aarch64_ghc-json-doc.sha256sum] = "8056eaa4a8bbd672bc74d8eb3cd314d91711228802316d95068525859de9c591"
 
-URI_aarch64_ghc-json-prof = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-json-prof-0.11-1.el10_2.aarch64.rpm;name=aarch64_ghc-json-prof;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-json-prof}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-json-prof-0.11-1.el10_2.aarch64.rpm;name=aarch64_ghc-json-prof;unpack=0"
 SRC_URI[aarch64_ghc-json-prof.sha256sum] = "f933919b8e48093a4ecd861b3f9cf4a1d6d99c954a8020fe6861cf28918eb4d0"
 
 RDEPENDS:ghc-json = " \

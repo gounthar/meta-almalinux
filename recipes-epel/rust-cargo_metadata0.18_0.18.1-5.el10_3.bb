@@ -5,56 +5,55 @@ inherit dnf-bridge
 PN = "rust-cargo_metadata0.18"
 PV = "0.18.1"
 PR = "5.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-cargo_metadata0.18+builder-devel \
  rust-cargo_metadata0.18+default-devel \
  rust-cargo_metadata0.18+derive_builder-devel \
  rust-cargo_metadata0.18+unstable-devel \
  rust-cargo_metadata0.18-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-cargo_metadata0.18+builder-devel \
+ rust-cargo_metadata0.18+default-devel \
+ rust-cargo_metadata0.18+derive_builder-devel \
+ rust-cargo_metadata0.18+unstable-devel \
+ rust-cargo_metadata0.18-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-cargo_metadata0.18-0.18.1-5.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-cargo_metadata0.18-0.18.1-5.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f1498e082ddae8b3adb08ea676855221bcdb9433bfae6948f3d4b55060176fef"
 
-URI_x86_64_v2_rust-cargo_metadata0.18+builder-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-cargo_metadata0.18+builder-devel-0.18.1-5.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-cargo_metadata0.18+builder-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-cargo_metadata0.18+builder-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-cargo_metadata0.18+builder-devel-0.18.1-5.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-cargo_metadata0.18+builder-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-cargo_metadata0.18+builder-devel.sha256sum] = "710ac938722693aab1d91459888ce7bd521e8bd4969fad8c6c81b5dc10969009"
 
-URI_x86_64_v2_rust-cargo_metadata0.18+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-cargo_metadata0.18+default-devel-0.18.1-5.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-cargo_metadata0.18+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-cargo_metadata0.18+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-cargo_metadata0.18+default-devel-0.18.1-5.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-cargo_metadata0.18+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-cargo_metadata0.18+default-devel.sha256sum] = "2113a003fca57fa9733e687654fdff5164eb096f88c57e986ad63b2cc51c9206"
 
-URI_x86_64_v2_rust-cargo_metadata0.18+derive_builder-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-cargo_metadata0.18+derive_builder-devel-0.18.1-5.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-cargo_metadata0.18+derive_builder-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-cargo_metadata0.18+derive_builder-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-cargo_metadata0.18+derive_builder-devel-0.18.1-5.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-cargo_metadata0.18+derive_builder-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-cargo_metadata0.18+derive_builder-devel.sha256sum] = "bc18d1b7293925336dc27efd9afd8526b71a688e6887d357d581f18cbfd07f64"
 
-URI_x86_64_v2_rust-cargo_metadata0.18+unstable-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-cargo_metadata0.18+unstable-devel-0.18.1-5.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-cargo_metadata0.18+unstable-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-cargo_metadata0.18+unstable-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-cargo_metadata0.18+unstable-devel-0.18.1-5.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-cargo_metadata0.18+unstable-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-cargo_metadata0.18+unstable-devel.sha256sum] = "b5995411a557a639997afe6b836d7aabc087825f68af73baa55ecdaffe5d3c18"
 
-URI_x86_64_v2_rust-cargo_metadata0.18-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-cargo_metadata0.18-devel-0.18.1-5.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-cargo_metadata0.18-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-cargo_metadata0.18-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-cargo_metadata0.18-devel-0.18.1-5.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-cargo_metadata0.18-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-cargo_metadata0.18-devel.sha256sum] = "f19ca612ecac0d144d25a58e0ef048af32d8ce1bb1360c45468eb21506e9feaf"
 
-URI_aarch64_rust-cargo_metadata0.18+builder-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-cargo_metadata0.18+builder-devel-0.18.1-5.el10_3.noarch.rpm;name=aarch64_rust-cargo_metadata0.18+builder-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-cargo_metadata0.18+builder-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-cargo_metadata0.18+builder-devel-0.18.1-5.el10_3.noarch.rpm;name=aarch64_rust-cargo_metadata0.18+builder-devel;unpack=0"
 SRC_URI[aarch64_rust-cargo_metadata0.18+builder-devel.sha256sum] = "90020b2fb634f9d4fa3aa6930397d847b12867ed7a1b4277458cf6dc8f0af1e1"
 
-URI_aarch64_rust-cargo_metadata0.18+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-cargo_metadata0.18+default-devel-0.18.1-5.el10_3.noarch.rpm;name=aarch64_rust-cargo_metadata0.18+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-cargo_metadata0.18+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-cargo_metadata0.18+default-devel-0.18.1-5.el10_3.noarch.rpm;name=aarch64_rust-cargo_metadata0.18+default-devel;unpack=0"
 SRC_URI[aarch64_rust-cargo_metadata0.18+default-devel.sha256sum] = "d7ac804cc4d21dcbd051d28891cb913b2fbf1265961e8815aef6e93c9a561103"
 
-URI_aarch64_rust-cargo_metadata0.18+derive_builder-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-cargo_metadata0.18+derive_builder-devel-0.18.1-5.el10_3.noarch.rpm;name=aarch64_rust-cargo_metadata0.18+derive_builder-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-cargo_metadata0.18+derive_builder-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-cargo_metadata0.18+derive_builder-devel-0.18.1-5.el10_3.noarch.rpm;name=aarch64_rust-cargo_metadata0.18+derive_builder-devel;unpack=0"
 SRC_URI[aarch64_rust-cargo_metadata0.18+derive_builder-devel.sha256sum] = "2280b278648d39be357d0f02938950dfc791924f90ca0315ef64543234598d9c"
 
-URI_aarch64_rust-cargo_metadata0.18+unstable-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-cargo_metadata0.18+unstable-devel-0.18.1-5.el10_3.noarch.rpm;name=aarch64_rust-cargo_metadata0.18+unstable-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-cargo_metadata0.18+unstable-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-cargo_metadata0.18+unstable-devel-0.18.1-5.el10_3.noarch.rpm;name=aarch64_rust-cargo_metadata0.18+unstable-devel;unpack=0"
 SRC_URI[aarch64_rust-cargo_metadata0.18+unstable-devel.sha256sum] = "5177b20c8321f082ce036c1da264930d89c55e8476da1053c25254e0fda11746"
 
-URI_aarch64_rust-cargo_metadata0.18-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-cargo_metadata0.18-devel-0.18.1-5.el10_3.noarch.rpm;name=aarch64_rust-cargo_metadata0.18-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-cargo_metadata0.18-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-cargo_metadata0.18-devel-0.18.1-5.el10_3.noarch.rpm;name=aarch64_rust-cargo_metadata0.18-devel;unpack=0"
 SRC_URI[aarch64_rust-cargo_metadata0.18-devel.sha256sum] = "91b5bcb3bfe234d6905271da418e332a44e09e2016a21d6de9f59e4a7ffce724"
 
 RDEPENDS:rust-cargo_metadata0.18+builder-devel = " \

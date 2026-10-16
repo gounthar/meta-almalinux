@@ -11,33 +11,35 @@ PACKAGES = " \
  lmdb-libs \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/lmdb-0.9.32-4.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/lmdb-0.9.32-4.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "20b290ebc4399ab914df18925b9bbfcf438b87b9ce3486836df24c8edf69d1a6"
 
-URI_x86_64_v2_lmdb = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/lmdb-0.9.32-4.el10.x86_64_v2.rpm;name=x86_64_v2_lmdb;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lmdb}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/lmdb-0.9.32-4.el10.x86_64_v2.rpm;name=x86_64_v2_lmdb;unpack=0"
 SRC_URI[x86_64_v2_lmdb.sha256sum] = "bb48e9d8160412db83fe9b9745794e030910649b3019a5889c85fcdf7431fa9a"
 
-URI_x86_64_v2_lmdb-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/lmdb-devel-0.9.32-4.el10.x86_64_v2.rpm;name=x86_64_v2_lmdb-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lmdb-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/lmdb-devel-0.9.32-4.el10.x86_64_v2.rpm;name=x86_64_v2_lmdb-devel;unpack=0"
 SRC_URI[x86_64_v2_lmdb-devel.sha256sum] = "1c06db62040fd0e26e3b12714a0cf96ce5050f70842952e7c7c5181ba3332005"
 
-URI_x86_64_v2_lmdb-libs = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/lmdb-libs-0.9.32-4.el10.x86_64_v2.rpm;name=x86_64_v2_lmdb-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lmdb-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/lmdb-libs-0.9.32-4.el10.x86_64_v2.rpm;name=x86_64_v2_lmdb-libs;unpack=0"
 SRC_URI[x86_64_v2_lmdb-libs.sha256sum] = "1c59e618962a1d5bd3e0a2c4e6719a9ca3325ced93f748436d14003bc042238c"
 
-URI_aarch64_lmdb = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/lmdb-0.9.32-4.el10.aarch64.rpm;name=aarch64_lmdb;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lmdb}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/lmdb-0.9.32-4.el10.aarch64.rpm;name=aarch64_lmdb;unpack=0"
 SRC_URI[aarch64_lmdb.sha256sum] = "b0139cba1b73ff65cf158278b31378f753b0f05700c727504613788593219282"
 
-URI_aarch64_lmdb-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/lmdb-devel-0.9.32-4.el10.aarch64.rpm;name=aarch64_lmdb-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lmdb-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/lmdb-devel-0.9.32-4.el10.aarch64.rpm;name=aarch64_lmdb-devel;unpack=0"
 SRC_URI[aarch64_lmdb-devel.sha256sum] = "6f23f3199031c8545fdf9a2d87f12847d1c46c3a9f57a7c4686d49842a537f0c"
 
-URI_aarch64_lmdb-libs = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/lmdb-libs-0.9.32-4.el10.aarch64.rpm;name=aarch64_lmdb-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lmdb-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/lmdb-libs-0.9.32-4.el10.aarch64.rpm;name=aarch64_lmdb-libs;unpack=0"
 SRC_URI[aarch64_lmdb-libs.sha256sum] = "d1184e3dd21f051a05daf0385b6b9ada5e2198245e4c60f34f3dfbf63a436837"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/lmdb-0.9.32-4.el10.riscv64.rpm;name=riscv64_lmdb;unpack=0"
+SRC_URI[riscv64_lmdb.sha256sum] = "111cebed98679ac4e5813eab8da7c0e3b0c12f1259d4cde20e36819b5f61d8f3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/lmdb-devel-0.9.32-4.el10.riscv64.rpm;name=riscv64_lmdb-devel;unpack=0"
+SRC_URI[riscv64_lmdb-devel.sha256sum] = "c6dbf2fbd5e5c7cec762d8c59dfd627f7d9850e86c8453be20585c08df60f4b0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/lmdb-libs-0.9.32-4.el10.riscv64.rpm;name=riscv64_lmdb-libs;unpack=0"
+SRC_URI[riscv64_lmdb-libs.sha256sum] = "29b299f70060916b977e042e032f3c924809a013551bfae47b4d4fb6701b6543"
 
 RDEPENDS:lmdb = " \
  glibc \

@@ -9,17 +9,17 @@ PACKAGES = " \
  mt-st \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/mt-st-1.7-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/mt-st-1.7-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a3218c170036f6c48458bcd703c6f9c6e7ff18e359e644b26b25b575ba698df7"
 
-URI_x86_64_v2_mt-st = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mt-st-1.7-6.el10.x86_64_v2.rpm;name=x86_64_v2_mt-st;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mt-st}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mt-st-1.7-6.el10.x86_64_v2.rpm;name=x86_64_v2_mt-st;unpack=0"
 SRC_URI[x86_64_v2_mt-st.sha256sum] = "2ef638b5dfaee1684665b0edf5512b216553afcced7297d9fe32d34d25bc3186"
 
-URI_aarch64_mt-st = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mt-st-1.7-6.el10.aarch64.rpm;name=aarch64_mt-st;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mt-st}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mt-st-1.7-6.el10.aarch64.rpm;name=aarch64_mt-st;unpack=0"
 SRC_URI[aarch64_mt-st.sha256sum] = "caf8947295f95674b94d8bda4e81090a9113eefe045f358474f404249b9c66e4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/mt-st-1.7-6.el10.riscv64.rpm;name=riscv64_mt-st;unpack=0"
+SRC_URI[riscv64_mt-st.sha256sum] = "d65746eb3d3ea09f76606820cd0386161f816218fe028693a9efd8e2f05017b0"
 
 RDEPENDS:mt-st = " \
  bash \

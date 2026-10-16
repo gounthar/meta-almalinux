@@ -11,33 +11,35 @@ PACKAGES = " \
  libwacom-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libwacom-2.14.0-4.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libwacom-2.14.0-4.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7d5f116bb106e8a9aa590a428c395bb7992427e07131676be55c9fabda3d53e0"
 
-URI_x86_64_v2_libwacom = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libwacom-2.14.0-4.el10.x86_64_v2.rpm;name=x86_64_v2_libwacom;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libwacom}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libwacom-2.14.0-4.el10.x86_64_v2.rpm;name=x86_64_v2_libwacom;unpack=0"
 SRC_URI[x86_64_v2_libwacom.sha256sum] = "bcc88bbe4637a86cad8586ae60089bc7f30f446aff85ee290c966c7945919d15"
 
-URI_x86_64_v2_libwacom-data = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libwacom-data-2.14.0-4.el10.noarch.rpm;name=x86_64_v2_libwacom-data;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libwacom-data}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libwacom-data-2.14.0-4.el10.noarch.rpm;name=x86_64_v2_libwacom-data;unpack=0"
 SRC_URI[x86_64_v2_libwacom-data.sha256sum] = "c8ffba726a91ad5b7f43b4940a5ca6fca8422d3e9b60955700914f6d5c84bf8f"
 
-URI_x86_64_v2_libwacom-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libwacom-devel-2.14.0-4.el10.x86_64_v2.rpm;name=x86_64_v2_libwacom-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libwacom-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libwacom-devel-2.14.0-4.el10.x86_64_v2.rpm;name=x86_64_v2_libwacom-devel;unpack=0"
 SRC_URI[x86_64_v2_libwacom-devel.sha256sum] = "8dd1b63b441ab7219aa95ee2797e28c64701ee86b47e9e8c84482915de118ba7"
 
-URI_aarch64_libwacom = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libwacom-2.14.0-4.el10.aarch64.rpm;name=aarch64_libwacom;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libwacom}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libwacom-2.14.0-4.el10.aarch64.rpm;name=aarch64_libwacom;unpack=0"
 SRC_URI[aarch64_libwacom.sha256sum] = "718602c83276e51a26cc0484dfe32b785288946c6fb6b685f55b48dee5d5b67a"
 
-URI_aarch64_libwacom-data = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libwacom-data-2.14.0-4.el10.noarch.rpm;name=aarch64_libwacom-data;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libwacom-data}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libwacom-data-2.14.0-4.el10.noarch.rpm;name=aarch64_libwacom-data;unpack=0"
 SRC_URI[aarch64_libwacom-data.sha256sum] = "c8ffba726a91ad5b7f43b4940a5ca6fca8422d3e9b60955700914f6d5c84bf8f"
 
-URI_aarch64_libwacom-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libwacom-devel-2.14.0-4.el10.aarch64.rpm;name=aarch64_libwacom-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libwacom-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libwacom-devel-2.14.0-4.el10.aarch64.rpm;name=aarch64_libwacom-devel;unpack=0"
 SRC_URI[aarch64_libwacom-devel.sha256sum] = "5cc10bf149c267e955dab2c249634719ac1278f69615dfa2fa766a8758319ae6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libwacom-2.14.0-4.el10.riscv64.rpm;name=riscv64_libwacom;unpack=0"
+SRC_URI[riscv64_libwacom.sha256sum] = "7dcb4e8f8042ff92a261eb42747a93a5a26f147c0f2cba22250620f79f6ab37b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libwacom-data-2.14.0-4.el10.noarch.rpm;name=riscv64_libwacom-data;unpack=0"
+SRC_URI[riscv64_libwacom-data.sha256sum] = "c8ffba726a91ad5b7f43b4940a5ca6fca8422d3e9b60955700914f6d5c84bf8f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libwacom-devel-2.14.0-4.el10.riscv64.rpm;name=riscv64_libwacom-devel;unpack=0"
+SRC_URI[riscv64_libwacom-devel.sha256sum] = "0d96b5f5d548d1341e10c72aae51dbb79f84dc9f7a846a4395187e27cb19d337"
 
 RDEPENDS:libwacom = " \
  glib2 \

@@ -10,25 +10,26 @@ PACKAGES = " \
  xcb-util-renderutil-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/xcb-util-renderutil-0.3.10-7.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/xcb-util-renderutil-0.3.10-7.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "09fbe3991d5e6c56af0e473d6d1e9584cf3d158e4ec3efb73c066a2d29db8423"
 
-URI_x86_64_v2_xcb-util-renderutil = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/xcb-util-renderutil-0.3.10-7.el10.x86_64_v2.rpm;name=x86_64_v2_xcb-util-renderutil;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_xcb-util-renderutil}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/xcb-util-renderutil-0.3.10-7.el10.x86_64_v2.rpm;name=x86_64_v2_xcb-util-renderutil;unpack=0"
 SRC_URI[x86_64_v2_xcb-util-renderutil.sha256sum] = "6abb3662475530577a14cd85464419140a52f69a044d545086e5981863866d98"
 
-URI_x86_64_v2_xcb-util-renderutil-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/xcb-util-renderutil-devel-0.3.10-7.el10.x86_64_v2.rpm;name=x86_64_v2_xcb-util-renderutil-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_xcb-util-renderutil-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/xcb-util-renderutil-devel-0.3.10-7.el10.x86_64_v2.rpm;name=x86_64_v2_xcb-util-renderutil-devel;unpack=0"
 SRC_URI[x86_64_v2_xcb-util-renderutil-devel.sha256sum] = "ccb131d55cde0b919847534ae552dafe5e580d83ae62e2b09352f0703a1a2988"
 
-URI_aarch64_xcb-util-renderutil = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/xcb-util-renderutil-0.3.10-7.el10.aarch64.rpm;name=aarch64_xcb-util-renderutil;unpack=0"
-SRC_URI:append = " ${URI_aarch64_xcb-util-renderutil}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/xcb-util-renderutil-0.3.10-7.el10.aarch64.rpm;name=aarch64_xcb-util-renderutil;unpack=0"
 SRC_URI[aarch64_xcb-util-renderutil.sha256sum] = "9111569ceab7979591510ed91c3d224401d4756aac8c9839de7e48f7d281824f"
 
-URI_aarch64_xcb-util-renderutil-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/xcb-util-renderutil-devel-0.3.10-7.el10.aarch64.rpm;name=aarch64_xcb-util-renderutil-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_xcb-util-renderutil-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/xcb-util-renderutil-devel-0.3.10-7.el10.aarch64.rpm;name=aarch64_xcb-util-renderutil-devel;unpack=0"
 SRC_URI[aarch64_xcb-util-renderutil-devel.sha256sum] = "14deaad5e4dee68fba77d61551002d05c529c3ab049eed65529e4348c64a846e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/xcb-util-renderutil-0.3.10-7.el10.riscv64.rpm;name=riscv64_xcb-util-renderutil;unpack=0"
+SRC_URI[riscv64_xcb-util-renderutil.sha256sum] = "f12468f5d18b028b17fb5d870336a14fb5a2dd36e3a3825a71bf443a43ac04e0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/xcb-util-renderutil-devel-0.3.10-7.el10.riscv64.rpm;name=riscv64_xcb-util-renderutil-devel;unpack=0"
+SRC_URI[riscv64_xcb-util-renderutil-devel.sha256sum] = "4a8886cf833a75125254d54e6902dc76715840850cd5457dbedc2fb4321c2f3f"
 
 RDEPENDS:xcb-util-renderutil = " \
  glibc \

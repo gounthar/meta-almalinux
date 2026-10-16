@@ -11,33 +11,35 @@ PACKAGES = " \
  libyang-devel-doc \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libyang-2.1.148-4.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libyang-2.1.148-4.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "13151bb3ff479ce465e36df4500cd869196a2f1a24e5c8ebf2e860dfece83273"
 
-URI_x86_64_v2_libyang = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libyang-2.1.148-4.el10.x86_64_v2.rpm;name=x86_64_v2_libyang;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libyang}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libyang-2.1.148-4.el10.x86_64_v2.rpm;name=x86_64_v2_libyang;unpack=0"
 SRC_URI[x86_64_v2_libyang.sha256sum] = "840d2bf3ca456f0bf69fa69a8567b0b285d36b8046b7ffd14eaf553abf06af31"
 
-URI_x86_64_v2_libyang-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libyang-devel-2.1.148-4.el10.x86_64_v2.rpm;name=x86_64_v2_libyang-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libyang-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libyang-devel-2.1.148-4.el10.x86_64_v2.rpm;name=x86_64_v2_libyang-devel;unpack=0"
 SRC_URI[x86_64_v2_libyang-devel.sha256sum] = "a8ace3d3598584fbbab9e2b712293dc3a9c539a7d9094f7c50da6125068f3557"
 
-URI_x86_64_v2_libyang-devel-doc = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libyang-devel-doc-2.1.148-4.el10.x86_64_v2.rpm;name=x86_64_v2_libyang-devel-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libyang-devel-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libyang-devel-doc-2.1.148-4.el10.x86_64_v2.rpm;name=x86_64_v2_libyang-devel-doc;unpack=0"
 SRC_URI[x86_64_v2_libyang-devel-doc.sha256sum] = "980038826c0c42d2e2c10d01acef9461692073531b24330a98b3c048b79f07d0"
 
-URI_aarch64_libyang = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libyang-2.1.148-4.el10.aarch64.rpm;name=aarch64_libyang;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libyang}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libyang-2.1.148-4.el10.aarch64.rpm;name=aarch64_libyang;unpack=0"
 SRC_URI[aarch64_libyang.sha256sum] = "a5142da47e0ccf748f875bdc954580376fda361ed0c41de2cfaa212bfb5fad88"
 
-URI_aarch64_libyang-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libyang-devel-2.1.148-4.el10.aarch64.rpm;name=aarch64_libyang-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libyang-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libyang-devel-2.1.148-4.el10.aarch64.rpm;name=aarch64_libyang-devel;unpack=0"
 SRC_URI[aarch64_libyang-devel.sha256sum] = "6de45b6a426d2cc92cac65dc63146bb86e2d7944b6e7992c9d3d8c6d2083ae92"
 
-URI_aarch64_libyang-devel-doc = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libyang-devel-doc-2.1.148-4.el10.aarch64.rpm;name=aarch64_libyang-devel-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libyang-devel-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libyang-devel-doc-2.1.148-4.el10.aarch64.rpm;name=aarch64_libyang-devel-doc;unpack=0"
 SRC_URI[aarch64_libyang-devel-doc.sha256sum] = "6fe132909d3115018b228d71c21ca3d706e4f5aefb41f5ba118af5138b8a962e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libyang-2.1.148-4.el10.riscv64.rpm;name=riscv64_libyang;unpack=0"
+SRC_URI[riscv64_libyang.sha256sum] = "2b1a32b0868981497c187014818c12068b205b3131561276aab777104834184c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libyang-devel-2.1.148-4.el10.riscv64.rpm;name=riscv64_libyang-devel;unpack=0"
+SRC_URI[riscv64_libyang-devel.sha256sum] = "c4e8f58af1cc543491fce508c607e20747f57cc1711982b60541501e5fb1fe9d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libyang-devel-doc-2.1.148-4.el10.riscv64.rpm;name=riscv64_libyang-devel-doc;unpack=0"
+SRC_URI[riscv64_libyang-devel-doc.sha256sum] = "27609167d661183058ab86354a37f956e614266b991cd316bce6731f31c10ba5"
 
 RDEPENDS:libyang = " \
  glibc \

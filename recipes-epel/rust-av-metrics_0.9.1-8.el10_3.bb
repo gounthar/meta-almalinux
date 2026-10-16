@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "rust-av-metrics"
 PV = "0.9.1"
 PR = "8.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-av-metrics+default-devel \
  rust-av-metrics+serde-devel \
  rust-av-metrics-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-av-metrics+default-devel \
+ rust-av-metrics+serde-devel \
+ rust-av-metrics-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-av-metrics-0.9.1-8.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-av-metrics-0.9.1-8.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6e313a4ee6a891dfffedf8d5ea25a81fffe1a5e071c96960e4ab958256153b1c"
 
-URI_x86_64_v2_rust-av-metrics+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-av-metrics+default-devel-0.9.1-8.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-av-metrics+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-av-metrics+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-av-metrics+default-devel-0.9.1-8.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-av-metrics+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-av-metrics+default-devel.sha256sum] = "72427fbeaea8fbd76131a25ea50b1eb36602f1f6fd0a50d6e9a5a98276be684a"
 
-URI_x86_64_v2_rust-av-metrics+serde-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-av-metrics+serde-devel-0.9.1-8.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-av-metrics+serde-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-av-metrics+serde-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-av-metrics+serde-devel-0.9.1-8.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-av-metrics+serde-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-av-metrics+serde-devel.sha256sum] = "b99859cdf17ec02a37a68960a82ba08a5fb0e188275d100a0b714ce4439196c1"
 
-URI_x86_64_v2_rust-av-metrics-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-av-metrics-devel-0.9.1-8.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-av-metrics-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-av-metrics-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-av-metrics-devel-0.9.1-8.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-av-metrics-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-av-metrics-devel.sha256sum] = "ce449d7fd934f4175bcd37c038df08146b77040a9b751188fe76d5ab0185eacc"
 
-URI_aarch64_rust-av-metrics+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-av-metrics+default-devel-0.9.1-8.el10_3.noarch.rpm;name=aarch64_rust-av-metrics+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-av-metrics+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-av-metrics+default-devel-0.9.1-8.el10_3.noarch.rpm;name=aarch64_rust-av-metrics+default-devel;unpack=0"
 SRC_URI[aarch64_rust-av-metrics+default-devel.sha256sum] = "962008399361a5f57053ba2c530eba1a9a3d5ee44c70991bf11d84e24fd530ab"
 
-URI_aarch64_rust-av-metrics+serde-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-av-metrics+serde-devel-0.9.1-8.el10_3.noarch.rpm;name=aarch64_rust-av-metrics+serde-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-av-metrics+serde-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-av-metrics+serde-devel-0.9.1-8.el10_3.noarch.rpm;name=aarch64_rust-av-metrics+serde-devel;unpack=0"
 SRC_URI[aarch64_rust-av-metrics+serde-devel.sha256sum] = "d98bd0b4a0a495534ad5c003d7195c69c695d4f97fa21cc06708f15f8d083d89"
 
-URI_aarch64_rust-av-metrics-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-av-metrics-devel-0.9.1-8.el10_3.noarch.rpm;name=aarch64_rust-av-metrics-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-av-metrics-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-av-metrics-devel-0.9.1-8.el10_3.noarch.rpm;name=aarch64_rust-av-metrics-devel;unpack=0"
 SRC_URI[aarch64_rust-av-metrics-devel.sha256sum] = "c023696909bbbac04d434e0e77da0c635a162d54eb7633862748920678a1ad4c"
 
 RDEPENDS:rust-av-metrics+default-devel = " \

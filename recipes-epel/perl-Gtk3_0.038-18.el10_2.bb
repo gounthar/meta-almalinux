@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "perl-Gtk3"
 PV = "0.038"
 PR = "18.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-Gtk3 \
  perl-Gtk3-tests \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-Gtk3 \
+ perl-Gtk3-tests \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-Gtk3-0.038-18.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-Gtk3-0.038-18.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d758e4f8e7002bfbe2acfe7d1fb1427b35275622cfd4eaa59851f464dc08edb1"
 
-URI_x86_64_v2_perl-Gtk3 = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Gtk3-0.038-18.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Gtk3;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Gtk3}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Gtk3-0.038-18.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Gtk3;unpack=0"
 SRC_URI[x86_64_v2_perl-Gtk3.sha256sum] = "f90393eb48a21415e85fdcd72936cfc4ebed6e5e4f8110a686abb8b06dc72581"
 
-URI_x86_64_v2_perl-Gtk3-tests = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Gtk3-tests-0.038-18.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Gtk3-tests;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Gtk3-tests}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Gtk3-tests-0.038-18.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Gtk3-tests;unpack=0"
 SRC_URI[x86_64_v2_perl-Gtk3-tests.sha256sum] = "fe42468c0fd4b6010c0ae630f4cf024a29e46078e8c8477a78e7c1b28dac08e4"
 
-URI_aarch64_perl-Gtk3 = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Gtk3-0.038-18.el10_2.noarch.rpm;name=aarch64_perl-Gtk3;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Gtk3}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Gtk3-0.038-18.el10_2.noarch.rpm;name=aarch64_perl-Gtk3;unpack=0"
 SRC_URI[aarch64_perl-Gtk3.sha256sum] = "3166ff3d152079252c1369b5d6ad70ab627e6bc4cc2341e6f17ac7d71fd3731f"
 
-URI_aarch64_perl-Gtk3-tests = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Gtk3-tests-0.038-18.el10_2.noarch.rpm;name=aarch64_perl-Gtk3-tests;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Gtk3-tests}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Gtk3-tests-0.038-18.el10_2.noarch.rpm;name=aarch64_perl-Gtk3-tests;unpack=0"
 SRC_URI[aarch64_perl-Gtk3-tests.sha256sum] = "d84332d377d5ed3af096818a2187de09c5becad32d84c87dc9bb5b411729399e"
 
 RDEPENDS:perl-Gtk3 = " \

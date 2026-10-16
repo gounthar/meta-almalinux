@@ -9,17 +9,17 @@ PACKAGES = " \
  squashfs-tools \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/squashfs-tools-4.6.1-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/squashfs-tools-4.6.1-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1fc684ec2445edd4d02d584917d060967739141fb825229a79266fc70e37d19d"
 
-URI_x86_64_v2_squashfs-tools = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/squashfs-tools-4.6.1-6.el10.x86_64_v2.rpm;name=x86_64_v2_squashfs-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_squashfs-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/squashfs-tools-4.6.1-6.el10.x86_64_v2.rpm;name=x86_64_v2_squashfs-tools;unpack=0"
 SRC_URI[x86_64_v2_squashfs-tools.sha256sum] = "97765c6f098d474049dacca13ce55f9f3cd6d54d0af83bf34632aadf13dfd4ea"
 
-URI_aarch64_squashfs-tools = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/squashfs-tools-4.6.1-6.el10.aarch64.rpm;name=aarch64_squashfs-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_squashfs-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/squashfs-tools-4.6.1-6.el10.aarch64.rpm;name=aarch64_squashfs-tools;unpack=0"
 SRC_URI[aarch64_squashfs-tools.sha256sum] = "8e4f603829445a65cb638529788df6bca72a5ab3b4f0544ada6a9c1ec2784dc2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/squashfs-tools-4.6.1-6.el10.riscv64.rpm;name=riscv64_squashfs-tools;unpack=0"
+SRC_URI[riscv64_squashfs-tools.sha256sum] = "06e030062474d7c7ed839cf44569865c24ba1957793b44174ff1d3e403e308e2"
 
 RDEPENDS:squashfs-tools = " \
  glibc \

@@ -8,7 +8,6 @@ PR = "36.el10"
 PACKAGES = " \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/xorg-x11-server-1.20.14-36.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/xorg-x11-server-1.20.14-36.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1308139b95f9edfc732ff4f130461268ce0c69cc2f6a6f08fec1c2c0783fa626"
 

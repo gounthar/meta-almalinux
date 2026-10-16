@@ -9,17 +9,17 @@ PACKAGES = " \
  xrestop \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/xrestop-0.6-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/xrestop-0.6-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "5b3aca44fe3bc8cb58ad9764b110e7a90193ef18900d6a1fe7f04e9d100fc234"
 
-URI_x86_64_v2_xrestop = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/xrestop-0.6-5.el10.x86_64_v2.rpm;name=x86_64_v2_xrestop;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_xrestop}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/xrestop-0.6-5.el10.x86_64_v2.rpm;name=x86_64_v2_xrestop;unpack=0"
 SRC_URI[x86_64_v2_xrestop.sha256sum] = "6149bb77c532e423155f6d267649b5aa5dac427c2a2e5644a37c66c94238ca1c"
 
-URI_aarch64_xrestop = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/xrestop-0.6-5.el10.aarch64.rpm;name=aarch64_xrestop;unpack=0"
-SRC_URI:append = " ${URI_aarch64_xrestop}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/xrestop-0.6-5.el10.aarch64.rpm;name=aarch64_xrestop;unpack=0"
 SRC_URI[aarch64_xrestop.sha256sum] = "cd2364e4730bd80c4fda3ff99d7f4ec11fe7679e1d70d2d94d07f071d7973cc7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/xrestop-0.6-5.el10.riscv64.rpm;name=riscv64_xrestop;unpack=0"
+SRC_URI[riscv64_xrestop.sha256sum] = "e6e45c718ffc746c6119381048ccd9f7d942ed591be2c0971ee7f9789a47c4e3"
 
 RDEPENDS:xrestop = " \
  glibc \

@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-uu_csplit"
 PV = "0.7.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-uu_csplit+default-devel \
  rust-uu_csplit-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-uu_csplit+default-devel \
+ rust-uu_csplit-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-uu_csplit-0.7.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-uu_csplit-0.7.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c47c47795900ba497a2295b089de8247f6f0974371940f8ce84c123002eb1058"
 
-URI_x86_64_v2_rust-uu_csplit+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_csplit+default-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_csplit+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_csplit+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_csplit+default-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_csplit+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_csplit+default-devel.sha256sum] = "26da29e8d0be53f78b729688e2fde8375ed95d517287d97decab73ea587f0245"
 
-URI_x86_64_v2_rust-uu_csplit-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_csplit-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_csplit-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_csplit-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_csplit-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_csplit-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_csplit-devel.sha256sum] = "bff4c845cf15c425badc6d612289b6fb5e466ca3bc95ea7f32e3e98200300ea4"
 
-URI_aarch64_rust-uu_csplit+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_csplit+default-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_csplit+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_csplit+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_csplit+default-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_csplit+default-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_csplit+default-devel.sha256sum] = "9a4c48e798d209e71e9c35b3c4371409b2cb9ffefde061e5fcd276b747aca8aa"
 
-URI_aarch64_rust-uu_csplit-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_csplit-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_csplit-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_csplit-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_csplit-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_csplit-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_csplit-devel.sha256sum] = "06e0eec1dffecc75472d118df2223d07791f8f694f47f46c2f28cec0685448d8"
 
 RDEPENDS:rust-uu_csplit+default-devel = " \

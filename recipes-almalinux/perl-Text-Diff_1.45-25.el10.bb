@@ -9,17 +9,17 @@ PACKAGES = " \
  perl-Text-Diff \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/perl-Text-Diff-1.45-25.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/perl-Text-Diff-1.45-25.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "afd35b7abe515e89c58a32ff284047f184f4e0f7acc66e7e2b31a2866b65f55d"
 
-URI_x86_64_v2_perl-Text-Diff = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-Text-Diff-1.45-25.el10.noarch.rpm;name=x86_64_v2_perl-Text-Diff;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Text-Diff}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-Text-Diff-1.45-25.el10.noarch.rpm;name=x86_64_v2_perl-Text-Diff;unpack=0"
 SRC_URI[x86_64_v2_perl-Text-Diff.sha256sum] = "e00ee70dd4ceabced699fbd177a1a29415a76edd245c4e0a8848c1e42b5f2d79"
 
-URI_aarch64_perl-Text-Diff = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-Text-Diff-1.45-25.el10.noarch.rpm;name=aarch64_perl-Text-Diff;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Text-Diff}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-Text-Diff-1.45-25.el10.noarch.rpm;name=aarch64_perl-Text-Diff;unpack=0"
 SRC_URI[aarch64_perl-Text-Diff.sha256sum] = "e00ee70dd4ceabced699fbd177a1a29415a76edd245c4e0a8848c1e42b5f2d79"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/perl-Text-Diff-1.45-25.el10.noarch.rpm;name=riscv64_perl-Text-Diff;unpack=0"
+SRC_URI[riscv64_perl-Text-Diff.sha256sum] = "e00ee70dd4ceabced699fbd177a1a29415a76edd245c4e0a8848c1e42b5f2d79"
 
 RDEPENDS:perl-Text-Diff = " \
  perl-Algorithm-Diff \

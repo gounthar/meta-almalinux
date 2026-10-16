@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "html401-dtds"
 PV = "4.01"
 PR = "19991224.12.el10_2.27"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  html401-dtds \
- "
+"
+PACKAGES:aarch64 = " \
+ html401-dtds \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/h/html401-dtds-4.01-19991224.12.el10_2.27.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/h/html401-dtds-4.01-19991224.12.el10_2.27.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "07239873309120779f3b14b558dd31db0dbe4ccd0684f04ceb2e6446e5a4571b"
 
-URI_x86_64_v2_html401-dtds = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/html401-dtds-4.01-19991224.12.el10_2.27.alma_altarch.27.noarch.rpm;name=x86_64_v2_html401-dtds;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_html401-dtds}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/html401-dtds-4.01-19991224.12.el10_2.27.alma_altarch.27.noarch.rpm;name=x86_64_v2_html401-dtds;unpack=0"
 SRC_URI[x86_64_v2_html401-dtds.sha256sum] = "ae560edca124f75cdbc36e121cad78544e444072234b9100ff921bf710bac6e0"
 
-URI_aarch64_html401-dtds = "${EPEL_MIRROR}/aarch64/Packages/h/html401-dtds-4.01-19991224.12.el10_2.27.noarch.rpm;name=aarch64_html401-dtds;unpack=0"
-SRC_URI:append = " ${URI_aarch64_html401-dtds}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/h/html401-dtds-4.01-19991224.12.el10_2.27.noarch.rpm;name=aarch64_html401-dtds;unpack=0"
 SRC_URI[aarch64_html401-dtds.sha256sum] = "c25ed8b2446fa4aa5422a98f901c5268c9e82573878fa3db8bedbc4e1ebd6dd0"
 
 RDEPENDS:html401-dtds = " \

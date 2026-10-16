@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "nrpe"
 PV = "4.1.3"
 PR = "1.el10_1"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  nagios-plugins-nrpe \
  nrpe \
  nrpe-selinux \
- "
+"
+PACKAGES:aarch64 = " \
+ nagios-plugins-nrpe \
+ nrpe \
+ nrpe-selinux \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/n/nrpe-4.1.3-1.el10_1.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/n/nrpe-4.1.3-1.el10_1.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "12e8a0e06b8f6cc89a3ac72f22b335c884f6f8b9f71665608be1c2a04750be86"
 
-URI_x86_64_v2_nagios-plugins-nrpe = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-nrpe-4.1.3-1.el10_1.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-nrpe;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-nrpe}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-nrpe-4.1.3-1.el10_1.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-nrpe;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-nrpe.sha256sum] = "6b636d37ace40c6f7a689a380b058efdf70fd085f1b79436a71ce29d50f02ac0"
 
-URI_x86_64_v2_nrpe = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nrpe-4.1.3-1.el10_1.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nrpe;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nrpe}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nrpe-4.1.3-1.el10_1.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nrpe;unpack=0"
 SRC_URI[x86_64_v2_nrpe.sha256sum] = "e549eebae94493d992cd44c961e9598c342a56ae3d1c286018f9f31e58cfea16"
 
-URI_x86_64_v2_nrpe-selinux = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nrpe-selinux-4.1.3-1.el10_1.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nrpe-selinux;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nrpe-selinux}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nrpe-selinux-4.1.3-1.el10_1.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nrpe-selinux;unpack=0"
 SRC_URI[x86_64_v2_nrpe-selinux.sha256sum] = "babe441494e05f832246e789fdc13454df37d2099d37b1d162677c6a7dad114a"
 
-URI_aarch64_nagios-plugins-nrpe = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-nrpe-4.1.3-1.el10_1.aarch64.rpm;name=aarch64_nagios-plugins-nrpe;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-nrpe}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-nrpe-4.1.3-1.el10_1.aarch64.rpm;name=aarch64_nagios-plugins-nrpe;unpack=0"
 SRC_URI[aarch64_nagios-plugins-nrpe.sha256sum] = "0f0f497cb396d2332c4083d5338f278c10832705d377a5bb6b0bbb6d4a1bff1b"
 
-URI_aarch64_nrpe = "${EPEL_MIRROR}/aarch64/Packages/n/nrpe-4.1.3-1.el10_1.aarch64.rpm;name=aarch64_nrpe;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nrpe}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nrpe-4.1.3-1.el10_1.aarch64.rpm;name=aarch64_nrpe;unpack=0"
 SRC_URI[aarch64_nrpe.sha256sum] = "d41176079f0c5de5c9ee7c3e2746ee8b19a9a914050690f0747062a4e4e033c4"
 
-URI_aarch64_nrpe-selinux = "${EPEL_MIRROR}/aarch64/Packages/n/nrpe-selinux-4.1.3-1.el10_1.aarch64.rpm;name=aarch64_nrpe-selinux;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nrpe-selinux}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nrpe-selinux-4.1.3-1.el10_1.aarch64.rpm;name=aarch64_nrpe-selinux;unpack=0"
 SRC_URI[aarch64_nrpe-selinux.sha256sum] = "9ec030fe14f755428d1d6cd19b152d2a7607297a514aba6f7283293022c7951a"
 
 RDEPENDS:nagios-plugins-nrpe = " \

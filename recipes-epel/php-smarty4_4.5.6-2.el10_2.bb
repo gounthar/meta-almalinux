@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "php-smarty4"
 PV = "4.5.6"
 PR = "2.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  php-smarty4 \
- "
+"
+PACKAGES:aarch64 = " \
+ php-smarty4 \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/php-smarty4-4.5.6-2.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/php-smarty4-4.5.6-2.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "535d004a813610f9fcf697629f50bae104eabd73782af32adba64355870ebe8b"
 
-URI_x86_64_v2_php-smarty4 = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/php-smarty4-4.5.6-2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_php-smarty4;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_php-smarty4}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/php-smarty4-4.5.6-2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_php-smarty4;unpack=0"
 SRC_URI[x86_64_v2_php-smarty4.sha256sum] = "c755cbda38b45a4880bfc3baa6dac4d186c5725013916d2bd6780f921d119122"
 
-URI_aarch64_php-smarty4 = "${EPEL_MIRROR}/aarch64/Packages/p/php-smarty4-4.5.6-2.el10_2.noarch.rpm;name=aarch64_php-smarty4;unpack=0"
-SRC_URI:append = " ${URI_aarch64_php-smarty4}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/php-smarty4-4.5.6-2.el10_2.noarch.rpm;name=aarch64_php-smarty4;unpack=0"
 SRC_URI[aarch64_php-smarty4.sha256sum] = "6d2ed58f1d185daf5577ca99ef9cd9e60e4868c37c8551e81672c67ef99e7874"
 
 RDEPENDS:php-smarty4 = " \

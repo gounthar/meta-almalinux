@@ -12,41 +12,44 @@ PACKAGES = " \
  perl-Cyrus \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/cyrus-imapd-3.8.3-10.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/cyrus-imapd-3.8.3-10.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a2b28c344e92a4f4a706d6b47b1516beecf4e309ec502b7378617c6b685f8572"
 
-URI_x86_64_v2_cyrus-imapd = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cyrus-imapd-3.8.3-10.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-imapd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cyrus-imapd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cyrus-imapd-3.8.3-10.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-imapd;unpack=0"
 SRC_URI[x86_64_v2_cyrus-imapd.sha256sum] = "3947cc2adc0c333103c0748e18a1fdeac68cd289439028c79334f5ab5fc14843"
 
-URI_x86_64_v2_cyrus-imapd-libs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cyrus-imapd-libs-3.8.3-10.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-imapd-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cyrus-imapd-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cyrus-imapd-libs-3.8.3-10.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-imapd-libs;unpack=0"
 SRC_URI[x86_64_v2_cyrus-imapd-libs.sha256sum] = "9c55ad4a3669f3cb3a757b46c4fe0b69961a52fbd8b2938adff7e418880d88bf"
 
-URI_x86_64_v2_cyrus-imapd-utils = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cyrus-imapd-utils-3.8.3-10.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-imapd-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cyrus-imapd-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cyrus-imapd-utils-3.8.3-10.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-imapd-utils;unpack=0"
 SRC_URI[x86_64_v2_cyrus-imapd-utils.sha256sum] = "7965e18d2d17d2c2f3248fb928fd2f4e6c814fb84ef4fbff8fdc88911d7cb939"
 
-URI_x86_64_v2_perl-Cyrus = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-Cyrus-3.8.3-10.el10.x86_64_v2.rpm;name=x86_64_v2_perl-Cyrus;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Cyrus}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-Cyrus-3.8.3-10.el10.x86_64_v2.rpm;name=x86_64_v2_perl-Cyrus;unpack=0"
 SRC_URI[x86_64_v2_perl-Cyrus.sha256sum] = "09d7f4cfdff19073423cc48e5059a6735f63567db9998a9fcf57f6068f0dbb9a"
 
-URI_aarch64_cyrus-imapd = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cyrus-imapd-3.8.3-10.el10.aarch64.rpm;name=aarch64_cyrus-imapd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cyrus-imapd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cyrus-imapd-3.8.3-10.el10.aarch64.rpm;name=aarch64_cyrus-imapd;unpack=0"
 SRC_URI[aarch64_cyrus-imapd.sha256sum] = "1b6013b6756039dc89a412c8dfcdbd755396428da9c788f9a1bddb0a92492f03"
 
-URI_aarch64_cyrus-imapd-libs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cyrus-imapd-libs-3.8.3-10.el10.aarch64.rpm;name=aarch64_cyrus-imapd-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cyrus-imapd-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cyrus-imapd-libs-3.8.3-10.el10.aarch64.rpm;name=aarch64_cyrus-imapd-libs;unpack=0"
 SRC_URI[aarch64_cyrus-imapd-libs.sha256sum] = "b11eea04a099b9906d9684811a65577e4564a12e5c8b08c4bedaff20fd244937"
 
-URI_aarch64_cyrus-imapd-utils = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cyrus-imapd-utils-3.8.3-10.el10.aarch64.rpm;name=aarch64_cyrus-imapd-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cyrus-imapd-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cyrus-imapd-utils-3.8.3-10.el10.aarch64.rpm;name=aarch64_cyrus-imapd-utils;unpack=0"
 SRC_URI[aarch64_cyrus-imapd-utils.sha256sum] = "768f8acfac51f520e6c4422f70f470af58dc24bf439f98c22cbcae41a14ad489"
 
-URI_aarch64_perl-Cyrus = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-Cyrus-3.8.3-10.el10.aarch64.rpm;name=aarch64_perl-Cyrus;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Cyrus}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-Cyrus-3.8.3-10.el10.aarch64.rpm;name=aarch64_perl-Cyrus;unpack=0"
 SRC_URI[aarch64_perl-Cyrus.sha256sum] = "79c3289ccd166c648eefd7bd2e52c16be6023b2ec16b0eed83fc745aa9d79fb1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/cyrus-imapd-3.8.3-10.el10.riscv64.rpm;name=riscv64_cyrus-imapd;unpack=0"
+SRC_URI[riscv64_cyrus-imapd.sha256sum] = "2e53a180557522352d4374e461707ff0281555763eaacc31563258f96eb82cfb"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/cyrus-imapd-libs-3.8.3-10.el10.riscv64.rpm;name=riscv64_cyrus-imapd-libs;unpack=0"
+SRC_URI[riscv64_cyrus-imapd-libs.sha256sum] = "aabb99afe327ed2d90bd45096f65588b8e60568fa2c8ebdaa7b83fbcf578bf78"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/cyrus-imapd-utils-3.8.3-10.el10.riscv64.rpm;name=riscv64_cyrus-imapd-utils;unpack=0"
+SRC_URI[riscv64_cyrus-imapd-utils.sha256sum] = "4ade644f88540fc370d80683317e37bb462441286a269d8af63036cbd02eb801"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/perl-Cyrus-3.8.3-10.el10.riscv64.rpm;name=riscv64_perl-Cyrus;unpack=0"
+SRC_URI[riscv64_perl-Cyrus.sha256sum] = "580f98658a92f0cff436d138bd938ffc5550092f13bdb9000b9800724130a1a7"
 
 RDEPENDS:cyrus-imapd = " \
  bash \

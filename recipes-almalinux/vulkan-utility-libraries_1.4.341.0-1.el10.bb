@@ -9,17 +9,17 @@ PACKAGES = " \
  vulkan-utility-libraries-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/vulkan-utility-libraries-1.4.341.0-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/vulkan-utility-libraries-1.4.341.0-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "860a323d9a69e039a9fe9334242c6b7ab5e8bcb3c3a96ca0730fce14e831e594"
 
-URI_x86_64_v2_vulkan-utility-libraries-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/vulkan-utility-libraries-devel-1.4.341.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_vulkan-utility-libraries-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_vulkan-utility-libraries-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/vulkan-utility-libraries-devel-1.4.341.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_vulkan-utility-libraries-devel;unpack=0"
 SRC_URI[x86_64_v2_vulkan-utility-libraries-devel.sha256sum] = "80b900e35283063f769452c96548c146738e5bab05925f3109cf3a61306deee1"
 
-URI_aarch64_vulkan-utility-libraries-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/vulkan-utility-libraries-devel-1.4.341.0-1.el10.aarch64.rpm;name=aarch64_vulkan-utility-libraries-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_vulkan-utility-libraries-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/vulkan-utility-libraries-devel-1.4.341.0-1.el10.aarch64.rpm;name=aarch64_vulkan-utility-libraries-devel;unpack=0"
 SRC_URI[aarch64_vulkan-utility-libraries-devel.sha256sum] = "d244c8178407025dae1ba7d29be5a5fae1f1e51bba9c357766d2365dddb684f2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/vulkan-utility-libraries-devel-1.4.341.0-1.el10.riscv64.rpm;name=riscv64_vulkan-utility-libraries-devel;unpack=0"
+SRC_URI[riscv64_vulkan-utility-libraries-devel.sha256sum] = "c7b48bb9ba310e5d3de593328ceefbe3e1851d3d94c92170e00b8d720f273913"
 
 RDEPENDS:vulkan-utility-libraries-devel = " \
  cmake-filesystem \

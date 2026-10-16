@@ -11,33 +11,35 @@ PACKAGES = " \
  libproxy-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libproxy-0.5.5-4.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libproxy-0.5.5-4.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "ee878151b8a1cceef2f4778eb19eb291f27154755ed29602b51869e9b8ad938b"
 
-URI_x86_64_v2_libproxy = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libproxy-0.5.5-4.el10.x86_64_v2.rpm;name=x86_64_v2_libproxy;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libproxy}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libproxy-0.5.5-4.el10.x86_64_v2.rpm;name=x86_64_v2_libproxy;unpack=0"
 SRC_URI[x86_64_v2_libproxy.sha256sum] = "3dda310efec28f7d658cd87ee44ac1fb3746618ba783e36c3d139d9232d3b888"
 
-URI_x86_64_v2_libproxy-bin = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libproxy-bin-0.5.5-4.el10.x86_64_v2.rpm;name=x86_64_v2_libproxy-bin;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libproxy-bin}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libproxy-bin-0.5.5-4.el10.x86_64_v2.rpm;name=x86_64_v2_libproxy-bin;unpack=0"
 SRC_URI[x86_64_v2_libproxy-bin.sha256sum] = "3c20697668ef80a32b541521ac69bb7d3e89e53a6362bc06b8de0506e60a5220"
 
-URI_x86_64_v2_libproxy-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libproxy-devel-0.5.5-4.el10.x86_64_v2.rpm;name=x86_64_v2_libproxy-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libproxy-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libproxy-devel-0.5.5-4.el10.x86_64_v2.rpm;name=x86_64_v2_libproxy-devel;unpack=0"
 SRC_URI[x86_64_v2_libproxy-devel.sha256sum] = "631574b9801676cfcb34206b3873ddf375ba2a4e8dd9d7be23cba8d261c27859"
 
-URI_aarch64_libproxy = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libproxy-0.5.5-4.el10.aarch64.rpm;name=aarch64_libproxy;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libproxy}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libproxy-0.5.5-4.el10.aarch64.rpm;name=aarch64_libproxy;unpack=0"
 SRC_URI[aarch64_libproxy.sha256sum] = "7c283d1e99a9b2177c804a2829c7e81b95af74d10ce0122345434302e0985354"
 
-URI_aarch64_libproxy-bin = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libproxy-bin-0.5.5-4.el10.aarch64.rpm;name=aarch64_libproxy-bin;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libproxy-bin}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libproxy-bin-0.5.5-4.el10.aarch64.rpm;name=aarch64_libproxy-bin;unpack=0"
 SRC_URI[aarch64_libproxy-bin.sha256sum] = "b752df19dd4a1be5b8107c2b995c4252879891bd51d3bc67d894d0fac0dbd33b"
 
-URI_aarch64_libproxy-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libproxy-devel-0.5.5-4.el10.aarch64.rpm;name=aarch64_libproxy-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libproxy-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libproxy-devel-0.5.5-4.el10.aarch64.rpm;name=aarch64_libproxy-devel;unpack=0"
 SRC_URI[aarch64_libproxy-devel.sha256sum] = "8a0917b110ac56bc81b4919b47edd151d5962757585eefc8861bfa4c3ad02374"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libproxy-0.5.5-4.el10.riscv64.rpm;name=riscv64_libproxy;unpack=0"
+SRC_URI[riscv64_libproxy.sha256sum] = "a1a97c8f1a592dc7571879d2714c62d9564cb565e797edf4e9f971a3e1b1368d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libproxy-bin-0.5.5-4.el10.riscv64.rpm;name=riscv64_libproxy-bin;unpack=0"
+SRC_URI[riscv64_libproxy-bin.sha256sum] = "175a584ed71bde93bd23db813e92c91f03a63e451f9ad6353969d1cbbda63bb5"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libproxy-devel-0.5.5-4.el10.riscv64.rpm;name=riscv64_libproxy-devel;unpack=0"
+SRC_URI[riscv64_libproxy-devel.sha256sum] = "f5a21d5b7e3908412e9780ab18c72a55aea62fbec0c8ec882fd27e6aa6ee9f31"
 
 RDEPENDS:libproxy = " \
  duktape \

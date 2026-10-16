@@ -9,17 +9,17 @@ PACKAGES = " \
  dos2unix \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/dos2unix-7.5.2-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/dos2unix-7.5.2-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e4ef8a5a10c35f9fd81efd6f265591ddbac482c0578d1321ddd078e7e4362121"
 
-URI_x86_64_v2_dos2unix = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/dos2unix-7.5.2-3.el10.x86_64_v2.rpm;name=x86_64_v2_dos2unix;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_dos2unix}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/dos2unix-7.5.2-3.el10.x86_64_v2.rpm;name=x86_64_v2_dos2unix;unpack=0"
 SRC_URI[x86_64_v2_dos2unix.sha256sum] = "8e5283448eb748e33d46a9d0e3e76803fdbb8476c52a16961809e81381734e8d"
 
-URI_aarch64_dos2unix = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/dos2unix-7.5.2-3.el10.aarch64.rpm;name=aarch64_dos2unix;unpack=0"
-SRC_URI:append = " ${URI_aarch64_dos2unix}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/dos2unix-7.5.2-3.el10.aarch64.rpm;name=aarch64_dos2unix;unpack=0"
 SRC_URI[aarch64_dos2unix.sha256sum] = "7ad303f9fe41c8d234b9a59af1c810af5dcbe6177aa256e94847491771b8b539"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/dos2unix-7.5.2-3.el10.riscv64.rpm;name=riscv64_dos2unix;unpack=0"
+SRC_URI[riscv64_dos2unix.sha256sum] = "13895ae292f84e6e20c842bf51a305d1aa69ed25b350c91a1acf95e342f3af47"
 
 RDEPENDS:dos2unix = " \
  glibc \

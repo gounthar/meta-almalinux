@@ -6,29 +6,31 @@ PN = "python-glanceclient"
 PE = "1"
 PV = "4.11.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python-glanceclient-doc \
  python3-glanceclient \
- "
+"
+PACKAGES:aarch64 = " \
+ python-glanceclient-doc \
+ python3-glanceclient \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-glanceclient-4.11.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-glanceclient-4.11.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c58fed03d226f23d969eec3176ade06f8fad925ac09f608af6c1d8c866c4d2f2"
 
-URI_x86_64_v2_python-glanceclient-doc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python-glanceclient-doc-4.11.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python-glanceclient-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python-glanceclient-doc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python-glanceclient-doc-4.11.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python-glanceclient-doc;unpack=0"
 SRC_URI[x86_64_v2_python-glanceclient-doc.sha256sum] = "41b12a634460ed3d565c2c05d99f4d8e06ecc7fdd55759283c815146601715ee"
 
-URI_x86_64_v2_python3-glanceclient = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-glanceclient-4.11.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-glanceclient;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-glanceclient}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-glanceclient-4.11.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-glanceclient;unpack=0"
 SRC_URI[x86_64_v2_python3-glanceclient.sha256sum] = "f5a4857e2978396699d5236e4ff1e34cad400df0ea73260ce3cdb7d8ce3b4c48"
 
-URI_aarch64_python-glanceclient-doc = "${EPEL_MIRROR}/aarch64/Packages/p/python-glanceclient-doc-4.11.0-1.el10_3.noarch.rpm;name=aarch64_python-glanceclient-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python-glanceclient-doc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python-glanceclient-doc-4.11.0-1.el10_3.noarch.rpm;name=aarch64_python-glanceclient-doc;unpack=0"
 SRC_URI[aarch64_python-glanceclient-doc.sha256sum] = "0fb1e5e1a31eb22768a115f26384c98b59eacc645d28232b6e18927ccabda709"
 
-URI_aarch64_python3-glanceclient = "${EPEL_MIRROR}/aarch64/Packages/p/python3-glanceclient-4.11.0-1.el10_3.noarch.rpm;name=aarch64_python3-glanceclient;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-glanceclient}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-glanceclient-4.11.0-1.el10_3.noarch.rpm;name=aarch64_python3-glanceclient;unpack=0"
 SRC_URI[aarch64_python3-glanceclient.sha256sum] = "64f68feafd5e195193b9d4aaf5c0681289adbe1efa27f1203119753a42109dc2"
 
 RDEPENDS:python-glanceclient-doc = " \

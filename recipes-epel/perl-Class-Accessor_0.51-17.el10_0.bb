@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-Class-Accessor"
 PV = "0.51"
 PR = "17.el10_0"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-Class-Accessor \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-Class-Accessor \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-Class-Accessor-0.51-17.el10_0.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-Class-Accessor-0.51-17.el10_0.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "42352ff8e38feefd92f31b0d93da79b9a4c18fbe2a5780eb70e6c23e0489d3f0"
 
-URI_x86_64_v2_perl-Class-Accessor = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Class-Accessor-0.51-17.el10_0.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Class-Accessor;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Class-Accessor}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Class-Accessor-0.51-17.el10_0.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Class-Accessor;unpack=0"
 SRC_URI[x86_64_v2_perl-Class-Accessor.sha256sum] = "70d5b5bb2f568dffdebde451234fa436db745e334d15908359daeb36ea31e7a9"
 
-URI_aarch64_perl-Class-Accessor = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Class-Accessor-0.51-17.el10_0.noarch.rpm;name=aarch64_perl-Class-Accessor;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Class-Accessor}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Class-Accessor-0.51-17.el10_0.noarch.rpm;name=aarch64_perl-Class-Accessor;unpack=0"
 SRC_URI[aarch64_perl-Class-Accessor.sha256sum] = "cf5b9a3fffec5c685ee2a7145e864177fcac628e9331aac2b35d5d6ba82c4b6c"
 
 RDEPENDS:perl-Class-Accessor = " \

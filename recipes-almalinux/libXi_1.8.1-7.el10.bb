@@ -10,25 +10,26 @@ PACKAGES = " \
  libXi-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libXi-1.8.1-7.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libXi-1.8.1-7.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1ed2acedf56de591359e6348088f6791b43ba71c566156ccad5f3584b0e26913"
 
-URI_x86_64_v2_libXi = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXi-1.8.1-7.el10.x86_64_v2.rpm;name=x86_64_v2_libXi;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libXi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXi-1.8.1-7.el10.x86_64_v2.rpm;name=x86_64_v2_libXi;unpack=0"
 SRC_URI[x86_64_v2_libXi.sha256sum] = "5ad413d9a8c42d195fbf11a54add3e53cebf95be86b29a6f134087fa210e8502"
 
-URI_x86_64_v2_libXi-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXi-devel-1.8.1-7.el10.x86_64_v2.rpm;name=x86_64_v2_libXi-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libXi-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXi-devel-1.8.1-7.el10.x86_64_v2.rpm;name=x86_64_v2_libXi-devel;unpack=0"
 SRC_URI[x86_64_v2_libXi-devel.sha256sum] = "beabffbf05a5bc2e66cdcaacb710b24fd3b8d9e228914ce0ac8fdab6a3bffa36"
 
-URI_aarch64_libXi = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXi-1.8.1-7.el10.aarch64.rpm;name=aarch64_libXi;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libXi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXi-1.8.1-7.el10.aarch64.rpm;name=aarch64_libXi;unpack=0"
 SRC_URI[aarch64_libXi.sha256sum] = "b64c67dd6e9835e2419772aebc049eef1e52cbd3ed6ca6bdcca5e3a6ac60d315"
 
-URI_aarch64_libXi-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXi-devel-1.8.1-7.el10.aarch64.rpm;name=aarch64_libXi-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libXi-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXi-devel-1.8.1-7.el10.aarch64.rpm;name=aarch64_libXi-devel;unpack=0"
 SRC_URI[aarch64_libXi-devel.sha256sum] = "e462621928563edb43ad6e2518b547f4bf63bfa6ef59dec8c3cfccc02fc91f80"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libXi-1.8.1-7.el10.riscv64.rpm;name=riscv64_libXi;unpack=0"
+SRC_URI[riscv64_libXi.sha256sum] = "6b4cf2808dd2fd209a5b37c71bb77cc47a4e441cac56323440ea286319b9c1b1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libXi-devel-1.8.1-7.el10.riscv64.rpm;name=riscv64_libXi-devel;unpack=0"
+SRC_URI[riscv64_libXi-devel.sha256sum] = "498212fdcb974fab9a9aca282e3c5dc65de0e42807b0d756282371015ab11d78"
 
 RDEPENDS:libXi = " \
  glibc \

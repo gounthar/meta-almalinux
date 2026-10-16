@@ -5,7 +5,7 @@ inherit dnf-bridge
 PN = "rust-bat"
 PV = "0.26.1"
 PR = "4.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  bat \
  rust-bat+application-devel \
  rust-bat+bugreport-devel \
@@ -26,90 +26,154 @@ PACKAGES = " \
  rust-bat+walkdir-devel \
  rust-bat+wild-devel \
  rust-bat-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ bat \
+ rust-bat+application-devel \
+ rust-bat+bugreport-devel \
+ rust-bat+build-assets-devel \
+ rust-bat+clap-devel \
+ rust-bat+default-devel \
+ rust-bat+etcetera-devel \
+ rust-bat+git-devel \
+ rust-bat+git2-devel \
+ rust-bat+grep-cli-devel \
+ rust-bat+minimal-application-devel \
+ rust-bat+minus-devel \
+ rust-bat+paging-devel \
+ rust-bat+regex-devel \
+ rust-bat+regex-fancy-devel \
+ rust-bat+regex-onig-devel \
+ rust-bat+shell-words-devel \
+ rust-bat+walkdir-devel \
+ rust-bat+wild-devel \
+ rust-bat-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-bat-0.26.1-4.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-bat-0.26.1-4.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "67b4ec544e612b83fc2a6fa7073e39985d2202ff08f7d22b733ac1cba48ff3a3"
 
-URI_aarch64_bat = "${EPEL_MIRROR}/aarch64/Packages/b/bat-0.26.1-4.el10_3.aarch64.rpm;name=aarch64_bat;unpack=0"
-SRC_URI:append = " ${URI_aarch64_bat}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/bat-0.26.1-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_bat;unpack=0"
+SRC_URI[x86_64_v2_bat.sha256sum] = "6d693a88bb8a63191aaef3d624f51fc9214be7657d392b6765dda0a95af96c77"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-bat+application-devel-0.26.1-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-bat+application-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-bat+application-devel.sha256sum] = "cfbbbca0adcef38e9ed037cd5cc1de3e9f2db0c134c43709118846c70e9f671c"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-bat+bugreport-devel-0.26.1-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-bat+bugreport-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-bat+bugreport-devel.sha256sum] = "4084fe0832b49e2e64f63bab621a43ec1440d3503f4fa68ef7a17fcbff78a563"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-bat+build-assets-devel-0.26.1-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-bat+build-assets-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-bat+build-assets-devel.sha256sum] = "89d461681d3a8af6457a0349887334bbd8cc6b97984eb9c75fc1c4e073853e58"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-bat+clap-devel-0.26.1-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-bat+clap-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-bat+clap-devel.sha256sum] = "df828459bb8cb88c2ce66594cb93fc17131db9a20afddec71bcba16c6c2674df"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-bat+default-devel-0.26.1-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-bat+default-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-bat+default-devel.sha256sum] = "7954205b5174219bb1e318e17083eb64c1a4f132375d89ad917dc44c5f4777dc"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-bat+etcetera-devel-0.26.1-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-bat+etcetera-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-bat+etcetera-devel.sha256sum] = "610b6be2aac530eadf3aec0ed7ebdc30e56abda417629f5f6b4de274ef107063"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-bat+git-devel-0.26.1-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-bat+git-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-bat+git-devel.sha256sum] = "c2767543705458cf12912b27d8e9b635d1046e804e66d543481f38e6bb38fe75"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-bat+git2-devel-0.26.1-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-bat+git2-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-bat+git2-devel.sha256sum] = "d43863fd41d72a184e48f7bb0741116f6820e823628baaf20b481c9efe1fee82"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-bat+grep-cli-devel-0.26.1-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-bat+grep-cli-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-bat+grep-cli-devel.sha256sum] = "003bfd4d59020cdb0038f8e72d851b51c57bfa9d1e55e239d06201bee3272c4e"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-bat+minimal-application-devel-0.26.1-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-bat+minimal-application-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-bat+minimal-application-devel.sha256sum] = "c44ab7b5dc70cb5ce585fb519a6b76e8965bf73b8811767431a51b6a4a6ef8ba"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-bat+minus-devel-0.26.1-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-bat+minus-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-bat+minus-devel.sha256sum] = "fb59244f56b05d000ca4fa4f596791d9093fd4a062e0362d85524d5dfc719527"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-bat+paging-devel-0.26.1-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-bat+paging-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-bat+paging-devel.sha256sum] = "2e5efad33d1afecea07c0f299e43a6f2c9d960433f7b45443b7cecd55b9937b2"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-bat+regex-devel-0.26.1-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-bat+regex-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-bat+regex-devel.sha256sum] = "0c0c4cce1a113edda31ec90bb31d39a8b60a57b5279bcd620b4b489a2530a56c"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-bat+regex-fancy-devel-0.26.1-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-bat+regex-fancy-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-bat+regex-fancy-devel.sha256sum] = "3707b41ccda40ba0a6ce1eab5a7c72a78417bf952450a36e0d77f72ce77efc50"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-bat+regex-onig-devel-0.26.1-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-bat+regex-onig-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-bat+regex-onig-devel.sha256sum] = "feb5eb4e98f7cfee8c48d1a21bed4b03f73ff1ec033ec0321dd594edd3941df9"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-bat+shell-words-devel-0.26.1-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-bat+shell-words-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-bat+shell-words-devel.sha256sum] = "06a8f71326a4405cf232e08353db3f5e5a58bbc2bf2042d091ac090c9f62a3d6"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-bat+walkdir-devel-0.26.1-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-bat+walkdir-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-bat+walkdir-devel.sha256sum] = "af831ddf84a99b1fbe924552558d2d1ad53221dea602d889decf48cd676ec1ec"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-bat+wild-devel-0.26.1-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-bat+wild-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-bat+wild-devel.sha256sum] = "b10da48397108f9b7dca3c89df34672d8f5df5ca92adec7c5be55b13065ff265"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-bat-devel-0.26.1-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-bat-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-bat-devel.sha256sum] = "82117fef47cbc031ef52e22b34299ed792b9c72caf4ada82db11c799cd12eae3"
+
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/b/bat-0.26.1-4.el10_3.aarch64.rpm;name=aarch64_bat;unpack=0"
 SRC_URI[aarch64_bat.sha256sum] = "eba44dd3d7632cc1f65f84d52548c7fef95535769ccfe09097f1cdf2a4d4826f"
 
-URI_aarch64_rust-bat+application-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+application-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+application-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-bat+application-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+application-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+application-devel;unpack=0"
 SRC_URI[aarch64_rust-bat+application-devel.sha256sum] = "f26967a56f56896d5cdb0fe2a0dc1b465020bfabe42ade921fef8150dc89a9e5"
 
-URI_aarch64_rust-bat+bugreport-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+bugreport-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+bugreport-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-bat+bugreport-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+bugreport-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+bugreport-devel;unpack=0"
 SRC_URI[aarch64_rust-bat+bugreport-devel.sha256sum] = "fd2df5a4d94e8037cd0195b34d86a3287d5b06f926bc8f612c123cffd4e3cebd"
 
-URI_aarch64_rust-bat+build-assets-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+build-assets-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+build-assets-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-bat+build-assets-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+build-assets-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+build-assets-devel;unpack=0"
 SRC_URI[aarch64_rust-bat+build-assets-devel.sha256sum] = "94356bddd4afc4f6f5edd04527e00f7a1c9e07a6ffcc9169cdc362cc3a60d0c5"
 
-URI_aarch64_rust-bat+clap-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+clap-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+clap-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-bat+clap-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+clap-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+clap-devel;unpack=0"
 SRC_URI[aarch64_rust-bat+clap-devel.sha256sum] = "8769744f3e9e66f852885c5fb00b359d3880a5f566fac3d11dbb041bb9ee50fb"
 
-URI_aarch64_rust-bat+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+default-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-bat+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+default-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+default-devel;unpack=0"
 SRC_URI[aarch64_rust-bat+default-devel.sha256sum] = "64d3a0f0441cb646fe7a331ae0b5a6708ad2e70b83b8a2437f05d608c055a807"
 
-URI_aarch64_rust-bat+etcetera-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+etcetera-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+etcetera-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-bat+etcetera-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+etcetera-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+etcetera-devel;unpack=0"
 SRC_URI[aarch64_rust-bat+etcetera-devel.sha256sum] = "e845f7788fdc8d286e103df27d5fcf0be138868a59ea876f1e998e9eaf9a937b"
 
-URI_aarch64_rust-bat+git-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+git-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+git-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-bat+git-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+git-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+git-devel;unpack=0"
 SRC_URI[aarch64_rust-bat+git-devel.sha256sum] = "46548bc1efffefde21a62a3485a3399d151b4919d302f6b37acda648eee0564c"
 
-URI_aarch64_rust-bat+git2-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+git2-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+git2-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-bat+git2-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+git2-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+git2-devel;unpack=0"
 SRC_URI[aarch64_rust-bat+git2-devel.sha256sum] = "ddf297fa61121b5617ded91726ebe022c552273ad51b5d650981e0b4ad8ef490"
 
-URI_aarch64_rust-bat+grep-cli-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+grep-cli-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+grep-cli-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-bat+grep-cli-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+grep-cli-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+grep-cli-devel;unpack=0"
 SRC_URI[aarch64_rust-bat+grep-cli-devel.sha256sum] = "78a5fac7413650ae36a5f816d8617df9c4396b3933d0a180d4b1d71cd0408f93"
 
-URI_aarch64_rust-bat+minimal-application-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+minimal-application-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+minimal-application-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-bat+minimal-application-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+minimal-application-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+minimal-application-devel;unpack=0"
 SRC_URI[aarch64_rust-bat+minimal-application-devel.sha256sum] = "4c6df1dcc1c62d9cd9ea04bdfb727fe367a36a0099ab19eb3d8af15df743c43d"
 
-URI_aarch64_rust-bat+minus-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+minus-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+minus-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-bat+minus-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+minus-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+minus-devel;unpack=0"
 SRC_URI[aarch64_rust-bat+minus-devel.sha256sum] = "c62b8598a6b399eb09e76b58677d81bb4a670ad773e4cc1a67fb07e34d9a832f"
 
-URI_aarch64_rust-bat+paging-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+paging-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+paging-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-bat+paging-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+paging-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+paging-devel;unpack=0"
 SRC_URI[aarch64_rust-bat+paging-devel.sha256sum] = "80fab1c87f76b4845ab51a1486390e19e1c0bc6ce3f655465521e75bc12f0934"
 
-URI_aarch64_rust-bat+regex-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+regex-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+regex-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-bat+regex-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+regex-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+regex-devel;unpack=0"
 SRC_URI[aarch64_rust-bat+regex-devel.sha256sum] = "9e7d98c5839611acca157c46272f3fd9f217d4530af0b2a7364eb936a74357b0"
 
-URI_aarch64_rust-bat+regex-fancy-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+regex-fancy-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+regex-fancy-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-bat+regex-fancy-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+regex-fancy-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+regex-fancy-devel;unpack=0"
 SRC_URI[aarch64_rust-bat+regex-fancy-devel.sha256sum] = "ed955b65f2b719eac77e895ae6e2526b6c8f80439e8c78525cfe5684681f57ac"
 
-URI_aarch64_rust-bat+regex-onig-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+regex-onig-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+regex-onig-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-bat+regex-onig-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+regex-onig-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+regex-onig-devel;unpack=0"
 SRC_URI[aarch64_rust-bat+regex-onig-devel.sha256sum] = "7b221a1e7ea12b68c3dc8135c4e99eaed77f696a192d1b98168cb008df998b26"
 
-URI_aarch64_rust-bat+shell-words-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+shell-words-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+shell-words-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-bat+shell-words-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+shell-words-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+shell-words-devel;unpack=0"
 SRC_URI[aarch64_rust-bat+shell-words-devel.sha256sum] = "5a47eefddd920318e94977cb17d3c216dcb9c34b91c1997990fdb98f986aa2e3"
 
-URI_aarch64_rust-bat+walkdir-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+walkdir-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+walkdir-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-bat+walkdir-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+walkdir-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+walkdir-devel;unpack=0"
 SRC_URI[aarch64_rust-bat+walkdir-devel.sha256sum] = "efd0919301ce8cca2209f3ef48049551f19719701d536ddf6eaa6cf3fb72ab65"
 
-URI_aarch64_rust-bat+wild-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+wild-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+wild-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-bat+wild-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-bat+wild-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat+wild-devel;unpack=0"
 SRC_URI[aarch64_rust-bat+wild-devel.sha256sum] = "cb148921fc1191a2f74865f79e17c6105c13b6297336b5621a675f8b988dade1"
 
-URI_aarch64_rust-bat-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-bat-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-bat-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-bat-devel-0.26.1-4.el10_3.noarch.rpm;name=aarch64_rust-bat-devel;unpack=0"
 SRC_URI[aarch64_rust-bat-devel.sha256sum] = "184244f4667adc1641e7bc23b834b1356a96bd5beb6f6c529a56b00bd669efce"
 
 RDEPENDS:bat = " \

@@ -11,33 +11,35 @@ PACKAGES = " \
  nautilus-extensions \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/nautilus-47.6-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/nautilus-47.6-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "058321cf099fa14ff9e88695f6302e17a71e4a1731a1cceeab4c1f39e0084287"
 
-URI_x86_64_v2_nautilus = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nautilus-47.6-3.el10.x86_64_v2.rpm;name=x86_64_v2_nautilus;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nautilus}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nautilus-47.6-3.el10.x86_64_v2.rpm;name=x86_64_v2_nautilus;unpack=0"
 SRC_URI[x86_64_v2_nautilus.sha256sum] = "67adb247571294f0ec1713dd3f6fe192461659c801f3732ac94ee86ff8442386"
 
-URI_x86_64_v2_nautilus-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/nautilus-devel-47.6-3.el10.x86_64_v2.rpm;name=x86_64_v2_nautilus-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nautilus-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/nautilus-devel-47.6-3.el10.x86_64_v2.rpm;name=x86_64_v2_nautilus-devel;unpack=0"
 SRC_URI[x86_64_v2_nautilus-devel.sha256sum] = "cded623298d21a78e95cf66bdf21cf3778ec1b69c0932b1a04bfd74fa1721fe6"
 
-URI_x86_64_v2_nautilus-extensions = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nautilus-extensions-47.6-3.el10.x86_64_v2.rpm;name=x86_64_v2_nautilus-extensions;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nautilus-extensions}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nautilus-extensions-47.6-3.el10.x86_64_v2.rpm;name=x86_64_v2_nautilus-extensions;unpack=0"
 SRC_URI[x86_64_v2_nautilus-extensions.sha256sum] = "d5f5a82892deb8dfc15eef531bedbef348feffc8fe0cb6b7c7ddb15319d2233f"
 
-URI_aarch64_nautilus = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nautilus-47.6-3.el10.aarch64.rpm;name=aarch64_nautilus;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nautilus}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nautilus-47.6-3.el10.aarch64.rpm;name=aarch64_nautilus;unpack=0"
 SRC_URI[aarch64_nautilus.sha256sum] = "f2d13623889b2d2a0d8184a6a290dcf4aa16043960b25b19d02061317ed4ec17"
 
-URI_aarch64_nautilus-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/nautilus-devel-47.6-3.el10.aarch64.rpm;name=aarch64_nautilus-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nautilus-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/nautilus-devel-47.6-3.el10.aarch64.rpm;name=aarch64_nautilus-devel;unpack=0"
 SRC_URI[aarch64_nautilus-devel.sha256sum] = "7f5ec53bddfc83730e7f943550cbfe25e65faf024bb4a513a8b9cf96675bc93b"
 
-URI_aarch64_nautilus-extensions = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nautilus-extensions-47.6-3.el10.aarch64.rpm;name=aarch64_nautilus-extensions;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nautilus-extensions}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nautilus-extensions-47.6-3.el10.aarch64.rpm;name=aarch64_nautilus-extensions;unpack=0"
 SRC_URI[aarch64_nautilus-extensions.sha256sum] = "b3efd043d7385184e94952addfd51e0b9469f7284e6f4b0175af28f096f498ef"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nautilus-47.6-3.el10.riscv64.rpm;name=riscv64_nautilus;unpack=0"
+SRC_URI[riscv64_nautilus.sha256sum] = "224b5787210c05bf73876777ab7066c1735f01f6a51875c55e2a4f5b28d1c0d5"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/nautilus-devel-47.6-3.el10.riscv64.rpm;name=riscv64_nautilus-devel;unpack=0"
+SRC_URI[riscv64_nautilus-devel.sha256sum] = "567ae026b93e2a1674a3e1f8040aebdaeb87a0f168c27d2bb373c8ca91f1c6bd"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nautilus-extensions-47.6-3.el10.riscv64.rpm;name=riscv64_nautilus-extensions;unpack=0"
+SRC_URI[riscv64_nautilus-extensions.sha256sum] = "2a61c6203b30b4321d15f4f0591faca7704e68b12738d065ade0bc789c138ee1"
 
 RDEPENDS:nautilus = " \
  cairo \

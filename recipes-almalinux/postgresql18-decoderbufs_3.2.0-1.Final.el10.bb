@@ -9,17 +9,17 @@ PACKAGES = " \
  postgresql18-decoderbufs \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/postgresql18-decoderbufs-3.2.0-1.Final.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/postgresql18-decoderbufs-3.2.0-1.Final.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d52eb9294a45b531761531663ac2ec77a659461107554e3234c387bff112df91"
 
-URI_x86_64_v2_postgresql18-decoderbufs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postgresql18-decoderbufs-3.2.0-1.Final.el10.x86_64_v2.rpm;name=x86_64_v2_postgresql18-decoderbufs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_postgresql18-decoderbufs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postgresql18-decoderbufs-3.2.0-1.Final.el10.x86_64_v2.rpm;name=x86_64_v2_postgresql18-decoderbufs;unpack=0"
 SRC_URI[x86_64_v2_postgresql18-decoderbufs.sha256sum] = "d216f8dccc4c1d0df511e19f7007bc468a9bf9566fc3d4bf13ac20f6c3f847d8"
 
-URI_aarch64_postgresql18-decoderbufs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postgresql18-decoderbufs-3.2.0-1.Final.el10.aarch64.rpm;name=aarch64_postgresql18-decoderbufs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_postgresql18-decoderbufs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postgresql18-decoderbufs-3.2.0-1.Final.el10.aarch64.rpm;name=aarch64_postgresql18-decoderbufs;unpack=0"
 SRC_URI[aarch64_postgresql18-decoderbufs.sha256sum] = "f2088d216ace8fa38576d438f4bd19e02f69dacfe2574face5d641cde52fbf9e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/postgresql18-decoderbufs-3.2.0-1.Final.el10.riscv64.rpm;name=riscv64_postgresql18-decoderbufs;unpack=0"
+SRC_URI[riscv64_postgresql18-decoderbufs.sha256sum] = "79b9c4f78641ccde4dc3e8d421071990cbca7014d37d5f9fb79f07500fc71af3"
 
 RDEPENDS:postgresql18-decoderbufs = " \
  glibc \

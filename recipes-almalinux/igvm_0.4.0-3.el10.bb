@@ -10,25 +10,26 @@ PACKAGES = " \
  igvm-libs \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/igvm-0.4.0-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/igvm-0.4.0-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b8b8aa2419bea21722ebd1876fee45bfdf18580178aacd1f28049d29bc7b265f"
 
-URI_x86_64_v2_igvm-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/igvm-devel-0.4.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_igvm-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_igvm-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/igvm-devel-0.4.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_igvm-devel;unpack=0"
 SRC_URI[x86_64_v2_igvm-devel.sha256sum] = "a153639503289b921cfc5edddc24bb94e6c1ef57183061f22a791cb8573bb2e4"
 
-URI_x86_64_v2_igvm-libs = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/igvm-libs-0.4.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_igvm-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_igvm-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/igvm-libs-0.4.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_igvm-libs;unpack=0"
 SRC_URI[x86_64_v2_igvm-libs.sha256sum] = "c697fcbc0495584bc6cc30a68d3ebe1c23a5bb9a493d8a1c0388538a7fd0d986"
 
-URI_aarch64_igvm-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/igvm-devel-0.4.0-3.el10.aarch64.rpm;name=aarch64_igvm-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_igvm-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/igvm-devel-0.4.0-3.el10.aarch64.rpm;name=aarch64_igvm-devel;unpack=0"
 SRC_URI[aarch64_igvm-devel.sha256sum] = "3c93d63edf624f5e7fc4659dd9cb1d4a192a60336778183993b707537a09d5ae"
 
-URI_aarch64_igvm-libs = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/igvm-libs-0.4.0-3.el10.aarch64.rpm;name=aarch64_igvm-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_igvm-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/igvm-libs-0.4.0-3.el10.aarch64.rpm;name=aarch64_igvm-libs;unpack=0"
 SRC_URI[aarch64_igvm-libs.sha256sum] = "1787c038919aa78e1ef0529fcc98172d0c720c712ade87af8b3436dc2e28c633"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/igvm-devel-0.4.0-3.el10.riscv64.rpm;name=riscv64_igvm-devel;unpack=0"
+SRC_URI[riscv64_igvm-devel.sha256sum] = "7aabf16ee5c3e9ebb88b647d17f3ac43cf54643950486f03f0d992a2519782e1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/igvm-libs-0.4.0-3.el10.riscv64.rpm;name=riscv64_igvm-libs;unpack=0"
+SRC_URI[riscv64_igvm-libs.sha256sum] = "66e12d404579ce442c1d7ea45ea4d12f2f517520972a873e5343249bab815ea1"
 
 RDEPENDS:igvm-devel = " \
  igvm-libs \

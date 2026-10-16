@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-irc"
 PV = "20.5.0"
 PR = "9.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-irc \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-irc \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-irc-20.5.0-9.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-irc-20.5.0-9.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "901b118002432b0524f114bb1ec7f01aa64fe5c8d50ad0e63616cfb3f3c4d5e9"
 
-URI_x86_64_v2_python3-irc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-irc-20.5.0-9.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-irc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-irc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-irc-20.5.0-9.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-irc;unpack=0"
 SRC_URI[x86_64_v2_python3-irc.sha256sum] = "37e3267189236983137a0ba1e8af1fb34ee34bac4570d38731c642a7452d6fc1"
 
-URI_aarch64_python3-irc = "${EPEL_MIRROR}/aarch64/Packages/p/python3-irc-20.5.0-9.el10_2.noarch.rpm;name=aarch64_python3-irc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-irc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-irc-20.5.0-9.el10_2.noarch.rpm;name=aarch64_python3-irc;unpack=0"
 SRC_URI[aarch64_python3-irc.sha256sum] = "31dac910ce60c856025f982bf4647a2718a57ce4dbc5a86b69aa9d79710707d5"
 
 RDEPENDS:python3-irc = " \

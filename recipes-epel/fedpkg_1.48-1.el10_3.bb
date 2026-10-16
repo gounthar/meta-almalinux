@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "fedpkg"
 PV = "1.48"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  fedpkg \
  fedpkg-completion \
  fedpkg-stage \
- "
+"
+PACKAGES:aarch64 = " \
+ fedpkg \
+ fedpkg-completion \
+ fedpkg-stage \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/f/fedpkg-1.48-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/f/fedpkg-1.48-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "0882caa8457d51d8840c5e70918a854a69e8f11840d5d63abeeb8321058bdf51"
 
-URI_x86_64_v2_fedpkg = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/fedpkg-1.48-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_fedpkg;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_fedpkg}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/fedpkg-1.48-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_fedpkg;unpack=0"
 SRC_URI[x86_64_v2_fedpkg.sha256sum] = "caf32388419cba934f3cae8308fbfe8a223d148fe1deda9c6b998367258aa9b5"
 
-URI_x86_64_v2_fedpkg-completion = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/fedpkg-completion-1.48-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_fedpkg-completion;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_fedpkg-completion}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/fedpkg-completion-1.48-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_fedpkg-completion;unpack=0"
 SRC_URI[x86_64_v2_fedpkg-completion.sha256sum] = "1dc2ac55f1256e5cdd1582ec9df44ac36e9e5c0626ee2c0658d476c7afb863e1"
 
-URI_x86_64_v2_fedpkg-stage = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/fedpkg-stage-1.48-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_fedpkg-stage;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_fedpkg-stage}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/fedpkg-stage-1.48-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_fedpkg-stage;unpack=0"
 SRC_URI[x86_64_v2_fedpkg-stage.sha256sum] = "59193c51f71a6bc68c4bd7e3caef54a27d7ada7ba154e7ace195993fbee8488e"
 
-URI_aarch64_fedpkg = "${EPEL_MIRROR}/aarch64/Packages/f/fedpkg-1.48-1.el10_3.noarch.rpm;name=aarch64_fedpkg;unpack=0"
-SRC_URI:append = " ${URI_aarch64_fedpkg}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/f/fedpkg-1.48-1.el10_3.noarch.rpm;name=aarch64_fedpkg;unpack=0"
 SRC_URI[aarch64_fedpkg.sha256sum] = "12211a46f7e3ec38117c73e4e8449cba16a320d0b6cbbae19a20c4a965eceee0"
 
-URI_aarch64_fedpkg-completion = "${EPEL_MIRROR}/aarch64/Packages/f/fedpkg-completion-1.48-1.el10_3.noarch.rpm;name=aarch64_fedpkg-completion;unpack=0"
-SRC_URI:append = " ${URI_aarch64_fedpkg-completion}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/f/fedpkg-completion-1.48-1.el10_3.noarch.rpm;name=aarch64_fedpkg-completion;unpack=0"
 SRC_URI[aarch64_fedpkg-completion.sha256sum] = "1807ff6eb2ab9eefc262c15a79d95815bb068ad1cc0386a570c2701e6acfdebf"
 
-URI_aarch64_fedpkg-stage = "${EPEL_MIRROR}/aarch64/Packages/f/fedpkg-stage-1.48-1.el10_3.noarch.rpm;name=aarch64_fedpkg-stage;unpack=0"
-SRC_URI:append = " ${URI_aarch64_fedpkg-stage}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/f/fedpkg-stage-1.48-1.el10_3.noarch.rpm;name=aarch64_fedpkg-stage;unpack=0"
 SRC_URI[aarch64_fedpkg-stage.sha256sum] = "5a98ac156135a152f3df37cc52ce282da7b67920f3d0aca6adf5189f26e0def8"
 
 RDEPENDS:fedpkg = " \

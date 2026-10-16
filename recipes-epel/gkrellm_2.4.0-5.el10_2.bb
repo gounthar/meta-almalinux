@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "gkrellm"
 PV = "2.4.0"
 PR = "5.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  gkrellm \
  gkrellm-daemon \
  gkrellm-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ gkrellm \
+ gkrellm-daemon \
+ gkrellm-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/g/gkrellm-2.4.0-5.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/g/gkrellm-2.4.0-5.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "db1f6fdcecc4a7d519fc44880aaec5f01ae1afd8a6b27e837ca8b4dbebeeaca4"
 
-URI_x86_64_v2_gkrellm = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gkrellm-2.4.0-5.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_gkrellm;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gkrellm}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gkrellm-2.4.0-5.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_gkrellm;unpack=0"
 SRC_URI[x86_64_v2_gkrellm.sha256sum] = "2c9695cd440e547026fa0856e5be182928639f90fb6e6fe9774c16d9f9aa1419"
 
-URI_x86_64_v2_gkrellm-daemon = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gkrellm-daemon-2.4.0-5.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_gkrellm-daemon;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gkrellm-daemon}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gkrellm-daemon-2.4.0-5.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_gkrellm-daemon;unpack=0"
 SRC_URI[x86_64_v2_gkrellm-daemon.sha256sum] = "c55261e57a6c4dd0ca565b9ff98070b7d04c4f999e190540d0472ae91d1c0bd0"
 
-URI_x86_64_v2_gkrellm-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gkrellm-devel-2.4.0-5.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_gkrellm-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gkrellm-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gkrellm-devel-2.4.0-5.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_gkrellm-devel;unpack=0"
 SRC_URI[x86_64_v2_gkrellm-devel.sha256sum] = "f0a384f5b08274ef63be476bde40cc03a0cd2dd6925820ad58096de1a71db01c"
 
-URI_aarch64_gkrellm = "${EPEL_MIRROR}/aarch64/Packages/g/gkrellm-2.4.0-5.el10_2.aarch64.rpm;name=aarch64_gkrellm;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gkrellm}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/gkrellm-2.4.0-5.el10_2.aarch64.rpm;name=aarch64_gkrellm;unpack=0"
 SRC_URI[aarch64_gkrellm.sha256sum] = "a454bb17de1c2f6e1f873c87320a6d99644ffd9c9e86d0941331179dd23c907c"
 
-URI_aarch64_gkrellm-daemon = "${EPEL_MIRROR}/aarch64/Packages/g/gkrellm-daemon-2.4.0-5.el10_2.aarch64.rpm;name=aarch64_gkrellm-daemon;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gkrellm-daemon}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/gkrellm-daemon-2.4.0-5.el10_2.aarch64.rpm;name=aarch64_gkrellm-daemon;unpack=0"
 SRC_URI[aarch64_gkrellm-daemon.sha256sum] = "bd4a8e29b8f88ba014a314f60c9e5f8ac7988475a9e6efceacf3f4626f1877e7"
 
-URI_aarch64_gkrellm-devel = "${EPEL_MIRROR}/aarch64/Packages/g/gkrellm-devel-2.4.0-5.el10_2.aarch64.rpm;name=aarch64_gkrellm-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gkrellm-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/gkrellm-devel-2.4.0-5.el10_2.aarch64.rpm;name=aarch64_gkrellm-devel;unpack=0"
 SRC_URI[aarch64_gkrellm-devel.sha256sum] = "3850510cbb58239ccdce570862d0a7c5f11310351cbba08409387eb01db5d9b0"
 
 RDEPENDS:gkrellm = " \

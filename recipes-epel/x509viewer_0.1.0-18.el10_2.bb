@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "x509viewer"
 PV = "0.1.0"
 PR = "18.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  x509viewer \
- "
+"
+PACKAGES:aarch64 = " \
+ x509viewer \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/x/x509viewer-0.1.0-18.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/x/x509viewer-0.1.0-18.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "22c47f5a09e502f386de2d9a322b3af47d0f567899a82218690bac25b6c57fda"
 
-URI_x86_64_v2_x509viewer = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/x509viewer-0.1.0-18.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_x509viewer;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_x509viewer}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/x509viewer-0.1.0-18.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_x509viewer;unpack=0"
 SRC_URI[x86_64_v2_x509viewer.sha256sum] = "312601ae3f49a8e6c8cc717744d099083088143a94d46fdb2caf42335d484598"
 
-URI_aarch64_x509viewer = "${EPEL_MIRROR}/aarch64/Packages/x/x509viewer-0.1.0-18.el10_2.noarch.rpm;name=aarch64_x509viewer;unpack=0"
-SRC_URI:append = " ${URI_aarch64_x509viewer}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/x/x509viewer-0.1.0-18.el10_2.noarch.rpm;name=aarch64_x509viewer;unpack=0"
 SRC_URI[aarch64_x509viewer.sha256sum] = "57008d44806d6842ed293d8e3c7f96f92880a8d4586edf228c26a46219370081"
 
 RDEPENDS:x509viewer = " \

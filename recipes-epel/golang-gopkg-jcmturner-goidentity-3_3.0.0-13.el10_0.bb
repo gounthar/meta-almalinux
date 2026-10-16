@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "golang-gopkg-jcmturner-goidentity-3"
 PV = "3.0.0"
 PR = "13.el10_0"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  golang-gopkg-jcmturner-goidentity-3-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ golang-gopkg-jcmturner-goidentity-3-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/g/golang-gopkg-jcmturner-goidentity-3-3.0.0-13.el10_0.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/g/golang-gopkg-jcmturner-goidentity-3-3.0.0-13.el10_0.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "fd07d09c7fa53768c33832b3bfb17f31725d706572c6dc605b687d4e04056324"
 
-URI_x86_64_v2_golang-gopkg-jcmturner-goidentity-3-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/golang-gopkg-jcmturner-goidentity-3-devel-3.0.0-13.el10_0.alma_altarch.noarch.rpm;name=x86_64_v2_golang-gopkg-jcmturner-goidentity-3-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_golang-gopkg-jcmturner-goidentity-3-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/golang-gopkg-jcmturner-goidentity-3-devel-3.0.0-13.el10_0.alma_altarch.noarch.rpm;name=x86_64_v2_golang-gopkg-jcmturner-goidentity-3-devel;unpack=0"
 SRC_URI[x86_64_v2_golang-gopkg-jcmturner-goidentity-3-devel.sha256sum] = "1cd4e2c22ca5cc89adaa04fe310dc84b9f394d51328064abe83423299f62c140"
 
-URI_aarch64_golang-gopkg-jcmturner-goidentity-3-devel = "${EPEL_MIRROR}/aarch64/Packages/g/golang-gopkg-jcmturner-goidentity-3-devel-3.0.0-13.el10_0.noarch.rpm;name=aarch64_golang-gopkg-jcmturner-goidentity-3-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_golang-gopkg-jcmturner-goidentity-3-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/golang-gopkg-jcmturner-goidentity-3-devel-3.0.0-13.el10_0.noarch.rpm;name=aarch64_golang-gopkg-jcmturner-goidentity-3-devel;unpack=0"
 SRC_URI[aarch64_golang-gopkg-jcmturner-goidentity-3-devel.sha256sum] = "4912b0af6c506f2c64a8ddf33c8822ff2612eaa4072d1519beda50d0308bee70"
 
 RDEPENDS:golang-gopkg-jcmturner-goidentity-3-devel = " \

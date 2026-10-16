@@ -10,25 +10,26 @@ PACKAGES = " \
  libusb1-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libusb1-1.0.30-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libusb1-1.0.30-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "eff522fdf0b80f494c2fceea88ed55922f6646b559d0b3d9b219aa16bf682e2d"
 
-URI_x86_64_v2_libusb1 = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libusb1-1.0.30-1.el10.x86_64_v2.rpm;name=x86_64_v2_libusb1;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libusb1}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libusb1-1.0.30-1.el10.x86_64_v2.rpm;name=x86_64_v2_libusb1;unpack=0"
 SRC_URI[x86_64_v2_libusb1.sha256sum] = "aaa5f371388d50708692709a87aed307a903a6a517676ef64702d0be43d5bec8"
 
-URI_x86_64_v2_libusb1-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libusb1-devel-1.0.30-1.el10.x86_64_v2.rpm;name=x86_64_v2_libusb1-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libusb1-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libusb1-devel-1.0.30-1.el10.x86_64_v2.rpm;name=x86_64_v2_libusb1-devel;unpack=0"
 SRC_URI[x86_64_v2_libusb1-devel.sha256sum] = "e115f0e14e563db226ee996697e1fcadea65977e0e0eb54c0373d2d740e16f23"
 
-URI_aarch64_libusb1 = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libusb1-1.0.30-1.el10.aarch64.rpm;name=aarch64_libusb1;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libusb1}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libusb1-1.0.30-1.el10.aarch64.rpm;name=aarch64_libusb1;unpack=0"
 SRC_URI[aarch64_libusb1.sha256sum] = "f2aeae575a45a47266a7bb5459a6c9d8a7ea99e77d5db1804a37e589c2f86a64"
 
-URI_aarch64_libusb1-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libusb1-devel-1.0.30-1.el10.aarch64.rpm;name=aarch64_libusb1-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libusb1-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libusb1-devel-1.0.30-1.el10.aarch64.rpm;name=aarch64_libusb1-devel;unpack=0"
 SRC_URI[aarch64_libusb1-devel.sha256sum] = "48f6e0186e6b9f191daf75c5c31a281a019dde2dd90f5d715ffb693d0aae8ff9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libusb1-1.0.30-1.el10.riscv64.rpm;name=riscv64_libusb1;unpack=0"
+SRC_URI[riscv64_libusb1.sha256sum] = "063dbfbc1e3b2dac931f1de0bef707064daaba9a43f4da7d9a74187c96057430"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libusb1-devel-1.0.30-1.el10.riscv64.rpm;name=riscv64_libusb1-devel;unpack=0"
+SRC_URI[riscv64_libusb1-devel.sha256sum] = "42f23374e13107a1c3ef6f05105c20f045078244b7fccf914f2c96691739ef18"
 
 RDEPENDS:libusb1 = " \
  glibc \

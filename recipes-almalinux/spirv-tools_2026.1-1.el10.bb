@@ -11,47 +11,71 @@ PACKAGES = " \
  spirv-tools-libs \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/spirv-tools-2026.1-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/spirv-tools-2026.1-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a67398873056134cac4434dece852087690e5dca7d74c7ceaa0eba740d89e93c"
 
-URI_x86_64_v2_spirv-tools = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/spirv-tools-2026.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_spirv-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_spirv-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/spirv-tools-2026.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_spirv-tools;unpack=0"
 SRC_URI[x86_64_v2_spirv-tools.sha256sum] = "bd46e3bb24aa427a8bd3e089e0d495772d736db9d845009a786938df341022be"
 
-URI_x86_64_v2_spirv-tools-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/spirv-tools-devel-2026.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_spirv-tools-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_spirv-tools-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/spirv-tools-devel-2026.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_spirv-tools-devel;unpack=0"
 SRC_URI[x86_64_v2_spirv-tools-devel.sha256sum] = "f5a792bee7ffe05bd9498eb3f8e9084e0c3d34f59f397ad5ccb6c31915b69fa3"
 
-URI_x86_64_v2_spirv-tools-libs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/spirv-tools-libs-2026.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_spirv-tools-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_spirv-tools-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/spirv-tools-libs-2026.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_spirv-tools-libs;unpack=0"
 SRC_URI[x86_64_v2_spirv-tools-libs.sha256sum] = "6e37f687fa994559112def2fb903dbe2ee41f3f272d0e83ad3754ae5d00f9e36"
 
-URI_aarch64_spirv-tools = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/spirv-tools-2026.1-1.el10.aarch64.rpm;name=aarch64_spirv-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_spirv-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/spirv-tools-2026.1-1.el10.aarch64.rpm;name=aarch64_spirv-tools;unpack=0"
 SRC_URI[aarch64_spirv-tools.sha256sum] = "43ea62e2ccd63eb87d6c93f3ac2a5b7bc7a865c2d7a1a5956c047fdfd96acd51"
 
-URI_aarch64_spirv-tools-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/spirv-tools-devel-2026.1-1.el10.aarch64.rpm;name=aarch64_spirv-tools-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_spirv-tools-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/spirv-tools-devel-2026.1-1.el10.aarch64.rpm;name=aarch64_spirv-tools-devel;unpack=0"
 SRC_URI[aarch64_spirv-tools-devel.sha256sum] = "6cd2830722dc068dbc59ae5c92dc9eae54f5d7bc35c845f1bd0e311fba1971a1"
 
-URI_aarch64_spirv-tools-libs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/spirv-tools-libs-2026.1-1.el10.aarch64.rpm;name=aarch64_spirv-tools-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_spirv-tools-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/spirv-tools-libs-2026.1-1.el10.aarch64.rpm;name=aarch64_spirv-tools-libs;unpack=0"
 SRC_URI[aarch64_spirv-tools-libs.sha256sum] = "fff7928dd0fed8d9cd93f1cf22e2b9f7eed262ee862881bdcefb450d16db899d"
 
-RDEPENDS:spirv-tools = " \
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/spirv-tools-2026.1-1.el10.riscv64.rpm;name=riscv64_spirv-tools;unpack=0"
+SRC_URI[riscv64_spirv-tools.sha256sum] = "a3d648e62865e501d67505921f8ce6b4d436684faec9f70b28238d0a74f922a6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/spirv-tools-devel-2026.1-1.el10.riscv64.rpm;name=riscv64_spirv-tools-devel;unpack=0"
+SRC_URI[riscv64_spirv-tools-devel.sha256sum] = "805b722c16d179e0f8b0b2f23f457417d7a708c3567496b9251d0eb7e272b7a7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/spirv-tools-libs-2026.1-1.el10.riscv64.rpm;name=riscv64_spirv-tools-libs;unpack=0"
+SRC_URI[riscv64_spirv-tools-libs.sha256sum] = "f23ea993a0b718f1c5ec40c9cc382d94441fb18cb6a892d723a9081b916a8b4e"
+
+RDEPENDS:spirv-tools:x86_64_v2 = " \
  bash \
  glibc \
  libstdc++ \
  spirv-tools-libs \
- "
+"
+RDEPENDS:spirv-tools:aarch64 = " \
+ bash \
+ glibc \
+ libstdc++ \
+ spirv-tools-libs \
+"
+RDEPENDS:spirv-tools:riscv64 = " \
+ bash \
+ glibc \
+ libgcc \
+ libstdc++ \
+ spirv-tools-libs \
+"
 RDEPENDS:spirv-tools-devel = " \
  cmake-filesystem \
  pkgconf-pkg-config \
  spirv-tools \
  spirv-tools-libs \
  "
-RDEPENDS:spirv-tools-libs = " \
+RDEPENDS:spirv-tools-libs:x86_64_v2 = " \
  glibc \
  libstdc++ \
- "
+"
+RDEPENDS:spirv-tools-libs:aarch64 = " \
+ glibc \
+ libstdc++ \
+"
+RDEPENDS:spirv-tools-libs:riscv64 = " \
+ glibc \
+ libgcc \
+ libstdc++ \
+"

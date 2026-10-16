@@ -10,25 +10,26 @@ PACKAGES = " \
  python3-pip-wheel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/python-pip-23.3.2-11.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/python-pip-23.3.2-11.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d0442d7838f7492b197bb69de573c22992beff40903560d0d904cbeefe022b5c"
 
-URI_x86_64_v2_python3-pip = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-pip-23.3.2-11.el10.noarch.rpm;name=x86_64_v2_python3-pip;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-pip}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-pip-23.3.2-11.el10.noarch.rpm;name=x86_64_v2_python3-pip;unpack=0"
 SRC_URI[x86_64_v2_python3-pip.sha256sum] = "5767f44341131482155693b6ae58f9acb35799ac9662771a3175bb7559f1631d"
 
-URI_x86_64_v2_python3-pip-wheel = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/python3-pip-wheel-23.3.2-11.el10.noarch.rpm;name=x86_64_v2_python3-pip-wheel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-pip-wheel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/python3-pip-wheel-23.3.2-11.el10.noarch.rpm;name=x86_64_v2_python3-pip-wheel;unpack=0"
 SRC_URI[x86_64_v2_python3-pip-wheel.sha256sum] = "8d2c04d358e366288e7c6010c0ef5df5597bdd00fd019c48c15f9d993c276234"
 
-URI_aarch64_python3-pip = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-pip-23.3.2-11.el10.noarch.rpm;name=aarch64_python3-pip;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-pip}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-pip-23.3.2-11.el10.noarch.rpm;name=aarch64_python3-pip;unpack=0"
 SRC_URI[aarch64_python3-pip.sha256sum] = "5767f44341131482155693b6ae58f9acb35799ac9662771a3175bb7559f1631d"
 
-URI_aarch64_python3-pip-wheel = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/python3-pip-wheel-23.3.2-11.el10.noarch.rpm;name=aarch64_python3-pip-wheel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-pip-wheel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/python3-pip-wheel-23.3.2-11.el10.noarch.rpm;name=aarch64_python3-pip-wheel;unpack=0"
 SRC_URI[aarch64_python3-pip-wheel.sha256sum] = "8d2c04d358e366288e7c6010c0ef5df5597bdd00fd019c48c15f9d993c276234"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-pip-23.3.2-11.el10.noarch.rpm;name=riscv64_python3-pip;unpack=0"
+SRC_URI[riscv64_python3-pip.sha256sum] = "5767f44341131482155693b6ae58f9acb35799ac9662771a3175bb7559f1631d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/python3-pip-wheel-23.3.2-11.el10.noarch.rpm;name=riscv64_python3-pip-wheel;unpack=0"
+SRC_URI[riscv64_python3-pip-wheel.sha256sum] = "8d2c04d358e366288e7c6010c0ef5df5597bdd00fd019c48c15f9d993c276234"
 
 RDEPENDS:python3-pip = " \
  ca-certificates \

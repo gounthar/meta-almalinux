@@ -10,25 +10,26 @@ PACKAGES = " \
  gnome-online-accounts-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gnome-online-accounts-3.52.8-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gnome-online-accounts-3.52.8-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b758c7f00a7e03adb1edd6452d9304e848e828040b30eb7337cf521332aacb20"
 
-URI_x86_64_v2_gnome-online-accounts = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gnome-online-accounts-3.52.8-1.el10.x86_64_v2.rpm;name=x86_64_v2_gnome-online-accounts;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gnome-online-accounts}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gnome-online-accounts-3.52.8-1.el10.x86_64_v2.rpm;name=x86_64_v2_gnome-online-accounts;unpack=0"
 SRC_URI[x86_64_v2_gnome-online-accounts.sha256sum] = "46ccaae45358f8d8639570b7cd89f1eca9cfb96829c938943df62cb98d878dbc"
 
-URI_x86_64_v2_gnome-online-accounts-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/gnome-online-accounts-devel-3.52.8-1.el10.x86_64_v2.rpm;name=x86_64_v2_gnome-online-accounts-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gnome-online-accounts-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/gnome-online-accounts-devel-3.52.8-1.el10.x86_64_v2.rpm;name=x86_64_v2_gnome-online-accounts-devel;unpack=0"
 SRC_URI[x86_64_v2_gnome-online-accounts-devel.sha256sum] = "cea0a8141f2dc39bfff0740d5e78af4dab5b501207d34ae42a6da38fb8ceb9a8"
 
-URI_aarch64_gnome-online-accounts = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gnome-online-accounts-3.52.8-1.el10.aarch64.rpm;name=aarch64_gnome-online-accounts;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gnome-online-accounts}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gnome-online-accounts-3.52.8-1.el10.aarch64.rpm;name=aarch64_gnome-online-accounts;unpack=0"
 SRC_URI[aarch64_gnome-online-accounts.sha256sum] = "b602399c3fdfb040fc10f0b8015e4fdda45c62a98f34ae5a54425cefaf5c5128"
 
-URI_aarch64_gnome-online-accounts-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/gnome-online-accounts-devel-3.52.8-1.el10.aarch64.rpm;name=aarch64_gnome-online-accounts-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gnome-online-accounts-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/gnome-online-accounts-devel-3.52.8-1.el10.aarch64.rpm;name=aarch64_gnome-online-accounts-devel;unpack=0"
 SRC_URI[aarch64_gnome-online-accounts-devel.sha256sum] = "fca34cfcd3a82ae1b0fbac4c6137e11349264ab5aac2edfdb6ec2390d901bec1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gnome-online-accounts-3.52.8-1.el10.riscv64.rpm;name=riscv64_gnome-online-accounts;unpack=0"
+SRC_URI[riscv64_gnome-online-accounts.sha256sum] = "bb23ac5ca6c50254674397c30b0ed2cd481c6cdb463c2e439270d4d315cfc29d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/gnome-online-accounts-devel-3.52.8-1.el10.riscv64.rpm;name=riscv64_gnome-online-accounts-devel;unpack=0"
+SRC_URI[riscv64_gnome-online-accounts-devel.sha256sum] = "7afa538a7673582c7894a6d06f2b773bebc7f3283c159a24d4e160c5c9137322"
 
 RDEPENDS:gnome-online-accounts = " \
  gcr-libs \

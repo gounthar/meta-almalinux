@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "rust-ndarray-rand"
 PV = "0.15.0"
 PR = "4.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-ndarray-rand+default-devel \
  rust-ndarray-rand+quickcheck-devel \
  rust-ndarray-rand-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-ndarray-rand+default-devel \
+ rust-ndarray-rand+quickcheck-devel \
+ rust-ndarray-rand-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-ndarray-rand-0.15.0-4.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-ndarray-rand-0.15.0-4.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f318c2694f8ea1c9ccdc95a37a1724b1f66dbd632afc3b189330f3caf2723ebc"
 
-URI_x86_64_v2_rust-ndarray-rand+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-ndarray-rand+default-devel-0.15.0-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-ndarray-rand+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-ndarray-rand+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-ndarray-rand+default-devel-0.15.0-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-ndarray-rand+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-ndarray-rand+default-devel.sha256sum] = "571351095bf524b8d9e53dc6b626ca232d8c5599f934b0a340d4c4c42251f5f5"
 
-URI_x86_64_v2_rust-ndarray-rand+quickcheck-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-ndarray-rand+quickcheck-devel-0.15.0-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-ndarray-rand+quickcheck-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-ndarray-rand+quickcheck-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-ndarray-rand+quickcheck-devel-0.15.0-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-ndarray-rand+quickcheck-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-ndarray-rand+quickcheck-devel.sha256sum] = "055af2c99fe2072448a2a83c6443b5aca80db9d843ed3c6e2b32a5b689fef31a"
 
-URI_x86_64_v2_rust-ndarray-rand-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-ndarray-rand-devel-0.15.0-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-ndarray-rand-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-ndarray-rand-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-ndarray-rand-devel-0.15.0-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-ndarray-rand-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-ndarray-rand-devel.sha256sum] = "d6bc3507fd44126d76625b71e353c001667a09ebe6d3fae38f911bab64ed4f3e"
 
-URI_aarch64_rust-ndarray-rand+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-ndarray-rand+default-devel-0.15.0-4.el10_3.noarch.rpm;name=aarch64_rust-ndarray-rand+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-ndarray-rand+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-ndarray-rand+default-devel-0.15.0-4.el10_3.noarch.rpm;name=aarch64_rust-ndarray-rand+default-devel;unpack=0"
 SRC_URI[aarch64_rust-ndarray-rand+default-devel.sha256sum] = "8189ac7d8a0a4b6251fe7f462d01b9658ec1955abe2e0cb47d054bc8d15b26a0"
 
-URI_aarch64_rust-ndarray-rand+quickcheck-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-ndarray-rand+quickcheck-devel-0.15.0-4.el10_3.noarch.rpm;name=aarch64_rust-ndarray-rand+quickcheck-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-ndarray-rand+quickcheck-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-ndarray-rand+quickcheck-devel-0.15.0-4.el10_3.noarch.rpm;name=aarch64_rust-ndarray-rand+quickcheck-devel;unpack=0"
 SRC_URI[aarch64_rust-ndarray-rand+quickcheck-devel.sha256sum] = "24e990fd08a4dc21d64fefa0709705f94c31093f86e0cc0d06eb8a72418994ec"
 
-URI_aarch64_rust-ndarray-rand-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-ndarray-rand-devel-0.15.0-4.el10_3.noarch.rpm;name=aarch64_rust-ndarray-rand-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-ndarray-rand-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-ndarray-rand-devel-0.15.0-4.el10_3.noarch.rpm;name=aarch64_rust-ndarray-rand-devel;unpack=0"
 SRC_URI[aarch64_rust-ndarray-rand-devel.sha256sum] = "63a7b2a870038cf6a1aa97e888900e17b92265e82d2571518478060b528f9f88"
 
 RDEPENDS:rust-ndarray-rand+default-devel = " \

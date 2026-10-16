@@ -12,41 +12,44 @@ PACKAGES = " \
  python3-gobject-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/pygobject3-3.46.0-7.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/pygobject3-3.46.0-7.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "4b893ca8f0144e5c250abe807eadb78ba469d51da94ef9bfa3287556ab8711ae"
 
-URI_x86_64_v2_python3-gobject = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-gobject-3.46.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_python3-gobject;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-gobject}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-gobject-3.46.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_python3-gobject;unpack=0"
 SRC_URI[x86_64_v2_python3-gobject.sha256sum] = "2b6ecaa9d1a6010434c3a22bf3c032fd75b0c6afc935f62992804a41db76f3cc"
 
-URI_x86_64_v2_python3-gobject-base = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/python3-gobject-base-3.46.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_python3-gobject-base;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-gobject-base}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/python3-gobject-base-3.46.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_python3-gobject-base;unpack=0"
 SRC_URI[x86_64_v2_python3-gobject-base.sha256sum] = "99529acd903327bdc2f3d8b8596a902180200db9974c1cea1bb0e75f63f90d72"
 
-URI_x86_64_v2_python3-gobject-base-noarch = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/python3-gobject-base-noarch-3.46.0-7.el10.noarch.rpm;name=x86_64_v2_python3-gobject-base-noarch;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-gobject-base-noarch}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/python3-gobject-base-noarch-3.46.0-7.el10.noarch.rpm;name=x86_64_v2_python3-gobject-base-noarch;unpack=0"
 SRC_URI[x86_64_v2_python3-gobject-base-noarch.sha256sum] = "8964c1908c4a51047dea2d36d0ef9ee62e70110e50ac1114d95a5ec68d27c7e0"
 
-URI_x86_64_v2_python3-gobject-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3-gobject-devel-3.46.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_python3-gobject-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-gobject-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3-gobject-devel-3.46.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_python3-gobject-devel;unpack=0"
 SRC_URI[x86_64_v2_python3-gobject-devel.sha256sum] = "f5f176b86071740d87690c600707a32a609af9849cbfa9b9b122aa8777f1f77f"
 
-URI_aarch64_python3-gobject = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-gobject-3.46.0-7.el10.aarch64.rpm;name=aarch64_python3-gobject;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-gobject}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-gobject-3.46.0-7.el10.aarch64.rpm;name=aarch64_python3-gobject;unpack=0"
 SRC_URI[aarch64_python3-gobject.sha256sum] = "c525f50232828e30c22472bcb81ac3eec039e8abb1327cf38364e4c34c438726"
 
-URI_aarch64_python3-gobject-base = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/python3-gobject-base-3.46.0-7.el10.aarch64.rpm;name=aarch64_python3-gobject-base;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-gobject-base}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/python3-gobject-base-3.46.0-7.el10.aarch64.rpm;name=aarch64_python3-gobject-base;unpack=0"
 SRC_URI[aarch64_python3-gobject-base.sha256sum] = "f8e64853bcb10db122508305fb838e32571a74641b6d613692a7c7f795f888e4"
 
-URI_aarch64_python3-gobject-base-noarch = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/python3-gobject-base-noarch-3.46.0-7.el10.noarch.rpm;name=aarch64_python3-gobject-base-noarch;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-gobject-base-noarch}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/python3-gobject-base-noarch-3.46.0-7.el10.noarch.rpm;name=aarch64_python3-gobject-base-noarch;unpack=0"
 SRC_URI[aarch64_python3-gobject-base-noarch.sha256sum] = "8964c1908c4a51047dea2d36d0ef9ee62e70110e50ac1114d95a5ec68d27c7e0"
 
-URI_aarch64_python3-gobject-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3-gobject-devel-3.46.0-7.el10.aarch64.rpm;name=aarch64_python3-gobject-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-gobject-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3-gobject-devel-3.46.0-7.el10.aarch64.rpm;name=aarch64_python3-gobject-devel;unpack=0"
 SRC_URI[aarch64_python3-gobject-devel.sha256sum] = "7f6ff31fbcf16e4746d354fba687ca95ad6ccec057f2bd0a3fa3ee0c499fad42"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-gobject-3.46.0-7.el10.riscv64.rpm;name=riscv64_python3-gobject;unpack=0"
+SRC_URI[riscv64_python3-gobject.sha256sum] = "9adb9773e4a000acaee23edb5fab6f80254a5735201e46566193f2925762cf12"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/python3-gobject-base-3.46.0-7.el10.riscv64.rpm;name=riscv64_python3-gobject-base;unpack=0"
+SRC_URI[riscv64_python3-gobject-base.sha256sum] = "940f06cc5f9f045aa27956d5f6d47214a262abb803a9cdd61456724e483283b6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/python3-gobject-base-noarch-3.46.0-7.el10.noarch.rpm;name=riscv64_python3-gobject-base-noarch;unpack=0"
+SRC_URI[riscv64_python3-gobject-base-noarch.sha256sum] = "8964c1908c4a51047dea2d36d0ef9ee62e70110e50ac1114d95a5ec68d27c7e0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/python3-gobject-devel-3.46.0-7.el10.riscv64.rpm;name=riscv64_python3-gobject-devel;unpack=0"
+SRC_URI[riscv64_python3-gobject-devel.sha256sum] = "ffbd4cd7518c1b2a017fe1dd89376d59aa6b9c810a1a04cb088d9b32bd8cf59b"
 
 RDEPENDS:python3-gobject = " \
  cairo \

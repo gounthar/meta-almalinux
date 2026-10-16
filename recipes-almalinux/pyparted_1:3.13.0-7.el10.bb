@@ -10,17 +10,17 @@ PACKAGES = " \
  python3-pyparted \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/pyparted-3.13.0-7.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/pyparted-3.13.0-7.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8287d1df75f0b0d69a17cd12055ca6fc3189b4d4bbc70147b2f673e3dd063469"
 
-URI_x86_64_v2_python3-pyparted = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-pyparted-3.13.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_python3-pyparted;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-pyparted}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-pyparted-3.13.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_python3-pyparted;unpack=0"
 SRC_URI[x86_64_v2_python3-pyparted.sha256sum] = "56b53e56aebc907b419979e11187935c7c2aff89884e601030119e9e7ef6efe1"
 
-URI_aarch64_python3-pyparted = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-pyparted-3.13.0-7.el10.aarch64.rpm;name=aarch64_python3-pyparted;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-pyparted}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-pyparted-3.13.0-7.el10.aarch64.rpm;name=aarch64_python3-pyparted;unpack=0"
 SRC_URI[aarch64_python3-pyparted.sha256sum] = "1361861746e9b57fb190e60a4d21a1e59452bcc24f5052c051138a40a2d929d9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-pyparted-3.13.0-7.el10.riscv64.rpm;name=riscv64_python3-pyparted;unpack=0"
+SRC_URI[riscv64_python3-pyparted.sha256sum] = "6259518214b7eef9bc024bc2eb03cdc816b1b76c096824609345a7074db45453"
 
 RDEPENDS:python3-pyparted = " \
  glibc \

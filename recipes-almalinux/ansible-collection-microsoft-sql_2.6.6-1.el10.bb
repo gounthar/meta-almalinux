@@ -9,17 +9,17 @@ PACKAGES = " \
  ansible-collection-microsoft-sql \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/ansible-collection-microsoft-sql-2.6.6-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/ansible-collection-microsoft-sql-2.6.6-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "2f787fbd2e3518c77227eaa522ac51c99eb491a2860793b38ec3e59d750acddb"
 
-URI_x86_64_v2_ansible-collection-microsoft-sql = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ansible-collection-microsoft-sql-2.6.6-1.el10.noarch.rpm;name=x86_64_v2_ansible-collection-microsoft-sql;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ansible-collection-microsoft-sql}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ansible-collection-microsoft-sql-2.6.6-1.el10.noarch.rpm;name=x86_64_v2_ansible-collection-microsoft-sql;unpack=0"
 SRC_URI[x86_64_v2_ansible-collection-microsoft-sql.sha256sum] = "c31c6024676bf6fda6484476cacf303eaee0a1891e50cbc5edf87e9f5f3491bc"
 
-URI_aarch64_ansible-collection-microsoft-sql = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ansible-collection-microsoft-sql-2.6.6-1.el10.noarch.rpm;name=aarch64_ansible-collection-microsoft-sql;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ansible-collection-microsoft-sql}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ansible-collection-microsoft-sql-2.6.6-1.el10.noarch.rpm;name=aarch64_ansible-collection-microsoft-sql;unpack=0"
 SRC_URI[aarch64_ansible-collection-microsoft-sql.sha256sum] = "c31c6024676bf6fda6484476cacf303eaee0a1891e50cbc5edf87e9f5f3491bc"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/ansible-collection-microsoft-sql-2.6.6-1.el10.noarch.rpm;name=riscv64_ansible-collection-microsoft-sql;unpack=0"
+SRC_URI[riscv64_ansible-collection-microsoft-sql.sha256sum] = "c31c6024676bf6fda6484476cacf303eaee0a1891e50cbc5edf87e9f5f3491bc"
 
 RDEPENDS:ansible-collection-microsoft-sql = " \
  ansible-core \

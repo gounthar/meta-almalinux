@@ -9,19 +9,20 @@ PACKAGES = " \
  sblim-sfcb \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/sblim-sfcb-1.4.9-36.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/sblim-sfcb-1.4.9-36.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b296aae759e672e108b4b0fd83047d9650f617f22e8e6a1e7d90cd2aaaf1fad4"
 
-URI_x86_64_v2_sblim-sfcb = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sblim-sfcb-1.4.9-36.el10.x86_64_v2.rpm;name=x86_64_v2_sblim-sfcb;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_sblim-sfcb}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sblim-sfcb-1.4.9-36.el10.x86_64_v2.rpm;name=x86_64_v2_sblim-sfcb;unpack=0"
 SRC_URI[x86_64_v2_sblim-sfcb.sha256sum] = "0864ac215a1af270950790d514018dcc775627cb3e9efca7f2df157a1a1b4a82"
-RPROVIDES:sblim-sfcb:x86_64_v2 = "virtual/cim-server"
+RPROVIDES:sblim-sfcb:append:x86_64_v2 = " virtual/cim-server"
 
-URI_aarch64_sblim-sfcb = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/sblim-sfcb-1.4.9-36.el10.aarch64.rpm;name=aarch64_sblim-sfcb;unpack=0"
-SRC_URI:append = " ${URI_aarch64_sblim-sfcb}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/sblim-sfcb-1.4.9-36.el10.aarch64.rpm;name=aarch64_sblim-sfcb;unpack=0"
 SRC_URI[aarch64_sblim-sfcb.sha256sum] = "28bb3363632d64d307d1ad6cb3d381d71927a064cf91e556ff2301d2506257f4"
-RPROVIDES:sblim-sfcb:aarch64 = "virtual/cim-server"
+RPROVIDES:sblim-sfcb:append:aarch64 = " virtual/cim-server"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/sblim-sfcb-1.4.9-36.el10.riscv64.rpm;name=riscv64_sblim-sfcb;unpack=0"
+SRC_URI[riscv64_sblim-sfcb.sha256sum] = "aea253cfc361d70bdf70c2721c1352debe71f500ccf61577df4847d3981055ba"
+RPROVIDES:sblim-sfcb:append:riscv64 = " virtual/cim-server"
 
 RDEPENDS:sblim-sfcb = " \
  bash \
@@ -40,7 +41,3 @@ RDEPENDS:sblim-sfcb = " \
  virtual/libcurl.so.4___64bit_ \
  zlib-ng-compat \
  "
-
-PROVIDES:append:x86_64_v2 = " rpm/virtual/cim-server"
-
-PROVIDES:append:aarch64 = " rpm/virtual/cim-server"

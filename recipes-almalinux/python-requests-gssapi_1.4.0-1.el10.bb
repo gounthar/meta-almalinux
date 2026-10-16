@@ -9,17 +9,17 @@ PACKAGES = " \
  python3-requests-gssapi \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python-requests-gssapi-1.4.0-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python-requests-gssapi-1.4.0-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "cdd8827752ff161f751448e2f95e465bec93c5c8c739421b156f4d13db445711"
 
-URI_x86_64_v2_python3-requests-gssapi = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-requests-gssapi-1.4.0-1.el10.noarch.rpm;name=x86_64_v2_python3-requests-gssapi;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-requests-gssapi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-requests-gssapi-1.4.0-1.el10.noarch.rpm;name=x86_64_v2_python3-requests-gssapi;unpack=0"
 SRC_URI[x86_64_v2_python3-requests-gssapi.sha256sum] = "8bccc13f7019fb593d1b574bfeeadfa8497ab3ab0078a99c6105effac89e1f74"
 
-URI_aarch64_python3-requests-gssapi = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-requests-gssapi-1.4.0-1.el10.noarch.rpm;name=aarch64_python3-requests-gssapi;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-requests-gssapi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-requests-gssapi-1.4.0-1.el10.noarch.rpm;name=aarch64_python3-requests-gssapi;unpack=0"
 SRC_URI[aarch64_python3-requests-gssapi.sha256sum] = "8bccc13f7019fb593d1b574bfeeadfa8497ab3ab0078a99c6105effac89e1f74"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-requests-gssapi-1.4.0-1.el10.noarch.rpm;name=riscv64_python3-requests-gssapi;unpack=0"
+SRC_URI[riscv64_python3-requests-gssapi.sha256sum] = "8bccc13f7019fb593d1b574bfeeadfa8497ab3ab0078a99c6105effac89e1f74"
 
 RDEPENDS:python3-requests-gssapi = " \
  python3 \

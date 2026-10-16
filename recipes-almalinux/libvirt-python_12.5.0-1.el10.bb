@@ -9,17 +9,17 @@ PACKAGES = " \
  python3-libvirt \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libvirt-python-12.5.0-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libvirt-python-12.5.0-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "702b696ca1aae91e10b6b7e46723e1a353a7a19f9aecc47063ff02d535c557e8"
 
-URI_x86_64_v2_python3-libvirt = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-libvirt-12.5.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_python3-libvirt;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-libvirt}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-libvirt-12.5.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_python3-libvirt;unpack=0"
 SRC_URI[x86_64_v2_python3-libvirt.sha256sum] = "cdd7ee9d2195665c0fe1285732066c89812324c87690d355629431fb98636f9d"
 
-URI_aarch64_python3-libvirt = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-libvirt-12.5.0-1.el10.aarch64.rpm;name=aarch64_python3-libvirt;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-libvirt}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-libvirt-12.5.0-1.el10.aarch64.rpm;name=aarch64_python3-libvirt;unpack=0"
 SRC_URI[aarch64_python3-libvirt.sha256sum] = "b9026a9760887a04ed5723a55c1fc25497eaa5632c787ff288b4340a148131e9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-libvirt-12.5.0-1.el10.riscv64.rpm;name=riscv64_python3-libvirt;unpack=0"
+SRC_URI[riscv64_python3-libvirt.sha256sum] = "8e1b777775e3d1f324075f831cc034cf2174fab593975a249fc8c6e84fec53e5"
 
 RDEPENDS:python3-libvirt = " \
  glibc \

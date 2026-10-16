@@ -9,17 +9,17 @@ PACKAGES = " \
  vulkan-tools \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/vulkan-tools-1.4.341.0-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/vulkan-tools-1.4.341.0-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e96632da2ef73e927d3d343c7bc81f0139f1c13bd581693a3fb2493a2e43fc8a"
 
-URI_x86_64_v2_vulkan-tools = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/vulkan-tools-1.4.341.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_vulkan-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_vulkan-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/vulkan-tools-1.4.341.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_vulkan-tools;unpack=0"
 SRC_URI[x86_64_v2_vulkan-tools.sha256sum] = "c2744b60d27247c3490064fdb1ba99281e743ab381da53a4cb335386d75ea7b5"
 
-URI_aarch64_vulkan-tools = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/vulkan-tools-1.4.341.0-1.el10.aarch64.rpm;name=aarch64_vulkan-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_vulkan-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/vulkan-tools-1.4.341.0-1.el10.aarch64.rpm;name=aarch64_vulkan-tools;unpack=0"
 SRC_URI[aarch64_vulkan-tools.sha256sum] = "bdc1548d8a519c708f38483d2603d1f4680bad8fe4e666b652f45ef8f365d60b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/vulkan-tools-1.4.341.0-1.el10.riscv64.rpm;name=riscv64_vulkan-tools;unpack=0"
+SRC_URI[riscv64_vulkan-tools.sha256sum] = "ca521369ea167188b7cc9999ae84149d7b1efe6099b27f9047c229c6ca0aa657"
 
 RDEPENDS:vulkan-tools = " \
  glibc \

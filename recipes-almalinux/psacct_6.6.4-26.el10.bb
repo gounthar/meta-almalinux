@@ -9,17 +9,17 @@ PACKAGES = " \
  psacct \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/psacct-6.6.4-26.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/psacct-6.6.4-26.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "414e03d6287b468647158adb7d2642caa9171124be14f2929de6de8035aacbe1"
 
-URI_x86_64_v2_psacct = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/psacct-6.6.4-26.el10.x86_64_v2.rpm;name=x86_64_v2_psacct;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_psacct}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/psacct-6.6.4-26.el10.x86_64_v2.rpm;name=x86_64_v2_psacct;unpack=0"
 SRC_URI[x86_64_v2_psacct.sha256sum] = "425ef700ccb38bce801974774d9942616227bfb22f4059023991c11f7ab2b425"
 
-URI_aarch64_psacct = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/psacct-6.6.4-26.el10.aarch64.rpm;name=aarch64_psacct;unpack=0"
-SRC_URI:append = " ${URI_aarch64_psacct}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/psacct-6.6.4-26.el10.aarch64.rpm;name=aarch64_psacct;unpack=0"
 SRC_URI[aarch64_psacct.sha256sum] = "0d5d67ce16a876e968e9eeb165e5a0befbdfb12893f9ecf18d39de57ac877105"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/psacct-6.6.4-26.el10.riscv64.rpm;name=riscv64_psacct;unpack=0"
+SRC_URI[riscv64_psacct.sha256sum] = "e893d4e5e0004f6b4a4902b721fda376ca6e6d16ea9ee46531d708770860c05f"
 
 RDEPENDS:psacct = " \
  bash \

@@ -9,17 +9,17 @@ PACKAGES = " \
  kexec-tools \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/kexec-tools-2.0.32-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/kexec-tools-2.0.32-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "2e94d3b100eff7733f1f7dc81396471b3bb01dd48d9c3d02ffa2ba2122add6f3"
 
-URI_x86_64_v2_kexec-tools = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/kexec-tools-2.0.32-3.el10.x86_64_v2.rpm;name=x86_64_v2_kexec-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_kexec-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/kexec-tools-2.0.32-3.el10.x86_64_v2.rpm;name=x86_64_v2_kexec-tools;unpack=0"
 SRC_URI[x86_64_v2_kexec-tools.sha256sum] = "2f650672faea520d8d69791442d986c9ea91d60c462a029c869c0aac71731300"
 
-URI_aarch64_kexec-tools = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/kexec-tools-2.0.32-3.el10.aarch64.rpm;name=aarch64_kexec-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_kexec-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/kexec-tools-2.0.32-3.el10.aarch64.rpm;name=aarch64_kexec-tools;unpack=0"
 SRC_URI[aarch64_kexec-tools.sha256sum] = "89d401760e4639d7c78ba27f79e95da7fc58ecbbff4bff9045a49915ff62f7c4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/kexec-tools-2.0.32-3.el10.riscv64.rpm;name=riscv64_kexec-tools;unpack=0"
+SRC_URI[riscv64_kexec-tools.sha256sum] = "9ba4236ec6e8eb12750fefc398e646f3f5152d824c7778817445842bcf242317"
 
 RDEPENDS:kexec-tools = " \
  glibc \

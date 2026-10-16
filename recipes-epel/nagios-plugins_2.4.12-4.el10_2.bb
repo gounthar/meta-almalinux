@@ -5,7 +5,7 @@ inherit dnf-bridge
 PN = "nagios-plugins"
 PV = "2.4.12"
 PR = "4.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  nagios-plugins \
  nagios-plugins-all \
  nagios-plugins-apt \
@@ -61,450 +61,399 @@ PACKAGES = " \
  nagios-plugins-uptime \
  nagios-plugins-users \
  nagios-plugins-wave \
- "
+"
+PACKAGES:aarch64 = " \
+ nagios-plugins \
+ nagios-plugins-all \
+ nagios-plugins-apt \
+ nagios-plugins-breeze \
+ nagios-plugins-by_ssh \
+ nagios-plugins-cluster \
+ nagios-plugins-dhcp \
+ nagios-plugins-dig \
+ nagios-plugins-disk \
+ nagios-plugins-disk_smb \
+ nagios-plugins-dns \
+ nagios-plugins-dummy \
+ nagios-plugins-file_age \
+ nagios-plugins-flexlm \
+ nagios-plugins-fping \
+ nagios-plugins-game \
+ nagios-plugins-hpjd \
+ nagios-plugins-http \
+ nagios-plugins-icmp \
+ nagios-plugins-ide_smart \
+ nagios-plugins-ifoperstatus \
+ nagios-plugins-ifstatus \
+ nagios-plugins-ircd \
+ nagios-plugins-ldap \
+ nagios-plugins-load \
+ nagios-plugins-log \
+ nagios-plugins-mailq \
+ nagios-plugins-mrtg \
+ nagios-plugins-mrtgtraf \
+ nagios-plugins-mysql \
+ nagios-plugins-nagios \
+ nagios-plugins-nt \
+ nagios-plugins-ntp \
+ nagios-plugins-nwstat \
+ nagios-plugins-oracle \
+ nagios-plugins-overcr \
+ nagios-plugins-perl \
+ nagios-plugins-pgsql \
+ nagios-plugins-ping \
+ nagios-plugins-procs \
+ nagios-plugins-real \
+ nagios-plugins-remove_perfdata \
+ nagios-plugins-rpc \
+ nagios-plugins-sensors \
+ nagios-plugins-smtp \
+ nagios-plugins-snmp \
+ nagios-plugins-ssh \
+ nagios-plugins-ssl_validity \
+ nagios-plugins-swap \
+ nagios-plugins-tcp \
+ nagios-plugins-time \
+ nagios-plugins-ups \
+ nagios-plugins-uptime \
+ nagios-plugins-users \
+ nagios-plugins-wave \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/n/nagios-plugins-2.4.12-4.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/n/nagios-plugins-2.4.12-4.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "9c5e978a28f6655f4de9cf3ba7979e3b6462293bdc7b184471125792905509db"
 
-URI_x86_64_v2_nagios-plugins = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins.sha256sum] = "abd338955aaac92795b04f77dfd93747f4de67b36298c2878a0d5f34dc06cc80"
 
-URI_x86_64_v2_nagios-plugins-all = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-all-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-all;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-all}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-all-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-all;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-all.sha256sum] = "6cd91f2383b079d37c7dcaad643678961d68fb96b5eb7c5a909dd66fabffc957"
 
-URI_x86_64_v2_nagios-plugins-apt = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-apt-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-apt;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-apt}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-apt-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-apt;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-apt.sha256sum] = "ce2cadc8dd4678e2f127eddd891cae3fe3ec69c136820288fdc80ca3f2dd5dd8"
 
-URI_x86_64_v2_nagios-plugins-breeze = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-breeze-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-breeze;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-breeze}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-breeze-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-breeze;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-breeze.sha256sum] = "13b6b85306909ebc46b76f3ba50e47833a019f94ad98f9df00dc63e3fd4ad0c3"
 
-URI_x86_64_v2_nagios-plugins-by_ssh = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-by_ssh-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-by_ssh;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-by_ssh}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-by_ssh-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-by_ssh;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-by_ssh.sha256sum] = "68ad0aa214a58138d193e9425835a2518ef216fd12b1b1b4b148cbf1d395fdcd"
 
-URI_x86_64_v2_nagios-plugins-cluster = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-cluster-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-cluster;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-cluster}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-cluster-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-cluster;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-cluster.sha256sum] = "a1cf2530e6910af8e9eaacfeea631d8afe6d854a3ad53e3a7ffc4129947aa065"
 
-URI_x86_64_v2_nagios-plugins-dhcp = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-dhcp-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-dhcp;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-dhcp}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-dhcp-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-dhcp;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-dhcp.sha256sum] = "bf824a4078997d7633a3100e5e35448bbfdc977ef41be372888b2369ecdb0467"
 
-URI_x86_64_v2_nagios-plugins-dig = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-dig-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-dig;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-dig}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-dig-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-dig;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-dig.sha256sum] = "1e62ad6fcb7e6f05c086e0daced29c3402f25bb5149c2cfe6eb6ecf736a0bc2f"
 
-URI_x86_64_v2_nagios-plugins-disk = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-disk-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-disk;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-disk}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-disk-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-disk;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-disk.sha256sum] = "70eaed2fa52410108e3aa38710ff79a6354c30a49593eddc71cdd451f06edfe9"
 
-URI_x86_64_v2_nagios-plugins-disk_smb = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-disk_smb-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-disk_smb;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-disk_smb}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-disk_smb-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-disk_smb;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-disk_smb.sha256sum] = "8f16f70e364b078293e4e6e52f3512214b0936053b5276bfe10cd83cf93ad851"
 
-URI_x86_64_v2_nagios-plugins-dns = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-dns-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-dns;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-dns}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-dns-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-dns;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-dns.sha256sum] = "9c647e39d93c5903f0d3cbb3a4b8d495cd0c735f235391adb5252bd9ef591a07"
 
-URI_x86_64_v2_nagios-plugins-dummy = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-dummy-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-dummy;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-dummy}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-dummy-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-dummy;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-dummy.sha256sum] = "943fefb48838817f1d20b6922c5fc140bcddc1e35ab5c980d0b36f2fcb900840"
 
-URI_x86_64_v2_nagios-plugins-file_age = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-file_age-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-file_age;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-file_age}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-file_age-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-file_age;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-file_age.sha256sum] = "b741f9b235590c84476c7e0af341fdbd2f789ccb97e75b824d27d086f8c9c62e"
 
-URI_x86_64_v2_nagios-plugins-flexlm = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-flexlm-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-flexlm;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-flexlm}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-flexlm-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-flexlm;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-flexlm.sha256sum] = "bde102f7552d65de842f16cc1e95a4f50fc79c62a2ff119dee0fc13d5c8c596e"
 
-URI_x86_64_v2_nagios-plugins-fping = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-fping-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-fping;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-fping}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-fping-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-fping;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-fping.sha256sum] = "510cb1cd5fb4695a0670c11101dec4ee9073e8d5159c77ce2fd3fb21726cc8c4"
 
-URI_x86_64_v2_nagios-plugins-game = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-game-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-game;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-game}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-game-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-game;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-game.sha256sum] = "1d6208059aec5331f77d63853b8338be632d702b187bb8682de1f51e80376159"
 
-URI_x86_64_v2_nagios-plugins-hpjd = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-hpjd-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-hpjd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-hpjd}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-hpjd-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-hpjd;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-hpjd.sha256sum] = "a44ecd0e6665786866f6697235ad6777cfc8d6c08e8512265c989eb28845a9e6"
 
-URI_x86_64_v2_nagios-plugins-http = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-http-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-http;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-http}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-http-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-http;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-http.sha256sum] = "4ec447c5a6b0ba57994c1a6687b8372c9c6266b345addd83f529b88717ebc746"
 
-URI_x86_64_v2_nagios-plugins-icmp = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-icmp-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-icmp;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-icmp}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-icmp-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-icmp;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-icmp.sha256sum] = "2fe9f8a7213f0275ae8c6cb865c5afa35493280101c600a7c4a9b72fa1a02dad"
 
-URI_x86_64_v2_nagios-plugins-ide_smart = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-ide_smart-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-ide_smart;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-ide_smart}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-ide_smart-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-ide_smart;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-ide_smart.sha256sum] = "939d520737ef2d52a19721a489eee0bf1b75d24fa05f9f2ad2e223ee80d2f216"
 
-URI_x86_64_v2_nagios-plugins-ifoperstatus = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-ifoperstatus-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-ifoperstatus;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-ifoperstatus}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-ifoperstatus-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-ifoperstatus;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-ifoperstatus.sha256sum] = "69391b7b8118a56f71042b8e533b693e83b9e0248b8f5d204cd8b4c90d03c2ce"
 
-URI_x86_64_v2_nagios-plugins-ifstatus = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-ifstatus-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-ifstatus;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-ifstatus}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-ifstatus-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-ifstatus;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-ifstatus.sha256sum] = "0e52365cefd719b3377ec8f7dcfef0dff0ca521a293aa9c4ea91c22ab63ffb4e"
 
-URI_x86_64_v2_nagios-plugins-ircd = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-ircd-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-ircd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-ircd}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-ircd-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-ircd;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-ircd.sha256sum] = "a7698f493184846d163042c247290f2fb8b309a6f20b7df1db72d48dd3feb81b"
 
-URI_x86_64_v2_nagios-plugins-ldap = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-ldap-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-ldap;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-ldap}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-ldap-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-ldap;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-ldap.sha256sum] = "f04f4ad3f375d3f64a88cc61dbd79e1aec68e68d66f21b73c26788a4ea5436bb"
 
-URI_x86_64_v2_nagios-plugins-load = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-load-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-load;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-load}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-load-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-load;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-load.sha256sum] = "6df774d8979d3c0ddb3c9f0992bb26b3bd57ecaf42c3c64a3768922ecffa945c"
 
-URI_x86_64_v2_nagios-plugins-log = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-log-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-log;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-log}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-log-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-log;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-log.sha256sum] = "97450f307426765a6e772ad5254fd8141845d2471016dfa3e146905eecec7611"
 
-URI_x86_64_v2_nagios-plugins-mailq = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-mailq-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-mailq;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-mailq}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-mailq-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-mailq;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-mailq.sha256sum] = "f288cec0b2039b2190652169dea5eb2cff710e380fff65896b94693e1f0278bb"
 
-URI_x86_64_v2_nagios-plugins-mrtg = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-mrtg-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-mrtg;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-mrtg}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-mrtg-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-mrtg;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-mrtg.sha256sum] = "fb8d37fc0c18fbd8df0af8e5e5458aabab2051c13a7035e40c9ebe3f2041a4f4"
 
-URI_x86_64_v2_nagios-plugins-mrtgtraf = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-mrtgtraf-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-mrtgtraf;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-mrtgtraf}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-mrtgtraf-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-mrtgtraf;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-mrtgtraf.sha256sum] = "9e8e55f144d4543ca881d96ed32b52929377db6dfe45abdb98c69228ac854b61"
 
-URI_x86_64_v2_nagios-plugins-mysql = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-mysql-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-mysql;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-mysql}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-mysql-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-mysql;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-mysql.sha256sum] = "06c1d9896d0d8d800ff5940a0a695d25061daf0f1fdbda597c20a16d8f28c23c"
 
-URI_x86_64_v2_nagios-plugins-nagios = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-nagios-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-nagios;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-nagios}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-nagios-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-nagios;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-nagios.sha256sum] = "c4d878eb2266f536a20137d976bcbb48cd66099e6c1ca2b77141b064d0e51cb3"
 
-URI_x86_64_v2_nagios-plugins-nt = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-nt-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-nt;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-nt}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-nt-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-nt;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-nt.sha256sum] = "242c9e12a1d08d7564dfe0a5ca6592ef36952a7b2dba6290484ca23a89bb8639"
 
-URI_x86_64_v2_nagios-plugins-ntp = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-ntp-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-ntp;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-ntp}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-ntp-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-ntp;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-ntp.sha256sum] = "a2e6f7216ddfbeb85fc14b7c887d64cab26a50c44d102027cd8df6967cefdf51"
 
-URI_x86_64_v2_nagios-plugins-nwstat = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-nwstat-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-nwstat;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-nwstat}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-nwstat-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-nwstat;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-nwstat.sha256sum] = "83ef9686e60e49fbad12d0df99ad9b2860097a73476786353f0565ed6e6012bf"
 
-URI_x86_64_v2_nagios-plugins-oracle = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-oracle-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-oracle;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-oracle}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-oracle-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-oracle;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-oracle.sha256sum] = "9460099e47c4024dc7a82a4d1b8c247da0550dd3ec5bc0ecd18deb3db06705ea"
 
-URI_x86_64_v2_nagios-plugins-overcr = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-overcr-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-overcr;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-overcr}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-overcr-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-overcr;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-overcr.sha256sum] = "329ad30d7097b8d499e4cd924c35ac7ca85ed515db433ee8ad18579820463fa6"
 
-URI_x86_64_v2_nagios-plugins-perl = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-perl-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-perl;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-perl}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-perl-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-perl;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-perl.sha256sum] = "4eff534ae0bace16b1d3dbccd2cb5b72b648db4cd47671dad24a41c0dac59810"
 
-URI_x86_64_v2_nagios-plugins-pgsql = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-pgsql-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-pgsql;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-pgsql}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-pgsql-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-pgsql;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-pgsql.sha256sum] = "9ecd62cca36095250aa0ef75c0982dcac0bf5c1b902e9f7d9275bb6dbbd9c054"
 
-URI_x86_64_v2_nagios-plugins-ping = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-ping-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-ping;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-ping}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-ping-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-ping;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-ping.sha256sum] = "7f880c7b7017736923b261799fd5ee2a7f52689be6532791d3d2eb184aec6152"
 
-URI_x86_64_v2_nagios-plugins-procs = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-procs-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-procs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-procs}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-procs-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-procs;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-procs.sha256sum] = "32b1778ad0400f64da8a4088e20d1c52bee05de3cd1073a9e17473efe042dfb9"
 
-URI_x86_64_v2_nagios-plugins-real = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-real-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-real;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-real}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-real-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-real;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-real.sha256sum] = "f51db96faa10ef025bd2a90f52e0cdbd67ce65571ca1ec25eecf96669ca0ab9e"
 
-URI_x86_64_v2_nagios-plugins-remove_perfdata = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-remove_perfdata-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-remove_perfdata;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-remove_perfdata}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-remove_perfdata-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-remove_perfdata;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-remove_perfdata.sha256sum] = "9ea0c0e2b0d9ad4046dc3f918f65015f695d2dd6a407b9073575547b3108c42c"
 
-URI_x86_64_v2_nagios-plugins-rpc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-rpc-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-rpc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-rpc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-rpc-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-rpc;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-rpc.sha256sum] = "9bb33518ab489610c88c4006f5fc00c500480271538a2913df13ca744c0c62d2"
 
-URI_x86_64_v2_nagios-plugins-sensors = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-sensors-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-sensors;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-sensors}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-sensors-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-sensors;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-sensors.sha256sum] = "0af80ce5940b1a358b06e1cd080a32add48c44b2bf7864688da7e9c0293a6eaf"
 
-URI_x86_64_v2_nagios-plugins-smtp = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-smtp-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-smtp;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-smtp}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-smtp-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-smtp;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-smtp.sha256sum] = "860109ee6e48cb2c89c1f99cf1eb78973047cc4fc0b00982e21b0cc200e0dc01"
 
-URI_x86_64_v2_nagios-plugins-snmp = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-snmp-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-snmp;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-snmp}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-snmp-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-snmp;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-snmp.sha256sum] = "50b810fdc7653b014ea27581ff397e784b99bddc100dc53a297219546245dca0"
 
-URI_x86_64_v2_nagios-plugins-ssh = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-ssh-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-ssh;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-ssh}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-ssh-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-ssh;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-ssh.sha256sum] = "e0a1df40b409b5353c1b5e5abda83db6a18984b408854f88798fa96cab0b19eb"
 
-URI_x86_64_v2_nagios-plugins-ssl_validity = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-ssl_validity-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-ssl_validity;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-ssl_validity}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-ssl_validity-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-ssl_validity;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-ssl_validity.sha256sum] = "065e2928bf3997dc49ffd7cc4fff0a68397ac2d29b542caa0502415a5a87a654"
 
-URI_x86_64_v2_nagios-plugins-swap = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-swap-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-swap;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-swap}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-swap-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-swap;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-swap.sha256sum] = "b8fe4d288dd4da9a4336650a5fef97d9d0fe930f053c567fdf6e500506da50eb"
 
-URI_x86_64_v2_nagios-plugins-tcp = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-tcp-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-tcp;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-tcp}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-tcp-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-tcp;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-tcp.sha256sum] = "4fec54c39a7bd2ae94d44015b27d8878bf3eb0d59c34c830453434bdc62b21d3"
 
-URI_x86_64_v2_nagios-plugins-time = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-time-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-time;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-time}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-time-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-time;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-time.sha256sum] = "f40e3d238ee6c0ebca3e094ec274684045754913e63210ab8a341f5007579a15"
 
-URI_x86_64_v2_nagios-plugins-ups = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-ups-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-ups;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-ups}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-ups-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-ups;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-ups.sha256sum] = "32a3d287d2c5b08a53d3e8fcaba30fb73cf6732395900ae95079a5a5e29946cc"
 
-URI_x86_64_v2_nagios-plugins-uptime = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-uptime-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-uptime;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-uptime}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-uptime-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-uptime;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-uptime.sha256sum] = "c939d71871f0045e88aeffde07bdfd3c1fd1e20a4b0249381e4b6d3c846a91dc"
 
-URI_x86_64_v2_nagios-plugins-users = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-users-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-users;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-users}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-users-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-users;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-users.sha256sum] = "b77d2cbc05f3fb7ffebdeefb5dfba25cce56eada92cfc1dfa3e6f7855bd68b89"
 
-URI_x86_64_v2_nagios-plugins-wave = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-wave-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-wave;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nagios-plugins-wave}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nagios-plugins-wave-2.4.12-4.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nagios-plugins-wave;unpack=0"
 SRC_URI[x86_64_v2_nagios-plugins-wave.sha256sum] = "36e1f0a82f8f188de6aca9b92739d0ba3706add778d5b7e924adcd471b1c9a30"
 
-URI_aarch64_nagios-plugins = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins;unpack=0"
 SRC_URI[aarch64_nagios-plugins.sha256sum] = "6b8d9d4f89376c01bee363985efa3d0f813cb0287373c3b1cf32a899c1d98f52"
 
-URI_aarch64_nagios-plugins-all = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-all-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-all;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-all}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-all-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-all;unpack=0"
 SRC_URI[aarch64_nagios-plugins-all.sha256sum] = "5b07d6c0bff31a821ecdbd8b108280bca2448dc36b69d4221dcdea865180c1e0"
 
-URI_aarch64_nagios-plugins-apt = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-apt-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-apt;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-apt}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-apt-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-apt;unpack=0"
 SRC_URI[aarch64_nagios-plugins-apt.sha256sum] = "4a2c44f1a53f2b642e6c4cf432e25692e7a3053582fc9bd83caff34d017529a3"
 
-URI_aarch64_nagios-plugins-breeze = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-breeze-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-breeze;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-breeze}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-breeze-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-breeze;unpack=0"
 SRC_URI[aarch64_nagios-plugins-breeze.sha256sum] = "8102f54fa2896d37eda2570973291956da6f55f41ef05c1a23fd4be7f3638776"
 
-URI_aarch64_nagios-plugins-by_ssh = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-by_ssh-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-by_ssh;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-by_ssh}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-by_ssh-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-by_ssh;unpack=0"
 SRC_URI[aarch64_nagios-plugins-by_ssh.sha256sum] = "a48427ccdbce5635d76459120167053a0665d7c312f308fba3fdc980443e6804"
 
-URI_aarch64_nagios-plugins-cluster = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-cluster-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-cluster;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-cluster}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-cluster-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-cluster;unpack=0"
 SRC_URI[aarch64_nagios-plugins-cluster.sha256sum] = "3c26599bb0343269ed3a278a842937ae5479c14bf7cc0cca466049643198df1a"
 
-URI_aarch64_nagios-plugins-dhcp = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-dhcp-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-dhcp;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-dhcp}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-dhcp-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-dhcp;unpack=0"
 SRC_URI[aarch64_nagios-plugins-dhcp.sha256sum] = "5bbd9e015af8600b074c4ac3cd200ed48ba01417edbcc8c8dab2f0ee13860e81"
 
-URI_aarch64_nagios-plugins-dig = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-dig-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-dig;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-dig}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-dig-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-dig;unpack=0"
 SRC_URI[aarch64_nagios-plugins-dig.sha256sum] = "48570eb44ae6a40b60d13c0cc199da6a12f7b57e9b913d46e9d28862b042e24e"
 
-URI_aarch64_nagios-plugins-disk = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-disk-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-disk;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-disk}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-disk-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-disk;unpack=0"
 SRC_URI[aarch64_nagios-plugins-disk.sha256sum] = "9a7dd0be16b551f4c22d6722e35b87ac2c25367409535bc132d66b004130e52a"
 
-URI_aarch64_nagios-plugins-disk_smb = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-disk_smb-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-disk_smb;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-disk_smb}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-disk_smb-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-disk_smb;unpack=0"
 SRC_URI[aarch64_nagios-plugins-disk_smb.sha256sum] = "35badea15c751d1ec04ab095c86ce2c454aa28198096c53c2be9bd4c0cbd3caf"
 
-URI_aarch64_nagios-plugins-dns = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-dns-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-dns;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-dns}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-dns-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-dns;unpack=0"
 SRC_URI[aarch64_nagios-plugins-dns.sha256sum] = "a63c329eb466d999b99bb1b2de3fbbfe14c098f48af6c9e395f5ad7c4e0cd3ca"
 
-URI_aarch64_nagios-plugins-dummy = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-dummy-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-dummy;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-dummy}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-dummy-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-dummy;unpack=0"
 SRC_URI[aarch64_nagios-plugins-dummy.sha256sum] = "23560f2d768f7e7b5d635269af9aba843c8e6bd470595137560d55f30d3ec1a3"
 
-URI_aarch64_nagios-plugins-file_age = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-file_age-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-file_age;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-file_age}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-file_age-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-file_age;unpack=0"
 SRC_URI[aarch64_nagios-plugins-file_age.sha256sum] = "57abb0068fe5208501a7eed360623c87b6b2ef162c505e682b02dd1d14e624a8"
 
-URI_aarch64_nagios-plugins-flexlm = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-flexlm-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-flexlm;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-flexlm}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-flexlm-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-flexlm;unpack=0"
 SRC_URI[aarch64_nagios-plugins-flexlm.sha256sum] = "179d4cd342855eafc201850b5dfc8f8b4ecd6c2c2dac24f20fcde0169c94b91f"
 
-URI_aarch64_nagios-plugins-fping = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-fping-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-fping;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-fping}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-fping-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-fping;unpack=0"
 SRC_URI[aarch64_nagios-plugins-fping.sha256sum] = "804348cb41abdae757fe08bace05bbddc5bb9691b2132c1ae32da85eedcdb0e3"
 
-URI_aarch64_nagios-plugins-game = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-game-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-game;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-game}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-game-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-game;unpack=0"
 SRC_URI[aarch64_nagios-plugins-game.sha256sum] = "e8f9e9ce74d016dcf4c95c29f87d897cf4b34965d86f1d593fcd6f69c362c8f2"
 
-URI_aarch64_nagios-plugins-hpjd = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-hpjd-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-hpjd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-hpjd}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-hpjd-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-hpjd;unpack=0"
 SRC_URI[aarch64_nagios-plugins-hpjd.sha256sum] = "1c141b81a73a8a4929a100c7da08feda5f2e325044897ad1c66cee12c739fad1"
 
-URI_aarch64_nagios-plugins-http = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-http-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-http;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-http}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-http-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-http;unpack=0"
 SRC_URI[aarch64_nagios-plugins-http.sha256sum] = "5e0872e788bc216f8e742bd784697adf763aa46242615c1a0f6b7e7a16d5fb2d"
 
-URI_aarch64_nagios-plugins-icmp = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-icmp-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-icmp;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-icmp}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-icmp-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-icmp;unpack=0"
 SRC_URI[aarch64_nagios-plugins-icmp.sha256sum] = "cd3ab30b003630d6cb245d686e0feb327dfddcecb7acbc328ec7816c86c64b07"
 
-URI_aarch64_nagios-plugins-ide_smart = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-ide_smart-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-ide_smart;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-ide_smart}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-ide_smart-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-ide_smart;unpack=0"
 SRC_URI[aarch64_nagios-plugins-ide_smart.sha256sum] = "154f72c94871b31c5796ceba75d215909a87a31285d6a3a93654f4e475cbf39b"
 
-URI_aarch64_nagios-plugins-ifoperstatus = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-ifoperstatus-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-ifoperstatus;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-ifoperstatus}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-ifoperstatus-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-ifoperstatus;unpack=0"
 SRC_URI[aarch64_nagios-plugins-ifoperstatus.sha256sum] = "6b3ddeb6eda0652ff2e4b287ab8c8949fe3371ac456c8c5d19311db68249359a"
 
-URI_aarch64_nagios-plugins-ifstatus = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-ifstatus-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-ifstatus;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-ifstatus}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-ifstatus-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-ifstatus;unpack=0"
 SRC_URI[aarch64_nagios-plugins-ifstatus.sha256sum] = "62fad2c90aa75c0e08745f9b5b174040f5d5439cb9a2532327f9a5cb91b03115"
 
-URI_aarch64_nagios-plugins-ircd = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-ircd-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-ircd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-ircd}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-ircd-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-ircd;unpack=0"
 SRC_URI[aarch64_nagios-plugins-ircd.sha256sum] = "55964ef1aaace9baee0bcebb7dfc2913198a41c87674b8916748dc5285f54429"
 
-URI_aarch64_nagios-plugins-ldap = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-ldap-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-ldap;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-ldap}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-ldap-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-ldap;unpack=0"
 SRC_URI[aarch64_nagios-plugins-ldap.sha256sum] = "da60dffc67f81766be3dfd50ed4e79fa5f4a05ddbf495f74b38e3ce7edd2e95e"
 
-URI_aarch64_nagios-plugins-load = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-load-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-load;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-load}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-load-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-load;unpack=0"
 SRC_URI[aarch64_nagios-plugins-load.sha256sum] = "290be88614476f500e1c49a9067da319242a7dcfbfd49a060bebbdc156271e0a"
 
-URI_aarch64_nagios-plugins-log = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-log-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-log;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-log}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-log-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-log;unpack=0"
 SRC_URI[aarch64_nagios-plugins-log.sha256sum] = "825313897a5b71c5cc79ccaf1d1f19a8a09927839a73ccdf55feebb10002b6ff"
 
-URI_aarch64_nagios-plugins-mailq = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-mailq-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-mailq;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-mailq}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-mailq-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-mailq;unpack=0"
 SRC_URI[aarch64_nagios-plugins-mailq.sha256sum] = "6b2291a910a582a87d144b99748dc1159d7648d20fd03bd18dec1f7381e2ef9d"
 
-URI_aarch64_nagios-plugins-mrtg = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-mrtg-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-mrtg;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-mrtg}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-mrtg-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-mrtg;unpack=0"
 SRC_URI[aarch64_nagios-plugins-mrtg.sha256sum] = "825e6ccbc5d94857fcf06b5bd801f5056927eb2dae478b517e66c0a934cd8ae1"
 
-URI_aarch64_nagios-plugins-mrtgtraf = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-mrtgtraf-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-mrtgtraf;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-mrtgtraf}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-mrtgtraf-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-mrtgtraf;unpack=0"
 SRC_URI[aarch64_nagios-plugins-mrtgtraf.sha256sum] = "24922711240999d0b6ebf5c507459ca50cf52323a2264d83fe3fc3fae1d20754"
 
-URI_aarch64_nagios-plugins-mysql = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-mysql-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-mysql;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-mysql}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-mysql-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-mysql;unpack=0"
 SRC_URI[aarch64_nagios-plugins-mysql.sha256sum] = "e64fd3961facd53107a3b4935fa63755c9c5ce8ddf78471525f44c77ed1898f4"
 
-URI_aarch64_nagios-plugins-nagios = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-nagios-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-nagios;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-nagios}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-nagios-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-nagios;unpack=0"
 SRC_URI[aarch64_nagios-plugins-nagios.sha256sum] = "1233c4f99ef5e5c7df009a64498ec8fff6cd7181b220f8ebd43ece7ee0f89e36"
 
-URI_aarch64_nagios-plugins-nt = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-nt-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-nt;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-nt}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-nt-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-nt;unpack=0"
 SRC_URI[aarch64_nagios-plugins-nt.sha256sum] = "37a26b47a937b5fab31a6033a49996f583ad9ad023ce1181ddc4546c485fd967"
 
-URI_aarch64_nagios-plugins-ntp = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-ntp-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-ntp;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-ntp}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-ntp-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-ntp;unpack=0"
 SRC_URI[aarch64_nagios-plugins-ntp.sha256sum] = "28b0a7535e7d21d75d88f5e774e58c8139e1039a05752932b27a9cfc334e7c2b"
 
-URI_aarch64_nagios-plugins-nwstat = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-nwstat-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-nwstat;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-nwstat}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-nwstat-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-nwstat;unpack=0"
 SRC_URI[aarch64_nagios-plugins-nwstat.sha256sum] = "a2a21b02a7f279cf2d89251369070d69776d545c6567b6dc5a3d9d82608be401"
 
-URI_aarch64_nagios-plugins-oracle = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-oracle-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-oracle;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-oracle}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-oracle-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-oracle;unpack=0"
 SRC_URI[aarch64_nagios-plugins-oracle.sha256sum] = "a651f7c94f25a095c47898ce6a69c6d85924a182c45fd125aed4a51fd86d7ea4"
 
-URI_aarch64_nagios-plugins-overcr = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-overcr-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-overcr;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-overcr}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-overcr-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-overcr;unpack=0"
 SRC_URI[aarch64_nagios-plugins-overcr.sha256sum] = "83d002c5c82e278ff1a28681152497ebd0093af178d026bcf2b0c3c78814ed0d"
 
-URI_aarch64_nagios-plugins-perl = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-perl-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-perl;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-perl}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-perl-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-perl;unpack=0"
 SRC_URI[aarch64_nagios-plugins-perl.sha256sum] = "f5bbd0a4e5479daff5d4729a0c42fd5b6836f4b85a78a7a79d4280b0d1b84800"
 
-URI_aarch64_nagios-plugins-pgsql = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-pgsql-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-pgsql;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-pgsql}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-pgsql-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-pgsql;unpack=0"
 SRC_URI[aarch64_nagios-plugins-pgsql.sha256sum] = "4b1547f702905531ffb26e81e9cb982596069c3c3479f23cd3da22a4840f1535"
 
-URI_aarch64_nagios-plugins-ping = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-ping-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-ping;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-ping}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-ping-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-ping;unpack=0"
 SRC_URI[aarch64_nagios-plugins-ping.sha256sum] = "6fd1d3be3b55ef14ccdee0de5545174382245f44c825f034bc27b2400b00eebf"
 
-URI_aarch64_nagios-plugins-procs = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-procs-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-procs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-procs}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-procs-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-procs;unpack=0"
 SRC_URI[aarch64_nagios-plugins-procs.sha256sum] = "26b4da9657b31c39c4c9fb878f34df88879770ba217cd5a3a75da34ed8964d8a"
 
-URI_aarch64_nagios-plugins-real = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-real-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-real;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-real}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-real-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-real;unpack=0"
 SRC_URI[aarch64_nagios-plugins-real.sha256sum] = "6a1b318e113c89c9eed9312ddefb86022644b3307b6627edccd8adc1f031c683"
 
-URI_aarch64_nagios-plugins-remove_perfdata = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-remove_perfdata-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-remove_perfdata;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-remove_perfdata}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-remove_perfdata-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-remove_perfdata;unpack=0"
 SRC_URI[aarch64_nagios-plugins-remove_perfdata.sha256sum] = "1175eb1a798d91cf82480f5d525e31ca9fdc7e67ff0da5526858ffac56619ba0"
 
-URI_aarch64_nagios-plugins-rpc = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-rpc-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-rpc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-rpc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-rpc-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-rpc;unpack=0"
 SRC_URI[aarch64_nagios-plugins-rpc.sha256sum] = "c3e70d91cc7cb2981ebe8af2e49e26f7baa57134b2ba3de3f0e658841d56fd9b"
 
-URI_aarch64_nagios-plugins-sensors = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-sensors-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-sensors;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-sensors}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-sensors-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-sensors;unpack=0"
 SRC_URI[aarch64_nagios-plugins-sensors.sha256sum] = "99ec491f243c66eda55a7098749475f3cbba4eefd88fb8238f999223d17ff47d"
 
-URI_aarch64_nagios-plugins-smtp = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-smtp-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-smtp;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-smtp}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-smtp-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-smtp;unpack=0"
 SRC_URI[aarch64_nagios-plugins-smtp.sha256sum] = "d1936070a81f931b8c72d5dfc78331d6a03c5c50d2ec9a273c1623408071063e"
 
-URI_aarch64_nagios-plugins-snmp = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-snmp-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-snmp;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-snmp}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-snmp-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-snmp;unpack=0"
 SRC_URI[aarch64_nagios-plugins-snmp.sha256sum] = "9b7664d791af7765becff6fc54292e24a96d1bf08a7750aae55d46a64507a42c"
 
-URI_aarch64_nagios-plugins-ssh = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-ssh-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-ssh;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-ssh}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-ssh-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-ssh;unpack=0"
 SRC_URI[aarch64_nagios-plugins-ssh.sha256sum] = "92b67228fb999424d3766895ef9236e1fcf8bf4c558be2b6a28c4c63ee89d02d"
 
-URI_aarch64_nagios-plugins-ssl_validity = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-ssl_validity-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-ssl_validity;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-ssl_validity}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-ssl_validity-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-ssl_validity;unpack=0"
 SRC_URI[aarch64_nagios-plugins-ssl_validity.sha256sum] = "967cd86863510edfc6b56c8b1052077fc7e2c0848814a618cac182d218769edc"
 
-URI_aarch64_nagios-plugins-swap = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-swap-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-swap;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-swap}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-swap-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-swap;unpack=0"
 SRC_URI[aarch64_nagios-plugins-swap.sha256sum] = "cbfaaefeaa7b89c95a141fc6f8b4c2da9ea87e080faa723ae9fcae9442d28b86"
 
-URI_aarch64_nagios-plugins-tcp = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-tcp-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-tcp;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-tcp}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-tcp-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-tcp;unpack=0"
 SRC_URI[aarch64_nagios-plugins-tcp.sha256sum] = "2b9fdd60cdb1b62e2c0f9a411dc7aea749c0ed05db512283f1084cd5ce7daa80"
 
-URI_aarch64_nagios-plugins-time = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-time-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-time;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-time}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-time-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-time;unpack=0"
 SRC_URI[aarch64_nagios-plugins-time.sha256sum] = "2502c22fcfcae8a4004a6398715c063ed31e7a2032b6e9e818c5e6d6b2e3e910"
 
-URI_aarch64_nagios-plugins-ups = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-ups-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-ups;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-ups}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-ups-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-ups;unpack=0"
 SRC_URI[aarch64_nagios-plugins-ups.sha256sum] = "e48e6c491f9fb9c7ae5f18d269236e92576bada2b638d17b422422afb64404e4"
 
-URI_aarch64_nagios-plugins-uptime = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-uptime-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-uptime;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-uptime}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-uptime-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-uptime;unpack=0"
 SRC_URI[aarch64_nagios-plugins-uptime.sha256sum] = "71fff51dae8da91260e5d6a01e610c74d25c5b077ff9b613747ca97f3322dce9"
 
-URI_aarch64_nagios-plugins-users = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-users-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-users;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-users}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-users-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-users;unpack=0"
 SRC_URI[aarch64_nagios-plugins-users.sha256sum] = "42ca9e9874ed4c27fd22f447e36bd726a0efcb31902f64b899b6783ad59df454"
 
-URI_aarch64_nagios-plugins-wave = "${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-wave-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-wave;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nagios-plugins-wave}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nagios-plugins-wave-2.4.12-4.el10_2.aarch64.rpm;name=aarch64_nagios-plugins-wave;unpack=0"
 SRC_URI[aarch64_nagios-plugins-wave.sha256sum] = "6ef64367827d58c0332be327744b7c4b4b23a3c41ee95647b8073fb5ba4a63ac"
 
 RDEPENDS:nagios-plugins = " \

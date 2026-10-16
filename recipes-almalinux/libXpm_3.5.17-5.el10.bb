@@ -10,25 +10,26 @@ PACKAGES = " \
  libXpm-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libXpm-3.5.17-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libXpm-3.5.17-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "64773942d37dbdaada91492825d4833b31a3141772cffe6be524576ba286dcea"
 
-URI_x86_64_v2_libXpm = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXpm-3.5.17-5.el10.x86_64_v2.rpm;name=x86_64_v2_libXpm;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libXpm}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXpm-3.5.17-5.el10.x86_64_v2.rpm;name=x86_64_v2_libXpm;unpack=0"
 SRC_URI[x86_64_v2_libXpm.sha256sum] = "7bc380eac7c0ec5040eaa27855e585c3ae868fa7b4b542c315ef7226f6c229f9"
 
-URI_x86_64_v2_libXpm-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXpm-devel-3.5.17-5.el10.x86_64_v2.rpm;name=x86_64_v2_libXpm-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libXpm-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXpm-devel-3.5.17-5.el10.x86_64_v2.rpm;name=x86_64_v2_libXpm-devel;unpack=0"
 SRC_URI[x86_64_v2_libXpm-devel.sha256sum] = "19fffea0778306be624cc643ef21a16b595f18b3a5f548e4c0e1956ba7c13fec"
 
-URI_aarch64_libXpm = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXpm-3.5.17-5.el10.aarch64.rpm;name=aarch64_libXpm;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libXpm}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXpm-3.5.17-5.el10.aarch64.rpm;name=aarch64_libXpm;unpack=0"
 SRC_URI[aarch64_libXpm.sha256sum] = "56ba7e86f992aa8d01deb505a1340818aacf4105eb69717e8c131249f74bac5e"
 
-URI_aarch64_libXpm-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXpm-devel-3.5.17-5.el10.aarch64.rpm;name=aarch64_libXpm-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libXpm-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXpm-devel-3.5.17-5.el10.aarch64.rpm;name=aarch64_libXpm-devel;unpack=0"
 SRC_URI[aarch64_libXpm-devel.sha256sum] = "67d0cc4f74da19341b43e971fdac75151bf18e34b5f04daeeadc3be8f0cb2726"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libXpm-3.5.17-5.el10.riscv64.rpm;name=riscv64_libXpm;unpack=0"
+SRC_URI[riscv64_libXpm.sha256sum] = "30461f89adbcff3a1c3a440f8123a09dfd658a3011b06d8c6b7ba56afcc98953"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libXpm-devel-3.5.17-5.el10.riscv64.rpm;name=riscv64_libXpm-devel;unpack=0"
+SRC_URI[riscv64_libXpm-devel.sha256sum] = "f99a8b615d8112291c311b42b67aef85f9a33b5b0f75efe8b752b1a1f8c60fca"
 
 RDEPENDS:libXpm = " \
  glibc \

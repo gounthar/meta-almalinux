@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "ack"
 PV = "3.9.0"
 PR = "3.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  ack \
- "
+"
+PACKAGES:aarch64 = " \
+ ack \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/a/ack-3.9.0-3.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/a/ack-3.9.0-3.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "0aae8fbf1a30e78aa184982d9508b28ce0f5e6603d79ea94fe1d431e7e38f20d"
 
-URI_x86_64_v2_ack = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ack-3.9.0-3.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_ack;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ack}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ack-3.9.0-3.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_ack;unpack=0"
 SRC_URI[x86_64_v2_ack.sha256sum] = "2b41d2a95e715f54793cdf6a2d0d1a4e60960c81f3f3b51cadf26c537f9d022c"
 
-URI_aarch64_ack = "${EPEL_MIRROR}/aarch64/Packages/a/ack-3.9.0-3.el10_2.noarch.rpm;name=aarch64_ack;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ack}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/a/ack-3.9.0-3.el10_2.noarch.rpm;name=aarch64_ack;unpack=0"
 SRC_URI[aarch64_ack.sha256sum] = "bcf1d9572c65c3f7d92d1a1a59152b420382342db1e497b2a1fa68f2e4466607"
 
 RDEPENDS:ack = " \

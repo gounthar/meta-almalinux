@@ -10,25 +10,26 @@ PACKAGES = " \
  libdatrie-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libdatrie-0.2.13-11.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libdatrie-0.2.13-11.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "17c370d5a8fe65bc1e4f064583fac930b1f9da5fd71633d05d29e43d67847e19"
 
-URI_x86_64_v2_libdatrie = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libdatrie-0.2.13-11.el10.x86_64_v2.rpm;name=x86_64_v2_libdatrie;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libdatrie}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libdatrie-0.2.13-11.el10.x86_64_v2.rpm;name=x86_64_v2_libdatrie;unpack=0"
 SRC_URI[x86_64_v2_libdatrie.sha256sum] = "a49f2abd4c95c366882fc1ab5aeebcf97e17ecd9dfd1bfb5dc4d498b9e281971"
 
-URI_x86_64_v2_libdatrie-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libdatrie-devel-0.2.13-11.el10.x86_64_v2.rpm;name=x86_64_v2_libdatrie-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libdatrie-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libdatrie-devel-0.2.13-11.el10.x86_64_v2.rpm;name=x86_64_v2_libdatrie-devel;unpack=0"
 SRC_URI[x86_64_v2_libdatrie-devel.sha256sum] = "5b97ef81bfadf5c2ff57bb0ac696a1a2133b1a5d900e0e095797e06184a4ff89"
 
-URI_aarch64_libdatrie = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libdatrie-0.2.13-11.el10.aarch64.rpm;name=aarch64_libdatrie;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libdatrie}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libdatrie-0.2.13-11.el10.aarch64.rpm;name=aarch64_libdatrie;unpack=0"
 SRC_URI[aarch64_libdatrie.sha256sum] = "6082ad2ff3863f48f11668aeaec6bbe90e31732827885a6cc4cc822402497cd8"
 
-URI_aarch64_libdatrie-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libdatrie-devel-0.2.13-11.el10.aarch64.rpm;name=aarch64_libdatrie-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libdatrie-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libdatrie-devel-0.2.13-11.el10.aarch64.rpm;name=aarch64_libdatrie-devel;unpack=0"
 SRC_URI[aarch64_libdatrie-devel.sha256sum] = "103aae60f120c0583d8efab6d7614e180d7bf8af4b7878f86069ae2e21811fc2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libdatrie-0.2.13-11.el10.riscv64.rpm;name=riscv64_libdatrie;unpack=0"
+SRC_URI[riscv64_libdatrie.sha256sum] = "1b2390fbd1360057d684375437c437d0a056fae32d00f4614e3172a77e03bb06"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libdatrie-devel-0.2.13-11.el10.riscv64.rpm;name=riscv64_libdatrie-devel;unpack=0"
+SRC_URI[riscv64_libdatrie-devel.sha256sum] = "21e26b3233c67f8af56e7ffffb78bede2a590f3c0256542d613c5d0384442d69"
 
 RDEPENDS:libdatrie = " \
  glibc \

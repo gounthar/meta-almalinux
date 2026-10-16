@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-png0.17"
 PV = "0.17.16"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-png0.17+default-devel \
  rust-png0.17-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-png0.17+default-devel \
+ rust-png0.17-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-png0.17-0.17.16-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-png0.17-0.17.16-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d0b74ce65499d5f04eb02a849102de36fd8952fea6e8099efdd4df209f4a9e48"
 
-URI_x86_64_v2_rust-png0.17+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-png0.17+default-devel-0.17.16-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-png0.17+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-png0.17+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-png0.17+default-devel-0.17.16-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-png0.17+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-png0.17+default-devel.sha256sum] = "703fc5c995e2fdd1dfa0491529772e7f16e49a2d6bcf92ff93b3f075722398fa"
 
-URI_x86_64_v2_rust-png0.17-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-png0.17-devel-0.17.16-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-png0.17-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-png0.17-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-png0.17-devel-0.17.16-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-png0.17-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-png0.17-devel.sha256sum] = "22df8fcf74060f99fb4ed7a2eab2605cf4af2619190009cfb7eed5394c559de6"
 
-URI_aarch64_rust-png0.17+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-png0.17+default-devel-0.17.16-1.el10_2.noarch.rpm;name=aarch64_rust-png0.17+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-png0.17+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-png0.17+default-devel-0.17.16-1.el10_2.noarch.rpm;name=aarch64_rust-png0.17+default-devel;unpack=0"
 SRC_URI[aarch64_rust-png0.17+default-devel.sha256sum] = "f8f59749f7eef4083b32218796b904f6204df728d008118dfc7c39bfc954a035"
 
-URI_aarch64_rust-png0.17-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-png0.17-devel-0.17.16-1.el10_2.noarch.rpm;name=aarch64_rust-png0.17-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-png0.17-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-png0.17-devel-0.17.16-1.el10_2.noarch.rpm;name=aarch64_rust-png0.17-devel;unpack=0"
 SRC_URI[aarch64_rust-png0.17-devel.sha256sum] = "c76099bc8d86a50b90bbbfac9300d740a34f9e39025e48cbf745e096544e7533"
 
 RDEPENDS:rust-png0.17+default-devel = " \

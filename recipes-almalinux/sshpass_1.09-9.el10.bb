@@ -9,17 +9,17 @@ PACKAGES = " \
  sshpass \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/sshpass-1.09-9.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/sshpass-1.09-9.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "72fa1ac0603b0ef15491e6567a8e6f949466532e9c3a3e3fa176153561a862d2"
 
-URI_x86_64_v2_sshpass = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sshpass-1.09-9.el10.x86_64_v2.rpm;name=x86_64_v2_sshpass;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_sshpass}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sshpass-1.09-9.el10.x86_64_v2.rpm;name=x86_64_v2_sshpass;unpack=0"
 SRC_URI[x86_64_v2_sshpass.sha256sum] = "86e54c7ea0075e846099188d70b900ee19a135b4fb6bef39c58bb8c239ffc852"
 
-URI_aarch64_sshpass = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/sshpass-1.09-9.el10.aarch64.rpm;name=aarch64_sshpass;unpack=0"
-SRC_URI:append = " ${URI_aarch64_sshpass}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/sshpass-1.09-9.el10.aarch64.rpm;name=aarch64_sshpass;unpack=0"
 SRC_URI[aarch64_sshpass.sha256sum] = "d7afa07ed4aac3c28748b9c10172c877c76478d68e6762e722dd0be479d47a59"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/sshpass-1.09-9.el10.riscv64.rpm;name=riscv64_sshpass;unpack=0"
+SRC_URI[riscv64_sshpass.sha256sum] = "3fb30ec82cd05438116067015cfc4f69fb5b1ecbb845a61d0bc7613e5140e8b3"
 
 RDEPENDS:sshpass = " \
  glibc \

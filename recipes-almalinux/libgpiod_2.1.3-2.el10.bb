@@ -13,49 +13,53 @@ PACKAGES = " \
  python3-libgpiod \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libgpiod-2.1.3-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libgpiod-2.1.3-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c50063bbb9401308da4905c7a831c2cbed9d9c539f28fbb948120ff35a0072dd"
 
-URI_x86_64_v2_libgpiod = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libgpiod-2.1.3-2.el10.x86_64_v2.rpm;name=x86_64_v2_libgpiod;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libgpiod}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libgpiod-2.1.3-2.el10.x86_64_v2.rpm;name=x86_64_v2_libgpiod;unpack=0"
 SRC_URI[x86_64_v2_libgpiod.sha256sum] = "3ba6e89cf9b0c6d7fa191dbfd35cc620b9d0f0d3010065ad5eb0e26eb6925d99"
 
-URI_x86_64_v2_libgpiod-c++ = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libgpiod-c++-2.1.3-2.el10.x86_64_v2.rpm;name=x86_64_v2_libgpiod-c++;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libgpiod-c++}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libgpiod-c++-2.1.3-2.el10.x86_64_v2.rpm;name=x86_64_v2_libgpiod-c++;unpack=0"
 SRC_URI[x86_64_v2_libgpiod-c++.sha256sum] = "f0091e5cc61c1f6e3f49b64e26594c4e79426f829efff8ae31331242dc290d51"
 
-URI_x86_64_v2_libgpiod-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libgpiod-devel-2.1.3-2.el10.x86_64_v2.rpm;name=x86_64_v2_libgpiod-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libgpiod-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libgpiod-devel-2.1.3-2.el10.x86_64_v2.rpm;name=x86_64_v2_libgpiod-devel;unpack=0"
 SRC_URI[x86_64_v2_libgpiod-devel.sha256sum] = "ebffcb9ef985fd7bcecacccfed6a7656e81eb50c23dbfe4e682229e285deed26"
 
-URI_x86_64_v2_libgpiod-utils = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libgpiod-utils-2.1.3-2.el10.x86_64_v2.rpm;name=x86_64_v2_libgpiod-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libgpiod-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libgpiod-utils-2.1.3-2.el10.x86_64_v2.rpm;name=x86_64_v2_libgpiod-utils;unpack=0"
 SRC_URI[x86_64_v2_libgpiod-utils.sha256sum] = "2e0a4a1ca8a1620ef7df5f56216f87584d45b24dea6751cb7eb9e99ecd168899"
 
-URI_x86_64_v2_python3-libgpiod = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-libgpiod-2.1.3-2.el10.x86_64_v2.rpm;name=x86_64_v2_python3-libgpiod;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-libgpiod}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-libgpiod-2.1.3-2.el10.x86_64_v2.rpm;name=x86_64_v2_python3-libgpiod;unpack=0"
 SRC_URI[x86_64_v2_python3-libgpiod.sha256sum] = "5d9cd4932d94097be9ca15e8376a9f53141dd31ef3f7d998d65251ef84d73e5b"
 
-URI_aarch64_libgpiod = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libgpiod-2.1.3-2.el10.aarch64.rpm;name=aarch64_libgpiod;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libgpiod}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libgpiod-2.1.3-2.el10.aarch64.rpm;name=aarch64_libgpiod;unpack=0"
 SRC_URI[aarch64_libgpiod.sha256sum] = "38ebfa76b2b0e6509e5c6b93ae3eb09fe9cbb1075c196a33f4dc217de98724be"
 
-URI_aarch64_libgpiod-c++ = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libgpiod-c++-2.1.3-2.el10.aarch64.rpm;name=aarch64_libgpiod-c++;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libgpiod-c++}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libgpiod-c++-2.1.3-2.el10.aarch64.rpm;name=aarch64_libgpiod-c++;unpack=0"
 SRC_URI[aarch64_libgpiod-c++.sha256sum] = "019d4f6f5cd52b4fbe9f5b6c6f6337dc22d6423c2ecd3ca7f345ec36cd2c52cd"
 
-URI_aarch64_libgpiod-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libgpiod-devel-2.1.3-2.el10.aarch64.rpm;name=aarch64_libgpiod-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libgpiod-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libgpiod-devel-2.1.3-2.el10.aarch64.rpm;name=aarch64_libgpiod-devel;unpack=0"
 SRC_URI[aarch64_libgpiod-devel.sha256sum] = "32148a5416e5a8872804a2694d22f8bff3ecab3b23abb836641de6ac21097a16"
 
-URI_aarch64_libgpiod-utils = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libgpiod-utils-2.1.3-2.el10.aarch64.rpm;name=aarch64_libgpiod-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libgpiod-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libgpiod-utils-2.1.3-2.el10.aarch64.rpm;name=aarch64_libgpiod-utils;unpack=0"
 SRC_URI[aarch64_libgpiod-utils.sha256sum] = "395845ba1ee3ae30e3261f1d573064bc47d807cb5fc7cbad7eab161e24992485"
 
-URI_aarch64_python3-libgpiod = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-libgpiod-2.1.3-2.el10.aarch64.rpm;name=aarch64_python3-libgpiod;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-libgpiod}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-libgpiod-2.1.3-2.el10.aarch64.rpm;name=aarch64_python3-libgpiod;unpack=0"
 SRC_URI[aarch64_python3-libgpiod.sha256sum] = "d93580cbbdef4233037f282a3417306742498093373bae2fe4d77311117b0c85"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libgpiod-2.1.3-2.el10.riscv64.rpm;name=riscv64_libgpiod;unpack=0"
+SRC_URI[riscv64_libgpiod.sha256sum] = "97d16787cb41c24c0dae38633c2da6e85cc5df7da678f66ffb2af8b7107647e4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libgpiod-c++-2.1.3-2.el10.riscv64.rpm;name=riscv64_libgpiod-c++;unpack=0"
+SRC_URI[riscv64_libgpiod-c++.sha256sum] = "96bdbfd0cfe8037d819a43509f3b6e0de96219602b240874e370bdda932089b1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libgpiod-devel-2.1.3-2.el10.riscv64.rpm;name=riscv64_libgpiod-devel;unpack=0"
+SRC_URI[riscv64_libgpiod-devel.sha256sum] = "8cf0e1e2d3abd27a90319080737c0c6d77b848953b25ea5ad1f5e8b365643720"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libgpiod-utils-2.1.3-2.el10.riscv64.rpm;name=riscv64_libgpiod-utils;unpack=0"
+SRC_URI[riscv64_libgpiod-utils.sha256sum] = "bb9ac2c2780adf2ddee5f554c6819db9d9695cf9bad8f9de88965aaefd219ec9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-libgpiod-2.1.3-2.el10.riscv64.rpm;name=riscv64_python3-libgpiod;unpack=0"
+SRC_URI[riscv64_python3-libgpiod.sha256sum] = "ef3e3cc6d8732801b603640a34f38555b2c00ac938b240cfeb1f3e8ad82f3c60"
 
 RDEPENDS:libgpiod = " \
  glibc \

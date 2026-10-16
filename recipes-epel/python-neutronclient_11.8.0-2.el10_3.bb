@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "python-neutronclient"
 PV = "11.8.0"
 PR = "2.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python-neutronclient-doc \
  python3-neutronclient \
  python3-neutronclient-tests \
- "
+"
+PACKAGES:aarch64 = " \
+ python-neutronclient-doc \
+ python3-neutronclient \
+ python3-neutronclient-tests \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-neutronclient-11.8.0-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-neutronclient-11.8.0-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7bb7b9ad75184d24c8d1922e365ec3f79cbaa94d5b184fb2e9d39ca58570538d"
 
-URI_x86_64_v2_python-neutronclient-doc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python-neutronclient-doc-11.8.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python-neutronclient-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python-neutronclient-doc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python-neutronclient-doc-11.8.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python-neutronclient-doc;unpack=0"
 SRC_URI[x86_64_v2_python-neutronclient-doc.sha256sum] = "e0d465873fe5d2f55a17695280bc84a9d3f5a6785ffdab491f21b581d5ab15f7"
 
-URI_x86_64_v2_python3-neutronclient = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-neutronclient-11.8.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-neutronclient;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-neutronclient}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-neutronclient-11.8.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-neutronclient;unpack=0"
 SRC_URI[x86_64_v2_python3-neutronclient.sha256sum] = "48b03a302f08d1baa09acfb4a9493f60e553a30eaeb8360cef266168ecffb3af"
 
-URI_x86_64_v2_python3-neutronclient-tests = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-neutronclient-tests-11.8.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-neutronclient-tests;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-neutronclient-tests}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-neutronclient-tests-11.8.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-neutronclient-tests;unpack=0"
 SRC_URI[x86_64_v2_python3-neutronclient-tests.sha256sum] = "e351a3ca42d3c0a857f82ed4e43c99bb910c73cde43a7c4bf34380efc2c7c6b9"
 
-URI_aarch64_python-neutronclient-doc = "${EPEL_MIRROR}/aarch64/Packages/p/python-neutronclient-doc-11.8.0-2.el10_3.noarch.rpm;name=aarch64_python-neutronclient-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python-neutronclient-doc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python-neutronclient-doc-11.8.0-2.el10_3.noarch.rpm;name=aarch64_python-neutronclient-doc;unpack=0"
 SRC_URI[aarch64_python-neutronclient-doc.sha256sum] = "95b27ce33c0e92b8566dc6df996b8e8c15f099027e28cf59d329cac423cbb7f1"
 
-URI_aarch64_python3-neutronclient = "${EPEL_MIRROR}/aarch64/Packages/p/python3-neutronclient-11.8.0-2.el10_3.noarch.rpm;name=aarch64_python3-neutronclient;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-neutronclient}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-neutronclient-11.8.0-2.el10_3.noarch.rpm;name=aarch64_python3-neutronclient;unpack=0"
 SRC_URI[aarch64_python3-neutronclient.sha256sum] = "186b9d81746ad168ded74cd5e1b384e2b7412e170a727a99256268ca755f1fd2"
 
-URI_aarch64_python3-neutronclient-tests = "${EPEL_MIRROR}/aarch64/Packages/p/python3-neutronclient-tests-11.8.0-2.el10_3.noarch.rpm;name=aarch64_python3-neutronclient-tests;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-neutronclient-tests}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-neutronclient-tests-11.8.0-2.el10_3.noarch.rpm;name=aarch64_python3-neutronclient-tests;unpack=0"
 SRC_URI[aarch64_python3-neutronclient-tests.sha256sum] = "3212f3f6742485a68595dcbd3ea7d31bf59b9e40faa8dec79a722376fa833a2c"
 
 RDEPENDS:python-neutronclient-doc = " \

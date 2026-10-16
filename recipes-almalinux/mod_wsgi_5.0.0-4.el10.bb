@@ -9,17 +9,17 @@ PACKAGES = " \
  python3-mod_wsgi \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/mod_wsgi-5.0.0-4.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/mod_wsgi-5.0.0-4.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "75ca82f43f07ac12e6e77f2f85cdedb894e5dae9b7533ee50366c86521bb18ff"
 
-URI_x86_64_v2_python3-mod_wsgi = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-mod_wsgi-5.0.0-4.el10.x86_64_v2.rpm;name=x86_64_v2_python3-mod_wsgi;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-mod_wsgi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-mod_wsgi-5.0.0-4.el10.x86_64_v2.rpm;name=x86_64_v2_python3-mod_wsgi;unpack=0"
 SRC_URI[x86_64_v2_python3-mod_wsgi.sha256sum] = "a4eb6306a137a5bd7e8c9a38a585bddb6ae5a918487fd6cb2e22e06f0f36ee44"
 
-URI_aarch64_python3-mod_wsgi = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-mod_wsgi-5.0.0-4.el10.aarch64.rpm;name=aarch64_python3-mod_wsgi;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-mod_wsgi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-mod_wsgi-5.0.0-4.el10.aarch64.rpm;name=aarch64_python3-mod_wsgi;unpack=0"
 SRC_URI[aarch64_python3-mod_wsgi.sha256sum] = "da603e17ab852040ff88985700dcbe8d449636591bd38188b43b8d06a9f7c650"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-mod_wsgi-5.0.0-4.el10.riscv64.rpm;name=riscv64_python3-mod_wsgi;unpack=0"
+SRC_URI[riscv64_python3-mod_wsgi.sha256sum] = "d0b86a7af5f1a706165f2348c7ed74f983b8d624f059504cc745e6108db021f8"
 
 RDEPENDS:python3-mod_wsgi = " \
  glibc \

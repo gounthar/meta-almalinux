@@ -10,25 +10,26 @@ PACKAGES = " \
  gnome-calculator-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gnome-calculator-46.3-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gnome-calculator-46.3-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "560f61d1c599eb33059f76f138f0c4405089bbd1e7489b9e4f2dc9562e74064b"
 
-URI_x86_64_v2_gnome-calculator = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gnome-calculator-46.3-1.el10.x86_64_v2.rpm;name=x86_64_v2_gnome-calculator;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gnome-calculator}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gnome-calculator-46.3-1.el10.x86_64_v2.rpm;name=x86_64_v2_gnome-calculator;unpack=0"
 SRC_URI[x86_64_v2_gnome-calculator.sha256sum] = "d7308432734b9a3c361b6b07059de8bcc3c93387da1047b29c24fc5c4291154e"
 
-URI_x86_64_v2_gnome-calculator-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/gnome-calculator-devel-46.3-1.el10.x86_64_v2.rpm;name=x86_64_v2_gnome-calculator-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gnome-calculator-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/gnome-calculator-devel-46.3-1.el10.x86_64_v2.rpm;name=x86_64_v2_gnome-calculator-devel;unpack=0"
 SRC_URI[x86_64_v2_gnome-calculator-devel.sha256sum] = "487e7e71d963e7108bc0e2c211375399ca5a2da980d1aea293bf3c887cdf5076"
 
-URI_aarch64_gnome-calculator = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gnome-calculator-46.3-1.el10.aarch64.rpm;name=aarch64_gnome-calculator;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gnome-calculator}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gnome-calculator-46.3-1.el10.aarch64.rpm;name=aarch64_gnome-calculator;unpack=0"
 SRC_URI[aarch64_gnome-calculator.sha256sum] = "c76f42db4ce0cf688c876879d04d2205c63f2753e9425d3c107c635952a47b25"
 
-URI_aarch64_gnome-calculator-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/gnome-calculator-devel-46.3-1.el10.aarch64.rpm;name=aarch64_gnome-calculator-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gnome-calculator-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/gnome-calculator-devel-46.3-1.el10.aarch64.rpm;name=aarch64_gnome-calculator-devel;unpack=0"
 SRC_URI[aarch64_gnome-calculator-devel.sha256sum] = "ecd7a8a7b3192fd76826c200c0b14181f79c5a4b37025ef313de31beab1e013f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gnome-calculator-46.3-1.el10.riscv64.rpm;name=riscv64_gnome-calculator;unpack=0"
+SRC_URI[riscv64_gnome-calculator.sha256sum] = "5ec3de25eefc9c18671d4b44addfd4557c077fca1ee119a765c494748b9cbdb3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/gnome-calculator-devel-46.3-1.el10.riscv64.rpm;name=riscv64_gnome-calculator-devel;unpack=0"
+SRC_URI[riscv64_gnome-calculator-devel.sha256sum] = "2e6db16541fdb4aaa59d46e8f857ebd511f3a78692413feeae5358162a323b2d"
 
 RDEPENDS:gnome-calculator = " \
  glib2 \

@@ -5,7 +5,7 @@ inherit dnf-bridge
 PN = "rust-validator"
 PV = "0.20.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-validator+default-devel \
  rust-validator+derive-devel \
  rust-validator+indexmap-devel \
@@ -13,66 +13,63 @@ PACKAGES = " \
  rust-validator+unic-ucd-common-devel \
  rust-validator+validator_derive-devel \
  rust-validator-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-validator+default-devel \
+ rust-validator+derive-devel \
+ rust-validator+indexmap-devel \
+ rust-validator+unic-devel \
+ rust-validator+unic-ucd-common-devel \
+ rust-validator+validator_derive-devel \
+ rust-validator-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-validator-0.20.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-validator-0.20.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6d81145ef6164f0e4bf7256265df39f93f61bf290f00ddb439df0a58d3008e1e"
 
-URI_x86_64_v2_rust-validator+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-validator+default-devel-0.20.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-validator+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-validator+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-validator+default-devel-0.20.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-validator+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-validator+default-devel.sha256sum] = "152cb8a4f643637aa313817afd8d495e523d142df607345d3f975cfa0fce8960"
 
-URI_x86_64_v2_rust-validator+derive-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-validator+derive-devel-0.20.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-validator+derive-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-validator+derive-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-validator+derive-devel-0.20.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-validator+derive-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-validator+derive-devel.sha256sum] = "5b3dbe656b320169fb7d3af91116935797c6ccb319625c109d59f5663a4b520c"
 
-URI_x86_64_v2_rust-validator+indexmap-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-validator+indexmap-devel-0.20.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-validator+indexmap-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-validator+indexmap-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-validator+indexmap-devel-0.20.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-validator+indexmap-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-validator+indexmap-devel.sha256sum] = "b032c87e8e568c62d5651474c9a00d865934208b18903e0dfe83d3e7e51fc89f"
 
-URI_x86_64_v2_rust-validator+unic-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-validator+unic-devel-0.20.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-validator+unic-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-validator+unic-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-validator+unic-devel-0.20.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-validator+unic-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-validator+unic-devel.sha256sum] = "2b9d535aee1e82c8f5beff77c16fa099db294000f65449bc841625a82b79a583"
 
-URI_x86_64_v2_rust-validator+unic-ucd-common-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-validator+unic-ucd-common-devel-0.20.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-validator+unic-ucd-common-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-validator+unic-ucd-common-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-validator+unic-ucd-common-devel-0.20.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-validator+unic-ucd-common-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-validator+unic-ucd-common-devel.sha256sum] = "8177846f2d4f2ea9231096c9aa73871570945a5af8c630e0c865950f8793f12f"
 
-URI_x86_64_v2_rust-validator+validator_derive-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-validator+validator_derive-devel-0.20.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-validator+validator_derive-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-validator+validator_derive-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-validator+validator_derive-devel-0.20.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-validator+validator_derive-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-validator+validator_derive-devel.sha256sum] = "358f58dadc3f061d098ddeaac434fd72b5e647b741db4b2c8708f586ebafd666"
 
-URI_x86_64_v2_rust-validator-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-validator-devel-0.20.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-validator-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-validator-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-validator-devel-0.20.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-validator-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-validator-devel.sha256sum] = "a5e0d9f773de1928d346083b175b3c690fdf438b335264ee8b7258b62732db79"
 
-URI_aarch64_rust-validator+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-validator+default-devel-0.20.0-1.el10_3.noarch.rpm;name=aarch64_rust-validator+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-validator+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-validator+default-devel-0.20.0-1.el10_3.noarch.rpm;name=aarch64_rust-validator+default-devel;unpack=0"
 SRC_URI[aarch64_rust-validator+default-devel.sha256sum] = "889e6e20d9ba72dbcdc686ce9ab6b9f9b80802db403af0a0267314d2a1eadf9c"
 
-URI_aarch64_rust-validator+derive-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-validator+derive-devel-0.20.0-1.el10_3.noarch.rpm;name=aarch64_rust-validator+derive-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-validator+derive-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-validator+derive-devel-0.20.0-1.el10_3.noarch.rpm;name=aarch64_rust-validator+derive-devel;unpack=0"
 SRC_URI[aarch64_rust-validator+derive-devel.sha256sum] = "13695eb3ec7e834bf76966f6f68f708470c86b98dc5ebb0234a4fb083c03fe33"
 
-URI_aarch64_rust-validator+indexmap-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-validator+indexmap-devel-0.20.0-1.el10_3.noarch.rpm;name=aarch64_rust-validator+indexmap-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-validator+indexmap-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-validator+indexmap-devel-0.20.0-1.el10_3.noarch.rpm;name=aarch64_rust-validator+indexmap-devel;unpack=0"
 SRC_URI[aarch64_rust-validator+indexmap-devel.sha256sum] = "7e9eb9e32d0eb1b3666e4cee4e7239ef55e1d60b78f30c5094eb66b2f5664f09"
 
-URI_aarch64_rust-validator+unic-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-validator+unic-devel-0.20.0-1.el10_3.noarch.rpm;name=aarch64_rust-validator+unic-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-validator+unic-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-validator+unic-devel-0.20.0-1.el10_3.noarch.rpm;name=aarch64_rust-validator+unic-devel;unpack=0"
 SRC_URI[aarch64_rust-validator+unic-devel.sha256sum] = "0288eb29ceb9a1f363d4ab99cb89cc16ef25e8a5340245f8bee7ebfa1f1f6c8c"
 
-URI_aarch64_rust-validator+unic-ucd-common-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-validator+unic-ucd-common-devel-0.20.0-1.el10_3.noarch.rpm;name=aarch64_rust-validator+unic-ucd-common-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-validator+unic-ucd-common-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-validator+unic-ucd-common-devel-0.20.0-1.el10_3.noarch.rpm;name=aarch64_rust-validator+unic-ucd-common-devel;unpack=0"
 SRC_URI[aarch64_rust-validator+unic-ucd-common-devel.sha256sum] = "545d24425137734406992b4ce1a6418167088d95b674d47a8d94b6347a774382"
 
-URI_aarch64_rust-validator+validator_derive-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-validator+validator_derive-devel-0.20.0-1.el10_3.noarch.rpm;name=aarch64_rust-validator+validator_derive-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-validator+validator_derive-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-validator+validator_derive-devel-0.20.0-1.el10_3.noarch.rpm;name=aarch64_rust-validator+validator_derive-devel;unpack=0"
 SRC_URI[aarch64_rust-validator+validator_derive-devel.sha256sum] = "0fe5232971c027d600975fc19796e699a1db9b0501b458a88056c89fa9eba808"
 
-URI_aarch64_rust-validator-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-validator-devel-0.20.0-1.el10_3.noarch.rpm;name=aarch64_rust-validator-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-validator-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-validator-devel-0.20.0-1.el10_3.noarch.rpm;name=aarch64_rust-validator-devel;unpack=0"
 SRC_URI[aarch64_rust-validator-devel.sha256sum] = "d1a839dd9cc906e3cf4d8dbf1b85153552e48da6e02364397b83f1c251845596"
 
 RDEPENDS:rust-validator+default-devel = " \

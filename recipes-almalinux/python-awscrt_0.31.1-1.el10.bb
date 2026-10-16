@@ -9,17 +9,17 @@ PACKAGES = " \
  python3-awscrt \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python-awscrt-0.31.1-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python-awscrt-0.31.1-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "16847b99f148f110921bc4b41baa9518186ee8572ca9ed9873f2de3243b979ea"
 
-URI_x86_64_v2_python3-awscrt = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-awscrt-0.31.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_python3-awscrt;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-awscrt}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-awscrt-0.31.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_python3-awscrt;unpack=0"
 SRC_URI[x86_64_v2_python3-awscrt.sha256sum] = "e93bdf06599957d7eafc66ca28587841ddd3af426b343d51834e1bedad38b9b1"
 
-URI_aarch64_python3-awscrt = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-awscrt-0.31.1-1.el10.aarch64.rpm;name=aarch64_python3-awscrt;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-awscrt}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-awscrt-0.31.1-1.el10.aarch64.rpm;name=aarch64_python3-awscrt;unpack=0"
 SRC_URI[aarch64_python3-awscrt.sha256sum] = "71f2e2c5d281dfee37de9b05ad94cf79ea0004fd260d019a4b3bbdddf006f2fc"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-awscrt-0.31.1-1.el10.riscv64.rpm;name=riscv64_python3-awscrt;unpack=0"
+SRC_URI[riscv64_python3-awscrt.sha256sum] = "92c77a10af7b8e3bf0bc6f624d8924be8d3ae199784740f530dd94845635ee0c"
 
 RDEPENDS:python3-awscrt = " \
  glibc \

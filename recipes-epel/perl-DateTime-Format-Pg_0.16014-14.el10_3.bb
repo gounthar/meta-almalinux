@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "perl-DateTime-Format-Pg"
 PV = "0.16014"
 PR = "14.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-DateTime-Format-Pg \
  perl-DateTime-Format-Pg-tests \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-DateTime-Format-Pg \
+ perl-DateTime-Format-Pg-tests \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-DateTime-Format-Pg-0.16014-14.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-DateTime-Format-Pg-0.16014-14.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3583c66381caa99107a9f6134429c5f156b7a02f13dd101587595cdcabfa8b36"
 
-URI_x86_64_v2_perl-DateTime-Format-Pg = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-DateTime-Format-Pg-0.16014-14.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-DateTime-Format-Pg;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-DateTime-Format-Pg}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-DateTime-Format-Pg-0.16014-14.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-DateTime-Format-Pg;unpack=0"
 SRC_URI[x86_64_v2_perl-DateTime-Format-Pg.sha256sum] = "c23511b2097f32fed8f5a9ccdd72394bba9081495c5467a7584b4e08785d3709"
 
-URI_x86_64_v2_perl-DateTime-Format-Pg-tests = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-DateTime-Format-Pg-tests-0.16014-14.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-DateTime-Format-Pg-tests;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-DateTime-Format-Pg-tests}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-DateTime-Format-Pg-tests-0.16014-14.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-DateTime-Format-Pg-tests;unpack=0"
 SRC_URI[x86_64_v2_perl-DateTime-Format-Pg-tests.sha256sum] = "2377a01fe94be7e2a2b351333b3d75b89d7f73028766f7bc7ecfa862d1ab67f5"
 
-URI_aarch64_perl-DateTime-Format-Pg = "${EPEL_MIRROR}/aarch64/Packages/p/perl-DateTime-Format-Pg-0.16014-14.el10_3.noarch.rpm;name=aarch64_perl-DateTime-Format-Pg;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-DateTime-Format-Pg}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-DateTime-Format-Pg-0.16014-14.el10_3.noarch.rpm;name=aarch64_perl-DateTime-Format-Pg;unpack=0"
 SRC_URI[aarch64_perl-DateTime-Format-Pg.sha256sum] = "c7152d867e59cf2005484faa78eddd2f04e09d268f0ea38090297b3233814e52"
 
-URI_aarch64_perl-DateTime-Format-Pg-tests = "${EPEL_MIRROR}/aarch64/Packages/p/perl-DateTime-Format-Pg-tests-0.16014-14.el10_3.noarch.rpm;name=aarch64_perl-DateTime-Format-Pg-tests;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-DateTime-Format-Pg-tests}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-DateTime-Format-Pg-tests-0.16014-14.el10_3.noarch.rpm;name=aarch64_perl-DateTime-Format-Pg-tests;unpack=0"
 SRC_URI[aarch64_perl-DateTime-Format-Pg-tests.sha256sum] = "2491fb426fb8b5760257f70aa6725372fb38f6c918bc03f41190f418c2d541e1"
 
 RDEPENDS:perl-DateTime-Format-Pg = " \

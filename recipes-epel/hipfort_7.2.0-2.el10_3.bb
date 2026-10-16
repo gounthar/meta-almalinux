@@ -12,17 +12,17 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/h/hipfort-7.2.0-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/h/hipfort-7.2.0-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f60fe921c33d063978bb4696a673d70f4203f8e6542978573a043ed13ce944d7"
 
-URI_x86_64_v2_hipfort = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/hipfort-7.2.0-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_hipfort;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_hipfort}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/hipfort-7.2.0-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_hipfort;unpack=0"
 SRC_URI[x86_64_v2_hipfort.sha256sum] = "e8a69afdcab3547beb45bde9ec28efd60da4542debb85f21735041a45f1f2a62"
 
-URI_x86_64_v2_hipfort-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/hipfort-devel-7.2.0-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_hipfort-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_hipfort-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/hipfort-devel-7.2.0-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_hipfort-devel;unpack=0"
 SRC_URI[x86_64_v2_hipfort-devel.sha256sum] = "ff812588d94a268bc00efe7396e9e3e005a3601f27b595f1aa13d8c1614aa47d"
 
 RDEPENDS:hipfort = " \

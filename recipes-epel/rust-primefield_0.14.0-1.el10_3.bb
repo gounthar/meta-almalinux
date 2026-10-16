@@ -5,21 +5,31 @@ inherit dnf-bridge
 PN = "rust-primefield"
 PV = "0.14.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-primefield+default-devel \
  rust-primefield-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-primefield+default-devel \
+ rust-primefield-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-primefield-0.14.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-primefield-0.14.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "219511f31d33127f1a1e93ec8c2488fca1b05648d7c5269a76e608c2ace9d476"
 
-URI_aarch64_rust-primefield+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-primefield+default-devel-0.14.0-1.el10_3.noarch.rpm;name=aarch64_rust-primefield+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-primefield+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-primefield+default-devel-0.14.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-primefield+default-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-primefield+default-devel.sha256sum] = "c88a760a25e14038df6b5ffe5f91140c1b278b1c44c734345a124ff79679aa3c"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-primefield-devel-0.14.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-primefield-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-primefield-devel.sha256sum] = "8cad22a500accee325c63894365be3e511f7bf83bbfe3afd247d3c633e7d56b8"
+
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-primefield+default-devel-0.14.0-1.el10_3.noarch.rpm;name=aarch64_rust-primefield+default-devel;unpack=0"
 SRC_URI[aarch64_rust-primefield+default-devel.sha256sum] = "f0d11d7f94c5230368a01c2500851b961f31c71516fd78c7ed80a4b928fbe2fe"
 
-URI_aarch64_rust-primefield-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-primefield-devel-0.14.0-1.el10_3.noarch.rpm;name=aarch64_rust-primefield-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-primefield-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-primefield-devel-0.14.0-1.el10_3.noarch.rpm;name=aarch64_rust-primefield-devel;unpack=0"
 SRC_URI[aarch64_rust-primefield-devel.sha256sum] = "c6c6544795f5bb53ae27f898ec52a387881613f628c59581f8f26ff836210a92"
 
 RDEPENDS:rust-primefield+default-devel = " \

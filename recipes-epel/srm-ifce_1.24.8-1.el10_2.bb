@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "srm-ifce"
 PV = "1.24.8"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  srm-ifce \
  srm-ifce-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ srm-ifce \
+ srm-ifce-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/s/srm-ifce-1.24.8-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/s/srm-ifce-1.24.8-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "29fd4b1f2ea1ebadc2385d82ea1eac2e769d9b9096d94fca5ba01c1acdb0568b"
 
-URI_x86_64_v2_srm-ifce = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/srm-ifce-1.24.8-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_srm-ifce;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_srm-ifce}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/srm-ifce-1.24.8-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_srm-ifce;unpack=0"
 SRC_URI[x86_64_v2_srm-ifce.sha256sum] = "ebb2078092d9db2f07bbc709c191457aa76c55828337434860149c62f756731d"
 
-URI_x86_64_v2_srm-ifce-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/srm-ifce-devel-1.24.8-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_srm-ifce-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_srm-ifce-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/srm-ifce-devel-1.24.8-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_srm-ifce-devel;unpack=0"
 SRC_URI[x86_64_v2_srm-ifce-devel.sha256sum] = "341318342179811202f242328c32e3c85700d663c79b0742a514445f546f4d33"
 
-URI_aarch64_srm-ifce = "${EPEL_MIRROR}/aarch64/Packages/s/srm-ifce-1.24.8-1.el10_2.aarch64.rpm;name=aarch64_srm-ifce;unpack=0"
-SRC_URI:append = " ${URI_aarch64_srm-ifce}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/s/srm-ifce-1.24.8-1.el10_2.aarch64.rpm;name=aarch64_srm-ifce;unpack=0"
 SRC_URI[aarch64_srm-ifce.sha256sum] = "ec8cae5429c0be92f7b8e1f8d400903ab845b3d1ec8bd1e421b0239114dba357"
 
-URI_aarch64_srm-ifce-devel = "${EPEL_MIRROR}/aarch64/Packages/s/srm-ifce-devel-1.24.8-1.el10_2.aarch64.rpm;name=aarch64_srm-ifce-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_srm-ifce-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/s/srm-ifce-devel-1.24.8-1.el10_2.aarch64.rpm;name=aarch64_srm-ifce-devel;unpack=0"
 SRC_URI[aarch64_srm-ifce-devel.sha256sum] = "b780f51e2d8ec91da102a00d2416b287d68512c195c19bbb3562fe21e37a056a"
 
 RDEPENDS:srm-ifce = " \

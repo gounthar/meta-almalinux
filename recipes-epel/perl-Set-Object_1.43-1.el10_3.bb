@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-Set-Object"
 PV = "1.43"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-Set-Object \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-Set-Object \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-Set-Object-1.43-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-Set-Object-1.43-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "af9cb561df9d31cedc8a975170d8fc034886b0aa4719bc77a425b6df7eb02071"
 
-URI_x86_64_v2_perl-Set-Object = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Set-Object-1.43-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_perl-Set-Object;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Set-Object}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Set-Object-1.43-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_perl-Set-Object;unpack=0"
 SRC_URI[x86_64_v2_perl-Set-Object.sha256sum] = "684a8333ca3f4984f1492131bd46318763e995c9838e1d30e2887f52fcce8c59"
 
-URI_aarch64_perl-Set-Object = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Set-Object-1.43-1.el10_3.aarch64.rpm;name=aarch64_perl-Set-Object;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Set-Object}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Set-Object-1.43-1.el10_3.aarch64.rpm;name=aarch64_perl-Set-Object;unpack=0"
 SRC_URI[aarch64_perl-Set-Object.sha256sum] = "64b400b48a33c08119073d6ae08816ebf1c1420cfcb007b2c6c2e8602be63a23"
 
 RDEPENDS:perl-Set-Object = " \

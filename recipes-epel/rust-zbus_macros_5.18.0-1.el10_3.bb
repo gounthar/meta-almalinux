@@ -5,47 +5,47 @@ inherit dnf-bridge
 PN = "rust-zbus_macros"
 PV = "5.18.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-zbus_macros+blocking-api-devel \
  rust-zbus_macros+default-devel \
  rust-zbus_macros+gvariant-devel \
  rust-zbus_macros-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-zbus_macros+blocking-api-devel \
+ rust-zbus_macros+default-devel \
+ rust-zbus_macros+gvariant-devel \
+ rust-zbus_macros-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-zbus_macros-5.18.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-zbus_macros-5.18.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6cb4a0f4faf3fa819488116ac267fb4ae49b4936a444bb96367022e5a2cba0e7"
 
-URI_x86_64_v2_rust-zbus_macros+blocking-api-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-zbus_macros+blocking-api-devel-5.18.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-zbus_macros+blocking-api-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-zbus_macros+blocking-api-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-zbus_macros+blocking-api-devel-5.18.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-zbus_macros+blocking-api-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-zbus_macros+blocking-api-devel.sha256sum] = "fd8ffc44ab8bb5e2ccb7da76ea3ce2df753be8bd86e1d3f415a2e6746aab56f9"
 
-URI_x86_64_v2_rust-zbus_macros+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-zbus_macros+default-devel-5.18.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-zbus_macros+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-zbus_macros+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-zbus_macros+default-devel-5.18.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-zbus_macros+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-zbus_macros+default-devel.sha256sum] = "9efabf3f532130d7cb92e67e1f229d2b0f40d07c746244d675ebf994d3e543f2"
 
-URI_x86_64_v2_rust-zbus_macros+gvariant-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-zbus_macros+gvariant-devel-5.18.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-zbus_macros+gvariant-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-zbus_macros+gvariant-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-zbus_macros+gvariant-devel-5.18.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-zbus_macros+gvariant-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-zbus_macros+gvariant-devel.sha256sum] = "7cd1f64a36547a1816e5acda729109e5e6cd6d2fd72a6fdd77f8325c66126afc"
 
-URI_x86_64_v2_rust-zbus_macros-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-zbus_macros-devel-5.18.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-zbus_macros-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-zbus_macros-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-zbus_macros-devel-5.18.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-zbus_macros-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-zbus_macros-devel.sha256sum] = "f45cd1cface950527143b537cafe72591bf41075d5d0661c7aa1e9c645175577"
 
-URI_aarch64_rust-zbus_macros+blocking-api-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-zbus_macros+blocking-api-devel-5.18.0-1.el10_3.noarch.rpm;name=aarch64_rust-zbus_macros+blocking-api-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-zbus_macros+blocking-api-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-zbus_macros+blocking-api-devel-5.18.0-1.el10_3.noarch.rpm;name=aarch64_rust-zbus_macros+blocking-api-devel;unpack=0"
 SRC_URI[aarch64_rust-zbus_macros+blocking-api-devel.sha256sum] = "784eb54a44bb7932a75ffdf17e6151e74cd2c573845bd3331ce8bc41436a6d73"
 
-URI_aarch64_rust-zbus_macros+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-zbus_macros+default-devel-5.18.0-1.el10_3.noarch.rpm;name=aarch64_rust-zbus_macros+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-zbus_macros+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-zbus_macros+default-devel-5.18.0-1.el10_3.noarch.rpm;name=aarch64_rust-zbus_macros+default-devel;unpack=0"
 SRC_URI[aarch64_rust-zbus_macros+default-devel.sha256sum] = "0ced7a2ed210e44bbce9d0fe65eeb4fe779485a8205738ff00d57857dfe9857b"
 
-URI_aarch64_rust-zbus_macros+gvariant-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-zbus_macros+gvariant-devel-5.18.0-1.el10_3.noarch.rpm;name=aarch64_rust-zbus_macros+gvariant-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-zbus_macros+gvariant-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-zbus_macros+gvariant-devel-5.18.0-1.el10_3.noarch.rpm;name=aarch64_rust-zbus_macros+gvariant-devel;unpack=0"
 SRC_URI[aarch64_rust-zbus_macros+gvariant-devel.sha256sum] = "3ac0edbe7e5e1c4c3eba2c683fc337976e8256d75ef2da6f43b1f3c06a91e78e"
 
-URI_aarch64_rust-zbus_macros-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-zbus_macros-devel-5.18.0-1.el10_3.noarch.rpm;name=aarch64_rust-zbus_macros-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-zbus_macros-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-zbus_macros-devel-5.18.0-1.el10_3.noarch.rpm;name=aarch64_rust-zbus_macros-devel;unpack=0"
 SRC_URI[aarch64_rust-zbus_macros-devel.sha256sum] = "ebefc011505c09a670efc0902b313d4d27ecde22f8712a6f8fe32dab3d05b194"
 
 RDEPENDS:rust-zbus_macros+blocking-api-devel = " \

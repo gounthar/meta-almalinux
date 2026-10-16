@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "golang-github-facebook-time"
 PV = "0^20260107gitdbb4529"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  golang-github-facebook-time-vendor-licenses \
- "
+"
+PACKAGES:aarch64 = " \
+ golang-github-facebook-time-vendor-licenses \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/g/golang-github-facebook-time-0^20260107gitdbb4529-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/g/golang-github-facebook-time-0^20260107gitdbb4529-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f526db1dbeac281b4f25032bab80da23bf1a60f6fdcce9f7375a04ed11b29393"
 
-URI_x86_64_v2_golang-github-facebook-time-vendor-licenses = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/golang-github-facebook-time-vendor-licenses-0^20260107gitdbb4529-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_golang-github-facebook-time-vendor-licenses;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_golang-github-facebook-time-vendor-licenses}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/golang-github-facebook-time-vendor-licenses-0^20260107gitdbb4529-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_golang-github-facebook-time-vendor-licenses;unpack=0"
 SRC_URI[x86_64_v2_golang-github-facebook-time-vendor-licenses.sha256sum] = "1926e70d1e18b260febb1f2ae6c8965cc9f0c0b7e346f61e49ddbd5e654bf27a"
 
-URI_aarch64_golang-github-facebook-time-vendor-licenses = "${EPEL_MIRROR}/aarch64/Packages/g/golang-github-facebook-time-vendor-licenses-0^20260107gitdbb4529-1.el10_2.noarch.rpm;name=aarch64_golang-github-facebook-time-vendor-licenses;unpack=0"
-SRC_URI:append = " ${URI_aarch64_golang-github-facebook-time-vendor-licenses}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/golang-github-facebook-time-vendor-licenses-0^20260107gitdbb4529-1.el10_2.noarch.rpm;name=aarch64_golang-github-facebook-time-vendor-licenses;unpack=0"
 SRC_URI[aarch64_golang-github-facebook-time-vendor-licenses.sha256sum] = "fadd38a5c342ee9b1646f735ba91b9066ce33263996c3441caf480b19001be5d"
 
 RDEPENDS:golang-github-facebook-time-vendor-licenses = " \

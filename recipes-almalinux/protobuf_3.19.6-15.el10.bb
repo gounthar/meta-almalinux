@@ -14,57 +14,62 @@ PACKAGES = " \
  python3-protobuf \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/protobuf-3.19.6-15.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/protobuf-3.19.6-15.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "72f3383faa60c8a93a1d19f929408d26922bee6170047a22b9dfbdc7c027083b"
 
-URI_x86_64_v2_protobuf = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/protobuf-3.19.6-15.el10.x86_64_v2.rpm;name=x86_64_v2_protobuf;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_protobuf}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/protobuf-3.19.6-15.el10.x86_64_v2.rpm;name=x86_64_v2_protobuf;unpack=0"
 SRC_URI[x86_64_v2_protobuf.sha256sum] = "e3255698eee2e471e713fbcb3abdae1911509cc8f3f1b762b8ecf544940a7bc7"
 
-URI_x86_64_v2_protobuf-compiler = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/protobuf-compiler-3.19.6-15.el10.x86_64_v2.rpm;name=x86_64_v2_protobuf-compiler;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_protobuf-compiler}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/protobuf-compiler-3.19.6-15.el10.x86_64_v2.rpm;name=x86_64_v2_protobuf-compiler;unpack=0"
 SRC_URI[x86_64_v2_protobuf-compiler.sha256sum] = "50a10642b532a34e68407069f97fe3151e1a515dff9c55775b2de6951ad2584b"
 
-URI_x86_64_v2_protobuf-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/protobuf-devel-3.19.6-15.el10.x86_64_v2.rpm;name=x86_64_v2_protobuf-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_protobuf-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/protobuf-devel-3.19.6-15.el10.x86_64_v2.rpm;name=x86_64_v2_protobuf-devel;unpack=0"
 SRC_URI[x86_64_v2_protobuf-devel.sha256sum] = "48b7cbaf7621d17777feadbb7a2d18ad353b9146c6a2730226847f5bd2023972"
 
-URI_x86_64_v2_protobuf-lite = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/protobuf-lite-3.19.6-15.el10.x86_64_v2.rpm;name=x86_64_v2_protobuf-lite;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_protobuf-lite}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/protobuf-lite-3.19.6-15.el10.x86_64_v2.rpm;name=x86_64_v2_protobuf-lite;unpack=0"
 SRC_URI[x86_64_v2_protobuf-lite.sha256sum] = "81881bbbd8089d8b05303a12479f7070fb508c6d842bc5d834ede0ef65c7b1ac"
 
-URI_x86_64_v2_protobuf-lite-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/protobuf-lite-devel-3.19.6-15.el10.x86_64_v2.rpm;name=x86_64_v2_protobuf-lite-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_protobuf-lite-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/protobuf-lite-devel-3.19.6-15.el10.x86_64_v2.rpm;name=x86_64_v2_protobuf-lite-devel;unpack=0"
 SRC_URI[x86_64_v2_protobuf-lite-devel.sha256sum] = "9c0d2d3ef2725cdf247e284f84b7231e94d7a05dbfd6660ac109ea5161f19ce3"
 
-URI_x86_64_v2_python3-protobuf = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-protobuf-3.19.6-15.el10.x86_64_v2.rpm;name=x86_64_v2_python3-protobuf;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-protobuf}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-protobuf-3.19.6-15.el10.x86_64_v2.rpm;name=x86_64_v2_python3-protobuf;unpack=0"
 SRC_URI[x86_64_v2_python3-protobuf.sha256sum] = "7d8518ceda5f6bca7bdc19d8f7b6bc16316526fdeab7976849106b95792e67eb"
 
-URI_aarch64_protobuf = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/protobuf-3.19.6-15.el10.aarch64.rpm;name=aarch64_protobuf;unpack=0"
-SRC_URI:append = " ${URI_aarch64_protobuf}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/protobuf-3.19.6-15.el10.aarch64.rpm;name=aarch64_protobuf;unpack=0"
 SRC_URI[aarch64_protobuf.sha256sum] = "041eb1edd54b641df9fecd14507779aef4ee03b639122eac9cc2c2a7903f7a21"
 
-URI_aarch64_protobuf-compiler = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/protobuf-compiler-3.19.6-15.el10.aarch64.rpm;name=aarch64_protobuf-compiler;unpack=0"
-SRC_URI:append = " ${URI_aarch64_protobuf-compiler}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/protobuf-compiler-3.19.6-15.el10.aarch64.rpm;name=aarch64_protobuf-compiler;unpack=0"
 SRC_URI[aarch64_protobuf-compiler.sha256sum] = "7b47e90c7ea0186ad38a67d464ce30c6ed83e81ebf60d044f03297fdc39f1570"
 
-URI_aarch64_protobuf-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/protobuf-devel-3.19.6-15.el10.aarch64.rpm;name=aarch64_protobuf-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_protobuf-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/protobuf-devel-3.19.6-15.el10.aarch64.rpm;name=aarch64_protobuf-devel;unpack=0"
 SRC_URI[aarch64_protobuf-devel.sha256sum] = "9bb17eeb057714100cf09cd95dcf7cd1e4cfd326cf948890c478d6e69b6665eb"
 
-URI_aarch64_protobuf-lite = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/protobuf-lite-3.19.6-15.el10.aarch64.rpm;name=aarch64_protobuf-lite;unpack=0"
-SRC_URI:append = " ${URI_aarch64_protobuf-lite}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/protobuf-lite-3.19.6-15.el10.aarch64.rpm;name=aarch64_protobuf-lite;unpack=0"
 SRC_URI[aarch64_protobuf-lite.sha256sum] = "dfe396a8a00c6e06d4f62520aa3bfcdecdb16b82534521cce7acaafc45bebf7a"
 
-URI_aarch64_protobuf-lite-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/protobuf-lite-devel-3.19.6-15.el10.aarch64.rpm;name=aarch64_protobuf-lite-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_protobuf-lite-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/protobuf-lite-devel-3.19.6-15.el10.aarch64.rpm;name=aarch64_protobuf-lite-devel;unpack=0"
 SRC_URI[aarch64_protobuf-lite-devel.sha256sum] = "7ac65087114b0d52c0cd5fe4a5eca79b076854e81b501de02573ad47657f6d96"
 
-URI_aarch64_python3-protobuf = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-protobuf-3.19.6-15.el10.aarch64.rpm;name=aarch64_python3-protobuf;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-protobuf}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-protobuf-3.19.6-15.el10.aarch64.rpm;name=aarch64_python3-protobuf;unpack=0"
 SRC_URI[aarch64_python3-protobuf.sha256sum] = "85083f851afa68f0e5cde059c640a6ed057214bb9b621ed42ce069c81657f169"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/protobuf-3.19.6-15.el10.riscv64.rpm;name=riscv64_protobuf;unpack=0"
+SRC_URI[riscv64_protobuf.sha256sum] = "88881f2a0a1f37f4864b1b9f24dd08aa4db2a61089e076013fc1ccbde2baa92d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/protobuf-compiler-3.19.6-15.el10.riscv64.rpm;name=riscv64_protobuf-compiler;unpack=0"
+SRC_URI[riscv64_protobuf-compiler.sha256sum] = "59541b42be56014721fa419dbd0613282828323df855b585024083b9b5ff552d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/protobuf-devel-3.19.6-15.el10.riscv64.rpm;name=riscv64_protobuf-devel;unpack=0"
+SRC_URI[riscv64_protobuf-devel.sha256sum] = "a0aa396045cb3e64c97d0e0d375c21cbc3b46c5d1e4ab9235219fd0601137422"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/protobuf-lite-3.19.6-15.el10.riscv64.rpm;name=riscv64_protobuf-lite;unpack=0"
+SRC_URI[riscv64_protobuf-lite.sha256sum] = "44d47ecc9a9cd8602746214a10123b431105b7b36cd083bdfe84687d2960e955"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/protobuf-lite-devel-3.19.6-15.el10.riscv64.rpm;name=riscv64_protobuf-lite-devel;unpack=0"
+SRC_URI[riscv64_protobuf-lite-devel.sha256sum] = "6c19579a2b3bf690d0312270055d46b0394d5e981b95c1cb904e9749a83ac77d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-protobuf-3.19.6-15.el10.riscv64.rpm;name=riscv64_python3-protobuf;unpack=0"
+SRC_URI[riscv64_python3-protobuf.sha256sum] = "cb47bad32f5a18c14ec725c13527414cc171cb68c6924f6bccfd93bd43a6c062"
 
 RDEPENDS:protobuf = " \
  glibc \

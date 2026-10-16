@@ -10,29 +10,37 @@ PACKAGES = " \
  libvpx-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libvpx-1.14.1-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libvpx-1.14.1-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "056f02b0c5ba5c4c6b7f84fe9aac4fe2ee983247d29b7ea0eb7f1550aa8070c9"
 
-URI_x86_64_v2_libvpx = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libvpx-1.14.1-6.el10.x86_64_v2.rpm;name=x86_64_v2_libvpx;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libvpx}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libvpx-1.14.1-6.el10.x86_64_v2.rpm;name=x86_64_v2_libvpx;unpack=0"
 SRC_URI[x86_64_v2_libvpx.sha256sum] = "3f8b5a2a53b0e185f1606087c25436144d4efa514d6f0fdd5aded15d11936586"
 
-URI_x86_64_v2_libvpx-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libvpx-devel-1.14.1-6.el10.x86_64_v2.rpm;name=x86_64_v2_libvpx-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libvpx-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libvpx-devel-1.14.1-6.el10.x86_64_v2.rpm;name=x86_64_v2_libvpx-devel;unpack=0"
 SRC_URI[x86_64_v2_libvpx-devel.sha256sum] = "6c525fa9d41d908a9956123593753df8fc03874741ca51bf41bf2e636ae1326c"
 
-URI_aarch64_libvpx = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libvpx-1.14.1-6.el10.aarch64.rpm;name=aarch64_libvpx;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libvpx}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libvpx-1.14.1-6.el10.aarch64.rpm;name=aarch64_libvpx;unpack=0"
 SRC_URI[aarch64_libvpx.sha256sum] = "47962a5b63c9ba50962460d47ea7d17bba17afbf95d95764ab554a0263178cd7"
 
-URI_aarch64_libvpx-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libvpx-devel-1.14.1-6.el10.aarch64.rpm;name=aarch64_libvpx-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libvpx-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libvpx-devel-1.14.1-6.el10.aarch64.rpm;name=aarch64_libvpx-devel;unpack=0"
 SRC_URI[aarch64_libvpx-devel.sha256sum] = "b087ce49e22ba2cb36383fc03e10381bf766101f59fe2b13dea543eab07101dd"
 
-RDEPENDS:libvpx = " \
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libvpx-1.14.1-6.el10.riscv64.rpm;name=riscv64_libvpx;unpack=0"
+SRC_URI[riscv64_libvpx.sha256sum] = "dc740af31228a7c29aa0391d128e3dd7314d310fd16550a601c330163ef93258"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libvpx-devel-1.14.1-6.el10.riscv64.rpm;name=riscv64_libvpx-devel;unpack=0"
+SRC_URI[riscv64_libvpx-devel.sha256sum] = "767b1c2a21ac67148572936794b412583d8614079b61c378d7f659d63ee21c74"
+
+RDEPENDS:libvpx:x86_64_v2 = " \
  glibc \
- "
+"
+RDEPENDS:libvpx:aarch64 = " \
+ glibc \
+"
+RDEPENDS:libvpx:riscv64 = " \
+ glibc \
+ libgcc \
+"
 RDEPENDS:libvpx-devel = " \
  libvpx \
  pkgconf-pkg-config \

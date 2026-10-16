@@ -5,33 +5,28 @@ inherit dnf-bridge
 PN = "rust-git-delta"
 PV = "0.19.1"
 PR = "7.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  git-delta \
- "
+"
+PACKAGES:aarch64 = " \
+ git-delta \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-git-delta-0.19.1-7.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-git-delta-0.19.1-7.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e3abe74f69ad26412cd3ba8973d179a7c41300875fd58dd3ac929e8800bd1d4e"
 
-## Requires (x86_64_v2) that were seen as not satisfiable in original repo:
-# - git-delta: libgit2.so.1.9()(64bit)
-
-URI_x86_64_v2_git-delta = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/git-delta-0.19.1-7.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_git-delta;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_git-delta}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/git-delta-0.19.1-7.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_git-delta;unpack=0"
 SRC_URI[x86_64_v2_git-delta.sha256sum] = "af1c40dbc5d1f1db6f5bb2c6175a3f6646ea129bf4c952f1c8f54325fc761c4b"
 
-URI_aarch64_git-delta = "${EPEL_MIRROR}/aarch64/Packages/g/git-delta-0.19.1-7.el10_3.aarch64.rpm;name=aarch64_git-delta;unpack=0"
-SRC_URI:append = " ${URI_aarch64_git-delta}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/git-delta-0.19.1-7.el10_3.aarch64.rpm;name=aarch64_git-delta;unpack=0"
 SRC_URI[aarch64_git-delta.sha256sum] = "329cd6c6a5c8c6a00424f4b0808dfa170e497dc7fb3a59abd7f753023d29cad6"
 
-RDEPENDS:git-delta:x86_64_v2 = " \
- glibc \
- libgcc \
- oniguruma \
-"
-RDEPENDS:git-delta:aarch64 = " \
+RDEPENDS:git-delta = " \
  glibc \
  libgcc \
  libgit2_1.9 \
  oniguruma \
-"
+ "

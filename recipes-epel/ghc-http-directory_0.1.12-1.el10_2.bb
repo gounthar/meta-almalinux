@@ -16,37 +16,32 @@ PACKAGES:aarch64 = " \
  ghc-http-directory-doc \
  ghc-http-directory-prof \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/g/ghc-http-directory-0.1.12-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/g/ghc-http-directory-0.1.12-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "ab357b7c97d10dbf9a889aaa1b6b962146165174736f9e2666a8f74f9cbafbd6"
 
-URI_x86_64_v2_ghc-http-directory = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-http-directory-0.1.12-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-http-directory;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-http-directory}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-http-directory-0.1.12-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-http-directory;unpack=0"
 SRC_URI[x86_64_v2_ghc-http-directory.sha256sum] = "8a1ceb6a1ff386af0663a2700f4075fb3d69983433f3821b97a2142c79e07784"
 
-URI_x86_64_v2_ghc-http-directory-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-http-directory-devel-0.1.12-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-http-directory-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-http-directory-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-http-directory-devel-0.1.12-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-http-directory-devel;unpack=0"
 SRC_URI[x86_64_v2_ghc-http-directory-devel.sha256sum] = "48581f688fe8b61fe161a78c89e18287f882de6704ce20bea2056b018a9cbba3"
 
-URI_x86_64_v2_ghc-http-directory-doc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-http-directory-doc-0.1.12-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_ghc-http-directory-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-http-directory-doc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-http-directory-doc-0.1.12-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_ghc-http-directory-doc;unpack=0"
 SRC_URI[x86_64_v2_ghc-http-directory-doc.sha256sum] = "ef749968ec82228019ac21c792302d1fb2fffff80dcad4612094d2d58ef2ce6a"
 
-URI_aarch64_ghc-http-directory = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-http-directory-0.1.12-1.el10_2.aarch64.rpm;name=aarch64_ghc-http-directory;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-http-directory}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-http-directory-0.1.12-1.el10_2.aarch64.rpm;name=aarch64_ghc-http-directory;unpack=0"
 SRC_URI[aarch64_ghc-http-directory.sha256sum] = "e5491bb3c2af6ce7d9d4e2a9f42b5cb2bfd3165fae351eb6e881f832ddb121b9"
 
-URI_aarch64_ghc-http-directory-devel = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-http-directory-devel-0.1.12-1.el10_2.aarch64.rpm;name=aarch64_ghc-http-directory-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-http-directory-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-http-directory-devel-0.1.12-1.el10_2.aarch64.rpm;name=aarch64_ghc-http-directory-devel;unpack=0"
 SRC_URI[aarch64_ghc-http-directory-devel.sha256sum] = "caf3a8a88b7cac76dbda88e3435fd009c8a0cc6fbc0d42717d164a050a7dfd5b"
 
-URI_aarch64_ghc-http-directory-doc = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-http-directory-doc-0.1.12-1.el10_2.noarch.rpm;name=aarch64_ghc-http-directory-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-http-directory-doc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-http-directory-doc-0.1.12-1.el10_2.noarch.rpm;name=aarch64_ghc-http-directory-doc;unpack=0"
 SRC_URI[aarch64_ghc-http-directory-doc.sha256sum] = "9cd923b18f3fd5237399421200d45591d6e8c4186c09287ba12dba56a21b5aaa"
 
-URI_aarch64_ghc-http-directory-prof = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-http-directory-prof-0.1.12-1.el10_2.aarch64.rpm;name=aarch64_ghc-http-directory-prof;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-http-directory-prof}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-http-directory-prof-0.1.12-1.el10_2.aarch64.rpm;name=aarch64_ghc-http-directory-prof;unpack=0"
 SRC_URI[aarch64_ghc-http-directory-prof.sha256sum] = "ad703199449ea61c914a6cca22b09221045bddff7ac239c76b11437e85695359"
 
 RDEPENDS:ghc-http-directory = " \

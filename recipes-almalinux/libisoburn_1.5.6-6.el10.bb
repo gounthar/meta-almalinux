@@ -12,43 +12,46 @@ PACKAGES = " \
  xorriso \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libisoburn-1.5.6-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libisoburn-1.5.6-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "44930516024b61ad2f3c7bd855006343099a395e149a55019ba23e180698ce69"
 
-URI_x86_64_v2_libisoburn = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libisoburn-1.5.6-6.el10.x86_64_v2.rpm;name=x86_64_v2_libisoburn;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libisoburn}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libisoburn-1.5.6-6.el10.x86_64_v2.rpm;name=x86_64_v2_libisoburn;unpack=0"
 SRC_URI[x86_64_v2_libisoburn.sha256sum] = "b25c00d7e25e158badda5626726e6756bba6ee660c7de73b20c0c99ae06ff7e5"
 
-URI_x86_64_v2_libisoburn-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libisoburn-devel-1.5.6-6.el10.x86_64_v2.rpm;name=x86_64_v2_libisoburn-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libisoburn-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libisoburn-devel-1.5.6-6.el10.x86_64_v2.rpm;name=x86_64_v2_libisoburn-devel;unpack=0"
 SRC_URI[x86_64_v2_libisoburn-devel.sha256sum] = "b600fe8b14328128b5f6dece1fe02d85cf453a6bccfc821a93f56ea689c5dabf"
 
-URI_x86_64_v2_libisoburn-doc = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libisoburn-doc-1.5.6-6.el10.noarch.rpm;name=x86_64_v2_libisoburn-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libisoburn-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libisoburn-doc-1.5.6-6.el10.noarch.rpm;name=x86_64_v2_libisoburn-doc;unpack=0"
 SRC_URI[x86_64_v2_libisoburn-doc.sha256sum] = "763c9eed912872e9a9df4ddc100d9afece9643eb8268c1e2d03f6c75474166e4"
 
-URI_x86_64_v2_xorriso = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/xorriso-1.5.6-6.el10.x86_64_v2.rpm;name=x86_64_v2_xorriso;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_xorriso}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/xorriso-1.5.6-6.el10.x86_64_v2.rpm;name=x86_64_v2_xorriso;unpack=0"
 SRC_URI[x86_64_v2_xorriso.sha256sum] = "8c6007c4612d4816d64db7ae9a8080fba65a4a0de4162181e9212e22fea110bf"
-RPROVIDES:xorriso:x86_64_v2 = "virtual//usr/bin/mkisofs"
+RPROVIDES:xorriso:append:x86_64_v2 = " virtual//usr/bin/mkisofs"
 
-URI_aarch64_libisoburn = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libisoburn-1.5.6-6.el10.aarch64.rpm;name=aarch64_libisoburn;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libisoburn}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libisoburn-1.5.6-6.el10.aarch64.rpm;name=aarch64_libisoburn;unpack=0"
 SRC_URI[aarch64_libisoburn.sha256sum] = "7abe20660c564c93121f981b9b8945bac56738bc35e5d3d43208546c5130369c"
 
-URI_aarch64_libisoburn-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libisoburn-devel-1.5.6-6.el10.aarch64.rpm;name=aarch64_libisoburn-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libisoburn-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libisoburn-devel-1.5.6-6.el10.aarch64.rpm;name=aarch64_libisoburn-devel;unpack=0"
 SRC_URI[aarch64_libisoburn-devel.sha256sum] = "f886995702f04cd987bbf6f8faa5959a022fed46908bf4dd60407a0632dcb9c6"
 
-URI_aarch64_libisoburn-doc = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libisoburn-doc-1.5.6-6.el10.noarch.rpm;name=aarch64_libisoburn-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libisoburn-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libisoburn-doc-1.5.6-6.el10.noarch.rpm;name=aarch64_libisoburn-doc;unpack=0"
 SRC_URI[aarch64_libisoburn-doc.sha256sum] = "763c9eed912872e9a9df4ddc100d9afece9643eb8268c1e2d03f6c75474166e4"
 
-URI_aarch64_xorriso = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/xorriso-1.5.6-6.el10.aarch64.rpm;name=aarch64_xorriso;unpack=0"
-SRC_URI:append = " ${URI_aarch64_xorriso}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/xorriso-1.5.6-6.el10.aarch64.rpm;name=aarch64_xorriso;unpack=0"
 SRC_URI[aarch64_xorriso.sha256sum] = "d59c7cf5d6e9a3322f0da3391468c8d5eb699721187a327fcadb67985d1368c8"
-RPROVIDES:xorriso:aarch64 = "virtual//usr/bin/mkisofs"
+RPROVIDES:xorriso:append:aarch64 = " virtual//usr/bin/mkisofs"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libisoburn-1.5.6-6.el10.riscv64.rpm;name=riscv64_libisoburn;unpack=0"
+SRC_URI[riscv64_libisoburn.sha256sum] = "206654ad16db7c40ae3a17f19456ad3bfaceb3a3d1c3636562a5003a73325918"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libisoburn-devel-1.5.6-6.el10.riscv64.rpm;name=riscv64_libisoburn-devel;unpack=0"
+SRC_URI[riscv64_libisoburn-devel.sha256sum] = "9f76853e9099f593acedcc929ef61b1f0631f3ef8d8b348d54b274ecbd759bf0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libisoburn-doc-1.5.6-6.el10.noarch.rpm;name=riscv64_libisoburn-doc;unpack=0"
+SRC_URI[riscv64_libisoburn-doc.sha256sum] = "763c9eed912872e9a9df4ddc100d9afece9643eb8268c1e2d03f6c75474166e4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/xorriso-1.5.6-6.el10.riscv64.rpm;name=riscv64_xorriso;unpack=0"
+SRC_URI[riscv64_xorriso.sha256sum] = "c1340c235a23c43e9bec574b6f769559e83b88029f2048cd52fabcc42f3a289e"
 
 RDEPENDS:libisoburn = " \
  glibc \
@@ -71,7 +74,3 @@ RDEPENDS:xorriso = " \
  libisoburn \
  virtual/coreutils \
  "
-
-PROVIDES:append:x86_64_v2 = " rpm/virtual//usr/bin/mkisofs"
-
-PROVIDES:append:aarch64 = " rpm/virtual//usr/bin/mkisofs"

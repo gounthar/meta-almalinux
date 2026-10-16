@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "kmodtool"
 PV = "1.2.1"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  kmodtool \
- "
+"
+PACKAGES:aarch64 = " \
+ kmodtool \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/k/kmodtool-1.2.1-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/k/kmodtool-1.2.1-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3143220965813a766a8cef5c2fb45b033d64ff00c41f4dcb08b96ac4ebb567fd"
 
-URI_x86_64_v2_kmodtool = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/kmodtool-1.2.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_kmodtool;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_kmodtool}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/kmodtool-1.2.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_kmodtool;unpack=0"
 SRC_URI[x86_64_v2_kmodtool.sha256sum] = "69731ee6e75015236afb24d71308079c8fca23e5887e9969df33a69622f3ecde"
 
-URI_aarch64_kmodtool = "${EPEL_MIRROR}/aarch64/Packages/k/kmodtool-1.2.1-1.el10_3.noarch.rpm;name=aarch64_kmodtool;unpack=0"
-SRC_URI:append = " ${URI_aarch64_kmodtool}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/k/kmodtool-1.2.1-1.el10_3.noarch.rpm;name=aarch64_kmodtool;unpack=0"
 SRC_URI[aarch64_kmodtool.sha256sum] = "62df7379453ee5450609ec7d61a7fc29b0f046cfaaa2f5e5331d40dc7a8be582"
 
 RDEPENDS:kmodtool = " \

@@ -11,33 +11,35 @@ PACKAGES = " \
  osbuild-composer-worker \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/osbuild-composer-176-1.el10.alma.4.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/osbuild-composer-176-1.el10.alma.4.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "5698db39cb88ca8a6ea5cacf7ff630723d3fd299641b4c9c0c45c56ff07286be"
 
-URI_x86_64_v2_osbuild-composer = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/osbuild-composer-176-1.el10.alma.4.x86_64_v2.rpm;name=x86_64_v2_osbuild-composer;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_osbuild-composer}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/osbuild-composer-176-1.el10.alma.4.x86_64_v2.rpm;name=x86_64_v2_osbuild-composer;unpack=0"
 SRC_URI[x86_64_v2_osbuild-composer.sha256sum] = "edc76cddcbb5165b297f73d3f2aa844ad6186f57171d3445814b4e81d3c4a428"
 
-URI_x86_64_v2_osbuild-composer-core = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/osbuild-composer-core-176-1.el10.alma.4.x86_64_v2.rpm;name=x86_64_v2_osbuild-composer-core;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_osbuild-composer-core}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/osbuild-composer-core-176-1.el10.alma.4.x86_64_v2.rpm;name=x86_64_v2_osbuild-composer-core;unpack=0"
 SRC_URI[x86_64_v2_osbuild-composer-core.sha256sum] = "10dcae69ab35b25a4e8bb227382bbb14f3c25513c676566edbf79bc4e1061c43"
 
-URI_x86_64_v2_osbuild-composer-worker = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/osbuild-composer-worker-176-1.el10.alma.4.x86_64_v2.rpm;name=x86_64_v2_osbuild-composer-worker;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_osbuild-composer-worker}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/osbuild-composer-worker-176-1.el10.alma.4.x86_64_v2.rpm;name=x86_64_v2_osbuild-composer-worker;unpack=0"
 SRC_URI[x86_64_v2_osbuild-composer-worker.sha256sum] = "6c76e4af11cc0f8a44da878ae6d6808370e2d3aa302ca0dd75b0c412f43d7d37"
 
-URI_aarch64_osbuild-composer = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/osbuild-composer-176-1.el10.alma.4.aarch64.rpm;name=aarch64_osbuild-composer;unpack=0"
-SRC_URI:append = " ${URI_aarch64_osbuild-composer}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/osbuild-composer-176-1.el10.alma.4.aarch64.rpm;name=aarch64_osbuild-composer;unpack=0"
 SRC_URI[aarch64_osbuild-composer.sha256sum] = "b56fd99eab80f4ff1d6977e15c4756abcdf4e84ff8d9431540c39d9abaec375e"
 
-URI_aarch64_osbuild-composer-core = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/osbuild-composer-core-176-1.el10.alma.4.aarch64.rpm;name=aarch64_osbuild-composer-core;unpack=0"
-SRC_URI:append = " ${URI_aarch64_osbuild-composer-core}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/osbuild-composer-core-176-1.el10.alma.4.aarch64.rpm;name=aarch64_osbuild-composer-core;unpack=0"
 SRC_URI[aarch64_osbuild-composer-core.sha256sum] = "d2b4ae0db6f8ad94535b976b336a8cca355072edeabd7e46545a9827eb274a38"
 
-URI_aarch64_osbuild-composer-worker = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/osbuild-composer-worker-176-1.el10.alma.4.aarch64.rpm;name=aarch64_osbuild-composer-worker;unpack=0"
-SRC_URI:append = " ${URI_aarch64_osbuild-composer-worker}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/osbuild-composer-worker-176-1.el10.alma.4.aarch64.rpm;name=aarch64_osbuild-composer-worker;unpack=0"
 SRC_URI[aarch64_osbuild-composer-worker.sha256sum] = "ddcdfd10bb5d8402fd1c0f20401f57bbd4d8381a555ab9e44c2fa4ddbe1ece83"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/osbuild-composer-176-1.el10.alma.4.riscv64.rpm;name=riscv64_osbuild-composer;unpack=0"
+SRC_URI[riscv64_osbuild-composer.sha256sum] = "a568aae220ac5ef24937b57bd527c7caa53088c62b3d685a29f2ddc84d455218"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/osbuild-composer-core-176-1.el10.alma.4.riscv64.rpm;name=riscv64_osbuild-composer-core;unpack=0"
+SRC_URI[riscv64_osbuild-composer-core.sha256sum] = "4fa52385f20e03a3ddf9ecd662766cbd783e397c20cc9eff1eb0d281444ef267"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/osbuild-composer-worker-176-1.el10.alma.4.riscv64.rpm;name=riscv64_osbuild-composer-worker;unpack=0"
+SRC_URI[riscv64_osbuild-composer-worker.sha256sum] = "460d8333e374fda21d5fb5d3b1b06dc003e26ae1366382d95add8e22d27f32c1"
 
 RDEPENDS:osbuild-composer = " \
  bash \

@@ -11,33 +11,35 @@ PACKAGES = " \
  protobuf-c-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/protobuf-c-1.5.0-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/protobuf-c-1.5.0-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3f2bf29024bcbfcf6af42f0415fadcfc85de8454003e8511a2034af473cc660a"
 
-URI_x86_64_v2_protobuf-c = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/protobuf-c-1.5.0-6.el10.x86_64_v2.rpm;name=x86_64_v2_protobuf-c;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_protobuf-c}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/protobuf-c-1.5.0-6.el10.x86_64_v2.rpm;name=x86_64_v2_protobuf-c;unpack=0"
 SRC_URI[x86_64_v2_protobuf-c.sha256sum] = "a640b425640bf7ae1d2ddb42941157f25b6baded2029ea517dec01e5535457cb"
 
-URI_x86_64_v2_protobuf-c-compiler = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/protobuf-c-compiler-1.5.0-6.el10.x86_64_v2.rpm;name=x86_64_v2_protobuf-c-compiler;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_protobuf-c-compiler}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/protobuf-c-compiler-1.5.0-6.el10.x86_64_v2.rpm;name=x86_64_v2_protobuf-c-compiler;unpack=0"
 SRC_URI[x86_64_v2_protobuf-c-compiler.sha256sum] = "ae9bb0846d9d11121aa70d7fd78a69d90b264f38ea130d2a41d4be184b3896b4"
 
-URI_x86_64_v2_protobuf-c-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/protobuf-c-devel-1.5.0-6.el10.x86_64_v2.rpm;name=x86_64_v2_protobuf-c-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_protobuf-c-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/protobuf-c-devel-1.5.0-6.el10.x86_64_v2.rpm;name=x86_64_v2_protobuf-c-devel;unpack=0"
 SRC_URI[x86_64_v2_protobuf-c-devel.sha256sum] = "9dbedea1f137f893cb5b369880d5d569da4ce78147dd3b0ab208ad01f00e4eb4"
 
-URI_aarch64_protobuf-c = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/protobuf-c-1.5.0-6.el10.aarch64.rpm;name=aarch64_protobuf-c;unpack=0"
-SRC_URI:append = " ${URI_aarch64_protobuf-c}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/protobuf-c-1.5.0-6.el10.aarch64.rpm;name=aarch64_protobuf-c;unpack=0"
 SRC_URI[aarch64_protobuf-c.sha256sum] = "20c1d6ddc6e1f4dcccc1e3480f6ef0a8fbbabe43f87571e22b0ac3bb67d56b2a"
 
-URI_aarch64_protobuf-c-compiler = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/protobuf-c-compiler-1.5.0-6.el10.aarch64.rpm;name=aarch64_protobuf-c-compiler;unpack=0"
-SRC_URI:append = " ${URI_aarch64_protobuf-c-compiler}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/protobuf-c-compiler-1.5.0-6.el10.aarch64.rpm;name=aarch64_protobuf-c-compiler;unpack=0"
 SRC_URI[aarch64_protobuf-c-compiler.sha256sum] = "b5e3badcd09daf4cd0e78e46a0c3dee4f50f1fdd142c8b4592e4101e2f414d0b"
 
-URI_aarch64_protobuf-c-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/protobuf-c-devel-1.5.0-6.el10.aarch64.rpm;name=aarch64_protobuf-c-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_protobuf-c-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/protobuf-c-devel-1.5.0-6.el10.aarch64.rpm;name=aarch64_protobuf-c-devel;unpack=0"
 SRC_URI[aarch64_protobuf-c-devel.sha256sum] = "23849238246c189aee92fb1348b1ee6475da4ef8a174cf06c35a72cfeaadf7e9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/protobuf-c-1.5.0-6.el10.riscv64.rpm;name=riscv64_protobuf-c;unpack=0"
+SRC_URI[riscv64_protobuf-c.sha256sum] = "ba840477ca5dabef05b0a08508a48d306957446869d677a12d7452a11e4536b9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/protobuf-c-compiler-1.5.0-6.el10.riscv64.rpm;name=riscv64_protobuf-c-compiler;unpack=0"
+SRC_URI[riscv64_protobuf-c-compiler.sha256sum] = "635f951859dd956d677ff6662456f0814b4185ad0f03a2365f818febf1d14e94"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/protobuf-c-devel-1.5.0-6.el10.riscv64.rpm;name=riscv64_protobuf-c-devel;unpack=0"
+SRC_URI[riscv64_protobuf-c-devel.sha256sum] = "146943682d5d7b66a2bcdc15d5e6b871f3227a904ee4ca34eb4b535d5f803d05"
 
 RDEPENDS:protobuf-c = " \
  glibc \

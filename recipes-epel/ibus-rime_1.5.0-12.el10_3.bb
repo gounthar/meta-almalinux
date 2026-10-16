@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "ibus-rime"
 PV = "1.5.0"
 PR = "12.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  ibus-rime \
- "
+"
+PACKAGES:aarch64 = " \
+ ibus-rime \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/i/ibus-rime-1.5.0-12.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/i/ibus-rime-1.5.0-12.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "bda549afb4037f3f7fb373a2d96c689f3c7bb8d28f4f2e1c48ceced804dea84a"
 
-URI_x86_64_v2_ibus-rime = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ibus-rime-1.5.0-12.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ibus-rime;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ibus-rime}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ibus-rime-1.5.0-12.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ibus-rime;unpack=0"
 SRC_URI[x86_64_v2_ibus-rime.sha256sum] = "88fee2b4e89509b61158ef9194f0b771b4f67b3d2afb1d62040a72758176da6f"
 
-URI_aarch64_ibus-rime = "${EPEL_MIRROR}/aarch64/Packages/i/ibus-rime-1.5.0-12.el10_3.aarch64.rpm;name=aarch64_ibus-rime;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ibus-rime}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/i/ibus-rime-1.5.0-12.el10_3.aarch64.rpm;name=aarch64_ibus-rime;unpack=0"
 SRC_URI[aarch64_ibus-rime.sha256sum] = "a28212314f70e1bf9e0a56aab63a115c988f929d7952c6142799f6e9dbec271a"
 
 RDEPENDS:ibus-rime = " \

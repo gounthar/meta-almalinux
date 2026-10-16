@@ -9,17 +9,17 @@ PACKAGES = " \
  mkfontscale \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/mkfontscale-1.2.2-8.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/mkfontscale-1.2.2-8.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "12598c2144ebc1f61be3e0ae1cb21042d733604d8e29c2245ff294bf2d6b89d0"
 
-URI_x86_64_v2_mkfontscale = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mkfontscale-1.2.2-8.el10.x86_64_v2.rpm;name=x86_64_v2_mkfontscale;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mkfontscale}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mkfontscale-1.2.2-8.el10.x86_64_v2.rpm;name=x86_64_v2_mkfontscale;unpack=0"
 SRC_URI[x86_64_v2_mkfontscale.sha256sum] = "fdbad42826c4df00c5f732f5b4648210009cb67942d102e467c3ca5ede8979dd"
 
-URI_aarch64_mkfontscale = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mkfontscale-1.2.2-8.el10.aarch64.rpm;name=aarch64_mkfontscale;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mkfontscale}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mkfontscale-1.2.2-8.el10.aarch64.rpm;name=aarch64_mkfontscale;unpack=0"
 SRC_URI[aarch64_mkfontscale.sha256sum] = "618c481e544f1ff8ae3d0fc2305e4dcefbd7c8e020ed4e3f5e782a2e896522be"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/mkfontscale-1.2.2-8.el10.riscv64.rpm;name=riscv64_mkfontscale;unpack=0"
+SRC_URI[riscv64_mkfontscale.sha256sum] = "99cbd4fa120f6d53433e542ca28c7f2d6a02d6cacd56a5894fd86ef8cee5b0f0"
 
 RDEPENDS:mkfontscale = " \
  bash \

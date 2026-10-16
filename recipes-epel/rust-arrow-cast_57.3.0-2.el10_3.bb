@@ -5,56 +5,55 @@ inherit dnf-bridge
 PN = "rust-arrow-cast"
 PV = "57.3.0"
 PR = "2.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-arrow-cast+comfy-table-devel \
  rust-arrow-cast+default-devel \
  rust-arrow-cast+force_validate-devel \
  rust-arrow-cast+prettyprint-devel \
  rust-arrow-cast-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-arrow-cast+comfy-table-devel \
+ rust-arrow-cast+default-devel \
+ rust-arrow-cast+force_validate-devel \
+ rust-arrow-cast+prettyprint-devel \
+ rust-arrow-cast-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-arrow-cast-57.3.0-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-arrow-cast-57.3.0-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "30e8d8f0aaca5125128558c4b5e3e52ec6814d0358d975f17811ae5dacadf91f"
 
-URI_x86_64_v2_rust-arrow-cast+comfy-table-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-arrow-cast+comfy-table-devel-57.3.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-arrow-cast+comfy-table-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-arrow-cast+comfy-table-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-arrow-cast+comfy-table-devel-57.3.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-arrow-cast+comfy-table-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-arrow-cast+comfy-table-devel.sha256sum] = "edcd7f8e9db20b762e29252919487aac0c388a2466b912b2f1a8d34b37427155"
 
-URI_x86_64_v2_rust-arrow-cast+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-arrow-cast+default-devel-57.3.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-arrow-cast+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-arrow-cast+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-arrow-cast+default-devel-57.3.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-arrow-cast+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-arrow-cast+default-devel.sha256sum] = "62c485762027320456684499090e25678312ab6f3245589413ce9d74aadbc6de"
 
-URI_x86_64_v2_rust-arrow-cast+force_validate-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-arrow-cast+force_validate-devel-57.3.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-arrow-cast+force_validate-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-arrow-cast+force_validate-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-arrow-cast+force_validate-devel-57.3.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-arrow-cast+force_validate-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-arrow-cast+force_validate-devel.sha256sum] = "32a5391d38543f72717dae1b8e6a467ff794c39507e0df2fb9c2765821f376a0"
 
-URI_x86_64_v2_rust-arrow-cast+prettyprint-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-arrow-cast+prettyprint-devel-57.3.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-arrow-cast+prettyprint-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-arrow-cast+prettyprint-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-arrow-cast+prettyprint-devel-57.3.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-arrow-cast+prettyprint-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-arrow-cast+prettyprint-devel.sha256sum] = "928c03e9a7ccd775fb6c8a808422246e311d583c175db67d3da6819a2fad3ff1"
 
-URI_x86_64_v2_rust-arrow-cast-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-arrow-cast-devel-57.3.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-arrow-cast-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-arrow-cast-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-arrow-cast-devel-57.3.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-arrow-cast-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-arrow-cast-devel.sha256sum] = "303a003f65805dafb4f6f0b16d55b32c47ff581212ec7b3ef7c903df37874299"
 
-URI_aarch64_rust-arrow-cast+comfy-table-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-arrow-cast+comfy-table-devel-57.3.0-2.el10_3.noarch.rpm;name=aarch64_rust-arrow-cast+comfy-table-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-arrow-cast+comfy-table-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-arrow-cast+comfy-table-devel-57.3.0-2.el10_3.noarch.rpm;name=aarch64_rust-arrow-cast+comfy-table-devel;unpack=0"
 SRC_URI[aarch64_rust-arrow-cast+comfy-table-devel.sha256sum] = "c39d716390dffeef4abfefce016f815b2359adadc3d0081225244203f3bd7544"
 
-URI_aarch64_rust-arrow-cast+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-arrow-cast+default-devel-57.3.0-2.el10_3.noarch.rpm;name=aarch64_rust-arrow-cast+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-arrow-cast+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-arrow-cast+default-devel-57.3.0-2.el10_3.noarch.rpm;name=aarch64_rust-arrow-cast+default-devel;unpack=0"
 SRC_URI[aarch64_rust-arrow-cast+default-devel.sha256sum] = "8a3c69575d867dbf3b630b5cd706aef4bca441174071223ad638786209d617a0"
 
-URI_aarch64_rust-arrow-cast+force_validate-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-arrow-cast+force_validate-devel-57.3.0-2.el10_3.noarch.rpm;name=aarch64_rust-arrow-cast+force_validate-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-arrow-cast+force_validate-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-arrow-cast+force_validate-devel-57.3.0-2.el10_3.noarch.rpm;name=aarch64_rust-arrow-cast+force_validate-devel;unpack=0"
 SRC_URI[aarch64_rust-arrow-cast+force_validate-devel.sha256sum] = "d9668901334524c36b38a47f6d1994ab8c2b9fcfea8db383df72fe316514873a"
 
-URI_aarch64_rust-arrow-cast+prettyprint-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-arrow-cast+prettyprint-devel-57.3.0-2.el10_3.noarch.rpm;name=aarch64_rust-arrow-cast+prettyprint-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-arrow-cast+prettyprint-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-arrow-cast+prettyprint-devel-57.3.0-2.el10_3.noarch.rpm;name=aarch64_rust-arrow-cast+prettyprint-devel;unpack=0"
 SRC_URI[aarch64_rust-arrow-cast+prettyprint-devel.sha256sum] = "6191309ddf03a70faa43288dec3db2a0f0ad71e2f90fb6d6d6406f68bb5e2b75"
 
-URI_aarch64_rust-arrow-cast-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-arrow-cast-devel-57.3.0-2.el10_3.noarch.rpm;name=aarch64_rust-arrow-cast-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-arrow-cast-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-arrow-cast-devel-57.3.0-2.el10_3.noarch.rpm;name=aarch64_rust-arrow-cast-devel;unpack=0"
 SRC_URI[aarch64_rust-arrow-cast-devel.sha256sum] = "b0c1fac5bb7277876aa1855ccbe12de0f62eb545cb0ceafa7b352fa7c745e301"
 
 RDEPENDS:rust-arrow-cast+comfy-table-devel = " \

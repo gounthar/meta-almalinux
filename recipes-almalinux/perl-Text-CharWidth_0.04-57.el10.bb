@@ -9,17 +9,17 @@ PACKAGES = " \
  perl-Text-CharWidth \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/perl-Text-CharWidth-0.04-57.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/perl-Text-CharWidth-0.04-57.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "34781d0c24f7326efe082d9f38c49410e52253c941b8fbcf96706e46d694e3e7"
 
-URI_x86_64_v2_perl-Text-CharWidth = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/perl-Text-CharWidth-0.04-57.el10.x86_64_v2.rpm;name=x86_64_v2_perl-Text-CharWidth;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Text-CharWidth}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/perl-Text-CharWidth-0.04-57.el10.x86_64_v2.rpm;name=x86_64_v2_perl-Text-CharWidth;unpack=0"
 SRC_URI[x86_64_v2_perl-Text-CharWidth.sha256sum] = "39688d285dae1a390d330a42fa4562bd56673ec5f791cc0b4b69d00ba4553500"
 
-URI_aarch64_perl-Text-CharWidth = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/perl-Text-CharWidth-0.04-57.el10.aarch64.rpm;name=aarch64_perl-Text-CharWidth;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Text-CharWidth}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/perl-Text-CharWidth-0.04-57.el10.aarch64.rpm;name=aarch64_perl-Text-CharWidth;unpack=0"
 SRC_URI[aarch64_perl-Text-CharWidth.sha256sum] = "16c0bd378924b016e9bbf61b739f322f5b19dbe50c2e826b3814758caf731235"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/perl-Text-CharWidth-0.04-57.el10.riscv64.rpm;name=riscv64_perl-Text-CharWidth;unpack=0"
+SRC_URI[riscv64_perl-Text-CharWidth.sha256sum] = "3b65b3455157cfc2cf3b3c7760c9a97b2507a44767c1dd9b61ab9638c23e68ea"
 
 RDEPENDS:perl-Text-CharWidth = " \
  glibc \

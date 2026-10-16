@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-xyzservices"
 PV = "2024.6.0"
 PR = "8.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-xyzservices \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-xyzservices \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-xyzservices-2024.6.0-8.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-xyzservices-2024.6.0-8.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6c079aaff84eb700d9d93b92e628c7e27bbd217c559565ba2ad3072b38a9da38"
 
-URI_x86_64_v2_python3-xyzservices = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-xyzservices-2024.6.0-8.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-xyzservices;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-xyzservices}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-xyzservices-2024.6.0-8.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-xyzservices;unpack=0"
 SRC_URI[x86_64_v2_python3-xyzservices.sha256sum] = "04f17323a0fe75f9aa53b4ea985709086f5e810187b2e889108818612419c9f9"
 
-URI_aarch64_python3-xyzservices = "${EPEL_MIRROR}/aarch64/Packages/p/python3-xyzservices-2024.6.0-8.el10_2.noarch.rpm;name=aarch64_python3-xyzservices;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-xyzservices}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-xyzservices-2024.6.0-8.el10_2.noarch.rpm;name=aarch64_python3-xyzservices;unpack=0"
 SRC_URI[aarch64_python3-xyzservices.sha256sum] = "63494f1e4361b7e09a28abf660fed6950d610a4c85e73e43441b5e66ade8fae8"
 
 RDEPENDS:python3-xyzservices = " \

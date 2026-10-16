@@ -11,33 +11,35 @@ PACKAGES = " \
  libshaderc-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/shaderc-2026.1-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/shaderc-2026.1-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b41ed656084c81d1b1751870ee2951bbdea9207a6c66064c9de9c810245d2cc5"
 
-URI_x86_64_v2_glslc = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/glslc-2026.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_glslc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_glslc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/glslc-2026.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_glslc;unpack=0"
 SRC_URI[x86_64_v2_glslc.sha256sum] = "2107d19c8344f202f21732bd057465e61f646017bf9e544b6b33b351c14a9424"
 
-URI_x86_64_v2_libshaderc = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libshaderc-2026.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_libshaderc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libshaderc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libshaderc-2026.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_libshaderc;unpack=0"
 SRC_URI[x86_64_v2_libshaderc.sha256sum] = "9739fe9d52b0ddfc0b1a2e415771eb84057d17271c68a5acd938fcec9e4b1c87"
 
-URI_x86_64_v2_libshaderc-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libshaderc-devel-2026.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_libshaderc-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libshaderc-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libshaderc-devel-2026.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_libshaderc-devel;unpack=0"
 SRC_URI[x86_64_v2_libshaderc-devel.sha256sum] = "2847b90fca39b7dccbe99472c68cb58c17d3ca87af45a7eb2953a63b946c7ecf"
 
-URI_aarch64_glslc = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/glslc-2026.1-1.el10.aarch64.rpm;name=aarch64_glslc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_glslc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/glslc-2026.1-1.el10.aarch64.rpm;name=aarch64_glslc;unpack=0"
 SRC_URI[aarch64_glslc.sha256sum] = "c865a01147dd5489d0a8cabafb0ed02f4d3f14688a8354b4200ffaa831b276a3"
 
-URI_aarch64_libshaderc = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libshaderc-2026.1-1.el10.aarch64.rpm;name=aarch64_libshaderc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libshaderc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libshaderc-2026.1-1.el10.aarch64.rpm;name=aarch64_libshaderc;unpack=0"
 SRC_URI[aarch64_libshaderc.sha256sum] = "513de2e944a17b35918a4dcc1d9df9e6920f67e3536888694ee16dfadd17aa61"
 
-URI_aarch64_libshaderc-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libshaderc-devel-2026.1-1.el10.aarch64.rpm;name=aarch64_libshaderc-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libshaderc-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libshaderc-devel-2026.1-1.el10.aarch64.rpm;name=aarch64_libshaderc-devel;unpack=0"
 SRC_URI[aarch64_libshaderc-devel.sha256sum] = "680795ce10179766fe470caba7f95a8b4400a8f50b6eed1cb2477131796596e9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/glslc-2026.1-1.el10.riscv64.rpm;name=riscv64_glslc;unpack=0"
+SRC_URI[riscv64_glslc.sha256sum] = "627500c0f8c4cba9c7de8fa51ab44cd8a6ebc23a0c2ade15a6eb2c5c44f5d03f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libshaderc-2026.1-1.el10.riscv64.rpm;name=riscv64_libshaderc;unpack=0"
+SRC_URI[riscv64_libshaderc.sha256sum] = "aac2a502faf074ba22ba7a8361487fe1916298c3bbfc596d45df91272bc11f4c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libshaderc-devel-2026.1-1.el10.riscv64.rpm;name=riscv64_libshaderc-devel;unpack=0"
+SRC_URI[riscv64_libshaderc-devel.sha256sum] = "d4830f08c4e178447bec650417a4852d32ccd877d69c90c63dc41f30f6c8cdcc"
 
 RDEPENDS:glslc = " \
  glibc \

@@ -5,7 +5,7 @@ inherit dnf-bridge
 PN = "ffmpeg"
 PV = "7.1.5"
 PR = "2.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  ffmpeg-free \
  ffmpeg-free-devel \
  libavcodec-free \
@@ -24,154 +24,140 @@ PACKAGES = " \
  libswresample-free-devel \
  libswscale-free \
  libswscale-free-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ ffmpeg-free \
+ ffmpeg-free-devel \
+ libavcodec-free \
+ libavcodec-free-devel \
+ libavdevice-free \
+ libavdevice-free-devel \
+ libavfilter-free \
+ libavfilter-free-devel \
+ libavformat-free \
+ libavformat-free-devel \
+ libavutil-free \
+ libavutil-free-devel \
+ libpostproc-free \
+ libpostproc-free-devel \
+ libswresample-free \
+ libswresample-free-devel \
+ libswscale-free \
+ libswscale-free-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/f/ffmpeg-7.1.5-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/f/ffmpeg-7.1.5-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b29d466873dcbf9b3b80fff43dfeeba22a4795781aade6158deee2086c10947e"
 
-URI_x86_64_v2_ffmpeg-free = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ffmpeg-free-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ffmpeg-free;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ffmpeg-free}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ffmpeg-free-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ffmpeg-free;unpack=0"
 SRC_URI[x86_64_v2_ffmpeg-free.sha256sum] = "9d1387bdbcd016c0bde95a96c301a66579ae5847e68db03c8e61e4f1192c2119"
 
-URI_x86_64_v2_ffmpeg-free-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ffmpeg-free-devel-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ffmpeg-free-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ffmpeg-free-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ffmpeg-free-devel-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ffmpeg-free-devel;unpack=0"
 SRC_URI[x86_64_v2_ffmpeg-free-devel.sha256sum] = "f6442b70bf906ffc3b733b8fb62b6398e12e42ae0732e5329bddf4d7d1996191"
 
-URI_x86_64_v2_libavcodec-free = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libavcodec-free-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libavcodec-free;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libavcodec-free}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libavcodec-free-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libavcodec-free;unpack=0"
 SRC_URI[x86_64_v2_libavcodec-free.sha256sum] = "3f8e1d1a6ac6f1829be1be44e9a14fe4378f580d4c85a234ffb76108ce554e12"
 
-URI_x86_64_v2_libavcodec-free-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libavcodec-free-devel-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libavcodec-free-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libavcodec-free-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libavcodec-free-devel-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libavcodec-free-devel;unpack=0"
 SRC_URI[x86_64_v2_libavcodec-free-devel.sha256sum] = "363abf6f7af3439d824535e95520ed80296941fd6fc4e5efcfe3c35464a7f9f0"
 
-URI_x86_64_v2_libavdevice-free = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libavdevice-free-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libavdevice-free;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libavdevice-free}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libavdevice-free-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libavdevice-free;unpack=0"
 SRC_URI[x86_64_v2_libavdevice-free.sha256sum] = "56819770910a3f5a29527614dd9e8ff894f25609ce5ee2e7f1ab2307365c1af8"
 
-URI_x86_64_v2_libavdevice-free-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libavdevice-free-devel-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libavdevice-free-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libavdevice-free-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libavdevice-free-devel-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libavdevice-free-devel;unpack=0"
 SRC_URI[x86_64_v2_libavdevice-free-devel.sha256sum] = "8ce6eb4d98772816883c755ba99df0dbdaa05c7436b87c1219fc9a442db396f0"
 
-URI_x86_64_v2_libavfilter-free = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libavfilter-free-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libavfilter-free;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libavfilter-free}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libavfilter-free-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libavfilter-free;unpack=0"
 SRC_URI[x86_64_v2_libavfilter-free.sha256sum] = "cb4e88157070c9840d22e0f22c6c4824af932ed72729dc04b7deca7d26dcfd3f"
 
-URI_x86_64_v2_libavfilter-free-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libavfilter-free-devel-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libavfilter-free-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libavfilter-free-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libavfilter-free-devel-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libavfilter-free-devel;unpack=0"
 SRC_URI[x86_64_v2_libavfilter-free-devel.sha256sum] = "984ac9eafff2d8baca135286e50b61fe10e963630feeea8c7c7ec245ca2518dd"
 
-URI_x86_64_v2_libavformat-free = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libavformat-free-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libavformat-free;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libavformat-free}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libavformat-free-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libavformat-free;unpack=0"
 SRC_URI[x86_64_v2_libavformat-free.sha256sum] = "698cb513d574435e0ad10a00d5fe0d607c2fc50bbdc9e5f11393fc3e937b5328"
 
-URI_x86_64_v2_libavformat-free-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libavformat-free-devel-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libavformat-free-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libavformat-free-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libavformat-free-devel-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libavformat-free-devel;unpack=0"
 SRC_URI[x86_64_v2_libavformat-free-devel.sha256sum] = "6df663d929ee6d212e0dfa26c6cbb24e365bfd7b928bc403cd6f79778d69086f"
 
-URI_x86_64_v2_libavutil-free = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libavutil-free-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libavutil-free;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libavutil-free}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libavutil-free-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libavutil-free;unpack=0"
 SRC_URI[x86_64_v2_libavutil-free.sha256sum] = "61fde86a45e81ba574cc83a2dcb6ca7cd7d13d071f5430e271ffcf82c9834cc6"
 
-URI_x86_64_v2_libavutil-free-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libavutil-free-devel-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libavutil-free-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libavutil-free-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libavutil-free-devel-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libavutil-free-devel;unpack=0"
 SRC_URI[x86_64_v2_libavutil-free-devel.sha256sum] = "bdf41a035b1b29116c40d40032e08559da2efe6410aa97297bcd08c2a6f03906"
 
-URI_x86_64_v2_libpostproc-free = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libpostproc-free-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libpostproc-free;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libpostproc-free}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libpostproc-free-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libpostproc-free;unpack=0"
 SRC_URI[x86_64_v2_libpostproc-free.sha256sum] = "3ed51f9a762f6734806269405595b9832500b7ef46ad84af6e27c8bf929f329d"
 
-URI_x86_64_v2_libpostproc-free-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libpostproc-free-devel-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libpostproc-free-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libpostproc-free-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libpostproc-free-devel-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libpostproc-free-devel;unpack=0"
 SRC_URI[x86_64_v2_libpostproc-free-devel.sha256sum] = "38d7b58fab0d706c3840c53c10498bce2ea4cf2dd83cc38a45ea54f5967ce4d4"
 
-URI_x86_64_v2_libswresample-free = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libswresample-free-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libswresample-free;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libswresample-free}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libswresample-free-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libswresample-free;unpack=0"
 SRC_URI[x86_64_v2_libswresample-free.sha256sum] = "7a7e270708c6678fc13356cb41503b170d62b5de213aaa0c565539bd747ce79f"
 
-URI_x86_64_v2_libswresample-free-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libswresample-free-devel-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libswresample-free-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libswresample-free-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libswresample-free-devel-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libswresample-free-devel;unpack=0"
 SRC_URI[x86_64_v2_libswresample-free-devel.sha256sum] = "1221e3f7913d55162ce31ca1b10c8480f5e5e6121d82b97303fbece4b707f987"
 
-URI_x86_64_v2_libswscale-free = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libswscale-free-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libswscale-free;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libswscale-free}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libswscale-free-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libswscale-free;unpack=0"
 SRC_URI[x86_64_v2_libswscale-free.sha256sum] = "ee03ac807049b618a0d72893bdf0ab6c3f982b5f409a65169ee2a43e9ee84583"
 
-URI_x86_64_v2_libswscale-free-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libswscale-free-devel-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libswscale-free-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libswscale-free-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libswscale-free-devel-7.1.5-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libswscale-free-devel;unpack=0"
 SRC_URI[x86_64_v2_libswscale-free-devel.sha256sum] = "26d559d037f4ab96391e6b9e480893ea3343914bbf435d6c49380bfeea5024e0"
 
-URI_aarch64_ffmpeg-free = "${EPEL_MIRROR}/aarch64/Packages/f/ffmpeg-free-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_ffmpeg-free;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ffmpeg-free}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/f/ffmpeg-free-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_ffmpeg-free;unpack=0"
 SRC_URI[aarch64_ffmpeg-free.sha256sum] = "aadbcb6b7007b850ffa02c4f52c2f8ff9c8ff10620a19ada26de9e5848abfa6d"
 
-URI_aarch64_ffmpeg-free-devel = "${EPEL_MIRROR}/aarch64/Packages/f/ffmpeg-free-devel-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_ffmpeg-free-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ffmpeg-free-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/f/ffmpeg-free-devel-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_ffmpeg-free-devel;unpack=0"
 SRC_URI[aarch64_ffmpeg-free-devel.sha256sum] = "0ba993ecf1bbc8973d8f2208a12e65ca7773829b04a191fb4384cb73fe33e728"
 
-URI_aarch64_libavcodec-free = "${EPEL_MIRROR}/aarch64/Packages/l/libavcodec-free-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libavcodec-free;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libavcodec-free}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/libavcodec-free-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libavcodec-free;unpack=0"
 SRC_URI[aarch64_libavcodec-free.sha256sum] = "29f38edc31657fa8a13084891c16c404c426f104f0d2aa98bf9cfe6e44707fbe"
 
-URI_aarch64_libavcodec-free-devel = "${EPEL_MIRROR}/aarch64/Packages/l/libavcodec-free-devel-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libavcodec-free-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libavcodec-free-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/libavcodec-free-devel-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libavcodec-free-devel;unpack=0"
 SRC_URI[aarch64_libavcodec-free-devel.sha256sum] = "ffbfb3831a302089615f4c859d149791688c1e4c9ae250cfa7189d38dea73712"
 
-URI_aarch64_libavdevice-free = "${EPEL_MIRROR}/aarch64/Packages/l/libavdevice-free-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libavdevice-free;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libavdevice-free}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/libavdevice-free-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libavdevice-free;unpack=0"
 SRC_URI[aarch64_libavdevice-free.sha256sum] = "216ae33f395f512630e3606529803e13ad44c913dd81835a704db513d10af8f4"
 
-URI_aarch64_libavdevice-free-devel = "${EPEL_MIRROR}/aarch64/Packages/l/libavdevice-free-devel-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libavdevice-free-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libavdevice-free-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/libavdevice-free-devel-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libavdevice-free-devel;unpack=0"
 SRC_URI[aarch64_libavdevice-free-devel.sha256sum] = "9cb4578ba45c97c55742e3d2b7625cc243eeb52f8d4eb21e3da517d56241a915"
 
-URI_aarch64_libavfilter-free = "${EPEL_MIRROR}/aarch64/Packages/l/libavfilter-free-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libavfilter-free;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libavfilter-free}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/libavfilter-free-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libavfilter-free;unpack=0"
 SRC_URI[aarch64_libavfilter-free.sha256sum] = "008ed792be1a4f8fa3577166dafe65052ff52fc083b2c0265d939a624d215d11"
 
-URI_aarch64_libavfilter-free-devel = "${EPEL_MIRROR}/aarch64/Packages/l/libavfilter-free-devel-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libavfilter-free-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libavfilter-free-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/libavfilter-free-devel-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libavfilter-free-devel;unpack=0"
 SRC_URI[aarch64_libavfilter-free-devel.sha256sum] = "5f997a1d56e5304d75cef460c6782f539d0181bcabad2f2fb76be2189078154d"
 
-URI_aarch64_libavformat-free = "${EPEL_MIRROR}/aarch64/Packages/l/libavformat-free-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libavformat-free;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libavformat-free}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/libavformat-free-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libavformat-free;unpack=0"
 SRC_URI[aarch64_libavformat-free.sha256sum] = "75a063065c8853faeeeab9cd94d17084b627a7a9cc37764e6d64b791bbd5e10b"
 
-URI_aarch64_libavformat-free-devel = "${EPEL_MIRROR}/aarch64/Packages/l/libavformat-free-devel-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libavformat-free-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libavformat-free-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/libavformat-free-devel-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libavformat-free-devel;unpack=0"
 SRC_URI[aarch64_libavformat-free-devel.sha256sum] = "9702185da9083f7fe2021059590e5c879ce5d153ea3fcff4d7d252aa7d53d22f"
 
-URI_aarch64_libavutil-free = "${EPEL_MIRROR}/aarch64/Packages/l/libavutil-free-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libavutil-free;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libavutil-free}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/libavutil-free-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libavutil-free;unpack=0"
 SRC_URI[aarch64_libavutil-free.sha256sum] = "4b016fcb8e2c259bceaa4acd54bdd8937a62b6d1adfc5a338370b6ab9beab9c6"
 
-URI_aarch64_libavutil-free-devel = "${EPEL_MIRROR}/aarch64/Packages/l/libavutil-free-devel-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libavutil-free-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libavutil-free-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/libavutil-free-devel-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libavutil-free-devel;unpack=0"
 SRC_URI[aarch64_libavutil-free-devel.sha256sum] = "62213fb1f1dccc7565004f0c4da5a56632722affa1979eb3fe1fa4f70c80c450"
 
-URI_aarch64_libpostproc-free = "${EPEL_MIRROR}/aarch64/Packages/l/libpostproc-free-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libpostproc-free;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libpostproc-free}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/libpostproc-free-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libpostproc-free;unpack=0"
 SRC_URI[aarch64_libpostproc-free.sha256sum] = "efae82a9ae72d676bf931a32699bdcca0787e3436f01a6523605d1be2f55db21"
 
-URI_aarch64_libpostproc-free-devel = "${EPEL_MIRROR}/aarch64/Packages/l/libpostproc-free-devel-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libpostproc-free-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libpostproc-free-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/libpostproc-free-devel-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libpostproc-free-devel;unpack=0"
 SRC_URI[aarch64_libpostproc-free-devel.sha256sum] = "f74871d3b2b70ec6a67761e41124b37f9deaf90a5ab6fc4d5cb071dde9bbfc7c"
 
-URI_aarch64_libswresample-free = "${EPEL_MIRROR}/aarch64/Packages/l/libswresample-free-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libswresample-free;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libswresample-free}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/libswresample-free-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libswresample-free;unpack=0"
 SRC_URI[aarch64_libswresample-free.sha256sum] = "421a219e7657695c37de08f0050636552a3775155842a3950ced265517124015"
 
-URI_aarch64_libswresample-free-devel = "${EPEL_MIRROR}/aarch64/Packages/l/libswresample-free-devel-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libswresample-free-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libswresample-free-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/libswresample-free-devel-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libswresample-free-devel;unpack=0"
 SRC_URI[aarch64_libswresample-free-devel.sha256sum] = "8771506712f40259fa6bbbdcecb1d02ed1b2f641c6e9f2a1d0c9a299aa6bfbbb"
 
-URI_aarch64_libswscale-free = "${EPEL_MIRROR}/aarch64/Packages/l/libswscale-free-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libswscale-free;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libswscale-free}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/libswscale-free-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libswscale-free;unpack=0"
 SRC_URI[aarch64_libswscale-free.sha256sum] = "23a724bfe9cf06b88d8c49f037199e052e6e62c784934f29aa5949cada21ca2c"
 
-URI_aarch64_libswscale-free-devel = "${EPEL_MIRROR}/aarch64/Packages/l/libswscale-free-devel-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libswscale-free-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libswscale-free-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/libswscale-free-devel-7.1.5-2.el10_3.aarch64.rpm;name=aarch64_libswscale-free-devel;unpack=0"
 SRC_URI[aarch64_libswscale-free-devel.sha256sum] = "aee635a0d30bdf10064c3cd34bbf5a98a552ef194b5fe7b5f3a527a65bf58145"
 
 RDEPENDS:ffmpeg-free = " \

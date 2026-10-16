@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "perl-IRI"
 PV = "0.014"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-IRI \
  perl-IRI-tests \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-IRI \
+ perl-IRI-tests \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-IRI-0.014-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-IRI-0.014-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "bbce4e6a8793cee14321286db4731b0494845290f759935a4f4b412aa48a3def"
 
-URI_x86_64_v2_perl-IRI = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-IRI-0.014-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-IRI;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-IRI}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-IRI-0.014-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-IRI;unpack=0"
 SRC_URI[x86_64_v2_perl-IRI.sha256sum] = "9f4b83329c4f1a0b40f9bdfd7ff6e59815451b6cf553f3304ad1cc18c768c038"
 
-URI_x86_64_v2_perl-IRI-tests = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-IRI-tests-0.014-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-IRI-tests;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-IRI-tests}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-IRI-tests-0.014-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-IRI-tests;unpack=0"
 SRC_URI[x86_64_v2_perl-IRI-tests.sha256sum] = "3141f24dde379a0bfb8bcf4837c7ecde42298c1aeeadc3776def6afa7ef55f2d"
 
-URI_aarch64_perl-IRI = "${EPEL_MIRROR}/aarch64/Packages/p/perl-IRI-0.014-1.el10_3.noarch.rpm;name=aarch64_perl-IRI;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-IRI}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-IRI-0.014-1.el10_3.noarch.rpm;name=aarch64_perl-IRI;unpack=0"
 SRC_URI[aarch64_perl-IRI.sha256sum] = "e8a4dcb14267e5c97ef71d010264724fed2cdac30dd38368dff844aafff982b8"
 
-URI_aarch64_perl-IRI-tests = "${EPEL_MIRROR}/aarch64/Packages/p/perl-IRI-tests-0.014-1.el10_3.noarch.rpm;name=aarch64_perl-IRI-tests;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-IRI-tests}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-IRI-tests-0.014-1.el10_3.noarch.rpm;name=aarch64_perl-IRI-tests;unpack=0"
 SRC_URI[aarch64_perl-IRI-tests.sha256sum] = "c3029b0ead7d8ce16b5bcfbe3da9c28678fa851396174d5e8c2b00df3e1e04b3"
 
 RDEPENDS:perl-IRI = " \

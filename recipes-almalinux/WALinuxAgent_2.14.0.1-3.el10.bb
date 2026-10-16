@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "WALinuxAgent"
 PV = "2.14.0.1"
 PR = "3.el10"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  WALinuxAgent \
  WALinuxAgent-udev \
- "
+"
+PACKAGES:aarch64 = " \
+ WALinuxAgent \
+ WALinuxAgent-udev \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/WALinuxAgent-2.14.0.1-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/WALinuxAgent-2.14.0.1-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b218190827c92409fbc218627b227dfb7102e535e1859ffd57d0b38bf1147a7c"
 
-URI_x86_64_v2_WALinuxAgent = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/WALinuxAgent-2.14.0.1-3.el10.noarch.rpm;name=x86_64_v2_WALinuxAgent;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_WALinuxAgent}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/WALinuxAgent-2.14.0.1-3.el10.noarch.rpm;name=x86_64_v2_WALinuxAgent;unpack=0"
 SRC_URI[x86_64_v2_WALinuxAgent.sha256sum] = "91710a319fa61a1b5d90601e01c77682c74226d61d4e1f619d94d2a2b17fb98a"
 
-URI_x86_64_v2_WALinuxAgent-udev = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/WALinuxAgent-udev-2.14.0.1-3.el10.noarch.rpm;name=x86_64_v2_WALinuxAgent-udev;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_WALinuxAgent-udev}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/WALinuxAgent-udev-2.14.0.1-3.el10.noarch.rpm;name=x86_64_v2_WALinuxAgent-udev;unpack=0"
 SRC_URI[x86_64_v2_WALinuxAgent-udev.sha256sum] = "139bfed16626b7d4f88ba83430adfce4cbac86bc58e7149edbb7cc595baf9d51"
 
-URI_aarch64_WALinuxAgent = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/WALinuxAgent-2.14.0.1-3.el10.noarch.rpm;name=aarch64_WALinuxAgent;unpack=0"
-SRC_URI:append = " ${URI_aarch64_WALinuxAgent}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/WALinuxAgent-2.14.0.1-3.el10.noarch.rpm;name=aarch64_WALinuxAgent;unpack=0"
 SRC_URI[aarch64_WALinuxAgent.sha256sum] = "91710a319fa61a1b5d90601e01c77682c74226d61d4e1f619d94d2a2b17fb98a"
 
-URI_aarch64_WALinuxAgent-udev = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/WALinuxAgent-udev-2.14.0.1-3.el10.noarch.rpm;name=aarch64_WALinuxAgent-udev;unpack=0"
-SRC_URI:append = " ${URI_aarch64_WALinuxAgent-udev}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/WALinuxAgent-udev-2.14.0.1-3.el10.noarch.rpm;name=aarch64_WALinuxAgent-udev;unpack=0"
 SRC_URI[aarch64_WALinuxAgent-udev.sha256sum] = "139bfed16626b7d4f88ba83430adfce4cbac86bc58e7149edbb7cc595baf9d51"
 
 RDEPENDS:WALinuxAgent = " \

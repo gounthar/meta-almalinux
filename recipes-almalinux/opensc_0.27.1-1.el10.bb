@@ -10,25 +10,26 @@ PACKAGES = " \
  opensc-libs \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/opensc-0.27.1-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/opensc-0.27.1-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "44d2b2e2dfb7b8200564cb81952da220cc9ccefde79cbb280fed9f4f6efa0d4a"
 
-URI_x86_64_v2_opensc = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/opensc-0.27.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_opensc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_opensc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/opensc-0.27.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_opensc;unpack=0"
 SRC_URI[x86_64_v2_opensc.sha256sum] = "14de52a5d254f0a346c517f435012c878db26586dfb7e6567ed9f724fa873996"
 
-URI_x86_64_v2_opensc-libs = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/opensc-libs-0.27.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_opensc-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_opensc-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/opensc-libs-0.27.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_opensc-libs;unpack=0"
 SRC_URI[x86_64_v2_opensc-libs.sha256sum] = "c381d4487811f59d2fc5cdc57d0e9494f91b5b61c49ce826eb6ef59e7ae43768"
 
-URI_aarch64_opensc = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/opensc-0.27.1-1.el10.aarch64.rpm;name=aarch64_opensc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_opensc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/opensc-0.27.1-1.el10.aarch64.rpm;name=aarch64_opensc;unpack=0"
 SRC_URI[aarch64_opensc.sha256sum] = "34b89414021e3caff4931df475cae8f646a3b6203585a300a25cac85a590808a"
 
-URI_aarch64_opensc-libs = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/opensc-libs-0.27.1-1.el10.aarch64.rpm;name=aarch64_opensc-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_opensc-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/opensc-libs-0.27.1-1.el10.aarch64.rpm;name=aarch64_opensc-libs;unpack=0"
 SRC_URI[aarch64_opensc-libs.sha256sum] = "cb3a9ee698e729eea5714b8e843807715d199fe7f6e878dad3c05d806a4f45a5"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/opensc-0.27.1-1.el10.riscv64.rpm;name=riscv64_opensc;unpack=0"
+SRC_URI[riscv64_opensc.sha256sum] = "082ceb09efa1f1ad193e7de262cc94b20093dcf3fc883ed04d819c5456b7e85f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/opensc-libs-0.27.1-1.el10.riscv64.rpm;name=riscv64_opensc-libs;unpack=0"
+SRC_URI[riscv64_opensc-libs.sha256sum] = "fce5b03d2e9d866a817a68f8bceebbf5354a9023809275f9e1dd2792fb671dea"
 
 RDEPENDS:opensc = " \
  glibc \

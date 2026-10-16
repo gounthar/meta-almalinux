@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "arp-scan"
 PV = "1.10.0"
 PR = "11.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  arp-scan \
- "
+"
+PACKAGES:aarch64 = " \
+ arp-scan \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/a/arp-scan-1.10.0-11.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/a/arp-scan-1.10.0-11.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b1d9f830de3361a8e714392cb79c307661c4bdd1269427320a9c0840486b4cfc"
 
-URI_x86_64_v2_arp-scan = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/arp-scan-1.10.0-11.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_arp-scan;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_arp-scan}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/arp-scan-1.10.0-11.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_arp-scan;unpack=0"
 SRC_URI[x86_64_v2_arp-scan.sha256sum] = "1dbfb269c638fa467b0386156c6d3982b0044abc78fd446a2dc458f7defc1b8f"
 
-URI_aarch64_arp-scan = "${EPEL_MIRROR}/aarch64/Packages/a/arp-scan-1.10.0-11.el10_3.aarch64.rpm;name=aarch64_arp-scan;unpack=0"
-SRC_URI:append = " ${URI_aarch64_arp-scan}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/a/arp-scan-1.10.0-11.el10_3.aarch64.rpm;name=aarch64_arp-scan;unpack=0"
 SRC_URI[aarch64_arp-scan.sha256sum] = "85d347fa49c079afa5dd38cb021d6c7332c634a1170d36e943e170104c040377"
 
 RDEPENDS:arp-scan = " \

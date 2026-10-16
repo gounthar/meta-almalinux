@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "opentype-sanitizer"
 PV = "9.3.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  opentype-sanitizer \
- "
+"
+PACKAGES:aarch64 = " \
+ opentype-sanitizer \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/o/opentype-sanitizer-9.3.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/o/opentype-sanitizer-9.3.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8766fb8e4ce19cf88226d37bcfa8d149a1ee0699b3372e6ab537fdfab0777796"
 
-URI_x86_64_v2_opentype-sanitizer = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/opentype-sanitizer-9.3.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_opentype-sanitizer;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_opentype-sanitizer}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/opentype-sanitizer-9.3.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_opentype-sanitizer;unpack=0"
 SRC_URI[x86_64_v2_opentype-sanitizer.sha256sum] = "a597ed46de55d9e3f54fc8378d2c096e82278ee3979a8e8dff176f48a39caf6e"
 
-URI_aarch64_opentype-sanitizer = "${EPEL_MIRROR}/aarch64/Packages/o/opentype-sanitizer-9.3.0-1.el10_3.aarch64.rpm;name=aarch64_opentype-sanitizer;unpack=0"
-SRC_URI:append = " ${URI_aarch64_opentype-sanitizer}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/o/opentype-sanitizer-9.3.0-1.el10_3.aarch64.rpm;name=aarch64_opentype-sanitizer;unpack=0"
 SRC_URI[aarch64_opentype-sanitizer.sha256sum] = "8c8b5790d99a68e44310d18b81d6308843266a7817da2487d39ea0f9d3a165b5"
 
 RDEPENDS:opentype-sanitizer = " \

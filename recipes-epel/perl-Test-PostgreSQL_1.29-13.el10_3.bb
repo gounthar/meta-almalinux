@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "perl-Test-PostgreSQL"
 PV = "1.29"
 PR = "13.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-Test-PostgreSQL \
  perl-Test-PostgreSQL-tests \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-Test-PostgreSQL \
+ perl-Test-PostgreSQL-tests \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-Test-PostgreSQL-1.29-13.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-Test-PostgreSQL-1.29-13.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a52e7169d07668ec95fbc5cb4ab6e5842b56721fcb6122356c7bbf982aabb81a"
 
-URI_x86_64_v2_perl-Test-PostgreSQL = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Test-PostgreSQL-1.29-13.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Test-PostgreSQL;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Test-PostgreSQL}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Test-PostgreSQL-1.29-13.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Test-PostgreSQL;unpack=0"
 SRC_URI[x86_64_v2_perl-Test-PostgreSQL.sha256sum] = "3eccba4ea12291c682b5c7c32b53beb3ac2110de23defbe26cb92cb93933897a"
 
-URI_x86_64_v2_perl-Test-PostgreSQL-tests = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Test-PostgreSQL-tests-1.29-13.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Test-PostgreSQL-tests;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Test-PostgreSQL-tests}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Test-PostgreSQL-tests-1.29-13.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Test-PostgreSQL-tests;unpack=0"
 SRC_URI[x86_64_v2_perl-Test-PostgreSQL-tests.sha256sum] = "b3ef7d1175ed6be5742576cb8ea6983a28d91a154eb0af195ba59bdbf78ee6d4"
 
-URI_aarch64_perl-Test-PostgreSQL = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Test-PostgreSQL-1.29-13.el10_3.noarch.rpm;name=aarch64_perl-Test-PostgreSQL;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Test-PostgreSQL}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Test-PostgreSQL-1.29-13.el10_3.noarch.rpm;name=aarch64_perl-Test-PostgreSQL;unpack=0"
 SRC_URI[aarch64_perl-Test-PostgreSQL.sha256sum] = "0f96a6e0989d39a2724fd529a047850389e5aaa5332e0bb74f0cc5c14d4cd830"
 
-URI_aarch64_perl-Test-PostgreSQL-tests = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Test-PostgreSQL-tests-1.29-13.el10_3.noarch.rpm;name=aarch64_perl-Test-PostgreSQL-tests;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Test-PostgreSQL-tests}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Test-PostgreSQL-tests-1.29-13.el10_3.noarch.rpm;name=aarch64_perl-Test-PostgreSQL-tests;unpack=0"
 SRC_URI[aarch64_perl-Test-PostgreSQL-tests.sha256sum] = "0c8091f6242cd54002be9672d76445f5de6c904ff514d1228c1447d6a7d8eceb"
 
 RDEPENDS:perl-Test-PostgreSQL = " \

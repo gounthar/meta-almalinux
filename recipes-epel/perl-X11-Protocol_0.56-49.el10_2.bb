@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-X11-Protocol"
 PV = "0.56"
 PR = "49.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-X11-Protocol \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-X11-Protocol \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-X11-Protocol-0.56-49.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-X11-Protocol-0.56-49.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "166e1466195f4ec420e9053d957696de7100b4ea3098d302a97db671ec4dd734"
 
-URI_x86_64_v2_perl-X11-Protocol = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-X11-Protocol-0.56-49.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_perl-X11-Protocol;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-X11-Protocol}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-X11-Protocol-0.56-49.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_perl-X11-Protocol;unpack=0"
 SRC_URI[x86_64_v2_perl-X11-Protocol.sha256sum] = "12b6b6c85310768d854fe84fc40d6fc39bf454791ad001e91eac222bdbd06f67"
 
-URI_aarch64_perl-X11-Protocol = "${EPEL_MIRROR}/aarch64/Packages/p/perl-X11-Protocol-0.56-49.el10_2.noarch.rpm;name=aarch64_perl-X11-Protocol;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-X11-Protocol}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-X11-Protocol-0.56-49.el10_2.noarch.rpm;name=aarch64_perl-X11-Protocol;unpack=0"
 SRC_URI[aarch64_perl-X11-Protocol.sha256sum] = "7ce5d4dd74763edb62d033def43926c9d92a5bc9fc81cbb3b216a3f215ff2ce6"
 
 RDEPENDS:perl-X11-Protocol = " \

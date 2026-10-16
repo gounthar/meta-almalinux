@@ -10,25 +10,26 @@ PACKAGES = " \
  libXres-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libXres-1.2.2-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libXres-1.2.2-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3c3a9bed6290a7d7f094413269619f5cb1bef4c4198089916053e9c6ede9a468"
 
-URI_x86_64_v2_libXres = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXres-1.2.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_libXres;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libXres}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXres-1.2.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_libXres;unpack=0"
 SRC_URI[x86_64_v2_libXres.sha256sum] = "d0c3dd1a2dcfe66ede27dbe89cf7cb48cdb87ee5cd319d6a8f7a1d05b010e13d"
 
-URI_x86_64_v2_libXres-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libXres-devel-1.2.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_libXres-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libXres-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libXres-devel-1.2.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_libXres-devel;unpack=0"
 SRC_URI[x86_64_v2_libXres-devel.sha256sum] = "7c93edab321d153ec13d24b7080f12a2400cdc34518558f3741fb94f87a868cf"
 
-URI_aarch64_libXres = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXres-1.2.2-5.el10.aarch64.rpm;name=aarch64_libXres;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libXres}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXres-1.2.2-5.el10.aarch64.rpm;name=aarch64_libXres;unpack=0"
 SRC_URI[aarch64_libXres.sha256sum] = "02c6c03f45308f4335e1eb1518310ad098fb3cec6b60517769345b86d88ca4d6"
 
-URI_aarch64_libXres-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libXres-devel-1.2.2-5.el10.aarch64.rpm;name=aarch64_libXres-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libXres-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libXres-devel-1.2.2-5.el10.aarch64.rpm;name=aarch64_libXres-devel;unpack=0"
 SRC_URI[aarch64_libXres-devel.sha256sum] = "995f9103d9df5bd5dc0ad011f72118a0256dd976b14520b26b2c9e5065505f0d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libXres-1.2.2-5.el10.riscv64.rpm;name=riscv64_libXres;unpack=0"
+SRC_URI[riscv64_libXres.sha256sum] = "1437e53da47248f42c086e9071d83dcc7d4443bcaf16df4c5a11e408ae0c13b0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libXres-devel-1.2.2-5.el10.riscv64.rpm;name=riscv64_libXres-devel;unpack=0"
+SRC_URI[riscv64_libXres-devel.sha256sum] = "e2d600bd6b058ca23fa15aee941f9df6ec64bdae593e50817b9e3e2a8185e7f2"
 
 RDEPENDS:libXres = " \
  glibc \

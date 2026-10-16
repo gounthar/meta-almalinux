@@ -10,25 +10,26 @@ PACKAGES = " \
  libXv-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libXv-1.0.12-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libXv-1.0.12-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1fc6520f5614e5e89cac8f6c3866166dfffc068a32358c4cbfeef14bd8869d63"
 
-URI_x86_64_v2_libXv = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXv-1.0.12-5.el10.x86_64_v2.rpm;name=x86_64_v2_libXv;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libXv}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXv-1.0.12-5.el10.x86_64_v2.rpm;name=x86_64_v2_libXv;unpack=0"
 SRC_URI[x86_64_v2_libXv.sha256sum] = "9742fa51ddf598492553d2a79c2f5889fe4f6d785e9e9f110d1c78dd5eaeb098"
 
-URI_x86_64_v2_libXv-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXv-devel-1.0.12-5.el10.x86_64_v2.rpm;name=x86_64_v2_libXv-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libXv-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXv-devel-1.0.12-5.el10.x86_64_v2.rpm;name=x86_64_v2_libXv-devel;unpack=0"
 SRC_URI[x86_64_v2_libXv-devel.sha256sum] = "cb2e85a53b23a8557816df625ee4c7c945d8e7a8ea969e8baee409c231c6fc98"
 
-URI_aarch64_libXv = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXv-1.0.12-5.el10.aarch64.rpm;name=aarch64_libXv;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libXv}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXv-1.0.12-5.el10.aarch64.rpm;name=aarch64_libXv;unpack=0"
 SRC_URI[aarch64_libXv.sha256sum] = "cb7b61d3f516b3bb17aed34704384412537e61877f71295a359cdfcfe729f107"
 
-URI_aarch64_libXv-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXv-devel-1.0.12-5.el10.aarch64.rpm;name=aarch64_libXv-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libXv-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXv-devel-1.0.12-5.el10.aarch64.rpm;name=aarch64_libXv-devel;unpack=0"
 SRC_URI[aarch64_libXv-devel.sha256sum] = "0deb005d3ca62b450189c9ab89ae43cb9308e8367358aa5147b774a30ce36f60"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libXv-1.0.12-5.el10.riscv64.rpm;name=riscv64_libXv;unpack=0"
+SRC_URI[riscv64_libXv.sha256sum] = "1aebabe1219ba93c4d1344203648252d3f859e9e165f55cfb92fe8e8adac6051"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libXv-devel-1.0.12-5.el10.riscv64.rpm;name=riscv64_libXv-devel;unpack=0"
+SRC_URI[riscv64_libXv-devel.sha256sum] = "92fa74653bfee6229c76c763bedc0c392d01216043267acfeb4ec0b4bd220304"
 
 RDEPENDS:libXv = " \
  glibc \

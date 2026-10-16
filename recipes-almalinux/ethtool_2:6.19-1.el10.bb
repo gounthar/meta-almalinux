@@ -10,17 +10,17 @@ PACKAGES = " \
  ethtool \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/ethtool-6.19-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/ethtool-6.19-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8093402bf63683e54c72ab1d410e6cadb415e2a7ab7bde79ea797a8f5b3f239c"
 
-URI_x86_64_v2_ethtool = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/ethtool-6.19-1.el10.x86_64_v2.rpm;name=x86_64_v2_ethtool;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ethtool}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/ethtool-6.19-1.el10.x86_64_v2.rpm;name=x86_64_v2_ethtool;unpack=0"
 SRC_URI[x86_64_v2_ethtool.sha256sum] = "8127d28b1974553b3832b56c8cdd065229c24bd9cd71b7ea1748cdfa85e78e17"
 
-URI_aarch64_ethtool = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/ethtool-6.19-1.el10.aarch64.rpm;name=aarch64_ethtool;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ethtool}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/ethtool-6.19-1.el10.aarch64.rpm;name=aarch64_ethtool;unpack=0"
 SRC_URI[aarch64_ethtool.sha256sum] = "f4830aef2d6b1f3534f0ebb8055c3a77e649225bc1a4ed16eb441bc7e0def82e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/ethtool-6.19-1.el10.riscv64.rpm;name=riscv64_ethtool;unpack=0"
+SRC_URI[riscv64_ethtool.sha256sum] = "0ae032bdc5f56b25f0c92fd28930d775c0884b8ab908b75483681301c9058f6f"
 
 RDEPENDS:ethtool = " \
  glibc \

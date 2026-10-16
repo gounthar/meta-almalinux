@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "haruna"
 PV = "1.8.1"
 PR = "2.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  haruna \
- "
+"
+PACKAGES:aarch64 = " \
+ haruna \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/h/haruna-1.8.1-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/h/haruna-1.8.1-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "69f480f5add64219df88fc515d89c218945c9bf9e18a0b9d744e95379e8c0372"
 
-URI_x86_64_v2_haruna = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/haruna-1.8.1-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_haruna;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_haruna}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/haruna-1.8.1-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_haruna;unpack=0"
 SRC_URI[x86_64_v2_haruna.sha256sum] = "e81746e74d3b0919033f5a3743664f3ac5de231681db67bd531d755f824c4742"
 
-URI_aarch64_haruna = "${EPEL_MIRROR}/aarch64/Packages/h/haruna-1.8.1-2.el10_3.aarch64.rpm;name=aarch64_haruna;unpack=0"
-SRC_URI:append = " ${URI_aarch64_haruna}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/h/haruna-1.8.1-2.el10_3.aarch64.rpm;name=aarch64_haruna;unpack=0"
 SRC_URI[aarch64_haruna.sha256sum] = "5c981c506e785eb09ffebf450405f909c6bb6f3a1c1f9deb0b8770b46a63d4d0"
 
 RDEPENDS:haruna = " \

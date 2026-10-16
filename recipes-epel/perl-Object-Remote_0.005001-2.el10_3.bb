@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "perl-Object-Remote"
 PV = "0.005001"
 PR = "2.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-Object-Remote \
  perl-Object-Remote-tests \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-Object-Remote \
+ perl-Object-Remote-tests \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-Object-Remote-0.005001-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-Object-Remote-0.005001-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "ea09412ce521b9d4995500f85d455bf054c47e81d73a301f5cc3dd6b4ad5e847"
 
-URI_x86_64_v2_perl-Object-Remote = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Object-Remote-0.005001-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Object-Remote;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Object-Remote}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Object-Remote-0.005001-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Object-Remote;unpack=0"
 SRC_URI[x86_64_v2_perl-Object-Remote.sha256sum] = "a537e85a29f117088fc469905ae99a8d330255eb7d1799b6da8cdc7e35c47c16"
 
-URI_x86_64_v2_perl-Object-Remote-tests = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Object-Remote-tests-0.005001-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Object-Remote-tests;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Object-Remote-tests}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Object-Remote-tests-0.005001-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Object-Remote-tests;unpack=0"
 SRC_URI[x86_64_v2_perl-Object-Remote-tests.sha256sum] = "4ebffad8f3441cb4739c36e698c75e1df812f6bf9c34d8e8c514a33601ee3faf"
 
-URI_aarch64_perl-Object-Remote = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Object-Remote-0.005001-2.el10_3.noarch.rpm;name=aarch64_perl-Object-Remote;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Object-Remote}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Object-Remote-0.005001-2.el10_3.noarch.rpm;name=aarch64_perl-Object-Remote;unpack=0"
 SRC_URI[aarch64_perl-Object-Remote.sha256sum] = "fd58fff4b3db178df0166dcb18ad38a0a2a1837382afd8e44470c71a288e9145"
 
-URI_aarch64_perl-Object-Remote-tests = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Object-Remote-tests-0.005001-2.el10_3.noarch.rpm;name=aarch64_perl-Object-Remote-tests;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Object-Remote-tests}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Object-Remote-tests-0.005001-2.el10_3.noarch.rpm;name=aarch64_perl-Object-Remote-tests;unpack=0"
 SRC_URI[aarch64_perl-Object-Remote-tests.sha256sum] = "69cbd9a242376c2a681e850b30f19bb49f628b552d12bb300d4a885cb9832af8"
 
 RDEPENDS:perl-Object-Remote = " \

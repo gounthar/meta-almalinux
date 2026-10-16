@@ -9,17 +9,17 @@ PACKAGES = " \
  lsscsi \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/lsscsi-0.32-17.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/lsscsi-0.32-17.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "816af3a968f87d1393dae3c0ccc22e0f0d73906d83322a55bb15a9d23ec5a27d"
 
-URI_x86_64_v2_lsscsi = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/lsscsi-0.32-17.el10.x86_64_v2.rpm;name=x86_64_v2_lsscsi;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lsscsi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/lsscsi-0.32-17.el10.x86_64_v2.rpm;name=x86_64_v2_lsscsi;unpack=0"
 SRC_URI[x86_64_v2_lsscsi.sha256sum] = "10979a941269c7044d15a671fc06145cb4a8ccdc12a003c0ffabc702ebc73d7f"
 
-URI_aarch64_lsscsi = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/lsscsi-0.32-17.el10.aarch64.rpm;name=aarch64_lsscsi;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lsscsi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/lsscsi-0.32-17.el10.aarch64.rpm;name=aarch64_lsscsi;unpack=0"
 SRC_URI[aarch64_lsscsi.sha256sum] = "a43e0a311926f9e8c1628e0d2773788a2e6a1bfcabd6e7be26a76aa01ccf8a73"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/lsscsi-0.32-17.el10.riscv64.rpm;name=riscv64_lsscsi;unpack=0"
+SRC_URI[riscv64_lsscsi.sha256sum] = "2aed7540496c392be818ae7495f47914d0154f02b8dc57d4f934392a70862c3c"
 
 RDEPENDS:lsscsi = " \
  glibc \

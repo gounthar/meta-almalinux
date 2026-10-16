@@ -10,25 +10,26 @@ PACKAGES = " \
  sombok-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/sombok-2.4.0-23.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/sombok-2.4.0-23.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f8de52f1746d4de95a3082e3fada031f6e31324c7a70f4e0bea1f28769025850"
 
-URI_x86_64_v2_sombok = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sombok-2.4.0-23.el10.x86_64_v2.rpm;name=x86_64_v2_sombok;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_sombok}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sombok-2.4.0-23.el10.x86_64_v2.rpm;name=x86_64_v2_sombok;unpack=0"
 SRC_URI[x86_64_v2_sombok.sha256sum] = "2e61248e3f3e90bc080afb8221c85fa123181c6bd8e4bca09d73c3c08fd68330"
 
-URI_x86_64_v2_sombok-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/sombok-devel-2.4.0-23.el10.x86_64_v2.rpm;name=x86_64_v2_sombok-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_sombok-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/sombok-devel-2.4.0-23.el10.x86_64_v2.rpm;name=x86_64_v2_sombok-devel;unpack=0"
 SRC_URI[x86_64_v2_sombok-devel.sha256sum] = "9299ecca7ffb806427284e39488f30719eaadfd8408020ae7ef4fdda967062fc"
 
-URI_aarch64_sombok = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/sombok-2.4.0-23.el10.aarch64.rpm;name=aarch64_sombok;unpack=0"
-SRC_URI:append = " ${URI_aarch64_sombok}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/sombok-2.4.0-23.el10.aarch64.rpm;name=aarch64_sombok;unpack=0"
 SRC_URI[aarch64_sombok.sha256sum] = "1934a105df744a5baa9584c3666b192c1e711e0abaa9ed0517e52582682a8099"
 
-URI_aarch64_sombok-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/sombok-devel-2.4.0-23.el10.aarch64.rpm;name=aarch64_sombok-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_sombok-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/sombok-devel-2.4.0-23.el10.aarch64.rpm;name=aarch64_sombok-devel;unpack=0"
 SRC_URI[aarch64_sombok-devel.sha256sum] = "451fa87b5b5053f3bd781f33d35115b73124db8494af1016f5ad3dd7870990d0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/sombok-2.4.0-23.el10.riscv64.rpm;name=riscv64_sombok;unpack=0"
+SRC_URI[riscv64_sombok.sha256sum] = "01eb9fd7dd48867ecbb98c1ccd921426362c8ac96949b69173da51e0b1144f23"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/sombok-devel-2.4.0-23.el10.riscv64.rpm;name=riscv64_sombok-devel;unpack=0"
+SRC_URI[riscv64_sombok-devel.sha256sum] = "2fe35b5185ca8c4f567c57aea088e614ad4fa98086c97b42b3ad051740585238"
 
 RDEPENDS:sombok = " \
  glibc \

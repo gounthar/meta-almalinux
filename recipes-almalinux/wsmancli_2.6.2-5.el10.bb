@@ -9,17 +9,17 @@ PACKAGES = " \
  wsmancli \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/wsmancli-2.6.2-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/wsmancli-2.6.2-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "350d56c1ec816bf31bcea9cbb87424733dc8815abe86a43af05d852353520921"
 
-URI_x86_64_v2_wsmancli = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/wsmancli-2.6.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_wsmancli;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_wsmancli}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/wsmancli-2.6.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_wsmancli;unpack=0"
 SRC_URI[x86_64_v2_wsmancli.sha256sum] = "e46083ac63071ac64fc527b6ab22ae1f795dd94f828384d95bc7d1fdb9987f4b"
 
-URI_aarch64_wsmancli = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/wsmancli-2.6.2-5.el10.aarch64.rpm;name=aarch64_wsmancli;unpack=0"
-SRC_URI:append = " ${URI_aarch64_wsmancli}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/wsmancli-2.6.2-5.el10.aarch64.rpm;name=aarch64_wsmancli;unpack=0"
 SRC_URI[aarch64_wsmancli.sha256sum] = "282de2789d86d1adff5fd1712e8dcb4ededda59e39e40e6721b46c30dd314742"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/wsmancli-2.6.2-5.el10.riscv64.rpm;name=riscv64_wsmancli;unpack=0"
+SRC_URI[riscv64_wsmancli.sha256sum] = "3bbee7bfd9c8fcfdf28a8ee8b66a27bc671c812efc679f7b17c5dcd4b8542363"
 
 RDEPENDS:wsmancli = " \
  curl \

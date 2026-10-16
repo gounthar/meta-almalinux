@@ -9,17 +9,17 @@ PACKAGES = " \
  libotf \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libotf-0.9.16-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libotf-0.9.16-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8d73b99ef819877431e2572a9c0100dde4e460e5a69ce2d3652297a2645a01da"
 
-URI_x86_64_v2_libotf = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libotf-0.9.16-6.el10.x86_64_v2.rpm;name=x86_64_v2_libotf;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libotf}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libotf-0.9.16-6.el10.x86_64_v2.rpm;name=x86_64_v2_libotf;unpack=0"
 SRC_URI[x86_64_v2_libotf.sha256sum] = "ba1eee8324033883d0a9643754c8504b42f2d5d0e81cb051e1bbbbf81f4a0aa6"
 
-URI_aarch64_libotf = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libotf-0.9.16-6.el10.aarch64.rpm;name=aarch64_libotf;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libotf}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libotf-0.9.16-6.el10.aarch64.rpm;name=aarch64_libotf;unpack=0"
 SRC_URI[aarch64_libotf.sha256sum] = "933a3aa10239142b655e67e96b30b9442940802bfe3b01828a828ca57f394600"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libotf-0.9.16-6.el10.riscv64.rpm;name=riscv64_libotf;unpack=0"
+SRC_URI[riscv64_libotf.sha256sum] = "17626e19514a1a3abb52ba96cfb4e2bf173be9ba6be6f227be1d9c3f987c71d7"
 
 RDEPENDS:libotf = " \
  freetype \

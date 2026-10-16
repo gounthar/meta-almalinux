@@ -10,25 +10,26 @@ PACKAGES = " \
  xterm-resize \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/xterm-389-4.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/xterm-389-4.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "ce37622a12a778e0f7745a3d1398b61d2f017a580e6c29010d7c7858f0bbc423"
 
-URI_x86_64_v2_xterm = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/xterm-389-4.el10.x86_64_v2.rpm;name=x86_64_v2_xterm;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_xterm}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/xterm-389-4.el10.x86_64_v2.rpm;name=x86_64_v2_xterm;unpack=0"
 SRC_URI[x86_64_v2_xterm.sha256sum] = "0133f9ddb1cc7558c011d6a0382e29efb7efcd1e81fd380d8730f08831150b9e"
 
-URI_x86_64_v2_xterm-resize = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/xterm-resize-389-4.el10.x86_64_v2.rpm;name=x86_64_v2_xterm-resize;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_xterm-resize}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/xterm-resize-389-4.el10.x86_64_v2.rpm;name=x86_64_v2_xterm-resize;unpack=0"
 SRC_URI[x86_64_v2_xterm-resize.sha256sum] = "5f90ae7bc7b712cea30d1dd4151f6c4d54a558a6a64b418fe472c1b2cfe8d822"
 
-URI_aarch64_xterm = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/xterm-389-4.el10.aarch64.rpm;name=aarch64_xterm;unpack=0"
-SRC_URI:append = " ${URI_aarch64_xterm}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/xterm-389-4.el10.aarch64.rpm;name=aarch64_xterm;unpack=0"
 SRC_URI[aarch64_xterm.sha256sum] = "8472e9a98122419cf2cb779c2338610dda2bd0ce8c7075d3be0465f7dbfd5ffd"
 
-URI_aarch64_xterm-resize = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/xterm-resize-389-4.el10.aarch64.rpm;name=aarch64_xterm-resize;unpack=0"
-SRC_URI:append = " ${URI_aarch64_xterm-resize}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/xterm-resize-389-4.el10.aarch64.rpm;name=aarch64_xterm-resize;unpack=0"
 SRC_URI[aarch64_xterm-resize.sha256sum] = "9ed9e24fe3b38fb12b30100eff45f857945101618c232bc5d45fb784a7bafb8c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/xterm-389-4.el10.riscv64.rpm;name=riscv64_xterm;unpack=0"
+SRC_URI[riscv64_xterm.sha256sum] = "d2211564be2d233ea9ea9b9af245d958f4e1f5aa05164bf9342c09d6a7caa72f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/xterm-resize-389-4.el10.riscv64.rpm;name=riscv64_xterm-resize;unpack=0"
+SRC_URI[riscv64_xterm-resize.sha256sum] = "f9d63d105df7a11944fb8cd0ace972779daeb0aae36eef2e36227e95222feeee"
 
 RDEPENDS:xterm = " \
  bash \

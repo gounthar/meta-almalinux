@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "clamav-unofficial-sigs"
 PV = "8.0.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  clamav-unofficial-sigs \
- "
+"
+PACKAGES:aarch64 = " \
+ clamav-unofficial-sigs \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/c/clamav-unofficial-sigs-8.0.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/c/clamav-unofficial-sigs-8.0.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "0f2015de38f912e314bf20785b5ed51bb9d7bb635d6665f4cf98ca4c73253746"
 
-URI_x86_64_v2_clamav-unofficial-sigs = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/clamav-unofficial-sigs-8.0.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_clamav-unofficial-sigs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_clamav-unofficial-sigs}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/clamav-unofficial-sigs-8.0.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_clamav-unofficial-sigs;unpack=0"
 SRC_URI[x86_64_v2_clamav-unofficial-sigs.sha256sum] = "7b5aa044e133da52a325e7d7f375ce6ac01617d690c3778b7725be9bcf916b83"
 
-URI_aarch64_clamav-unofficial-sigs = "${EPEL_MIRROR}/aarch64/Packages/c/clamav-unofficial-sigs-8.0.0-1.el10_3.noarch.rpm;name=aarch64_clamav-unofficial-sigs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_clamav-unofficial-sigs}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/c/clamav-unofficial-sigs-8.0.0-1.el10_3.noarch.rpm;name=aarch64_clamav-unofficial-sigs;unpack=0"
 SRC_URI[aarch64_clamav-unofficial-sigs.sha256sum] = "89681b4b147d5157e9a9a8c63a4faf83c22d50af30c5c414a0f4457cd7a65d8f"
 
 RDEPENDS:clamav-unofficial-sigs = " \

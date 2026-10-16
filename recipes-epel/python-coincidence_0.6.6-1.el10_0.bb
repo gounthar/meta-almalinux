@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-coincidence"
 PV = "0.6.6"
 PR = "1.el10_0"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-coincidence \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-coincidence \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-coincidence-0.6.6-1.el10_0.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-coincidence-0.6.6-1.el10_0.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "2d9266278ebc08b04c9ab069b1081a8c34f447a433a83fee4f18ecd94fa2459d"
 
-URI_x86_64_v2_python3-coincidence = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-coincidence-0.6.6-1.el10_0.alma_altarch.noarch.rpm;name=x86_64_v2_python3-coincidence;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-coincidence}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-coincidence-0.6.6-1.el10_0.alma_altarch.noarch.rpm;name=x86_64_v2_python3-coincidence;unpack=0"
 SRC_URI[x86_64_v2_python3-coincidence.sha256sum] = "4d8cd366068190db9102ab9b7072cd7ff9710591c6dac7106e83cb44c965c1d8"
 
-URI_aarch64_python3-coincidence = "${EPEL_MIRROR}/aarch64/Packages/p/python3-coincidence-0.6.6-1.el10_0.noarch.rpm;name=aarch64_python3-coincidence;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-coincidence}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-coincidence-0.6.6-1.el10_0.noarch.rpm;name=aarch64_python3-coincidence;unpack=0"
 SRC_URI[aarch64_python3-coincidence.sha256sum] = "65ad53e0cc6bffc428e52899ae5deb481c9e78e80ccee4c13644f4768a691b4e"
 
 RDEPENDS:python3-coincidence = " \

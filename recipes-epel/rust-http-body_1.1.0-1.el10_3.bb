@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-http-body"
 PV = "1.1.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-http-body+default-devel \
  rust-http-body-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-http-body+default-devel \
+ rust-http-body-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-http-body-1.1.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-http-body-1.1.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "dd92ebcd613bb42928fc37de2152f556f69dcef6e5c33391e92b4a1426691873"
 
-URI_x86_64_v2_rust-http-body+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-http-body+default-devel-1.1.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-http-body+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-http-body+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-http-body+default-devel-1.1.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-http-body+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-http-body+default-devel.sha256sum] = "260485c423f02fecb2faddfcc0a920f0c32f636e54e032b5c43a26116274f52e"
 
-URI_x86_64_v2_rust-http-body-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-http-body-devel-1.1.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-http-body-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-http-body-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-http-body-devel-1.1.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-http-body-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-http-body-devel.sha256sum] = "d2deb4450f1b2dbaf2cffedd8b362873b0c85285cfc597f9429d9f25d5fd2748"
 
-URI_aarch64_rust-http-body+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-http-body+default-devel-1.1.0-1.el10_3.noarch.rpm;name=aarch64_rust-http-body+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-http-body+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-http-body+default-devel-1.1.0-1.el10_3.noarch.rpm;name=aarch64_rust-http-body+default-devel;unpack=0"
 SRC_URI[aarch64_rust-http-body+default-devel.sha256sum] = "3986aab1ecc8f7a9fa597db2cad95a11c12e7f27456220c451027a3089ac02ff"
 
-URI_aarch64_rust-http-body-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-http-body-devel-1.1.0-1.el10_3.noarch.rpm;name=aarch64_rust-http-body-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-http-body-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-http-body-devel-1.1.0-1.el10_3.noarch.rpm;name=aarch64_rust-http-body-devel;unpack=0"
 SRC_URI[aarch64_rust-http-body-devel.sha256sum] = "e72ecc6084be570660961c0750d4f468bf162f96b2c63414ccc5429dd4982d4f"
 
 RDEPENDS:rust-http-body+default-devel = " \

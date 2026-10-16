@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "perl-Perl4-CoreLibs"
 PV = "0.005"
 PR = "7.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-Perl4-CoreLibs \
  perl-Perl4-CoreLibs-tests \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-Perl4-CoreLibs \
+ perl-Perl4-CoreLibs-tests \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-Perl4-CoreLibs-0.005-7.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-Perl4-CoreLibs-0.005-7.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "180774d04c3ac25315f89997f742be8cbb0fadeb828f803d99930c7950a685ea"
 
-URI_x86_64_v2_perl-Perl4-CoreLibs = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Perl4-CoreLibs-0.005-7.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Perl4-CoreLibs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Perl4-CoreLibs}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Perl4-CoreLibs-0.005-7.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Perl4-CoreLibs;unpack=0"
 SRC_URI[x86_64_v2_perl-Perl4-CoreLibs.sha256sum] = "53e10f3b6b1415ffca8140081d57adeee85cca1efbf1728e964abfae37df93f6"
 
-URI_x86_64_v2_perl-Perl4-CoreLibs-tests = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Perl4-CoreLibs-tests-0.005-7.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Perl4-CoreLibs-tests;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Perl4-CoreLibs-tests}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Perl4-CoreLibs-tests-0.005-7.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Perl4-CoreLibs-tests;unpack=0"
 SRC_URI[x86_64_v2_perl-Perl4-CoreLibs-tests.sha256sum] = "2961c4ff4c68b642db817837ae2408e7e4b1a12852aa916e2bf6c2697f04391d"
 
-URI_aarch64_perl-Perl4-CoreLibs = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Perl4-CoreLibs-0.005-7.el10_2.noarch.rpm;name=aarch64_perl-Perl4-CoreLibs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Perl4-CoreLibs}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Perl4-CoreLibs-0.005-7.el10_2.noarch.rpm;name=aarch64_perl-Perl4-CoreLibs;unpack=0"
 SRC_URI[aarch64_perl-Perl4-CoreLibs.sha256sum] = "028d228b3a6d92276e73d89599a03ca7c98e717f859fbab1131ac89cee13a55c"
 
-URI_aarch64_perl-Perl4-CoreLibs-tests = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Perl4-CoreLibs-tests-0.005-7.el10_2.noarch.rpm;name=aarch64_perl-Perl4-CoreLibs-tests;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Perl4-CoreLibs-tests}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Perl4-CoreLibs-tests-0.005-7.el10_2.noarch.rpm;name=aarch64_perl-Perl4-CoreLibs-tests;unpack=0"
 SRC_URI[aarch64_perl-Perl4-CoreLibs-tests.sha256sum] = "487cf0873815fd31578ad04362e369ca443b2d082cf8d3a711cc3f372133cfa7"
 
 RDEPENDS:perl-Perl4-CoreLibs = " \

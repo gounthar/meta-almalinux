@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "pyflakes"
 PV = "3.1.0"
 PR = "8.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-pyflakes \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-pyflakes \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/pyflakes-3.1.0-8.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/pyflakes-3.1.0-8.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "57dbfd5850a4f5f2a7e629a4461e8d1eb2a0226d1e72aa22c156d5bd9376aa6d"
 
-URI_x86_64_v2_python3-pyflakes = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-pyflakes-3.1.0-8.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-pyflakes;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-pyflakes}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-pyflakes-3.1.0-8.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-pyflakes;unpack=0"
 SRC_URI[x86_64_v2_python3-pyflakes.sha256sum] = "9fb20c25c3fe1a0563234b5e01e2fadb2482a8af2160b9f9726018deb2b461da"
 
-URI_aarch64_python3-pyflakes = "${EPEL_MIRROR}/aarch64/Packages/p/python3-pyflakes-3.1.0-8.el10_2.noarch.rpm;name=aarch64_python3-pyflakes;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-pyflakes}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-pyflakes-3.1.0-8.el10_2.noarch.rpm;name=aarch64_python3-pyflakes;unpack=0"
 SRC_URI[aarch64_python3-pyflakes.sha256sum] = "5458d10f2d9de9bd0a95f588db8eaf92602bfd4f3accc48cf341a127b18d044b"
 
 RDEPENDS:python3-pyflakes = " \

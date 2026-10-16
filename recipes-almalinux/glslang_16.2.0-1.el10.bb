@@ -10,31 +10,43 @@ PACKAGES = " \
  glslang-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/glslang-16.2.0-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/glslang-16.2.0-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f7661d213e109f72f1f497ac8769eb737792b874597a90b6420bdaa1947ef919"
 
-URI_x86_64_v2_glslang = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/glslang-16.2.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_glslang;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_glslang}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/glslang-16.2.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_glslang;unpack=0"
 SRC_URI[x86_64_v2_glslang.sha256sum] = "1cdb56c95757a000ff2d095a4c338b1dd8a5d18d2a08532e8fa289dcdeb31532"
 
-URI_x86_64_v2_glslang-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/glslang-devel-16.2.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_glslang-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_glslang-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/glslang-devel-16.2.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_glslang-devel;unpack=0"
 SRC_URI[x86_64_v2_glslang-devel.sha256sum] = "fab31ceaa98b5c622ebaead914753cfe30d7573d39cc7f8cf8d65e9ebc38ab5c"
 
-URI_aarch64_glslang = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/glslang-16.2.0-1.el10.aarch64.rpm;name=aarch64_glslang;unpack=0"
-SRC_URI:append = " ${URI_aarch64_glslang}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/glslang-16.2.0-1.el10.aarch64.rpm;name=aarch64_glslang;unpack=0"
 SRC_URI[aarch64_glslang.sha256sum] = "c94aa0e055071415c97021fc57a69b49c2171c66e8251ef062d04f6af42725ca"
 
-URI_aarch64_glslang-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/glslang-devel-16.2.0-1.el10.aarch64.rpm;name=aarch64_glslang-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_glslang-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/glslang-devel-16.2.0-1.el10.aarch64.rpm;name=aarch64_glslang-devel;unpack=0"
 SRC_URI[aarch64_glslang-devel.sha256sum] = "e68088ae054383f12eb20068a2a40672508544a8b9d811c241262aeec29eb997"
 
-RDEPENDS:glslang = " \
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/glslang-16.2.0-1.el10.riscv64.rpm;name=riscv64_glslang;unpack=0"
+SRC_URI[riscv64_glslang.sha256sum] = "531ed235f96e2c209ad0a79b2c82996822f9a83b90af186379a7df98d7e5b2e3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/glslang-devel-16.2.0-1.el10.riscv64.rpm;name=riscv64_glslang-devel;unpack=0"
+SRC_URI[riscv64_glslang-devel.sha256sum] = "8aa154e384ef0657dcb216974320ccda6130dc9a337f0e50396d1be6144c55bf"
+
+RDEPENDS:glslang:x86_64_v2 = " \
  glibc \
  libstdc++ \
  spirv-tools-libs \
- "
+"
+RDEPENDS:glslang:aarch64 = " \
+ glibc \
+ libstdc++ \
+ spirv-tools-libs \
+"
+RDEPENDS:glslang:riscv64 = " \
+ glibc \
+ libgcc \
+ libstdc++ \
+ spirv-tools-libs \
+"
 RDEPENDS:glslang-devel = " \
  cmake-filesystem \
  glslang \

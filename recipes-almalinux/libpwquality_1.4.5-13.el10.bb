@@ -11,33 +11,35 @@ PACKAGES = " \
  python3-pwquality \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libpwquality-1.4.5-13.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libpwquality-1.4.5-13.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d70f40deaa577a6a895fb3dd3985e1908b91c4821bb03b87b94c5317bcfe63b5"
 
-URI_x86_64_v2_libpwquality = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libpwquality-1.4.5-13.el10.x86_64_v2.rpm;name=x86_64_v2_libpwquality;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libpwquality}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libpwquality-1.4.5-13.el10.x86_64_v2.rpm;name=x86_64_v2_libpwquality;unpack=0"
 SRC_URI[x86_64_v2_libpwquality.sha256sum] = "7337ccf5f75d54c78d5511d0324c518284ad93bb9b4dde82b13cba1e97ec5754"
 
-URI_x86_64_v2_libpwquality-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libpwquality-devel-1.4.5-13.el10.x86_64_v2.rpm;name=x86_64_v2_libpwquality-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libpwquality-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libpwquality-devel-1.4.5-13.el10.x86_64_v2.rpm;name=x86_64_v2_libpwquality-devel;unpack=0"
 SRC_URI[x86_64_v2_libpwquality-devel.sha256sum] = "604cd7b21930b0885007438cb4c2917fcaf6476b6267c203d98f34928a5f693d"
 
-URI_x86_64_v2_python3-pwquality = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-pwquality-1.4.5-13.el10.x86_64_v2.rpm;name=x86_64_v2_python3-pwquality;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-pwquality}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-pwquality-1.4.5-13.el10.x86_64_v2.rpm;name=x86_64_v2_python3-pwquality;unpack=0"
 SRC_URI[x86_64_v2_python3-pwquality.sha256sum] = "6bdc9332f8a875ebb4e55ca1533683f3cab9c83e0e5756a8086c352a0286159a"
 
-URI_aarch64_libpwquality = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libpwquality-1.4.5-13.el10.aarch64.rpm;name=aarch64_libpwquality;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libpwquality}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libpwquality-1.4.5-13.el10.aarch64.rpm;name=aarch64_libpwquality;unpack=0"
 SRC_URI[aarch64_libpwquality.sha256sum] = "810a1a9d2a842ca6528c406d8220753414bc6c9e6f36d4d57aaa4149ee344840"
 
-URI_aarch64_libpwquality-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libpwquality-devel-1.4.5-13.el10.aarch64.rpm;name=aarch64_libpwquality-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libpwquality-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libpwquality-devel-1.4.5-13.el10.aarch64.rpm;name=aarch64_libpwquality-devel;unpack=0"
 SRC_URI[aarch64_libpwquality-devel.sha256sum] = "3d0845d4ae9f40860e2c2af18b74019ef4f3d2b5b174d2136b885522a7f6a839"
 
-URI_aarch64_python3-pwquality = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-pwquality-1.4.5-13.el10.aarch64.rpm;name=aarch64_python3-pwquality;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-pwquality}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-pwquality-1.4.5-13.el10.aarch64.rpm;name=aarch64_python3-pwquality;unpack=0"
 SRC_URI[aarch64_python3-pwquality.sha256sum] = "fd81b8738c7fdf2af0e22dd98ce58a1830080992a0c04f0bfeb17625fa9a4d73"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libpwquality-1.4.5-13.el10.riscv64.rpm;name=riscv64_libpwquality;unpack=0"
+SRC_URI[riscv64_libpwquality.sha256sum] = "12074bfc176b983f0a712bdbbee3bfbb5c6e338442d017e356b8de4e0d9b7b83"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libpwquality-devel-1.4.5-13.el10.riscv64.rpm;name=riscv64_libpwquality-devel;unpack=0"
+SRC_URI[riscv64_libpwquality-devel.sha256sum] = "aa39257341010fa0e45823a6ee10c0f73dfd8a00d92d05a90b793aa5efa1f6af"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-pwquality-1.4.5-13.el10.riscv64.rpm;name=riscv64_python3-pwquality;unpack=0"
+SRC_URI[riscv64_python3-pwquality.sha256sum] = "f007ff62c29cd49d5d110a3e3bb03caefdedbc257aedd0fc0ed202ed36918296"
 
 RDEPENDS:libpwquality = " \
  cracklib \

@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "cpp-httplib"
 PV = "0.48.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  cpp-httplib-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ cpp-httplib-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/c/cpp-httplib-0.48.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/c/cpp-httplib-0.48.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a8e14f769637725920b46adc5e829f1f9cd825764ec10677c9e0727d89938f9e"
 
-URI_x86_64_v2_cpp-httplib-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/cpp-httplib-devel-0.48.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_cpp-httplib-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cpp-httplib-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/cpp-httplib-devel-0.48.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_cpp-httplib-devel;unpack=0"
 SRC_URI[x86_64_v2_cpp-httplib-devel.sha256sum] = "65bf155a93ddba4c2f222a08169501ec47193d7ea349ba730f0a1574b1c9e242"
 
-URI_aarch64_cpp-httplib-devel = "${EPEL_MIRROR}/aarch64/Packages/c/cpp-httplib-devel-0.48.0-1.el10_3.aarch64.rpm;name=aarch64_cpp-httplib-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cpp-httplib-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/c/cpp-httplib-devel-0.48.0-1.el10_3.aarch64.rpm;name=aarch64_cpp-httplib-devel;unpack=0"
 SRC_URI[aarch64_cpp-httplib-devel.sha256sum] = "76e44e0f14030c3bb3f9cc703d76f35b8c651eba17111e5547a2bf99f4a9c7ed"
 
 RDEPENDS:cpp-httplib-devel = " \

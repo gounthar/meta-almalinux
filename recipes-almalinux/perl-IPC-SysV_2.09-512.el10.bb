@@ -9,17 +9,17 @@ PACKAGES = " \
  perl-IPC-SysV \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/perl-IPC-SysV-2.09-512.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/perl-IPC-SysV-2.09-512.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d5c8a808a65b27071b5e4c339c5b8aa3530f8d65887e4279b087776ab04897b3"
 
-URI_x86_64_v2_perl-IPC-SysV = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-IPC-SysV-2.09-512.el10.x86_64_v2.rpm;name=x86_64_v2_perl-IPC-SysV;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-IPC-SysV}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-IPC-SysV-2.09-512.el10.x86_64_v2.rpm;name=x86_64_v2_perl-IPC-SysV;unpack=0"
 SRC_URI[x86_64_v2_perl-IPC-SysV.sha256sum] = "88b7ad0e888876c45604e633fa8ecc31c0521b3f8c052d2377fe324f54a901fe"
 
-URI_aarch64_perl-IPC-SysV = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-IPC-SysV-2.09-512.el10.aarch64.rpm;name=aarch64_perl-IPC-SysV;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-IPC-SysV}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-IPC-SysV-2.09-512.el10.aarch64.rpm;name=aarch64_perl-IPC-SysV;unpack=0"
 SRC_URI[aarch64_perl-IPC-SysV.sha256sum] = "315b37284dbf8d9af83b81e4b268e612cf6210e903bd34d4233920bf08f4e40c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/perl-IPC-SysV-2.09-512.el10.riscv64.rpm;name=riscv64_perl-IPC-SysV;unpack=0"
+SRC_URI[riscv64_perl-IPC-SysV.sha256sum] = "34de1304c381ee716f59bf7ea88f807a7b187eff23fa3ac77fc8c26430f2452f"
 
 RDEPENDS:perl-IPC-SysV = " \
  glibc \

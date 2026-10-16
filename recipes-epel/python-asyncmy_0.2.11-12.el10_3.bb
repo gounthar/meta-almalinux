@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-asyncmy"
 PV = "0.2.11"
 PR = "12.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-asyncmy \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-asyncmy \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-asyncmy-0.2.11-12.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-asyncmy-0.2.11-12.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a38a980f4e4a7e04ca438fc7933f525880570ff5a49519a68da7bbaea8cfc0f4"
 
-URI_x86_64_v2_python3-asyncmy = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-asyncmy-0.2.11-12.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_python3-asyncmy;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-asyncmy}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-asyncmy-0.2.11-12.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_python3-asyncmy;unpack=0"
 SRC_URI[x86_64_v2_python3-asyncmy.sha256sum] = "d4a45cf0cb11c837b5adce7fb6a7daba7059bac1ab5ac8cbdfd7f1987409453f"
 
-URI_aarch64_python3-asyncmy = "${EPEL_MIRROR}/aarch64/Packages/p/python3-asyncmy-0.2.11-12.el10_3.aarch64.rpm;name=aarch64_python3-asyncmy;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-asyncmy}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-asyncmy-0.2.11-12.el10_3.aarch64.rpm;name=aarch64_python3-asyncmy;unpack=0"
 SRC_URI[aarch64_python3-asyncmy.sha256sum] = "23734893c62c0d970466a7f171430a284d805161d641a395f044a8daaaebe0af"
 
 RDEPENDS:python3-asyncmy = " \

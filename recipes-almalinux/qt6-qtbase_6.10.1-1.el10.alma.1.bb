@@ -18,89 +18,98 @@ PACKAGES = " \
  qt6-qtbase-static \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtbase-6.10.1-1.el10.alma.1.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtbase-6.10.1-1.el10.alma.1.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "0f3a2233860b27af8865b2cdd6b5eefb9e06568fbc2f15c4a440727ef8f96d1d"
 
-URI_x86_64_v2_qt6-qtbase = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtbase-6.10.1-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_qt6-qtbase;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtbase}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtbase-6.10.1-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_qt6-qtbase;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtbase.sha256sum] = "19394fd3a175fc8bc3945f340bb9a83ac87bb5637a765b6792403cb65a9fc3a4"
 
-URI_x86_64_v2_qt6-qtbase-common = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtbase-common-6.10.1-1.el10.alma.1.noarch.rpm;name=x86_64_v2_qt6-qtbase-common;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtbase-common}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtbase-common-6.10.1-1.el10.alma.1.noarch.rpm;name=x86_64_v2_qt6-qtbase-common;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtbase-common.sha256sum] = "7ed36c5a2ae24d194ae1ee7147a7f545ebd9c0cd8c9c99872cd54882a62db123"
 
-URI_x86_64_v2_qt6-qtbase-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtbase-devel-6.10.1-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_qt6-qtbase-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtbase-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtbase-devel-6.10.1-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_qt6-qtbase-devel;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtbase-devel.sha256sum] = "6dd98b53d5f6b0480cdf9a019b213364959e8b4852f937b7f8e78f7178554a3a"
 
-URI_x86_64_v2_qt6-qtbase-examples = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtbase-examples-6.10.1-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_qt6-qtbase-examples;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtbase-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtbase-examples-6.10.1-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_qt6-qtbase-examples;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtbase-examples.sha256sum] = "193b3d0b712e750250f9d14c57ad9624b7ca3c735cb9b0c333bc89072b791581"
 
-URI_x86_64_v2_qt6-qtbase-gui = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtbase-gui-6.10.1-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_qt6-qtbase-gui;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtbase-gui}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtbase-gui-6.10.1-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_qt6-qtbase-gui;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtbase-gui.sha256sum] = "1ec859bc934a703fcf3c3cedeb23032c263e426ee1570a49e3ef7790e3554cf3"
 
-URI_x86_64_v2_qt6-qtbase-mysql = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtbase-mysql-6.10.1-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_qt6-qtbase-mysql;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtbase-mysql}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtbase-mysql-6.10.1-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_qt6-qtbase-mysql;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtbase-mysql.sha256sum] = "e9b08e5cc6da6cb75f54e932e090607988869d1596194736e03b3f2dcde6a679"
 
-URI_x86_64_v2_qt6-qtbase-odbc = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtbase-odbc-6.10.1-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_qt6-qtbase-odbc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtbase-odbc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtbase-odbc-6.10.1-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_qt6-qtbase-odbc;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtbase-odbc.sha256sum] = "96259067f9cb0670b7e8d86cccad4655431e4f064dc640b18dfce13c10b61065"
 
-URI_x86_64_v2_qt6-qtbase-postgresql = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtbase-postgresql-6.10.1-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_qt6-qtbase-postgresql;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtbase-postgresql}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtbase-postgresql-6.10.1-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_qt6-qtbase-postgresql;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtbase-postgresql.sha256sum] = "1b0373291ef8974b6de8de362fabc161e4ff4db5690bec95777942c6c345b384"
 
-URI_x86_64_v2_qt6-qtbase-private-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtbase-private-devel-6.10.1-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_qt6-qtbase-private-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtbase-private-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtbase-private-devel-6.10.1-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_qt6-qtbase-private-devel;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtbase-private-devel.sha256sum] = "6b635f9f6e6eb16c76f39378f31d16877f7f6a78683b72d31c523bcf86d2d30b"
 
-URI_x86_64_v2_qt6-qtbase-static = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtbase-static-6.10.1-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_qt6-qtbase-static;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtbase-static}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtbase-static-6.10.1-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_qt6-qtbase-static;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtbase-static.sha256sum] = "603739e037b0dfdedf4dfbffbe653d3cf2c31a2c3689eb7eb22512012380be05"
 
-URI_aarch64_qt6-qtbase = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtbase-6.10.1-1.el10.alma.1.aarch64.rpm;name=aarch64_qt6-qtbase;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtbase}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtbase-6.10.1-1.el10.alma.1.aarch64.rpm;name=aarch64_qt6-qtbase;unpack=0"
 SRC_URI[aarch64_qt6-qtbase.sha256sum] = "640e202c3174e585ca5f58e8b7b784f2cdc608cb7401273c4c279d266c5dbcb2"
 
-URI_aarch64_qt6-qtbase-common = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtbase-common-6.10.1-1.el10.alma.1.noarch.rpm;name=aarch64_qt6-qtbase-common;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtbase-common}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtbase-common-6.10.1-1.el10.alma.1.noarch.rpm;name=aarch64_qt6-qtbase-common;unpack=0"
 SRC_URI[aarch64_qt6-qtbase-common.sha256sum] = "7ed36c5a2ae24d194ae1ee7147a7f545ebd9c0cd8c9c99872cd54882a62db123"
 
-URI_aarch64_qt6-qtbase-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtbase-devel-6.10.1-1.el10.alma.1.aarch64.rpm;name=aarch64_qt6-qtbase-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtbase-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtbase-devel-6.10.1-1.el10.alma.1.aarch64.rpm;name=aarch64_qt6-qtbase-devel;unpack=0"
 SRC_URI[aarch64_qt6-qtbase-devel.sha256sum] = "d124029356fce22ea0b2ad8a8389a872be18dcab6dce5c9d0ce8ee7decf32c29"
 
-URI_aarch64_qt6-qtbase-examples = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtbase-examples-6.10.1-1.el10.alma.1.aarch64.rpm;name=aarch64_qt6-qtbase-examples;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtbase-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtbase-examples-6.10.1-1.el10.alma.1.aarch64.rpm;name=aarch64_qt6-qtbase-examples;unpack=0"
 SRC_URI[aarch64_qt6-qtbase-examples.sha256sum] = "b5cab295172ee3969e1f10800686ad85ee4387921fc6b6295dbb5fc3d041d789"
 
-URI_aarch64_qt6-qtbase-gui = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtbase-gui-6.10.1-1.el10.alma.1.aarch64.rpm;name=aarch64_qt6-qtbase-gui;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtbase-gui}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtbase-gui-6.10.1-1.el10.alma.1.aarch64.rpm;name=aarch64_qt6-qtbase-gui;unpack=0"
 SRC_URI[aarch64_qt6-qtbase-gui.sha256sum] = "c5721084fec1632511cc3848f8a2f209f26d2cd9eb83082b2ee657f8d7b1a0db"
 
-URI_aarch64_qt6-qtbase-mysql = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtbase-mysql-6.10.1-1.el10.alma.1.aarch64.rpm;name=aarch64_qt6-qtbase-mysql;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtbase-mysql}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtbase-mysql-6.10.1-1.el10.alma.1.aarch64.rpm;name=aarch64_qt6-qtbase-mysql;unpack=0"
 SRC_URI[aarch64_qt6-qtbase-mysql.sha256sum] = "394917083b9765b2fdd1f5f403846055e3af80c468c63d2065e31948ed859c0a"
 
-URI_aarch64_qt6-qtbase-odbc = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtbase-odbc-6.10.1-1.el10.alma.1.aarch64.rpm;name=aarch64_qt6-qtbase-odbc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtbase-odbc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtbase-odbc-6.10.1-1.el10.alma.1.aarch64.rpm;name=aarch64_qt6-qtbase-odbc;unpack=0"
 SRC_URI[aarch64_qt6-qtbase-odbc.sha256sum] = "c66d83f69253a152a2a08d069fadbd53f4800943ce791ef6c519346bb36a8d82"
 
-URI_aarch64_qt6-qtbase-postgresql = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtbase-postgresql-6.10.1-1.el10.alma.1.aarch64.rpm;name=aarch64_qt6-qtbase-postgresql;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtbase-postgresql}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtbase-postgresql-6.10.1-1.el10.alma.1.aarch64.rpm;name=aarch64_qt6-qtbase-postgresql;unpack=0"
 SRC_URI[aarch64_qt6-qtbase-postgresql.sha256sum] = "2297c5bfa915207c3433b8da634d1d3a8c070cfc511250c8ab89154852b5394a"
 
-URI_aarch64_qt6-qtbase-private-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtbase-private-devel-6.10.1-1.el10.alma.1.aarch64.rpm;name=aarch64_qt6-qtbase-private-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtbase-private-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtbase-private-devel-6.10.1-1.el10.alma.1.aarch64.rpm;name=aarch64_qt6-qtbase-private-devel;unpack=0"
 SRC_URI[aarch64_qt6-qtbase-private-devel.sha256sum] = "ce28f37a517f4fe3e22f5b0ba84b6d9edd555cab7a69c4a339c8522e1236928a"
 
-URI_aarch64_qt6-qtbase-static = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtbase-static-6.10.1-1.el10.alma.1.aarch64.rpm;name=aarch64_qt6-qtbase-static;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtbase-static}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtbase-static-6.10.1-1.el10.alma.1.aarch64.rpm;name=aarch64_qt6-qtbase-static;unpack=0"
 SRC_URI[aarch64_qt6-qtbase-static.sha256sum] = "ff1ef40c2f55c8ab8d1b17d7de76dcb730e4d790d1b3284abb00ee5e09e3258b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtbase-6.10.1-1.el10.alma.1.riscv64.rpm;name=riscv64_qt6-qtbase;unpack=0"
+SRC_URI[riscv64_qt6-qtbase.sha256sum] = "90bd91bc5bc10ce7211652a7b17a4659c67a4a4bd3086488d5fd279a0e721134"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtbase-common-6.10.1-1.el10.alma.1.noarch.rpm;name=riscv64_qt6-qtbase-common;unpack=0"
+SRC_URI[riscv64_qt6-qtbase-common.sha256sum] = "7ed36c5a2ae24d194ae1ee7147a7f545ebd9c0cd8c9c99872cd54882a62db123"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtbase-devel-6.10.1-1.el10.alma.1.riscv64.rpm;name=riscv64_qt6-qtbase-devel;unpack=0"
+SRC_URI[riscv64_qt6-qtbase-devel.sha256sum] = "609e50adf28cb15f85e18b262d6c9156173616ca3992bfcfa1833827fc1ddf08"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/qt6-qtbase-examples-6.10.1-1.el10.alma.1.riscv64.rpm;name=riscv64_qt6-qtbase-examples;unpack=0"
+SRC_URI[riscv64_qt6-qtbase-examples.sha256sum] = "2f11dcd2293524580e74e1841871b30ed78ea8e158c7c5b97c7b9a0355893239"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtbase-gui-6.10.1-1.el10.alma.1.riscv64.rpm;name=riscv64_qt6-qtbase-gui;unpack=0"
+SRC_URI[riscv64_qt6-qtbase-gui.sha256sum] = "bf7edefa5e6c716e2c737723007753caf5be2cef7d70542cdc64d0ba4c078886"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtbase-mysql-6.10.1-1.el10.alma.1.riscv64.rpm;name=riscv64_qt6-qtbase-mysql;unpack=0"
+SRC_URI[riscv64_qt6-qtbase-mysql.sha256sum] = "df875dbacce5664054768b56525f1b4d1a47a372168afc83c4608f051536ef6e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtbase-odbc-6.10.1-1.el10.alma.1.riscv64.rpm;name=riscv64_qt6-qtbase-odbc;unpack=0"
+SRC_URI[riscv64_qt6-qtbase-odbc.sha256sum] = "9c9e38c35fc7c30cbaf0f76d810adc48b805130938ca02652950d24a91b5b8bc"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtbase-postgresql-6.10.1-1.el10.alma.1.riscv64.rpm;name=riscv64_qt6-qtbase-postgresql;unpack=0"
+SRC_URI[riscv64_qt6-qtbase-postgresql.sha256sum] = "9c76b5316f74714c124e27c66d3628728603e5cb2cd9ad4eef6f46e4ce672b8e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/qt6-qtbase-private-devel-6.10.1-1.el10.alma.1.riscv64.rpm;name=riscv64_qt6-qtbase-private-devel;unpack=0"
+SRC_URI[riscv64_qt6-qtbase-private-devel.sha256sum] = "52567156130b3b7aad33486d72b058fcae6a3d0f4af9014c38285d8c44dae895"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/qt6-qtbase-static-6.10.1-1.el10.alma.1.riscv64.rpm;name=riscv64_qt6-qtbase-static;unpack=0"
+SRC_URI[riscv64_qt6-qtbase-static.sha256sum] = "92c65ff8ee62fb359e080aa85634192a088bbdee9796f84a10bc17781d348778"
 
 RDEPENDS:qt6-qtbase = " \
  dbus-libs \
@@ -229,6 +238,45 @@ RDEPENDS:qt6-qtbase-gui:aarch64 = " \
  xcb-util-wm \
  zlib-ng-compat \
 "
+RDEPENDS:qt6-qtbase-gui:riscv64 = " \
+ bash \
+ cups-libs \
+ fontconfig \
+ freetype \
+ glib2 \
+ glibc \
+ glx-utils \
+ harfbuzz \
+ libICE \
+ libSM \
+ libX11 \
+ libX11-xcb \
+ libdrm \
+ libgcc \
+ libglvnd-egl \
+ libglvnd-glx \
+ libglvnd-opengl \
+ libinput \
+ libjpeg-turbo \
+ libpng \
+ libstdc++ \
+ libwayland-client \
+ libwayland-cursor \
+ libwayland-egl \
+ libxcb \
+ libxkbcommon \
+ libxkbcommon-x11 \
+ mesa-libgbm \
+ mtdev \
+ qt6-qtbase \
+ systemd-libs \
+ xcb-util-cursor \
+ xcb-util-image \
+ xcb-util-keysyms \
+ xcb-util-renderutil \
+ xcb-util-wm \
+ zlib-ng-compat \
+"
 RDEPENDS:qt6-qtbase-mysql = " \
  cmake-filesystem \
  glibc \
@@ -243,13 +291,28 @@ RDEPENDS:qt6-qtbase-odbc = " \
  qt6-qtbase \
  unixODBC \
  "
-RDEPENDS:qt6-qtbase-postgresql = " \
+RDEPENDS:qt6-qtbase-postgresql:x86_64_v2 = " \
  cmake-filesystem \
  glibc \
  libpq \
  libstdc++ \
  qt6-qtbase \
- "
+"
+RDEPENDS:qt6-qtbase-postgresql:aarch64 = " \
+ cmake-filesystem \
+ glibc \
+ libpq \
+ libstdc++ \
+ qt6-qtbase \
+"
+RDEPENDS:qt6-qtbase-postgresql:riscv64 = " \
+ cmake-filesystem \
+ glibc \
+ libgcc \
+ libpq \
+ libstdc++ \
+ qt6-qtbase \
+"
 RDEPENDS:qt6-qtbase-private-devel = " \
  cmake-filesystem \
  cups-devel \

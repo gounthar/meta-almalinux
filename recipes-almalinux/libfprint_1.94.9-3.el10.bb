@@ -10,25 +10,26 @@ PACKAGES = " \
  libfprint-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libfprint-1.94.9-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libfprint-1.94.9-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "580067933480201ccdc54ae1502c59a12484f5c8416cd40dcf6ea2d494f44917"
 
-URI_x86_64_v2_libfprint = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libfprint-1.94.9-3.el10.x86_64_v2.rpm;name=x86_64_v2_libfprint;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libfprint}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libfprint-1.94.9-3.el10.x86_64_v2.rpm;name=x86_64_v2_libfprint;unpack=0"
 SRC_URI[x86_64_v2_libfprint.sha256sum] = "9561c7aca6402494fed917834ffba691ee94a04bd506819b34f915d5051fa6ee"
 
-URI_x86_64_v2_libfprint-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libfprint-devel-1.94.9-3.el10.x86_64_v2.rpm;name=x86_64_v2_libfprint-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libfprint-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libfprint-devel-1.94.9-3.el10.x86_64_v2.rpm;name=x86_64_v2_libfprint-devel;unpack=0"
 SRC_URI[x86_64_v2_libfprint-devel.sha256sum] = "13228085168f7851424ad304f4c8dc86336385d6e63c87a1e813e17a0f48e081"
 
-URI_aarch64_libfprint = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libfprint-1.94.9-3.el10.aarch64.rpm;name=aarch64_libfprint;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libfprint}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libfprint-1.94.9-3.el10.aarch64.rpm;name=aarch64_libfprint;unpack=0"
 SRC_URI[aarch64_libfprint.sha256sum] = "7964c6b35f217419a31ff6d6da09b22173480d17bb2ab3cbfa76259b859b8301"
 
-URI_aarch64_libfprint-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libfprint-devel-1.94.9-3.el10.aarch64.rpm;name=aarch64_libfprint-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libfprint-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libfprint-devel-1.94.9-3.el10.aarch64.rpm;name=aarch64_libfprint-devel;unpack=0"
 SRC_URI[aarch64_libfprint-devel.sha256sum] = "28e5e043f7d240814dd0dde441f3c21327f57412de77e843db5ea0a511aa69cd"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libfprint-1.94.9-3.el10.riscv64.rpm;name=riscv64_libfprint;unpack=0"
+SRC_URI[riscv64_libfprint.sha256sum] = "4cf588c1563de57e50db0ac8981ae105ccaa476e645a4286dc3653dfaca7e83d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libfprint-devel-1.94.9-3.el10.riscv64.rpm;name=riscv64_libfprint-devel;unpack=0"
+SRC_URI[riscv64_libfprint-devel.sha256sum] = "c4424a02153d040ecad7b239341e633504339ea4989380e340f0e89080acbb82"
 
 RDEPENDS:libfprint = " \
  glib2 \

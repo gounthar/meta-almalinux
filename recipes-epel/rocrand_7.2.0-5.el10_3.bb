@@ -12,17 +12,17 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rocrand-7.2.0-5.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rocrand-7.2.0-5.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "30702510b109cfcc9f0f2b3125e91df96d123bdac9e7d2bdab3b03bf34a97eec"
 
-URI_x86_64_v2_rocrand = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocrand-7.2.0-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocrand;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rocrand}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocrand-7.2.0-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocrand;unpack=0"
 SRC_URI[x86_64_v2_rocrand.sha256sum] = "379a96ff0ff3cbd47a6e0849aa8a99c89def0fbde631be982e78537d5063aa56"
 
-URI_x86_64_v2_rocrand-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocrand-devel-7.2.0-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocrand-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rocrand-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocrand-devel-7.2.0-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocrand-devel;unpack=0"
 SRC_URI[x86_64_v2_rocrand-devel.sha256sum] = "4471a9be7f6f0886364cf4478743e1f4caa2bba710494e189a44bd91a41331d9"
 
 RDEPENDS:rocrand = " \

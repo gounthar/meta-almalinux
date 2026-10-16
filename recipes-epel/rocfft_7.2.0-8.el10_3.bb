@@ -12,17 +12,17 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rocfft-7.2.0-8.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rocfft-7.2.0-8.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1d1b322e0984bd0e4b3efa93832c55ca6b590c63df389e6febefa9052eca5e63"
 
-URI_x86_64_v2_rocfft = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocfft-7.2.0-8.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocfft;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rocfft}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocfft-7.2.0-8.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocfft;unpack=0"
 SRC_URI[x86_64_v2_rocfft.sha256sum] = "a4cce4da88a09f1e34c2d7052bb68420cf9f4e447de9d5fcfcfd32750e365137"
 
-URI_x86_64_v2_rocfft-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocfft-devel-7.2.0-8.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocfft-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rocfft-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocfft-devel-7.2.0-8.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocfft-devel;unpack=0"
 SRC_URI[x86_64_v2_rocfft-devel.sha256sum] = "4fb5a3d5147b693c29a59dc9056948c6118e233ea2a8ad2483b8350fca2ff637"
 
 RDEPENDS:rocfft = " \

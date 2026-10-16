@@ -9,17 +9,17 @@ PACKAGES = " \
  awscli2 \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/awscli2-2.33.0-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/awscli2-2.33.0-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "76efb3fed56adde2aa2a0fe9908e5a8e148eceaf1d04204b8408bb65877b48bb"
 
-URI_x86_64_v2_awscli2 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/awscli2-2.33.0-1.el10.noarch.rpm;name=x86_64_v2_awscli2;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_awscli2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/awscli2-2.33.0-1.el10.noarch.rpm;name=x86_64_v2_awscli2;unpack=0"
 SRC_URI[x86_64_v2_awscli2.sha256sum] = "35b5e616c80889ccf2a750f023d80807c191c67311de655e2d82eb324aa73d4a"
 
-URI_aarch64_awscli2 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/awscli2-2.33.0-1.el10.noarch.rpm;name=aarch64_awscli2;unpack=0"
-SRC_URI:append = " ${URI_aarch64_awscli2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/awscli2-2.33.0-1.el10.noarch.rpm;name=aarch64_awscli2;unpack=0"
 SRC_URI[aarch64_awscli2.sha256sum] = "35b5e616c80889ccf2a750f023d80807c191c67311de655e2d82eb324aa73d4a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/awscli2-2.33.0-1.el10.noarch.rpm;name=riscv64_awscli2;unpack=0"
+SRC_URI[riscv64_awscli2.sha256sum] = "35b5e616c80889ccf2a750f023d80807c191c67311de655e2d82eb324aa73d4a"
 
 RDEPENDS:awscli2 = " \
  python3 \

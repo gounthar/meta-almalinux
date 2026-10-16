@@ -9,19 +9,19 @@ PACKAGES = " \
  tracker-miners \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/tracker-miners-3.7.4-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/tracker-miners-3.7.4-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1b20cea1dce2c4305785ac4e7db4d6ec6ae488fccdc6303a353daa9db1d1401c"
 
-URI_x86_64_v2_tracker-miners = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/tracker-miners-3.7.4-1.el10.x86_64_v2.rpm;name=x86_64_v2_tracker-miners;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_tracker-miners}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/tracker-miners-3.7.4-1.el10.x86_64_v2.rpm;name=x86_64_v2_tracker-miners;unpack=0"
 SRC_URI[x86_64_v2_tracker-miners.sha256sum] = "bc948b9fde7cad8ad722844c7740ad4995617df5ebd171717732d6e26c6770db"
 
-URI_aarch64_tracker-miners = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/tracker-miners-3.7.4-1.el10.aarch64.rpm;name=aarch64_tracker-miners;unpack=0"
-SRC_URI:append = " ${URI_aarch64_tracker-miners}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/tracker-miners-3.7.4-1.el10.aarch64.rpm;name=aarch64_tracker-miners;unpack=0"
 SRC_URI[aarch64_tracker-miners.sha256sum] = "6dab68b6987fd834202b1b5826eddf5c12e9190c094323ffc8e87f6f9b835564"
 
-RDEPENDS:tracker-miners = " \
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/tracker-miners-3.7.4-1.el10.riscv64.rpm;name=riscv64_tracker-miners;unpack=0"
+SRC_URI[riscv64_tracker-miners.sha256sum] = "22c7b2e30eaabf5ca926d94d0461c86b4b59a4c217d81d57becbf62b998f7781"
+
+RDEPENDS:tracker-miners:x86_64_v2 = " \
  bash \
  exempi \
  giflib \
@@ -47,4 +47,57 @@ RDEPENDS:tracker-miners = " \
  poppler-glib \
  tracker \
  upower-libs \
- "
+"
+RDEPENDS:tracker-miners:aarch64 = " \
+ bash \
+ exempi \
+ giflib \
+ glib2 \
+ glibc \
+ gstreamer1 \
+ gstreamer1-plugins-base \
+ libblkid \
+ libexif \
+ libgcc \
+ libgexiv2 \
+ libgsf \
+ libgxps \
+ libicu \
+ libiptcdata \
+ libjpeg-turbo \
+ libosinfo \
+ libpng \
+ libseccomp \
+ libtiff \
+ libtracker-sparql \
+ libxml2 \
+ poppler-glib \
+ tracker \
+ upower-libs \
+"
+RDEPENDS:tracker-miners:riscv64 = " \
+ bash \
+ exempi \
+ giflib \
+ glib2 \
+ glibc \
+ gstreamer1 \
+ gstreamer1-plugins-base \
+ libblkid \
+ libexif \
+ libgcc \
+ libgexiv2 \
+ libgsf \
+ libgxps \
+ libicu \
+ libiptcdata \
+ libjpeg-turbo \
+ libosinfo \
+ libpng \
+ libtiff \
+ libtracker-sparql \
+ libxml2 \
+ poppler-glib \
+ tracker \
+ upower-libs \
+"

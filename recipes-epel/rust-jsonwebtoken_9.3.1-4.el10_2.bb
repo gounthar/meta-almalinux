@@ -5,59 +5,55 @@ inherit dnf-bridge
 PN = "rust-jsonwebtoken"
 PV = "9.3.1"
 PR = "4.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-jsonwebtoken+default-devel \
  rust-jsonwebtoken+pem-devel \
  rust-jsonwebtoken+simple_asn1-devel \
  rust-jsonwebtoken+use_pem-devel \
  rust-jsonwebtoken-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-jsonwebtoken+default-devel \
+ rust-jsonwebtoken+pem-devel \
+ rust-jsonwebtoken+simple_asn1-devel \
+ rust-jsonwebtoken+use_pem-devel \
+ rust-jsonwebtoken-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-jsonwebtoken-9.3.1-4.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-jsonwebtoken-9.3.1-4.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "cc2d1b67251e7f99942378b99e181654a267b22517e21096f8bfa15d3ef0e0ab"
 
-## Requires (x86_64_v2) that were seen as not satisfiable in original repo:
-# - rust-jsonwebtoken+pem-devel: (crate(pem/default) >= 3.0.0 with crate(pem/default) < 4.0.0~)
-
-URI_x86_64_v2_rust-jsonwebtoken+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-jsonwebtoken+default-devel-9.3.1-4.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-jsonwebtoken+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-jsonwebtoken+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-jsonwebtoken+default-devel-9.3.1-4.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-jsonwebtoken+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-jsonwebtoken+default-devel.sha256sum] = "72b6a49b63cc844bb6f28c5b2614c616ce947367a4fc83f6b64ee93b81d9c1a1"
 
-URI_x86_64_v2_rust-jsonwebtoken+pem-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-jsonwebtoken+pem-devel-9.3.1-4.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-jsonwebtoken+pem-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-jsonwebtoken+pem-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-jsonwebtoken+pem-devel-9.3.1-4.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-jsonwebtoken+pem-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-jsonwebtoken+pem-devel.sha256sum] = "5bb039c463c49d118bf1a34691638aef733a0b11fed86d48e831b3ff531ee006"
 
-URI_x86_64_v2_rust-jsonwebtoken+simple_asn1-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-jsonwebtoken+simple_asn1-devel-9.3.1-4.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-jsonwebtoken+simple_asn1-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-jsonwebtoken+simple_asn1-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-jsonwebtoken+simple_asn1-devel-9.3.1-4.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-jsonwebtoken+simple_asn1-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-jsonwebtoken+simple_asn1-devel.sha256sum] = "0989f65357c4f9863af1ae8735e6ef753c1ccec73eccc6dee546412c67100d92"
 
-URI_x86_64_v2_rust-jsonwebtoken+use_pem-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-jsonwebtoken+use_pem-devel-9.3.1-4.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-jsonwebtoken+use_pem-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-jsonwebtoken+use_pem-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-jsonwebtoken+use_pem-devel-9.3.1-4.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-jsonwebtoken+use_pem-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-jsonwebtoken+use_pem-devel.sha256sum] = "d4c7f5b6d794462d68d7fb20309dfe5cb5a55d5e134bf5e081d4186e3fe91576"
 
-URI_x86_64_v2_rust-jsonwebtoken-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-jsonwebtoken-devel-9.3.1-4.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-jsonwebtoken-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-jsonwebtoken-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-jsonwebtoken-devel-9.3.1-4.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-jsonwebtoken-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-jsonwebtoken-devel.sha256sum] = "7b47e90f87b031d1a0a30077f106c8bde90b72c2e65ba09c017a1b1003e10099"
 
-URI_aarch64_rust-jsonwebtoken+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-jsonwebtoken+default-devel-9.3.1-4.el10_2.noarch.rpm;name=aarch64_rust-jsonwebtoken+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-jsonwebtoken+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-jsonwebtoken+default-devel-9.3.1-4.el10_2.noarch.rpm;name=aarch64_rust-jsonwebtoken+default-devel;unpack=0"
 SRC_URI[aarch64_rust-jsonwebtoken+default-devel.sha256sum] = "3a44c203a6b310e9bf547814849b52a28d2ccac47e114b3cc18fe1e529ee72fc"
 
-URI_aarch64_rust-jsonwebtoken+pem-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-jsonwebtoken+pem-devel-9.3.1-4.el10_2.noarch.rpm;name=aarch64_rust-jsonwebtoken+pem-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-jsonwebtoken+pem-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-jsonwebtoken+pem-devel-9.3.1-4.el10_2.noarch.rpm;name=aarch64_rust-jsonwebtoken+pem-devel;unpack=0"
 SRC_URI[aarch64_rust-jsonwebtoken+pem-devel.sha256sum] = "0c039b0d77dcaae5f07509f651d619b05c7b9bd3533d440afedfdca097aecd4c"
 
-URI_aarch64_rust-jsonwebtoken+simple_asn1-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-jsonwebtoken+simple_asn1-devel-9.3.1-4.el10_2.noarch.rpm;name=aarch64_rust-jsonwebtoken+simple_asn1-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-jsonwebtoken+simple_asn1-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-jsonwebtoken+simple_asn1-devel-9.3.1-4.el10_2.noarch.rpm;name=aarch64_rust-jsonwebtoken+simple_asn1-devel;unpack=0"
 SRC_URI[aarch64_rust-jsonwebtoken+simple_asn1-devel.sha256sum] = "1fc20cd3c4d6f05cf576bfbe864c5b7ed38aa4cba34b7b608ddacccaf13726e5"
 
-URI_aarch64_rust-jsonwebtoken+use_pem-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-jsonwebtoken+use_pem-devel-9.3.1-4.el10_2.noarch.rpm;name=aarch64_rust-jsonwebtoken+use_pem-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-jsonwebtoken+use_pem-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-jsonwebtoken+use_pem-devel-9.3.1-4.el10_2.noarch.rpm;name=aarch64_rust-jsonwebtoken+use_pem-devel;unpack=0"
 SRC_URI[aarch64_rust-jsonwebtoken+use_pem-devel.sha256sum] = "e53cd98a2760f0f2404bedd93fe3350b9ded00d6fff82dfde9965eea2a0809eb"
 
-URI_aarch64_rust-jsonwebtoken-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-jsonwebtoken-devel-9.3.1-4.el10_2.noarch.rpm;name=aarch64_rust-jsonwebtoken-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-jsonwebtoken-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-jsonwebtoken-devel-9.3.1-4.el10_2.noarch.rpm;name=aarch64_rust-jsonwebtoken-devel;unpack=0"
 SRC_URI[aarch64_rust-jsonwebtoken-devel.sha256sum] = "f94b684f4c11f116e31e1c5df7c9588baca041debf99ecae84badc42f0e6838b"
 
 RDEPENDS:rust-jsonwebtoken+default-devel = " \
@@ -65,15 +61,11 @@ RDEPENDS:rust-jsonwebtoken+default-devel = " \
  rust-jsonwebtoken+use_pem-devel \
  rust-jsonwebtoken-devel \
  "
-RDEPENDS:rust-jsonwebtoken+pem-devel:x86_64_v2 = " \
- cargo \
- rust-jsonwebtoken-devel \
-"
-RDEPENDS:rust-jsonwebtoken+pem-devel:aarch64 = " \
+RDEPENDS:rust-jsonwebtoken+pem-devel = " \
  cargo \
  rust-jsonwebtoken-devel \
  rust-pem3+default-devel \
-"
+ "
 RDEPENDS:rust-jsonwebtoken+simple_asn1-devel = " \
  cargo \
  rust-jsonwebtoken-devel \

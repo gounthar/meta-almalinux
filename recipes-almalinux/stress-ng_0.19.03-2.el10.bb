@@ -9,17 +9,17 @@ PACKAGES = " \
  stress-ng \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/stress-ng-0.19.03-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/stress-ng-0.19.03-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "158a9166e3e27cbf37142a9e2238bee262735f69087cea8f687d8679d8dec9ba"
 
-URI_x86_64_v2_stress-ng = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/stress-ng-0.19.03-2.el10.x86_64_v2.rpm;name=x86_64_v2_stress-ng;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_stress-ng}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/stress-ng-0.19.03-2.el10.x86_64_v2.rpm;name=x86_64_v2_stress-ng;unpack=0"
 SRC_URI[x86_64_v2_stress-ng.sha256sum] = "5590b836ecc42a01b6e2bdf0059ff7be382bb0eedfa603af33b4c4187abd33aa"
 
-URI_aarch64_stress-ng = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/stress-ng-0.19.03-2.el10.aarch64.rpm;name=aarch64_stress-ng;unpack=0"
-SRC_URI:append = " ${URI_aarch64_stress-ng}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/stress-ng-0.19.03-2.el10.aarch64.rpm;name=aarch64_stress-ng;unpack=0"
 SRC_URI[aarch64_stress-ng.sha256sum] = "8c1fbbc40d4b668bcaaba849008d8dcd2f293fc1aa523005f13ecc4c26bcbf6c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/stress-ng-0.19.03-2.el10.riscv64.rpm;name=riscv64_stress-ng;unpack=0"
+SRC_URI[riscv64_stress-ng.sha256sum] = "c4e37e339ffc37e19e0d7055bf733e8b233a3c4f687af57ff0f3673ad22ef0a7"
 
 RDEPENDS:stress-ng:x86_64_v2 = " \
  Judy \
@@ -33,6 +33,16 @@ RDEPENDS:stress-ng:x86_64_v2 = " \
  zlib-ng-compat \
 "
 RDEPENDS:stress-ng:aarch64 = " \
+ Judy \
+ glibc \
+ gmp \
+ libjpeg-turbo \
+ libxcrypt \
+ lksctp-tools \
+ mpfr \
+ zlib-ng-compat \
+"
+RDEPENDS:stress-ng:riscv64 = " \
  Judy \
  glibc \
  gmp \

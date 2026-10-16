@@ -12,17 +12,17 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rocblas-7.2.0-8.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rocblas-7.2.0-8.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "59b56840f9a51925ea74218f180d7f18ffabcb06c74cfde3a707b1aabd1b65b3"
 
-URI_x86_64_v2_rocblas = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocblas-7.2.0-8.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocblas;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rocblas}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocblas-7.2.0-8.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocblas;unpack=0"
 SRC_URI[x86_64_v2_rocblas.sha256sum] = "0756963582873092836b947aff26269631831c90630cfd467672771467845cf6"
 
-URI_x86_64_v2_rocblas-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocblas-devel-7.2.0-8.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocblas-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rocblas-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocblas-devel-7.2.0-8.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocblas-devel;unpack=0"
 SRC_URI[x86_64_v2_rocblas-devel.sha256sum] = "453bc2c72209c54ef2a74847635af2118a5bf7e87bc07d8382d12e1b619d309a"
 
 RDEPENDS:rocblas = " \

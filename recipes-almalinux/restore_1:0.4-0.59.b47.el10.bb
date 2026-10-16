@@ -10,17 +10,17 @@ PACKAGES = " \
  restore \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/restore-0.4-0.59.b47.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/restore-0.4-0.59.b47.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8935948209e9883395a7af6a2be6a7e66a8e8e9be1899cae2dad72e163772b50"
 
-URI_x86_64_v2_restore = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/restore-0.4-0.59.b47.el10.x86_64_v2.rpm;name=x86_64_v2_restore;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_restore}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/restore-0.4-0.59.b47.el10.x86_64_v2.rpm;name=x86_64_v2_restore;unpack=0"
 SRC_URI[x86_64_v2_restore.sha256sum] = "28b629339b8ba6d9511a1fc9105bc9c74f3ed771db97f34654b90b31e25f739a"
 
-URI_aarch64_restore = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/restore-0.4-0.59.b47.el10.aarch64.rpm;name=aarch64_restore;unpack=0"
-SRC_URI:append = " ${URI_aarch64_restore}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/restore-0.4-0.59.b47.el10.aarch64.rpm;name=aarch64_restore;unpack=0"
 SRC_URI[aarch64_restore.sha256sum] = "4269e2900cb971cf03a58a2d768a5e39c219d76479a4d2c5fd00368a0b395aa2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/restore-0.4-0.59.b47.el10.riscv64.rpm;name=riscv64_restore;unpack=0"
+SRC_URI[riscv64_restore.sha256sum] = "ca05ee60844bf72ea29356b3ab1664f871433b8e747e4ff2200e8ad3e8653b70"
 
 RDEPENDS:restore = " \
  bzip2-libs \

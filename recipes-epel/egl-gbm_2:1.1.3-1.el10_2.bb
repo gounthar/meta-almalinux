@@ -6,20 +6,23 @@ PN = "egl-gbm"
 PE = "2"
 PV = "1.1.3"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  egl-gbm \
- "
+"
+PACKAGES:aarch64 = " \
+ egl-gbm \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/e/egl-gbm-1.1.3-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/e/egl-gbm-1.1.3-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7d480efc12e47c264b2cfd0bdc3eba013ad24f58cb7ee359b80d650a4e71c825"
 
-URI_x86_64_v2_egl-gbm = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/egl-gbm-1.1.3-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_egl-gbm;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_egl-gbm}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/egl-gbm-1.1.3-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_egl-gbm;unpack=0"
 SRC_URI[x86_64_v2_egl-gbm.sha256sum] = "307206e9ba1c57dff00318cf5479542f6241cfec12d8cb12f1feb261d7f2b8bc"
 
-URI_aarch64_egl-gbm = "${EPEL_MIRROR}/aarch64/Packages/e/egl-gbm-1.1.3-1.el10_2.aarch64.rpm;name=aarch64_egl-gbm;unpack=0"
-SRC_URI:append = " ${URI_aarch64_egl-gbm}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/e/egl-gbm-1.1.3-1.el10_2.aarch64.rpm;name=aarch64_egl-gbm;unpack=0"
 SRC_URI[aarch64_egl-gbm.sha256sum] = "46678dc2503b0292dee093e5286a60f90db81ace372819f58006b51b60698920"
 
 RDEPENDS:egl-gbm = " \

@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-tokio-test"
 PV = "0.4.5"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-tokio-test+default-devel \
  rust-tokio-test-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-tokio-test+default-devel \
+ rust-tokio-test-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-tokio-test-0.4.5-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-tokio-test-0.4.5-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b8c2a07ca328ec04e22f5b38c1f4b071b7333190ad4878eb7969838cbd4d63d9"
 
-URI_x86_64_v2_rust-tokio-test+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-tokio-test+default-devel-0.4.5-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-tokio-test+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-tokio-test+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-tokio-test+default-devel-0.4.5-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-tokio-test+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-tokio-test+default-devel.sha256sum] = "816e61f2fb4546813936781fd043e61b7dec88876e072f391249a9b6fa7efef6"
 
-URI_x86_64_v2_rust-tokio-test-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-tokio-test-devel-0.4.5-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-tokio-test-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-tokio-test-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-tokio-test-devel-0.4.5-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-tokio-test-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-tokio-test-devel.sha256sum] = "05551e377947c7baeb64d09c6afa72e604f1908df1f792e7ff7423d798bcaf22"
 
-URI_aarch64_rust-tokio-test+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-tokio-test+default-devel-0.4.5-1.el10_2.noarch.rpm;name=aarch64_rust-tokio-test+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-tokio-test+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-tokio-test+default-devel-0.4.5-1.el10_2.noarch.rpm;name=aarch64_rust-tokio-test+default-devel;unpack=0"
 SRC_URI[aarch64_rust-tokio-test+default-devel.sha256sum] = "1076734dbb3846d5e073912d4c47f4147365431f4a229a1ac8be24244fa2fbb1"
 
-URI_aarch64_rust-tokio-test-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-tokio-test-devel-0.4.5-1.el10_2.noarch.rpm;name=aarch64_rust-tokio-test-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-tokio-test-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-tokio-test-devel-0.4.5-1.el10_2.noarch.rpm;name=aarch64_rust-tokio-test-devel;unpack=0"
 SRC_URI[aarch64_rust-tokio-test-devel.sha256sum] = "f495622ef58443376d3f5dc93004a9d439eefefb818703f90df61b90e5d36982"
 
 RDEPENDS:rust-tokio-test+default-devel = " \

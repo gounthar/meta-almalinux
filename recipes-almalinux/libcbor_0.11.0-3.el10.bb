@@ -9,17 +9,17 @@ PACKAGES = " \
  libcbor \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libcbor-0.11.0-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libcbor-0.11.0-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "879cb64fd40acd4cdeb2004327e88761838ccf7859b6395a35d71a721c9cc2af"
 
-URI_x86_64_v2_libcbor = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libcbor-0.11.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libcbor;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libcbor}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libcbor-0.11.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libcbor;unpack=0"
 SRC_URI[x86_64_v2_libcbor.sha256sum] = "8d4366ee5820ae618cd3261a412f77d6ba5fdfb0ba729c8587fc56a368cec96e"
 
-URI_aarch64_libcbor = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libcbor-0.11.0-3.el10.aarch64.rpm;name=aarch64_libcbor;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libcbor}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libcbor-0.11.0-3.el10.aarch64.rpm;name=aarch64_libcbor;unpack=0"
 SRC_URI[aarch64_libcbor.sha256sum] = "6d15c441dfbf91987861df7f0440767053b7a0234ed9b018d8fd81c717dc33db"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libcbor-0.11.0-3.el10.riscv64.rpm;name=riscv64_libcbor;unpack=0"
+SRC_URI[riscv64_libcbor.sha256sum] = "16b59438d3caeb091689bf033a07be5436a8a1f2f7ac20e40064d60465a17bc8"
 
 RDEPENDS:libcbor = " \
  glibc \

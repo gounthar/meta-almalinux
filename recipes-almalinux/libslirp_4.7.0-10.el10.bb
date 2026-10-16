@@ -10,25 +10,26 @@ PACKAGES = " \
  libslirp-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libslirp-4.7.0-10.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libslirp-4.7.0-10.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "899e605ffc1cf2fa926a8d52c2cdffd88a86aab7e8809c09466e0e996543cddb"
 
-URI_x86_64_v2_libslirp = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libslirp-4.7.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_libslirp;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libslirp}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libslirp-4.7.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_libslirp;unpack=0"
 SRC_URI[x86_64_v2_libslirp.sha256sum] = "67881b5dc8505dc8b25edacc18a7c88f6579042774dd4f8aceb6a824f918cfa0"
 
-URI_x86_64_v2_libslirp-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libslirp-devel-4.7.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_libslirp-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libslirp-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libslirp-devel-4.7.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_libslirp-devel;unpack=0"
 SRC_URI[x86_64_v2_libslirp-devel.sha256sum] = "ba30262d4e1530f070df426ff55849bebb65d4ef69b7b5ee3f66360d2fdaa007"
 
-URI_aarch64_libslirp = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libslirp-4.7.0-10.el10.aarch64.rpm;name=aarch64_libslirp;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libslirp}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libslirp-4.7.0-10.el10.aarch64.rpm;name=aarch64_libslirp;unpack=0"
 SRC_URI[aarch64_libslirp.sha256sum] = "89a5babb3189c2ad6d1f5595b3e6c6f521ae05850b6fe7661aea31cb1a398b78"
 
-URI_aarch64_libslirp-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libslirp-devel-4.7.0-10.el10.aarch64.rpm;name=aarch64_libslirp-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libslirp-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libslirp-devel-4.7.0-10.el10.aarch64.rpm;name=aarch64_libslirp-devel;unpack=0"
 SRC_URI[aarch64_libslirp-devel.sha256sum] = "abc27282e0e3f898d184f2447fdf8f8743bef1aa93af563761efe3a2166d3488"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libslirp-4.7.0-10.el10.riscv64.rpm;name=riscv64_libslirp;unpack=0"
+SRC_URI[riscv64_libslirp.sha256sum] = "af5f9ad5883fadb72a26a96dea14e8a79abe7dacc26151318e2c1b60ee20222c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libslirp-devel-4.7.0-10.el10.riscv64.rpm;name=riscv64_libslirp-devel;unpack=0"
+SRC_URI[riscv64_libslirp-devel.sha256sum] = "44a51069f6b88e0eaaa06ae89bb91cfaa1fbe6b6204b76707f31077f3743fd99"
 
 RDEPENDS:libslirp = " \
  glib2 \

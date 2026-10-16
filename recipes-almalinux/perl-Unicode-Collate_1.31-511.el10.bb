@@ -9,17 +9,17 @@ PACKAGES = " \
  perl-Unicode-Collate \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/perl-Unicode-Collate-1.31-511.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/perl-Unicode-Collate-1.31-511.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7ccce005a95e6aeaf4c293983a2af673d26d6a5e940ca10f700d5d094f8e61e5"
 
-URI_x86_64_v2_perl-Unicode-Collate = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-Unicode-Collate-1.31-511.el10.x86_64_v2.rpm;name=x86_64_v2_perl-Unicode-Collate;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Unicode-Collate}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-Unicode-Collate-1.31-511.el10.x86_64_v2.rpm;name=x86_64_v2_perl-Unicode-Collate;unpack=0"
 SRC_URI[x86_64_v2_perl-Unicode-Collate.sha256sum] = "dec3b114e45353c211ded92e58352820055a6f9d0a537e40303e1a9f84ca5bca"
 
-URI_aarch64_perl-Unicode-Collate = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-Unicode-Collate-1.31-511.el10.aarch64.rpm;name=aarch64_perl-Unicode-Collate;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Unicode-Collate}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-Unicode-Collate-1.31-511.el10.aarch64.rpm;name=aarch64_perl-Unicode-Collate;unpack=0"
 SRC_URI[aarch64_perl-Unicode-Collate.sha256sum] = "ed214d91797237099884fc73754cd360f95a5a9b7b5d3bc9613ce06465e52ca9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/perl-Unicode-Collate-1.31-511.el10.riscv64.rpm;name=riscv64_perl-Unicode-Collate;unpack=0"
+SRC_URI[riscv64_perl-Unicode-Collate.sha256sum] = "ac71bd6867d86f29b7c6dca5f450f547f2b414a1f199fb43947dff872d2e1f28"
 
 RDEPENDS:perl-Unicode-Collate = " \
  glibc \

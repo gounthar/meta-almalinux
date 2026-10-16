@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-Scalar-Properties"
 PV = "1.100860"
 PR = "34.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-Scalar-Properties \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-Scalar-Properties \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-Scalar-Properties-1.100860-34.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-Scalar-Properties-1.100860-34.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "554682237aaf9e88ee4b68d1354d5d1bba01f35ae53cca2c5cf34afe7ab8ccf3"
 
-URI_x86_64_v2_perl-Scalar-Properties = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Scalar-Properties-1.100860-34.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Scalar-Properties;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Scalar-Properties}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Scalar-Properties-1.100860-34.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Scalar-Properties;unpack=0"
 SRC_URI[x86_64_v2_perl-Scalar-Properties.sha256sum] = "b3d20885de26f08f67dcd4f43b1329c07b4970830208788288ed260341f310da"
 
-URI_aarch64_perl-Scalar-Properties = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Scalar-Properties-1.100860-34.el10_3.noarch.rpm;name=aarch64_perl-Scalar-Properties;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Scalar-Properties}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Scalar-Properties-1.100860-34.el10_3.noarch.rpm;name=aarch64_perl-Scalar-Properties;unpack=0"
 SRC_URI[aarch64_perl-Scalar-Properties.sha256sum] = "35f40a99fee4784a9e5aa8f4fdfc57cf6d777099fcbf87de761b1743792f221d"
 
 RDEPENDS:perl-Scalar-Properties = " \

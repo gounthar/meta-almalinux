@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-X11-Protocol-Other"
 PV = "31"
 PR = "19.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-X11-Protocol-Other \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-X11-Protocol-Other \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-X11-Protocol-Other-31-19.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-X11-Protocol-Other-31-19.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "848402c057a5f8519d4b19dbe7e5aa7f8fedc0d0eebe05c114149e1d99db74f9"
 
-URI_x86_64_v2_perl-X11-Protocol-Other = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-X11-Protocol-Other-31-19.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_perl-X11-Protocol-Other;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-X11-Protocol-Other}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-X11-Protocol-Other-31-19.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_perl-X11-Protocol-Other;unpack=0"
 SRC_URI[x86_64_v2_perl-X11-Protocol-Other.sha256sum] = "92749817ec3133cc32e902e92d12a51454476ab7b0c4ec9068b005597d0b36eb"
 
-URI_aarch64_perl-X11-Protocol-Other = "${EPEL_MIRROR}/aarch64/Packages/p/perl-X11-Protocol-Other-31-19.el10_2.noarch.rpm;name=aarch64_perl-X11-Protocol-Other;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-X11-Protocol-Other}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-X11-Protocol-Other-31-19.el10_2.noarch.rpm;name=aarch64_perl-X11-Protocol-Other;unpack=0"
 SRC_URI[aarch64_perl-X11-Protocol-Other.sha256sum] = "7703708d1500a4a7b9ef0386040281a4d4a03bd0485912baec04fe12e8723472"
 
 RDEPENDS:perl-X11-Protocol-Other = " \

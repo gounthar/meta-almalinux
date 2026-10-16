@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-Net-OpenSSH"
 PV = "0.84"
 PR = "10.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-Net-OpenSSH \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-Net-OpenSSH \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-Net-OpenSSH-0.84-10.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-Net-OpenSSH-0.84-10.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3bc5b2e0fce85506e2c748628a7f4c5e4f32804162442bbe2f8d2f795ecc5f7e"
 
-URI_x86_64_v2_perl-Net-OpenSSH = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Net-OpenSSH-0.84-10.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Net-OpenSSH;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Net-OpenSSH}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Net-OpenSSH-0.84-10.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Net-OpenSSH;unpack=0"
 SRC_URI[x86_64_v2_perl-Net-OpenSSH.sha256sum] = "71e85a0927d6b2fcc091f8794c880802079b47b22b799737d4089da97f1f2cb2"
 
-URI_aarch64_perl-Net-OpenSSH = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Net-OpenSSH-0.84-10.el10_3.noarch.rpm;name=aarch64_perl-Net-OpenSSH;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Net-OpenSSH}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Net-OpenSSH-0.84-10.el10_3.noarch.rpm;name=aarch64_perl-Net-OpenSSH;unpack=0"
 SRC_URI[aarch64_perl-Net-OpenSSH.sha256sum] = "4068d91595fad57e6cbef0f091b00e3f9dfca308bfa4cb2f5ce925dbbcdc03c8"
 
 RDEPENDS:perl-Net-OpenSSH = " \

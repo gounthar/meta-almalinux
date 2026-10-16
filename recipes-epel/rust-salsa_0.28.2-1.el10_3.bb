@@ -5,7 +5,7 @@ inherit dnf-bridge
 PN = "rust-salsa"
 PV = "0.28.2"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-salsa+accumulator-devel \
  rust-salsa+compact_str-devel \
  rust-salsa+default-devel \
@@ -18,58 +18,98 @@ PACKAGES = " \
  rust-salsa+salsa_unstable-devel \
  rust-salsa+triomphe-devel \
  rust-salsa-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-salsa+accumulator-devel \
+ rust-salsa+compact_str-devel \
+ rust-salsa+default-devel \
+ rust-salsa+detailed-trace-devel \
+ rust-salsa+inventory-devel \
+ rust-salsa+macros-devel \
+ rust-salsa+ordermap-devel \
+ rust-salsa+persistence-devel \
+ rust-salsa+rayon-devel \
+ rust-salsa+salsa_unstable-devel \
+ rust-salsa+triomphe-devel \
+ rust-salsa-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-salsa-0.28.2-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-salsa-0.28.2-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a61eaf586abf8b07a04e77b07eff3c899a7aec6c5a7e80267b187e4fb0259dfb"
 
-URI_aarch64_rust-salsa+accumulator-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa+accumulator-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa+accumulator-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-salsa+accumulator-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-salsa+accumulator-devel-0.28.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-salsa+accumulator-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-salsa+accumulator-devel.sha256sum] = "c588c5b7b6d4e7633017dbe5f3d59bf4abf7e56492e630705cc7f3e11212ed9b"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-salsa+compact_str-devel-0.28.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-salsa+compact_str-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-salsa+compact_str-devel.sha256sum] = "88080947dea069bfc3f399db562507e00fa3a0d1e0137a782840751828ee2f55"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-salsa+default-devel-0.28.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-salsa+default-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-salsa+default-devel.sha256sum] = "25dce90b9d29d6742c10c2cd7a13ef36b2070828e8233a4cc0d3536b4598c607"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-salsa+detailed-trace-devel-0.28.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-salsa+detailed-trace-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-salsa+detailed-trace-devel.sha256sum] = "fd34b85ff64a7d064bfea71f15582fbd7a5c23e76bb2aca103cb3ea9f348f7c7"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-salsa+inventory-devel-0.28.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-salsa+inventory-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-salsa+inventory-devel.sha256sum] = "2598fe1cf5e0fd9edeb0c3b7e3268cea812f6d4a6661a3ac268db713ad214833"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-salsa+macros-devel-0.28.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-salsa+macros-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-salsa+macros-devel.sha256sum] = "c52308243e013961dba07ab98c837d70d0fdbca484272c69694ec5095a62f7ea"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-salsa+ordermap-devel-0.28.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-salsa+ordermap-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-salsa+ordermap-devel.sha256sum] = "1357d7852279c6b7f8b697b695a3469d7ef4e6589f61170a1f4be26a24d93c76"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-salsa+persistence-devel-0.28.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-salsa+persistence-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-salsa+persistence-devel.sha256sum] = "9c9a7c9a75ff46cf34c3342a1bf7c1b844a18a10fa923fa35054a41248ff5946"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-salsa+rayon-devel-0.28.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-salsa+rayon-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-salsa+rayon-devel.sha256sum] = "5f7f85699d7d18d0b5ac2abdd9caaad4d38958edc20c16738ff1ecec6acdb4d1"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-salsa+salsa_unstable-devel-0.28.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-salsa+salsa_unstable-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-salsa+salsa_unstable-devel.sha256sum] = "d17c0bd08dd1c1cc8e59b4293a188db6380afe096e8be543746f47183be8a511"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-salsa+triomphe-devel-0.28.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-salsa+triomphe-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-salsa+triomphe-devel.sha256sum] = "e7cdf47138d1fd066af00aee9c4ad27af6486243ba0105fafd2cc25ca5053c7a"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-salsa-devel-0.28.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-salsa-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-salsa-devel.sha256sum] = "e3f97f0c0c34fa33d401237eec0a5ffca1bf77427bd64d63708aeb0c80d374f2"
+
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa+accumulator-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa+accumulator-devel;unpack=0"
 SRC_URI[aarch64_rust-salsa+accumulator-devel.sha256sum] = "fc3374d77952c694bea3af553c211738d9a5d07cf2b371f8b061f941c599e591"
 
-URI_aarch64_rust-salsa+compact_str-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa+compact_str-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa+compact_str-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-salsa+compact_str-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa+compact_str-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa+compact_str-devel;unpack=0"
 SRC_URI[aarch64_rust-salsa+compact_str-devel.sha256sum] = "165124f6b4402e83bba09709f2230b6704ffb4dc97950b35508730490fb11428"
 
-URI_aarch64_rust-salsa+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa+default-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-salsa+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa+default-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa+default-devel;unpack=0"
 SRC_URI[aarch64_rust-salsa+default-devel.sha256sum] = "c6eb7dc030d0aa74385d56c7de5353605f940d9525bcf3ffebb50e189d7ecdf0"
 
-URI_aarch64_rust-salsa+detailed-trace-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa+detailed-trace-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa+detailed-trace-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-salsa+detailed-trace-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa+detailed-trace-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa+detailed-trace-devel;unpack=0"
 SRC_URI[aarch64_rust-salsa+detailed-trace-devel.sha256sum] = "27632fafa81343568cc0b341d129f515ffaf9988d627b0d2cfada913edca679b"
 
-URI_aarch64_rust-salsa+inventory-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa+inventory-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa+inventory-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-salsa+inventory-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa+inventory-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa+inventory-devel;unpack=0"
 SRC_URI[aarch64_rust-salsa+inventory-devel.sha256sum] = "e1da8a6b76f4313d8edcf3e7eca608507dbb257ad9afb2a31cd910189d8196f2"
 
-URI_aarch64_rust-salsa+macros-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa+macros-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa+macros-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-salsa+macros-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa+macros-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa+macros-devel;unpack=0"
 SRC_URI[aarch64_rust-salsa+macros-devel.sha256sum] = "ed4e90191fd6888c791a5fee5173742660765d3501889d70e17424fcf15d29f1"
 
-URI_aarch64_rust-salsa+ordermap-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa+ordermap-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa+ordermap-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-salsa+ordermap-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa+ordermap-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa+ordermap-devel;unpack=0"
 SRC_URI[aarch64_rust-salsa+ordermap-devel.sha256sum] = "e4995bb6319b7a72e32195b070918451eceb1ac8840c9bff8772e3293fd5eda4"
 
-URI_aarch64_rust-salsa+persistence-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa+persistence-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa+persistence-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-salsa+persistence-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa+persistence-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa+persistence-devel;unpack=0"
 SRC_URI[aarch64_rust-salsa+persistence-devel.sha256sum] = "9aeec2631817f596ee56adaac35a666478d7d0785762c4007100b7e6d38b3d00"
 
-URI_aarch64_rust-salsa+rayon-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa+rayon-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa+rayon-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-salsa+rayon-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa+rayon-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa+rayon-devel;unpack=0"
 SRC_URI[aarch64_rust-salsa+rayon-devel.sha256sum] = "fff147571802c3a3143ead010abd504c71f109c68bc8f6966f84fe5864ad645f"
 
-URI_aarch64_rust-salsa+salsa_unstable-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa+salsa_unstable-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa+salsa_unstable-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-salsa+salsa_unstable-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa+salsa_unstable-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa+salsa_unstable-devel;unpack=0"
 SRC_URI[aarch64_rust-salsa+salsa_unstable-devel.sha256sum] = "79819d85d3f89ebe0be05775d2e5344046d5d861d410a4a080c04f35af98c5d8"
 
-URI_aarch64_rust-salsa+triomphe-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa+triomphe-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa+triomphe-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-salsa+triomphe-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa+triomphe-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa+triomphe-devel;unpack=0"
 SRC_URI[aarch64_rust-salsa+triomphe-devel.sha256sum] = "561b500535f07d4f109243ce2d6b970f9e6017683b075c42bf58d87ae759fb39"
 
-URI_aarch64_rust-salsa-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-salsa-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa-devel;unpack=0"
 SRC_URI[aarch64_rust-salsa-devel.sha256sum] = "3951f3379c17a33a8bce7162fe806f38f0718bbbd7d1650e39c7dee6e72721df"
 
 RDEPENDS:rust-salsa+accumulator-devel = " \

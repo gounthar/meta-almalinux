@@ -10,25 +10,26 @@ PACKAGES = " \
  authselect-libs \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/authselect-1.5.3-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/authselect-1.5.3-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "74a2a4a7e303b3eab8991d0aded4c65d21b638f015a4d059de82d884bf23deaa"
 
-URI_x86_64_v2_authselect = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/authselect-1.5.3-1.el10.x86_64_v2.rpm;name=x86_64_v2_authselect;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_authselect}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/authselect-1.5.3-1.el10.x86_64_v2.rpm;name=x86_64_v2_authselect;unpack=0"
 SRC_URI[x86_64_v2_authselect.sha256sum] = "cecd776d5648d1188b4ca088e5ec0fccb172cf885eb35443a78b18b91596e3b7"
 
-URI_x86_64_v2_authselect-libs = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/authselect-libs-1.5.3-1.el10.x86_64_v2.rpm;name=x86_64_v2_authselect-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_authselect-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/authselect-libs-1.5.3-1.el10.x86_64_v2.rpm;name=x86_64_v2_authselect-libs;unpack=0"
 SRC_URI[x86_64_v2_authselect-libs.sha256sum] = "fae42724644df9c2680e0cc7692f0dba3645bc0da463a25ada5227aa525c48bc"
 
-URI_aarch64_authselect = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/authselect-1.5.3-1.el10.aarch64.rpm;name=aarch64_authselect;unpack=0"
-SRC_URI:append = " ${URI_aarch64_authselect}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/authselect-1.5.3-1.el10.aarch64.rpm;name=aarch64_authselect;unpack=0"
 SRC_URI[aarch64_authselect.sha256sum] = "f028b62d70cc0abaec72e14528e4fec73e867468242e3f0bd547aa48f9cae7b6"
 
-URI_aarch64_authselect-libs = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/authselect-libs-1.5.3-1.el10.aarch64.rpm;name=aarch64_authselect-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_authselect-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/authselect-libs-1.5.3-1.el10.aarch64.rpm;name=aarch64_authselect-libs;unpack=0"
 SRC_URI[aarch64_authselect-libs.sha256sum] = "1587e1df84a3473a82d966a3af073ffa6369df051a94ed6a3d9df718d05e3bdc"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/authselect-1.5.3-1.el10.riscv64.rpm;name=riscv64_authselect;unpack=0"
+SRC_URI[riscv64_authselect.sha256sum] = "9986889eed073845fef791e0814ff7fb13b8b94251c77581fa8a91d26a1b93f1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/authselect-libs-1.5.3-1.el10.riscv64.rpm;name=riscv64_authselect-libs;unpack=0"
+SRC_URI[riscv64_authselect-libs.sha256sum] = "2f60e4b60bfbdac28bd4952b18d64013e50b3f3ca283b8a0b0edb35a985aad9a"
 
 RDEPENDS:authselect = " \
  authselect-libs \

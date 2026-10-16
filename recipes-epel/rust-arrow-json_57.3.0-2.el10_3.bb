@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-arrow-json"
 PV = "57.3.0"
 PR = "2.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-arrow-json+default-devel \
  rust-arrow-json-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-arrow-json+default-devel \
+ rust-arrow-json-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-arrow-json-57.3.0-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-arrow-json-57.3.0-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "26fa2d1e63b6dd94b389f0537245cace421f90710a279eb99666ffddd6205de6"
 
-URI_x86_64_v2_rust-arrow-json+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-arrow-json+default-devel-57.3.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-arrow-json+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-arrow-json+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-arrow-json+default-devel-57.3.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-arrow-json+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-arrow-json+default-devel.sha256sum] = "080dcfc4e2ba57fded4482a3d402e46066608f0c51c58e0ba988ba1117e5e779"
 
-URI_x86_64_v2_rust-arrow-json-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-arrow-json-devel-57.3.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-arrow-json-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-arrow-json-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-arrow-json-devel-57.3.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-arrow-json-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-arrow-json-devel.sha256sum] = "10bb68c26e44b3c1e0a2ba4180a69d054f51bbb3862980bd3610e0db5f1fb217"
 
-URI_aarch64_rust-arrow-json+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-arrow-json+default-devel-57.3.0-2.el10_3.noarch.rpm;name=aarch64_rust-arrow-json+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-arrow-json+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-arrow-json+default-devel-57.3.0-2.el10_3.noarch.rpm;name=aarch64_rust-arrow-json+default-devel;unpack=0"
 SRC_URI[aarch64_rust-arrow-json+default-devel.sha256sum] = "44cc8d5ded4cdd47de37dc814cceac4637e95abd16d9924db19fce7ac8882d69"
 
-URI_aarch64_rust-arrow-json-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-arrow-json-devel-57.3.0-2.el10_3.noarch.rpm;name=aarch64_rust-arrow-json-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-arrow-json-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-arrow-json-devel-57.3.0-2.el10_3.noarch.rpm;name=aarch64_rust-arrow-json-devel;unpack=0"
 SRC_URI[aarch64_rust-arrow-json-devel.sha256sum] = "c8bacd8bc643843f526d8f2ab41321b931a444356f39a56abb82cdf105dee8b9"
 
 RDEPENDS:rust-arrow-json+default-devel = " \

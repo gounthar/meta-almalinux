@@ -11,33 +11,35 @@ PACKAGES = " \
  libev-source \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libev-4.33-15.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libev-4.33-15.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "5f624051fcc25150273640d2e5df57c74634e5f95fb5778b5d404a96e637eb20"
 
-URI_x86_64_v2_libev = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libev-4.33-15.el10.x86_64_v2.rpm;name=x86_64_v2_libev;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libev}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libev-4.33-15.el10.x86_64_v2.rpm;name=x86_64_v2_libev;unpack=0"
 SRC_URI[x86_64_v2_libev.sha256sum] = "8bc95ea0dc93bf1cc97ea44f18ddafced9c64ccc0d74bbb243c7cc98997f41d3"
 
-URI_x86_64_v2_libev-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libev-devel-4.33-15.el10.x86_64_v2.rpm;name=x86_64_v2_libev-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libev-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libev-devel-4.33-15.el10.x86_64_v2.rpm;name=x86_64_v2_libev-devel;unpack=0"
 SRC_URI[x86_64_v2_libev-devel.sha256sum] = "fe5988fa311f7341ea6c688934521120e9aa305be4057893388951251aec4a16"
 
-URI_x86_64_v2_libev-source = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libev-source-4.33-15.el10.noarch.rpm;name=x86_64_v2_libev-source;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libev-source}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libev-source-4.33-15.el10.noarch.rpm;name=x86_64_v2_libev-source;unpack=0"
 SRC_URI[x86_64_v2_libev-source.sha256sum] = "030b3edabbbbef7c6b6d3b7bed499688aa3d12228ae2facc03d1bf972844b72c"
 
-URI_aarch64_libev = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libev-4.33-15.el10.aarch64.rpm;name=aarch64_libev;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libev}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libev-4.33-15.el10.aarch64.rpm;name=aarch64_libev;unpack=0"
 SRC_URI[aarch64_libev.sha256sum] = "c1da3a89c81c70648345acb720996e7d621de56ea55b90afda1c2b7e0541bb5c"
 
-URI_aarch64_libev-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libev-devel-4.33-15.el10.aarch64.rpm;name=aarch64_libev-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libev-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libev-devel-4.33-15.el10.aarch64.rpm;name=aarch64_libev-devel;unpack=0"
 SRC_URI[aarch64_libev-devel.sha256sum] = "53738027ede84c16f080d11b843baea8f997012e4f677660b1073bd6c2e783c5"
 
-URI_aarch64_libev-source = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libev-source-4.33-15.el10.noarch.rpm;name=aarch64_libev-source;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libev-source}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libev-source-4.33-15.el10.noarch.rpm;name=aarch64_libev-source;unpack=0"
 SRC_URI[aarch64_libev-source.sha256sum] = "030b3edabbbbef7c6b6d3b7bed499688aa3d12228ae2facc03d1bf972844b72c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libev-4.33-15.el10.riscv64.rpm;name=riscv64_libev;unpack=0"
+SRC_URI[riscv64_libev.sha256sum] = "1e744f62e5f71a94c543655b04eddb286495e10b53bd32abfb7f263479e52cca"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libev-devel-4.33-15.el10.riscv64.rpm;name=riscv64_libev-devel;unpack=0"
+SRC_URI[riscv64_libev-devel.sha256sum] = "1f2bab76314938c4edf1de6298662d9b3ae31b2d789902f244d16bd52906044f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libev-source-4.33-15.el10.noarch.rpm;name=riscv64_libev-source;unpack=0"
+SRC_URI[riscv64_libev-source.sha256sum] = "030b3edabbbbef7c6b6d3b7bed499688aa3d12228ae2facc03d1bf972844b72c"
 
 RDEPENDS:libev = " \
  glibc \

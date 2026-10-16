@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-Cassandra-Client"
 PV = "0.21"
 PR = "3.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-Cassandra-Client \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-Cassandra-Client \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-Cassandra-Client-0.21-3.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-Cassandra-Client-0.21-3.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "60fc55b3f4c9d1b9e606e0a32f445a7fe973e682a38705de7d1961fb047317a5"
 
-URI_x86_64_v2_perl-Cassandra-Client = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Cassandra-Client-0.21-3.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_perl-Cassandra-Client;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Cassandra-Client}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Cassandra-Client-0.21-3.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_perl-Cassandra-Client;unpack=0"
 SRC_URI[x86_64_v2_perl-Cassandra-Client.sha256sum] = "d1b31db0b7ed4e7712c4dd0cf3b1a3b902fec6e459630f7ccda1036e111491c7"
 
-URI_aarch64_perl-Cassandra-Client = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Cassandra-Client-0.21-3.el10_2.aarch64.rpm;name=aarch64_perl-Cassandra-Client;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Cassandra-Client}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Cassandra-Client-0.21-3.el10_2.aarch64.rpm;name=aarch64_perl-Cassandra-Client;unpack=0"
 SRC_URI[aarch64_perl-Cassandra-Client.sha256sum] = "a75d72fd607757799af7e1d42d86ce51b6496a48748c90753820666a67779d2f"
 
 RDEPENDS:perl-Cassandra-Client = " \

@@ -9,17 +9,17 @@ PACKAGES = " \
  pgvector \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/postgresql16-pgvector-0.6.2-8.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/postgresql16-pgvector-0.6.2-8.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "080a5fe41aba19192dab47945f6078b35eaef1dda613d7cac63004cc02b44192"
 
-URI_x86_64_v2_pgvector = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/pgvector-0.6.2-8.el10.x86_64_v2.rpm;name=x86_64_v2_pgvector;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pgvector}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/pgvector-0.6.2-8.el10.x86_64_v2.rpm;name=x86_64_v2_pgvector;unpack=0"
 SRC_URI[x86_64_v2_pgvector.sha256sum] = "73c1f1fa8720747020b57685d9ec56ffa38df751a341c40631e54adf85e8ff23"
 
-URI_aarch64_pgvector = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/pgvector-0.6.2-8.el10.aarch64.rpm;name=aarch64_pgvector;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pgvector}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/pgvector-0.6.2-8.el10.aarch64.rpm;name=aarch64_pgvector;unpack=0"
 SRC_URI[aarch64_pgvector.sha256sum] = "cdeaa79eb6502adf01bb919dac30d3893b0a7b0e4e2ac2ab26b22ace793daab7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/pgvector-0.6.2-8.el10.riscv64.rpm;name=riscv64_pgvector;unpack=0"
+SRC_URI[riscv64_pgvector.sha256sum] = "6f1ef473b0e45e26a9accb8fd3f46a1193b3d127ebd4dd05825e695196654344"
 
 RDEPENDS:pgvector = " \
  glibc \

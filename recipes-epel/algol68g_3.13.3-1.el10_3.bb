@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "algol68g"
 PV = "3.13.3"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  algol68g \
- "
+"
+PACKAGES:aarch64 = " \
+ algol68g \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/a/algol68g-3.13.3-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/a/algol68g-3.13.3-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "12e708a7005c90078b3503bee5e2003a150fbdce53112484ae6d7e733d94a126"
 
-URI_x86_64_v2_algol68g = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/algol68g-3.13.3-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_algol68g;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_algol68g}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/algol68g-3.13.3-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_algol68g;unpack=0"
 SRC_URI[x86_64_v2_algol68g.sha256sum] = "26bbe2b144ae0a47c0c4a298a716b8968512ce7dc05ed364aaf7272752c933d5"
 
-URI_aarch64_algol68g = "${EPEL_MIRROR}/aarch64/Packages/a/algol68g-3.13.3-1.el10_3.aarch64.rpm;name=aarch64_algol68g;unpack=0"
-SRC_URI:append = " ${URI_aarch64_algol68g}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/a/algol68g-3.13.3-1.el10_3.aarch64.rpm;name=aarch64_algol68g;unpack=0"
 SRC_URI[aarch64_algol68g.sha256sum] = "ce2295e83b98a9c86d033fd622fbbcfa5e992fc0794398d582e0d4f38da86321"
 
 RDEPENDS:algol68g:x86_64_v2 = " \

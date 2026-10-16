@@ -32,101 +32,80 @@ PACKAGES:aarch64 = " \
  ghc-say-doc \
  ghc-say-prof \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/f/fbrnch-1.8.3-40.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/f/fbrnch-1.8.3-40.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6d8ab0f7ac0d6a740651830f7aa7c4e3395498fca8d75c90d6f9951c793bbb50"
 
-URI_x86_64_v2_fbrnch = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/fbrnch-1.8.3-40.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_fbrnch;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_fbrnch}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/fbrnch-1.8.3-40.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_fbrnch;unpack=0"
 SRC_URI[x86_64_v2_fbrnch.sha256sum] = "91d28e9cae9dab461e6b5fc17445edc58ba5a40d0b8b2d9834f859db8fb8cf9e"
 
-URI_x86_64_v2_ghc-copr-api = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-copr-api-0.2.0-40.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-copr-api;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-copr-api}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-copr-api-0.2.0-40.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-copr-api;unpack=0"
 SRC_URI[x86_64_v2_ghc-copr-api.sha256sum] = "f94e0b1fdaf6aec9b9070e69fa27867466abf69941d727a76873e918a56aea8a"
 
-URI_x86_64_v2_ghc-copr-api-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-copr-api-devel-0.2.0-40.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-copr-api-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-copr-api-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-copr-api-devel-0.2.0-40.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-copr-api-devel;unpack=0"
 SRC_URI[x86_64_v2_ghc-copr-api-devel.sha256sum] = "04eb8b5452596b7b0d9c4698d4762fb017838fc503d98501da8d96a4e31496b4"
 
-URI_x86_64_v2_ghc-copr-api-doc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-copr-api-doc-0.2.0-40.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_ghc-copr-api-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-copr-api-doc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-copr-api-doc-0.2.0-40.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_ghc-copr-api-doc;unpack=0"
 SRC_URI[x86_64_v2_ghc-copr-api-doc.sha256sum] = "8738403afd46adf4c89b3aa9877289c18e85a89325fa93d8f14b07e3be0e3544"
 
-URI_x86_64_v2_ghc-fedora-krb = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-fedora-krb-0.1.0-40.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-fedora-krb;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-fedora-krb}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-fedora-krb-0.1.0-40.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-fedora-krb;unpack=0"
 SRC_URI[x86_64_v2_ghc-fedora-krb.sha256sum] = "4be5c21cc2dc47925a3e787cb5ba953d654d170ebc69ce2ac7dd8777eebcfb52"
 
-URI_x86_64_v2_ghc-fedora-krb-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-fedora-krb-devel-0.1.0-40.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-fedora-krb-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-fedora-krb-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-fedora-krb-devel-0.1.0-40.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-fedora-krb-devel;unpack=0"
 SRC_URI[x86_64_v2_ghc-fedora-krb-devel.sha256sum] = "08f0e138f4e35f3424f71d5f7dcaf613899f3e6720ba6421bc88a821bfcd86a7"
 
-URI_x86_64_v2_ghc-fedora-krb-doc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-fedora-krb-doc-0.1.0-40.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_ghc-fedora-krb-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-fedora-krb-doc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-fedora-krb-doc-0.1.0-40.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_ghc-fedora-krb-doc;unpack=0"
 SRC_URI[x86_64_v2_ghc-fedora-krb-doc.sha256sum] = "f7b7b7d81ab2319b21df710a26be9c34e94a9fa56c01aecca4f1408393f585d3"
 
-URI_x86_64_v2_ghc-say = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-say-0.1.0.1-40.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-say;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-say}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-say-0.1.0.1-40.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-say;unpack=0"
 SRC_URI[x86_64_v2_ghc-say.sha256sum] = "3a8034090350d1ea73815e986f057433e4ffa303d8a4647d1b11647d0b3f23a6"
 
-URI_x86_64_v2_ghc-say-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-say-devel-0.1.0.1-40.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-say-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-say-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-say-devel-0.1.0.1-40.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-say-devel;unpack=0"
 SRC_URI[x86_64_v2_ghc-say-devel.sha256sum] = "6b810b4576ca103437905f96727546275c71d3b79c0b2dd6d87aa71205a5bb85"
 
-URI_x86_64_v2_ghc-say-doc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-say-doc-0.1.0.1-40.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_ghc-say-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-say-doc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-say-doc-0.1.0.1-40.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_ghc-say-doc;unpack=0"
 SRC_URI[x86_64_v2_ghc-say-doc.sha256sum] = "262825a81df6d91dac11689ffffd5ef8ee881ff21c28f2c7ec05b45b487875e7"
 
-URI_aarch64_fbrnch = "${EPEL_MIRROR}/aarch64/Packages/f/fbrnch-1.8.3-40.el10_3.aarch64.rpm;name=aarch64_fbrnch;unpack=0"
-SRC_URI:append = " ${URI_aarch64_fbrnch}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/f/fbrnch-1.8.3-40.el10_3.aarch64.rpm;name=aarch64_fbrnch;unpack=0"
 SRC_URI[aarch64_fbrnch.sha256sum] = "55266f7241aba623a70e3d5eee7c887409c6ce32c54f86d36bd3398a5f91d8f3"
 
-URI_aarch64_ghc-copr-api = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-copr-api-0.2.0-40.el10_3.aarch64.rpm;name=aarch64_ghc-copr-api;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-copr-api}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-copr-api-0.2.0-40.el10_3.aarch64.rpm;name=aarch64_ghc-copr-api;unpack=0"
 SRC_URI[aarch64_ghc-copr-api.sha256sum] = "f52428369ec5d4dd97e57117061fa72ff27f20f3d6c291aa498451eabd8a3e63"
 
-URI_aarch64_ghc-copr-api-devel = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-copr-api-devel-0.2.0-40.el10_3.aarch64.rpm;name=aarch64_ghc-copr-api-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-copr-api-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-copr-api-devel-0.2.0-40.el10_3.aarch64.rpm;name=aarch64_ghc-copr-api-devel;unpack=0"
 SRC_URI[aarch64_ghc-copr-api-devel.sha256sum] = "6acd38c4da5fcf052235e53711e92e177028af69fcc779d991fdce101b5faf94"
 
-URI_aarch64_ghc-copr-api-doc = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-copr-api-doc-0.2.0-40.el10_3.noarch.rpm;name=aarch64_ghc-copr-api-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-copr-api-doc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-copr-api-doc-0.2.0-40.el10_3.noarch.rpm;name=aarch64_ghc-copr-api-doc;unpack=0"
 SRC_URI[aarch64_ghc-copr-api-doc.sha256sum] = "15628364a36ba9b530f102ecaaf9f3738f8d9318ab6d5a7d07b94aec24162d4a"
 
-URI_aarch64_ghc-copr-api-prof = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-copr-api-prof-0.2.0-40.el10_3.aarch64.rpm;name=aarch64_ghc-copr-api-prof;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-copr-api-prof}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-copr-api-prof-0.2.0-40.el10_3.aarch64.rpm;name=aarch64_ghc-copr-api-prof;unpack=0"
 SRC_URI[aarch64_ghc-copr-api-prof.sha256sum] = "cb95fa360e62de791b405aca81cbdb42072e85d94d13cdb00ff57c4e5e9dfd18"
 
-URI_aarch64_ghc-fedora-krb = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-fedora-krb-0.1.0-40.el10_3.aarch64.rpm;name=aarch64_ghc-fedora-krb;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-fedora-krb}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-fedora-krb-0.1.0-40.el10_3.aarch64.rpm;name=aarch64_ghc-fedora-krb;unpack=0"
 SRC_URI[aarch64_ghc-fedora-krb.sha256sum] = "a60baac8dd5ca0d2c5d594fbe36b74f883d2067193d2e660cdbc61e4bcbf9820"
 
-URI_aarch64_ghc-fedora-krb-devel = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-fedora-krb-devel-0.1.0-40.el10_3.aarch64.rpm;name=aarch64_ghc-fedora-krb-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-fedora-krb-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-fedora-krb-devel-0.1.0-40.el10_3.aarch64.rpm;name=aarch64_ghc-fedora-krb-devel;unpack=0"
 SRC_URI[aarch64_ghc-fedora-krb-devel.sha256sum] = "719164880500f52acdc8ae9b66e4524fb8ff64ca7c407dbdd5b98b1821ad465f"
 
-URI_aarch64_ghc-fedora-krb-doc = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-fedora-krb-doc-0.1.0-40.el10_3.noarch.rpm;name=aarch64_ghc-fedora-krb-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-fedora-krb-doc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-fedora-krb-doc-0.1.0-40.el10_3.noarch.rpm;name=aarch64_ghc-fedora-krb-doc;unpack=0"
 SRC_URI[aarch64_ghc-fedora-krb-doc.sha256sum] = "cc0738a6ff5620057a33610301de61be6e9c2e7f6debf1d84a780a67f263d931"
 
-URI_aarch64_ghc-fedora-krb-prof = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-fedora-krb-prof-0.1.0-40.el10_3.aarch64.rpm;name=aarch64_ghc-fedora-krb-prof;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-fedora-krb-prof}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-fedora-krb-prof-0.1.0-40.el10_3.aarch64.rpm;name=aarch64_ghc-fedora-krb-prof;unpack=0"
 SRC_URI[aarch64_ghc-fedora-krb-prof.sha256sum] = "f4cde3620f46ec27074bd287acba0bb9aa8e607748d985590a7f012e360ab41e"
 
-URI_aarch64_ghc-say = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-say-0.1.0.1-40.el10_3.aarch64.rpm;name=aarch64_ghc-say;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-say}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-say-0.1.0.1-40.el10_3.aarch64.rpm;name=aarch64_ghc-say;unpack=0"
 SRC_URI[aarch64_ghc-say.sha256sum] = "8212a0f92d85f925ce712593bf61cc4abbc56c5ad8e6eadec85a50ad7445d223"
 
-URI_aarch64_ghc-say-devel = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-say-devel-0.1.0.1-40.el10_3.aarch64.rpm;name=aarch64_ghc-say-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-say-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-say-devel-0.1.0.1-40.el10_3.aarch64.rpm;name=aarch64_ghc-say-devel;unpack=0"
 SRC_URI[aarch64_ghc-say-devel.sha256sum] = "a25dae77a19a08d2cc7313cf437e35f4ce0f07526ef00ec8509702fba63cff43"
 
-URI_aarch64_ghc-say-doc = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-say-doc-0.1.0.1-40.el10_3.noarch.rpm;name=aarch64_ghc-say-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-say-doc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-say-doc-0.1.0.1-40.el10_3.noarch.rpm;name=aarch64_ghc-say-doc;unpack=0"
 SRC_URI[aarch64_ghc-say-doc.sha256sum] = "425b2334d9bc40594929d70b85640a852d9f92f1e5e1d9200f5ed6e8771b4634"
 
-URI_aarch64_ghc-say-prof = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-say-prof-0.1.0.1-40.el10_3.aarch64.rpm;name=aarch64_ghc-say-prof;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-say-prof}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-say-prof-0.1.0.1-40.el10_3.aarch64.rpm;name=aarch64_ghc-say-prof;unpack=0"
 SRC_URI[aarch64_ghc-say-prof.sha256sum] = "20c74206cd3931e5dfac5524dc701eee3cc23061ad8452421389fdd65dd9866f"
 
 RDEPENDS:fbrnch = " \

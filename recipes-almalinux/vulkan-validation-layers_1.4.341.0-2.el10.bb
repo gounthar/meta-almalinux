@@ -9,17 +9,17 @@ PACKAGES = " \
  vulkan-validation-layers \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/vulkan-validation-layers-1.4.341.0-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/vulkan-validation-layers-1.4.341.0-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7069892978a1e5bf12c999dee8540a8c3ac2ae444b37efaacfe1a728c66e655a"
 
-URI_x86_64_v2_vulkan-validation-layers = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/vulkan-validation-layers-1.4.341.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_vulkan-validation-layers;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_vulkan-validation-layers}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/vulkan-validation-layers-1.4.341.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_vulkan-validation-layers;unpack=0"
 SRC_URI[x86_64_v2_vulkan-validation-layers.sha256sum] = "d57053597a8abcfb30ee6029151a0ed8314f3d0962898ea248b166be75fd2570"
 
-URI_aarch64_vulkan-validation-layers = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/vulkan-validation-layers-1.4.341.0-2.el10.aarch64.rpm;name=aarch64_vulkan-validation-layers;unpack=0"
-SRC_URI:append = " ${URI_aarch64_vulkan-validation-layers}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/vulkan-validation-layers-1.4.341.0-2.el10.aarch64.rpm;name=aarch64_vulkan-validation-layers;unpack=0"
 SRC_URI[aarch64_vulkan-validation-layers.sha256sum] = "06118fe3874b341de0933961673bd83372baeeafe0a663f26984b5a5bda11471"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/vulkan-validation-layers-1.4.341.0-2.el10.riscv64.rpm;name=riscv64_vulkan-validation-layers;unpack=0"
+SRC_URI[riscv64_vulkan-validation-layers.sha256sum] = "bbdafcc2493c7a2e0e41a449bdbd2495d226987df5e0cafece27b786324fc1e2"
 
 RDEPENDS:vulkan-validation-layers = " \
  glibc \

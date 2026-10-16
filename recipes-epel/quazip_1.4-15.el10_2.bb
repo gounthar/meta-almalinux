@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "quazip"
 PV = "1.4"
 PR = "15.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  quazip-qt6 \
  quazip-qt6-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ quazip-qt6 \
+ quazip-qt6-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/q/quazip-1.4-15.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/q/quazip-1.4-15.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b4c5272d04989454df6b89859cc6063ed4bf1b15a051648f45aa06b53891198a"
 
-URI_x86_64_v2_quazip-qt6 = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/quazip-qt6-1.4-15.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_quazip-qt6;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_quazip-qt6}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/quazip-qt6-1.4-15.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_quazip-qt6;unpack=0"
 SRC_URI[x86_64_v2_quazip-qt6.sha256sum] = "ae6e1b0310fc4025967947f98792ffc265aedd6b6a9d785e7e037b87f5a53144"
 
-URI_x86_64_v2_quazip-qt6-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/quazip-qt6-devel-1.4-15.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_quazip-qt6-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_quazip-qt6-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/quazip-qt6-devel-1.4-15.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_quazip-qt6-devel;unpack=0"
 SRC_URI[x86_64_v2_quazip-qt6-devel.sha256sum] = "d6f24497aaed54cb414bf0908dbb3f6ea84c1947077c20bb70b8b8fc9a660721"
 
-URI_aarch64_quazip-qt6 = "${EPEL_MIRROR}/aarch64/Packages/q/quazip-qt6-1.4-15.el10_2.aarch64.rpm;name=aarch64_quazip-qt6;unpack=0"
-SRC_URI:append = " ${URI_aarch64_quazip-qt6}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/q/quazip-qt6-1.4-15.el10_2.aarch64.rpm;name=aarch64_quazip-qt6;unpack=0"
 SRC_URI[aarch64_quazip-qt6.sha256sum] = "cf8562e6c20f68c94c2286f8d30ac939a236eb9657a732ed1bbaf82401c93fec"
 
-URI_aarch64_quazip-qt6-devel = "${EPEL_MIRROR}/aarch64/Packages/q/quazip-qt6-devel-1.4-15.el10_2.aarch64.rpm;name=aarch64_quazip-qt6-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_quazip-qt6-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/q/quazip-qt6-devel-1.4-15.el10_2.aarch64.rpm;name=aarch64_quazip-qt6-devel;unpack=0"
 SRC_URI[aarch64_quazip-qt6-devel.sha256sum] = "c7fc295d06a129c86c357f414576d528adf62504530928e5d450c497d1a7e42e"
 
 RDEPENDS:quazip-qt6 = " \

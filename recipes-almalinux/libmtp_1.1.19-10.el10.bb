@@ -11,33 +11,35 @@ PACKAGES = " \
  libmtp-examples \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libmtp-1.1.19-10.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libmtp-1.1.19-10.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "ed2f52819e04a98c92dfa34ba5ea66d9dae948da25b4332d449a1bccc7f746ea"
 
-URI_x86_64_v2_libmtp = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libmtp-1.1.19-10.el10.x86_64_v2.rpm;name=x86_64_v2_libmtp;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libmtp}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libmtp-1.1.19-10.el10.x86_64_v2.rpm;name=x86_64_v2_libmtp;unpack=0"
 SRC_URI[x86_64_v2_libmtp.sha256sum] = "bedb163b6c388e4333d0ee2dfc106d30f035f37d69e8f235c83749ce5ad8ad24"
 
-URI_x86_64_v2_libmtp-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libmtp-devel-1.1.19-10.el10.x86_64_v2.rpm;name=x86_64_v2_libmtp-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libmtp-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libmtp-devel-1.1.19-10.el10.x86_64_v2.rpm;name=x86_64_v2_libmtp-devel;unpack=0"
 SRC_URI[x86_64_v2_libmtp-devel.sha256sum] = "864c392b1e9f8e53fe2f5ecbde7e99faa289e4137a12bcb5677ff0e479090553"
 
-URI_x86_64_v2_libmtp-examples = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libmtp-examples-1.1.19-10.el10.x86_64_v2.rpm;name=x86_64_v2_libmtp-examples;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libmtp-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libmtp-examples-1.1.19-10.el10.x86_64_v2.rpm;name=x86_64_v2_libmtp-examples;unpack=0"
 SRC_URI[x86_64_v2_libmtp-examples.sha256sum] = "ac15e4e035fd89eca116db547a99646464050469ad74e22c26673cbc41cf3ea5"
 
-URI_aarch64_libmtp = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libmtp-1.1.19-10.el10.aarch64.rpm;name=aarch64_libmtp;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libmtp}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libmtp-1.1.19-10.el10.aarch64.rpm;name=aarch64_libmtp;unpack=0"
 SRC_URI[aarch64_libmtp.sha256sum] = "bac575f9d1259827956a5fbcf607db8dba599e898a1628a12a913dd27c523eeb"
 
-URI_aarch64_libmtp-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libmtp-devel-1.1.19-10.el10.aarch64.rpm;name=aarch64_libmtp-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libmtp-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libmtp-devel-1.1.19-10.el10.aarch64.rpm;name=aarch64_libmtp-devel;unpack=0"
 SRC_URI[aarch64_libmtp-devel.sha256sum] = "40086ad162245d2129de32f31a7975fcc74f9d8980a97c1bd0b3fda68924ed88"
 
-URI_aarch64_libmtp-examples = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libmtp-examples-1.1.19-10.el10.aarch64.rpm;name=aarch64_libmtp-examples;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libmtp-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libmtp-examples-1.1.19-10.el10.aarch64.rpm;name=aarch64_libmtp-examples;unpack=0"
 SRC_URI[aarch64_libmtp-examples.sha256sum] = "2e0734d095b3e2771c6e15b293b50205b702e700b88d47e5948e54b479589fd6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libmtp-1.1.19-10.el10.riscv64.rpm;name=riscv64_libmtp;unpack=0"
+SRC_URI[riscv64_libmtp.sha256sum] = "21a3390f0bab41e2a69f8540cbd2cc0de237a6ebcc40e9034f9044738f3d3c50"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libmtp-devel-1.1.19-10.el10.riscv64.rpm;name=riscv64_libmtp-devel;unpack=0"
+SRC_URI[riscv64_libmtp-devel.sha256sum] = "98288cd69112a71665cd82c12529f4bd769c296e5584f31037b228ee0d45320a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libmtp-examples-1.1.19-10.el10.riscv64.rpm;name=riscv64_libmtp-examples;unpack=0"
+SRC_URI[riscv64_libmtp-examples.sha256sum] = "716cd31f8c14caab425ffa2049c8951b7cb2a410d403c4b1f77b0f46b322a7ac"
 
 RDEPENDS:libmtp = " \
  glibc \

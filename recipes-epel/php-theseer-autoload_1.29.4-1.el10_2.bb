@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "php-theseer-autoload"
 PV = "1.29.4"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  php-theseer-autoload \
- "
+"
+PACKAGES:aarch64 = " \
+ php-theseer-autoload \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/php-theseer-autoload-1.29.4-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/php-theseer-autoload-1.29.4-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "79865ad4eacff80906bcf4f9e599ab4fe534d7d26184cb648826597771e17aff"
 
-URI_x86_64_v2_php-theseer-autoload = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/php-theseer-autoload-1.29.4-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_php-theseer-autoload;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_php-theseer-autoload}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/php-theseer-autoload-1.29.4-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_php-theseer-autoload;unpack=0"
 SRC_URI[x86_64_v2_php-theseer-autoload.sha256sum] = "746e0dd297ddc55904173867345118de3929a6a53855cd840655e0a0b7b13115"
 
-URI_aarch64_php-theseer-autoload = "${EPEL_MIRROR}/aarch64/Packages/p/php-theseer-autoload-1.29.4-1.el10_2.noarch.rpm;name=aarch64_php-theseer-autoload;unpack=0"
-SRC_URI:append = " ${URI_aarch64_php-theseer-autoload}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/php-theseer-autoload-1.29.4-1.el10_2.noarch.rpm;name=aarch64_php-theseer-autoload;unpack=0"
 SRC_URI[aarch64_php-theseer-autoload.sha256sum] = "856222feac9465850e43f577c94f2a7093caa33e093bd51e02c627ea4bf5f97e"
 
 RDEPENDS:php-theseer-autoload = " \

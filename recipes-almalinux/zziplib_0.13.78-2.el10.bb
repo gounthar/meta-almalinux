@@ -11,33 +11,35 @@ PACKAGES = " \
  zziplib-utils \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/zziplib-0.13.78-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/zziplib-0.13.78-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "4ed0b14d4042ad71ac9ac4280cc4085fd5ce19735e91a0a397f86959f74a595e"
 
-URI_x86_64_v2_zziplib = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/zziplib-0.13.78-2.el10.x86_64_v2.rpm;name=x86_64_v2_zziplib;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_zziplib}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/zziplib-0.13.78-2.el10.x86_64_v2.rpm;name=x86_64_v2_zziplib;unpack=0"
 SRC_URI[x86_64_v2_zziplib.sha256sum] = "f03ce9c7468a5df12d29545709478c1605da576c6892331149e0e0dd92f872fc"
 
-URI_x86_64_v2_zziplib-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/zziplib-devel-0.13.78-2.el10.x86_64_v2.rpm;name=x86_64_v2_zziplib-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_zziplib-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/zziplib-devel-0.13.78-2.el10.x86_64_v2.rpm;name=x86_64_v2_zziplib-devel;unpack=0"
 SRC_URI[x86_64_v2_zziplib-devel.sha256sum] = "dc51d640bf9d0208113b17a7868945e3fd697b64e6ce327c4b9580ad0abf5f76"
 
-URI_x86_64_v2_zziplib-utils = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/zziplib-utils-0.13.78-2.el10.x86_64_v2.rpm;name=x86_64_v2_zziplib-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_zziplib-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/zziplib-utils-0.13.78-2.el10.x86_64_v2.rpm;name=x86_64_v2_zziplib-utils;unpack=0"
 SRC_URI[x86_64_v2_zziplib-utils.sha256sum] = "73d674f2f920f2840a17b0664902883d01b48d9ab84d07675845be55b0cf2a6f"
 
-URI_aarch64_zziplib = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/zziplib-0.13.78-2.el10.aarch64.rpm;name=aarch64_zziplib;unpack=0"
-SRC_URI:append = " ${URI_aarch64_zziplib}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/zziplib-0.13.78-2.el10.aarch64.rpm;name=aarch64_zziplib;unpack=0"
 SRC_URI[aarch64_zziplib.sha256sum] = "aa950f817e0e3a6bb6902a39b10eb4c82114dcd25b27a8e63303f05b6f50d83c"
 
-URI_aarch64_zziplib-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/zziplib-devel-0.13.78-2.el10.aarch64.rpm;name=aarch64_zziplib-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_zziplib-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/zziplib-devel-0.13.78-2.el10.aarch64.rpm;name=aarch64_zziplib-devel;unpack=0"
 SRC_URI[aarch64_zziplib-devel.sha256sum] = "f7cc5916a7cb42da1f655fb8c790754b09c878144ba83cb6b7940d55f9769353"
 
-URI_aarch64_zziplib-utils = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/zziplib-utils-0.13.78-2.el10.aarch64.rpm;name=aarch64_zziplib-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_zziplib-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/zziplib-utils-0.13.78-2.el10.aarch64.rpm;name=aarch64_zziplib-utils;unpack=0"
 SRC_URI[aarch64_zziplib-utils.sha256sum] = "bdf593698550d6dc39ec38667580a621e5caad44ce2b2b736fcb2521b19c6568"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/zziplib-0.13.78-2.el10.riscv64.rpm;name=riscv64_zziplib;unpack=0"
+SRC_URI[riscv64_zziplib.sha256sum] = "7918d448925984911c1583df41eec5dec6d6d5b648747b7fb8f6a893467faee9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/zziplib-devel-0.13.78-2.el10.riscv64.rpm;name=riscv64_zziplib-devel;unpack=0"
+SRC_URI[riscv64_zziplib-devel.sha256sum] = "5ddd9957d76495426f4a2f9ac24255e8deb8be47dffe924134bdd6a110fd8d2e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/zziplib-utils-0.13.78-2.el10.riscv64.rpm;name=riscv64_zziplib-utils;unpack=0"
+SRC_URI[riscv64_zziplib-utils.sha256sum] = "cb9952f290db46e78523669cecefbb00f251cb58ddf942f797db247f027424d0"
 
 RDEPENDS:zziplib = " \
  glibc \

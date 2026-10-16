@@ -9,17 +9,17 @@ PACKAGES = " \
  icoutils \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/icoutils-0.32.3-18.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/icoutils-0.32.3-18.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "627f031df0a7c8ac4d1e85df5d022fba8037be70ca150e08eb68057beaaff603"
 
-URI_x86_64_v2_icoutils = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/icoutils-0.32.3-18.el10.x86_64_v2.rpm;name=x86_64_v2_icoutils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_icoutils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/icoutils-0.32.3-18.el10.x86_64_v2.rpm;name=x86_64_v2_icoutils;unpack=0"
 SRC_URI[x86_64_v2_icoutils.sha256sum] = "7bb7bec6ae13bfc2aaa80b6a76449aef060917ebfab604f24574bbc05b093254"
 
-URI_aarch64_icoutils = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/icoutils-0.32.3-18.el10.aarch64.rpm;name=aarch64_icoutils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_icoutils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/icoutils-0.32.3-18.el10.aarch64.rpm;name=aarch64_icoutils;unpack=0"
 SRC_URI[aarch64_icoutils.sha256sum] = "673c39a350be09085e73d32eccdb6de91f0871fd889fab1465da10873e199051"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/icoutils-0.32.3-18.el10.riscv64.rpm;name=riscv64_icoutils;unpack=0"
+SRC_URI[riscv64_icoutils.sha256sum] = "52b2b303b05157b3a7c047ea9339f75fc08307ad384d303b94befad27b9b680b"
 
 RDEPENDS:icoutils = " \
  glibc \

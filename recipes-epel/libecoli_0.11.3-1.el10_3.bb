@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "libecoli"
 PV = "0.11.3"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  libecoli \
  libecoli-devel \
  libecoli-doc \
- "
+"
+PACKAGES:aarch64 = " \
+ libecoli \
+ libecoli-devel \
+ libecoli-doc \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/l/libecoli-0.11.3-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/l/libecoli-0.11.3-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "4771df0a73339179b1b51b5ce2fe9a443ac8b87664d20709eb94b1757cb9e158"
 
-URI_x86_64_v2_libecoli = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libecoli-0.11.3-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libecoli;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libecoli}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libecoli-0.11.3-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libecoli;unpack=0"
 SRC_URI[x86_64_v2_libecoli.sha256sum] = "1db1ca14b002f8e86f385abc30c5799feeb92a720f2efbb6e56506cd0ac2a378"
 
-URI_x86_64_v2_libecoli-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libecoli-devel-0.11.3-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libecoli-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libecoli-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libecoli-devel-0.11.3-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libecoli-devel;unpack=0"
 SRC_URI[x86_64_v2_libecoli-devel.sha256sum] = "0f9fbb627585802357bef14d6c733080d6bf786d332f015d568732679d844fbf"
 
-URI_x86_64_v2_libecoli-doc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libecoli-doc-0.11.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_libecoli-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libecoli-doc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libecoli-doc-0.11.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_libecoli-doc;unpack=0"
 SRC_URI[x86_64_v2_libecoli-doc.sha256sum] = "73fbbeaae8c0d9b6d328300f57454fd1181c887d20e751d9f25c68ba11594c70"
 
-URI_aarch64_libecoli = "${EPEL_MIRROR}/aarch64/Packages/l/libecoli-0.11.3-1.el10_3.aarch64.rpm;name=aarch64_libecoli;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libecoli}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/libecoli-0.11.3-1.el10_3.aarch64.rpm;name=aarch64_libecoli;unpack=0"
 SRC_URI[aarch64_libecoli.sha256sum] = "2c47d37e34414ebc6823838b9ddcc1205dfbc2e091d013658933fbe1d9535b5b"
 
-URI_aarch64_libecoli-devel = "${EPEL_MIRROR}/aarch64/Packages/l/libecoli-devel-0.11.3-1.el10_3.aarch64.rpm;name=aarch64_libecoli-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libecoli-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/libecoli-devel-0.11.3-1.el10_3.aarch64.rpm;name=aarch64_libecoli-devel;unpack=0"
 SRC_URI[aarch64_libecoli-devel.sha256sum] = "2bb7340fc85cdbe3d4c6cdbc3137e9bc278e3d236b7b52366da02296fe2826a6"
 
-URI_aarch64_libecoli-doc = "${EPEL_MIRROR}/aarch64/Packages/l/libecoli-doc-0.11.3-1.el10_3.noarch.rpm;name=aarch64_libecoli-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libecoli-doc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/libecoli-doc-0.11.3-1.el10_3.noarch.rpm;name=aarch64_libecoli-doc;unpack=0"
 SRC_URI[aarch64_libecoli-doc.sha256sum] = "8719d95688df3ec645e9a9daec3b542f615ce54f5bc9f7abb0814839f49ac3f0"
 
 RDEPENDS:libecoli = " \

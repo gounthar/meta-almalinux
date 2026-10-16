@@ -10,25 +10,26 @@ PACKAGES = " \
  jitterentropy-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/jitterentropy-3.7.0-1.el10.alma.1.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/jitterentropy-3.7.0-1.el10.alma.1.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "9665ccf74f5849e5c9b6476ebba3127057b8db311195a2868a069f88cf24f687"
 
-URI_x86_64_v2_jitterentropy = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/jitterentropy-3.7.0-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_jitterentropy;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_jitterentropy}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/jitterentropy-3.7.0-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_jitterentropy;unpack=0"
 SRC_URI[x86_64_v2_jitterentropy.sha256sum] = "c6a46869ce3906166734a760d213f871b0a400921bf2f9d1e6efbe7148e34226"
 
-URI_x86_64_v2_jitterentropy-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/jitterentropy-devel-3.7.0-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_jitterentropy-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_jitterentropy-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/jitterentropy-devel-3.7.0-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_jitterentropy-devel;unpack=0"
 SRC_URI[x86_64_v2_jitterentropy-devel.sha256sum] = "72662546bee49ae199eefb276e9b759870ebe9e98194504d1ff61eb55c3ce82b"
 
-URI_aarch64_jitterentropy = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/jitterentropy-3.7.0-1.el10.alma.1.aarch64.rpm;name=aarch64_jitterentropy;unpack=0"
-SRC_URI:append = " ${URI_aarch64_jitterentropy}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/jitterentropy-3.7.0-1.el10.alma.1.aarch64.rpm;name=aarch64_jitterentropy;unpack=0"
 SRC_URI[aarch64_jitterentropy.sha256sum] = "1c3eb8338a5a8f17759832db32b167ca358342710cae22d2427dbe00551fc243"
 
-URI_aarch64_jitterentropy-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/jitterentropy-devel-3.7.0-1.el10.alma.1.aarch64.rpm;name=aarch64_jitterentropy-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_jitterentropy-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/jitterentropy-devel-3.7.0-1.el10.alma.1.aarch64.rpm;name=aarch64_jitterentropy-devel;unpack=0"
 SRC_URI[aarch64_jitterentropy-devel.sha256sum] = "55dca5a2c8116d7c7ebfaaf49baf77ceb0cc3c7a46a41675d78348c576b88993"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/jitterentropy-3.7.0-1.el10.alma.1.riscv64.rpm;name=riscv64_jitterentropy;unpack=0"
+SRC_URI[riscv64_jitterentropy.sha256sum] = "f18b233febbf8da9b451dbc1b520095dcb6359b88cd979dfc103cef925238b5f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/jitterentropy-devel-3.7.0-1.el10.alma.1.riscv64.rpm;name=riscv64_jitterentropy-devel;unpack=0"
+SRC_URI[riscv64_jitterentropy-devel.sha256sum] = "4f9c808e69e8791c9bbebd55a3716a9a61cb17575644cc2b151dcdf7420bf993"
 
 RDEPENDS:jitterentropy = " \
  glibc \

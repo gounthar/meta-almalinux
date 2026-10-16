@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-Config-Any"
 PV = "0.33"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-Config-Any \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-Config-Any \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-Config-Any-0.33-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-Config-Any-0.33-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "2b3a4ddbf25f9f8a6f5b6bc46ad2991695237669c2e102621a6f993a2e03be51"
 
-URI_x86_64_v2_perl-Config-Any = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Config-Any-0.33-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Config-Any;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Config-Any}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Config-Any-0.33-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Config-Any;unpack=0"
 SRC_URI[x86_64_v2_perl-Config-Any.sha256sum] = "f80b7a922c3368ca8a5b94e8a5d9cf97fb0b06740668e530c431e3bcedc69e56"
 
-URI_aarch64_perl-Config-Any = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Config-Any-0.33-1.el10_3.noarch.rpm;name=aarch64_perl-Config-Any;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Config-Any}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Config-Any-0.33-1.el10_3.noarch.rpm;name=aarch64_perl-Config-Any;unpack=0"
 SRC_URI[aarch64_perl-Config-Any.sha256sum] = "1a647c182b24452632b043d91fc14261f61427aca8b339f2dc28d950b13828ba"
 
 RDEPENDS:perl-Config-Any = " \

@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "cloc"
 PV = "2.10"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  cloc \
- "
+"
+PACKAGES:aarch64 = " \
+ cloc \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/c/cloc-2.10-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/c/cloc-2.10-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7f2da9719d300a61a79f96dfb2f02630964de4a159e530308c045132b7a15b76"
 
-URI_x86_64_v2_cloc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/cloc-2.10-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_cloc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cloc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/cloc-2.10-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_cloc;unpack=0"
 SRC_URI[x86_64_v2_cloc.sha256sum] = "c2d25fea4831515f9cb35cff23f7712e6a322fd654413c32e314be8eaa576c92"
 
-URI_aarch64_cloc = "${EPEL_MIRROR}/aarch64/Packages/c/cloc-2.10-1.el10_3.noarch.rpm;name=aarch64_cloc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cloc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/c/cloc-2.10-1.el10_3.noarch.rpm;name=aarch64_cloc;unpack=0"
 SRC_URI[aarch64_cloc.sha256sum] = "4cf09f6a8842b64a2076189de2fd6ed927bc6737a5b645a5924056c60c581bf2"
 
 RDEPENDS:cloc = " \

@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "goaccess"
 PV = "1.11"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  goaccess \
- "
+"
+PACKAGES:aarch64 = " \
+ goaccess \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/g/goaccess-1.11-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/g/goaccess-1.11-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a65693d8abffd34932f4e9e74e487143d7a148094ac88ab80eddcaf2c35b2389"
 
-URI_x86_64_v2_goaccess = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/goaccess-1.11-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_goaccess;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_goaccess}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/goaccess-1.11-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_goaccess;unpack=0"
 SRC_URI[x86_64_v2_goaccess.sha256sum] = "6eb5672f82b5e6259a28372786de8dc3619c4975161cfb89c074d133cc0c318c"
 
-URI_aarch64_goaccess = "${EPEL_MIRROR}/aarch64/Packages/g/goaccess-1.11-1.el10_3.aarch64.rpm;name=aarch64_goaccess;unpack=0"
-SRC_URI:append = " ${URI_aarch64_goaccess}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/goaccess-1.11-1.el10_3.aarch64.rpm;name=aarch64_goaccess;unpack=0"
 SRC_URI[aarch64_goaccess.sha256sum] = "98b0ea09a778c6c71568cacec31ee705ce186ae34ba3e71dd14fcfadd890894a"
 
 RDEPENDS:goaccess = " \

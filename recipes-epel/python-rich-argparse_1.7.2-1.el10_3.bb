@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-rich-argparse"
 PV = "1.7.2"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-rich-argparse \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-rich-argparse \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-rich-argparse-1.7.2-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-rich-argparse-1.7.2-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "076bd289a83fdde3b543759ee16ae0f525e39efcf945346ca2affd5ef5fa1da9"
 
-URI_x86_64_v2_python3-rich-argparse = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-rich-argparse-1.7.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-rich-argparse;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-rich-argparse}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-rich-argparse-1.7.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-rich-argparse;unpack=0"
 SRC_URI[x86_64_v2_python3-rich-argparse.sha256sum] = "514e935d8f4e259025f699a538f07fdddef8a46e5c22914cb26f4e7f7a0e1432"
 
-URI_aarch64_python3-rich-argparse = "${EPEL_MIRROR}/aarch64/Packages/p/python3-rich-argparse-1.7.2-1.el10_3.noarch.rpm;name=aarch64_python3-rich-argparse;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-rich-argparse}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-rich-argparse-1.7.2-1.el10_3.noarch.rpm;name=aarch64_python3-rich-argparse;unpack=0"
 SRC_URI[aarch64_python3-rich-argparse.sha256sum] = "75a0d700d62988da86a4a952bf3a29168b6da07df3162e6efa0325a3da9d07bc"
 
 RDEPENDS:python3-rich-argparse = " \

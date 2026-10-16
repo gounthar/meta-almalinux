@@ -10,25 +10,26 @@ PACKAGES = " \
  libXinerama-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libXinerama-1.1.5-8.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libXinerama-1.1.5-8.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "188a9c52e42e7af40b284e942aea990175d454a68e662843d2d1142ee1e53824"
 
-URI_x86_64_v2_libXinerama = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXinerama-1.1.5-8.el10.x86_64_v2.rpm;name=x86_64_v2_libXinerama;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libXinerama}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXinerama-1.1.5-8.el10.x86_64_v2.rpm;name=x86_64_v2_libXinerama;unpack=0"
 SRC_URI[x86_64_v2_libXinerama.sha256sum] = "40e7426d696eb4ee8b362b1b567cb5be1a4e197c5c934b5e9036d8bde7748a3d"
 
-URI_x86_64_v2_libXinerama-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXinerama-devel-1.1.5-8.el10.x86_64_v2.rpm;name=x86_64_v2_libXinerama-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libXinerama-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXinerama-devel-1.1.5-8.el10.x86_64_v2.rpm;name=x86_64_v2_libXinerama-devel;unpack=0"
 SRC_URI[x86_64_v2_libXinerama-devel.sha256sum] = "cd8e27f2491a8ae72591d7b814b563d8bd1ddea84f4c8a05b982fdec3620f459"
 
-URI_aarch64_libXinerama = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXinerama-1.1.5-8.el10.aarch64.rpm;name=aarch64_libXinerama;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libXinerama}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXinerama-1.1.5-8.el10.aarch64.rpm;name=aarch64_libXinerama;unpack=0"
 SRC_URI[aarch64_libXinerama.sha256sum] = "ae33ad2715ef3abe6a757e15755df3dcb36d684cb3e5a5cd5c022505bd827e3a"
 
-URI_aarch64_libXinerama-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXinerama-devel-1.1.5-8.el10.aarch64.rpm;name=aarch64_libXinerama-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libXinerama-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXinerama-devel-1.1.5-8.el10.aarch64.rpm;name=aarch64_libXinerama-devel;unpack=0"
 SRC_URI[aarch64_libXinerama-devel.sha256sum] = "668ea656cc4fe461a589d506eea3f6b80ed4e86eb994639074b3bdaba4dc91e4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libXinerama-1.1.5-8.el10.riscv64.rpm;name=riscv64_libXinerama;unpack=0"
+SRC_URI[riscv64_libXinerama.sha256sum] = "9fa07067d7ef5e2a6b9952106c457110248165cb26b02c185133d4f61cc5b70f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libXinerama-devel-1.1.5-8.el10.riscv64.rpm;name=riscv64_libXinerama-devel;unpack=0"
+SRC_URI[riscv64_libXinerama-devel.sha256sum] = "8d8ff6be2f2c4e908a0d07890fce2234bc94709b6cff94f35a3c8db3f9bab8da"
 
 RDEPENDS:libXinerama = " \
  glibc \

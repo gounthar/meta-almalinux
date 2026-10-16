@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "qt6-qtquick3dphysics"
 PV = "6.10.1"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  qt6-qtquick3dphysics \
  qt6-qtquick3dphysics-devel \
  qt6-qtquick3dphysics-examples \
- "
+"
+PACKAGES:aarch64 = " \
+ qt6-qtquick3dphysics \
+ qt6-qtquick3dphysics-devel \
+ qt6-qtquick3dphysics-examples \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/q/qt6-qtquick3dphysics-6.10.1-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/q/qt6-qtquick3dphysics-6.10.1-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c4b0753db0409c3ee8376de84beb5b7615be4f4dde0f6aeb6e71b7f34fc5a1df"
 
-URI_x86_64_v2_qt6-qtquick3dphysics = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt6-qtquick3dphysics-6.10.1-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qt6-qtquick3dphysics;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtquick3dphysics}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt6-qtquick3dphysics-6.10.1-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qt6-qtquick3dphysics;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtquick3dphysics.sha256sum] = "c3699ad9d86d3c3cdc25fcc8fa7751301ab2a9f5c3d331c308130129013ae362"
 
-URI_x86_64_v2_qt6-qtquick3dphysics-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt6-qtquick3dphysics-devel-6.10.1-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qt6-qtquick3dphysics-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtquick3dphysics-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt6-qtquick3dphysics-devel-6.10.1-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qt6-qtquick3dphysics-devel;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtquick3dphysics-devel.sha256sum] = "81b8499795729cfebb3e00d3f0df42c2434697ff969b73a1f995c075a3700efa"
 
-URI_x86_64_v2_qt6-qtquick3dphysics-examples = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt6-qtquick3dphysics-examples-6.10.1-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qt6-qtquick3dphysics-examples;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtquick3dphysics-examples}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt6-qtquick3dphysics-examples-6.10.1-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qt6-qtquick3dphysics-examples;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtquick3dphysics-examples.sha256sum] = "f380a130da3b95ec7a6544f28c245e2ae6e965a936ac5d447950970ac13ead0b"
 
-URI_aarch64_qt6-qtquick3dphysics = "${EPEL_MIRROR}/aarch64/Packages/q/qt6-qtquick3dphysics-6.10.1-1.el10_2.aarch64.rpm;name=aarch64_qt6-qtquick3dphysics;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtquick3dphysics}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/q/qt6-qtquick3dphysics-6.10.1-1.el10_2.aarch64.rpm;name=aarch64_qt6-qtquick3dphysics;unpack=0"
 SRC_URI[aarch64_qt6-qtquick3dphysics.sha256sum] = "bcf51c1edbd821154f47333cd00275ab3f30a97459918bb6175035d79c54a647"
 
-URI_aarch64_qt6-qtquick3dphysics-devel = "${EPEL_MIRROR}/aarch64/Packages/q/qt6-qtquick3dphysics-devel-6.10.1-1.el10_2.aarch64.rpm;name=aarch64_qt6-qtquick3dphysics-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtquick3dphysics-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/q/qt6-qtquick3dphysics-devel-6.10.1-1.el10_2.aarch64.rpm;name=aarch64_qt6-qtquick3dphysics-devel;unpack=0"
 SRC_URI[aarch64_qt6-qtquick3dphysics-devel.sha256sum] = "e1e7610dd3044542f773de513ddfec4fd2eccaa933a763f5a8e22234e492012b"
 
-URI_aarch64_qt6-qtquick3dphysics-examples = "${EPEL_MIRROR}/aarch64/Packages/q/qt6-qtquick3dphysics-examples-6.10.1-1.el10_2.aarch64.rpm;name=aarch64_qt6-qtquick3dphysics-examples;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtquick3dphysics-examples}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/q/qt6-qtquick3dphysics-examples-6.10.1-1.el10_2.aarch64.rpm;name=aarch64_qt6-qtquick3dphysics-examples;unpack=0"
 SRC_URI[aarch64_qt6-qtquick3dphysics-examples.sha256sum] = "faf9ffb5cf2cc6fb4ea8ecf4795a732e2fb48c3dcadfec4c7f602eacbca602a3"
 
 RDEPENDS:qt6-qtquick3dphysics = " \

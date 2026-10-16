@@ -11,25 +11,26 @@ PACKAGES = " \
  sisu-javadoc \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/sisu-0.3.5-15.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/sisu-0.3.5-15.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1bab2eeb38fd0308bf99d6fb24ca7ca718efd5d3dee6a3f3f8ea0323f0ad1022"
 
-URI_x86_64_v2_sisu = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sisu-0.3.5-15.el10.noarch.rpm;name=x86_64_v2_sisu;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_sisu}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sisu-0.3.5-15.el10.noarch.rpm;name=x86_64_v2_sisu;unpack=0"
 SRC_URI[x86_64_v2_sisu.sha256sum] = "b6c03e97c2becee0bedd4b5df8399b556776bf67b339f10e2b1cbbfe1161b858"
 
-URI_x86_64_v2_sisu-javadoc = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/sisu-javadoc-0.3.5-15.el10.noarch.rpm;name=x86_64_v2_sisu-javadoc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_sisu-javadoc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/sisu-javadoc-0.3.5-15.el10.noarch.rpm;name=x86_64_v2_sisu-javadoc;unpack=0"
 SRC_URI[x86_64_v2_sisu-javadoc.sha256sum] = "5f82382385e9511ecb575cc01d30753144b4653917163da2a24e52507451614e"
 
-URI_aarch64_sisu = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/sisu-0.3.5-15.el10.noarch.rpm;name=aarch64_sisu;unpack=0"
-SRC_URI:append = " ${URI_aarch64_sisu}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/sisu-0.3.5-15.el10.noarch.rpm;name=aarch64_sisu;unpack=0"
 SRC_URI[aarch64_sisu.sha256sum] = "b6c03e97c2becee0bedd4b5df8399b556776bf67b339f10e2b1cbbfe1161b858"
 
-URI_aarch64_sisu-javadoc = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/sisu-javadoc-0.3.5-15.el10.noarch.rpm;name=aarch64_sisu-javadoc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_sisu-javadoc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/sisu-javadoc-0.3.5-15.el10.noarch.rpm;name=aarch64_sisu-javadoc;unpack=0"
 SRC_URI[aarch64_sisu-javadoc.sha256sum] = "5f82382385e9511ecb575cc01d30753144b4653917163da2a24e52507451614e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/sisu-0.3.5-15.el10.noarch.rpm;name=riscv64_sisu;unpack=0"
+SRC_URI[riscv64_sisu.sha256sum] = "b6c03e97c2becee0bedd4b5df8399b556776bf67b339f10e2b1cbbfe1161b858"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/sisu-javadoc-0.3.5-15.el10.noarch.rpm;name=riscv64_sisu-javadoc;unpack=0"
+SRC_URI[riscv64_sisu-javadoc.sha256sum] = "5f82382385e9511ecb575cc01d30753144b4653917163da2a24e52507451614e"
 
 RDEPENDS:sisu = " \
  cdi-api \

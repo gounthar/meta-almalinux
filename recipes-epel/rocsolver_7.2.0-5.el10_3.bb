@@ -12,17 +12,17 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rocsolver-7.2.0-5.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rocsolver-7.2.0-5.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "55bbbfcb0a6b8c8bd7423a0aa813738c746b89150033aa00fcda45317a035b0f"
 
-URI_x86_64_v2_rocsolver = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocsolver-7.2.0-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocsolver;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rocsolver}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocsolver-7.2.0-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocsolver;unpack=0"
 SRC_URI[x86_64_v2_rocsolver.sha256sum] = "a350a96182a7c37b2c2484db4a6f67e9aa3c4c1185b7d627406a64ae5fee667a"
 
-URI_x86_64_v2_rocsolver-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocsolver-devel-7.2.0-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocsolver-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rocsolver-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocsolver-devel-7.2.0-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocsolver-devel;unpack=0"
 SRC_URI[x86_64_v2_rocsolver-devel.sha256sum] = "bef86bdbf920aa2a71e5b3f361e111bf2933bfe853cb98f231ffc20ffb269f45"
 
 RDEPENDS:rocsolver = " \

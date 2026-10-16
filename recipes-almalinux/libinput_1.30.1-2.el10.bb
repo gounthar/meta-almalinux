@@ -11,33 +11,35 @@ PACKAGES = " \
  libinput-utils \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libinput-1.30.1-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libinput-1.30.1-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "661da35f798dec0b9290f26dc05cc3db7dba017220cb0da37a23545eac743a77"
 
-URI_x86_64_v2_libinput = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libinput-1.30.1-2.el10.x86_64_v2.rpm;name=x86_64_v2_libinput;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libinput}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libinput-1.30.1-2.el10.x86_64_v2.rpm;name=x86_64_v2_libinput;unpack=0"
 SRC_URI[x86_64_v2_libinput.sha256sum] = "fc4355d7234571a461603e47abe903b652fe973c323197e5955f89156b1aadbb"
 
-URI_x86_64_v2_libinput-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libinput-devel-1.30.1-2.el10.x86_64_v2.rpm;name=x86_64_v2_libinput-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libinput-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libinput-devel-1.30.1-2.el10.x86_64_v2.rpm;name=x86_64_v2_libinput-devel;unpack=0"
 SRC_URI[x86_64_v2_libinput-devel.sha256sum] = "8f534ca8d15df35b2b80215a9d3e457bd07eed192e5e6cb9c1db7e0ede1e3394"
 
-URI_x86_64_v2_libinput-utils = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libinput-utils-1.30.1-2.el10.x86_64_v2.rpm;name=x86_64_v2_libinput-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libinput-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libinput-utils-1.30.1-2.el10.x86_64_v2.rpm;name=x86_64_v2_libinput-utils;unpack=0"
 SRC_URI[x86_64_v2_libinput-utils.sha256sum] = "b6ec32d3a415f8fa0439201561d82a81ab01cd42fb8522b80c2653ebfec9ae5b"
 
-URI_aarch64_libinput = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libinput-1.30.1-2.el10.aarch64.rpm;name=aarch64_libinput;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libinput}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libinput-1.30.1-2.el10.aarch64.rpm;name=aarch64_libinput;unpack=0"
 SRC_URI[aarch64_libinput.sha256sum] = "7cc446b9d7aa1921c8bcd1bb297558f394a0591d0051c062e1ccdb3663a1f425"
 
-URI_aarch64_libinput-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libinput-devel-1.30.1-2.el10.aarch64.rpm;name=aarch64_libinput-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libinput-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libinput-devel-1.30.1-2.el10.aarch64.rpm;name=aarch64_libinput-devel;unpack=0"
 SRC_URI[aarch64_libinput-devel.sha256sum] = "a9b289855e7113e9fe36d4d900ff8b4d0e5e793aafa0184a51768ace26ed30ab"
 
-URI_aarch64_libinput-utils = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libinput-utils-1.30.1-2.el10.aarch64.rpm;name=aarch64_libinput-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libinput-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libinput-utils-1.30.1-2.el10.aarch64.rpm;name=aarch64_libinput-utils;unpack=0"
 SRC_URI[aarch64_libinput-utils.sha256sum] = "d38326ffb42d7e9f42b4614b18bab76fc361ddaf960c1839aa1898bb5ee5b452"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libinput-1.30.1-2.el10.riscv64.rpm;name=riscv64_libinput;unpack=0"
+SRC_URI[riscv64_libinput.sha256sum] = "a010e85877fd1517afe4d09f96bfbc201c1de13505ed584777eafcd277000e15"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libinput-devel-1.30.1-2.el10.riscv64.rpm;name=riscv64_libinput-devel;unpack=0"
+SRC_URI[riscv64_libinput-devel.sha256sum] = "75c181ef1744f8caeacf5f651381ca8bd87a38114241b9e40e3c4d9f47c574eb"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libinput-utils-1.30.1-2.el10.riscv64.rpm;name=riscv64_libinput-utils;unpack=0"
+SRC_URI[riscv64_libinput-utils.sha256sum] = "b1b546f6a132d07921e88d78c8360622a531151dca7e85e5ff58f03bf66d812c"
 
 RDEPENDS:libinput = " \
  bash \

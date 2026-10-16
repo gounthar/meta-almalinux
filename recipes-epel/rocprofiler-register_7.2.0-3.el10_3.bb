@@ -12,17 +12,17 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rocprofiler-register-7.2.0-3.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rocprofiler-register-7.2.0-3.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8431b00fdaaedd4149b64883a1a6b14dd14168acc8d1376cb0f25d0c24f97f55"
 
-URI_x86_64_v2_rocprofiler-register = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocprofiler-register-7.2.0-3.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocprofiler-register;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rocprofiler-register}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocprofiler-register-7.2.0-3.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocprofiler-register;unpack=0"
 SRC_URI[x86_64_v2_rocprofiler-register.sha256sum] = "ded1b58cf189d24aab4c09a26ad09eca54e1f87d412f198fe30d274fc0318d72"
 
-URI_x86_64_v2_rocprofiler-register-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocprofiler-register-devel-7.2.0-3.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocprofiler-register-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rocprofiler-register-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocprofiler-register-devel-7.2.0-3.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocprofiler-register-devel;unpack=0"
 SRC_URI[x86_64_v2_rocprofiler-register-devel.sha256sum] = "27dc82bcdf12c8da710eb39045019e6afb256334c44229a4cf1fe3e71e602b6e"
 
 RDEPENDS:rocprofiler-register = " \

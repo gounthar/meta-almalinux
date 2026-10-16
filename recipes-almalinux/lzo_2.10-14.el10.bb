@@ -11,33 +11,35 @@ PACKAGES = " \
  lzo-minilzo \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/lzo-2.10-14.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/lzo-2.10-14.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "9f0c2b15e4596db5264452218836957af851794e5da27dd25a33518fdab11d34"
 
-URI_x86_64_v2_lzo = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/lzo-2.10-14.el10.x86_64_v2.rpm;name=x86_64_v2_lzo;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lzo}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/lzo-2.10-14.el10.x86_64_v2.rpm;name=x86_64_v2_lzo;unpack=0"
 SRC_URI[x86_64_v2_lzo.sha256sum] = "c877a6d9863a75c04dc9af854c17794b6ff3f2a752895f4d7979839ad5b5ad63"
 
-URI_x86_64_v2_lzo-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/lzo-devel-2.10-14.el10.x86_64_v2.rpm;name=x86_64_v2_lzo-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lzo-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/lzo-devel-2.10-14.el10.x86_64_v2.rpm;name=x86_64_v2_lzo-devel;unpack=0"
 SRC_URI[x86_64_v2_lzo-devel.sha256sum] = "7e9fad26b00449eae7e466678353c3a15a2baf62dde5cbdf406ee375232d119e"
 
-URI_x86_64_v2_lzo-minilzo = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/lzo-minilzo-2.10-14.el10.x86_64_v2.rpm;name=x86_64_v2_lzo-minilzo;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lzo-minilzo}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/lzo-minilzo-2.10-14.el10.x86_64_v2.rpm;name=x86_64_v2_lzo-minilzo;unpack=0"
 SRC_URI[x86_64_v2_lzo-minilzo.sha256sum] = "9272782d8dbbd586a5dbc96cc3955dac2fd24b391af64d1a4884c8e318dfed79"
 
-URI_aarch64_lzo = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/lzo-2.10-14.el10.aarch64.rpm;name=aarch64_lzo;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lzo}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/lzo-2.10-14.el10.aarch64.rpm;name=aarch64_lzo;unpack=0"
 SRC_URI[aarch64_lzo.sha256sum] = "a39e0d55401d1c74e36f4f97957773d8be5ed3c5a295de75f8751b2b89a05490"
 
-URI_aarch64_lzo-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/lzo-devel-2.10-14.el10.aarch64.rpm;name=aarch64_lzo-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lzo-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/lzo-devel-2.10-14.el10.aarch64.rpm;name=aarch64_lzo-devel;unpack=0"
 SRC_URI[aarch64_lzo-devel.sha256sum] = "cc374b605da29d759287c215dc4f708ed55cbbd482ee0c63eeab14777e347a74"
 
-URI_aarch64_lzo-minilzo = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/lzo-minilzo-2.10-14.el10.aarch64.rpm;name=aarch64_lzo-minilzo;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lzo-minilzo}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/lzo-minilzo-2.10-14.el10.aarch64.rpm;name=aarch64_lzo-minilzo;unpack=0"
 SRC_URI[aarch64_lzo-minilzo.sha256sum] = "d494ab11152f4e2ba495cea4f9a569dadaeeaa11dbdc9da6cee64fe4a5b510ef"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/lzo-2.10-14.el10.riscv64.rpm;name=riscv64_lzo;unpack=0"
+SRC_URI[riscv64_lzo.sha256sum] = "bcaf695efeb0fc21143a950f47d2a25f0efbf2c830fac818548ca4dfda547966"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/lzo-devel-2.10-14.el10.riscv64.rpm;name=riscv64_lzo-devel;unpack=0"
+SRC_URI[riscv64_lzo-devel.sha256sum] = "8857cd44237b3b4ce3aecc42eed7abd9ae6b8658dad556279716f29eb1fa9027"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/lzo-minilzo-2.10-14.el10.riscv64.rpm;name=riscv64_lzo-minilzo;unpack=0"
+SRC_URI[riscv64_lzo-minilzo.sha256sum] = "83bd4bf781f5dac5485351d422b24b5ce3740a9554ce3bec62c518c2780f83fa"
 
 RDEPENDS:lzo = " \
  glibc \

@@ -11,40 +11,55 @@ PACKAGES = " \
  qt6-qtconnectivity-examples \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtconnectivity-6.10.1-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtconnectivity-6.10.1-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1837e30748886c524a1de0ed6805096c3b298c5665eac838ca0cb49153487a87"
 
-URI_x86_64_v2_qt6-qtconnectivity = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtconnectivity-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtconnectivity;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtconnectivity}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtconnectivity-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtconnectivity;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtconnectivity.sha256sum] = "e6bccbb9731482c2aad69a7810e58b6e14cc925806bc895f368fb23cfc6b49b5"
 
-URI_x86_64_v2_qt6-qtconnectivity-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtconnectivity-devel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtconnectivity-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtconnectivity-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtconnectivity-devel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtconnectivity-devel;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtconnectivity-devel.sha256sum] = "39583cb115b400d28e62e4722f09a2d87556612461e95cb026cbbe3b2a2706a1"
 
-URI_x86_64_v2_qt6-qtconnectivity-examples = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtconnectivity-examples-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtconnectivity-examples;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtconnectivity-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtconnectivity-examples-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtconnectivity-examples;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtconnectivity-examples.sha256sum] = "b85b83af933115c0d63552228f085bc8dcba73a873e185c8e134f7d0e6b7a316"
 
-URI_aarch64_qt6-qtconnectivity = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtconnectivity-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtconnectivity;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtconnectivity}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtconnectivity-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtconnectivity;unpack=0"
 SRC_URI[aarch64_qt6-qtconnectivity.sha256sum] = "6ab0d4dfba825b05d712c0886b75054f05b14e84392c3b690c4cffa8069ae777"
 
-URI_aarch64_qt6-qtconnectivity-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtconnectivity-devel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtconnectivity-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtconnectivity-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtconnectivity-devel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtconnectivity-devel;unpack=0"
 SRC_URI[aarch64_qt6-qtconnectivity-devel.sha256sum] = "81f41e49786b5941d0b423b92ce5cd4081ef9e13393fa7c43295ab0182906354"
 
-URI_aarch64_qt6-qtconnectivity-examples = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtconnectivity-examples-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtconnectivity-examples;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtconnectivity-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtconnectivity-examples-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtconnectivity-examples;unpack=0"
 SRC_URI[aarch64_qt6-qtconnectivity-examples.sha256sum] = "09a7a5618909fb4d74ec89266558a37be7a10d30c94179314995935cb37c76b7"
 
-RDEPENDS:qt6-qtconnectivity = " \
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtconnectivity-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtconnectivity;unpack=0"
+SRC_URI[riscv64_qt6-qtconnectivity.sha256sum] = "aa984e31da041e7f705fbe6e5a53eaa4dac5c3a35241d46fce2185f9ee1cf5da"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtconnectivity-devel-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtconnectivity-devel;unpack=0"
+SRC_URI[riscv64_qt6-qtconnectivity-devel.sha256sum] = "6034c1e1e98adb7a858d9a09441fe10cbf57d5279acf62e5999ca39b5dc6957a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/qt6-qtconnectivity-examples-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtconnectivity-examples;unpack=0"
+SRC_URI[riscv64_qt6-qtconnectivity-examples.sha256sum] = "b800040fc6faa03c0e729ce1f9b2362b702baa15ba632ea4e96bd10299141fe2"
+
+RDEPENDS:qt6-qtconnectivity:x86_64_v2 = " \
  bluez-libs \
  glibc \
  libstdc++ \
  qt6-qtbase \
- "
+"
+RDEPENDS:qt6-qtconnectivity:aarch64 = " \
+ bluez-libs \
+ glibc \
+ libstdc++ \
+ qt6-qtbase \
+"
+RDEPENDS:qt6-qtconnectivity:riscv64 = " \
+ bluez-libs \
+ glibc \
+ libgcc \
+ libstdc++ \
+ qt6-qtbase \
+"
 RDEPENDS:qt6-qtconnectivity-devel = " \
  cmake-filesystem \
  pkgconf-pkg-config \

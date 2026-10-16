@@ -16,8 +16,7 @@ PACKAGES = " \
  ruby-hivex \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/hivex-1.3.24-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/hivex-1.3.24-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "97f7329361dffef3cb36b9a1218edbcaf3528126ee02d6e74fd8e8e425d0ee10"
 
 ## Requires (x86_64_v2) that were seen as not satisfiable in original repo:
@@ -50,69 +49,92 @@ SRC_URI[src.sha256sum] = "97f7329361dffef3cb36b9a1218edbcaf3528126ee02d6e74fd8e8
 # - ocaml-hivex: ocaml(Stdlib__Complex) = 052959c6d02e4e692e7944dd137c4095
 # - ocaml-hivex: ocaml(Unix) = 59e61ff7441dfacaa24d4eed6d45eeda
 
-URI_x86_64_v2_hivex = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/hivex-1.3.24-2.el10.x86_64_v2.rpm;name=x86_64_v2_hivex;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_hivex}"
+## Requires (riscv64) that were seen as not satisfiable in original repo:
+# - ocaml-hivex-devel: ocaml(CamlinternalFormatBasics) = 2ef2d91ced81f6c72f852bab8ab406e0
+# - ocaml-hivex-devel: ocaml(Stdlib) = e8d9af458547c45080a71b9a6eaed658
+# - ocaml-hivex-devel: ocaml(Stdlib__Bigarray) = 8317b42277334e4ae5794d3cbabcaf4f
+# - ocaml-hivex-devel: ocaml(Stdlib__Callback) = b855f824a6cb0f4b58dc69a6e79a49a1
+# - ocaml-hivex-devel: ocaml(Stdlib__Complex) = 052959c6d02e4e692e7944dd137c4095
+# - ocaml-hivex-devel: ocaml(Unix) = 59e61ff7441dfacaa24d4eed6d45eeda
+# - ocaml-hivex-devel: ocamlx(Stdlib__Callback) = bafc96ea60f2aa399fe753ac0e40f764
+# - ocaml-hivex: ocaml(CamlinternalFormatBasics) = 2ef2d91ced81f6c72f852bab8ab406e0
+# - ocaml-hivex: ocaml(Stdlib) = e8d9af458547c45080a71b9a6eaed658
+# - ocaml-hivex: ocaml(Stdlib__Bigarray) = 8317b42277334e4ae5794d3cbabcaf4f
+# - ocaml-hivex: ocaml(Stdlib__Callback) = b855f824a6cb0f4b58dc69a6e79a49a1
+# - ocaml-hivex: ocaml(Stdlib__Complex) = 052959c6d02e4e692e7944dd137c4095
+# - ocaml-hivex: ocaml(Unix) = 59e61ff7441dfacaa24d4eed6d45eeda
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/hivex-1.3.24-2.el10.x86_64_v2.rpm;name=x86_64_v2_hivex;unpack=0"
 SRC_URI[x86_64_v2_hivex.sha256sum] = "a54d215ad559891743d2921957ad56c12a006efc17938b0ba495c0e8fa54a75b"
 
-URI_x86_64_v2_hivex-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/hivex-devel-1.3.24-2.el10.x86_64_v2.rpm;name=x86_64_v2_hivex-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_hivex-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/hivex-devel-1.3.24-2.el10.x86_64_v2.rpm;name=x86_64_v2_hivex-devel;unpack=0"
 SRC_URI[x86_64_v2_hivex-devel.sha256sum] = "a7913bdfb15485dd6775d661def54443f2477375d9672158ceba35d2f06ba363"
 
-URI_x86_64_v2_hivex-libs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/hivex-libs-1.3.24-2.el10.x86_64_v2.rpm;name=x86_64_v2_hivex-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_hivex-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/hivex-libs-1.3.24-2.el10.x86_64_v2.rpm;name=x86_64_v2_hivex-libs;unpack=0"
 SRC_URI[x86_64_v2_hivex-libs.sha256sum] = "9f526ab56f7e583ba0cf0e6b614e770fa2a82ed4581a75b7fa49ea2fc212fdf9"
 
-URI_x86_64_v2_ocaml-hivex = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/ocaml-hivex-1.3.24-2.el10.x86_64_v2.rpm;name=x86_64_v2_ocaml-hivex;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ocaml-hivex}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/ocaml-hivex-1.3.24-2.el10.x86_64_v2.rpm;name=x86_64_v2_ocaml-hivex;unpack=0"
 SRC_URI[x86_64_v2_ocaml-hivex.sha256sum] = "125fdd9f1488befa69fd2bbba778f8d321700ccdae4ed44e2b0dd8e3a243d281"
 
-URI_x86_64_v2_ocaml-hivex-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/ocaml-hivex-devel-1.3.24-2.el10.x86_64_v2.rpm;name=x86_64_v2_ocaml-hivex-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ocaml-hivex-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/ocaml-hivex-devel-1.3.24-2.el10.x86_64_v2.rpm;name=x86_64_v2_ocaml-hivex-devel;unpack=0"
 SRC_URI[x86_64_v2_ocaml-hivex-devel.sha256sum] = "b105b53995dd2fcc924f122a34c11f35a833dd15ac3bad1e388e9a09ab3cd0ed"
 
-URI_x86_64_v2_perl-hivex = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-hivex-1.3.24-2.el10.x86_64_v2.rpm;name=x86_64_v2_perl-hivex;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-hivex}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-hivex-1.3.24-2.el10.x86_64_v2.rpm;name=x86_64_v2_perl-hivex;unpack=0"
 SRC_URI[x86_64_v2_perl-hivex.sha256sum] = "25666383ef65e0c9ec1b7255ab0431bdf2284801b4f126a076cf098139f02d69"
 
-URI_x86_64_v2_python3-hivex = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3-hivex-1.3.24-2.el10.x86_64_v2.rpm;name=x86_64_v2_python3-hivex;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-hivex}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3-hivex-1.3.24-2.el10.x86_64_v2.rpm;name=x86_64_v2_python3-hivex;unpack=0"
 SRC_URI[x86_64_v2_python3-hivex.sha256sum] = "356d98352a5bb249429c20430be639c15cb0f03358524bd3e05be1cab68b563b"
 
-URI_x86_64_v2_ruby-hivex = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/ruby-hivex-1.3.24-2.el10.x86_64_v2.rpm;name=x86_64_v2_ruby-hivex;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ruby-hivex}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/ruby-hivex-1.3.24-2.el10.x86_64_v2.rpm;name=x86_64_v2_ruby-hivex;unpack=0"
 SRC_URI[x86_64_v2_ruby-hivex.sha256sum] = "0c4aa8879ae79b832d8b14ffacf19674faf19d3bcb2b7e2065c93dc5992f773f"
 
-URI_aarch64_hivex = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/hivex-1.3.24-2.el10.aarch64.rpm;name=aarch64_hivex;unpack=0"
-SRC_URI:append = " ${URI_aarch64_hivex}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/hivex-1.3.24-2.el10.aarch64.rpm;name=aarch64_hivex;unpack=0"
 SRC_URI[aarch64_hivex.sha256sum] = "a5100af068a9654418c61df8e92dae9e8298c080baaabe5652892241b855b341"
 
-URI_aarch64_hivex-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/hivex-devel-1.3.24-2.el10.aarch64.rpm;name=aarch64_hivex-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_hivex-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/hivex-devel-1.3.24-2.el10.aarch64.rpm;name=aarch64_hivex-devel;unpack=0"
 SRC_URI[aarch64_hivex-devel.sha256sum] = "09412b38c69efcd28ee23daa9c5499e6c3c0691e033f62d4d2769fc32b8cca93"
 
-URI_aarch64_hivex-libs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/hivex-libs-1.3.24-2.el10.aarch64.rpm;name=aarch64_hivex-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_hivex-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/hivex-libs-1.3.24-2.el10.aarch64.rpm;name=aarch64_hivex-libs;unpack=0"
 SRC_URI[aarch64_hivex-libs.sha256sum] = "34650090f604bee7c8d527db6a843f238aa1202292ebde70856a7ea93dd1f943"
 
-URI_aarch64_ocaml-hivex = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/ocaml-hivex-1.3.24-2.el10.aarch64.rpm;name=aarch64_ocaml-hivex;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ocaml-hivex}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/ocaml-hivex-1.3.24-2.el10.aarch64.rpm;name=aarch64_ocaml-hivex;unpack=0"
 SRC_URI[aarch64_ocaml-hivex.sha256sum] = "28ea0ddb3d9a149621058c38247d1f8ef36d334d4b82b39f88eb19a9ff19a8ef"
 
-URI_aarch64_ocaml-hivex-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/ocaml-hivex-devel-1.3.24-2.el10.aarch64.rpm;name=aarch64_ocaml-hivex-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ocaml-hivex-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/ocaml-hivex-devel-1.3.24-2.el10.aarch64.rpm;name=aarch64_ocaml-hivex-devel;unpack=0"
 SRC_URI[aarch64_ocaml-hivex-devel.sha256sum] = "2a01652df6d955bf19070a3e322d2708f19ea831c1a72f221bafc1f5f38baa1b"
 
-URI_aarch64_perl-hivex = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-hivex-1.3.24-2.el10.aarch64.rpm;name=aarch64_perl-hivex;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-hivex}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-hivex-1.3.24-2.el10.aarch64.rpm;name=aarch64_perl-hivex;unpack=0"
 SRC_URI[aarch64_perl-hivex.sha256sum] = "5304548055636bc2483bf559c54d32d0d8455c87813b020c8d5442e44e7b68ab"
 
-URI_aarch64_python3-hivex = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3-hivex-1.3.24-2.el10.aarch64.rpm;name=aarch64_python3-hivex;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-hivex}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3-hivex-1.3.24-2.el10.aarch64.rpm;name=aarch64_python3-hivex;unpack=0"
 SRC_URI[aarch64_python3-hivex.sha256sum] = "76b3c9f69840bfc76bc26b9ecb77e78b364ed6a05bd787c88c6be7dc0c5ba743"
 
-URI_aarch64_ruby-hivex = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/ruby-hivex-1.3.24-2.el10.aarch64.rpm;name=aarch64_ruby-hivex;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ruby-hivex}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/ruby-hivex-1.3.24-2.el10.aarch64.rpm;name=aarch64_ruby-hivex;unpack=0"
 SRC_URI[aarch64_ruby-hivex.sha256sum] = "050fa46833100882c6fe22c68937847d758038bf810a7bbba1b2fc1a7d01fbd1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/hivex-1.3.24-2.el10.riscv64.rpm;name=riscv64_hivex;unpack=0"
+SRC_URI[riscv64_hivex.sha256sum] = "2f5b4d832a02fd2e1d767cdb49457957b7da9b802bf7ac465597551ccf87b4c3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/hivex-devel-1.3.24-2.el10.riscv64.rpm;name=riscv64_hivex-devel;unpack=0"
+SRC_URI[riscv64_hivex-devel.sha256sum] = "d7f8bb558172c212a224437a842473f7fc898fd05aff52703ac39df610fd86db"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/hivex-libs-1.3.24-2.el10.riscv64.rpm;name=riscv64_hivex-libs;unpack=0"
+SRC_URI[riscv64_hivex-libs.sha256sum] = "c9e75d385f5e51cdc8102ba18a6ce459000b23f41d365f5b347afef0c39ffa50"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/ocaml-hivex-1.3.24-2.el10.riscv64.rpm;name=riscv64_ocaml-hivex;unpack=0"
+SRC_URI[riscv64_ocaml-hivex.sha256sum] = "cba5774d49bb708157863329cd63a1027f74a3c04528da470fd3ec4cfd9bbfc3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/ocaml-hivex-devel-1.3.24-2.el10.riscv64.rpm;name=riscv64_ocaml-hivex-devel;unpack=0"
+SRC_URI[riscv64_ocaml-hivex-devel.sha256sum] = "4aed773d33abf9613e204eac7996fcb2eeb9ee5a67ef4fa422b2d90107df0f51"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/perl-hivex-1.3.24-2.el10.riscv64.rpm;name=riscv64_perl-hivex;unpack=0"
+SRC_URI[riscv64_perl-hivex.sha256sum] = "b36fe5a1ecdb168319473c6184813fe74c8306853f49de27f1f2940ecd1e58f6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/python3-hivex-1.3.24-2.el10.riscv64.rpm;name=riscv64_python3-hivex;unpack=0"
+SRC_URI[riscv64_python3-hivex.sha256sum] = "bc12fc7b10961c47380acdf9fb9d77fe5fc66f57e8761a20984588f6ceb4b647"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/ruby-hivex-1.3.24-2.el10.riscv64.rpm;name=riscv64_ruby-hivex;unpack=0"
+SRC_URI[riscv64_ruby-hivex.sha256sum] = "4483542cd596d7423514c9702ee2c99b3ac9ec40dceae044f2a05be3e3a22ce2"
 
 RDEPENDS:hivex = " \
  bash \

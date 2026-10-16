@@ -10,25 +10,26 @@ PACKAGES = " \
  adcli-selinux \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/adcli-0.9.3.1-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/adcli-0.9.3.1-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a7617945c57b21e94f06a7a39bfa7f39f9b9fb134ad7919b0ac7797b4fbf33b1"
 
-URI_x86_64_v2_adcli = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/adcli-0.9.3.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_adcli;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_adcli}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/adcli-0.9.3.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_adcli;unpack=0"
 SRC_URI[x86_64_v2_adcli.sha256sum] = "3996a6f638e6d6c2e447451b58727fa91ad3eeff447fe108ec1de07b316a0117"
 
-URI_x86_64_v2_adcli-selinux = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/adcli-selinux-0.9.3.1-3.el10.noarch.rpm;name=x86_64_v2_adcli-selinux;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_adcli-selinux}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/adcli-selinux-0.9.3.1-3.el10.noarch.rpm;name=x86_64_v2_adcli-selinux;unpack=0"
 SRC_URI[x86_64_v2_adcli-selinux.sha256sum] = "db70d393021fb5930f38d89fae9a1a61e17bfe69bda007c96d3861b75b4e8014"
 
-URI_aarch64_adcli = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/adcli-0.9.3.1-3.el10.aarch64.rpm;name=aarch64_adcli;unpack=0"
-SRC_URI:append = " ${URI_aarch64_adcli}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/adcli-0.9.3.1-3.el10.aarch64.rpm;name=aarch64_adcli;unpack=0"
 SRC_URI[aarch64_adcli.sha256sum] = "ee97cae0cd792a21ba9eff4d1d85f9879e4f03dce3dda6acd426b623e74d7fdc"
 
-URI_aarch64_adcli-selinux = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/adcli-selinux-0.9.3.1-3.el10.noarch.rpm;name=aarch64_adcli-selinux;unpack=0"
-SRC_URI:append = " ${URI_aarch64_adcli-selinux}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/adcli-selinux-0.9.3.1-3.el10.noarch.rpm;name=aarch64_adcli-selinux;unpack=0"
 SRC_URI[aarch64_adcli-selinux.sha256sum] = "db70d393021fb5930f38d89fae9a1a61e17bfe69bda007c96d3861b75b4e8014"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/adcli-0.9.3.1-3.el10.riscv64.rpm;name=riscv64_adcli;unpack=0"
+SRC_URI[riscv64_adcli.sha256sum] = "e0ece39159871d25e6700dd83d6c06d6fc02ad027c5b856451d9dde9e780c0ee"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/adcli-selinux-0.9.3.1-3.el10.noarch.rpm;name=riscv64_adcli-selinux;unpack=0"
+SRC_URI[riscv64_adcli-selinux.sha256sum] = "db70d393021fb5930f38d89fae9a1a61e17bfe69bda007c96d3861b75b4e8014"
 
 RDEPENDS:adcli = " \
  adcli-selinux \

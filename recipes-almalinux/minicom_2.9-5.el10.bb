@@ -9,17 +9,17 @@ PACKAGES = " \
  minicom \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/minicom-2.9-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/minicom-2.9-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "09e8848d1bfa1b910110cfaaea63aee87ff31d5871f307fc289e237696c6392e"
 
-URI_x86_64_v2_minicom = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/minicom-2.9-5.el10.x86_64_v2.rpm;name=x86_64_v2_minicom;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_minicom}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/minicom-2.9-5.el10.x86_64_v2.rpm;name=x86_64_v2_minicom;unpack=0"
 SRC_URI[x86_64_v2_minicom.sha256sum] = "9b942cabb19d1eab080c54d3a78f2f18bcd62f369ef83388c9f9662cef49bd33"
 
-URI_aarch64_minicom = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/minicom-2.9-5.el10.aarch64.rpm;name=aarch64_minicom;unpack=0"
-SRC_URI:append = " ${URI_aarch64_minicom}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/minicom-2.9-5.el10.aarch64.rpm;name=aarch64_minicom;unpack=0"
 SRC_URI[aarch64_minicom.sha256sum] = "a9dbbe504a375ce2d521f40b61f855309cbea22254b365b837727c8c794829a9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/minicom-2.9-5.el10.riscv64.rpm;name=riscv64_minicom;unpack=0"
+SRC_URI[riscv64_minicom.sha256sum] = "1974b3fd4f249f5efa4076a46ee9df6f9d588ba7dc435b06673625b87fddad04"
 
 RDEPENDS:minicom = " \
  bash \

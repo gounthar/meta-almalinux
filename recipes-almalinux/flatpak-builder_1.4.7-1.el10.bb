@@ -9,17 +9,17 @@ PACKAGES = " \
  flatpak-builder \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/flatpak-builder-1.4.7-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/flatpak-builder-1.4.7-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6c8eadff1d4809ffc2fc7c9d94c8b0b65b6c1ffb51aed24c0fceae796c676df1"
 
-URI_x86_64_v2_flatpak-builder = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/flatpak-builder-1.4.7-1.el10.x86_64_v2.rpm;name=x86_64_v2_flatpak-builder;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_flatpak-builder}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/flatpak-builder-1.4.7-1.el10.x86_64_v2.rpm;name=x86_64_v2_flatpak-builder;unpack=0"
 SRC_URI[x86_64_v2_flatpak-builder.sha256sum] = "38b2fb6fdf360752e196ad703e740f55095f43b1333a60ef19d3c3c919ba1684"
 
-URI_aarch64_flatpak-builder = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/flatpak-builder-1.4.7-1.el10.aarch64.rpm;name=aarch64_flatpak-builder;unpack=0"
-SRC_URI:append = " ${URI_aarch64_flatpak-builder}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/flatpak-builder-1.4.7-1.el10.aarch64.rpm;name=aarch64_flatpak-builder;unpack=0"
 SRC_URI[aarch64_flatpak-builder.sha256sum] = "e750b7a81fdc3698a4665f390feb28acae11338e28a87fa6411356c64becb2f5"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/flatpak-builder-1.4.7-1.el10.riscv64.rpm;name=riscv64_flatpak-builder;unpack=0"
+SRC_URI[riscv64_flatpak-builder.sha256sum] = "684800b2a3f551c1e6aea55abc2cd0102bcf8beb7d05f16a3ebe0b5b7acfa4c0"
 
 RDEPENDS:flatpak-builder = " \
  appstream-compose \

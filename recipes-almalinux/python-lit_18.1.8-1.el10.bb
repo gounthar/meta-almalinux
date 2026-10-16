@@ -8,7 +8,6 @@ PR = "1.el10"
 PACKAGES = " \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python-lit-18.1.8-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python-lit-18.1.8-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f8cede60c4026e1ffc2ccfe0f4d774059487d6e2360f5ec00f57ec313e2556af"
 

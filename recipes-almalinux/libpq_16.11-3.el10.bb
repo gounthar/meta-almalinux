@@ -10,25 +10,26 @@ PACKAGES = " \
  libpq-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libpq-16.11-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libpq-16.11-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3914e7fb06197eed599dcc85958d57a811131438750b6a1856ef452331883666"
 
-URI_x86_64_v2_libpq = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libpq-16.11-3.el10.x86_64_v2.rpm;name=x86_64_v2_libpq;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libpq}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libpq-16.11-3.el10.x86_64_v2.rpm;name=x86_64_v2_libpq;unpack=0"
 SRC_URI[x86_64_v2_libpq.sha256sum] = "1ec62b2bebf3cdfd515dbed2cb0be1b8a54dfbceb52fc6a231cf5fa2a9ddb7ee"
 
-URI_x86_64_v2_libpq-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libpq-devel-16.11-3.el10.x86_64_v2.rpm;name=x86_64_v2_libpq-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libpq-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libpq-devel-16.11-3.el10.x86_64_v2.rpm;name=x86_64_v2_libpq-devel;unpack=0"
 SRC_URI[x86_64_v2_libpq-devel.sha256sum] = "b6d87bca14cadee080affcbd720b51b4b326e1117079ea98948a3739bb89639c"
 
-URI_aarch64_libpq = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libpq-16.11-3.el10.aarch64.rpm;name=aarch64_libpq;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libpq}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libpq-16.11-3.el10.aarch64.rpm;name=aarch64_libpq;unpack=0"
 SRC_URI[aarch64_libpq.sha256sum] = "a4c0ce093157a49842458c8415bbd8b96efba90a39d9dae3697f8ecb3cf15d68"
 
-URI_aarch64_libpq-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libpq-devel-16.11-3.el10.aarch64.rpm;name=aarch64_libpq-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libpq-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libpq-devel-16.11-3.el10.aarch64.rpm;name=aarch64_libpq-devel;unpack=0"
 SRC_URI[aarch64_libpq-devel.sha256sum] = "1e2d85821d14d47e244b7808a548547272049baf5513b03d9a4aca265ae731a3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libpq-16.11-3.el10.riscv64.rpm;name=riscv64_libpq;unpack=0"
+SRC_URI[riscv64_libpq.sha256sum] = "a52831d1e9b7f470358892321ce07bb9349e0ca2a1cb2685d995fe1ba10e72da"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libpq-devel-16.11-3.el10.riscv64.rpm;name=riscv64_libpq-devel;unpack=0"
+SRC_URI[riscv64_libpq-devel.sha256sum] = "8b73de988514cfb8830b7814bcedc21dbdabb7f938e7d8380462453add5d9c3d"
 
 RDEPENDS:libpq = " \
  glibc \

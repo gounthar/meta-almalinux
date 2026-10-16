@@ -9,17 +9,17 @@ PACKAGES = " \
  pam_wrapper \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/pam_wrapper-1.1.4-14.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/pam_wrapper-1.1.4-14.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "22ad0ead45bd66ffb1d4f8cd6e8ce1df42a517f72f0b1af7a005ef6adf745908"
 
-URI_x86_64_v2_pam_wrapper = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/pam_wrapper-1.1.4-14.el10.x86_64_v2.rpm;name=x86_64_v2_pam_wrapper;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pam_wrapper}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/pam_wrapper-1.1.4-14.el10.x86_64_v2.rpm;name=x86_64_v2_pam_wrapper;unpack=0"
 SRC_URI[x86_64_v2_pam_wrapper.sha256sum] = "7a7c06670972e4581336049b7e8958f94e13f0d805f374886f5c00d4010cff6c"
 
-URI_aarch64_pam_wrapper = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/pam_wrapper-1.1.4-14.el10.aarch64.rpm;name=aarch64_pam_wrapper;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pam_wrapper}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/pam_wrapper-1.1.4-14.el10.aarch64.rpm;name=aarch64_pam_wrapper;unpack=0"
 SRC_URI[aarch64_pam_wrapper.sha256sum] = "87d8175ce51acc242168180bdca9060bfb0d715b4a9dd1fcf623936b8a04997c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/pam_wrapper-1.1.4-14.el10.riscv64.rpm;name=riscv64_pam_wrapper;unpack=0"
+SRC_URI[riscv64_pam_wrapper.sha256sum] = "d895e1d4295f5724f905a9af93e949effedc4e240523f4afacf9339310c15373"
 
 RDEPENDS:pam_wrapper = " \
  cmake-filesystem \

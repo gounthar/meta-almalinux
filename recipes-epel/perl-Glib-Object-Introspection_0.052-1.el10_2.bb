@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "perl-Glib-Object-Introspection"
 PV = "0.052"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-Glib-Object-Introspection \
  perl-Glib-Object-Introspection-tests \
  perli11ndoc \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-Glib-Object-Introspection \
+ perl-Glib-Object-Introspection-tests \
+ perli11ndoc \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-Glib-Object-Introspection-0.052-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-Glib-Object-Introspection-0.052-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "614a14c8994eedadd9fe3dceb84f378e58f364a06d76aae57514473e3836c680"
 
-URI_x86_64_v2_perl-Glib-Object-Introspection = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Glib-Object-Introspection-0.052-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_perl-Glib-Object-Introspection;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Glib-Object-Introspection}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Glib-Object-Introspection-0.052-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_perl-Glib-Object-Introspection;unpack=0"
 SRC_URI[x86_64_v2_perl-Glib-Object-Introspection.sha256sum] = "42ff56dd608c95f161598f141dc85e23cbb3281b8ed760db3cd94421184e449c"
 
-URI_x86_64_v2_perl-Glib-Object-Introspection-tests = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Glib-Object-Introspection-tests-0.052-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_perl-Glib-Object-Introspection-tests;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Glib-Object-Introspection-tests}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Glib-Object-Introspection-tests-0.052-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_perl-Glib-Object-Introspection-tests;unpack=0"
 SRC_URI[x86_64_v2_perl-Glib-Object-Introspection-tests.sha256sum] = "69c9a323de7d8db111c1f14cbf17fce5e0552fa66ad689264dd19405674373a3"
 
-URI_x86_64_v2_perli11ndoc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perli11ndoc-0.052-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_perli11ndoc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perli11ndoc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perli11ndoc-0.052-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_perli11ndoc;unpack=0"
 SRC_URI[x86_64_v2_perli11ndoc.sha256sum] = "a3ba99ff96302f2aa98433d0877b82fe9e9836fc875d535a3f6d15d88395905c"
 
-URI_aarch64_perl-Glib-Object-Introspection = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Glib-Object-Introspection-0.052-1.el10_2.aarch64.rpm;name=aarch64_perl-Glib-Object-Introspection;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Glib-Object-Introspection}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Glib-Object-Introspection-0.052-1.el10_2.aarch64.rpm;name=aarch64_perl-Glib-Object-Introspection;unpack=0"
 SRC_URI[aarch64_perl-Glib-Object-Introspection.sha256sum] = "88df78e0d117ef148700de876b1738865eed5b696d71e2064b15db78c068dc2f"
 
-URI_aarch64_perl-Glib-Object-Introspection-tests = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Glib-Object-Introspection-tests-0.052-1.el10_2.aarch64.rpm;name=aarch64_perl-Glib-Object-Introspection-tests;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Glib-Object-Introspection-tests}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Glib-Object-Introspection-tests-0.052-1.el10_2.aarch64.rpm;name=aarch64_perl-Glib-Object-Introspection-tests;unpack=0"
 SRC_URI[aarch64_perl-Glib-Object-Introspection-tests.sha256sum] = "6f7c763978da411a4b8a2382bdc2712dd5e408f0438d2da7bb6d550c766e2835"
 
-URI_aarch64_perli11ndoc = "${EPEL_MIRROR}/aarch64/Packages/p/perli11ndoc-0.052-1.el10_2.noarch.rpm;name=aarch64_perli11ndoc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perli11ndoc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perli11ndoc-0.052-1.el10_2.noarch.rpm;name=aarch64_perli11ndoc;unpack=0"
 SRC_URI[aarch64_perli11ndoc.sha256sum] = "885076491ae87ae7722410e452a1f1b2f3b16b002a2330828f66ff802e34e774"
 
 RDEPENDS:perl-Glib-Object-Introspection = " \

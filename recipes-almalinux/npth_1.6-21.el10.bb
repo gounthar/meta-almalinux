@@ -10,25 +10,26 @@ PACKAGES = " \
  npth-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/npth-1.6-21.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/npth-1.6-21.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "0585711a20e4f84f24b4574d31316101311411350c1e69be8908f7d4806fc220"
 
-URI_x86_64_v2_npth = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/npth-1.6-21.el10.x86_64_v2.rpm;name=x86_64_v2_npth;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_npth}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/npth-1.6-21.el10.x86_64_v2.rpm;name=x86_64_v2_npth;unpack=0"
 SRC_URI[x86_64_v2_npth.sha256sum] = "a21d4861f783e1241ba12e43492720beb4d794927909d5a23eac771e205692cb"
 
-URI_x86_64_v2_npth-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/npth-devel-1.6-21.el10.x86_64_v2.rpm;name=x86_64_v2_npth-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_npth-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/npth-devel-1.6-21.el10.x86_64_v2.rpm;name=x86_64_v2_npth-devel;unpack=0"
 SRC_URI[x86_64_v2_npth-devel.sha256sum] = "d17ab70efdc8aee417acf66d38cd2107e46d5b684e47384dba088ff91c6ec6be"
 
-URI_aarch64_npth = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/npth-1.6-21.el10.aarch64.rpm;name=aarch64_npth;unpack=0"
-SRC_URI:append = " ${URI_aarch64_npth}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/npth-1.6-21.el10.aarch64.rpm;name=aarch64_npth;unpack=0"
 SRC_URI[aarch64_npth.sha256sum] = "4604fcaddb5b141a70d87575f51ebbb4cfe992be5fd31c6b086888a97b627e95"
 
-URI_aarch64_npth-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/npth-devel-1.6-21.el10.aarch64.rpm;name=aarch64_npth-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_npth-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/npth-devel-1.6-21.el10.aarch64.rpm;name=aarch64_npth-devel;unpack=0"
 SRC_URI[aarch64_npth-devel.sha256sum] = "69c278a9af0f4867591acf04cbab01c21f243442ebca959ce6e6cd1935b3a2c5"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/npth-1.6-21.el10.riscv64.rpm;name=riscv64_npth;unpack=0"
+SRC_URI[riscv64_npth.sha256sum] = "bcfe5b320f86b72948ce66496140142b78749b5c1b50e96f0abddbe9addee021"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/npth-devel-1.6-21.el10.riscv64.rpm;name=riscv64_npth-devel;unpack=0"
+SRC_URI[riscv64_npth-devel.sha256sum] = "1dac470abf9f291e249cc8292327241f43cd4767111236fc982fea4a71757423"
 
 RDEPENDS:npth = " \
  glibc \

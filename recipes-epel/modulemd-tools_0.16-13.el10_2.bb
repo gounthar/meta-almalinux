@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "modulemd-tools"
 PV = "0.16"
 PR = "13.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  modulemd-tools \
- "
+"
+PACKAGES:aarch64 = " \
+ modulemd-tools \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/m/modulemd-tools-0.16-13.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/m/modulemd-tools-0.16-13.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "65c97ee0461aa7c301094bcb48147d3326852e3056dd640b05022d50acda25e0"
 
-URI_x86_64_v2_modulemd-tools = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/modulemd-tools-0.16-13.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_modulemd-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_modulemd-tools}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/modulemd-tools-0.16-13.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_modulemd-tools;unpack=0"
 SRC_URI[x86_64_v2_modulemd-tools.sha256sum] = "e827ca80a059f90e743d42848ae849323c8006aa67feece6c62bfcec11290575"
 
-URI_aarch64_modulemd-tools = "${EPEL_MIRROR}/aarch64/Packages/m/modulemd-tools-0.16-13.el10_2.noarch.rpm;name=aarch64_modulemd-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_modulemd-tools}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/m/modulemd-tools-0.16-13.el10_2.noarch.rpm;name=aarch64_modulemd-tools;unpack=0"
 SRC_URI[aarch64_modulemd-tools.sha256sum] = "80ef52852564dc1ad7def37d6fc3dc725e73d214c074b9cd5ca957b8c1aa4991"
 
 RDEPENDS:modulemd-tools = " \

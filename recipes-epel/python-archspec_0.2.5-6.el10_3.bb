@@ -11,13 +11,14 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-archspec-0.2.5-6.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-archspec-0.2.5-6.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "bfa8ff4024bef5a4039c90732bec0d9160eaa645fd7b4330806793e948f62710"
 
-URI_x86_64_v2_python3-archspec = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-archspec-0.2.5-6.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-archspec;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-archspec}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-archspec-0.2.5-6.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-archspec;unpack=0"
 SRC_URI[x86_64_v2_python3-archspec.sha256sum] = "01d840cb49b5deb6594ccc84058e6fb64f15a953dea3eabe94d61ee8f6c5ca12"
 
 RDEPENDS:python3-archspec = " \

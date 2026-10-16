@@ -10,25 +10,26 @@ PACKAGES = " \
  giflib-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/giflib-5.2.1-25.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/giflib-5.2.1-25.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e3da84bcb4e95f105cecd37a80eed093e6363d9b40f6c8043e7c15f116721607"
 
-URI_x86_64_v2_giflib = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/giflib-5.2.1-25.el10.x86_64_v2.rpm;name=x86_64_v2_giflib;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_giflib}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/giflib-5.2.1-25.el10.x86_64_v2.rpm;name=x86_64_v2_giflib;unpack=0"
 SRC_URI[x86_64_v2_giflib.sha256sum] = "cf05c919948d7ecf3e26e389b61ee0b78c92e132a2ba8152815ca89b7a07d406"
 
-URI_x86_64_v2_giflib-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/giflib-devel-5.2.1-25.el10.x86_64_v2.rpm;name=x86_64_v2_giflib-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_giflib-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/giflib-devel-5.2.1-25.el10.x86_64_v2.rpm;name=x86_64_v2_giflib-devel;unpack=0"
 SRC_URI[x86_64_v2_giflib-devel.sha256sum] = "dacfbaace79710c15e076493549b57086a0c36b31bea2daeb70fa65c1fb60565"
 
-URI_aarch64_giflib = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/giflib-5.2.1-25.el10.aarch64.rpm;name=aarch64_giflib;unpack=0"
-SRC_URI:append = " ${URI_aarch64_giflib}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/giflib-5.2.1-25.el10.aarch64.rpm;name=aarch64_giflib;unpack=0"
 SRC_URI[aarch64_giflib.sha256sum] = "00f19a9e55f04e7295422edb13fbb41b0e9417cbae759024123c0980e27c2f41"
 
-URI_aarch64_giflib-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/giflib-devel-5.2.1-25.el10.aarch64.rpm;name=aarch64_giflib-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_giflib-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/giflib-devel-5.2.1-25.el10.aarch64.rpm;name=aarch64_giflib-devel;unpack=0"
 SRC_URI[aarch64_giflib-devel.sha256sum] = "ad1efb473df92b508249e8c57569979d947193b8cd4d509b54227e7312238f3b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/giflib-5.2.1-25.el10.riscv64.rpm;name=riscv64_giflib;unpack=0"
+SRC_URI[riscv64_giflib.sha256sum] = "adf52e00353e6405af045e3eb69529efd76f9cfe78ff59d9a7647fed45dfabbd"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/giflib-devel-5.2.1-25.el10.riscv64.rpm;name=riscv64_giflib-devel;unpack=0"
+SRC_URI[riscv64_giflib-devel.sha256sum] = "7c0fea902536076f64d7a80e3722eb9e1aa0508cd84f4118d05f4521b6730714"
 
 RDEPENDS:giflib = " \
  glibc \

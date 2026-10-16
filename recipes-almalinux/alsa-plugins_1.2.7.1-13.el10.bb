@@ -17,81 +17,89 @@ PACKAGES = " \
  alsa-plugins-vdownmix \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/alsa-plugins-1.2.7.1-13.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/alsa-plugins-1.2.7.1-13.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c13cec17a9b73a516fba3cb23986437ebec03df6e41d63ba16bc1263694cd382"
 
-URI_x86_64_v2_alsa-plugins-arcamav = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/alsa-plugins-arcamav-1.2.7.1-13.el10.x86_64_v2.rpm;name=x86_64_v2_alsa-plugins-arcamav;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_alsa-plugins-arcamav}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/alsa-plugins-arcamav-1.2.7.1-13.el10.x86_64_v2.rpm;name=x86_64_v2_alsa-plugins-arcamav;unpack=0"
 SRC_URI[x86_64_v2_alsa-plugins-arcamav.sha256sum] = "098efdfdc3de0856587e4c136856edb3cea0e736b79f46b976213042f3333796"
 
-URI_x86_64_v2_alsa-plugins-maemo = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/alsa-plugins-maemo-1.2.7.1-13.el10.x86_64_v2.rpm;name=x86_64_v2_alsa-plugins-maemo;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_alsa-plugins-maemo}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/alsa-plugins-maemo-1.2.7.1-13.el10.x86_64_v2.rpm;name=x86_64_v2_alsa-plugins-maemo;unpack=0"
 SRC_URI[x86_64_v2_alsa-plugins-maemo.sha256sum] = "71f4477031c2d387269e01025e94912e3679a25388491bb53b90e4809232bfd2"
 
-URI_x86_64_v2_alsa-plugins-oss = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/alsa-plugins-oss-1.2.7.1-13.el10.x86_64_v2.rpm;name=x86_64_v2_alsa-plugins-oss;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_alsa-plugins-oss}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/alsa-plugins-oss-1.2.7.1-13.el10.x86_64_v2.rpm;name=x86_64_v2_alsa-plugins-oss;unpack=0"
 SRC_URI[x86_64_v2_alsa-plugins-oss.sha256sum] = "47e26a8cf844c516f4f601e914f187aad2bb6aa3d8b67b4388d643bbe56873f3"
 
-URI_x86_64_v2_alsa-plugins-pulseaudio = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/alsa-plugins-pulseaudio-1.2.7.1-13.el10.x86_64_v2.rpm;name=x86_64_v2_alsa-plugins-pulseaudio;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_alsa-plugins-pulseaudio}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/alsa-plugins-pulseaudio-1.2.7.1-13.el10.x86_64_v2.rpm;name=x86_64_v2_alsa-plugins-pulseaudio;unpack=0"
 SRC_URI[x86_64_v2_alsa-plugins-pulseaudio.sha256sum] = "be847607f3d816a62e72d57f3da6ecc2afd75c0c06edff413f9994ef12953145"
 
-URI_x86_64_v2_alsa-plugins-samplerate = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/alsa-plugins-samplerate-1.2.7.1-13.el10.x86_64_v2.rpm;name=x86_64_v2_alsa-plugins-samplerate;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_alsa-plugins-samplerate}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/alsa-plugins-samplerate-1.2.7.1-13.el10.x86_64_v2.rpm;name=x86_64_v2_alsa-plugins-samplerate;unpack=0"
 SRC_URI[x86_64_v2_alsa-plugins-samplerate.sha256sum] = "20e559078112c73dffa4a6a1436cd64eb42d3804f0b6729275c5ba9694b07a0a"
 
-URI_x86_64_v2_alsa-plugins-speex = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/alsa-plugins-speex-1.2.7.1-13.el10.x86_64_v2.rpm;name=x86_64_v2_alsa-plugins-speex;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_alsa-plugins-speex}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/alsa-plugins-speex-1.2.7.1-13.el10.x86_64_v2.rpm;name=x86_64_v2_alsa-plugins-speex;unpack=0"
 SRC_URI[x86_64_v2_alsa-plugins-speex.sha256sum] = "4a91a8395f5e926ab9be0074774c54d6279c5706902ca56d0765945df0e2f501"
 
-URI_x86_64_v2_alsa-plugins-upmix = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/alsa-plugins-upmix-1.2.7.1-13.el10.x86_64_v2.rpm;name=x86_64_v2_alsa-plugins-upmix;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_alsa-plugins-upmix}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/alsa-plugins-upmix-1.2.7.1-13.el10.x86_64_v2.rpm;name=x86_64_v2_alsa-plugins-upmix;unpack=0"
 SRC_URI[x86_64_v2_alsa-plugins-upmix.sha256sum] = "68a1dcf1e1d0b463f2ec9b89e1109d8bc16ebd7009e8b46e1db6987983402ded"
 
-URI_x86_64_v2_alsa-plugins-usbstream = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/alsa-plugins-usbstream-1.2.7.1-13.el10.x86_64_v2.rpm;name=x86_64_v2_alsa-plugins-usbstream;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_alsa-plugins-usbstream}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/alsa-plugins-usbstream-1.2.7.1-13.el10.x86_64_v2.rpm;name=x86_64_v2_alsa-plugins-usbstream;unpack=0"
 SRC_URI[x86_64_v2_alsa-plugins-usbstream.sha256sum] = "c1ac8e4e08f0691eb4acae8b4be1c362d26913b25f3a825274d3d5be0c8dbe41"
 
-URI_x86_64_v2_alsa-plugins-vdownmix = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/alsa-plugins-vdownmix-1.2.7.1-13.el10.x86_64_v2.rpm;name=x86_64_v2_alsa-plugins-vdownmix;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_alsa-plugins-vdownmix}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/alsa-plugins-vdownmix-1.2.7.1-13.el10.x86_64_v2.rpm;name=x86_64_v2_alsa-plugins-vdownmix;unpack=0"
 SRC_URI[x86_64_v2_alsa-plugins-vdownmix.sha256sum] = "eee424fb0d8d9e67a560b24a15c1bcf67f505f2cfb7a65b1863778a19e36a94d"
 
-URI_aarch64_alsa-plugins-arcamav = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/alsa-plugins-arcamav-1.2.7.1-13.el10.aarch64.rpm;name=aarch64_alsa-plugins-arcamav;unpack=0"
-SRC_URI:append = " ${URI_aarch64_alsa-plugins-arcamav}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/alsa-plugins-arcamav-1.2.7.1-13.el10.aarch64.rpm;name=aarch64_alsa-plugins-arcamav;unpack=0"
 SRC_URI[aarch64_alsa-plugins-arcamav.sha256sum] = "31c541b61f6945062740cafdedd02fefe57bf6a5b837ef9ac0b6619f203ccf60"
 
-URI_aarch64_alsa-plugins-maemo = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/alsa-plugins-maemo-1.2.7.1-13.el10.aarch64.rpm;name=aarch64_alsa-plugins-maemo;unpack=0"
-SRC_URI:append = " ${URI_aarch64_alsa-plugins-maemo}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/alsa-plugins-maemo-1.2.7.1-13.el10.aarch64.rpm;name=aarch64_alsa-plugins-maemo;unpack=0"
 SRC_URI[aarch64_alsa-plugins-maemo.sha256sum] = "426249663f3a27b68b36cb41efffc49d27edc7baf46736d7a22e6e90d396b3d4"
 
-URI_aarch64_alsa-plugins-oss = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/alsa-plugins-oss-1.2.7.1-13.el10.aarch64.rpm;name=aarch64_alsa-plugins-oss;unpack=0"
-SRC_URI:append = " ${URI_aarch64_alsa-plugins-oss}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/alsa-plugins-oss-1.2.7.1-13.el10.aarch64.rpm;name=aarch64_alsa-plugins-oss;unpack=0"
 SRC_URI[aarch64_alsa-plugins-oss.sha256sum] = "065de9d9f9fab3bee26770c492afe63fa3634ff237352dd0e6139535d09a17ba"
 
-URI_aarch64_alsa-plugins-pulseaudio = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/alsa-plugins-pulseaudio-1.2.7.1-13.el10.aarch64.rpm;name=aarch64_alsa-plugins-pulseaudio;unpack=0"
-SRC_URI:append = " ${URI_aarch64_alsa-plugins-pulseaudio}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/alsa-plugins-pulseaudio-1.2.7.1-13.el10.aarch64.rpm;name=aarch64_alsa-plugins-pulseaudio;unpack=0"
 SRC_URI[aarch64_alsa-plugins-pulseaudio.sha256sum] = "c72fb238fc67e227151f9102171d6a081faafe526cef9d03078fefb0806de06a"
 
-URI_aarch64_alsa-plugins-samplerate = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/alsa-plugins-samplerate-1.2.7.1-13.el10.aarch64.rpm;name=aarch64_alsa-plugins-samplerate;unpack=0"
-SRC_URI:append = " ${URI_aarch64_alsa-plugins-samplerate}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/alsa-plugins-samplerate-1.2.7.1-13.el10.aarch64.rpm;name=aarch64_alsa-plugins-samplerate;unpack=0"
 SRC_URI[aarch64_alsa-plugins-samplerate.sha256sum] = "6ddf6d34f4c7b1e1a474f75230988a8cee0775e4468bc5779a6e642ad8ff85e1"
 
-URI_aarch64_alsa-plugins-speex = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/alsa-plugins-speex-1.2.7.1-13.el10.aarch64.rpm;name=aarch64_alsa-plugins-speex;unpack=0"
-SRC_URI:append = " ${URI_aarch64_alsa-plugins-speex}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/alsa-plugins-speex-1.2.7.1-13.el10.aarch64.rpm;name=aarch64_alsa-plugins-speex;unpack=0"
 SRC_URI[aarch64_alsa-plugins-speex.sha256sum] = "3b7e32312c17fc67c1e72a9273922c4db5c466e81f519135884a3c1f9a4ea24e"
 
-URI_aarch64_alsa-plugins-upmix = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/alsa-plugins-upmix-1.2.7.1-13.el10.aarch64.rpm;name=aarch64_alsa-plugins-upmix;unpack=0"
-SRC_URI:append = " ${URI_aarch64_alsa-plugins-upmix}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/alsa-plugins-upmix-1.2.7.1-13.el10.aarch64.rpm;name=aarch64_alsa-plugins-upmix;unpack=0"
 SRC_URI[aarch64_alsa-plugins-upmix.sha256sum] = "9119a934c55a9e4cca4fe74c575bef84f14da224b9cc68c78ce18dc42fdae85a"
 
-URI_aarch64_alsa-plugins-usbstream = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/alsa-plugins-usbstream-1.2.7.1-13.el10.aarch64.rpm;name=aarch64_alsa-plugins-usbstream;unpack=0"
-SRC_URI:append = " ${URI_aarch64_alsa-plugins-usbstream}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/alsa-plugins-usbstream-1.2.7.1-13.el10.aarch64.rpm;name=aarch64_alsa-plugins-usbstream;unpack=0"
 SRC_URI[aarch64_alsa-plugins-usbstream.sha256sum] = "da6e0bc0abd6e63567c654e8556fbef5c8270127fef0027dea5579d385bafc55"
 
-URI_aarch64_alsa-plugins-vdownmix = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/alsa-plugins-vdownmix-1.2.7.1-13.el10.aarch64.rpm;name=aarch64_alsa-plugins-vdownmix;unpack=0"
-SRC_URI:append = " ${URI_aarch64_alsa-plugins-vdownmix}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/alsa-plugins-vdownmix-1.2.7.1-13.el10.aarch64.rpm;name=aarch64_alsa-plugins-vdownmix;unpack=0"
 SRC_URI[aarch64_alsa-plugins-vdownmix.sha256sum] = "d641a96f166f1601c1f4598ed884b6e4706ff1fb993a9543677efdc8fd728fb1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/alsa-plugins-arcamav-1.2.7.1-13.el10.riscv64.rpm;name=riscv64_alsa-plugins-arcamav;unpack=0"
+SRC_URI[riscv64_alsa-plugins-arcamav.sha256sum] = "1a4d1796184d4b762fa4d9bd72bcd29aab3059ddf1a4d884e9157fb9596357e6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/alsa-plugins-maemo-1.2.7.1-13.el10.riscv64.rpm;name=riscv64_alsa-plugins-maemo;unpack=0"
+SRC_URI[riscv64_alsa-plugins-maemo.sha256sum] = "cea14fecaae3ef4e0a9a0fedf56bb01ce652290bde5f96d1988235c2f2cf59ae"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/alsa-plugins-oss-1.2.7.1-13.el10.riscv64.rpm;name=riscv64_alsa-plugins-oss;unpack=0"
+SRC_URI[riscv64_alsa-plugins-oss.sha256sum] = "ace10dd1ff4d05a7f76bc6fd1d8db02594be4a1e88b0da960202a220385ba0a8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/alsa-plugins-pulseaudio-1.2.7.1-13.el10.riscv64.rpm;name=riscv64_alsa-plugins-pulseaudio;unpack=0"
+SRC_URI[riscv64_alsa-plugins-pulseaudio.sha256sum] = "991568504f2bcd518594c401cdbc6a18709ace058fca2ac1cb9e8d1bd1589238"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/alsa-plugins-samplerate-1.2.7.1-13.el10.riscv64.rpm;name=riscv64_alsa-plugins-samplerate;unpack=0"
+SRC_URI[riscv64_alsa-plugins-samplerate.sha256sum] = "05f1d9135fb03b9ef5e8335967c36c95e05050e72c83c100e03b3c36b83c9294"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/alsa-plugins-speex-1.2.7.1-13.el10.riscv64.rpm;name=riscv64_alsa-plugins-speex;unpack=0"
+SRC_URI[riscv64_alsa-plugins-speex.sha256sum] = "23526e991b33d3729c0fe8e18bd3635020c1958223dbec5c2f2d02618668fa03"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/alsa-plugins-upmix-1.2.7.1-13.el10.riscv64.rpm;name=riscv64_alsa-plugins-upmix;unpack=0"
+SRC_URI[riscv64_alsa-plugins-upmix.sha256sum] = "b949f66490af0fc97f3c2da8261798b546d825a4f991cf0e12c489eb2aaa7e52"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/alsa-plugins-usbstream-1.2.7.1-13.el10.riscv64.rpm;name=riscv64_alsa-plugins-usbstream;unpack=0"
+SRC_URI[riscv64_alsa-plugins-usbstream.sha256sum] = "553f9eeda1b35b927c601bacde348718e5c0d072172c37361810d5288769d926"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/alsa-plugins-vdownmix-1.2.7.1-13.el10.riscv64.rpm;name=riscv64_alsa-plugins-vdownmix;unpack=0"
+SRC_URI[riscv64_alsa-plugins-vdownmix.sha256sum] = "d66ec81c19ea593affb305476d5be4f700f6ee6b6b63324f7f845f397eb66fa6"
 
 RDEPENDS:alsa-plugins-arcamav = " \
  alsa-lib \

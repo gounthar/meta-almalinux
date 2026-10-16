@@ -10,25 +10,26 @@ PACKAGES = " \
  libwnck3-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libwnck3-43.0-10.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libwnck3-43.0-10.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "ee23a1fda484aa5956b39c11c7d035b93ed743deee969720230b26fea5847b76"
 
-URI_x86_64_v2_libwnck3 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libwnck3-43.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_libwnck3;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libwnck3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libwnck3-43.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_libwnck3;unpack=0"
 SRC_URI[x86_64_v2_libwnck3.sha256sum] = "b5c0de36ed6ab9c2f14dfded2edcfad6fd9f74e4a98f1f77efc84972e810c0db"
 
-URI_x86_64_v2_libwnck3-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libwnck3-devel-43.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_libwnck3-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libwnck3-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libwnck3-devel-43.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_libwnck3-devel;unpack=0"
 SRC_URI[x86_64_v2_libwnck3-devel.sha256sum] = "90112c4ecb33fcf117b77af57e2433b44391797285504756e0883a6ae431698f"
 
-URI_aarch64_libwnck3 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libwnck3-43.0-10.el10.aarch64.rpm;name=aarch64_libwnck3;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libwnck3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libwnck3-43.0-10.el10.aarch64.rpm;name=aarch64_libwnck3;unpack=0"
 SRC_URI[aarch64_libwnck3.sha256sum] = "18e5f69148d5a7125bdbe05b07c76f7779edbc66be5aca59427320fc739b1090"
 
-URI_aarch64_libwnck3-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libwnck3-devel-43.0-10.el10.aarch64.rpm;name=aarch64_libwnck3-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libwnck3-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libwnck3-devel-43.0-10.el10.aarch64.rpm;name=aarch64_libwnck3-devel;unpack=0"
 SRC_URI[aarch64_libwnck3-devel.sha256sum] = "0ce4e8cb5c86109c7dfbad30c9d643bc71e4dd57bf3387d0744d3e8a95b9657d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libwnck3-43.0-10.el10.riscv64.rpm;name=riscv64_libwnck3;unpack=0"
+SRC_URI[riscv64_libwnck3.sha256sum] = "718331a2382d1f171829daef0061294a3a84e08afee0a72baf651ed5ecb8262b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libwnck3-devel-43.0-10.el10.riscv64.rpm;name=riscv64_libwnck3-devel;unpack=0"
+SRC_URI[riscv64_libwnck3-devel.sha256sum] = "37266fc437202e0a358ec5e656e0d06a97be8fa52dfe0161809996f0e293bb64"
 
 RDEPENDS:libwnck3 = " \
  atk \

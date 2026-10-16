@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-libseccomp-sys"
 PV = "0.3.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-libseccomp-sys+default-devel \
  rust-libseccomp-sys-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-libseccomp-sys+default-devel \
+ rust-libseccomp-sys-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-libseccomp-sys-0.3.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-libseccomp-sys-0.3.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "2181c7c7c843bc34684cd94463d24aeea4d4130515f94ba26d88fc4b67080b12"
 
-URI_x86_64_v2_rust-libseccomp-sys+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-libseccomp-sys+default-devel-0.3.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-libseccomp-sys+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-libseccomp-sys+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-libseccomp-sys+default-devel-0.3.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-libseccomp-sys+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-libseccomp-sys+default-devel.sha256sum] = "604bc8cebe8ce125ec17581f8856149c71caa363ba1fac5c1e43608e4a5ce066"
 
-URI_x86_64_v2_rust-libseccomp-sys-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-libseccomp-sys-devel-0.3.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-libseccomp-sys-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-libseccomp-sys-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-libseccomp-sys-devel-0.3.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-libseccomp-sys-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-libseccomp-sys-devel.sha256sum] = "98d37c7326a074c33dc1b074fd7bb58769b14ef82ea25af8f9ae17514b6658a8"
 
-URI_aarch64_rust-libseccomp-sys+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-libseccomp-sys+default-devel-0.3.0-1.el10_3.noarch.rpm;name=aarch64_rust-libseccomp-sys+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-libseccomp-sys+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-libseccomp-sys+default-devel-0.3.0-1.el10_3.noarch.rpm;name=aarch64_rust-libseccomp-sys+default-devel;unpack=0"
 SRC_URI[aarch64_rust-libseccomp-sys+default-devel.sha256sum] = "20019bf686ba232deacdc0012a806cb760df60d75a61754dd20d59ac65b20c7e"
 
-URI_aarch64_rust-libseccomp-sys-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-libseccomp-sys-devel-0.3.0-1.el10_3.noarch.rpm;name=aarch64_rust-libseccomp-sys-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-libseccomp-sys-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-libseccomp-sys-devel-0.3.0-1.el10_3.noarch.rpm;name=aarch64_rust-libseccomp-sys-devel;unpack=0"
 SRC_URI[aarch64_rust-libseccomp-sys-devel.sha256sum] = "edd27cbd41ddf9084bcd567656795f429843f045135244b81ee627daf63ce561"
 
 RDEPENDS:rust-libseccomp-sys+default-devel = " \

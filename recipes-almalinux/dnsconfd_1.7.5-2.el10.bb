@@ -13,49 +13,53 @@ PACKAGES = " \
  dnsconfd-unbound \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/dnsconfd-1.7.5-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/dnsconfd-1.7.5-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a1d3147c893f5568fb437bdc7e31d4d67dd153150cd953eb392be007c6b0c91a"
 
-URI_x86_64_v2_dnsconfd = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/dnsconfd-1.7.5-2.el10.x86_64_v2.rpm;name=x86_64_v2_dnsconfd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_dnsconfd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/dnsconfd-1.7.5-2.el10.x86_64_v2.rpm;name=x86_64_v2_dnsconfd;unpack=0"
 SRC_URI[x86_64_v2_dnsconfd.sha256sum] = "43841a2ff2f802d8d61364f15fdacc1598785801cf808a8a0e4736aa761a421b"
 
-URI_x86_64_v2_dnsconfd-dracut = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/dnsconfd-dracut-1.7.5-2.el10.x86_64_v2.rpm;name=x86_64_v2_dnsconfd-dracut;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_dnsconfd-dracut}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/dnsconfd-dracut-1.7.5-2.el10.x86_64_v2.rpm;name=x86_64_v2_dnsconfd-dracut;unpack=0"
 SRC_URI[x86_64_v2_dnsconfd-dracut.sha256sum] = "c301db63b35602288fac87e29ceabf18c53db1e392099c588a9b90a4dc44b486"
 
-URI_x86_64_v2_dnsconfd-micro = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/dnsconfd-micro-1.7.5-2.el10.x86_64_v2.rpm;name=x86_64_v2_dnsconfd-micro;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_dnsconfd-micro}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/dnsconfd-micro-1.7.5-2.el10.x86_64_v2.rpm;name=x86_64_v2_dnsconfd-micro;unpack=0"
 SRC_URI[x86_64_v2_dnsconfd-micro.sha256sum] = "9939977f7953354b9163ce4a329ecff3e1d58862eb1e4b891eb246462e539041"
 
-URI_x86_64_v2_dnsconfd-selinux = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/dnsconfd-selinux-1.7.5-2.el10.noarch.rpm;name=x86_64_v2_dnsconfd-selinux;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_dnsconfd-selinux}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/dnsconfd-selinux-1.7.5-2.el10.noarch.rpm;name=x86_64_v2_dnsconfd-selinux;unpack=0"
 SRC_URI[x86_64_v2_dnsconfd-selinux.sha256sum] = "7e7b6e112ec83e6b1eeee0b41f819f0c7dae62685bcb868ff25989aa6ca1c8c1"
 
-URI_x86_64_v2_dnsconfd-unbound = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/dnsconfd-unbound-1.7.5-2.el10.noarch.rpm;name=x86_64_v2_dnsconfd-unbound;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_dnsconfd-unbound}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/dnsconfd-unbound-1.7.5-2.el10.noarch.rpm;name=x86_64_v2_dnsconfd-unbound;unpack=0"
 SRC_URI[x86_64_v2_dnsconfd-unbound.sha256sum] = "18eb67325a4a8dd130ba131994170122ddb81344b7c52550c5c6401507d0c532"
 
-URI_aarch64_dnsconfd = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/dnsconfd-1.7.5-2.el10.aarch64.rpm;name=aarch64_dnsconfd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_dnsconfd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/dnsconfd-1.7.5-2.el10.aarch64.rpm;name=aarch64_dnsconfd;unpack=0"
 SRC_URI[aarch64_dnsconfd.sha256sum] = "532bb82f868d32c7cd25ae2486a030494311a63a8a74862478e1b967b55be352"
 
-URI_aarch64_dnsconfd-dracut = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/dnsconfd-dracut-1.7.5-2.el10.aarch64.rpm;name=aarch64_dnsconfd-dracut;unpack=0"
-SRC_URI:append = " ${URI_aarch64_dnsconfd-dracut}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/dnsconfd-dracut-1.7.5-2.el10.aarch64.rpm;name=aarch64_dnsconfd-dracut;unpack=0"
 SRC_URI[aarch64_dnsconfd-dracut.sha256sum] = "c7fc0bdecbb39d55d8f7b7bcf6a96433c493c916d6fd27abc1939878472e5890"
 
-URI_aarch64_dnsconfd-micro = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/dnsconfd-micro-1.7.5-2.el10.aarch64.rpm;name=aarch64_dnsconfd-micro;unpack=0"
-SRC_URI:append = " ${URI_aarch64_dnsconfd-micro}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/dnsconfd-micro-1.7.5-2.el10.aarch64.rpm;name=aarch64_dnsconfd-micro;unpack=0"
 SRC_URI[aarch64_dnsconfd-micro.sha256sum] = "ae9121b1e38871a858546f7a0661f7dea88f638e5c489ba7153666717b67874b"
 
-URI_aarch64_dnsconfd-selinux = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/dnsconfd-selinux-1.7.5-2.el10.noarch.rpm;name=aarch64_dnsconfd-selinux;unpack=0"
-SRC_URI:append = " ${URI_aarch64_dnsconfd-selinux}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/dnsconfd-selinux-1.7.5-2.el10.noarch.rpm;name=aarch64_dnsconfd-selinux;unpack=0"
 SRC_URI[aarch64_dnsconfd-selinux.sha256sum] = "7e7b6e112ec83e6b1eeee0b41f819f0c7dae62685bcb868ff25989aa6ca1c8c1"
 
-URI_aarch64_dnsconfd-unbound = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/dnsconfd-unbound-1.7.5-2.el10.noarch.rpm;name=aarch64_dnsconfd-unbound;unpack=0"
-SRC_URI:append = " ${URI_aarch64_dnsconfd-unbound}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/dnsconfd-unbound-1.7.5-2.el10.noarch.rpm;name=aarch64_dnsconfd-unbound;unpack=0"
 SRC_URI[aarch64_dnsconfd-unbound.sha256sum] = "18eb67325a4a8dd130ba131994170122ddb81344b7c52550c5c6401507d0c532"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/dnsconfd-1.7.5-2.el10.riscv64.rpm;name=riscv64_dnsconfd;unpack=0"
+SRC_URI[riscv64_dnsconfd.sha256sum] = "9f68ee0d9126574a5ba14d840527e95bd42c23b8b470c439ae0360d4170db241"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/dnsconfd-dracut-1.7.5-2.el10.riscv64.rpm;name=riscv64_dnsconfd-dracut;unpack=0"
+SRC_URI[riscv64_dnsconfd-dracut.sha256sum] = "a85b7d9faabaa09e08eb96ae7f59a564c457f60ab4d72c9ec67e846599419d3b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/dnsconfd-micro-1.7.5-2.el10.riscv64.rpm;name=riscv64_dnsconfd-micro;unpack=0"
+SRC_URI[riscv64_dnsconfd-micro.sha256sum] = "d53308758f84b4f7e00ee17211462f0976c2c91cd34d953dfc9472708aa31c0a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/dnsconfd-selinux-1.7.5-2.el10.noarch.rpm;name=riscv64_dnsconfd-selinux;unpack=0"
+SRC_URI[riscv64_dnsconfd-selinux.sha256sum] = "7e7b6e112ec83e6b1eeee0b41f819f0c7dae62685bcb868ff25989aa6ca1c8c1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/dnsconfd-unbound-1.7.5-2.el10.noarch.rpm;name=riscv64_dnsconfd-unbound;unpack=0"
+SRC_URI[riscv64_dnsconfd-unbound.sha256sum] = "18eb67325a4a8dd130ba131994170122ddb81344b7c52550c5c6401507d0c532"
 
 RDEPENDS:dnsconfd = " \
  bash \

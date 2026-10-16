@@ -10,17 +10,17 @@ PACKAGES = " \
  dmidecode \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/dmidecode-3.6-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/dmidecode-3.6-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "94dfcc9da7f6d9b0bdcce15c6b7ae0139ad2876a887ed62804cc2f4676172aad"
 
-URI_x86_64_v2_dmidecode = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/dmidecode-3.6-5.el10.x86_64_v2.rpm;name=x86_64_v2_dmidecode;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_dmidecode}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/dmidecode-3.6-5.el10.x86_64_v2.rpm;name=x86_64_v2_dmidecode;unpack=0"
 SRC_URI[x86_64_v2_dmidecode.sha256sum] = "d723aa694ed013555af0a240ee589443fdbd2b14a4e93371106590537e794b1e"
 
-URI_aarch64_dmidecode = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/dmidecode-3.6-5.el10.aarch64.rpm;name=aarch64_dmidecode;unpack=0"
-SRC_URI:append = " ${URI_aarch64_dmidecode}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/dmidecode-3.6-5.el10.aarch64.rpm;name=aarch64_dmidecode;unpack=0"
 SRC_URI[aarch64_dmidecode.sha256sum] = "609012c6d8a388bf5445f13437d1992640588f4c73cd538d0cd77ecb07b405df"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/dmidecode-3.6-5.el10.riscv64.rpm;name=riscv64_dmidecode;unpack=0"
+SRC_URI[riscv64_dmidecode.sha256sum] = "84d74c0a1590900955840350cc51ec4f5247aa66a3e69b6f91f1e2cf7f73da94"
 
 RDEPENDS:dmidecode = " \
  glibc \

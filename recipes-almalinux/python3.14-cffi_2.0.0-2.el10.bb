@@ -9,17 +9,17 @@ PACKAGES = " \
  python3.14-cffi \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python3.14-cffi-2.0.0-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python3.14-cffi-2.0.0-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "dd7961eeb6ddfa95cfac694d431d6f06c30173da01608bd80420417086851105"
 
-URI_x86_64_v2_python3.14-cffi = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3.14-cffi-2.0.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_python3.14-cffi;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3.14-cffi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3.14-cffi-2.0.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_python3.14-cffi;unpack=0"
 SRC_URI[x86_64_v2_python3.14-cffi.sha256sum] = "3f9b09c88cc1c4084596507b64ad3c842fad40ef5ea107156e3c834eb054a90d"
 
-URI_aarch64_python3.14-cffi = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3.14-cffi-2.0.0-2.el10.aarch64.rpm;name=aarch64_python3.14-cffi;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3.14-cffi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3.14-cffi-2.0.0-2.el10.aarch64.rpm;name=aarch64_python3.14-cffi;unpack=0"
 SRC_URI[aarch64_python3.14-cffi.sha256sum] = "b607cedcdd234daa5836f1d7a28e1d4a41e57123e514a7551fd5f070e4f64791"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3.14-cffi-2.0.0-2.el10.riscv64.rpm;name=riscv64_python3.14-cffi;unpack=0"
+SRC_URI[riscv64_python3.14-cffi.sha256sum] = "9d80644638371693e9974db98c2b0eeed358fde305199300f22e079d0a7f1489"
 
 RDEPENDS:python3.14-cffi = " \
  glibc \

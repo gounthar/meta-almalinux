@@ -12,36 +12,41 @@ PACKAGES = " \
  wireshark-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/wireshark-4.4.2-10.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/wireshark-4.4.2-10.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "dcc0cddd3aefe12b3de6d0c56d335fa161576a5ce1bd877be2d50f70c505c67e"
 
 ## Requires (aarch64) that were seen as not satisfiable in original repo:
 # - wireshark-cli: libcap.so.2()(64bit)
 
-URI_x86_64_v2_wireshark = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/wireshark-4.4.2-10.el10.x86_64_v2.rpm;name=x86_64_v2_wireshark;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_wireshark}"
+## Requires (riscv64) that were seen as not satisfiable in original repo:
+# - wireshark-cli: libcap.so.2()(64bit)
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/wireshark-4.4.2-10.el10.x86_64_v2.rpm;name=x86_64_v2_wireshark;unpack=0"
 SRC_URI[x86_64_v2_wireshark.sha256sum] = "d1bb52ce64709505880fbf96d142cd4be47ed445634ad863573e570bd87bfa20"
 
-URI_x86_64_v2_wireshark-cli = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/wireshark-cli-4.4.2-10.el10.x86_64_v2.rpm;name=x86_64_v2_wireshark-cli;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_wireshark-cli}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/wireshark-cli-4.4.2-10.el10.x86_64_v2.rpm;name=x86_64_v2_wireshark-cli;unpack=0"
 SRC_URI[x86_64_v2_wireshark-cli.sha256sum] = "2921b1f1912f3e5e6ff5e36937cf18c894f66eb157ddf57bcaa508bf9ce4910c"
 
-URI_x86_64_v2_wireshark-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/wireshark-devel-4.4.2-10.el10.x86_64_v2.rpm;name=x86_64_v2_wireshark-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_wireshark-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/wireshark-devel-4.4.2-10.el10.x86_64_v2.rpm;name=x86_64_v2_wireshark-devel;unpack=0"
 SRC_URI[x86_64_v2_wireshark-devel.sha256sum] = "008d234c486ab8275472c54cca70cae0b746365d88a28187185e23c0070102d5"
 
-URI_aarch64_wireshark = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/wireshark-4.4.2-10.el10.aarch64.rpm;name=aarch64_wireshark;unpack=0"
-SRC_URI:append = " ${URI_aarch64_wireshark}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/wireshark-4.4.2-10.el10.aarch64.rpm;name=aarch64_wireshark;unpack=0"
 SRC_URI[aarch64_wireshark.sha256sum] = "3d6a23a30f0f4a026147f73bcefa9c969dd127f42492366f966711da95d98deb"
 
-URI_aarch64_wireshark-cli = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/wireshark-cli-4.4.2-10.el10.aarch64.rpm;name=aarch64_wireshark-cli;unpack=0"
-SRC_URI:append = " ${URI_aarch64_wireshark-cli}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/wireshark-cli-4.4.2-10.el10.aarch64.rpm;name=aarch64_wireshark-cli;unpack=0"
 SRC_URI[aarch64_wireshark-cli.sha256sum] = "8de4a115131c0728008c8f679b2702faa215a9d26c2e487d83c0b6b7270171ae"
 
-URI_aarch64_wireshark-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/wireshark-devel-4.4.2-10.el10.aarch64.rpm;name=aarch64_wireshark-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_wireshark-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/wireshark-devel-4.4.2-10.el10.aarch64.rpm;name=aarch64_wireshark-devel;unpack=0"
 SRC_URI[aarch64_wireshark-devel.sha256sum] = "3ab29b58b6c2cab27c5d86029865ab32143c132cdc4628da3f40be79291e4c45"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/wireshark-4.4.2-10.el10.riscv64.rpm;name=riscv64_wireshark;unpack=0"
+SRC_URI[riscv64_wireshark.sha256sum] = "44e9418f58c4fd292b98c82346e1609385bfcbadbb8b42201f63f9ef497d331b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/wireshark-cli-4.4.2-10.el10.riscv64.rpm;name=riscv64_wireshark-cli;unpack=0"
+SRC_URI[riscv64_wireshark-cli.sha256sum] = "7b5d1c3f6036777a90f681319878a2f19db9a17a10c4aefc8db89d411f802e70"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/wireshark-devel-4.4.2-10.el10.riscv64.rpm;name=riscv64_wireshark-devel;unpack=0"
+SRC_URI[riscv64_wireshark-devel.sha256sum] = "dc001b5e61d302a4181f53d5fdadd6c478c0f4002afb70d99e9223bc0733b1a4"
 
 RDEPENDS:wireshark = " \
  glib2 \
@@ -92,6 +97,28 @@ RDEPENDS:wireshark-cli:aarch64 = " \
  gnutls \
  krb5-libs \
  libgcc \
+ libgcrypt \
+ libnghttp2 \
+ libnl3 \
+ libpcap \
+ libsmi \
+ libssh \
+ libxml2 \
+ libzstd \
+ lua-libs \
+ pcre2 \
+ shadow-utils \
+ speexdsp \
+ systemd-libs \
+ zlib-ng-compat \
+"
+RDEPENDS:wireshark-cli:riscv64 = " \
+ bash \
+ c-ares \
+ glib2 \
+ glibc \
+ gnutls \
+ krb5-libs \
  libgcrypt \
  libnghttp2 \
  libnl3 \

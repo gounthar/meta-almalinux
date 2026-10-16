@@ -10,25 +10,26 @@ PACKAGES = " \
  toolbox-tests \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/toolbox-0.3-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/toolbox-0.3-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f543ab83475a379ed7b494ced1a88cda8f2b8b00a6372617b49afeb8c11b0750"
 
-URI_x86_64_v2_toolbox = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/toolbox-0.3-3.el10.x86_64_v2.rpm;name=x86_64_v2_toolbox;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_toolbox}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/toolbox-0.3-3.el10.x86_64_v2.rpm;name=x86_64_v2_toolbox;unpack=0"
 SRC_URI[x86_64_v2_toolbox.sha256sum] = "34016beefd84a9b5e85ea397a46316755ca92762f84a43c41700e2b24566ba9b"
 
-URI_x86_64_v2_toolbox-tests = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/toolbox-tests-0.3-3.el10.x86_64_v2.rpm;name=x86_64_v2_toolbox-tests;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_toolbox-tests}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/toolbox-tests-0.3-3.el10.x86_64_v2.rpm;name=x86_64_v2_toolbox-tests;unpack=0"
 SRC_URI[x86_64_v2_toolbox-tests.sha256sum] = "e70a4839c07b472de6258a88eb0697480e3328965ca9b79a6662301315bb3fb1"
 
-URI_aarch64_toolbox = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/toolbox-0.3-3.el10.aarch64.rpm;name=aarch64_toolbox;unpack=0"
-SRC_URI:append = " ${URI_aarch64_toolbox}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/toolbox-0.3-3.el10.aarch64.rpm;name=aarch64_toolbox;unpack=0"
 SRC_URI[aarch64_toolbox.sha256sum] = "b9b1436cdddfe216b9e4090eb77fada966c0378d7a100f9d02fff5a616d503f3"
 
-URI_aarch64_toolbox-tests = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/toolbox-tests-0.3-3.el10.aarch64.rpm;name=aarch64_toolbox-tests;unpack=0"
-SRC_URI:append = " ${URI_aarch64_toolbox-tests}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/toolbox-tests-0.3-3.el10.aarch64.rpm;name=aarch64_toolbox-tests;unpack=0"
 SRC_URI[aarch64_toolbox-tests.sha256sum] = "842163904690879533b6a221b2c969fe05bc6a5cba79a1f5026805bf4deac216"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/toolbox-0.3-3.el10.riscv64.rpm;name=riscv64_toolbox;unpack=0"
+SRC_URI[riscv64_toolbox.sha256sum] = "f0df8f0d7b54239322420a4867c1866bc07187b662f47a7d3ab6bdc0e3cbee80"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/toolbox-tests-0.3-3.el10.riscv64.rpm;name=riscv64_toolbox-tests;unpack=0"
+SRC_URI[riscv64_toolbox-tests.sha256sum] = "6eba7e2e1c0773cc751c67f1628a14079b8807945501e15a63eec93f295c603a"
 
 RDEPENDS:toolbox = " \
  containers-common \

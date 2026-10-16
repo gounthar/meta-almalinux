@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "maliit-keyboard"
 PV = "2.3.1"
 PR = "7.el10_0"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  maliit-keyboard \
- "
+"
+PACKAGES:aarch64 = " \
+ maliit-keyboard \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/m/maliit-keyboard-2.3.1-7.el10_0.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/m/maliit-keyboard-2.3.1-7.el10_0.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b6d5e28edbbbc95aad67adef8bb226d4763fc939e4093e24ca212e67bdb660c0"
 
-URI_x86_64_v2_maliit-keyboard = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/maliit-keyboard-2.3.1-7.el10_0.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_maliit-keyboard;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_maliit-keyboard}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/maliit-keyboard-2.3.1-7.el10_0.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_maliit-keyboard;unpack=0"
 SRC_URI[x86_64_v2_maliit-keyboard.sha256sum] = "f19f9c61272baf8a2ecf8e8e38afe01b8bc69df380db1df0fef0e1cdc83fa2f8"
 
-URI_aarch64_maliit-keyboard = "${EPEL_MIRROR}/aarch64/Packages/m/maliit-keyboard-2.3.1-7.el10_0.aarch64.rpm;name=aarch64_maliit-keyboard;unpack=0"
-SRC_URI:append = " ${URI_aarch64_maliit-keyboard}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/m/maliit-keyboard-2.3.1-7.el10_0.aarch64.rpm;name=aarch64_maliit-keyboard;unpack=0"
 SRC_URI[aarch64_maliit-keyboard.sha256sum] = "4190e1b1696339a43fe68efd6385b258696a14b36c3b197fc0c1dc35d74e7efd"
 
 RDEPENDS:maliit-keyboard = " \

@@ -5,23 +5,26 @@ inherit dnf-bridge
 PN = "Lmod"
 PV = "8.7.65"
 PR = "2.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  Lmod \
- "
+"
+PACKAGES:aarch64 = " \
+ Lmod \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/l/Lmod-8.7.65-2.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/l/Lmod-8.7.65-2.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6c499e01239d9f85841a5a9741f2358e97e5e61fb3f2529f030a2347f7281739"
 
-URI_x86_64_v2_Lmod = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/Lmod-8.7.65-2.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_Lmod;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_Lmod}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/Lmod-8.7.65-2.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_Lmod;unpack=0"
 SRC_URI[x86_64_v2_Lmod.sha256sum] = "353ff63de00d0cf0badd278bbe1c1e038b0ef7bd9de999a84abb01b14fd382bf"
-RPROVIDES:Lmod:x86_64_v2 = "virtual/environment_modules_"
+RPROVIDES:Lmod:append:x86_64_v2 = " virtual/environment_modules_"
 
-URI_aarch64_Lmod = "${EPEL_MIRROR}/aarch64/Packages/l/Lmod-8.7.65-2.el10_2.aarch64.rpm;name=aarch64_Lmod;unpack=0"
-SRC_URI:append = " ${URI_aarch64_Lmod}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/Lmod-8.7.65-2.el10_2.aarch64.rpm;name=aarch64_Lmod;unpack=0"
 SRC_URI[aarch64_Lmod.sha256sum] = "1adc2176df525bce7a39e2862e71250318f80be8fefed66245a1be440c99f05d"
-RPROVIDES:Lmod:aarch64 = "virtual/environment_modules_"
+RPROVIDES:Lmod:append:aarch64 = " virtual/environment_modules_"
 
 RDEPENDS:Lmod = " \
  alternatives \
@@ -35,7 +38,3 @@ RDEPENDS:Lmod = " \
  tcl \
  virtual/coreutils \
  "
-
-PROVIDES:append:x86_64_v2 = " rpm/virtual/environment_modules_"
-
-PROVIDES:append:aarch64 = " rpm/virtual/environment_modules_"

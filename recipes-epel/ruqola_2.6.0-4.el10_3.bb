@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "ruqola"
 PV = "2.6.0"
 PR = "4.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  ruqola \
  ruqola-doc \
- "
+"
+PACKAGES:aarch64 = " \
+ ruqola \
+ ruqola-doc \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/ruqola-2.6.0-4.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/ruqola-2.6.0-4.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "bdd39229e1c85adc4c70be6b988d73f122b1d0c21ac330a19f260846387618af"
 
-URI_x86_64_v2_ruqola = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ruqola-2.6.0-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ruqola;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ruqola}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ruqola-2.6.0-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ruqola;unpack=0"
 SRC_URI[x86_64_v2_ruqola.sha256sum] = "34d25e4ff8681b3cb3c062d1f6297a67be6be8eeb6a2439473f1726cefa030c2"
 
-URI_x86_64_v2_ruqola-doc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ruqola-doc-2.6.0-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_ruqola-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ruqola-doc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ruqola-doc-2.6.0-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_ruqola-doc;unpack=0"
 SRC_URI[x86_64_v2_ruqola-doc.sha256sum] = "4f75f19dead0cce7ac3333535274b67bf295bfd2b0a0ba07733bd7c18e417807"
 
-URI_aarch64_ruqola = "${EPEL_MIRROR}/aarch64/Packages/r/ruqola-2.6.0-4.el10_3.aarch64.rpm;name=aarch64_ruqola;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ruqola}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/ruqola-2.6.0-4.el10_3.aarch64.rpm;name=aarch64_ruqola;unpack=0"
 SRC_URI[aarch64_ruqola.sha256sum] = "32d177de2179f5ed100bd0606fc690d6e1c5d6a7d5d06f576a084c523926c20b"
 
-URI_aarch64_ruqola-doc = "${EPEL_MIRROR}/aarch64/Packages/r/ruqola-doc-2.6.0-4.el10_3.noarch.rpm;name=aarch64_ruqola-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ruqola-doc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/ruqola-doc-2.6.0-4.el10_3.noarch.rpm;name=aarch64_ruqola-doc;unpack=0"
 SRC_URI[aarch64_ruqola-doc.sha256sum] = "dd80c68bf677ed2bf3f99c48bc713d638427506e658744fd9aa11c9c53df39a2"
 
 RDEPENDS:ruqola = " \

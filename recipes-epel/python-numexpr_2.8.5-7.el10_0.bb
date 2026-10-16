@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-numexpr"
 PV = "2.8.5"
 PR = "7.el10_0"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-numexpr \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-numexpr \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-numexpr-2.8.5-7.el10_0.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-numexpr-2.8.5-7.el10_0.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "9f0969d9c91d0397faf3468cb17073c3cdc38bfb67145277350f612f76681ee0"
 
-URI_x86_64_v2_python3-numexpr = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-numexpr-2.8.5-7.el10_0.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_python3-numexpr;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-numexpr}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-numexpr-2.8.5-7.el10_0.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_python3-numexpr;unpack=0"
 SRC_URI[x86_64_v2_python3-numexpr.sha256sum] = "66d5bbd3c05f1a28d8d8681eb98fa6b66fe8650bb5c8f6a73343c344b1d0840f"
 
-URI_aarch64_python3-numexpr = "${EPEL_MIRROR}/aarch64/Packages/p/python3-numexpr-2.8.5-7.el10_0.aarch64.rpm;name=aarch64_python3-numexpr;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-numexpr}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-numexpr-2.8.5-7.el10_0.aarch64.rpm;name=aarch64_python3-numexpr;unpack=0"
 SRC_URI[aarch64_python3-numexpr.sha256sum] = "daf156abb856185a11882706d06fe9fb83ff89f0ae08af694688c7c92a397f75"
 
 RDEPENDS:python3-numexpr = " \

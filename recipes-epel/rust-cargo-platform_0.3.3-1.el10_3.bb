@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-cargo-platform"
 PV = "0.3.3"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-cargo-platform+default-devel \
  rust-cargo-platform-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-cargo-platform+default-devel \
+ rust-cargo-platform-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-cargo-platform-0.3.3-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-cargo-platform-0.3.3-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d4722504bb981426de901232b3e646f4af79c8928e401797e7d43039854a65f1"
 
-URI_x86_64_v2_rust-cargo-platform+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-cargo-platform+default-devel-0.3.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-cargo-platform+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-cargo-platform+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-cargo-platform+default-devel-0.3.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-cargo-platform+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-cargo-platform+default-devel.sha256sum] = "80da1342568ca92d688180b3ec144cddeb865a2e5a5ba1a1ea547373e306920a"
 
-URI_x86_64_v2_rust-cargo-platform-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-cargo-platform-devel-0.3.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-cargo-platform-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-cargo-platform-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-cargo-platform-devel-0.3.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-cargo-platform-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-cargo-platform-devel.sha256sum] = "5acbd05082bc7c8d5594f2aa5eaf0e8e99c5291dad1b530f0a010f59f0afbc19"
 
-URI_aarch64_rust-cargo-platform+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-cargo-platform+default-devel-0.3.3-1.el10_3.noarch.rpm;name=aarch64_rust-cargo-platform+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-cargo-platform+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-cargo-platform+default-devel-0.3.3-1.el10_3.noarch.rpm;name=aarch64_rust-cargo-platform+default-devel;unpack=0"
 SRC_URI[aarch64_rust-cargo-platform+default-devel.sha256sum] = "90042c8b7641fe3cf4674e0a1be0a0f3337bb683507fd8a14326c322489f4d56"
 
-URI_aarch64_rust-cargo-platform-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-cargo-platform-devel-0.3.3-1.el10_3.noarch.rpm;name=aarch64_rust-cargo-platform-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-cargo-platform-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-cargo-platform-devel-0.3.3-1.el10_3.noarch.rpm;name=aarch64_rust-cargo-platform-devel;unpack=0"
 SRC_URI[aarch64_rust-cargo-platform-devel.sha256sum] = "9908414ffd9f90329570274d45c5455a92edbef096fea67fefa4ee7f996696be"
 
 RDEPENDS:rust-cargo-platform+default-devel = " \

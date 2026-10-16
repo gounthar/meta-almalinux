@@ -11,25 +11,26 @@ PACKAGES = " \
  smartmontools-selinux \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/smartmontools-7.4-9.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/smartmontools-7.4-9.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "73ce656e84ffef3449780a88c89711aa448e3ff02d71a30210b520ba11a7fb13"
 
-URI_x86_64_v2_smartmontools = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/smartmontools-7.4-9.el10.x86_64_v2.rpm;name=x86_64_v2_smartmontools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_smartmontools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/smartmontools-7.4-9.el10.x86_64_v2.rpm;name=x86_64_v2_smartmontools;unpack=0"
 SRC_URI[x86_64_v2_smartmontools.sha256sum] = "da01b6aed1f4e5a28c56b4771489936eb75f1e3f5e91bf9669ac2dd2468ddba9"
 
-URI_x86_64_v2_smartmontools-selinux = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/smartmontools-selinux-7.4-9.el10.noarch.rpm;name=x86_64_v2_smartmontools-selinux;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_smartmontools-selinux}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/smartmontools-selinux-7.4-9.el10.noarch.rpm;name=x86_64_v2_smartmontools-selinux;unpack=0"
 SRC_URI[x86_64_v2_smartmontools-selinux.sha256sum] = "3f0f8b52c89e380e7d601a78fc9561467bb2da277a58d533cc590629921302b2"
 
-URI_aarch64_smartmontools = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/smartmontools-7.4-9.el10.aarch64.rpm;name=aarch64_smartmontools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_smartmontools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/smartmontools-7.4-9.el10.aarch64.rpm;name=aarch64_smartmontools;unpack=0"
 SRC_URI[aarch64_smartmontools.sha256sum] = "9488f927e53eafa99a130617cfdb6c901708b6bc3514a36a10c0d2617630d64b"
 
-URI_aarch64_smartmontools-selinux = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/smartmontools-selinux-7.4-9.el10.noarch.rpm;name=aarch64_smartmontools-selinux;unpack=0"
-SRC_URI:append = " ${URI_aarch64_smartmontools-selinux}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/smartmontools-selinux-7.4-9.el10.noarch.rpm;name=aarch64_smartmontools-selinux;unpack=0"
 SRC_URI[aarch64_smartmontools-selinux.sha256sum] = "3f0f8b52c89e380e7d601a78fc9561467bb2da277a58d533cc590629921302b2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/smartmontools-7.4-9.el10.riscv64.rpm;name=riscv64_smartmontools;unpack=0"
+SRC_URI[riscv64_smartmontools.sha256sum] = "1367a35b71eba7f9c97622ea89e6253dccdc94f643c000a76edfaac037014f22"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/smartmontools-selinux-7.4-9.el10.noarch.rpm;name=riscv64_smartmontools-selinux;unpack=0"
+SRC_URI[riscv64_smartmontools-selinux.sha256sum] = "3f0f8b52c89e380e7d601a78fc9561467bb2da277a58d533cc590629921302b2"
 
 RDEPENDS:smartmontools = " \
  bash \

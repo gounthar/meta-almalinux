@@ -12,41 +12,44 @@ PACKAGES = " \
  fuse3-libs \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/fuse3-3.16.2-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/fuse3-3.16.2-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "dac3d42f3735b0d4d3cdde4afbfcda86cda0d4413c5b2ef8f5ce82537ffdfc96"
 
-URI_x86_64_v2_fuse-common = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/fuse-common-3.16.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_fuse-common;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_fuse-common}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/fuse-common-3.16.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_fuse-common;unpack=0"
 SRC_URI[x86_64_v2_fuse-common.sha256sum] = "d9d36f172173226c7bc0b890bbb4e82985d5d16161d28160fe7bccb116f61399"
 
-URI_x86_64_v2_fuse3 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/fuse3-3.16.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_fuse3;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_fuse3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/fuse3-3.16.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_fuse3;unpack=0"
 SRC_URI[x86_64_v2_fuse3.sha256sum] = "5e372d80b6dea8665ba8f1a7f7e7b6495331413d47f16da01a04bf9c775f2fa3"
 
-URI_x86_64_v2_fuse3-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/fuse3-devel-3.16.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_fuse3-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_fuse3-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/fuse3-devel-3.16.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_fuse3-devel;unpack=0"
 SRC_URI[x86_64_v2_fuse3-devel.sha256sum] = "84952d98e6049994e000fb717bc580ace1007a642e452390ccdea7e045f965b0"
 
-URI_x86_64_v2_fuse3-libs = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/fuse3-libs-3.16.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_fuse3-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_fuse3-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/fuse3-libs-3.16.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_fuse3-libs;unpack=0"
 SRC_URI[x86_64_v2_fuse3-libs.sha256sum] = "ac715f88060545438e4aa9009404d868e5b045905b171c7c9a269c3e1dfa894c"
 
-URI_aarch64_fuse-common = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/fuse-common-3.16.2-5.el10.aarch64.rpm;name=aarch64_fuse-common;unpack=0"
-SRC_URI:append = " ${URI_aarch64_fuse-common}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/fuse-common-3.16.2-5.el10.aarch64.rpm;name=aarch64_fuse-common;unpack=0"
 SRC_URI[aarch64_fuse-common.sha256sum] = "a4da63d2e903ba8c58ee6269b3440a787f4cd676d1e78db4f0d12f950ee770c9"
 
-URI_aarch64_fuse3 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/fuse3-3.16.2-5.el10.aarch64.rpm;name=aarch64_fuse3;unpack=0"
-SRC_URI:append = " ${URI_aarch64_fuse3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/fuse3-3.16.2-5.el10.aarch64.rpm;name=aarch64_fuse3;unpack=0"
 SRC_URI[aarch64_fuse3.sha256sum] = "d42afbfc340bf3091dec51d678fe3a4e8bd7372b2e11e857c5e601e464c6c6ba"
 
-URI_aarch64_fuse3-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/fuse3-devel-3.16.2-5.el10.aarch64.rpm;name=aarch64_fuse3-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_fuse3-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/fuse3-devel-3.16.2-5.el10.aarch64.rpm;name=aarch64_fuse3-devel;unpack=0"
 SRC_URI[aarch64_fuse3-devel.sha256sum] = "84b5a51e26f9643c3e6d67021b687265b67a2c261efb09551f32f3bad7ba63dc"
 
-URI_aarch64_fuse3-libs = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/fuse3-libs-3.16.2-5.el10.aarch64.rpm;name=aarch64_fuse3-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_fuse3-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/fuse3-libs-3.16.2-5.el10.aarch64.rpm;name=aarch64_fuse3-libs;unpack=0"
 SRC_URI[aarch64_fuse3-libs.sha256sum] = "a18b434322a492cc8283c91f94f0a4ca684645eb87c98865dc41e2ce40a2c359"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/fuse-common-3.16.2-5.el10.riscv64.rpm;name=riscv64_fuse-common;unpack=0"
+SRC_URI[riscv64_fuse-common.sha256sum] = "67aeb83a0641d364af9f2d3704d2fbd9d2832a2ec69d1537843ce62f6f8aa767"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/fuse3-3.16.2-5.el10.riscv64.rpm;name=riscv64_fuse3;unpack=0"
+SRC_URI[riscv64_fuse3.sha256sum] = "b3dc81873b97522500c035cb5d1a661d11caedefb0e05eee90d4a8dd052109f0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/fuse3-devel-3.16.2-5.el10.riscv64.rpm;name=riscv64_fuse3-devel;unpack=0"
+SRC_URI[riscv64_fuse3-devel.sha256sum] = "569c22013e9bfaf7262a7ffb44fd9b4a88b7fa798486431ea94a52ea97287588"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/fuse3-libs-3.16.2-5.el10.riscv64.rpm;name=riscv64_fuse3-libs;unpack=0"
+SRC_URI[riscv64_fuse3-libs.sha256sum] = "ca25ac5b5e660e6f84688be0f536c093655b9e7187b99b222d1cf26e00beb750"
 
 RDEPENDS:fuse-common = " \
  "

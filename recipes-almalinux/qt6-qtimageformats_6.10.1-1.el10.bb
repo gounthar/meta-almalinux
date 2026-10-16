@@ -9,17 +9,17 @@ PACKAGES = " \
  qt6-qtimageformats \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtimageformats-6.10.1-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtimageformats-6.10.1-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "9dbb6566ef9646dd5fce9ec8344ac0615920e201eef269bf002739ce046ad488"
 
-URI_x86_64_v2_qt6-qtimageformats = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtimageformats-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtimageformats;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtimageformats}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtimageformats-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtimageformats;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtimageformats.sha256sum] = "78001c4ba607f544cad56f89d2c3afe0913a311fc70df7941f4ca29ae372ae9b"
 
-URI_aarch64_qt6-qtimageformats = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtimageformats-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtimageformats;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtimageformats}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtimageformats-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtimageformats;unpack=0"
 SRC_URI[aarch64_qt6-qtimageformats.sha256sum] = "b0e59750f2b7d3aebf439a44a92718e174b571b069fdae8d3ddb420338358f01"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtimageformats-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtimageformats;unpack=0"
+SRC_URI[riscv64_qt6-qtimageformats.sha256sum] = "a3ffb051c60950f7ea10714ca99a12b21bfcb905da3356daf5619368c63562ff"
 
 RDEPENDS:qt6-qtimageformats = " \
  cmake-filesystem \

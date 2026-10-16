@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-block-padding"
 PV = "0.4.2"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-block-padding+default-devel \
  rust-block-padding-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-block-padding+default-devel \
+ rust-block-padding-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-block-padding-0.4.2-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-block-padding-0.4.2-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "fdd7b8e335d46ae975be118df954f04799ed49bbf6a86cb4ce5637842c11d056"
 
-URI_x86_64_v2_rust-block-padding+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-block-padding+default-devel-0.4.2-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-block-padding+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-block-padding+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-block-padding+default-devel-0.4.2-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-block-padding+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-block-padding+default-devel.sha256sum] = "d592f91ae3a75628e20a584e6f7982c3d7d36476bfcb0ba752045dcb0d86fbe6"
 
-URI_x86_64_v2_rust-block-padding-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-block-padding-devel-0.4.2-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-block-padding-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-block-padding-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-block-padding-devel-0.4.2-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-block-padding-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-block-padding-devel.sha256sum] = "21244fc571bed034fecb232d0de1c57847d4f4d67bf3f8876acc9fc478cdc7cb"
 
-URI_aarch64_rust-block-padding+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-block-padding+default-devel-0.4.2-1.el10_2.noarch.rpm;name=aarch64_rust-block-padding+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-block-padding+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-block-padding+default-devel-0.4.2-1.el10_2.noarch.rpm;name=aarch64_rust-block-padding+default-devel;unpack=0"
 SRC_URI[aarch64_rust-block-padding+default-devel.sha256sum] = "4650023d0f70cf90cc75a1c85d058b5203aa3468091a36cc4ced44b77a28ab5b"
 
-URI_aarch64_rust-block-padding-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-block-padding-devel-0.4.2-1.el10_2.noarch.rpm;name=aarch64_rust-block-padding-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-block-padding-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-block-padding-devel-0.4.2-1.el10_2.noarch.rpm;name=aarch64_rust-block-padding-devel;unpack=0"
 SRC_URI[aarch64_rust-block-padding-devel.sha256sum] = "f321e22163caedb96d90e8e149310a0ebb2a5918f809c7a2caf1f7f56fc4b338"
 
 RDEPENDS:rust-block-padding+default-devel = " \

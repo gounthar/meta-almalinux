@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "lagrange"
 PV = "1.19.3"
 PR = "2.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  lagrange \
- "
+"
+PACKAGES:aarch64 = " \
+ lagrange \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/l/lagrange-1.19.3-2.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/l/lagrange-1.19.3-2.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "81a74f93e131fd7e70d522a84a8d3ee501cf07b080e9a2cc9b5de2af8d245653"
 
-URI_x86_64_v2_lagrange = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/lagrange-1.19.3-2.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_lagrange;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lagrange}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/lagrange-1.19.3-2.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_lagrange;unpack=0"
 SRC_URI[x86_64_v2_lagrange.sha256sum] = "3fc6cd79a4156847d0cce4a35c937500334bec51ea136fab19673b14adec56e6"
 
-URI_aarch64_lagrange = "${EPEL_MIRROR}/aarch64/Packages/l/lagrange-1.19.3-2.el10_2.aarch64.rpm;name=aarch64_lagrange;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lagrange}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/lagrange-1.19.3-2.el10_2.aarch64.rpm;name=aarch64_lagrange;unpack=0"
 SRC_URI[aarch64_lagrange.sha256sum] = "369f273dd3903f7d13272ee2a8d8d707eb86a70d61fffd8503a61eef7fcc8b51"
 
 RDEPENDS:lagrange = " \

@@ -10,27 +10,31 @@ PACKAGES = " \
  spice-gtk3 \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/spice-gtk-0.42-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/spice-gtk-0.42-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "379e071fdf26d6156c8ad100d748cbea402fe5149fc01595ada092896818d0b6"
 
-URI_x86_64_v2_spice-glib = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/spice-glib-0.42-3.el10.x86_64_v2.rpm;name=x86_64_v2_spice-glib;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_spice-glib}"
+## Requires (riscv64) that were seen as not satisfiable in original repo:
+# - spice-glib: libcacard.so.0()(64bit)
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/spice-glib-0.42-3.el10.x86_64_v2.rpm;name=x86_64_v2_spice-glib;unpack=0"
 SRC_URI[x86_64_v2_spice-glib.sha256sum] = "6314de3e8dae4f5628a9db2bd514431f2bf6be5d2bb8878f535661b87209bad1"
 
-URI_x86_64_v2_spice-gtk3 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/spice-gtk3-0.42-3.el10.x86_64_v2.rpm;name=x86_64_v2_spice-gtk3;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_spice-gtk3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/spice-gtk3-0.42-3.el10.x86_64_v2.rpm;name=x86_64_v2_spice-gtk3;unpack=0"
 SRC_URI[x86_64_v2_spice-gtk3.sha256sum] = "c1eebfa27d2da6973bb0acff083d19cf467a12530dd142db6213d0eb9a2b0878"
 
-URI_aarch64_spice-glib = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/spice-glib-0.42-3.el10.aarch64.rpm;name=aarch64_spice-glib;unpack=0"
-SRC_URI:append = " ${URI_aarch64_spice-glib}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/spice-glib-0.42-3.el10.aarch64.rpm;name=aarch64_spice-glib;unpack=0"
 SRC_URI[aarch64_spice-glib.sha256sum] = "1ceba366d2d7d3f11ad2f859d8dad1149ec76f88d9d9a8e857e1955f1025da66"
 
-URI_aarch64_spice-gtk3 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/spice-gtk3-0.42-3.el10.aarch64.rpm;name=aarch64_spice-gtk3;unpack=0"
-SRC_URI:append = " ${URI_aarch64_spice-gtk3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/spice-gtk3-0.42-3.el10.aarch64.rpm;name=aarch64_spice-gtk3;unpack=0"
 SRC_URI[aarch64_spice-gtk3.sha256sum] = "10c9c54d511c6e7a937c140598f4a108e08ac4715eca57bbe2ae48a0460d790d"
 
-RDEPENDS:spice-glib = " \
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/spice-glib-0.42-3.el10.riscv64.rpm;name=riscv64_spice-glib;unpack=0"
+SRC_URI[riscv64_spice-glib.sha256sum] = "eefb7184cc56623274e3b67b2f004dc276564a786c2fe30036dd83e49038d413"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/spice-gtk3-0.42-3.el10.riscv64.rpm;name=riscv64_spice-gtk3;unpack=0"
+SRC_URI[riscv64_spice-gtk3.sha256sum] = "7a8845977d200486fb09913e9c111738b3f5a4dc232fd3a6cff846d1a696bff5"
+
+RDEPENDS:spice-glib:x86_64_v2 = " \
  cyrus-sasl-lib \
  glib2 \
  glibc \
@@ -51,7 +55,50 @@ RDEPENDS:spice-glib = " \
  polkit-libs \
  usbredir \
  zlib-ng-compat \
- "
+"
+RDEPENDS:spice-glib:aarch64 = " \
+ cyrus-sasl-lib \
+ glib2 \
+ glibc \
+ gstreamer1 \
+ gstreamer1-plugins-base \
+ json-glib \
+ libacl \
+ libcacard \
+ libcap-ng \
+ libjpeg-turbo \
+ libphodav \
+ libsoup3 \
+ libusb1 \
+ lz4-libs \
+ openssl-libs \
+ opus \
+ pixman \
+ polkit-libs \
+ usbredir \
+ zlib-ng-compat \
+"
+RDEPENDS:spice-glib:riscv64 = " \
+ cyrus-sasl-lib \
+ glib2 \
+ glibc \
+ gstreamer1 \
+ gstreamer1-plugins-base \
+ json-glib \
+ libacl \
+ libcap-ng \
+ libjpeg-turbo \
+ libphodav \
+ libsoup3 \
+ libusb1 \
+ lz4-libs \
+ openssl-libs \
+ opus \
+ pixman \
+ polkit-libs \
+ usbredir \
+ zlib-ng-compat \
+"
 RDEPENDS:spice-gtk3 = " \
  cairo \
  gdk-pixbuf2 \

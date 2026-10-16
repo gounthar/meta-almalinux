@@ -6,20 +6,23 @@ PN = "rpminspect-data-fedora"
 PE = "1"
 PV = "1.16"
 PR = "3.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rpminspect-data-fedora \
- "
+"
+PACKAGES:aarch64 = " \
+ rpminspect-data-fedora \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rpminspect-data-fedora-1.16-3.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rpminspect-data-fedora-1.16-3.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "84d796c3df09eb9e29435541fa668c8ad132ed2d4ae2e19ab135b3d9cf204d02"
 
-URI_x86_64_v2_rpminspect-data-fedora = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rpminspect-data-fedora-1.16-3.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rpminspect-data-fedora;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rpminspect-data-fedora}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rpminspect-data-fedora-1.16-3.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rpminspect-data-fedora;unpack=0"
 SRC_URI[x86_64_v2_rpminspect-data-fedora.sha256sum] = "fa3bd3773d96659a2d5673f9af7950f701a08621802da2c7325d065e58d38cda"
 
-URI_aarch64_rpminspect-data-fedora = "${EPEL_MIRROR}/aarch64/Packages/r/rpminspect-data-fedora-1.16-3.el10_2.noarch.rpm;name=aarch64_rpminspect-data-fedora;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rpminspect-data-fedora}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rpminspect-data-fedora-1.16-3.el10_2.noarch.rpm;name=aarch64_rpminspect-data-fedora;unpack=0"
 SRC_URI[aarch64_rpminspect-data-fedora.sha256sum] = "419a9a717aa8247f7677332899e57b94a88c172d63a4f33c5ab882c2650ca7e8"
 
 RDEPENDS:rpminspect-data-fedora = " \

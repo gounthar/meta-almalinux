@@ -9,17 +9,17 @@ PACKAGES = " \
  python3.14-idna \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python3.14-idna-3.11-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python3.14-idna-3.11-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e7669bacc8f6fe9c8cb5ae6b4b83a6ed3324230e2cf50f67f8b87860055c9407"
 
-URI_x86_64_v2_python3.14-idna = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3.14-idna-3.11-1.el10.noarch.rpm;name=x86_64_v2_python3.14-idna;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3.14-idna}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3.14-idna-3.11-1.el10.noarch.rpm;name=x86_64_v2_python3.14-idna;unpack=0"
 SRC_URI[x86_64_v2_python3.14-idna.sha256sum] = "8467d605a44596b22f788dcfd9ccb8139ba1d800be01b90a7babbba6adb27071"
 
-URI_aarch64_python3.14-idna = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3.14-idna-3.11-1.el10.noarch.rpm;name=aarch64_python3.14-idna;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3.14-idna}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3.14-idna-3.11-1.el10.noarch.rpm;name=aarch64_python3.14-idna;unpack=0"
 SRC_URI[aarch64_python3.14-idna.sha256sum] = "8467d605a44596b22f788dcfd9ccb8139ba1d800be01b90a7babbba6adb27071"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3.14-idna-3.11-1.el10.noarch.rpm;name=riscv64_python3.14-idna;unpack=0"
+SRC_URI[riscv64_python3.14-idna.sha256sum] = "8467d605a44596b22f788dcfd9ccb8139ba1d800be01b90a7babbba6adb27071"
 
 RDEPENDS:python3.14-idna = " \
  python3.14 \

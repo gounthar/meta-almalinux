@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-uu_md5sum"
 PV = "0.7.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-uu_md5sum+default-devel \
  rust-uu_md5sum-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-uu_md5sum+default-devel \
+ rust-uu_md5sum-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-uu_md5sum-0.7.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-uu_md5sum-0.7.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "2c0735ec4b5de846ab8bcac90c68dba4510baffde54aedb789260cce51141234"
 
-URI_x86_64_v2_rust-uu_md5sum+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_md5sum+default-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_md5sum+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_md5sum+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_md5sum+default-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_md5sum+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_md5sum+default-devel.sha256sum] = "c30a0268f7cadd7e5e28cb3e30a07dc981b7a39f9bfdb0307d2fbfc5c7fe0da0"
 
-URI_x86_64_v2_rust-uu_md5sum-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_md5sum-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_md5sum-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_md5sum-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_md5sum-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_md5sum-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_md5sum-devel.sha256sum] = "9742cee7a4c491f0fa779e7003233a1d3576d8ae2da061c228dd8c93d269b807"
 
-URI_aarch64_rust-uu_md5sum+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_md5sum+default-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_md5sum+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_md5sum+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_md5sum+default-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_md5sum+default-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_md5sum+default-devel.sha256sum] = "07593e1c0239ad0d9c4c1aaee2d0f6b7c3bedd7db8f34b159803bc4d4ab125a4"
 
-URI_aarch64_rust-uu_md5sum-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_md5sum-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_md5sum-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_md5sum-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_md5sum-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_md5sum-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_md5sum-devel.sha256sum] = "4df0936b3d5f2b26fc20d004af1a7343801764840ec559eda632970d54d5d59c"
 
 RDEPENDS:rust-uu_md5sum+default-devel = " \

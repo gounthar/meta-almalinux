@@ -10,25 +10,26 @@ PACKAGES = " \
  libICE-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libICE-1.1.1-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libICE-1.1.1-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6c970f137fd1739d1b80ee50a7002d160ce6b4be1e04ca35e63c7794ad4baf1f"
 
-URI_x86_64_v2_libICE = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libICE-1.1.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libICE;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libICE}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libICE-1.1.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libICE;unpack=0"
 SRC_URI[x86_64_v2_libICE.sha256sum] = "0f03281958e4d23d47e7e75cc5fd69bc1610b0b6d5c305ea97a55ffd7d935137"
 
-URI_x86_64_v2_libICE-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libICE-devel-1.1.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libICE-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libICE-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libICE-devel-1.1.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libICE-devel;unpack=0"
 SRC_URI[x86_64_v2_libICE-devel.sha256sum] = "0c89b5036f1446d83bdd54cde78cad2f4adeaf3c9195a82afc23e3247ce75a9c"
 
-URI_aarch64_libICE = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libICE-1.1.1-5.el10.aarch64.rpm;name=aarch64_libICE;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libICE}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libICE-1.1.1-5.el10.aarch64.rpm;name=aarch64_libICE;unpack=0"
 SRC_URI[aarch64_libICE.sha256sum] = "3f98f6b01a9853f7c08c75ae9f147f5ecc81501a85ced3acdd78106d197f1afb"
 
-URI_aarch64_libICE-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libICE-devel-1.1.1-5.el10.aarch64.rpm;name=aarch64_libICE-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libICE-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libICE-devel-1.1.1-5.el10.aarch64.rpm;name=aarch64_libICE-devel;unpack=0"
 SRC_URI[aarch64_libICE-devel.sha256sum] = "c4ee5412f883f4ddf4540e5593d4d53657fb43685efe5d823784090e90d689bb"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libICE-1.1.1-5.el10.riscv64.rpm;name=riscv64_libICE;unpack=0"
+SRC_URI[riscv64_libICE.sha256sum] = "bed8c90385d140868b2c03b06798beb10433b000aac6a8ea881e03221c1dec12"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libICE-devel-1.1.1-5.el10.riscv64.rpm;name=riscv64_libICE-devel;unpack=0"
+SRC_URI[riscv64_libICE-devel.sha256sum] = "9119dbacd08f7c9f271dc73c6e326abe00e82f7b45aad3ba77802e577f8a6097"
 
 RDEPENDS:libICE = " \
  glibc \

@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-scroll_derive"
 PV = "0.13.1"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-scroll_derive+default-devel \
  rust-scroll_derive-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-scroll_derive+default-devel \
+ rust-scroll_derive-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-scroll_derive-0.13.1-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-scroll_derive-0.13.1-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8c553894ac80260d36818beb37ef242253db4e09f2e1b571d610af302189b468"
 
-URI_x86_64_v2_rust-scroll_derive+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-scroll_derive+default-devel-0.13.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-scroll_derive+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-scroll_derive+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-scroll_derive+default-devel-0.13.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-scroll_derive+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-scroll_derive+default-devel.sha256sum] = "63c42d1bbeca9b37002e17425bf21444b49dc44bcd49f3e9454a627778e92eb8"
 
-URI_x86_64_v2_rust-scroll_derive-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-scroll_derive-devel-0.13.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-scroll_derive-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-scroll_derive-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-scroll_derive-devel-0.13.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-scroll_derive-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-scroll_derive-devel.sha256sum] = "39db315ced8b145456ff888fda4a9a5ecd1c23da060cb45062fe9e15edf6fc7b"
 
-URI_aarch64_rust-scroll_derive+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-scroll_derive+default-devel-0.13.1-1.el10_2.noarch.rpm;name=aarch64_rust-scroll_derive+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-scroll_derive+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-scroll_derive+default-devel-0.13.1-1.el10_2.noarch.rpm;name=aarch64_rust-scroll_derive+default-devel;unpack=0"
 SRC_URI[aarch64_rust-scroll_derive+default-devel.sha256sum] = "fe24d86023992225781c23f6b3479198581f569507b551e1a98bdeba78ef4c57"
 
-URI_aarch64_rust-scroll_derive-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-scroll_derive-devel-0.13.1-1.el10_2.noarch.rpm;name=aarch64_rust-scroll_derive-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-scroll_derive-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-scroll_derive-devel-0.13.1-1.el10_2.noarch.rpm;name=aarch64_rust-scroll_derive-devel;unpack=0"
 SRC_URI[aarch64_rust-scroll_derive-devel.sha256sum] = "af561f55c636bde1af079d4096c67f009252e6e30b6e21fd874b6a8b28e2f6ad"
 
 RDEPENDS:rust-scroll_derive+default-devel = " \

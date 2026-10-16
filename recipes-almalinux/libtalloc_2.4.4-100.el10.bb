@@ -11,33 +11,35 @@ PACKAGES = " \
  python3-talloc \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libtalloc-2.4.4-100.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libtalloc-2.4.4-100.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "9321cdf37b95f8ff0dd156572dae67e7c649cdb0ee0188792a994d3147ea9878"
 
-URI_x86_64_v2_libtalloc = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libtalloc-2.4.4-100.el10.x86_64_v2.rpm;name=x86_64_v2_libtalloc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libtalloc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libtalloc-2.4.4-100.el10.x86_64_v2.rpm;name=x86_64_v2_libtalloc;unpack=0"
 SRC_URI[x86_64_v2_libtalloc.sha256sum] = "a351c78b45b6183f6daf82c15f58f0f2bfd463f7339ff9ed30161e2e3cf8d784"
 
-URI_x86_64_v2_libtalloc-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libtalloc-devel-2.4.4-100.el10.x86_64_v2.rpm;name=x86_64_v2_libtalloc-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libtalloc-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libtalloc-devel-2.4.4-100.el10.x86_64_v2.rpm;name=x86_64_v2_libtalloc-devel;unpack=0"
 SRC_URI[x86_64_v2_libtalloc-devel.sha256sum] = "1199ced64913fc1cd409386e30950ca42eed11b313777b10af60256f053a9d32"
 
-URI_x86_64_v2_python3-talloc = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/python3-talloc-2.4.4-100.el10.x86_64_v2.rpm;name=x86_64_v2_python3-talloc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-talloc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/python3-talloc-2.4.4-100.el10.x86_64_v2.rpm;name=x86_64_v2_python3-talloc;unpack=0"
 SRC_URI[x86_64_v2_python3-talloc.sha256sum] = "bb8c99e2e7b0354b0e19e26a5142dfab34ce8ac0e8dcf375da39128cc683d280"
 
-URI_aarch64_libtalloc = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libtalloc-2.4.4-100.el10.aarch64.rpm;name=aarch64_libtalloc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libtalloc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libtalloc-2.4.4-100.el10.aarch64.rpm;name=aarch64_libtalloc;unpack=0"
 SRC_URI[aarch64_libtalloc.sha256sum] = "c35c66e2f32cf23e5ac8fcd500e3f8abb98a44a48cdb1306e5a099cc2700051c"
 
-URI_aarch64_libtalloc-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libtalloc-devel-2.4.4-100.el10.aarch64.rpm;name=aarch64_libtalloc-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libtalloc-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libtalloc-devel-2.4.4-100.el10.aarch64.rpm;name=aarch64_libtalloc-devel;unpack=0"
 SRC_URI[aarch64_libtalloc-devel.sha256sum] = "f4b4938af87ed036785c2b6ca33c6326ad52bb7d75bc2c68ce52c968f9df55d5"
 
-URI_aarch64_python3-talloc = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/python3-talloc-2.4.4-100.el10.aarch64.rpm;name=aarch64_python3-talloc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-talloc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/python3-talloc-2.4.4-100.el10.aarch64.rpm;name=aarch64_python3-talloc;unpack=0"
 SRC_URI[aarch64_python3-talloc.sha256sum] = "8403d60b4483298554fc46f26a70afbadd137ef4195c65e010cd2c430ae6c372"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libtalloc-2.4.4-100.el10.riscv64.rpm;name=riscv64_libtalloc;unpack=0"
+SRC_URI[riscv64_libtalloc.sha256sum] = "edeee3502c82b2ec8c10865f3d3f7f343125a247e4f7639a06cb2cdde750fe66"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libtalloc-devel-2.4.4-100.el10.riscv64.rpm;name=riscv64_libtalloc-devel;unpack=0"
+SRC_URI[riscv64_libtalloc-devel.sha256sum] = "83049192ca58c0d95d6d54e0ec0252b49dffe5839954af8fbf70d136ffcd4412"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/python3-talloc-2.4.4-100.el10.riscv64.rpm;name=riscv64_python3-talloc;unpack=0"
+SRC_URI[riscv64_python3-talloc.sha256sum] = "5a838326fbf9b6d97855bb6615238a338cae95d85ac6a3f80a28d8c037014c0c"
 
 RDEPENDS:libtalloc = " \
  glibc \

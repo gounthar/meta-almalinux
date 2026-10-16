@@ -9,17 +9,17 @@ PACKAGES = " \
  python3.14-pycparser \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python3.14-pycparser-2.22-4.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python3.14-pycparser-2.22-4.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "dbb6b3a4fbba73fbeb5d32a7d0ee6d162d24360d16b49bfb9879f9d41e4dbe25"
 
-URI_x86_64_v2_python3.14-pycparser = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3.14-pycparser-2.22-4.el10.noarch.rpm;name=x86_64_v2_python3.14-pycparser;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3.14-pycparser}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3.14-pycparser-2.22-4.el10.noarch.rpm;name=x86_64_v2_python3.14-pycparser;unpack=0"
 SRC_URI[x86_64_v2_python3.14-pycparser.sha256sum] = "9d6f115d2e1bd8a2aa52d537f3c5a0f0cff5196fa0610ce762df5d21683d3d60"
 
-URI_aarch64_python3.14-pycparser = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3.14-pycparser-2.22-4.el10.noarch.rpm;name=aarch64_python3.14-pycparser;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3.14-pycparser}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3.14-pycparser-2.22-4.el10.noarch.rpm;name=aarch64_python3.14-pycparser;unpack=0"
 SRC_URI[aarch64_python3.14-pycparser.sha256sum] = "9d6f115d2e1bd8a2aa52d537f3c5a0f0cff5196fa0610ce762df5d21683d3d60"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3.14-pycparser-2.22-4.el10.noarch.rpm;name=riscv64_python3.14-pycparser;unpack=0"
+SRC_URI[riscv64_python3.14-pycparser.sha256sum] = "9d6f115d2e1bd8a2aa52d537f3c5a0f0cff5196fa0610ce762df5d21683d3d60"
 
 RDEPENDS:python3.14-pycparser = " \
  python3.14 \

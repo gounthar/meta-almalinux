@@ -10,25 +10,26 @@ PACKAGES = " \
  libappstream-glib-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libappstream-glib-0.8.3-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libappstream-glib-0.8.3-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e0280757c6c4ad00bf0d59a90a017c181aac34098aca3f036a70bb6397be5d32"
 
-URI_x86_64_v2_libappstream-glib = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libappstream-glib-0.8.3-3.el10.x86_64_v2.rpm;name=x86_64_v2_libappstream-glib;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libappstream-glib}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libappstream-glib-0.8.3-3.el10.x86_64_v2.rpm;name=x86_64_v2_libappstream-glib;unpack=0"
 SRC_URI[x86_64_v2_libappstream-glib.sha256sum] = "089667bfc8ba6de44e2c078bc9fe1a9de064708e39225e0b2c48e25d6311c3ac"
 
-URI_x86_64_v2_libappstream-glib-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libappstream-glib-devel-0.8.3-3.el10.x86_64_v2.rpm;name=x86_64_v2_libappstream-glib-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libappstream-glib-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libappstream-glib-devel-0.8.3-3.el10.x86_64_v2.rpm;name=x86_64_v2_libappstream-glib-devel;unpack=0"
 SRC_URI[x86_64_v2_libappstream-glib-devel.sha256sum] = "6df4ca0e618efc3417b4318d0e010f3014f7ad35341f1111a1b6f053203f0b0b"
 
-URI_aarch64_libappstream-glib = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libappstream-glib-0.8.3-3.el10.aarch64.rpm;name=aarch64_libappstream-glib;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libappstream-glib}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libappstream-glib-0.8.3-3.el10.aarch64.rpm;name=aarch64_libappstream-glib;unpack=0"
 SRC_URI[aarch64_libappstream-glib.sha256sum] = "b9aa9454fdae04eeb0ba9d49282762c36a023c3ce27329c49ccb46994e5cd0a9"
 
-URI_aarch64_libappstream-glib-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libappstream-glib-devel-0.8.3-3.el10.aarch64.rpm;name=aarch64_libappstream-glib-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libappstream-glib-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libappstream-glib-devel-0.8.3-3.el10.aarch64.rpm;name=aarch64_libappstream-glib-devel;unpack=0"
 SRC_URI[aarch64_libappstream-glib-devel.sha256sum] = "2ef69a63e39650d18221a1d3201af03d589de8de16ef6b2d44a61dba34de6108"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libappstream-glib-0.8.3-3.el10.riscv64.rpm;name=riscv64_libappstream-glib;unpack=0"
+SRC_URI[riscv64_libappstream-glib.sha256sum] = "e4ea3c381c0963449d9c26aee13a3b0fa40fdfdc4902c32c5f635020a7a1b534"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libappstream-glib-devel-0.8.3-3.el10.riscv64.rpm;name=riscv64_libappstream-glib-devel;unpack=0"
+SRC_URI[riscv64_libappstream-glib-devel.sha256sum] = "115da8edfa233f7e9978bf3b55343112bda98a2609e08a8388b97e41da672aa9"
 
 RDEPENDS:libappstream-glib = " \
  gdk-pixbuf2 \

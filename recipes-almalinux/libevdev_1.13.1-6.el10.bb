@@ -10,25 +10,26 @@ PACKAGES = " \
  libevdev-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libevdev-1.13.1-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libevdev-1.13.1-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "dd2aaa0bb0091bb96d1f205ddc795321fc0bf4d6a03da5567f9642ecdb07d14f"
 
-URI_x86_64_v2_libevdev = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libevdev-1.13.1-6.el10.x86_64_v2.rpm;name=x86_64_v2_libevdev;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libevdev}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libevdev-1.13.1-6.el10.x86_64_v2.rpm;name=x86_64_v2_libevdev;unpack=0"
 SRC_URI[x86_64_v2_libevdev.sha256sum] = "4c959c03b17c89f1ec1700d5fe2b102043f595ae170adbb8f6b67ea28527e9fb"
 
-URI_x86_64_v2_libevdev-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libevdev-devel-1.13.1-6.el10.x86_64_v2.rpm;name=x86_64_v2_libevdev-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libevdev-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libevdev-devel-1.13.1-6.el10.x86_64_v2.rpm;name=x86_64_v2_libevdev-devel;unpack=0"
 SRC_URI[x86_64_v2_libevdev-devel.sha256sum] = "697bd669eb423c1cd5660db6ffcf20ef3d1785388255ce618ac1ea9bdb24a40c"
 
-URI_aarch64_libevdev = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libevdev-1.13.1-6.el10.aarch64.rpm;name=aarch64_libevdev;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libevdev}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libevdev-1.13.1-6.el10.aarch64.rpm;name=aarch64_libevdev;unpack=0"
 SRC_URI[aarch64_libevdev.sha256sum] = "a43178f1459082c86ab0911c8c709217445f214bc391dcb2dee5756c1ee46fe8"
 
-URI_aarch64_libevdev-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libevdev-devel-1.13.1-6.el10.aarch64.rpm;name=aarch64_libevdev-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libevdev-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libevdev-devel-1.13.1-6.el10.aarch64.rpm;name=aarch64_libevdev-devel;unpack=0"
 SRC_URI[aarch64_libevdev-devel.sha256sum] = "c0d83cf9b83b97e8188aa3c46f2adde45dd2c443c88b566561449c5caf63cee2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libevdev-1.13.1-6.el10.riscv64.rpm;name=riscv64_libevdev;unpack=0"
+SRC_URI[riscv64_libevdev.sha256sum] = "08bedf560e6f49efdbf045e46668767dc9ec4fde3bccfc2ac93c43df8e2b1e7e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libevdev-devel-1.13.1-6.el10.riscv64.rpm;name=riscv64_libevdev-devel;unpack=0"
+SRC_URI[riscv64_libevdev-devel.sha256sum] = "c5d09d1f8bfae71449492bfb8d3185bfbd08a1bc53340472c4b6163ae583e3f4"
 
 RDEPENDS:libevdev = " \
  glibc \

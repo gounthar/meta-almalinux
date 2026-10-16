@@ -10,25 +10,26 @@ PACKAGES = " \
  gsettings-desktop-schemas-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/gsettings-desktop-schemas-47.1-4.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/gsettings-desktop-schemas-47.1-4.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f0a61f5b7012ba0f8f0ba9c764fa9869dac020b77332f9cdb4fd6e958cb96c6f"
 
-URI_x86_64_v2_gsettings-desktop-schemas = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/gsettings-desktop-schemas-47.1-4.el10.x86_64_v2.rpm;name=x86_64_v2_gsettings-desktop-schemas;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gsettings-desktop-schemas}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/gsettings-desktop-schemas-47.1-4.el10.x86_64_v2.rpm;name=x86_64_v2_gsettings-desktop-schemas;unpack=0"
 SRC_URI[x86_64_v2_gsettings-desktop-schemas.sha256sum] = "ed554b10f16d295ee97c7c50ff3aa5ffef8de5bf17fc7279577fcd8202dddf33"
 
-URI_x86_64_v2_gsettings-desktop-schemas-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gsettings-desktop-schemas-devel-47.1-4.el10.x86_64_v2.rpm;name=x86_64_v2_gsettings-desktop-schemas-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gsettings-desktop-schemas-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gsettings-desktop-schemas-devel-47.1-4.el10.x86_64_v2.rpm;name=x86_64_v2_gsettings-desktop-schemas-devel;unpack=0"
 SRC_URI[x86_64_v2_gsettings-desktop-schemas-devel.sha256sum] = "bcf2f67dff7536df05c74030786bb7eaeef6fa174746b73ace871efb3f71557f"
 
-URI_aarch64_gsettings-desktop-schemas = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/gsettings-desktop-schemas-47.1-4.el10.aarch64.rpm;name=aarch64_gsettings-desktop-schemas;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gsettings-desktop-schemas}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/gsettings-desktop-schemas-47.1-4.el10.aarch64.rpm;name=aarch64_gsettings-desktop-schemas;unpack=0"
 SRC_URI[aarch64_gsettings-desktop-schemas.sha256sum] = "86f9b97e01333d5931bb67b9f8b4a6955311901a3d4248cd12de428009538451"
 
-URI_aarch64_gsettings-desktop-schemas-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gsettings-desktop-schemas-devel-47.1-4.el10.aarch64.rpm;name=aarch64_gsettings-desktop-schemas-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gsettings-desktop-schemas-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gsettings-desktop-schemas-devel-47.1-4.el10.aarch64.rpm;name=aarch64_gsettings-desktop-schemas-devel;unpack=0"
 SRC_URI[aarch64_gsettings-desktop-schemas-devel.sha256sum] = "45c1917ea65c3dfbded12feb1616545d70d35d579b859a2ac46747bdea674207"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/gsettings-desktop-schemas-47.1-4.el10.riscv64.rpm;name=riscv64_gsettings-desktop-schemas;unpack=0"
+SRC_URI[riscv64_gsettings-desktop-schemas.sha256sum] = "b1e237066a61a6c3a1cb5fd5fae21020f238a00f680b6eb035840f07d7819880"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gsettings-desktop-schemas-devel-47.1-4.el10.riscv64.rpm;name=riscv64_gsettings-desktop-schemas-devel;unpack=0"
+SRC_URI[riscv64_gsettings-desktop-schemas-devel.sha256sum] = "87ca8b470375ae4dffc7d4823a15716fbef2bb6852a87cad71daf4e7b8083c76"
 
 RDEPENDS:gsettings-desktop-schemas = " \
  glib2 \

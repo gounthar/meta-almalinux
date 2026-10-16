@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-hidapi"
 PV = "0.15.0"
 PR = "2.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-hidapi \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-hidapi \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-hidapi-0.15.0-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-hidapi-0.15.0-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "5a3253a1bad5fad386e91324ae41ef84c29d0aaacee27fb1a872b5adb8da2a56"
 
-URI_x86_64_v2_python3-hidapi = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-hidapi-0.15.0-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_python3-hidapi;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-hidapi}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-hidapi-0.15.0-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_python3-hidapi;unpack=0"
 SRC_URI[x86_64_v2_python3-hidapi.sha256sum] = "d8fb55b76a84039f7a1f4e76f54c30c5efde4d2c40799754fd9f7470f02be51b"
 
-URI_aarch64_python3-hidapi = "${EPEL_MIRROR}/aarch64/Packages/p/python3-hidapi-0.15.0-2.el10_3.aarch64.rpm;name=aarch64_python3-hidapi;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-hidapi}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-hidapi-0.15.0-2.el10_3.aarch64.rpm;name=aarch64_python3-hidapi;unpack=0"
 SRC_URI[aarch64_python3-hidapi.sha256sum] = "9a1eb94a83d820cc2ddff90f40ea0c6c5205365d55876a1a2addbc0d12059e3e"
 
 RDEPENDS:python3-hidapi = " \

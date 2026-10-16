@@ -5,41 +5,42 @@ inherit dnf-bridge
 PN = "OpenColorIO"
 PV = "2.4.2"
 PR = "7.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  OpenColorIO \
  OpenColorIO-devel \
  OpenColorIO-tools \
- "
+"
+PACKAGES:aarch64 = " \
+ OpenColorIO \
+ OpenColorIO-devel \
+ OpenColorIO-tools \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/o/OpenColorIO-2.4.2-7.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/o/OpenColorIO-2.4.2-7.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "11c2a7596e9b06ba37b104a68695c6927ce55b00f2a01b0b1614ec449ae9e6a1"
 
 ## Requires (x86_64_v2) that were seen as not satisfiable in original repo:
 # - OpenColorIO: libpystring.so.1()(64bit)
 
-URI_x86_64_v2_OpenColorIO = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/OpenColorIO-2.4.2-7.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_OpenColorIO;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_OpenColorIO}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/OpenColorIO-2.4.2-7.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_OpenColorIO;unpack=0"
 SRC_URI[x86_64_v2_OpenColorIO.sha256sum] = "c4dcfe1cf2281574128b85dc18d41a332aaa397d82333c8657a79a332d1a0b13"
 
-URI_x86_64_v2_OpenColorIO-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/OpenColorIO-devel-2.4.2-7.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_OpenColorIO-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_OpenColorIO-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/OpenColorIO-devel-2.4.2-7.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_OpenColorIO-devel;unpack=0"
 SRC_URI[x86_64_v2_OpenColorIO-devel.sha256sum] = "d0e9ca2e26acd763b1f658a2d47e0a6e1222b2bb836dd671d8f220e7f46d606b"
 
-URI_x86_64_v2_OpenColorIO-tools = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/OpenColorIO-tools-2.4.2-7.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_OpenColorIO-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_OpenColorIO-tools}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/OpenColorIO-tools-2.4.2-7.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_OpenColorIO-tools;unpack=0"
 SRC_URI[x86_64_v2_OpenColorIO-tools.sha256sum] = "ae92e34a11bef4acd397ec420c42c6af2ab01b7229a61fe15c7aab0e5adf9348"
 
-URI_aarch64_OpenColorIO = "${EPEL_MIRROR}/aarch64/Packages/o/OpenColorIO-2.4.2-7.el10_2.aarch64.rpm;name=aarch64_OpenColorIO;unpack=0"
-SRC_URI:append = " ${URI_aarch64_OpenColorIO}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/o/OpenColorIO-2.4.2-7.el10_2.aarch64.rpm;name=aarch64_OpenColorIO;unpack=0"
 SRC_URI[aarch64_OpenColorIO.sha256sum] = "86841ef1ef02e983100ce2e4549b608ebba290a7f988d7d9a6f85ba5e7571655"
 
-URI_aarch64_OpenColorIO-devel = "${EPEL_MIRROR}/aarch64/Packages/o/OpenColorIO-devel-2.4.2-7.el10_2.aarch64.rpm;name=aarch64_OpenColorIO-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_OpenColorIO-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/o/OpenColorIO-devel-2.4.2-7.el10_2.aarch64.rpm;name=aarch64_OpenColorIO-devel;unpack=0"
 SRC_URI[aarch64_OpenColorIO-devel.sha256sum] = "b64575afc84d5fc31322c34a05ee4965ee9579fa6732acc6cf97873749ee635e"
 
-URI_aarch64_OpenColorIO-tools = "${EPEL_MIRROR}/aarch64/Packages/o/OpenColorIO-tools-2.4.2-7.el10_2.aarch64.rpm;name=aarch64_OpenColorIO-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_OpenColorIO-tools}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/o/OpenColorIO-tools-2.4.2-7.el10_2.aarch64.rpm;name=aarch64_OpenColorIO-tools;unpack=0"
 SRC_URI[aarch64_OpenColorIO-tools.sha256sum] = "e273f5c2ec6e0eebd9ddbc84e3b0234a90caa71fd852b0cb337d2b82c81ca0ca"
 
 RDEPENDS:OpenColorIO:x86_64_v2 = " \

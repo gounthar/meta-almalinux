@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-openpgp-cert-d"
 PV = "0.3.4"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-openpgp-cert-d+default-devel \
  rust-openpgp-cert-d-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-openpgp-cert-d+default-devel \
+ rust-openpgp-cert-d-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-openpgp-cert-d-0.3.4-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-openpgp-cert-d-0.3.4-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "05f32f93c24902b9aabbc0b81a4ae2dd3f3df62f6ec541ca09b0cfbceefd4e71"
 
-URI_x86_64_v2_rust-openpgp-cert-d+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-openpgp-cert-d+default-devel-0.3.4-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-openpgp-cert-d+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-openpgp-cert-d+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-openpgp-cert-d+default-devel-0.3.4-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-openpgp-cert-d+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-openpgp-cert-d+default-devel.sha256sum] = "a9df66cdcfea1d86a9cde2f08639e1d629484f09b0b3d39334a42ca19e3d4349"
 
-URI_x86_64_v2_rust-openpgp-cert-d-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-openpgp-cert-d-devel-0.3.4-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-openpgp-cert-d-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-openpgp-cert-d-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-openpgp-cert-d-devel-0.3.4-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-openpgp-cert-d-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-openpgp-cert-d-devel.sha256sum] = "5ffb99fbd5a080589bdde2b2954a895b2c2a52b4f67aa25586316a27745b863a"
 
-URI_aarch64_rust-openpgp-cert-d+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-openpgp-cert-d+default-devel-0.3.4-1.el10_3.noarch.rpm;name=aarch64_rust-openpgp-cert-d+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-openpgp-cert-d+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-openpgp-cert-d+default-devel-0.3.4-1.el10_3.noarch.rpm;name=aarch64_rust-openpgp-cert-d+default-devel;unpack=0"
 SRC_URI[aarch64_rust-openpgp-cert-d+default-devel.sha256sum] = "023961bea2549f31f83744024cb82440bb07617ab2a9f453c92540d357bee42b"
 
-URI_aarch64_rust-openpgp-cert-d-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-openpgp-cert-d-devel-0.3.4-1.el10_3.noarch.rpm;name=aarch64_rust-openpgp-cert-d-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-openpgp-cert-d-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-openpgp-cert-d-devel-0.3.4-1.el10_3.noarch.rpm;name=aarch64_rust-openpgp-cert-d-devel;unpack=0"
 SRC_URI[aarch64_rust-openpgp-cert-d-devel.sha256sum] = "844de22ddbb9a5c507382ac10644f5ca2513129e6fb897df075632ce792118df"
 
 RDEPENDS:rust-openpgp-cert-d+default-devel = " \

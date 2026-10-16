@@ -9,17 +9,17 @@ PACKAGES = " \
  mptcpd \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/mptcpd-0.12-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/mptcpd-0.12-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c644d4fcb875c6e3393bc1091a9442adbb3e7a51bef40c1bd11f6e283239a4e0"
 
-URI_x86_64_v2_mptcpd = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mptcpd-0.12-6.el10.x86_64_v2.rpm;name=x86_64_v2_mptcpd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mptcpd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mptcpd-0.12-6.el10.x86_64_v2.rpm;name=x86_64_v2_mptcpd;unpack=0"
 SRC_URI[x86_64_v2_mptcpd.sha256sum] = "4dcc69b9a974c04810279ff40fba62c98a13aa12b089e88a82b2ae82dfd3950c"
 
-URI_aarch64_mptcpd = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mptcpd-0.12-6.el10.aarch64.rpm;name=aarch64_mptcpd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mptcpd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mptcpd-0.12-6.el10.aarch64.rpm;name=aarch64_mptcpd;unpack=0"
 SRC_URI[aarch64_mptcpd.sha256sum] = "c485a28a56cbe25e6d62c3945900508cd6a85c2f7360688c98afe30c93e6c59c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/mptcpd-0.12-6.el10.riscv64.rpm;name=riscv64_mptcpd;unpack=0"
+SRC_URI[riscv64_mptcpd.sha256sum] = "4d9dba99b22e23857a530f54c9b5a05998bccdc81ed9391c6b2f1c38b5b55e3a"
 
 RDEPENDS:mptcpd = " \
  glibc \

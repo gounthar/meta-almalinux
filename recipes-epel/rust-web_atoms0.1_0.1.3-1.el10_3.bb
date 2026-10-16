@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-web_atoms0.1"
 PV = "0.1.3"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-web_atoms0.1+default-devel \
  rust-web_atoms0.1-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-web_atoms0.1+default-devel \
+ rust-web_atoms0.1-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-web_atoms0.1-0.1.3-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-web_atoms0.1-0.1.3-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8f0b45a551a558dd0e29bb9177a83c22860cc97ae6aa2e9168b1cfdaf683586d"
 
-URI_x86_64_v2_rust-web_atoms0.1+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-web_atoms0.1+default-devel-0.1.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-web_atoms0.1+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-web_atoms0.1+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-web_atoms0.1+default-devel-0.1.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-web_atoms0.1+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-web_atoms0.1+default-devel.sha256sum] = "501b1671bef74149569911f48a8c583fd8bea8ed8d1a551f31fc68f98c6f3309"
 
-URI_x86_64_v2_rust-web_atoms0.1-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-web_atoms0.1-devel-0.1.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-web_atoms0.1-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-web_atoms0.1-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-web_atoms0.1-devel-0.1.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-web_atoms0.1-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-web_atoms0.1-devel.sha256sum] = "6b05c6e968dab5c2ae37a5eed92ae38df9ecd6cbbdd75bea992f0a7f3b65ac7a"
 
-URI_aarch64_rust-web_atoms0.1+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-web_atoms0.1+default-devel-0.1.3-1.el10_3.noarch.rpm;name=aarch64_rust-web_atoms0.1+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-web_atoms0.1+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-web_atoms0.1+default-devel-0.1.3-1.el10_3.noarch.rpm;name=aarch64_rust-web_atoms0.1+default-devel;unpack=0"
 SRC_URI[aarch64_rust-web_atoms0.1+default-devel.sha256sum] = "17e9a50a4e585f2986f56da220ba5ffe853d604c324d9ccf92b69604716f9f91"
 
-URI_aarch64_rust-web_atoms0.1-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-web_atoms0.1-devel-0.1.3-1.el10_3.noarch.rpm;name=aarch64_rust-web_atoms0.1-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-web_atoms0.1-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-web_atoms0.1-devel-0.1.3-1.el10_3.noarch.rpm;name=aarch64_rust-web_atoms0.1-devel;unpack=0"
 SRC_URI[aarch64_rust-web_atoms0.1-devel.sha256sum] = "68abbeabbc0119ff75a6bfd9d035d1bc7c326c14344ec500c524299cb2066e17"
 
 RDEPENDS:rust-web_atoms0.1+default-devel = " \

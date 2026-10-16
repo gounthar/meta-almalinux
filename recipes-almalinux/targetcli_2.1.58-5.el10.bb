@@ -9,17 +9,17 @@ PACKAGES = " \
  targetcli \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/targetcli-2.1.58-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/targetcli-2.1.58-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "470368b730484fd0027bbdbb6054e4c380ad8925b5bee154ba83322c9f47f630"
 
-URI_x86_64_v2_targetcli = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/targetcli-2.1.58-5.el10.noarch.rpm;name=x86_64_v2_targetcli;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_targetcli}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/targetcli-2.1.58-5.el10.noarch.rpm;name=x86_64_v2_targetcli;unpack=0"
 SRC_URI[x86_64_v2_targetcli.sha256sum] = "44ca38a1bf244c8c665c83ee4b1ff50e258eb31e14177b7f238bd24be3d73b4b"
 
-URI_aarch64_targetcli = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/targetcli-2.1.58-5.el10.noarch.rpm;name=aarch64_targetcli;unpack=0"
-SRC_URI:append = " ${URI_aarch64_targetcli}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/targetcli-2.1.58-5.el10.noarch.rpm;name=aarch64_targetcli;unpack=0"
 SRC_URI[aarch64_targetcli.sha256sum] = "44ca38a1bf244c8c665c83ee4b1ff50e258eb31e14177b7f238bd24be3d73b4b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/targetcli-2.1.58-5.el10.noarch.rpm;name=riscv64_targetcli;unpack=0"
+SRC_URI[riscv64_targetcli.sha256sum] = "44ca38a1bf244c8c665c83ee4b1ff50e258eb31e14177b7f238bd24be3d73b4b"
 
 RDEPENDS:targetcli = " \
  python3 \

@@ -9,21 +9,32 @@ PACKAGES = " \
  python3-sqlalchemy \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python-sqlalchemy-2.0.26-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python-sqlalchemy-2.0.26-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "72ee8b8eda521e48bbeebde0a2bca41993e41848fb6203d5be7925632ebe733c"
 
-URI_x86_64_v2_python3-sqlalchemy = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-sqlalchemy-2.0.26-6.el10.x86_64_v2.rpm;name=x86_64_v2_python3-sqlalchemy;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-sqlalchemy}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-sqlalchemy-2.0.26-6.el10.x86_64_v2.rpm;name=x86_64_v2_python3-sqlalchemy;unpack=0"
 SRC_URI[x86_64_v2_python3-sqlalchemy.sha256sum] = "1cf99c3b84837a3740be6ec7b1992688ddb9a5a9387f1c3d2317954c8f6e53b8"
 
-URI_aarch64_python3-sqlalchemy = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-sqlalchemy-2.0.26-6.el10.aarch64.rpm;name=aarch64_python3-sqlalchemy;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-sqlalchemy}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-sqlalchemy-2.0.26-6.el10.aarch64.rpm;name=aarch64_python3-sqlalchemy;unpack=0"
 SRC_URI[aarch64_python3-sqlalchemy.sha256sum] = "4319ea6175d5fe84acfa93b7e8b45224c2021ca69c534ba9020cd5e897c3c8ac"
 
-RDEPENDS:python3-sqlalchemy = " \
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-sqlalchemy-2.0.26-6.el10.riscv64.rpm;name=riscv64_python3-sqlalchemy;unpack=0"
+SRC_URI[riscv64_python3-sqlalchemy.sha256sum] = "d679912577b39d472f0fced437dae06e63ce0121c4cc80328370f912dc33fa6d"
+
+RDEPENDS:python3-sqlalchemy:x86_64_v2 = " \
  glibc \
  python3 \
  python3-greenlet \
  python3-typing-extensions \
- "
+"
+RDEPENDS:python3-sqlalchemy:aarch64 = " \
+ glibc \
+ python3 \
+ python3-greenlet \
+ python3-typing-extensions \
+"
+RDEPENDS:python3-sqlalchemy:riscv64 = " \
+ glibc \
+ python3 \
+ python3-typing-extensions \
+"

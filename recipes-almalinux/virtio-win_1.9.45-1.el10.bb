@@ -8,7 +8,6 @@ PR = "1.el10"
 PACKAGES = " \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/virtio-win-1.9.45-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/virtio-win-1.9.45-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "60cb2e11811ae1b8326eb611d086c714bb8c422b16462fe314d12e8765a1e820"
 

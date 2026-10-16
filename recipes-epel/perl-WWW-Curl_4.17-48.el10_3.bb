@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-WWW-Curl"
 PV = "4.17"
 PR = "48.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-WWW-Curl \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-WWW-Curl \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-WWW-Curl-4.17-48.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-WWW-Curl-4.17-48.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "72bc445694d90b44e693379a32ff59b857e55d89cf1d1f6f8b6f3f63b1609931"
 
-URI_x86_64_v2_perl-WWW-Curl = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-WWW-Curl-4.17-48.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_perl-WWW-Curl;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-WWW-Curl}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-WWW-Curl-4.17-48.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_perl-WWW-Curl;unpack=0"
 SRC_URI[x86_64_v2_perl-WWW-Curl.sha256sum] = "a36ac08542329ee03da898c965029249950dd4da57d3cebfafdca31d3627ff34"
 
-URI_aarch64_perl-WWW-Curl = "${EPEL_MIRROR}/aarch64/Packages/p/perl-WWW-Curl-4.17-48.el10_3.aarch64.rpm;name=aarch64_perl-WWW-Curl;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-WWW-Curl}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-WWW-Curl-4.17-48.el10_3.aarch64.rpm;name=aarch64_perl-WWW-Curl;unpack=0"
 SRC_URI[aarch64_perl-WWW-Curl.sha256sum] = "8993275314ec3b70f159f8853033ecd726f0f9c09fe322fc6619d4f4fe9bd3f8"
 
 RDEPENDS:perl-WWW-Curl = " \

@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "rust-tonic-prost-build"
 PV = "0.14.5"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-tonic-prost-build+default-devel \
  rust-tonic-prost-build+transport-devel \
  rust-tonic-prost-build-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-tonic-prost-build+default-devel \
+ rust-tonic-prost-build+transport-devel \
+ rust-tonic-prost-build-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-tonic-prost-build-0.14.5-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-tonic-prost-build-0.14.5-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "5a75ed49315f4774c572deac7f50e16f3119c4ac5b3ce0d1785b00a353f524d9"
 
-URI_x86_64_v2_rust-tonic-prost-build+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-tonic-prost-build+default-devel-0.14.5-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-tonic-prost-build+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-tonic-prost-build+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-tonic-prost-build+default-devel-0.14.5-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-tonic-prost-build+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-tonic-prost-build+default-devel.sha256sum] = "0542c7150b6f00db7b6c895ed1ffae037ecb3b0f0f9234dad8b2771e592cccec"
 
-URI_x86_64_v2_rust-tonic-prost-build+transport-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-tonic-prost-build+transport-devel-0.14.5-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-tonic-prost-build+transport-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-tonic-prost-build+transport-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-tonic-prost-build+transport-devel-0.14.5-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-tonic-prost-build+transport-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-tonic-prost-build+transport-devel.sha256sum] = "99881f64fadb48a721bca18c1e6d4fac67ba0c826fbc8be778a996c6f5e99af6"
 
-URI_x86_64_v2_rust-tonic-prost-build-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-tonic-prost-build-devel-0.14.5-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-tonic-prost-build-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-tonic-prost-build-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-tonic-prost-build-devel-0.14.5-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-tonic-prost-build-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-tonic-prost-build-devel.sha256sum] = "6014dc4d03d1416f6ced48c6ca4c77e1bab53db746bf50a46ff168829e153514"
 
-URI_aarch64_rust-tonic-prost-build+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-tonic-prost-build+default-devel-0.14.5-1.el10_3.noarch.rpm;name=aarch64_rust-tonic-prost-build+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-tonic-prost-build+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-tonic-prost-build+default-devel-0.14.5-1.el10_3.noarch.rpm;name=aarch64_rust-tonic-prost-build+default-devel;unpack=0"
 SRC_URI[aarch64_rust-tonic-prost-build+default-devel.sha256sum] = "3b7b8a83934ea7f283cad4b5dbf40404f10e4f6d28786207a9fd26473b3eb814"
 
-URI_aarch64_rust-tonic-prost-build+transport-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-tonic-prost-build+transport-devel-0.14.5-1.el10_3.noarch.rpm;name=aarch64_rust-tonic-prost-build+transport-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-tonic-prost-build+transport-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-tonic-prost-build+transport-devel-0.14.5-1.el10_3.noarch.rpm;name=aarch64_rust-tonic-prost-build+transport-devel;unpack=0"
 SRC_URI[aarch64_rust-tonic-prost-build+transport-devel.sha256sum] = "03e36fcb61ecac5c99360beb06bae1146fe382b954553713578a129ca66f5166"
 
-URI_aarch64_rust-tonic-prost-build-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-tonic-prost-build-devel-0.14.5-1.el10_3.noarch.rpm;name=aarch64_rust-tonic-prost-build-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-tonic-prost-build-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-tonic-prost-build-devel-0.14.5-1.el10_3.noarch.rpm;name=aarch64_rust-tonic-prost-build-devel;unpack=0"
 SRC_URI[aarch64_rust-tonic-prost-build-devel.sha256sum] = "4f50c956c0a1b575b89e72985c35ae03e8e2ad7cfdc8491df8b66cc10aa87da9"
 
 RDEPENDS:rust-tonic-prost-build+default-devel = " \

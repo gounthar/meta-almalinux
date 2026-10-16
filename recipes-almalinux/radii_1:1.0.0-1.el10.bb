@@ -10,17 +10,17 @@ PACKAGES = " \
  radii \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/radii-1.0.0-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/radii-1.0.0-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f4725d5bee1a9190e74b428f292b9aa4eb7188b37862fdb0ac903501df1150e5"
 
-URI_x86_64_v2_radii = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/radii-1.0.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_radii;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_radii}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/radii-1.0.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_radii;unpack=0"
 SRC_URI[x86_64_v2_radii.sha256sum] = "d945304fce8799869af12f8a00ecfec269483e408f205d17e858db2b2c35c7f8"
 
-URI_aarch64_radii = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/radii-1.0.0-1.el10.aarch64.rpm;name=aarch64_radii;unpack=0"
-SRC_URI:append = " ${URI_aarch64_radii}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/radii-1.0.0-1.el10.aarch64.rpm;name=aarch64_radii;unpack=0"
 SRC_URI[aarch64_radii.sha256sum] = "0a506acaf34a8c3a95a480aa00a60aa9161c0e7f3658ef30f16c13fbf29aec04"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/radii-1.0.0-1.el10.riscv64.rpm;name=riscv64_radii;unpack=0"
+SRC_URI[riscv64_radii.sha256sum] = "55b4fba289ebd39f58278b75c4d3f863b185a31176607c686911349cab2c8b0f"
 
 RDEPENDS:radii = " \
  glibc \

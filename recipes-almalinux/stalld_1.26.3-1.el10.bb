@@ -9,17 +9,17 @@ PACKAGES = " \
  stalld \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/stalld-1.26.3-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/stalld-1.26.3-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d61f45c73e28d8469e1b219f67ac492869c1b3913b79b01118aad84a57c970a0"
 
-URI_x86_64_v2_stalld = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/stalld-1.26.3-1.el10.x86_64_v2.rpm;name=x86_64_v2_stalld;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_stalld}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/stalld-1.26.3-1.el10.x86_64_v2.rpm;name=x86_64_v2_stalld;unpack=0"
 SRC_URI[x86_64_v2_stalld.sha256sum] = "379bc9f192a05d0d756ac88d52a8c10d5edca2f90d70a5920281f430b3d1897f"
 
-URI_aarch64_stalld = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/stalld-1.26.3-1.el10.aarch64.rpm;name=aarch64_stalld;unpack=0"
-SRC_URI:append = " ${URI_aarch64_stalld}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/stalld-1.26.3-1.el10.aarch64.rpm;name=aarch64_stalld;unpack=0"
 SRC_URI[aarch64_stalld.sha256sum] = "1291428b0db5848a1498addb5ea471190aff036a8557601e1a136ee68d6e3ee8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/stalld-1.26.3-1.el10.riscv64.rpm;name=riscv64_stalld;unpack=0"
+SRC_URI[riscv64_stalld.sha256sum] = "9a5e0c4c7b3f739ee698ee972b74819cf451924f6a37820dae90a483bde44dfa"
 
 RDEPENDS:stalld = " \
  bash \

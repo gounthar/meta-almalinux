@@ -11,33 +11,35 @@ PACKAGES = " \
  kmod-libs \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/kmod-31-13.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/kmod-31-13.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3b9ebb61afcdd06589a1d4975068bbf9b99c0846ee470b57ff02b7c0882be2b8"
 
-URI_x86_64_v2_kmod = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/kmod-31-13.el10.x86_64_v2.rpm;name=x86_64_v2_kmod;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_kmod}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/kmod-31-13.el10.x86_64_v2.rpm;name=x86_64_v2_kmod;unpack=0"
 SRC_URI[x86_64_v2_kmod.sha256sum] = "0811588ae188f3e2e9fc4d5fb2c3bda23743d20946b11ef924abdc403ab0172b"
 
-URI_x86_64_v2_kmod-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/kmod-devel-31-13.el10.x86_64_v2.rpm;name=x86_64_v2_kmod-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_kmod-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/kmod-devel-31-13.el10.x86_64_v2.rpm;name=x86_64_v2_kmod-devel;unpack=0"
 SRC_URI[x86_64_v2_kmod-devel.sha256sum] = "c3e2815838531ba66fb941c79eecc018e997b428a954245453358fabd6b84de4"
 
-URI_x86_64_v2_kmod-libs = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/kmod-libs-31-13.el10.x86_64_v2.rpm;name=x86_64_v2_kmod-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_kmod-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/kmod-libs-31-13.el10.x86_64_v2.rpm;name=x86_64_v2_kmod-libs;unpack=0"
 SRC_URI[x86_64_v2_kmod-libs.sha256sum] = "df5d4813017416fa2c016bdb57bec917c1f140ffb2d3701e0d4671b742acde71"
 
-URI_aarch64_kmod = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/kmod-31-13.el10.aarch64.rpm;name=aarch64_kmod;unpack=0"
-SRC_URI:append = " ${URI_aarch64_kmod}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/kmod-31-13.el10.aarch64.rpm;name=aarch64_kmod;unpack=0"
 SRC_URI[aarch64_kmod.sha256sum] = "e28784a3ffd1b6e9ef9690e2311f222174b1d6723984aa31f5389512d1c49ec9"
 
-URI_aarch64_kmod-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/kmod-devel-31-13.el10.aarch64.rpm;name=aarch64_kmod-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_kmod-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/kmod-devel-31-13.el10.aarch64.rpm;name=aarch64_kmod-devel;unpack=0"
 SRC_URI[aarch64_kmod-devel.sha256sum] = "c3fb05a42f1f97096ca6fa7ae6d17257d423be6b3f82217cc62d319dd31e8fc5"
 
-URI_aarch64_kmod-libs = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/kmod-libs-31-13.el10.aarch64.rpm;name=aarch64_kmod-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_kmod-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/kmod-libs-31-13.el10.aarch64.rpm;name=aarch64_kmod-libs;unpack=0"
 SRC_URI[aarch64_kmod-libs.sha256sum] = "1e4646af4bbb4d19245e42fb3bfc550c6b10f37277940bfba4968dc10b5a729b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/kmod-31-13.el10.riscv64.rpm;name=riscv64_kmod;unpack=0"
+SRC_URI[riscv64_kmod.sha256sum] = "2fbe61ce66ec08da1f74914909845a6d78b72e4c5b3a07c285f025e588604f82"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/kmod-devel-31-13.el10.riscv64.rpm;name=riscv64_kmod-devel;unpack=0"
+SRC_URI[riscv64_kmod-devel.sha256sum] = "769d62be3cc4f7cefb0f34776e1c5c78874e5ce80ee985ec57142ff2ba4e6db9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/kmod-libs-31-13.el10.riscv64.rpm;name=riscv64_kmod-libs;unpack=0"
+SRC_URI[riscv64_kmod-libs.sha256sum] = "dbf41b078170faaa36ce2b53f962ddccbf3bfad611acb1e04c9c53a3a4df664e"
 
 RDEPENDS:kmod = " \
  bash \

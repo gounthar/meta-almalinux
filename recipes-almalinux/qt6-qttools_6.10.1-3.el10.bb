@@ -21,113 +21,125 @@ PACKAGES = " \
  qt6-qttools-static \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qttools-6.10.1-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qttools-6.10.1-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "2006f4783cce0b761fb797d1ae41ef02daffe078ba31a3038aa2eb991cbf41d4"
 
-URI_x86_64_v2_qt6-assistant = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-assistant-6.10.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-assistant;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-assistant}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-assistant-6.10.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-assistant;unpack=0"
 SRC_URI[x86_64_v2_qt6-assistant.sha256sum] = "b1cfbfa42e513886d57b78c9c050c530663a1b564bbb8c2da21b8afbbdbc02c7"
 
-URI_x86_64_v2_qt6-designer = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-designer-6.10.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-designer;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-designer}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-designer-6.10.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-designer;unpack=0"
 SRC_URI[x86_64_v2_qt6-designer.sha256sum] = "d06c0ecb92753c62e6984ef216efc2f889d14a9ce49e6b871011d54bbdb88ae7"
 
-URI_x86_64_v2_qt6-doctools = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-doctools-6.10.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-doctools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-doctools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-doctools-6.10.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-doctools;unpack=0"
 SRC_URI[x86_64_v2_qt6-doctools.sha256sum] = "aa92506a69407388be79f20e6e114dbfd8dea99b9af75f049ac1667fe12ec3b0"
 
-URI_x86_64_v2_qt6-linguist = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-linguist-6.10.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-linguist;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-linguist}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-linguist-6.10.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-linguist;unpack=0"
 SRC_URI[x86_64_v2_qt6-linguist.sha256sum] = "6a0b7b6b1ba974a28cdde6aada9c0be8979985ff4b3a599e7e3b7050b90a35d4"
 
-URI_x86_64_v2_qt6-qdbusviewer = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qdbusviewer-6.10.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qdbusviewer;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qdbusviewer}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qdbusviewer-6.10.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qdbusviewer;unpack=0"
 SRC_URI[x86_64_v2_qt6-qdbusviewer.sha256sum] = "9dd12f3cf43b5af38ee155f0cd223dc6f7dd734904d3740a939aac27c280db18"
 
-URI_x86_64_v2_qt6-qttools = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qttools-6.10.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qttools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qttools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qttools-6.10.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qttools;unpack=0"
 SRC_URI[x86_64_v2_qt6-qttools.sha256sum] = "b43bc54778090a80a0df62a0d5be528da5739b60fd4808e91692734fc650e1df"
 
-URI_x86_64_v2_qt6-qttools-common = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qttools-common-6.10.1-3.el10.noarch.rpm;name=x86_64_v2_qt6-qttools-common;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qttools-common}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qttools-common-6.10.1-3.el10.noarch.rpm;name=x86_64_v2_qt6-qttools-common;unpack=0"
 SRC_URI[x86_64_v2_qt6-qttools-common.sha256sum] = "efdcf69f7d75012da0949d6333073636ab294246aca6e655d9bd7adb6c30de17"
 
-URI_x86_64_v2_qt6-qttools-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qttools-devel-6.10.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qttools-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qttools-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qttools-devel-6.10.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qttools-devel;unpack=0"
 SRC_URI[x86_64_v2_qt6-qttools-devel.sha256sum] = "b851428e4b97004ec2a219983bb1162d30fdf3ed1abe6d06b7eb967aae61005e"
 
-URI_x86_64_v2_qt6-qttools-examples = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qttools-examples-6.10.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qttools-examples;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qttools-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qttools-examples-6.10.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qttools-examples;unpack=0"
 SRC_URI[x86_64_v2_qt6-qttools-examples.sha256sum] = "24a5fcdef75b7937fd17e46bdb1ba3e439c45f135e1e3f6b111f00d4b2307fcc"
 
-URI_x86_64_v2_qt6-qttools-libs-designer = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qttools-libs-designer-6.10.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qttools-libs-designer;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qttools-libs-designer}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qttools-libs-designer-6.10.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qttools-libs-designer;unpack=0"
 SRC_URI[x86_64_v2_qt6-qttools-libs-designer.sha256sum] = "40167e68ae797fa63fad179dc6f9b85790677722c3b82e3b25995a7e65fbc4c0"
 
-URI_x86_64_v2_qt6-qttools-libs-designercomponents = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qttools-libs-designercomponents-6.10.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qttools-libs-designercomponents;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qttools-libs-designercomponents}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qttools-libs-designercomponents-6.10.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qttools-libs-designercomponents;unpack=0"
 SRC_URI[x86_64_v2_qt6-qttools-libs-designercomponents.sha256sum] = "8f33e68ebdd60eb2429cefa04f882ae14b5abd1c8db6fce8772bd9601d66889d"
 
-URI_x86_64_v2_qt6-qttools-libs-help = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qttools-libs-help-6.10.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qttools-libs-help;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qttools-libs-help}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qttools-libs-help-6.10.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qttools-libs-help;unpack=0"
 SRC_URI[x86_64_v2_qt6-qttools-libs-help.sha256sum] = "d46a68907425b2db1128b6acaa1a1790946dddb0b59dd798dd30fab4f3b40a32"
 
-URI_x86_64_v2_qt6-qttools-static = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qttools-static-6.10.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qttools-static;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qttools-static}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qttools-static-6.10.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qttools-static;unpack=0"
 SRC_URI[x86_64_v2_qt6-qttools-static.sha256sum] = "056c3c11cd3ad82c9d808ef51525bd27e19e0867129365bfce74f1354ea7df39"
 
-URI_aarch64_qt6-assistant = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-assistant-6.10.1-3.el10.aarch64.rpm;name=aarch64_qt6-assistant;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-assistant}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-assistant-6.10.1-3.el10.aarch64.rpm;name=aarch64_qt6-assistant;unpack=0"
 SRC_URI[aarch64_qt6-assistant.sha256sum] = "f6ec9218be659c2a128f2e8a592b0f5d95b4c2f7f31efdc1c49c4942e1ed5de3"
 
-URI_aarch64_qt6-designer = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-designer-6.10.1-3.el10.aarch64.rpm;name=aarch64_qt6-designer;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-designer}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-designer-6.10.1-3.el10.aarch64.rpm;name=aarch64_qt6-designer;unpack=0"
 SRC_URI[aarch64_qt6-designer.sha256sum] = "00e24c027d008ee765c1ed775bfb17301b1c7d98d71c4e0f59aa64e36ce90f07"
 
-URI_aarch64_qt6-doctools = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-doctools-6.10.1-3.el10.aarch64.rpm;name=aarch64_qt6-doctools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-doctools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-doctools-6.10.1-3.el10.aarch64.rpm;name=aarch64_qt6-doctools;unpack=0"
 SRC_URI[aarch64_qt6-doctools.sha256sum] = "4f9f546237e14ff28edbe14d30d13f22db1b8eb7ece8b25e48e04f18103726fe"
 
-URI_aarch64_qt6-linguist = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-linguist-6.10.1-3.el10.aarch64.rpm;name=aarch64_qt6-linguist;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-linguist}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-linguist-6.10.1-3.el10.aarch64.rpm;name=aarch64_qt6-linguist;unpack=0"
 SRC_URI[aarch64_qt6-linguist.sha256sum] = "20d0d3673431969ab9014db0db87d11ec516749cced91f403fec490ef9b5e2f9"
 
-URI_aarch64_qt6-qdbusviewer = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qdbusviewer-6.10.1-3.el10.aarch64.rpm;name=aarch64_qt6-qdbusviewer;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qdbusviewer}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qdbusviewer-6.10.1-3.el10.aarch64.rpm;name=aarch64_qt6-qdbusviewer;unpack=0"
 SRC_URI[aarch64_qt6-qdbusviewer.sha256sum] = "6bd9a199c37605581e45b99b7a8f3b596120ff0ad8f87e6185de0ae86a839921"
 
-URI_aarch64_qt6-qttools = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qttools-6.10.1-3.el10.aarch64.rpm;name=aarch64_qt6-qttools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qttools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qttools-6.10.1-3.el10.aarch64.rpm;name=aarch64_qt6-qttools;unpack=0"
 SRC_URI[aarch64_qt6-qttools.sha256sum] = "456703d53301c57ce7334f720e1ef4b86539ab3235673cc17d42895498ff2101"
 
-URI_aarch64_qt6-qttools-common = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qttools-common-6.10.1-3.el10.noarch.rpm;name=aarch64_qt6-qttools-common;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qttools-common}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qttools-common-6.10.1-3.el10.noarch.rpm;name=aarch64_qt6-qttools-common;unpack=0"
 SRC_URI[aarch64_qt6-qttools-common.sha256sum] = "efdcf69f7d75012da0949d6333073636ab294246aca6e655d9bd7adb6c30de17"
 
-URI_aarch64_qt6-qttools-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qttools-devel-6.10.1-3.el10.aarch64.rpm;name=aarch64_qt6-qttools-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qttools-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qttools-devel-6.10.1-3.el10.aarch64.rpm;name=aarch64_qt6-qttools-devel;unpack=0"
 SRC_URI[aarch64_qt6-qttools-devel.sha256sum] = "83de328128ed20d8926857790b879f660522653589edacf008c0cbbdf2c21c13"
 
-URI_aarch64_qt6-qttools-examples = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qttools-examples-6.10.1-3.el10.aarch64.rpm;name=aarch64_qt6-qttools-examples;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qttools-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qttools-examples-6.10.1-3.el10.aarch64.rpm;name=aarch64_qt6-qttools-examples;unpack=0"
 SRC_URI[aarch64_qt6-qttools-examples.sha256sum] = "41235bc85f929ca2b6651bd7f55f8336f2f338a5e77110f738e57542f2f9c5f1"
 
-URI_aarch64_qt6-qttools-libs-designer = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qttools-libs-designer-6.10.1-3.el10.aarch64.rpm;name=aarch64_qt6-qttools-libs-designer;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qttools-libs-designer}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qttools-libs-designer-6.10.1-3.el10.aarch64.rpm;name=aarch64_qt6-qttools-libs-designer;unpack=0"
 SRC_URI[aarch64_qt6-qttools-libs-designer.sha256sum] = "9d3d072a009587aab0d37329b85d605fe1985d68ebf0c8de0bd9e24688620cc0"
 
-URI_aarch64_qt6-qttools-libs-designercomponents = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qttools-libs-designercomponents-6.10.1-3.el10.aarch64.rpm;name=aarch64_qt6-qttools-libs-designercomponents;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qttools-libs-designercomponents}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qttools-libs-designercomponents-6.10.1-3.el10.aarch64.rpm;name=aarch64_qt6-qttools-libs-designercomponents;unpack=0"
 SRC_URI[aarch64_qt6-qttools-libs-designercomponents.sha256sum] = "d52ca5c90b371874e563f90f613e1e1af134973c10bdf9bfe3b7b72a5ce8ee76"
 
-URI_aarch64_qt6-qttools-libs-help = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qttools-libs-help-6.10.1-3.el10.aarch64.rpm;name=aarch64_qt6-qttools-libs-help;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qttools-libs-help}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qttools-libs-help-6.10.1-3.el10.aarch64.rpm;name=aarch64_qt6-qttools-libs-help;unpack=0"
 SRC_URI[aarch64_qt6-qttools-libs-help.sha256sum] = "37c21de500d03c4bf0880e66773e506c52ea5603ea7b2f5f68f71639980a534e"
 
-URI_aarch64_qt6-qttools-static = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qttools-static-6.10.1-3.el10.aarch64.rpm;name=aarch64_qt6-qttools-static;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qttools-static}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qttools-static-6.10.1-3.el10.aarch64.rpm;name=aarch64_qt6-qttools-static;unpack=0"
 SRC_URI[aarch64_qt6-qttools-static.sha256sum] = "99a20429663aa5d8b7f8add5d7bb2b41e54078b2683604a8319dea3473ebc87e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-assistant-6.10.1-3.el10.riscv64.rpm;name=riscv64_qt6-assistant;unpack=0"
+SRC_URI[riscv64_qt6-assistant.sha256sum] = "a22810fab41be39daea85036e1c205275117181718637f0dd59295ba981c93b6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-designer-6.10.1-3.el10.riscv64.rpm;name=riscv64_qt6-designer;unpack=0"
+SRC_URI[riscv64_qt6-designer.sha256sum] = "9cd11a8aa362b0eb63567c7ca5c5399ec8ea41928ea60a40653faa049badd494"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-doctools-6.10.1-3.el10.riscv64.rpm;name=riscv64_qt6-doctools;unpack=0"
+SRC_URI[riscv64_qt6-doctools.sha256sum] = "4de04a89a87d7a1f25bacb69d9288d20208eaff8b49b7aa4add9f9a13f017881"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-linguist-6.10.1-3.el10.riscv64.rpm;name=riscv64_qt6-linguist;unpack=0"
+SRC_URI[riscv64_qt6-linguist.sha256sum] = "3b408ec559c7eb2be4c6325bbcabb7719f021a142b997a063ba21cdfe65acefa"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qdbusviewer-6.10.1-3.el10.riscv64.rpm;name=riscv64_qt6-qdbusviewer;unpack=0"
+SRC_URI[riscv64_qt6-qdbusviewer.sha256sum] = "ca476e9f7dd09ced2ce3286d7c49d2daf9c00324cdc1a9a9ff6171f4aa7e4c17"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qttools-6.10.1-3.el10.riscv64.rpm;name=riscv64_qt6-qttools;unpack=0"
+SRC_URI[riscv64_qt6-qttools.sha256sum] = "f32969390643c2cbd5841b7af6e0520deb6c0447038f8284682a3e3dffed538b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qttools-common-6.10.1-3.el10.noarch.rpm;name=riscv64_qt6-qttools-common;unpack=0"
+SRC_URI[riscv64_qt6-qttools-common.sha256sum] = "efdcf69f7d75012da0949d6333073636ab294246aca6e655d9bd7adb6c30de17"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qttools-devel-6.10.1-3.el10.riscv64.rpm;name=riscv64_qt6-qttools-devel;unpack=0"
+SRC_URI[riscv64_qt6-qttools-devel.sha256sum] = "fc5e19a88d395f172deeb7ca4560db63fdae5ba38e41eac807ee450ca599894b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/qt6-qttools-examples-6.10.1-3.el10.riscv64.rpm;name=riscv64_qt6-qttools-examples;unpack=0"
+SRC_URI[riscv64_qt6-qttools-examples.sha256sum] = "b3c57d131429293a1070a9f27dc1cd5607361c316aaee067d88006b46d22b3bd"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qttools-libs-designer-6.10.1-3.el10.riscv64.rpm;name=riscv64_qt6-qttools-libs-designer;unpack=0"
+SRC_URI[riscv64_qt6-qttools-libs-designer.sha256sum] = "7beaa41bf2223f1a43e3cd552a89dec44752e11398d311100b5b6aaecb69d1d2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qttools-libs-designercomponents-6.10.1-3.el10.riscv64.rpm;name=riscv64_qt6-qttools-libs-designercomponents;unpack=0"
+SRC_URI[riscv64_qt6-qttools-libs-designercomponents.sha256sum] = "8e8386f049538756abffb0accd9a6f3305f53a21b96810deab978ee19dbadbe5"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qttools-libs-help-6.10.1-3.el10.riscv64.rpm;name=riscv64_qt6-qttools-libs-help;unpack=0"
+SRC_URI[riscv64_qt6-qttools-libs-help.sha256sum] = "a695486641ca736b8221be8317d876f75e5b3bcf095d3abaddcf0883e3760668"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/qt6-qttools-static-6.10.1-3.el10.riscv64.rpm;name=riscv64_qt6-qttools-static;unpack=0"
+SRC_URI[riscv64_qt6-qttools-static.sha256sum] = "c5d87a80f444765803a9ab1ddd8ad0491f62d743511987a59b5c18adf8f24e73"
 
 RDEPENDS:qt6-assistant = " \
  glibc \
@@ -138,15 +150,32 @@ RDEPENDS:qt6-assistant = " \
  qt6-qttools-common \
  qt6-qttools-libs-help \
  "
-RDEPENDS:qt6-designer = " \
+RDEPENDS:qt6-designer:x86_64_v2 = " \
  glibc \
  libstdc++ \
  qt6-qtbase \
  qt6-qtbase-gui \
  qt6-qttools-libs-designer \
  qt6-qttools-libs-designercomponents \
- "
-RDEPENDS:qt6-doctools = " \
+"
+RDEPENDS:qt6-designer:aarch64 = " \
+ glibc \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtbase-gui \
+ qt6-qttools-libs-designer \
+ qt6-qttools-libs-designercomponents \
+"
+RDEPENDS:qt6-designer:riscv64 = " \
+ glibc \
+ libgcc \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtbase-gui \
+ qt6-qttools-libs-designer \
+ qt6-qttools-libs-designercomponents \
+"
+RDEPENDS:qt6-doctools:x86_64_v2 = " \
  clang-libs \
  glibc \
  libstdc++ \
@@ -155,8 +184,29 @@ RDEPENDS:qt6-doctools = " \
  qt6-qtbase-gui \
  qt6-qtdeclarative \
  qt6-qttools-libs-help \
- "
-RDEPENDS:qt6-linguist = " \
+"
+RDEPENDS:qt6-doctools:aarch64 = " \
+ clang-libs \
+ glibc \
+ libstdc++ \
+ llvm-libs \
+ qt6-qtbase \
+ qt6-qtbase-gui \
+ qt6-qtdeclarative \
+ qt6-qttools-libs-help \
+"
+RDEPENDS:qt6-doctools:riscv64 = " \
+ clang-libs \
+ glibc \
+ libgcc \
+ libstdc++ \
+ llvm-libs \
+ qt6-qtbase \
+ qt6-qtbase-gui \
+ qt6-qtdeclarative \
+ qt6-qttools-libs-help \
+"
+RDEPENDS:qt6-linguist:x86_64_v2 = " \
  glibc \
  libstdc++ \
  qt6-qtbase \
@@ -164,7 +214,26 @@ RDEPENDS:qt6-linguist = " \
  qt6-qtdeclarative \
  qt6-qttools \
  qt6-qttools-common \
- "
+"
+RDEPENDS:qt6-linguist:aarch64 = " \
+ glibc \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtbase-gui \
+ qt6-qtdeclarative \
+ qt6-qttools \
+ qt6-qttools-common \
+"
+RDEPENDS:qt6-linguist:riscv64 = " \
+ glibc \
+ libgcc \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtbase-gui \
+ qt6-qtdeclarative \
+ qt6-qttools \
+ qt6-qttools-common \
+"
 RDEPENDS:qt6-qdbusviewer = " \
  glibc \
  libstdc++ \
@@ -172,16 +241,31 @@ RDEPENDS:qt6-qdbusviewer = " \
  qt6-qtbase-gui \
  qt6-qttools-common \
  "
-RDEPENDS:qt6-qttools = " \
+RDEPENDS:qt6-qttools:x86_64_v2 = " \
  glibc \
  libstdc++ \
  qt6-qtbase \
  qt6-qtbase-gui \
  qt6-qttools-common \
- "
+"
+RDEPENDS:qt6-qttools:aarch64 = " \
+ glibc \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtbase-gui \
+ qt6-qttools-common \
+"
+RDEPENDS:qt6-qttools:riscv64 = " \
+ glibc \
+ libgcc \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtbase-gui \
+ qt6-qttools-common \
+"
 RDEPENDS:qt6-qttools-common = " \
  "
-RDEPENDS:qt6-qttools-devel = " \
+RDEPENDS:qt6-qttools-devel:x86_64_v2 = " \
  cmake-filesystem \
  glibc \
  libstdc++ \
@@ -197,7 +281,42 @@ RDEPENDS:qt6-qttools-devel = " \
  qt6-qttools-libs-designer \
  qt6-qttools-libs-designercomponents \
  qt6-qttools-libs-help \
- "
+"
+RDEPENDS:qt6-qttools-devel:aarch64 = " \
+ cmake-filesystem \
+ glibc \
+ libstdc++ \
+ pkgconf-pkg-config \
+ qt6-designer \
+ qt6-doctools \
+ qt6-linguist \
+ qt6-qtbase \
+ qt6-qtbase-devel \
+ qt6-qtbase-gui \
+ qt6-qttools \
+ qt6-qttools-devel \
+ qt6-qttools-libs-designer \
+ qt6-qttools-libs-designercomponents \
+ qt6-qttools-libs-help \
+"
+RDEPENDS:qt6-qttools-devel:riscv64 = " \
+ cmake-filesystem \
+ glibc \
+ libgcc \
+ libstdc++ \
+ pkgconf-pkg-config \
+ qt6-designer \
+ qt6-doctools \
+ qt6-linguist \
+ qt6-qtbase \
+ qt6-qtbase-devel \
+ qt6-qtbase-gui \
+ qt6-qttools \
+ qt6-qttools-devel \
+ qt6-qttools-libs-designer \
+ qt6-qttools-libs-designercomponents \
+ qt6-qttools-libs-help \
+"
 RDEPENDS:qt6-qttools-examples = " \
  glibc \
  libgcc \
@@ -219,21 +338,53 @@ RDEPENDS:qt6-qttools-libs-designer = " \
  qt6-qtdeclarative \
  qt6-qttools-common \
  "
-RDEPENDS:qt6-qttools-libs-designercomponents = " \
+RDEPENDS:qt6-qttools-libs-designercomponents:x86_64_v2 = " \
  glibc \
  libstdc++ \
  qt6-qtbase \
  qt6-qtbase-gui \
  qt6-qttools-common \
  qt6-qttools-libs-designer \
- "
-RDEPENDS:qt6-qttools-libs-help = " \
+"
+RDEPENDS:qt6-qttools-libs-designercomponents:aarch64 = " \
  glibc \
  libstdc++ \
  qt6-qtbase \
  qt6-qtbase-gui \
  qt6-qttools-common \
- "
+ qt6-qttools-libs-designer \
+"
+RDEPENDS:qt6-qttools-libs-designercomponents:riscv64 = " \
+ glibc \
+ libgcc \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtbase-gui \
+ qt6-qttools-common \
+ qt6-qttools-libs-designer \
+"
+RDEPENDS:qt6-qttools-libs-help:x86_64_v2 = " \
+ glibc \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtbase-gui \
+ qt6-qttools-common \
+"
+RDEPENDS:qt6-qttools-libs-help:aarch64 = " \
+ glibc \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtbase-gui \
+ qt6-qttools-common \
+"
+RDEPENDS:qt6-qttools-libs-help:riscv64 = " \
+ glibc \
+ libgcc \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtbase-gui \
+ qt6-qttools-common \
+"
 RDEPENDS:qt6-qttools-static = " \
  qt6-qttools-devel \
  "

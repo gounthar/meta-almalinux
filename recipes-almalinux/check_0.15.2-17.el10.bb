@@ -11,33 +11,35 @@ PACKAGES = " \
  check-static \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/check-0.15.2-17.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/check-0.15.2-17.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b92715dcfa1435765e72f6f131fb09c187fa25fa91d00adaf39aecf4a8b4a107"
 
-URI_x86_64_v2_check = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/check-0.15.2-17.el10.x86_64_v2.rpm;name=x86_64_v2_check;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_check}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/check-0.15.2-17.el10.x86_64_v2.rpm;name=x86_64_v2_check;unpack=0"
 SRC_URI[x86_64_v2_check.sha256sum] = "09fb2a4ca896d80a4d3771d121193e0d124a81f136b9be6acbb6a4f3f23003e2"
 
-URI_x86_64_v2_check-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/check-devel-0.15.2-17.el10.x86_64_v2.rpm;name=x86_64_v2_check-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_check-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/check-devel-0.15.2-17.el10.x86_64_v2.rpm;name=x86_64_v2_check-devel;unpack=0"
 SRC_URI[x86_64_v2_check-devel.sha256sum] = "d62b89314548503ebb36f10566c715949b126c905c0f3e1879d7e32d6272df3b"
 
-URI_x86_64_v2_check-static = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/check-static-0.15.2-17.el10.x86_64_v2.rpm;name=x86_64_v2_check-static;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_check-static}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/check-static-0.15.2-17.el10.x86_64_v2.rpm;name=x86_64_v2_check-static;unpack=0"
 SRC_URI[x86_64_v2_check-static.sha256sum] = "7c771dba2078f4e2bce91c35914f88131ac56e1fb29cc892ec71b3f2022b37ae"
 
-URI_aarch64_check = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/check-0.15.2-17.el10.aarch64.rpm;name=aarch64_check;unpack=0"
-SRC_URI:append = " ${URI_aarch64_check}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/check-0.15.2-17.el10.aarch64.rpm;name=aarch64_check;unpack=0"
 SRC_URI[aarch64_check.sha256sum] = "93bae18d56e4ca4c1ef5f84f5d4a474142eefd25c9cec7d4a08ee435dc0043e2"
 
-URI_aarch64_check-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/check-devel-0.15.2-17.el10.aarch64.rpm;name=aarch64_check-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_check-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/check-devel-0.15.2-17.el10.aarch64.rpm;name=aarch64_check-devel;unpack=0"
 SRC_URI[aarch64_check-devel.sha256sum] = "7d626d75781fb6527be1b3bdfaeff25ef7a16689523b8e0379df6466f6bdf40e"
 
-URI_aarch64_check-static = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/check-static-0.15.2-17.el10.aarch64.rpm;name=aarch64_check-static;unpack=0"
-SRC_URI:append = " ${URI_aarch64_check-static}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/check-static-0.15.2-17.el10.aarch64.rpm;name=aarch64_check-static;unpack=0"
 SRC_URI[aarch64_check-static.sha256sum] = "156a2e1ac165e75396eb21228c3868b577feb48c2e4c8d0643fe23728efccda1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/check-0.15.2-17.el10.riscv64.rpm;name=riscv64_check;unpack=0"
+SRC_URI[riscv64_check.sha256sum] = "48e8cf799d4a99d4b0d97d4278f5f9d66b95b0acf4fc5dc6df240ad2e7fae29d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/check-devel-0.15.2-17.el10.riscv64.rpm;name=riscv64_check-devel;unpack=0"
+SRC_URI[riscv64_check-devel.sha256sum] = "c2dc2f4c35abe9f3c88e0a8fa50cd8ddc4accb31f76bc3e9987687d5851bb666"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/check-static-0.15.2-17.el10.riscv64.rpm;name=riscv64_check-static;unpack=0"
+SRC_URI[riscv64_check-static.sha256sum] = "cc241fdefc6eaf771e97956e098ab59c2b9693d736d7e1839bed1e7e84696095"
 
 RDEPENDS:check = " \
  glibc \

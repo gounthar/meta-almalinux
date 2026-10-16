@@ -23,129 +23,143 @@ PACKAGES = " \
  perl-Git-SVN \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/git-2.52.0-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/git-2.52.0-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b83697d96803986f2edf02cbed599bd1029ca326bce9ff6cbfcf22dda118816c"
 
-URI_x86_64_v2_git = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/git-2.52.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_git;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_git}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/git-2.52.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_git;unpack=0"
 SRC_URI[x86_64_v2_git.sha256sum] = "21a81ce69b69b336fd9121606924b5e5bb4319b407c7aeab24eaab6b47e6139e"
 
-URI_x86_64_v2_git-all = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/git-all-2.52.0-1.el10.noarch.rpm;name=x86_64_v2_git-all;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_git-all}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/git-all-2.52.0-1.el10.noarch.rpm;name=x86_64_v2_git-all;unpack=0"
 SRC_URI[x86_64_v2_git-all.sha256sum] = "03837f95973818aa249055fed5d04d02d27a817bdd68098cd6dc401ee9343e6c"
 
-URI_x86_64_v2_git-core = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/git-core-2.52.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_git-core;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_git-core}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/git-core-2.52.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_git-core;unpack=0"
 SRC_URI[x86_64_v2_git-core.sha256sum] = "c1b69cc71e5b17a6b5568484995c6683d5cb385103acf433dbf2d5e839ca2294"
 
-URI_x86_64_v2_git-core-doc = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/git-core-doc-2.52.0-1.el10.noarch.rpm;name=x86_64_v2_git-core-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_git-core-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/git-core-doc-2.52.0-1.el10.noarch.rpm;name=x86_64_v2_git-core-doc;unpack=0"
 SRC_URI[x86_64_v2_git-core-doc.sha256sum] = "4315983d0367913abd3ad5d099aab641c0ab3c625c3c8f371045b0dce1fd5dbd"
 
-URI_x86_64_v2_git-credential-libsecret = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/git-credential-libsecret-2.52.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_git-credential-libsecret;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_git-credential-libsecret}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/git-credential-libsecret-2.52.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_git-credential-libsecret;unpack=0"
 SRC_URI[x86_64_v2_git-credential-libsecret.sha256sum] = "c6bffd9ef91caf91ff5a2c70389d4869fa0860b58d7fd218f8b4d4e9447292b0"
 
-URI_x86_64_v2_git-daemon = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/git-daemon-2.52.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_git-daemon;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_git-daemon}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/git-daemon-2.52.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_git-daemon;unpack=0"
 SRC_URI[x86_64_v2_git-daemon.sha256sum] = "c289cfd644019cc231c99e2d29ef763a98b0657d7d3895296eaa644b127c3aed"
 
-URI_x86_64_v2_git-email = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/git-email-2.52.0-1.el10.noarch.rpm;name=x86_64_v2_git-email;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_git-email}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/git-email-2.52.0-1.el10.noarch.rpm;name=x86_64_v2_git-email;unpack=0"
 SRC_URI[x86_64_v2_git-email.sha256sum] = "d84bf32bf1c676bc5153f3026b443dba8df6a81ea7c58b451201f396d712d7b1"
 
-URI_x86_64_v2_git-gui = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/git-gui-2.52.0-1.el10.noarch.rpm;name=x86_64_v2_git-gui;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_git-gui}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/git-gui-2.52.0-1.el10.noarch.rpm;name=x86_64_v2_git-gui;unpack=0"
 SRC_URI[x86_64_v2_git-gui.sha256sum] = "00f0fcbcc2828f3738c1c3f587d4cccc645e6394cab80a3c88e23ade4eaeb157"
 
-URI_x86_64_v2_git-instaweb = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/git-instaweb-2.52.0-1.el10.noarch.rpm;name=x86_64_v2_git-instaweb;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_git-instaweb}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/git-instaweb-2.52.0-1.el10.noarch.rpm;name=x86_64_v2_git-instaweb;unpack=0"
 SRC_URI[x86_64_v2_git-instaweb.sha256sum] = "4f450181e8db52d63502309f057dbcfe4ec8f1c65c6f4cc1329d44f38a42e8f3"
 
-URI_x86_64_v2_git-subtree = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/git-subtree-2.52.0-1.el10.noarch.rpm;name=x86_64_v2_git-subtree;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_git-subtree}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/git-subtree-2.52.0-1.el10.noarch.rpm;name=x86_64_v2_git-subtree;unpack=0"
 SRC_URI[x86_64_v2_git-subtree.sha256sum] = "da305c7185a60cb83fea0dec706e383265559fb23246f9e3688f6c459c6d0ff4"
 
-URI_x86_64_v2_git-svn = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/git-svn-2.52.0-1.el10.noarch.rpm;name=x86_64_v2_git-svn;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_git-svn}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/git-svn-2.52.0-1.el10.noarch.rpm;name=x86_64_v2_git-svn;unpack=0"
 SRC_URI[x86_64_v2_git-svn.sha256sum] = "45a949dea6302788bfcbd0c027a05ee0f989b9eb32e0fd4d2114ec1a2940d6c9"
 
-URI_x86_64_v2_gitk = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gitk-2.52.0-1.el10.noarch.rpm;name=x86_64_v2_gitk;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gitk}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gitk-2.52.0-1.el10.noarch.rpm;name=x86_64_v2_gitk;unpack=0"
 SRC_URI[x86_64_v2_gitk.sha256sum] = "a9b4f0552f3e11d3c11199edf32aea1330fbe1390e819c7159c191c6a3a7107e"
 
-URI_x86_64_v2_gitweb = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gitweb-2.52.0-1.el10.noarch.rpm;name=x86_64_v2_gitweb;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gitweb}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gitweb-2.52.0-1.el10.noarch.rpm;name=x86_64_v2_gitweb;unpack=0"
 SRC_URI[x86_64_v2_gitweb.sha256sum] = "293dffb334f12c7ad4959c47020432661c79a35b2435d2d05810eafd8c0b8f11"
 
-URI_x86_64_v2_perl-Git = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-Git-2.52.0-1.el10.noarch.rpm;name=x86_64_v2_perl-Git;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Git}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-Git-2.52.0-1.el10.noarch.rpm;name=x86_64_v2_perl-Git;unpack=0"
 SRC_URI[x86_64_v2_perl-Git.sha256sum] = "66a8681b55967b0ee941c7877acfced04340c7266373fcec6ab646b66f97fe50"
 
-URI_x86_64_v2_perl-Git-SVN = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-Git-SVN-2.52.0-1.el10.noarch.rpm;name=x86_64_v2_perl-Git-SVN;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Git-SVN}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-Git-SVN-2.52.0-1.el10.noarch.rpm;name=x86_64_v2_perl-Git-SVN;unpack=0"
 SRC_URI[x86_64_v2_perl-Git-SVN.sha256sum] = "702b7ab41fb9fd44ee7e2be5dd0486171d5f63190eb1327c00e64071f6de6018"
 
-URI_aarch64_git = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/git-2.52.0-1.el10.aarch64.rpm;name=aarch64_git;unpack=0"
-SRC_URI:append = " ${URI_aarch64_git}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/git-2.52.0-1.el10.aarch64.rpm;name=aarch64_git;unpack=0"
 SRC_URI[aarch64_git.sha256sum] = "fd3dae4bcc51248e6c9a1d25aef1d9c0534566192b60d8b800a6d6b2b5e9e7d0"
 
-URI_aarch64_git-all = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/git-all-2.52.0-1.el10.noarch.rpm;name=aarch64_git-all;unpack=0"
-SRC_URI:append = " ${URI_aarch64_git-all}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/git-all-2.52.0-1.el10.noarch.rpm;name=aarch64_git-all;unpack=0"
 SRC_URI[aarch64_git-all.sha256sum] = "03837f95973818aa249055fed5d04d02d27a817bdd68098cd6dc401ee9343e6c"
 
-URI_aarch64_git-core = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/git-core-2.52.0-1.el10.aarch64.rpm;name=aarch64_git-core;unpack=0"
-SRC_URI:append = " ${URI_aarch64_git-core}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/git-core-2.52.0-1.el10.aarch64.rpm;name=aarch64_git-core;unpack=0"
 SRC_URI[aarch64_git-core.sha256sum] = "c788c13b77795c37f88daf2ac7200361264093cda82ff3e517c2539a08bb2b87"
 
-URI_aarch64_git-core-doc = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/git-core-doc-2.52.0-1.el10.noarch.rpm;name=aarch64_git-core-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_git-core-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/git-core-doc-2.52.0-1.el10.noarch.rpm;name=aarch64_git-core-doc;unpack=0"
 SRC_URI[aarch64_git-core-doc.sha256sum] = "4315983d0367913abd3ad5d099aab641c0ab3c625c3c8f371045b0dce1fd5dbd"
 
-URI_aarch64_git-credential-libsecret = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/git-credential-libsecret-2.52.0-1.el10.aarch64.rpm;name=aarch64_git-credential-libsecret;unpack=0"
-SRC_URI:append = " ${URI_aarch64_git-credential-libsecret}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/git-credential-libsecret-2.52.0-1.el10.aarch64.rpm;name=aarch64_git-credential-libsecret;unpack=0"
 SRC_URI[aarch64_git-credential-libsecret.sha256sum] = "490f63f151a166e47c67b723d17d7faefb12f9ee03e808f58fdb7286c2ad3dbf"
 
-URI_aarch64_git-daemon = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/git-daemon-2.52.0-1.el10.aarch64.rpm;name=aarch64_git-daemon;unpack=0"
-SRC_URI:append = " ${URI_aarch64_git-daemon}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/git-daemon-2.52.0-1.el10.aarch64.rpm;name=aarch64_git-daemon;unpack=0"
 SRC_URI[aarch64_git-daemon.sha256sum] = "ef8da6b135c5c891c4be489e5974170ed620059640276b68f5e2173e8ad7031a"
 
-URI_aarch64_git-email = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/git-email-2.52.0-1.el10.noarch.rpm;name=aarch64_git-email;unpack=0"
-SRC_URI:append = " ${URI_aarch64_git-email}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/git-email-2.52.0-1.el10.noarch.rpm;name=aarch64_git-email;unpack=0"
 SRC_URI[aarch64_git-email.sha256sum] = "d84bf32bf1c676bc5153f3026b443dba8df6a81ea7c58b451201f396d712d7b1"
 
-URI_aarch64_git-gui = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/git-gui-2.52.0-1.el10.noarch.rpm;name=aarch64_git-gui;unpack=0"
-SRC_URI:append = " ${URI_aarch64_git-gui}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/git-gui-2.52.0-1.el10.noarch.rpm;name=aarch64_git-gui;unpack=0"
 SRC_URI[aarch64_git-gui.sha256sum] = "00f0fcbcc2828f3738c1c3f587d4cccc645e6394cab80a3c88e23ade4eaeb157"
 
-URI_aarch64_git-instaweb = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/git-instaweb-2.52.0-1.el10.noarch.rpm;name=aarch64_git-instaweb;unpack=0"
-SRC_URI:append = " ${URI_aarch64_git-instaweb}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/git-instaweb-2.52.0-1.el10.noarch.rpm;name=aarch64_git-instaweb;unpack=0"
 SRC_URI[aarch64_git-instaweb.sha256sum] = "4f450181e8db52d63502309f057dbcfe4ec8f1c65c6f4cc1329d44f38a42e8f3"
 
-URI_aarch64_git-subtree = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/git-subtree-2.52.0-1.el10.noarch.rpm;name=aarch64_git-subtree;unpack=0"
-SRC_URI:append = " ${URI_aarch64_git-subtree}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/git-subtree-2.52.0-1.el10.noarch.rpm;name=aarch64_git-subtree;unpack=0"
 SRC_URI[aarch64_git-subtree.sha256sum] = "da305c7185a60cb83fea0dec706e383265559fb23246f9e3688f6c459c6d0ff4"
 
-URI_aarch64_git-svn = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/git-svn-2.52.0-1.el10.noarch.rpm;name=aarch64_git-svn;unpack=0"
-SRC_URI:append = " ${URI_aarch64_git-svn}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/git-svn-2.52.0-1.el10.noarch.rpm;name=aarch64_git-svn;unpack=0"
 SRC_URI[aarch64_git-svn.sha256sum] = "45a949dea6302788bfcbd0c027a05ee0f989b9eb32e0fd4d2114ec1a2940d6c9"
 
-URI_aarch64_gitk = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gitk-2.52.0-1.el10.noarch.rpm;name=aarch64_gitk;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gitk}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gitk-2.52.0-1.el10.noarch.rpm;name=aarch64_gitk;unpack=0"
 SRC_URI[aarch64_gitk.sha256sum] = "a9b4f0552f3e11d3c11199edf32aea1330fbe1390e819c7159c191c6a3a7107e"
 
-URI_aarch64_gitweb = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gitweb-2.52.0-1.el10.noarch.rpm;name=aarch64_gitweb;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gitweb}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gitweb-2.52.0-1.el10.noarch.rpm;name=aarch64_gitweb;unpack=0"
 SRC_URI[aarch64_gitweb.sha256sum] = "293dffb334f12c7ad4959c47020432661c79a35b2435d2d05810eafd8c0b8f11"
 
-URI_aarch64_perl-Git = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-Git-2.52.0-1.el10.noarch.rpm;name=aarch64_perl-Git;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Git}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-Git-2.52.0-1.el10.noarch.rpm;name=aarch64_perl-Git;unpack=0"
 SRC_URI[aarch64_perl-Git.sha256sum] = "66a8681b55967b0ee941c7877acfced04340c7266373fcec6ab646b66f97fe50"
 
-URI_aarch64_perl-Git-SVN = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-Git-SVN-2.52.0-1.el10.noarch.rpm;name=aarch64_perl-Git-SVN;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Git-SVN}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-Git-SVN-2.52.0-1.el10.noarch.rpm;name=aarch64_perl-Git-SVN;unpack=0"
 SRC_URI[aarch64_perl-Git-SVN.sha256sum] = "702b7ab41fb9fd44ee7e2be5dd0486171d5f63190eb1327c00e64071f6de6018"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/git-2.52.0-1.el10.riscv64.rpm;name=riscv64_git;unpack=0"
+SRC_URI[riscv64_git.sha256sum] = "2fd61b693f06f77eaf30b0c8c8f7bc7c41d8c3e21e41b447bf9d845d29f93531"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/git-all-2.52.0-1.el10.noarch.rpm;name=riscv64_git-all;unpack=0"
+SRC_URI[riscv64_git-all.sha256sum] = "03837f95973818aa249055fed5d04d02d27a817bdd68098cd6dc401ee9343e6c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/git-core-2.52.0-1.el10.riscv64.rpm;name=riscv64_git-core;unpack=0"
+SRC_URI[riscv64_git-core.sha256sum] = "d2f55e6a2a92d6e3e56284b68f27a4c77e03178758b2f428c18c95f97d6f1f3a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/git-core-doc-2.52.0-1.el10.noarch.rpm;name=riscv64_git-core-doc;unpack=0"
+SRC_URI[riscv64_git-core-doc.sha256sum] = "4315983d0367913abd3ad5d099aab641c0ab3c625c3c8f371045b0dce1fd5dbd"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/git-credential-libsecret-2.52.0-1.el10.riscv64.rpm;name=riscv64_git-credential-libsecret;unpack=0"
+SRC_URI[riscv64_git-credential-libsecret.sha256sum] = "dfa804bd334d295413227b331e3be9c444d51e54bfc5993887648d8922142058"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/git-daemon-2.52.0-1.el10.riscv64.rpm;name=riscv64_git-daemon;unpack=0"
+SRC_URI[riscv64_git-daemon.sha256sum] = "4705cc3a9d0603362f7dc9dbb37f82cf9f928f160d737628bf87865cc9452250"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/git-email-2.52.0-1.el10.noarch.rpm;name=riscv64_git-email;unpack=0"
+SRC_URI[riscv64_git-email.sha256sum] = "d84bf32bf1c676bc5153f3026b443dba8df6a81ea7c58b451201f396d712d7b1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/git-gui-2.52.0-1.el10.noarch.rpm;name=riscv64_git-gui;unpack=0"
+SRC_URI[riscv64_git-gui.sha256sum] = "00f0fcbcc2828f3738c1c3f587d4cccc645e6394cab80a3c88e23ade4eaeb157"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/git-instaweb-2.52.0-1.el10.noarch.rpm;name=riscv64_git-instaweb;unpack=0"
+SRC_URI[riscv64_git-instaweb.sha256sum] = "4f450181e8db52d63502309f057dbcfe4ec8f1c65c6f4cc1329d44f38a42e8f3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/git-subtree-2.52.0-1.el10.noarch.rpm;name=riscv64_git-subtree;unpack=0"
+SRC_URI[riscv64_git-subtree.sha256sum] = "da305c7185a60cb83fea0dec706e383265559fb23246f9e3688f6c459c6d0ff4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/git-svn-2.52.0-1.el10.noarch.rpm;name=riscv64_git-svn;unpack=0"
+SRC_URI[riscv64_git-svn.sha256sum] = "45a949dea6302788bfcbd0c027a05ee0f989b9eb32e0fd4d2114ec1a2940d6c9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gitk-2.52.0-1.el10.noarch.rpm;name=riscv64_gitk;unpack=0"
+SRC_URI[riscv64_gitk.sha256sum] = "a9b4f0552f3e11d3c11199edf32aea1330fbe1390e819c7159c191c6a3a7107e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gitweb-2.52.0-1.el10.noarch.rpm;name=riscv64_gitweb;unpack=0"
+SRC_URI[riscv64_gitweb.sha256sum] = "293dffb334f12c7ad4959c47020432661c79a35b2435d2d05810eafd8c0b8f11"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/perl-Git-2.52.0-1.el10.noarch.rpm;name=riscv64_perl-Git;unpack=0"
+SRC_URI[riscv64_perl-Git.sha256sum] = "66a8681b55967b0ee941c7877acfced04340c7266373fcec6ab646b66f97fe50"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/perl-Git-SVN-2.52.0-1.el10.noarch.rpm;name=riscv64_perl-Git-SVN;unpack=0"
+SRC_URI[riscv64_perl-Git-SVN.sha256sum] = "702b7ab41fb9fd44ee7e2be5dd0486171d5f63190eb1327c00e64071f6de6018"
 
 RDEPENDS:git = " \
  bash \

@@ -9,20 +9,23 @@ PACKAGES = " \
  iputils \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/iputils-20240905-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/iputils-20240905-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "129895e757e00681c94a9bf3d5e418eeaeca852126e2078fa9639cbefc44aa00"
 
 ## Requires (aarch64) that were seen as not satisfiable in original repo:
 # - iputils: libcap.so.2()(64bit)
 
-URI_x86_64_v2_iputils = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/iputils-20240905-5.el10.x86_64_v2.rpm;name=x86_64_v2_iputils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_iputils}"
+## Requires (riscv64) that were seen as not satisfiable in original repo:
+# - iputils: libcap.so.2()(64bit)
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/iputils-20240905-5.el10.x86_64_v2.rpm;name=x86_64_v2_iputils;unpack=0"
 SRC_URI[x86_64_v2_iputils.sha256sum] = "923b62ef51f2759c5fa94300585a03ec4ceeb2c8515a1c5c4bb08b95f9210787"
 
-URI_aarch64_iputils = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/iputils-20240905-5.el10.aarch64.rpm;name=aarch64_iputils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_iputils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/iputils-20240905-5.el10.aarch64.rpm;name=aarch64_iputils;unpack=0"
 SRC_URI[aarch64_iputils.sha256sum] = "67b6582c8de3756f243337e5be79542eabef71e016259a7d9f64f40abec6732b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/iputils-20240905-5.el10.riscv64.rpm;name=riscv64_iputils;unpack=0"
+SRC_URI[riscv64_iputils.sha256sum] = "35a509822d873a110315c4a4748936e5a5f5106d98aedd663c72fe4de574a210"
 
 RDEPENDS:iputils:x86_64_v2 = " \
  glibc \
@@ -30,6 +33,10 @@ RDEPENDS:iputils:x86_64_v2 = " \
  libidn2 \
 "
 RDEPENDS:iputils:aarch64 = " \
+ glibc \
+ libidn2 \
+"
+RDEPENDS:iputils:riscv64 = " \
  glibc \
  libidn2 \
 "

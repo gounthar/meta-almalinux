@@ -9,17 +9,17 @@ PACKAGES = " \
  cscope \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/cscope-15.9-31.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/cscope-15.9-31.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "2d3c705b4331b797827c6804240be3b6fcb43c94878d6602c43a1d7690e466e1"
 
-URI_x86_64_v2_cscope = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cscope-15.9-31.el10.x86_64_v2.rpm;name=x86_64_v2_cscope;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cscope}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cscope-15.9-31.el10.x86_64_v2.rpm;name=x86_64_v2_cscope;unpack=0"
 SRC_URI[x86_64_v2_cscope.sha256sum] = "290864d1833fcba71b78818c6a96f6d501c2535589d7edb4320666f7434133e3"
 
-URI_aarch64_cscope = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cscope-15.9-31.el10.aarch64.rpm;name=aarch64_cscope;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cscope}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cscope-15.9-31.el10.aarch64.rpm;name=aarch64_cscope;unpack=0"
 SRC_URI[aarch64_cscope.sha256sum] = "d071dabcba2b0385e18fefd83669d89df7d46146e5d8e49c7a5bed5490ccf56f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/cscope-15.9-31.el10.riscv64.rpm;name=riscv64_cscope;unpack=0"
+SRC_URI[riscv64_cscope.sha256sum] = "0f6817c01e8b82c15fd07c8ecc60c00b92029d89ee2e6098a5f1f11abe0bf39f"
 
 RDEPENDS:cscope = " \
  bash \

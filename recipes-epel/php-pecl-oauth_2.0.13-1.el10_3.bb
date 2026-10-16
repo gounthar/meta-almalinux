@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "php-pecl-oauth"
 PV = "2.0.13"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  php-pecl-oauth \
- "
+"
+PACKAGES:aarch64 = " \
+ php-pecl-oauth \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/php-pecl-oauth-2.0.13-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/php-pecl-oauth-2.0.13-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1b9d89a0da39cba69cd260b2cc087dbcdfc803d6e1bd162b588aeb62315c7bd2"
 
-URI_x86_64_v2_php-pecl-oauth = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/php-pecl-oauth-2.0.13-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_php-pecl-oauth;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_php-pecl-oauth}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/php-pecl-oauth-2.0.13-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_php-pecl-oauth;unpack=0"
 SRC_URI[x86_64_v2_php-pecl-oauth.sha256sum] = "151efdc4fd19ea8590fc530d535fdf8c7fec8a2ec6724386ffda67913240112b"
 
-URI_aarch64_php-pecl-oauth = "${EPEL_MIRROR}/aarch64/Packages/p/php-pecl-oauth-2.0.13-1.el10_3.aarch64.rpm;name=aarch64_php-pecl-oauth;unpack=0"
-SRC_URI:append = " ${URI_aarch64_php-pecl-oauth}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/php-pecl-oauth-2.0.13-1.el10_3.aarch64.rpm;name=aarch64_php-pecl-oauth;unpack=0"
 SRC_URI[aarch64_php-pecl-oauth.sha256sum] = "18edfef0b2758aecb2500d466df9a2684de6c3027b6a029163d6c98e935da952"
 
 RDEPENDS:php-pecl-oauth = " \

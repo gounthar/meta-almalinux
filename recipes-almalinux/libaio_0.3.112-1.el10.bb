@@ -10,25 +10,26 @@ PACKAGES = " \
  libaio-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libaio-0.3.112-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libaio-0.3.112-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e7ef1e05f5cb4ab4dbeda7845cd1710985aa802b90c25c6ae2dc9635b7f54156"
 
-URI_x86_64_v2_libaio = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libaio-0.3.112-1.el10.x86_64_v2.rpm;name=x86_64_v2_libaio;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libaio}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libaio-0.3.112-1.el10.x86_64_v2.rpm;name=x86_64_v2_libaio;unpack=0"
 SRC_URI[x86_64_v2_libaio.sha256sum] = "4861c30dec2d1b364abd4cb464761e174d8a0012ef5b6f86089da5ea6d67670b"
 
-URI_x86_64_v2_libaio-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libaio-devel-0.3.112-1.el10.x86_64_v2.rpm;name=x86_64_v2_libaio-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libaio-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libaio-devel-0.3.112-1.el10.x86_64_v2.rpm;name=x86_64_v2_libaio-devel;unpack=0"
 SRC_URI[x86_64_v2_libaio-devel.sha256sum] = "0505cf6876ee8e266707bcfef44584bf498158352f0cd5d956a01a2a9bb14a20"
 
-URI_aarch64_libaio = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libaio-0.3.112-1.el10.aarch64.rpm;name=aarch64_libaio;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libaio}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libaio-0.3.112-1.el10.aarch64.rpm;name=aarch64_libaio;unpack=0"
 SRC_URI[aarch64_libaio.sha256sum] = "4e3cb1c6d9e67204064df3171ec3f6f62577529d030d672fdefe2757438da06e"
 
-URI_aarch64_libaio-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libaio-devel-0.3.112-1.el10.aarch64.rpm;name=aarch64_libaio-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libaio-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libaio-devel-0.3.112-1.el10.aarch64.rpm;name=aarch64_libaio-devel;unpack=0"
 SRC_URI[aarch64_libaio-devel.sha256sum] = "c2db5c607f23283aa591eb7a945c47a576f9dfbc2f6f2ecd88296699ae225ee8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libaio-0.3.112-1.el10.riscv64.rpm;name=riscv64_libaio;unpack=0"
+SRC_URI[riscv64_libaio.sha256sum] = "29c578ffb81e67e3e6041f1b406a5a657d05c5ec5ff06db50449c31b5d58eafb"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libaio-devel-0.3.112-1.el10.riscv64.rpm;name=riscv64_libaio-devel;unpack=0"
+SRC_URI[riscv64_libaio-devel.sha256sum] = "392ce42adb382ba43be2fe4a1f22ab1d273a030879900f8547e2deded4da9bb9"
 
 RDEPENDS:libaio = " \
  glibc \

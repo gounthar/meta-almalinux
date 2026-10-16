@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-keep"
 PV = "2.11"
 PR = "3.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-keep \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-keep \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-keep-2.11-3.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-keep-2.11-3.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "85f9c97e0b3f08c712fa16887d39db8b43abeb1b15cbb3e8503ee3050bb12a99"
 
-URI_x86_64_v2_python3-keep = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-keep-2.11-3.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-keep;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-keep}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-keep-2.11-3.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-keep;unpack=0"
 SRC_URI[x86_64_v2_python3-keep.sha256sum] = "e3ae2872a35c4480030dceb55c98456730c121ac908c7543cd20ab26ac908aa9"
 
-URI_aarch64_python3-keep = "${EPEL_MIRROR}/aarch64/Packages/p/python3-keep-2.11-3.el10_2.noarch.rpm;name=aarch64_python3-keep;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-keep}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-keep-2.11-3.el10_2.noarch.rpm;name=aarch64_python3-keep;unpack=0"
 SRC_URI[aarch64_python3-keep.sha256sum] = "d2f2afc4c71a7cc63feb0d53023ee571fafcb7768a6d54f328b58d4a09b6195c"
 
 RDEPENDS:python3-keep = " \

@@ -9,17 +9,17 @@ PACKAGES = " \
  python3.14-Cython \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/python3.14-Cython-3.2.4-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/python3.14-Cython-3.2.4-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "2fb123541247bfdad8118b0cf3ed717fe114e6e6a789eb5b23f8686b4b99f248"
 
-URI_x86_64_v2_python3.14-Cython = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3.14-Cython-3.2.4-2.el10.x86_64_v2.rpm;name=x86_64_v2_python3.14-Cython;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3.14-Cython}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3.14-Cython-3.2.4-2.el10.x86_64_v2.rpm;name=x86_64_v2_python3.14-Cython;unpack=0"
 SRC_URI[x86_64_v2_python3.14-Cython.sha256sum] = "2e6e02488840d6cc95aacea0f73d27307ede51e75029bef78de4e80c95c89e38"
 
-URI_aarch64_python3.14-Cython = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3.14-Cython-3.2.4-2.el10.aarch64.rpm;name=aarch64_python3.14-Cython;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3.14-Cython}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3.14-Cython-3.2.4-2.el10.aarch64.rpm;name=aarch64_python3.14-Cython;unpack=0"
 SRC_URI[aarch64_python3.14-Cython.sha256sum] = "631c2f7f8886a5389bb3582eff4da4011044f724d382b371988e05d54e80f6fb"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/python3.14-Cython-3.2.4-2.el10.riscv64.rpm;name=riscv64_python3.14-Cython;unpack=0"
+SRC_URI[riscv64_python3.14-Cython.sha256sum] = "30a68d1db693893c043f4271be1718c3367a871e2679d8bccfd6ad574ebc6b84"
 
 RDEPENDS:python3.14-Cython = " \
  glibc \

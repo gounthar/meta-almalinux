@@ -12,49 +12,67 @@ PACKAGES = " \
  qt6-qtspeech-speechd \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtspeech-6.10.1-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtspeech-6.10.1-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3664d50626b3800ab1164e5c824bd806858ebb5ade60f6852769e29c8ff6f519"
 
-URI_x86_64_v2_qt6-qtspeech = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtspeech-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtspeech;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtspeech}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtspeech-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtspeech;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtspeech.sha256sum] = "ea8ad394ba5f53d0cb9002afdde09217e6af004be502bf0032e6f4012f27e992"
 
-URI_x86_64_v2_qt6-qtspeech-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtspeech-devel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtspeech-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtspeech-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtspeech-devel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtspeech-devel;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtspeech-devel.sha256sum] = "071eac03f1255c2252abbaf395afc6a82dee0c7e87775fde8cc2f6afa379369c"
 
-URI_x86_64_v2_qt6-qtspeech-examples = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtspeech-examples-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtspeech-examples;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtspeech-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtspeech-examples-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtspeech-examples;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtspeech-examples.sha256sum] = "e73195bfa8e32f00dec59b94e851ad9283eec31d8ab85df794afb83b4fd3d4ab"
 
-URI_x86_64_v2_qt6-qtspeech-speechd = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtspeech-speechd-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtspeech-speechd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtspeech-speechd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtspeech-speechd-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtspeech-speechd;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtspeech-speechd.sha256sum] = "9c51c9a0da4ebdc345ec6df14f774b9d2a19bde369c12e31021e46b1c3f0c7bc"
 
-URI_aarch64_qt6-qtspeech = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtspeech-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtspeech;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtspeech}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtspeech-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtspeech;unpack=0"
 SRC_URI[aarch64_qt6-qtspeech.sha256sum] = "69ab43ff7e27c1fe0af0b8a3341f889c684d8e41994e5460b09798c46583f085"
 
-URI_aarch64_qt6-qtspeech-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtspeech-devel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtspeech-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtspeech-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtspeech-devel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtspeech-devel;unpack=0"
 SRC_URI[aarch64_qt6-qtspeech-devel.sha256sum] = "43334b2f90eef03ee935c2020134668fd154c10ad1857f39c5291d9151d5e777"
 
-URI_aarch64_qt6-qtspeech-examples = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtspeech-examples-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtspeech-examples;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtspeech-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtspeech-examples-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtspeech-examples;unpack=0"
 SRC_URI[aarch64_qt6-qtspeech-examples.sha256sum] = "e368e228d22bbacd2282dc2a85a4306b37916d0796bc43e9ddd044deb22fe4bf"
 
-URI_aarch64_qt6-qtspeech-speechd = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtspeech-speechd-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtspeech-speechd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtspeech-speechd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtspeech-speechd-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtspeech-speechd;unpack=0"
 SRC_URI[aarch64_qt6-qtspeech-speechd.sha256sum] = "ef1d7aeaa8cd9a340d90e07acedd3b704957cdd9a9faaa3bdfdef21a7c881573"
 
-RDEPENDS:qt6-qtspeech = " \
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtspeech-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtspeech;unpack=0"
+SRC_URI[riscv64_qt6-qtspeech.sha256sum] = "672a1bcfd1207fc624d1de489b354756b06a3917726923bbf11d1461591139b6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtspeech-devel-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtspeech-devel;unpack=0"
+SRC_URI[riscv64_qt6-qtspeech-devel.sha256sum] = "c8c660e5d25f6798c386ec2ab82c7691d0c4aa3c24daf2851608e494a5fce2d6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/qt6-qtspeech-examples-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtspeech-examples;unpack=0"
+SRC_URI[riscv64_qt6-qtspeech-examples.sha256sum] = "553c367aa86b38961e373a7a15475f1d1abc6ffe285dbd38adf1f96cf36eae57"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtspeech-speechd-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtspeech-speechd;unpack=0"
+SRC_URI[riscv64_qt6-qtspeech-speechd.sha256sum] = "d91908da9a534c5d20e029c8fa160e0ead585a35e7a4de3af1f7d6d3bbdcd516"
+
+RDEPENDS:qt6-qtspeech:x86_64_v2 = " \
  glibc \
  libstdc++ \
  qt6-qtbase \
  qt6-qtdeclarative \
  qt6-qtmultimedia \
- "
+"
+RDEPENDS:qt6-qtspeech:aarch64 = " \
+ glibc \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtdeclarative \
+ qt6-qtmultimedia \
+"
+RDEPENDS:qt6-qtspeech:riscv64 = " \
+ glibc \
+ libgcc \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtdeclarative \
+ qt6-qtmultimedia \
+"
 RDEPENDS:qt6-qtspeech-devel = " \
  cmake-filesystem \
  pkgconf-pkg-config \
@@ -72,11 +90,28 @@ RDEPENDS:qt6-qtspeech-examples = " \
  qt6-qtdeclarative \
  qt6-qtspeech \
  "
-RDEPENDS:qt6-qtspeech-speechd = " \
+RDEPENDS:qt6-qtspeech-speechd:x86_64_v2 = " \
  cmake-filesystem \
  glibc \
  libstdc++ \
  qt6-qtbase \
  qt6-qtspeech \
  speech-dispatcher-libs \
- "
+"
+RDEPENDS:qt6-qtspeech-speechd:aarch64 = " \
+ cmake-filesystem \
+ glibc \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtspeech \
+ speech-dispatcher-libs \
+"
+RDEPENDS:qt6-qtspeech-speechd:riscv64 = " \
+ cmake-filesystem \
+ glibc \
+ libgcc \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtspeech \
+ speech-dispatcher-libs \
+"

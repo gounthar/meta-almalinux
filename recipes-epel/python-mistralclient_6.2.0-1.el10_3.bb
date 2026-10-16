@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-mistralclient"
 PV = "6.2.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-mistralclient \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-mistralclient \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-mistralclient-6.2.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-mistralclient-6.2.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "77e5c4f57fd657413b3b7c5c9453016d2d4372e2d14f959ce2b62bb834ea0577"
 
-URI_x86_64_v2_python3-mistralclient = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-mistralclient-6.2.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-mistralclient;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-mistralclient}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-mistralclient-6.2.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-mistralclient;unpack=0"
 SRC_URI[x86_64_v2_python3-mistralclient.sha256sum] = "a0a116b47b782d352c471e66e39d9ae97d455d2385b2e70301418d0a0bbd08bc"
 
-URI_aarch64_python3-mistralclient = "${EPEL_MIRROR}/aarch64/Packages/p/python3-mistralclient-6.2.0-1.el10_3.noarch.rpm;name=aarch64_python3-mistralclient;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-mistralclient}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-mistralclient-6.2.0-1.el10_3.noarch.rpm;name=aarch64_python3-mistralclient;unpack=0"
 SRC_URI[aarch64_python3-mistralclient.sha256sum] = "5bad387ae1819cb0e3698de9cb0626fa83cfe5b2a8fba0b00f47e15dc8cc6605"
 
 RDEPENDS:python3-mistralclient = " \

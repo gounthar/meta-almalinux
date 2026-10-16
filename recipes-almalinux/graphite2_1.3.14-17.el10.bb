@@ -10,25 +10,26 @@ PACKAGES = " \
  graphite2-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/graphite2-1.3.14-17.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/graphite2-1.3.14-17.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1daa1a4e056719d085574887fb1271a0d4adda34ca1c67e97bbda246b5a35207"
 
-URI_x86_64_v2_graphite2 = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/graphite2-1.3.14-17.el10.x86_64_v2.rpm;name=x86_64_v2_graphite2;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_graphite2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/graphite2-1.3.14-17.el10.x86_64_v2.rpm;name=x86_64_v2_graphite2;unpack=0"
 SRC_URI[x86_64_v2_graphite2.sha256sum] = "71343dc73b8f9d334178629770459d7fc9c912e43859b68190fe469ab6a48d42"
 
-URI_x86_64_v2_graphite2-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/graphite2-devel-1.3.14-17.el10.x86_64_v2.rpm;name=x86_64_v2_graphite2-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_graphite2-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/graphite2-devel-1.3.14-17.el10.x86_64_v2.rpm;name=x86_64_v2_graphite2-devel;unpack=0"
 SRC_URI[x86_64_v2_graphite2-devel.sha256sum] = "916deb379429c74b56be8dbe2ff52f1023b35d293b5354a15fabb5b8f96d6cd1"
 
-URI_aarch64_graphite2 = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/graphite2-1.3.14-17.el10.aarch64.rpm;name=aarch64_graphite2;unpack=0"
-SRC_URI:append = " ${URI_aarch64_graphite2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/graphite2-1.3.14-17.el10.aarch64.rpm;name=aarch64_graphite2;unpack=0"
 SRC_URI[aarch64_graphite2.sha256sum] = "5c3dbe7e362e639e748223686db20043acc9942ec4cf641805df2f47b32a75d7"
 
-URI_aarch64_graphite2-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/graphite2-devel-1.3.14-17.el10.aarch64.rpm;name=aarch64_graphite2-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_graphite2-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/graphite2-devel-1.3.14-17.el10.aarch64.rpm;name=aarch64_graphite2-devel;unpack=0"
 SRC_URI[aarch64_graphite2-devel.sha256sum] = "c7105db81865c0f8d9127ec026784b5c5dfa9d74823f874ca7c8b7e32a19e704"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/graphite2-1.3.14-17.el10.riscv64.rpm;name=riscv64_graphite2;unpack=0"
+SRC_URI[riscv64_graphite2.sha256sum] = "755595063228f96c773d61b5a876b54811cbc689cd622130cdded54235bd5214"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/graphite2-devel-1.3.14-17.el10.riscv64.rpm;name=riscv64_graphite2-devel;unpack=0"
+SRC_URI[riscv64_graphite2-devel.sha256sum] = "7ef97ac52ee7f8470f3de2380142fbffd7aafeacf30707206fa00094beb0ddb5"
 
 RDEPENDS:graphite2 = " \
  glibc \

@@ -8,7 +8,6 @@ PR = "5.el10"
 PACKAGES = " \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libldb-2.9.1-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libldb-2.9.1-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "42d10787756b23eb2561f16561059b4563352d6111125bacc5c772e5244969a1"
 

@@ -11,25 +11,26 @@ PACKAGES = " \
  tix-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/tix-8.4.3-42.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/tix-8.4.3-42.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "337a430a664a5653eacca8247e2d71e9fb380291683eea4537a2cabfafa13941"
 
-URI_x86_64_v2_tix = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/tix-8.4.3-42.el10.x86_64_v2.rpm;name=x86_64_v2_tix;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_tix}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/tix-8.4.3-42.el10.x86_64_v2.rpm;name=x86_64_v2_tix;unpack=0"
 SRC_URI[x86_64_v2_tix.sha256sum] = "94a521d2aaa9812bde2dd907165b90cb071940cc49d98459708cee195d3d6e7c"
 
-URI_x86_64_v2_tix-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/tix-devel-8.4.3-42.el10.x86_64_v2.rpm;name=x86_64_v2_tix-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_tix-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/tix-devel-8.4.3-42.el10.x86_64_v2.rpm;name=x86_64_v2_tix-devel;unpack=0"
 SRC_URI[x86_64_v2_tix-devel.sha256sum] = "eff0b06842dbbe083e265885f71fed70bed0bbacaa29d311c433ecf233c7d42f"
 
-URI_aarch64_tix = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/tix-8.4.3-42.el10.aarch64.rpm;name=aarch64_tix;unpack=0"
-SRC_URI:append = " ${URI_aarch64_tix}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/tix-8.4.3-42.el10.aarch64.rpm;name=aarch64_tix;unpack=0"
 SRC_URI[aarch64_tix.sha256sum] = "30460e1611607b54ccbb9a384db55c87629bc82297790a76426ab079f08cdbe3"
 
-URI_aarch64_tix-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/tix-devel-8.4.3-42.el10.aarch64.rpm;name=aarch64_tix-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_tix-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/tix-devel-8.4.3-42.el10.aarch64.rpm;name=aarch64_tix-devel;unpack=0"
 SRC_URI[aarch64_tix-devel.sha256sum] = "3d0cbd9c922e481222e83d4da264bb225a34e97bd8bb6404a8608809e1a9c0ed"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/tix-8.4.3-42.el10.riscv64.rpm;name=riscv64_tix;unpack=0"
+SRC_URI[riscv64_tix.sha256sum] = "aaf18c44cbc27b6b00fcff2cb9c4d40ce0ada4deb67f66a41162488869b9b48d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/tix-devel-8.4.3-42.el10.riscv64.rpm;name=riscv64_tix-devel;unpack=0"
+SRC_URI[riscv64_tix-devel.sha256sum] = "a8010e613d553cc01f1b7fae20ecbaef8ab87634abc0f8743c4320600d72808e"
 
 RDEPENDS:tix = " \
  glibc \

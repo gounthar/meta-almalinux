@@ -8,7 +8,6 @@ PR = "1.el10"
 PACKAGES = " \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libzdnn-1.1.2-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libzdnn-1.1.2-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b4b6a4a3a94018a08a0483fad921537c96099c5be41305277f220ac81f54f6db"
 

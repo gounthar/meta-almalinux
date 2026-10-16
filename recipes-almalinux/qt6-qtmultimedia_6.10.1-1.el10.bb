@@ -11,35 +11,37 @@ PACKAGES = " \
  qt6-qtmultimedia-examples \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtmultimedia-6.10.1-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtmultimedia-6.10.1-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "0af1b06fc2bf9ff8106c2a08e0af0747f38eeed82c3c224d8d777ae889265b9f"
 
-URI_x86_64_v2_qt6-qtmultimedia = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtmultimedia-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtmultimedia;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtmultimedia}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtmultimedia-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtmultimedia;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtmultimedia.sha256sum] = "3442581ace9371d972c4e275e450765322ca1df260ba478b128204d91781b877"
 
-URI_x86_64_v2_qt6-qtmultimedia-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtmultimedia-devel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtmultimedia-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtmultimedia-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtmultimedia-devel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtmultimedia-devel;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtmultimedia-devel.sha256sum] = "a5bf66b0f10797a2929b7b31226510ac1ec8dc7f6f047001e0deae496abfba27"
 
-URI_x86_64_v2_qt6-qtmultimedia-examples = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtmultimedia-examples-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtmultimedia-examples;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtmultimedia-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtmultimedia-examples-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtmultimedia-examples;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtmultimedia-examples.sha256sum] = "84961d3789cec8a3420cbabb6d975fe64c82ae4d0d2ba7c3e584bcb83c7faee6"
 
-URI_aarch64_qt6-qtmultimedia = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtmultimedia-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtmultimedia;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtmultimedia}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtmultimedia-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtmultimedia;unpack=0"
 SRC_URI[aarch64_qt6-qtmultimedia.sha256sum] = "5aa11528468a4e0cd3b74b6c48b8ed313b14793d341621ed69523891dc42f453"
 
-URI_aarch64_qt6-qtmultimedia-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtmultimedia-devel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtmultimedia-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtmultimedia-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtmultimedia-devel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtmultimedia-devel;unpack=0"
 SRC_URI[aarch64_qt6-qtmultimedia-devel.sha256sum] = "953a0b6e7956e65f1d6d36997dcdcd61849f3d6bd70a721f783aa5f48c992c1a"
 
-URI_aarch64_qt6-qtmultimedia-examples = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtmultimedia-examples-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtmultimedia-examples;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtmultimedia-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtmultimedia-examples-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtmultimedia-examples;unpack=0"
 SRC_URI[aarch64_qt6-qtmultimedia-examples.sha256sum] = "75ded1d7a0e8d23c4020d04dac62385dd874378c0aaa9ffda8a11bc82e032e91"
 
-RDEPENDS:qt6-qtmultimedia = " \
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtmultimedia-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtmultimedia;unpack=0"
+SRC_URI[riscv64_qt6-qtmultimedia.sha256sum] = "210750d5a5a09d31adbee54bf289797634919ed7901e6640366b142e61acad12"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtmultimedia-devel-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtmultimedia-devel;unpack=0"
+SRC_URI[riscv64_qt6-qtmultimedia-devel.sha256sum] = "ab7b827683eaeffa1882fb4c61c14ed145eb5e611aaaa8a26952160308122919"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/qt6-qtmultimedia-examples-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtmultimedia-examples;unpack=0"
+SRC_URI[riscv64_qt6-qtmultimedia-examples.sha256sum] = "266382baa7fa63c188bae542e85524afa8d7f9b242f4f1e93c2e158478c603cf"
+
+RDEPENDS:qt6-qtmultimedia:x86_64_v2 = " \
  glib2 \
  glibc \
  gstreamer1 \
@@ -53,7 +55,38 @@ RDEPENDS:qt6-qtmultimedia = " \
  qt6-qtbase-gui \
  qt6-qtdeclarative \
  qt6-qtquick3d \
- "
+"
+RDEPENDS:qt6-qtmultimedia:aarch64 = " \
+ glib2 \
+ glibc \
+ gstreamer1 \
+ gstreamer1-plugins-bad-free-libs \
+ gstreamer1-plugins-base \
+ libglvnd-egl \
+ libglvnd-opengl \
+ libstdc++ \
+ pulseaudio-libs \
+ qt6-qtbase \
+ qt6-qtbase-gui \
+ qt6-qtdeclarative \
+ qt6-qtquick3d \
+"
+RDEPENDS:qt6-qtmultimedia:riscv64 = " \
+ glib2 \
+ glibc \
+ gstreamer1 \
+ gstreamer1-plugins-bad-free-libs \
+ gstreamer1-plugins-base \
+ libgcc \
+ libglvnd-egl \
+ libglvnd-opengl \
+ libstdc++ \
+ pulseaudio-libs \
+ qt6-qtbase \
+ qt6-qtbase-gui \
+ qt6-qtdeclarative \
+ qt6-qtquick3d \
+"
 RDEPENDS:qt6-qtmultimedia-devel = " \
  cmake-filesystem \
  pkgconf-pkg-config \

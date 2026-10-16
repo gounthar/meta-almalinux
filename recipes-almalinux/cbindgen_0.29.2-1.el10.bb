@@ -9,17 +9,17 @@ PACKAGES = " \
  cbindgen \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/cbindgen-0.29.2-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/cbindgen-0.29.2-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "5d3cf1f41534e15294277c2a0ebbc89326bd2e9bf95f0e786918b5ed1bbf4cb4"
 
-URI_x86_64_v2_cbindgen = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/cbindgen-0.29.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_cbindgen;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cbindgen}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/cbindgen-0.29.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_cbindgen;unpack=0"
 SRC_URI[x86_64_v2_cbindgen.sha256sum] = "fd58594a19b4f8c6c472dcf8b3400a9af8be76fef180764ff9ac70f046cde380"
 
-URI_aarch64_cbindgen = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/cbindgen-0.29.2-1.el10.aarch64.rpm;name=aarch64_cbindgen;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cbindgen}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/cbindgen-0.29.2-1.el10.aarch64.rpm;name=aarch64_cbindgen;unpack=0"
 SRC_URI[aarch64_cbindgen.sha256sum] = "50cc7b90f69c0cd954556855bffd8caad6dabe93a1314f6f9f3aed6072320955"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/cbindgen-0.29.2-1.el10.riscv64.rpm;name=riscv64_cbindgen;unpack=0"
+SRC_URI[riscv64_cbindgen.sha256sum] = "13c808e1901c5dbec5eba89fc3589657a1a9989e169e1cdea1b76632bd41be7c"
 
 RDEPENDS:cbindgen = " \
  glibc \

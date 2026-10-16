@@ -10,25 +10,26 @@ PACKAGES = " \
  vdo-support \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/vdo-8.3.2.1-1.el10.alma.1.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/vdo-8.3.2.1-1.el10.alma.1.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "4002b23baafca46a97607ebe075bac30326889dca511b2245ddcf98c4b89475b"
 
-URI_x86_64_v2_vdo = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/vdo-8.3.2.1-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_vdo;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_vdo}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/vdo-8.3.2.1-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_vdo;unpack=0"
 SRC_URI[x86_64_v2_vdo.sha256sum] = "a9ada27816bf397ddc2689842248de12c0555233491f564e6d7e7ac9a4a5709d"
 
-URI_x86_64_v2_vdo-support = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/vdo-support-8.3.2.1-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_vdo-support;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_vdo-support}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/vdo-support-8.3.2.1-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_vdo-support;unpack=0"
 SRC_URI[x86_64_v2_vdo-support.sha256sum] = "540ce0b47aca4d3a33521bf384db170bbcdf7f92e947738a7f38f0c693e142de"
 
-URI_aarch64_vdo = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/vdo-8.3.2.1-1.el10.alma.1.aarch64.rpm;name=aarch64_vdo;unpack=0"
-SRC_URI:append = " ${URI_aarch64_vdo}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/vdo-8.3.2.1-1.el10.alma.1.aarch64.rpm;name=aarch64_vdo;unpack=0"
 SRC_URI[aarch64_vdo.sha256sum] = "58caea2524808689f01175d05ad3bbf140b5744641c5249de35660aa2f131944"
 
-URI_aarch64_vdo-support = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/vdo-support-8.3.2.1-1.el10.alma.1.aarch64.rpm;name=aarch64_vdo-support;unpack=0"
-SRC_URI:append = " ${URI_aarch64_vdo-support}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/vdo-support-8.3.2.1-1.el10.alma.1.aarch64.rpm;name=aarch64_vdo-support;unpack=0"
 SRC_URI[aarch64_vdo-support.sha256sum] = "b6462c57fa24b6ec05f41f53415c59181517a4bd58756ced96a9bafaaa219267"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/vdo-8.3.2.1-1.el10.alma.1.riscv64.rpm;name=riscv64_vdo;unpack=0"
+SRC_URI[riscv64_vdo.sha256sum] = "25c32960a4caaf0f51e4cb1de470172d655c9c0848ed4c8c02e2e0f410163fc8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/vdo-support-8.3.2.1-1.el10.alma.1.riscv64.rpm;name=riscv64_vdo-support;unpack=0"
+SRC_URI[riscv64_vdo-support.sha256sum] = "a074a6f937a6dc96c75392cc49c8e2e23d9478c75e6c26321c817678296d6072"
 
 RDEPENDS:vdo = " \
  glibc \

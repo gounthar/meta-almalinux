@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-azure-mgmt-network"
 PV = "29.0.0"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-azure-mgmt-network \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-azure-mgmt-network \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-azure-mgmt-network-29.0.0-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-azure-mgmt-network-29.0.0-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "2607c8d290291d4a33fe9313c861e902a79892d3ae4e7f6452e935f2b97605a9"
 
-URI_x86_64_v2_python3-azure-mgmt-network = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-azure-mgmt-network-29.0.0-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-azure-mgmt-network;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-azure-mgmt-network}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-azure-mgmt-network-29.0.0-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-azure-mgmt-network;unpack=0"
 SRC_URI[x86_64_v2_python3-azure-mgmt-network.sha256sum] = "9796dcaadb8cc486b6d01d1c694b8d8d948f57b1685ff5352f51598834673c9d"
 
-URI_aarch64_python3-azure-mgmt-network = "${EPEL_MIRROR}/aarch64/Packages/p/python3-azure-mgmt-network-29.0.0-1.el10_2.noarch.rpm;name=aarch64_python3-azure-mgmt-network;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-azure-mgmt-network}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-azure-mgmt-network-29.0.0-1.el10_2.noarch.rpm;name=aarch64_python3-azure-mgmt-network;unpack=0"
 SRC_URI[aarch64_python3-azure-mgmt-network.sha256sum] = "710703bd518e43d9afffb2b8433a24da1fe2f963fb7b598949cfa513d9445fe4"
 
 RDEPENDS:python3-azure-mgmt-network = " \

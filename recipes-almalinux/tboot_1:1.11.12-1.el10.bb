@@ -12,13 +12,14 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/tboot-1.11.12-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/tboot-1.11.12-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "915d23d32afaa29821512b5d704732755447ab7fc1d6504d47143fd7b93ac646"
 
-URI_x86_64_v2_tboot = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/tboot-1.11.12-1.el10.x86_64_v2.rpm;name=x86_64_v2_tboot;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_tboot}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/tboot-1.11.12-1.el10.x86_64_v2.rpm;name=x86_64_v2_tboot;unpack=0"
 SRC_URI[x86_64_v2_tboot.sha256sum] = "a1040e5efe260d970acd0bd81e90dffbe158de510f67ad7fe025d97682e3a2a4"
 
 RDEPENDS:tboot = " \

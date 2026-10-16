@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "rbldnsd"
 PV = "0.998b"
 PR = "19.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rbldnsd \
- "
+"
+PACKAGES:aarch64 = " \
+ rbldnsd \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rbldnsd-0.998b-19.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rbldnsd-0.998b-19.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e87d3d0bae2966a82a2a4821cbdbab360bae7bb411fa47f171ba1adc332f28ab"
 
-URI_x86_64_v2_rbldnsd = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rbldnsd-0.998b-19.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rbldnsd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rbldnsd}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rbldnsd-0.998b-19.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rbldnsd;unpack=0"
 SRC_URI[x86_64_v2_rbldnsd.sha256sum] = "0d4f773c53256be93f9d689490ca5ee473e63a3dec39b71d0694f7e26608404a"
 
-URI_aarch64_rbldnsd = "${EPEL_MIRROR}/aarch64/Packages/r/rbldnsd-0.998b-19.el10_3.aarch64.rpm;name=aarch64_rbldnsd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rbldnsd}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rbldnsd-0.998b-19.el10_3.aarch64.rpm;name=aarch64_rbldnsd;unpack=0"
 SRC_URI[aarch64_rbldnsd.sha256sum] = "4abb57f2af31f27a9328ed8265e996b37fbc91edc1e6aa8f710e90e5f71208db"
 
 RDEPENDS:rbldnsd = " \

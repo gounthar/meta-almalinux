@@ -5,56 +5,55 @@ inherit dnf-bridge
 PN = "rust-hdrhistogram"
 PV = "7.6.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-hdrhistogram+bench_private-devel \
  rust-hdrhistogram+default-devel \
  rust-hdrhistogram+serialization-devel \
  rust-hdrhistogram+sync-devel \
  rust-hdrhistogram-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-hdrhistogram+bench_private-devel \
+ rust-hdrhistogram+default-devel \
+ rust-hdrhistogram+serialization-devel \
+ rust-hdrhistogram+sync-devel \
+ rust-hdrhistogram-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-hdrhistogram-7.6.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-hdrhistogram-7.6.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d59e9cc7a7930d2d9e6ffee9ded14863431e2c1f9453e43b18143c9ee8abe7c2"
 
-URI_x86_64_v2_rust-hdrhistogram+bench_private-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-hdrhistogram+bench_private-devel-7.6.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-hdrhistogram+bench_private-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-hdrhistogram+bench_private-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-hdrhistogram+bench_private-devel-7.6.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-hdrhistogram+bench_private-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-hdrhistogram+bench_private-devel.sha256sum] = "ea4837b9aaacd021292f4402c3b5d8639a55c0924ad3403105f354e1302e8bab"
 
-URI_x86_64_v2_rust-hdrhistogram+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-hdrhistogram+default-devel-7.6.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-hdrhistogram+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-hdrhistogram+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-hdrhistogram+default-devel-7.6.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-hdrhistogram+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-hdrhistogram+default-devel.sha256sum] = "d77c26269a2b7190be344e119a881719921709efa0f6176ad025df35acd4ef38"
 
-URI_x86_64_v2_rust-hdrhistogram+serialization-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-hdrhistogram+serialization-devel-7.6.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-hdrhistogram+serialization-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-hdrhistogram+serialization-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-hdrhistogram+serialization-devel-7.6.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-hdrhistogram+serialization-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-hdrhistogram+serialization-devel.sha256sum] = "05c8689c035a7664d7c34e8ce025160934214c252bf5e95cfe30aa9da9b98282"
 
-URI_x86_64_v2_rust-hdrhistogram+sync-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-hdrhistogram+sync-devel-7.6.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-hdrhistogram+sync-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-hdrhistogram+sync-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-hdrhistogram+sync-devel-7.6.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-hdrhistogram+sync-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-hdrhistogram+sync-devel.sha256sum] = "ed7cb0cebd9bc2985ce32f4f473cacc0a0d59ac25a60e82312e529e6a8ffede4"
 
-URI_x86_64_v2_rust-hdrhistogram-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-hdrhistogram-devel-7.6.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-hdrhistogram-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-hdrhistogram-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-hdrhistogram-devel-7.6.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-hdrhistogram-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-hdrhistogram-devel.sha256sum] = "65d47e5608d6d0a96dc0df3a268362e84a4891cf5f349d1371841269bed70887"
 
-URI_aarch64_rust-hdrhistogram+bench_private-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-hdrhistogram+bench_private-devel-7.6.0-1.el10_3.noarch.rpm;name=aarch64_rust-hdrhistogram+bench_private-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-hdrhistogram+bench_private-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-hdrhistogram+bench_private-devel-7.6.0-1.el10_3.noarch.rpm;name=aarch64_rust-hdrhistogram+bench_private-devel;unpack=0"
 SRC_URI[aarch64_rust-hdrhistogram+bench_private-devel.sha256sum] = "36daff33daeff8e5cf236ecfed3a0624d27b892d70f27a897b3770d6b48d1897"
 
-URI_aarch64_rust-hdrhistogram+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-hdrhistogram+default-devel-7.6.0-1.el10_3.noarch.rpm;name=aarch64_rust-hdrhistogram+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-hdrhistogram+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-hdrhistogram+default-devel-7.6.0-1.el10_3.noarch.rpm;name=aarch64_rust-hdrhistogram+default-devel;unpack=0"
 SRC_URI[aarch64_rust-hdrhistogram+default-devel.sha256sum] = "a4c7b8a4bfe9ecc7edb946b370570c65b0839cef6d6cb27dabf717ad83eeb4fe"
 
-URI_aarch64_rust-hdrhistogram+serialization-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-hdrhistogram+serialization-devel-7.6.0-1.el10_3.noarch.rpm;name=aarch64_rust-hdrhistogram+serialization-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-hdrhistogram+serialization-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-hdrhistogram+serialization-devel-7.6.0-1.el10_3.noarch.rpm;name=aarch64_rust-hdrhistogram+serialization-devel;unpack=0"
 SRC_URI[aarch64_rust-hdrhistogram+serialization-devel.sha256sum] = "a75ee84e2f73e127e5205e50a418f6615788fa7f6de2d5e000923336e6095b91"
 
-URI_aarch64_rust-hdrhistogram+sync-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-hdrhistogram+sync-devel-7.6.0-1.el10_3.noarch.rpm;name=aarch64_rust-hdrhistogram+sync-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-hdrhistogram+sync-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-hdrhistogram+sync-devel-7.6.0-1.el10_3.noarch.rpm;name=aarch64_rust-hdrhistogram+sync-devel;unpack=0"
 SRC_URI[aarch64_rust-hdrhistogram+sync-devel.sha256sum] = "4fce18b7e808ed3a0bad935b7658b47150291ab9ae603daf7ee2097415f25da2"
 
-URI_aarch64_rust-hdrhistogram-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-hdrhistogram-devel-7.6.0-1.el10_3.noarch.rpm;name=aarch64_rust-hdrhistogram-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-hdrhistogram-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-hdrhistogram-devel-7.6.0-1.el10_3.noarch.rpm;name=aarch64_rust-hdrhistogram-devel;unpack=0"
 SRC_URI[aarch64_rust-hdrhistogram-devel.sha256sum] = "1f0f274b1e98470aa0eda89da20a3f389ef55aedf4953e5f970cd658cfc62732"
 
 RDEPENDS:rust-hdrhistogram+bench_private-devel = " \

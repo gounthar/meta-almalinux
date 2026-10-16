@@ -11,25 +11,26 @@ PACKAGES = " \
  python3-numpy-f2py \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/numpy-1.26.4-7.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/numpy-1.26.4-7.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8cc81b095a84daf1116f9d937d2429d79360db85978b244f8a6cd6a76d778f9e"
 
-URI_x86_64_v2_python3-numpy = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-numpy-1.26.4-7.el10.x86_64_v2.rpm;name=x86_64_v2_python3-numpy;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-numpy}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-numpy-1.26.4-7.el10.x86_64_v2.rpm;name=x86_64_v2_python3-numpy;unpack=0"
 SRC_URI[x86_64_v2_python3-numpy.sha256sum] = "ea408b5f0968373b878c0545c49c5adf7b7395aba740c1c8e80e0622e3bdc953"
 
-URI_x86_64_v2_python3-numpy-f2py = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-numpy-f2py-1.26.4-7.el10.x86_64_v2.rpm;name=x86_64_v2_python3-numpy-f2py;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-numpy-f2py}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-numpy-f2py-1.26.4-7.el10.x86_64_v2.rpm;name=x86_64_v2_python3-numpy-f2py;unpack=0"
 SRC_URI[x86_64_v2_python3-numpy-f2py.sha256sum] = "13322d615ca036dc5f33f9afcee6f8dd77de359b64d2290a0d5a156d3d4ffb7b"
 
-URI_aarch64_python3-numpy = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-numpy-1.26.4-7.el10.aarch64.rpm;name=aarch64_python3-numpy;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-numpy}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-numpy-1.26.4-7.el10.aarch64.rpm;name=aarch64_python3-numpy;unpack=0"
 SRC_URI[aarch64_python3-numpy.sha256sum] = "af606884eb89f5ea3fd4de1e579ea2ec78511ac73f1afbcab05622c618c00a24"
 
-URI_aarch64_python3-numpy-f2py = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-numpy-f2py-1.26.4-7.el10.aarch64.rpm;name=aarch64_python3-numpy-f2py;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-numpy-f2py}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-numpy-f2py-1.26.4-7.el10.aarch64.rpm;name=aarch64_python3-numpy-f2py;unpack=0"
 SRC_URI[aarch64_python3-numpy-f2py.sha256sum] = "bdb523812e399aa1354ee63427612f5686557362dc401b56f2a9f2263fbdcaa6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-numpy-1.26.4-7.el10.riscv64.rpm;name=riscv64_python3-numpy;unpack=0"
+SRC_URI[riscv64_python3-numpy.sha256sum] = "9dfca3aa9a942147823a7a7fd32db35bc5fce6b8569b25083038358bb6716abb"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-numpy-f2py-1.26.4-7.el10.riscv64.rpm;name=riscv64_python3-numpy-f2py;unpack=0"
+SRC_URI[riscv64_python3-numpy-f2py.sha256sum] = "e2572e31e2dbe9614c0d5d9563e65d3e7eefde58b08c436880f0672db26c49e0"
 
 RDEPENDS:python3-numpy:x86_64_v2 = " \
  flexiblas-netlib \
@@ -38,6 +39,13 @@ RDEPENDS:python3-numpy:x86_64_v2 = " \
  python3 \
 "
 RDEPENDS:python3-numpy:aarch64 = " \
+ flexiblas-netlib \
+ glibc \
+ libgcc \
+ libstdc++ \
+ python3 \
+"
+RDEPENDS:python3-numpy:riscv64 = " \
  flexiblas-netlib \
  glibc \
  libgcc \

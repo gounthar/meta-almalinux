@@ -9,17 +9,17 @@ PACKAGES = " \
  libvirt-glib \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libvirt-glib-5.0.0-4.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libvirt-glib-5.0.0-4.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8344db00288c50ec71106f0647d282cd48943a6ce6bd299c04ee87a36266adea"
 
-URI_x86_64_v2_libvirt-glib = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libvirt-glib-5.0.0-4.el10.x86_64_v2.rpm;name=x86_64_v2_libvirt-glib;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libvirt-glib}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libvirt-glib-5.0.0-4.el10.x86_64_v2.rpm;name=x86_64_v2_libvirt-glib;unpack=0"
 SRC_URI[x86_64_v2_libvirt-glib.sha256sum] = "c54fc86800a368e6bbbdbdbd4ab20d70865eb2e93afb6e905581dd177625f48b"
 
-URI_aarch64_libvirt-glib = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libvirt-glib-5.0.0-4.el10.aarch64.rpm;name=aarch64_libvirt-glib;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libvirt-glib}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libvirt-glib-5.0.0-4.el10.aarch64.rpm;name=aarch64_libvirt-glib;unpack=0"
 SRC_URI[aarch64_libvirt-glib.sha256sum] = "938cbe970f5a6f9b175eda63a9a48a29e756b920907d612b0c8248ba0cb92cfb"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libvirt-glib-5.0.0-4.el10.riscv64.rpm;name=riscv64_libvirt-glib;unpack=0"
+SRC_URI[riscv64_libvirt-glib.sha256sum] = "12ef873cee739c6639772fffadd5fa63a7c0834b23b9401b0f9733c94f8b6208"
 
 RDEPENDS:libvirt-glib = " \
  glib2 \

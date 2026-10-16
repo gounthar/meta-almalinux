@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "git-cola"
 PV = "4.15.0"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  git-cola \
- "
+"
+PACKAGES:aarch64 = " \
+ git-cola \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/g/git-cola-4.15.0-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/g/git-cola-4.15.0-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "ed6dbbf1ca194e009d3a0c91bfd45769aaa6581e3d9aa895a4c87077ffa40d86"
 
-URI_x86_64_v2_git-cola = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/git-cola-4.15.0-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_git-cola;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_git-cola}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/git-cola-4.15.0-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_git-cola;unpack=0"
 SRC_URI[x86_64_v2_git-cola.sha256sum] = "6078030184cc66a65860605ec16e9f2f672dbd05c66a1e6661de9ce8a7396bd0"
 
-URI_aarch64_git-cola = "${EPEL_MIRROR}/aarch64/Packages/g/git-cola-4.15.0-1.el10_2.noarch.rpm;name=aarch64_git-cola;unpack=0"
-SRC_URI:append = " ${URI_aarch64_git-cola}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/git-cola-4.15.0-1.el10_2.noarch.rpm;name=aarch64_git-cola;unpack=0"
 SRC_URI[aarch64_git-cola.sha256sum] = "ce286fea91d17af03754f283a8bcb6365a45e4b69ecc3ddbc892b94e5be9684c"
 
 RDEPENDS:git-cola = " \

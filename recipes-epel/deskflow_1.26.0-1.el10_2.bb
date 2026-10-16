@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "deskflow"
 PV = "1.26.0"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  deskflow \
- "
+"
+PACKAGES:aarch64 = " \
+ deskflow \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/d/deskflow-1.26.0-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/d/deskflow-1.26.0-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c23d8d78ae5a45cffffee7aa0b77c04f83c6ee90fcd3b96916501ea9dd31c0e6"
 
-URI_x86_64_v2_deskflow = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/deskflow-1.26.0-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_deskflow;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_deskflow}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/deskflow-1.26.0-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_deskflow;unpack=0"
 SRC_URI[x86_64_v2_deskflow.sha256sum] = "e61d8e3ff49c918a0113efa563632df7db4593548eb75f57d53a9325238c0d39"
 
-URI_aarch64_deskflow = "${EPEL_MIRROR}/aarch64/Packages/d/deskflow-1.26.0-1.el10_2.aarch64.rpm;name=aarch64_deskflow;unpack=0"
-SRC_URI:append = " ${URI_aarch64_deskflow}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/d/deskflow-1.26.0-1.el10_2.aarch64.rpm;name=aarch64_deskflow;unpack=0"
 SRC_URI[aarch64_deskflow.sha256sum] = "eb62bf077d8e324930067c50f6e735b497c257bd6d299b774e36bd327cbd56ee"
 
 RDEPENDS:deskflow = " \

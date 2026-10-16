@@ -54,377 +54,422 @@ PACKAGES = " \
  boost-wave \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/boost-1.83.0-8.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/boost-1.83.0-8.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3bcb611cd52c59199495523878e1a9033d140baa0b89fb9f24917c42403cab5f"
 
-URI_x86_64_v2_boost = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost;unpack=0"
 SRC_URI[x86_64_v2_boost.sha256sum] = "5aa271f1a275725eed91c9800f9139af31a6de7ca0e9cee9834d5ec8079ea108"
 
-URI_x86_64_v2_boost-atomic = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-atomic-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-atomic;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-atomic}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-atomic-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-atomic;unpack=0"
 SRC_URI[x86_64_v2_boost-atomic.sha256sum] = "25794fdc26ac9934341869d2468042c12e48c1d1ae69d18c989b21267808c63a"
 
-URI_x86_64_v2_boost-b2 = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-b2-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-b2;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-b2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-b2-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-b2;unpack=0"
 SRC_URI[x86_64_v2_boost-b2.sha256sum] = "10f7aa8a92f2eb62cfce822e7213e6eb560fc3da863d4ca9d467f01e2cfbf379"
 
-URI_x86_64_v2_boost-build = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-build-1.83.0-8.el10.noarch.rpm;name=x86_64_v2_boost-build;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-build}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-build-1.83.0-8.el10.noarch.rpm;name=x86_64_v2_boost-build;unpack=0"
 SRC_URI[x86_64_v2_boost-build.sha256sum] = "fc2b5d51334a884d20904ef9d7b1809bc145f74381599cbbb5525d750a7504ba"
 
-URI_x86_64_v2_boost-chrono = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-chrono-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-chrono;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-chrono}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-chrono-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-chrono;unpack=0"
 SRC_URI[x86_64_v2_boost-chrono.sha256sum] = "6b2bbd975ed2705fb12be6918e33f14bcab6d6134c929d10c47c1faf7f84a0f1"
 
-URI_x86_64_v2_boost-container = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-container-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-container;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-container}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-container-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-container;unpack=0"
 SRC_URI[x86_64_v2_boost-container.sha256sum] = "7d8bdec5f572af08f11d80a13e305e1c2b7f9a6d30cfaee3c32c58216827697c"
 
-URI_x86_64_v2_boost-context = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-context-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-context;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-context}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-context-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-context;unpack=0"
 SRC_URI[x86_64_v2_boost-context.sha256sum] = "2ee7de4fe23dd92c6583f94db0e0157ff5c9ea053236cdf3e82389fa419bc5e8"
 
-URI_x86_64_v2_boost-contract = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-contract-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-contract;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-contract}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-contract-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-contract;unpack=0"
 SRC_URI[x86_64_v2_boost-contract.sha256sum] = "e0b335cfc1e4543a5519ff02d0ddfb84081f7c82a7bfb53d572c24896ce7ebaf"
 
-URI_x86_64_v2_boost-coroutine = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-coroutine-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-coroutine;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-coroutine}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-coroutine-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-coroutine;unpack=0"
 SRC_URI[x86_64_v2_boost-coroutine.sha256sum] = "588474ed7b05edb757461cf3a5aadb4aa977f80b4c0b8700c853a4f003133ff6"
 
-URI_x86_64_v2_boost-date-time = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-date-time-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-date-time;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-date-time}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-date-time-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-date-time;unpack=0"
 SRC_URI[x86_64_v2_boost-date-time.sha256sum] = "6ca5dbae620b7b6e50ee8dd9ec8e00a209fe41eeb542f05934dbb4bb8bb57cff"
 
-URI_x86_64_v2_boost-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-devel-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-devel-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-devel;unpack=0"
 SRC_URI[x86_64_v2_boost-devel.sha256sum] = "444747d9c2da4d711e66ad511007964fe3bd907ec1c6895a9fe2d466c4681a02"
 
-URI_x86_64_v2_boost-doc = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-doc-1.83.0-8.el10.noarch.rpm;name=x86_64_v2_boost-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-doc-1.83.0-8.el10.noarch.rpm;name=x86_64_v2_boost-doc;unpack=0"
 SRC_URI[x86_64_v2_boost-doc.sha256sum] = "2c9310a36ad019c11e939f8c5cc883c241c8d9698f4de759fe423953d74bf1a2"
 
-URI_x86_64_v2_boost-doctools = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-doctools-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-doctools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-doctools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-doctools-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-doctools;unpack=0"
 SRC_URI[x86_64_v2_boost-doctools.sha256sum] = "7c7b601fba947d5f5970dee42c43c32e3efc9614b43d190f5f03b7bb2fc113e5"
 
-URI_x86_64_v2_boost-examples = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-examples-1.83.0-8.el10.noarch.rpm;name=x86_64_v2_boost-examples;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-examples-1.83.0-8.el10.noarch.rpm;name=x86_64_v2_boost-examples;unpack=0"
 SRC_URI[x86_64_v2_boost-examples.sha256sum] = "c7b5636a1166241b689e025ed013879bde6b3154a8c478794ff45c751851085e"
 
-URI_x86_64_v2_boost-fiber = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-fiber-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-fiber;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-fiber}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-fiber-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-fiber;unpack=0"
 SRC_URI[x86_64_v2_boost-fiber.sha256sum] = "f60193c7272b4676a2cae52dacfda503166b9488285e0c2e4e5621f902ef1363"
 
-URI_x86_64_v2_boost-filesystem = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-filesystem-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-filesystem;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-filesystem}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-filesystem-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-filesystem;unpack=0"
 SRC_URI[x86_64_v2_boost-filesystem.sha256sum] = "7e2e561d09d90d1eeee8192936218f490bef1c81d065625b210d318342e788f9"
 
-URI_x86_64_v2_boost-graph = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-graph-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-graph;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-graph}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-graph-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-graph;unpack=0"
 SRC_URI[x86_64_v2_boost-graph.sha256sum] = "54032195ea29aa7ec128f9d28e9d917b6ccd3dfaa6f81e1c3698acc21f91dc23"
 
-URI_x86_64_v2_boost-graph-mpich = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-graph-mpich-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-graph-mpich;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-graph-mpich}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-graph-mpich-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-graph-mpich;unpack=0"
 SRC_URI[x86_64_v2_boost-graph-mpich.sha256sum] = "7bd9298db7d648ff527089a8734bda44f85a8373419a16388cb8706e99849273"
 
-URI_x86_64_v2_boost-graph-openmpi = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-graph-openmpi-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-graph-openmpi;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-graph-openmpi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-graph-openmpi-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-graph-openmpi;unpack=0"
 SRC_URI[x86_64_v2_boost-graph-openmpi.sha256sum] = "a09ddfdbf125b8a2456795ddb3847d97c405c83fcc26b2ad286b6e984d36bb73"
 
-URI_x86_64_v2_boost-iostreams = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-iostreams-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-iostreams;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-iostreams}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-iostreams-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-iostreams;unpack=0"
 SRC_URI[x86_64_v2_boost-iostreams.sha256sum] = "071b442b3513a82b268f31e1e7845759bb131551f7752374351e88f996b467be"
 
-URI_x86_64_v2_boost-json = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-json-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-json;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-json}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-json-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-json;unpack=0"
 SRC_URI[x86_64_v2_boost-json.sha256sum] = "062c1769161454d1b839f2ae869937fe35ff5655e98720f060aeab5b67ac78c4"
 
-URI_x86_64_v2_boost-locale = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-locale-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-locale;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-locale}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-locale-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-locale;unpack=0"
 SRC_URI[x86_64_v2_boost-locale.sha256sum] = "439358120c3094981851846fb492f052c6ae61c23acdeb29b2a01b216aa52921"
 
-URI_x86_64_v2_boost-log = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-log-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-log;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-log}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-log-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-log;unpack=0"
 SRC_URI[x86_64_v2_boost-log.sha256sum] = "f386b1e9e898c207586f0f4c2875f1fa2a61bbcbd985bde4d186f4b4f947cada"
 
-URI_x86_64_v2_boost-math = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-math-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-math;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-math}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-math-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-math;unpack=0"
 SRC_URI[x86_64_v2_boost-math.sha256sum] = "2122b0774d38dceb89f69cf54d444770ebfcccc00f60c7aaea5a6220af361ecb"
 
-URI_x86_64_v2_boost-mpich = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-mpich-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-mpich;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-mpich}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-mpich-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-mpich;unpack=0"
 SRC_URI[x86_64_v2_boost-mpich.sha256sum] = "12fd9bf1ef89f9de487bce01d7f2e2914052bf6bc8efe57365722717facfbdc7"
 
-URI_x86_64_v2_boost-mpich-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-mpich-devel-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-mpich-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-mpich-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-mpich-devel-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-mpich-devel;unpack=0"
 SRC_URI[x86_64_v2_boost-mpich-devel.sha256sum] = "4cedea2fba0bb2cafa1107b33b53c76775d8b55519ebb36b5ad964c821416d61"
 
-URI_x86_64_v2_boost-mpich-python3 = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-mpich-python3-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-mpich-python3;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-mpich-python3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-mpich-python3-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-mpich-python3;unpack=0"
 SRC_URI[x86_64_v2_boost-mpich-python3.sha256sum] = "feddcd6555ccf9b7b2a09403b945d2fa6022855a9bd0e656cbdb65ab45c69737"
 
-URI_x86_64_v2_boost-nowide = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-nowide-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-nowide;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-nowide}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-nowide-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-nowide;unpack=0"
 SRC_URI[x86_64_v2_boost-nowide.sha256sum] = "151eda715e417f5e5a0f4892393feb8107aaeea71f22edcb91627bf4244f2526"
 
-URI_x86_64_v2_boost-numpy3 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-numpy3-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-numpy3;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-numpy3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-numpy3-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-numpy3;unpack=0"
 SRC_URI[x86_64_v2_boost-numpy3.sha256sum] = "5a2ccbc286d9eadfafc368ca0d78f74b4fbb3e7529d6a7765c3ba4ec1864027f"
 
-URI_x86_64_v2_boost-openmpi = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-openmpi-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-openmpi;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-openmpi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-openmpi-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-openmpi;unpack=0"
 SRC_URI[x86_64_v2_boost-openmpi.sha256sum] = "3b2f8e4d8c8c85c45186c32646ccefc8effdcfa388caa5df3aebd3d0631bd19b"
 
-URI_x86_64_v2_boost-openmpi-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-openmpi-devel-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-openmpi-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-openmpi-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-openmpi-devel-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-openmpi-devel;unpack=0"
 SRC_URI[x86_64_v2_boost-openmpi-devel.sha256sum] = "af57e284021733736db00087a522410e0c476936f4e30d355c8f13664c49e1c3"
 
-URI_x86_64_v2_boost-openmpi-python3 = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-openmpi-python3-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-openmpi-python3;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-openmpi-python3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-openmpi-python3-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-openmpi-python3;unpack=0"
 SRC_URI[x86_64_v2_boost-openmpi-python3.sha256sum] = "560aa948fb77030c099effa98812eced6c2f7893cfc9ffc10eb78f75d8d350b4"
 
-URI_x86_64_v2_boost-program-options = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-program-options-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-program-options;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-program-options}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-program-options-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-program-options;unpack=0"
 SRC_URI[x86_64_v2_boost-program-options.sha256sum] = "963bae1aff51edb688d8ad50be6692aedb0fb999206b0590841d72bf8a27e8c5"
 
-URI_x86_64_v2_boost-python3 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-python3-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-python3;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-python3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-python3-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-python3;unpack=0"
 SRC_URI[x86_64_v2_boost-python3.sha256sum] = "529031837da8336368b785fd8d39f9e76b526c0b99be35e737f9e4a0447e63d5"
 
-URI_x86_64_v2_boost-random = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-random-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-random;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-random}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-random-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-random;unpack=0"
 SRC_URI[x86_64_v2_boost-random.sha256sum] = "ce5c6060574d110c3ba3e5cf83936183c51a88ee1186bac53167d9e674398143"
 
-URI_x86_64_v2_boost-regex = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-regex-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-regex;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-regex}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-regex-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-regex;unpack=0"
 SRC_URI[x86_64_v2_boost-regex.sha256sum] = "13237b55e02667f662a4835c7fe7b6cb3ebdab69fe3d2bfe19e13d5113208080"
 
-URI_x86_64_v2_boost-serialization = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-serialization-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-serialization;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-serialization}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-serialization-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-serialization;unpack=0"
 SRC_URI[x86_64_v2_boost-serialization.sha256sum] = "ce77ef8c11bac883a9065d9557fd14279cb94097403d954e6c140e99b500f873"
 
-URI_x86_64_v2_boost-stacktrace = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-stacktrace-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-stacktrace;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-stacktrace}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-stacktrace-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-stacktrace;unpack=0"
 SRC_URI[x86_64_v2_boost-stacktrace.sha256sum] = "5e6a778f31870a5fd763c09e7d62e1e3f19d07777e6bb052ff2ee6291b6e1016"
 
-URI_x86_64_v2_boost-static = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-static-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-static;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-static}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/boost-static-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-static;unpack=0"
 SRC_URI[x86_64_v2_boost-static.sha256sum] = "4e28e73724763dc80684b57f9217f9b7328ef909680e5e5e378b2c93a4e638a4"
 
-URI_x86_64_v2_boost-system = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-system-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-system;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-system}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-system-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-system;unpack=0"
 SRC_URI[x86_64_v2_boost-system.sha256sum] = "fa6ca383dfd29d6cb5dca6724000584f52448558127f1ae41ef2dc2d428787ef"
 
-URI_x86_64_v2_boost-test = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-test-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-test;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-test}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-test-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-test;unpack=0"
 SRC_URI[x86_64_v2_boost-test.sha256sum] = "ec94147024b527224b28b59462b37a9ab71fac620b6bc9353dca5dd9abbe9021"
 
-URI_x86_64_v2_boost-thread = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-thread-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-thread;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-thread}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-thread-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-thread;unpack=0"
 SRC_URI[x86_64_v2_boost-thread.sha256sum] = "49ac7c4520b71a3c992b68451823adbe37bac17e2058cec70bf34ed026d9691d"
 
-URI_x86_64_v2_boost-timer = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-timer-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-timer;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-timer}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-timer-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-timer;unpack=0"
 SRC_URI[x86_64_v2_boost-timer.sha256sum] = "5d7c0a4f938f5184729be9c212bdbcef8710d5cd9f23d6c9aa4441b20af88e5d"
 
-URI_x86_64_v2_boost-type_erasure = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-type_erasure-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-type_erasure;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-type_erasure}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-type_erasure-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-type_erasure;unpack=0"
 SRC_URI[x86_64_v2_boost-type_erasure.sha256sum] = "4c8cd3bfdfdf63135c80e356f3e393ac91c5a903c80e9636a19575c643fa0491"
 
-URI_x86_64_v2_boost-url = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-url-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-url;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-url}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-url-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-url;unpack=0"
 SRC_URI[x86_64_v2_boost-url.sha256sum] = "6f558a875eab8b0872a1edf2d096ee0daea2fefe8e485d0b4cdbf9670efb7b22"
 
-URI_x86_64_v2_boost-wave = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-wave-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-wave;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_boost-wave}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/boost-wave-1.83.0-8.el10.x86_64_v2.rpm;name=x86_64_v2_boost-wave;unpack=0"
 SRC_URI[x86_64_v2_boost-wave.sha256sum] = "85b6aa1ca622a6229d6e866cbedb04c590b389719796f36a691cbaaff95681a2"
 
-URI_aarch64_boost = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost;unpack=0"
 SRC_URI[aarch64_boost.sha256sum] = "406784da96aebb4531ece4f4bd65b557fde401a70c95bc24c53c459fe793df80"
 
-URI_aarch64_boost-atomic = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-atomic-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-atomic;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-atomic}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-atomic-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-atomic;unpack=0"
 SRC_URI[aarch64_boost-atomic.sha256sum] = "037436d3d74175564cc7c26fbecf30dd0b9e3682eb57d89ba4166276b8342255"
 
-URI_aarch64_boost-b2 = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-b2-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-b2;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-b2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-b2-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-b2;unpack=0"
 SRC_URI[aarch64_boost-b2.sha256sum] = "bdfba7c1a1317ad44951d79e76807670424d1bc59e574f3959610034599f7cb1"
 
-URI_aarch64_boost-build = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-build-1.83.0-8.el10.noarch.rpm;name=aarch64_boost-build;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-build}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-build-1.83.0-8.el10.noarch.rpm;name=aarch64_boost-build;unpack=0"
 SRC_URI[aarch64_boost-build.sha256sum] = "fc2b5d51334a884d20904ef9d7b1809bc145f74381599cbbb5525d750a7504ba"
 
-URI_aarch64_boost-chrono = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-chrono-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-chrono;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-chrono}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-chrono-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-chrono;unpack=0"
 SRC_URI[aarch64_boost-chrono.sha256sum] = "5c47794696568995eb16a3a588d47b7e0786d3b66d21c5b17b39c27b91f244e7"
 
-URI_aarch64_boost-container = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-container-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-container;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-container}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-container-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-container;unpack=0"
 SRC_URI[aarch64_boost-container.sha256sum] = "6cbc9d09eaf048b8b6eea261b5b1938d9c77351dadb8ecee77d06f1d99dad44a"
 
-URI_aarch64_boost-context = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-context-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-context;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-context}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-context-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-context;unpack=0"
 SRC_URI[aarch64_boost-context.sha256sum] = "d23159454e0ebcdb083388b423b860a17059243bc2582b4ca53fd4ade26dfdb5"
 
-URI_aarch64_boost-contract = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-contract-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-contract;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-contract}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-contract-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-contract;unpack=0"
 SRC_URI[aarch64_boost-contract.sha256sum] = "b2d537670981f26e8b3a47dc82a9e6d60b4afe8d188b3c1361b7a32c445ac9df"
 
-URI_aarch64_boost-coroutine = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-coroutine-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-coroutine;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-coroutine}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-coroutine-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-coroutine;unpack=0"
 SRC_URI[aarch64_boost-coroutine.sha256sum] = "82e35173d45eaa1cb534f07e0895611b59d45fe035e8db4dcbb22b381d49cf36"
 
-URI_aarch64_boost-date-time = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-date-time-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-date-time;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-date-time}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-date-time-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-date-time;unpack=0"
 SRC_URI[aarch64_boost-date-time.sha256sum] = "df5ec33acf4fd8d25a553dbf222eb0f883d709d17dacb7c5b4d170f6b0664658"
 
-URI_aarch64_boost-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-devel-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-devel-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-devel;unpack=0"
 SRC_URI[aarch64_boost-devel.sha256sum] = "a1a72e8c3a0deebbb103eea3ef26516438617f6fa1b7794b493200b0c3af9d59"
 
-URI_aarch64_boost-doc = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-doc-1.83.0-8.el10.noarch.rpm;name=aarch64_boost-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-doc-1.83.0-8.el10.noarch.rpm;name=aarch64_boost-doc;unpack=0"
 SRC_URI[aarch64_boost-doc.sha256sum] = "2c9310a36ad019c11e939f8c5cc883c241c8d9698f4de759fe423953d74bf1a2"
 
-URI_aarch64_boost-doctools = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-doctools-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-doctools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-doctools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-doctools-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-doctools;unpack=0"
 SRC_URI[aarch64_boost-doctools.sha256sum] = "226ce287b47677a1a31dbfa5ed06c7e4c179f6db8205fbea93e1ec91afa32857"
 
-URI_aarch64_boost-examples = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-examples-1.83.0-8.el10.noarch.rpm;name=aarch64_boost-examples;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-examples-1.83.0-8.el10.noarch.rpm;name=aarch64_boost-examples;unpack=0"
 SRC_URI[aarch64_boost-examples.sha256sum] = "c7b5636a1166241b689e025ed013879bde6b3154a8c478794ff45c751851085e"
 
-URI_aarch64_boost-fiber = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-fiber-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-fiber;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-fiber}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-fiber-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-fiber;unpack=0"
 SRC_URI[aarch64_boost-fiber.sha256sum] = "685f346490cca7afafcbaae108f135d8ed802c2c49057780365de7b32ebdf16b"
 
-URI_aarch64_boost-filesystem = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-filesystem-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-filesystem;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-filesystem}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-filesystem-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-filesystem;unpack=0"
 SRC_URI[aarch64_boost-filesystem.sha256sum] = "661a1836544aaba4f6e76294537782c36a517b5f9ba3ec2e2cf33b226401c8c1"
 
-URI_aarch64_boost-graph = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-graph-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-graph;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-graph}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-graph-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-graph;unpack=0"
 SRC_URI[aarch64_boost-graph.sha256sum] = "9bcbb0d54e0d33dc59d9cb0f337218ce8322ffcb2f3390f7d87898bdb35b7169"
 
-URI_aarch64_boost-graph-mpich = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-graph-mpich-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-graph-mpich;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-graph-mpich}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-graph-mpich-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-graph-mpich;unpack=0"
 SRC_URI[aarch64_boost-graph-mpich.sha256sum] = "295d5d4a07dfb030a1ef60a2c0774ac6e7cc9deb8375d2fa31a9c95d74bc4e74"
 
-URI_aarch64_boost-graph-openmpi = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-graph-openmpi-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-graph-openmpi;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-graph-openmpi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-graph-openmpi-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-graph-openmpi;unpack=0"
 SRC_URI[aarch64_boost-graph-openmpi.sha256sum] = "a135d1e954518e95167da4bdc2c2d68bb660ab53a3400d3acef62ff2254d82ca"
 
-URI_aarch64_boost-iostreams = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-iostreams-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-iostreams;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-iostreams}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-iostreams-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-iostreams;unpack=0"
 SRC_URI[aarch64_boost-iostreams.sha256sum] = "bed732e20b5b92a566ba8e9172e6cc7da48d939a0a4c518a33d2d098060f18d0"
 
-URI_aarch64_boost-json = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-json-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-json;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-json}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-json-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-json;unpack=0"
 SRC_URI[aarch64_boost-json.sha256sum] = "6cc497ec3f262aceb200443da7d717ccf239189c9986f8cd286c87621725952d"
 
-URI_aarch64_boost-locale = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-locale-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-locale;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-locale}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-locale-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-locale;unpack=0"
 SRC_URI[aarch64_boost-locale.sha256sum] = "b2f34f3aeba2ec8470b14688eb89116652a48efbab47111a0c3045b8535d2ddc"
 
-URI_aarch64_boost-log = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-log-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-log;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-log}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-log-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-log;unpack=0"
 SRC_URI[aarch64_boost-log.sha256sum] = "e0a4e41f6d10d6c57dc3da6240b2207f0a7390be3bf9a0f87338faddb1252037"
 
-URI_aarch64_boost-math = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-math-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-math;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-math}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-math-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-math;unpack=0"
 SRC_URI[aarch64_boost-math.sha256sum] = "3e750d83144f4ea17aa530410bccfb6819ad1e72e5c6095dd9a08f5f64af7e8a"
 
-URI_aarch64_boost-mpich = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-mpich-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-mpich;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-mpich}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-mpich-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-mpich;unpack=0"
 SRC_URI[aarch64_boost-mpich.sha256sum] = "ad79fdcbba9a9cc82cac3fb82eac5ff113692ba85cc861cce302cb76ee738467"
 
-URI_aarch64_boost-mpich-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-mpich-devel-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-mpich-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-mpich-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-mpich-devel-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-mpich-devel;unpack=0"
 SRC_URI[aarch64_boost-mpich-devel.sha256sum] = "16588855360b0e969158f8ed96323ba6cef1003425d65b47ea0666aabbe0ab02"
 
-URI_aarch64_boost-mpich-python3 = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-mpich-python3-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-mpich-python3;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-mpich-python3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-mpich-python3-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-mpich-python3;unpack=0"
 SRC_URI[aarch64_boost-mpich-python3.sha256sum] = "49cbdcec3dc19a02b7f0a9701128444366c58f6e50b2679aab1a15866e63e550"
 
-URI_aarch64_boost-nowide = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-nowide-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-nowide;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-nowide}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-nowide-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-nowide;unpack=0"
 SRC_URI[aarch64_boost-nowide.sha256sum] = "f1fba4bf78dd2ae111b3f5eaf5f78bed053401b07d9c879b5d4b0f9728cd18e0"
 
-URI_aarch64_boost-numpy3 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-numpy3-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-numpy3;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-numpy3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-numpy3-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-numpy3;unpack=0"
 SRC_URI[aarch64_boost-numpy3.sha256sum] = "3e603d62d26079975e3866c2f9261670def666a239042fc327a16ab237f62670"
 
-URI_aarch64_boost-openmpi = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-openmpi-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-openmpi;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-openmpi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-openmpi-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-openmpi;unpack=0"
 SRC_URI[aarch64_boost-openmpi.sha256sum] = "142a82d62fdc89fca8bca06d8e61c0c178865e92954dadb85d3ca68809b4df1a"
 
-URI_aarch64_boost-openmpi-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-openmpi-devel-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-openmpi-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-openmpi-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-openmpi-devel-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-openmpi-devel;unpack=0"
 SRC_URI[aarch64_boost-openmpi-devel.sha256sum] = "58904916f6f0222f9c4c84a401ba850d76ae118ab4f48174c3fe3b5d131adf10"
 
-URI_aarch64_boost-openmpi-python3 = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-openmpi-python3-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-openmpi-python3;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-openmpi-python3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-openmpi-python3-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-openmpi-python3;unpack=0"
 SRC_URI[aarch64_boost-openmpi-python3.sha256sum] = "e28a2e739c13a568d6ede355ca2fa01454bcc60a205acdf09be617bbff89f4db"
 
-URI_aarch64_boost-program-options = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-program-options-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-program-options;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-program-options}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-program-options-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-program-options;unpack=0"
 SRC_URI[aarch64_boost-program-options.sha256sum] = "d2f55924d419c99fdeb1473088b531665a75cee529b83b567e6d6c74bf272283"
 
-URI_aarch64_boost-python3 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-python3-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-python3;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-python3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-python3-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-python3;unpack=0"
 SRC_URI[aarch64_boost-python3.sha256sum] = "d0dbb058fc3e73018d0d31b52a86ecee91854bd8313890622782ae1ce6e83097"
 
-URI_aarch64_boost-random = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-random-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-random;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-random}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-random-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-random;unpack=0"
 SRC_URI[aarch64_boost-random.sha256sum] = "39d44193dea7d5803be85c2b9c4448b6ff59ee13417a0206369b35c39202096b"
 
-URI_aarch64_boost-regex = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-regex-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-regex;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-regex}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-regex-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-regex;unpack=0"
 SRC_URI[aarch64_boost-regex.sha256sum] = "c34c420da1316727cccdfafd3196a72971fa2d578005d15c11d74e6fdd2085d5"
 
-URI_aarch64_boost-serialization = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-serialization-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-serialization;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-serialization}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-serialization-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-serialization;unpack=0"
 SRC_URI[aarch64_boost-serialization.sha256sum] = "b00a3316c8e0198616ba24746e1d21de33170408352522ab055c46426ef7eb9a"
 
-URI_aarch64_boost-stacktrace = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-stacktrace-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-stacktrace;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-stacktrace}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-stacktrace-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-stacktrace;unpack=0"
 SRC_URI[aarch64_boost-stacktrace.sha256sum] = "e5d57e709c8f9e0e5fd348917b503c4c87cfd2f64a25a56e8fcc7637c97e25be"
 
-URI_aarch64_boost-static = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-static-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-static;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-static}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/boost-static-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-static;unpack=0"
 SRC_URI[aarch64_boost-static.sha256sum] = "676734f8b9592fc4786631db41eed87392779ba789e9b5d4a9fd8f3af953b41f"
 
-URI_aarch64_boost-system = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-system-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-system;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-system}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-system-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-system;unpack=0"
 SRC_URI[aarch64_boost-system.sha256sum] = "c530fac64c84b6f2c7de4595fe009ae22873ddc260a80be21155db2ade6ac6a5"
 
-URI_aarch64_boost-test = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-test-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-test;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-test}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-test-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-test;unpack=0"
 SRC_URI[aarch64_boost-test.sha256sum] = "f7b5224db5f54272d9585bc3597b6d205f34c41e11c390f4c4849c5fd86ed8fd"
 
-URI_aarch64_boost-thread = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-thread-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-thread;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-thread}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-thread-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-thread;unpack=0"
 SRC_URI[aarch64_boost-thread.sha256sum] = "e18f09267ea4ebcc1748c39272688f85c8b74750a046694100d41dd6b52f1da3"
 
-URI_aarch64_boost-timer = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-timer-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-timer;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-timer}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-timer-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-timer;unpack=0"
 SRC_URI[aarch64_boost-timer.sha256sum] = "e108caeabdf588f447a974abe6cac6d263a5f643b76929678e96c5ec979f9647"
 
-URI_aarch64_boost-type_erasure = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-type_erasure-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-type_erasure;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-type_erasure}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-type_erasure-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-type_erasure;unpack=0"
 SRC_URI[aarch64_boost-type_erasure.sha256sum] = "10e23eed819453ad46d16378bfead377b0e505cda5094a39be73404a5b5f3949"
 
-URI_aarch64_boost-url = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-url-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-url;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-url}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-url-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-url;unpack=0"
 SRC_URI[aarch64_boost-url.sha256sum] = "a9979e9cbca0b9d1c46e2b37186e9343d698779800cf5d396cb87e395e13e347"
 
-URI_aarch64_boost-wave = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-wave-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-wave;unpack=0"
-SRC_URI:append = " ${URI_aarch64_boost-wave}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/boost-wave-1.83.0-8.el10.aarch64.rpm;name=aarch64_boost-wave;unpack=0"
 SRC_URI[aarch64_boost-wave.sha256sum] = "a5d48be18c7b0f903600eae41977a7d2da7465880e38f03f7a711a3104099a38"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost;unpack=0"
+SRC_URI[riscv64_boost.sha256sum] = "5b9f041c99793b1f7492ff10e30aabf332bc140dfb58d1679ce10d48f6e3992f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-atomic-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-atomic;unpack=0"
+SRC_URI[riscv64_boost-atomic.sha256sum] = "6903ec30ca56ebd56c940d2916ca69b187b55bba0042ee00da2557a6eb2e07c8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/boost-b2-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-b2;unpack=0"
+SRC_URI[riscv64_boost-b2.sha256sum] = "5c5bcffab0783dcc10f942dcaf396e671b1d785b510dfa7a17555febecf50147"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/boost-build-1.83.0-8.el10.noarch.rpm;name=riscv64_boost-build;unpack=0"
+SRC_URI[riscv64_boost-build.sha256sum] = "fc2b5d51334a884d20904ef9d7b1809bc145f74381599cbbb5525d750a7504ba"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-chrono-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-chrono;unpack=0"
+SRC_URI[riscv64_boost-chrono.sha256sum] = "fe4f6971da7ce3a7fcf88b1e39372a53b5063f4f5d0cd0bb423dec7110facca8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-container-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-container;unpack=0"
+SRC_URI[riscv64_boost-container.sha256sum] = "df8c135a76127c20cfb732fb7eae2b0f3ce046429aeb2c935f53b1bcaec5be81"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-context-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-context;unpack=0"
+SRC_URI[riscv64_boost-context.sha256sum] = "4b027ef6614b997930783f25dcad3f3ced33a95ae4122bba78b7663120b0c1e0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-contract-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-contract;unpack=0"
+SRC_URI[riscv64_boost-contract.sha256sum] = "a48bf5152caf9fecfc7134338acd411051b3249190f12786566427541586ae9c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-coroutine-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-coroutine;unpack=0"
+SRC_URI[riscv64_boost-coroutine.sha256sum] = "cc2c811a41ba494894503e792271949c6b0df7fa3722a4887f9781b2bee34aa9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-date-time-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-date-time;unpack=0"
+SRC_URI[riscv64_boost-date-time.sha256sum] = "583fac106dddc991489fe69e252ff7a89a7d9a4e9dc69fd188f3989bdda59ab6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-devel-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-devel;unpack=0"
+SRC_URI[riscv64_boost-devel.sha256sum] = "38dbf8663997ae6caa6293a8ecb8642010da0a8858cb08b4c8586dfc74a748a5"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/boost-doc-1.83.0-8.el10.noarch.rpm;name=riscv64_boost-doc;unpack=0"
+SRC_URI[riscv64_boost-doc.sha256sum] = "2c9310a36ad019c11e939f8c5cc883c241c8d9698f4de759fe423953d74bf1a2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/boost-doctools-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-doctools;unpack=0"
+SRC_URI[riscv64_boost-doctools.sha256sum] = "6974ef34517957592b7309a3d4e2f2fd94c5bc4273c21a9a1c49f03a8baf4375"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/boost-examples-1.83.0-8.el10.noarch.rpm;name=riscv64_boost-examples;unpack=0"
+SRC_URI[riscv64_boost-examples.sha256sum] = "c7b5636a1166241b689e025ed013879bde6b3154a8c478794ff45c751851085e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-fiber-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-fiber;unpack=0"
+SRC_URI[riscv64_boost-fiber.sha256sum] = "208b7e7fc338dd99ec2c8e1461e9893374ac7c694dae3b76c42b17be9610cdc6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-filesystem-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-filesystem;unpack=0"
+SRC_URI[riscv64_boost-filesystem.sha256sum] = "4841f4da318d3983ed56761c33b7887519f2244fd110de556e7db1ce90b4046f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-graph-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-graph;unpack=0"
+SRC_URI[riscv64_boost-graph.sha256sum] = "7f6cef96d9c7b00d9ada6c2feef49f09ad085bec5ba6f63a62da4eafdf99411d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/boost-graph-mpich-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-graph-mpich;unpack=0"
+SRC_URI[riscv64_boost-graph-mpich.sha256sum] = "65860134d55159e23bb8b78cac17d9ff00af1b260c8b33efdc7730940877e96f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/boost-graph-openmpi-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-graph-openmpi;unpack=0"
+SRC_URI[riscv64_boost-graph-openmpi.sha256sum] = "9d211d76ba178bf11f3678e3d2ed27dc2925f16c5a46503be4f456843358eec6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-iostreams-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-iostreams;unpack=0"
+SRC_URI[riscv64_boost-iostreams.sha256sum] = "38a99f537c435d9ec5f37cf7d1bf8d3bb1603e6594caea0d2add77b228413815"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-json-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-json;unpack=0"
+SRC_URI[riscv64_boost-json.sha256sum] = "a39438d94329afaba83acb507aff95785b43788187684af9fd5521143038b6d9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-locale-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-locale;unpack=0"
+SRC_URI[riscv64_boost-locale.sha256sum] = "93d81d5feee4574e1a0d45bd71afe41888a7221565c3d54d8373ab932117d941"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-log-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-log;unpack=0"
+SRC_URI[riscv64_boost-log.sha256sum] = "576d1354a1181a2771da9365757bb558802bee4b0563b23bb60199c7b35f541b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-math-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-math;unpack=0"
+SRC_URI[riscv64_boost-math.sha256sum] = "fba49d20f207a1978abe07f214dad2484568f9cecdc19342d6a8c88b1277fc52"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/boost-mpich-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-mpich;unpack=0"
+SRC_URI[riscv64_boost-mpich.sha256sum] = "f27f24dd88b9987b9043a7afa8a9df472c4361ef025276541ee94cbcb4ae55cc"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/boost-mpich-devel-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-mpich-devel;unpack=0"
+SRC_URI[riscv64_boost-mpich-devel.sha256sum] = "befeb0fa3242600400657f0cd1801fdbfa5b456688e689d0784c7ae7da0c35cc"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/boost-mpich-python3-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-mpich-python3;unpack=0"
+SRC_URI[riscv64_boost-mpich-python3.sha256sum] = "0dd4ca881578af01e59874d399a483de89793c7e92c0b3ffadffd24456682776"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-nowide-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-nowide;unpack=0"
+SRC_URI[riscv64_boost-nowide.sha256sum] = "2e646f7222dd54a7d3baf8b40af81868cecbbf99b75f852afba123783432e0fe"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-numpy3-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-numpy3;unpack=0"
+SRC_URI[riscv64_boost-numpy3.sha256sum] = "45c2092ff823a22aea5fbbab048c3d5a930bb11b1708a6d2bd73f4fd2a41d90e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/boost-openmpi-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-openmpi;unpack=0"
+SRC_URI[riscv64_boost-openmpi.sha256sum] = "61a0cb9393651ad7aeceb1674db597f1d875be564ccf9f90162bb12e3fe64329"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/boost-openmpi-devel-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-openmpi-devel;unpack=0"
+SRC_URI[riscv64_boost-openmpi-devel.sha256sum] = "f89d91c4c4e60c88ebc704cf1c2364f51494f45646a6aa924e2964847f2a5bd7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/boost-openmpi-python3-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-openmpi-python3;unpack=0"
+SRC_URI[riscv64_boost-openmpi-python3.sha256sum] = "3330711ba5f68097c4441031db29cf8adf564c42b7d5d8cd06943f10b3f92a5f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-program-options-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-program-options;unpack=0"
+SRC_URI[riscv64_boost-program-options.sha256sum] = "c73ed77340cb997ccb410af6afb89be7e6c16a0956d78c65939e842d99076015"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-python3-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-python3;unpack=0"
+SRC_URI[riscv64_boost-python3.sha256sum] = "68898db87718b443afa2ea44904c95ae50a659820a4f4cde98a45242155c47c2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-random-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-random;unpack=0"
+SRC_URI[riscv64_boost-random.sha256sum] = "462b76d64812772db5223b5b0762ea4ee424b67fe0a9e0261483e6893c6f7d2b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-regex-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-regex;unpack=0"
+SRC_URI[riscv64_boost-regex.sha256sum] = "d43269c163298bb769dd9ecf1dc920ecd4ed708b2fb207dea9555f07fbd80a2f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-serialization-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-serialization;unpack=0"
+SRC_URI[riscv64_boost-serialization.sha256sum] = "d988f2d25906a7b5061dba4dce78c9e5e540bc57362730e1d7245b3c6911373e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-stacktrace-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-stacktrace;unpack=0"
+SRC_URI[riscv64_boost-stacktrace.sha256sum] = "5b7c324dd562941501bcb2c477b90a3d1a47e9773adece5d0b430762f74358e2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/boost-static-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-static;unpack=0"
+SRC_URI[riscv64_boost-static.sha256sum] = "fda2ef9fbd9d977eeca76517d82442e893c39e535e8129888fc6f87854a4310b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-system-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-system;unpack=0"
+SRC_URI[riscv64_boost-system.sha256sum] = "937556b86db27fb53463c5df559d5d1084cf2a7c96b8aa454d085d6454b7eb22"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-test-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-test;unpack=0"
+SRC_URI[riscv64_boost-test.sha256sum] = "ac38349fc450d2f6410ff66735f9f4c45234a6277743e973dcb1d3eda2956a2c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-thread-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-thread;unpack=0"
+SRC_URI[riscv64_boost-thread.sha256sum] = "478cfd58c63008d3bdd61d59b8d7898d1620ffbf60455fd99005e228520476df"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-timer-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-timer;unpack=0"
+SRC_URI[riscv64_boost-timer.sha256sum] = "21aaea4498e45de3ee91a2074e57f3a93aa284a8d78337ca0801fff4fef49c95"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-type_erasure-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-type_erasure;unpack=0"
+SRC_URI[riscv64_boost-type_erasure.sha256sum] = "dcc50b9aba990fda70543119eb5cdbf4b08b0a633f2bae13d57eecc485d75ed5"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-url-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-url;unpack=0"
+SRC_URI[riscv64_boost-url.sha256sum] = "fb8c4d60d8644f305834ddf4e4cebab7a2dd4027df7baa8da7274d7c17a02e0a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/boost-wave-1.83.0-8.el10.riscv64.rpm;name=riscv64_boost-wave;unpack=0"
+SRC_URI[riscv64_boost-wave.sha256sum] = "fecc937c05e5fa2a6206fc0c31281e2181d48cb57191ea50c250e9c47d617119"
 
 RDEPENDS:boost = " \
  boost-atomic \
@@ -505,6 +550,11 @@ RDEPENDS:boost-devel:x86_64_v2 = " \
  libquadmath-devel \
 "
 RDEPENDS:boost-devel:aarch64 = " \
+ boost \
+ boost-numpy3 \
+ libicu-devel \
+"
+RDEPENDS:boost-devel:riscv64 = " \
  boost \
  boost-numpy3 \
  libicu-devel \

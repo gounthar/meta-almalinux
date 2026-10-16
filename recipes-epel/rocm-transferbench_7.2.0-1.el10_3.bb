@@ -11,13 +11,14 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rocm-transferbench-7.2.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rocm-transferbench-7.2.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a3f6313a1925cb02ae7649a62891df53e2f65b5f46f0a04fa5f40b5227c874bc"
 
-URI_x86_64_v2_rocm-transferbench = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocm-transferbench-7.2.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocm-transferbench;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rocm-transferbench}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocm-transferbench-7.2.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocm-transferbench;unpack=0"
 SRC_URI[x86_64_v2_rocm-transferbench.sha256sum] = "1df7d618c892f28285e0bae9dfb6dcb9d0381061877c0d0c651503ef6f10b571"
 
 RDEPENDS:rocm-transferbench = " \

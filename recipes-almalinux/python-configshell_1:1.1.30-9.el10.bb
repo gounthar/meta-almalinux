@@ -10,17 +10,17 @@ PACKAGES = " \
  python3-configshell \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/python-configshell-1.1.30-9.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/python-configshell-1.1.30-9.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8e295dc9cbfddd7c20b53f06722c8df4fefef49949b85675277a8cafc333ab50"
 
-URI_x86_64_v2_python3-configshell = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/python3-configshell-1.1.30-9.el10.noarch.rpm;name=x86_64_v2_python3-configshell;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-configshell}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/python3-configshell-1.1.30-9.el10.noarch.rpm;name=x86_64_v2_python3-configshell;unpack=0"
 SRC_URI[x86_64_v2_python3-configshell.sha256sum] = "2cc9a07607e63b321afdc5427cfcc7e3e336ecac07d732f555aa6ecfb370559c"
 
-URI_aarch64_python3-configshell = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/python3-configshell-1.1.30-9.el10.noarch.rpm;name=aarch64_python3-configshell;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-configshell}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/python3-configshell-1.1.30-9.el10.noarch.rpm;name=aarch64_python3-configshell;unpack=0"
 SRC_URI[aarch64_python3-configshell.sha256sum] = "2cc9a07607e63b321afdc5427cfcc7e3e336ecac07d732f555aa6ecfb370559c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/python3-configshell-1.1.30-9.el10.noarch.rpm;name=riscv64_python3-configshell;unpack=0"
+SRC_URI[riscv64_python3-configshell.sha256sum] = "2cc9a07607e63b321afdc5427cfcc7e3e336ecac07d732f555aa6ecfb370559c"
 
 RDEPENDS:python3-configshell = " \
  python3 \

@@ -11,25 +11,26 @@ PACKAGES = " \
  nmap-ncat \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/nmap-7.92-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/nmap-7.92-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "586b74edea65d57f1ae265f7a08881afa2b9264a63e5c61585b7216d4397bc9a"
 
-URI_x86_64_v2_nmap = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nmap-7.92-5.el10.x86_64_v2.rpm;name=x86_64_v2_nmap;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nmap}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nmap-7.92-5.el10.x86_64_v2.rpm;name=x86_64_v2_nmap;unpack=0"
 SRC_URI[x86_64_v2_nmap.sha256sum] = "8fd393bc93f2b54f1cdd7d73307cb81ea815e392898844469e9d931092b157de"
 
-URI_x86_64_v2_nmap-ncat = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nmap-ncat-7.92-5.el10.x86_64_v2.rpm;name=x86_64_v2_nmap-ncat;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nmap-ncat}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nmap-ncat-7.92-5.el10.x86_64_v2.rpm;name=x86_64_v2_nmap-ncat;unpack=0"
 SRC_URI[x86_64_v2_nmap-ncat.sha256sum] = "001fb27676f934608637977f9a418eb5578fdeafb3f7cf65b9ebac882f09bd2c"
 
-URI_aarch64_nmap = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nmap-7.92-5.el10.aarch64.rpm;name=aarch64_nmap;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nmap}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nmap-7.92-5.el10.aarch64.rpm;name=aarch64_nmap;unpack=0"
 SRC_URI[aarch64_nmap.sha256sum] = "78ed30c06a6c36f760a283f3fb99d1877619e31e6157c6858c058525354cc43a"
 
-URI_aarch64_nmap-ncat = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nmap-ncat-7.92-5.el10.aarch64.rpm;name=aarch64_nmap-ncat;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nmap-ncat}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nmap-ncat-7.92-5.el10.aarch64.rpm;name=aarch64_nmap-ncat;unpack=0"
 SRC_URI[aarch64_nmap-ncat.sha256sum] = "47a0c6cf6c0141df3b2bc225804da151abef09714ee1d1eb6d33f61fc9f45006"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nmap-7.92-5.el10.riscv64.rpm;name=riscv64_nmap;unpack=0"
+SRC_URI[riscv64_nmap.sha256sum] = "1aaf33e8794e2a7e05cc4a1b3c03fddf05af06e876e4edf076a8f71c49537649"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nmap-ncat-7.92-5.el10.riscv64.rpm;name=riscv64_nmap-ncat;unpack=0"
+SRC_URI[riscv64_nmap-ncat.sha256sum] = "8616bbbab75cfaf92d2a7429b2031ccd92068ec33e4592a8dc9aec0c563760d1"
 
 RDEPENDS:nmap = " \
  glibc \

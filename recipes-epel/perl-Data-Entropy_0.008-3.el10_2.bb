@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-Data-Entropy"
 PV = "0.008"
 PR = "3.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-Data-Entropy \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-Data-Entropy \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-Data-Entropy-0.008-3.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-Data-Entropy-0.008-3.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3a451eff62d0b55c61e03a10fa05389d111b4bd120bba957e2c69d049b14aa53"
 
-URI_x86_64_v2_perl-Data-Entropy = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Data-Entropy-0.008-3.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Data-Entropy;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Data-Entropy}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Data-Entropy-0.008-3.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Data-Entropy;unpack=0"
 SRC_URI[x86_64_v2_perl-Data-Entropy.sha256sum] = "045654abc66da7cd0d96cc8f983d679f40b547881a58d192493b86efe3100fc2"
 
-URI_aarch64_perl-Data-Entropy = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Data-Entropy-0.008-3.el10_2.noarch.rpm;name=aarch64_perl-Data-Entropy;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Data-Entropy}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Data-Entropy-0.008-3.el10_2.noarch.rpm;name=aarch64_perl-Data-Entropy;unpack=0"
 SRC_URI[aarch64_perl-Data-Entropy.sha256sum] = "254988d725a12b4b88034c11d508080ae5f1d680dbbc5f2aad31182f533c6d53"
 
 RDEPENDS:perl-Data-Entropy = " \

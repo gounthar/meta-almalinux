@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "lnav"
 PV = "0.13.2"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  lnav \
- "
+"
+PACKAGES:aarch64 = " \
+ lnav \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/l/lnav-0.13.2-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/l/lnav-0.13.2-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "0ed0bf92fd2122790b4f77266a6c9906688bfe47a76c6e40f5c91cf2c88d4c6f"
 
-URI_x86_64_v2_lnav = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/lnav-0.13.2-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_lnav;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lnav}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/lnav-0.13.2-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_lnav;unpack=0"
 SRC_URI[x86_64_v2_lnav.sha256sum] = "d8f5dc338803a526e53e74b41688b9639ca946e40a3cfb30913e8397199cd7de"
 
-URI_aarch64_lnav = "${EPEL_MIRROR}/aarch64/Packages/l/lnav-0.13.2-1.el10_2.aarch64.rpm;name=aarch64_lnav;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lnav}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/lnav-0.13.2-1.el10_2.aarch64.rpm;name=aarch64_lnav;unpack=0"
 SRC_URI[aarch64_lnav.sha256sum] = "0db7bce73d64febf4587686ac07d7ed71fd9dfbef96e565bf9beca569bbff9c0"
 
 RDEPENDS:lnav = " \

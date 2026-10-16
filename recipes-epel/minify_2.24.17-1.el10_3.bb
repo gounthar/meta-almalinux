@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "minify"
 PV = "2.24.17"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  minify \
- "
+"
+PACKAGES:aarch64 = " \
+ minify \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/m/minify-2.24.17-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/m/minify-2.24.17-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "36978a8e264e48646f027c90b4ecbe07fb68adaff0693ad71a0c21b8355fd147"
 
-URI_x86_64_v2_minify = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/minify-2.24.17-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_minify;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_minify}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/minify-2.24.17-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_minify;unpack=0"
 SRC_URI[x86_64_v2_minify.sha256sum] = "ba416efa6ec906915715b13d6a3d08f2d1963b671e587b68281b1d325a7d136d"
 
-URI_aarch64_minify = "${EPEL_MIRROR}/aarch64/Packages/m/minify-2.24.17-1.el10_3.aarch64.rpm;name=aarch64_minify;unpack=0"
-SRC_URI:append = " ${URI_aarch64_minify}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/m/minify-2.24.17-1.el10_3.aarch64.rpm;name=aarch64_minify;unpack=0"
 SRC_URI[aarch64_minify.sha256sum] = "ee9794fd57bac19999c91cd5490fbf42750de6e56e3b4dd628d143e4acd867a6"
 
 RDEPENDS:minify = " \

@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "ocserv"
 PV = "1.5.0"
 PR = "2.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  ocserv \
- "
+"
+PACKAGES:aarch64 = " \
+ ocserv \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/o/ocserv-1.5.0-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/o/ocserv-1.5.0-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "fa55ae83280da932628ae20f591815dc25fcb479790e77dcafc513ea69d2e01c"
 
-URI_x86_64_v2_ocserv = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ocserv-1.5.0-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ocserv;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ocserv}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ocserv-1.5.0-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ocserv;unpack=0"
 SRC_URI[x86_64_v2_ocserv.sha256sum] = "88d64bf7bba519170ecfd7b703ba2e3bd24e0c8e76e95fdffa91419930a4d4b2"
 
-URI_aarch64_ocserv = "${EPEL_MIRROR}/aarch64/Packages/o/ocserv-1.5.0-2.el10_3.aarch64.rpm;name=aarch64_ocserv;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ocserv}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/o/ocserv-1.5.0-2.el10_3.aarch64.rpm;name=aarch64_ocserv;unpack=0"
 SRC_URI[aarch64_ocserv.sha256sum] = "2a80704cef15a1e04abe6fbb1153e3bb26420294bd6275854228a5525b8d02b0"
 
 RDEPENDS:ocserv = " \

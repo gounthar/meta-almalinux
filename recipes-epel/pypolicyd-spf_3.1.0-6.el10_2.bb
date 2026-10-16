@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "pypolicyd-spf"
 PV = "3.1.0"
 PR = "6.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  pypolicyd-spf \
  pypolicyd-spf-milter \
- "
+"
+PACKAGES:aarch64 = " \
+ pypolicyd-spf \
+ pypolicyd-spf-milter \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/pypolicyd-spf-3.1.0-6.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/pypolicyd-spf-3.1.0-6.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f468dc9dc2052079bae9eccb381fd743464b87c02f8fffc809e5bde37072377c"
 
-URI_x86_64_v2_pypolicyd-spf = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/pypolicyd-spf-3.1.0-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_pypolicyd-spf;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pypolicyd-spf}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/pypolicyd-spf-3.1.0-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_pypolicyd-spf;unpack=0"
 SRC_URI[x86_64_v2_pypolicyd-spf.sha256sum] = "22c58e53f02b1b379d07e2080fd4cfa7bf8fec125ac3b41415ac043c39917123"
 
-URI_x86_64_v2_pypolicyd-spf-milter = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/pypolicyd-spf-milter-3.1.0-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_pypolicyd-spf-milter;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pypolicyd-spf-milter}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/pypolicyd-spf-milter-3.1.0-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_pypolicyd-spf-milter;unpack=0"
 SRC_URI[x86_64_v2_pypolicyd-spf-milter.sha256sum] = "8c2d8a55ffdb148f7976e653503bb117268e0ce3a79540010583b9ccdcdc941b"
 
-URI_aarch64_pypolicyd-spf = "${EPEL_MIRROR}/aarch64/Packages/p/pypolicyd-spf-3.1.0-6.el10_2.noarch.rpm;name=aarch64_pypolicyd-spf;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pypolicyd-spf}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/pypolicyd-spf-3.1.0-6.el10_2.noarch.rpm;name=aarch64_pypolicyd-spf;unpack=0"
 SRC_URI[aarch64_pypolicyd-spf.sha256sum] = "d790cbedd3b0d782a49d0e5323625b39ad438c073de803b7df8109f052f19420"
 
-URI_aarch64_pypolicyd-spf-milter = "${EPEL_MIRROR}/aarch64/Packages/p/pypolicyd-spf-milter-3.1.0-6.el10_2.noarch.rpm;name=aarch64_pypolicyd-spf-milter;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pypolicyd-spf-milter}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/pypolicyd-spf-milter-3.1.0-6.el10_2.noarch.rpm;name=aarch64_pypolicyd-spf-milter;unpack=0"
 SRC_URI[aarch64_pypolicyd-spf-milter.sha256sum] = "9feee72aa3d34857e81677908184b0cc1a489bb08f2a1f81452f537f4930ade8"
 
 RDEPENDS:pypolicyd-spf = " \

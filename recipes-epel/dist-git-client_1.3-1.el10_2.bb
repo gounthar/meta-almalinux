@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "dist-git-client"
 PV = "1.3"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  dist-git-client \
- "
+"
+PACKAGES:aarch64 = " \
+ dist-git-client \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/d/dist-git-client-1.3-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/d/dist-git-client-1.3-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "80b504aab4056bcf895f0d0a97f5ada838aecf4e01f0623c8d1301ca6ac830e0"
 
-URI_x86_64_v2_dist-git-client = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/dist-git-client-1.3-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_dist-git-client;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_dist-git-client}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/dist-git-client-1.3-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_dist-git-client;unpack=0"
 SRC_URI[x86_64_v2_dist-git-client.sha256sum] = "222d92ca487f6b58ea8a73a0e5c471e2d100aba5bed7de779da080fefe97dd47"
 
-URI_aarch64_dist-git-client = "${EPEL_MIRROR}/aarch64/Packages/d/dist-git-client-1.3-1.el10_2.noarch.rpm;name=aarch64_dist-git-client;unpack=0"
-SRC_URI:append = " ${URI_aarch64_dist-git-client}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/d/dist-git-client-1.3-1.el10_2.noarch.rpm;name=aarch64_dist-git-client;unpack=0"
 SRC_URI[aarch64_dist-git-client.sha256sum] = "77f199c45459740b0c7f930bb56686b1a75693a3235931d8d5a22b07414d8478"
 
 RDEPENDS:dist-git-client = " \

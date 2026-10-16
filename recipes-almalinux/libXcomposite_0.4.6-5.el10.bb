@@ -10,25 +10,26 @@ PACKAGES = " \
  libXcomposite-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libXcomposite-0.4.6-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libXcomposite-0.4.6-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7de3299bb4ae58dd70aba5c0caf10d8911f94ecd1453e5733fa3ae03a6a5d88d"
 
-URI_x86_64_v2_libXcomposite = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXcomposite-0.4.6-5.el10.x86_64_v2.rpm;name=x86_64_v2_libXcomposite;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libXcomposite}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXcomposite-0.4.6-5.el10.x86_64_v2.rpm;name=x86_64_v2_libXcomposite;unpack=0"
 SRC_URI[x86_64_v2_libXcomposite.sha256sum] = "5c1ca4308cadf9fc06cf92d82f47b5be8dce3fe64671830818c3df7767521d9a"
 
-URI_x86_64_v2_libXcomposite-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXcomposite-devel-0.4.6-5.el10.x86_64_v2.rpm;name=x86_64_v2_libXcomposite-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libXcomposite-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXcomposite-devel-0.4.6-5.el10.x86_64_v2.rpm;name=x86_64_v2_libXcomposite-devel;unpack=0"
 SRC_URI[x86_64_v2_libXcomposite-devel.sha256sum] = "052a5ee0bf5d451ae656dc5d6a6ab0f43e013032a350de857d66fed58d19b52a"
 
-URI_aarch64_libXcomposite = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXcomposite-0.4.6-5.el10.aarch64.rpm;name=aarch64_libXcomposite;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libXcomposite}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXcomposite-0.4.6-5.el10.aarch64.rpm;name=aarch64_libXcomposite;unpack=0"
 SRC_URI[aarch64_libXcomposite.sha256sum] = "f1b597d3988e5469a4fd72207bb1102386e9d66d4d2c82eb3b1ffe857a0c5c74"
 
-URI_aarch64_libXcomposite-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXcomposite-devel-0.4.6-5.el10.aarch64.rpm;name=aarch64_libXcomposite-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libXcomposite-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXcomposite-devel-0.4.6-5.el10.aarch64.rpm;name=aarch64_libXcomposite-devel;unpack=0"
 SRC_URI[aarch64_libXcomposite-devel.sha256sum] = "d5e66d149bf080d8faee9891f1048bae2da5c6ddec29bae74eb4d2df051c9713"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libXcomposite-0.4.6-5.el10.riscv64.rpm;name=riscv64_libXcomposite;unpack=0"
+SRC_URI[riscv64_libXcomposite.sha256sum] = "b2c1946a47ea5bf3a546d9162f3791767e68d5725f76b1f4198a5b05b7b2c0e2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libXcomposite-devel-0.4.6-5.el10.riscv64.rpm;name=riscv64_libXcomposite-devel;unpack=0"
+SRC_URI[riscv64_libXcomposite-devel.sha256sum] = "901c7ae0f3d4b78f66d63dae893110c3fc695abca784fb61d191b9fdf7d9a4df"
 
 RDEPENDS:libXcomposite = " \
  glibc \

@@ -9,17 +9,17 @@ PACKAGES = " \
  perl-libintl-perl \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/perl-libintl-perl-1.33-11.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/perl-libintl-perl-1.33-11.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b41d7eac83c13b5bf9a2da15f030eb1e8e00e726d2870ca49e5636c6658b4052"
 
-URI_x86_64_v2_perl-libintl-perl = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-libintl-perl-1.33-11.el10.x86_64_v2.rpm;name=x86_64_v2_perl-libintl-perl;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-libintl-perl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/perl-libintl-perl-1.33-11.el10.x86_64_v2.rpm;name=x86_64_v2_perl-libintl-perl;unpack=0"
 SRC_URI[x86_64_v2_perl-libintl-perl.sha256sum] = "23124e815921546becd5d50ef2a0fdee2ab4acc598ca32df6c4cae08c9390556"
 
-URI_aarch64_perl-libintl-perl = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-libintl-perl-1.33-11.el10.aarch64.rpm;name=aarch64_perl-libintl-perl;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-libintl-perl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/perl-libintl-perl-1.33-11.el10.aarch64.rpm;name=aarch64_perl-libintl-perl;unpack=0"
 SRC_URI[aarch64_perl-libintl-perl.sha256sum] = "11b9ad35a6d4edd71a657b99769a9628b6b0e6cbcb9b6c4742cd87c235c84e1f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/perl-libintl-perl-1.33-11.el10.riscv64.rpm;name=riscv64_perl-libintl-perl;unpack=0"
+SRC_URI[riscv64_perl-libintl-perl.sha256sum] = "d1c69faecc52e9624c6f20aa8d881c4d8e01dc76683df84eac40093313365ad8"
 
 RDEPENDS:perl-libintl-perl = " \
  glibc \

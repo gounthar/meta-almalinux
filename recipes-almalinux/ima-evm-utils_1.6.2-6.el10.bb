@@ -10,25 +10,26 @@ PACKAGES = " \
  ima-evm-utils-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/ima-evm-utils-1.6.2-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/ima-evm-utils-1.6.2-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b694c93fea7f2ece7216f0ba7c3edd906cf89215f0a211afadb5c702fb41efbc"
 
-URI_x86_64_v2_ima-evm-utils = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/ima-evm-utils-1.6.2-6.el10.x86_64_v2.rpm;name=x86_64_v2_ima-evm-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ima-evm-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/ima-evm-utils-1.6.2-6.el10.x86_64_v2.rpm;name=x86_64_v2_ima-evm-utils;unpack=0"
 SRC_URI[x86_64_v2_ima-evm-utils.sha256sum] = "d3ac63fb897f25cd27b8efc68495128efcf718f822c9990f5eec957693face54"
 
-URI_x86_64_v2_ima-evm-utils-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/ima-evm-utils-devel-1.6.2-6.el10.x86_64_v2.rpm;name=x86_64_v2_ima-evm-utils-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ima-evm-utils-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/ima-evm-utils-devel-1.6.2-6.el10.x86_64_v2.rpm;name=x86_64_v2_ima-evm-utils-devel;unpack=0"
 SRC_URI[x86_64_v2_ima-evm-utils-devel.sha256sum] = "6ab99aaf5326c89558a11edc2412e3c7c1f84ea762cd67b033b40c395bf2d996"
 
-URI_aarch64_ima-evm-utils = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/ima-evm-utils-1.6.2-6.el10.aarch64.rpm;name=aarch64_ima-evm-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ima-evm-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/ima-evm-utils-1.6.2-6.el10.aarch64.rpm;name=aarch64_ima-evm-utils;unpack=0"
 SRC_URI[aarch64_ima-evm-utils.sha256sum] = "4ae485b3254c67326acaadb7c79b8eda304f90759a982daaf0d8b20b2967d4a2"
 
-URI_aarch64_ima-evm-utils-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/ima-evm-utils-devel-1.6.2-6.el10.aarch64.rpm;name=aarch64_ima-evm-utils-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ima-evm-utils-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/ima-evm-utils-devel-1.6.2-6.el10.aarch64.rpm;name=aarch64_ima-evm-utils-devel;unpack=0"
 SRC_URI[aarch64_ima-evm-utils-devel.sha256sum] = "0bc02466ff93124c56f30086f097e3697ee2fdb57ccc3c3d8ceebe982f32c73f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/ima-evm-utils-1.6.2-6.el10.riscv64.rpm;name=riscv64_ima-evm-utils;unpack=0"
+SRC_URI[riscv64_ima-evm-utils.sha256sum] = "c28ed2ef1677416a93e12624e994326ec27a89d01a96a6c338f316a6a5b7ae33"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/ima-evm-utils-devel-1.6.2-6.el10.riscv64.rpm;name=riscv64_ima-evm-utils-devel;unpack=0"
+SRC_URI[riscv64_ima-evm-utils-devel.sha256sum] = "62d357cd762bf5c05803d4b9f0531fa005d95d78ee17a7dc14931f33dc132058"
 
 RDEPENDS:ima-evm-utils = " \
  attr \

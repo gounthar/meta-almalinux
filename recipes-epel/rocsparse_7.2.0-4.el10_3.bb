@@ -12,17 +12,17 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rocsparse-7.2.0-4.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rocsparse-7.2.0-4.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "368468e66165477834e40bceee0685381b9456e194992aa2dc48d1989ac5ec36"
 
-URI_x86_64_v2_rocsparse = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocsparse-7.2.0-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocsparse;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rocsparse}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocsparse-7.2.0-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocsparse;unpack=0"
 SRC_URI[x86_64_v2_rocsparse.sha256sum] = "58fc252e1ca2df8b9c7d8b6f4848aa69e1aae1c8b475aa347d5eb5d7239017e7"
 
-URI_x86_64_v2_rocsparse-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocsparse-devel-7.2.0-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocsparse-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rocsparse-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocsparse-devel-7.2.0-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocsparse-devel;unpack=0"
 SRC_URI[x86_64_v2_rocsparse-devel.sha256sum] = "9184ea3c834781a00ae6d0c1570d8e8a17fe3bfa2bd1a348bda024131268d856"
 
 RDEPENDS:rocsparse = " \

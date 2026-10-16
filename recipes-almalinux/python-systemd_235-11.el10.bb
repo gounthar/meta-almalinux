@@ -9,17 +9,17 @@ PACKAGES = " \
  python3-systemd \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/python-systemd-235-11.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/python-systemd-235-11.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "4230f54b5efa3a1e57fcc7f51398336e394e9567c9710dde353d11656025e93c"
 
-URI_x86_64_v2_python3-systemd = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/python3-systemd-235-11.el10.x86_64_v2.rpm;name=x86_64_v2_python3-systemd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-systemd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/python3-systemd-235-11.el10.x86_64_v2.rpm;name=x86_64_v2_python3-systemd;unpack=0"
 SRC_URI[x86_64_v2_python3-systemd.sha256sum] = "5a15af009b2a4a8cf6c41893d670ae3ee55f654a09722841e31b76efeccbfbe1"
 
-URI_aarch64_python3-systemd = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/python3-systemd-235-11.el10.aarch64.rpm;name=aarch64_python3-systemd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-systemd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/python3-systemd-235-11.el10.aarch64.rpm;name=aarch64_python3-systemd;unpack=0"
 SRC_URI[aarch64_python3-systemd.sha256sum] = "1ad5e9be0049ed9c3598bcf76544bf56e37ca3e352c1565840bdc8bd21a4d6a5"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/python3-systemd-235-11.el10.riscv64.rpm;name=riscv64_python3-systemd;unpack=0"
+SRC_URI[riscv64_python3-systemd.sha256sum] = "b4b13e7947ab026bba166c75549f2812fdbef86a06cdc5119539d3d86001c52a"
 
 RDEPENDS:python3-systemd = " \
  glibc \

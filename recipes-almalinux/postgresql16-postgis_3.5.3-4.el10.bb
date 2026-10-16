@@ -13,8 +13,7 @@ PACKAGES = " \
  postgis-utils \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/postgresql16-postgis-3.5.3-4.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/postgresql16-postgis-3.5.3-4.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3c577185577e40a0ff8988275fd4b94a3527cbef2a5030c04ebcc85adac99341"
 
 ## Requires (x86_64_v2) that were seen as not satisfiable in original repo:
@@ -22,45 +21,50 @@ SRC_URI[src.sha256sum] = "3c577185577e40a0ff8988275fd4b94a3527cbef2a5030c04ebcc8
 # - postgis-upgrade: libgeos_c.so.1()(64bit)
 # - postgis: libgeos_c.so.1()(64bit)
 
-URI_x86_64_v2_postgis = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postgis-3.5.3-4.el10.x86_64_v2.rpm;name=x86_64_v2_postgis;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_postgis}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postgis-3.5.3-4.el10.x86_64_v2.rpm;name=x86_64_v2_postgis;unpack=0"
 SRC_URI[x86_64_v2_postgis.sha256sum] = "8486d3670c4b5cc2c5f1fc7054a4ba8272ff3f81dd44e36f5f4c3f3916ab2b0d"
 
-URI_x86_64_v2_postgis-client = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postgis-client-3.5.3-4.el10.x86_64_v2.rpm;name=x86_64_v2_postgis-client;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_postgis-client}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postgis-client-3.5.3-4.el10.x86_64_v2.rpm;name=x86_64_v2_postgis-client;unpack=0"
 SRC_URI[x86_64_v2_postgis-client.sha256sum] = "d953757e316d7c2a2c83d6a42afcca94a4f8a175e42822fafb3db2c3c2ea199c"
 
-URI_x86_64_v2_postgis-docs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postgis-docs-3.5.3-4.el10.x86_64_v2.rpm;name=x86_64_v2_postgis-docs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_postgis-docs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postgis-docs-3.5.3-4.el10.x86_64_v2.rpm;name=x86_64_v2_postgis-docs;unpack=0"
 SRC_URI[x86_64_v2_postgis-docs.sha256sum] = "0f879828568e4dc174da6cb74222c6bf0f5cd6b99b54c26b13389754928d1a24"
 
-URI_x86_64_v2_postgis-upgrade = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postgis-upgrade-3.5.3-4.el10.x86_64_v2.rpm;name=x86_64_v2_postgis-upgrade;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_postgis-upgrade}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postgis-upgrade-3.5.3-4.el10.x86_64_v2.rpm;name=x86_64_v2_postgis-upgrade;unpack=0"
 SRC_URI[x86_64_v2_postgis-upgrade.sha256sum] = "18e96040a45944e2f5ff922ddcb049039566e0d0c449191b174926017a45f69f"
 
-URI_x86_64_v2_postgis-utils = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postgis-utils-3.5.3-4.el10.x86_64_v2.rpm;name=x86_64_v2_postgis-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_postgis-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postgis-utils-3.5.3-4.el10.x86_64_v2.rpm;name=x86_64_v2_postgis-utils;unpack=0"
 SRC_URI[x86_64_v2_postgis-utils.sha256sum] = "7758834fc667a78090b4cd2d52c9ae84846a549ea7eaf02c55217e1b19e7c408"
 
-URI_aarch64_postgis = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postgis-3.5.3-4.el10.aarch64.rpm;name=aarch64_postgis;unpack=0"
-SRC_URI:append = " ${URI_aarch64_postgis}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postgis-3.5.3-4.el10.aarch64.rpm;name=aarch64_postgis;unpack=0"
 SRC_URI[aarch64_postgis.sha256sum] = "33753b4aa3c1f9f521e86948198bfeff4b55a033b6c72359fadc6cee4dc2056a"
 
-URI_aarch64_postgis-client = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postgis-client-3.5.3-4.el10.aarch64.rpm;name=aarch64_postgis-client;unpack=0"
-SRC_URI:append = " ${URI_aarch64_postgis-client}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postgis-client-3.5.3-4.el10.aarch64.rpm;name=aarch64_postgis-client;unpack=0"
 SRC_URI[aarch64_postgis-client.sha256sum] = "3aff12bfe527759c29978790d3fb132f0baaf550a14a2a4c08a710341989d4ba"
 
-URI_aarch64_postgis-docs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postgis-docs-3.5.3-4.el10.aarch64.rpm;name=aarch64_postgis-docs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_postgis-docs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postgis-docs-3.5.3-4.el10.aarch64.rpm;name=aarch64_postgis-docs;unpack=0"
 SRC_URI[aarch64_postgis-docs.sha256sum] = "04342d8314b94167ef768618f63c025b2c0276ed4bfd94e0631025deec9de8b2"
 
-URI_aarch64_postgis-upgrade = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postgis-upgrade-3.5.3-4.el10.aarch64.rpm;name=aarch64_postgis-upgrade;unpack=0"
-SRC_URI:append = " ${URI_aarch64_postgis-upgrade}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postgis-upgrade-3.5.3-4.el10.aarch64.rpm;name=aarch64_postgis-upgrade;unpack=0"
 SRC_URI[aarch64_postgis-upgrade.sha256sum] = "46c0d33273ebcbbdccf01abc695c3a8ce250ab3010dc7426e098f7619cf07e06"
 
-URI_aarch64_postgis-utils = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postgis-utils-3.5.3-4.el10.aarch64.rpm;name=aarch64_postgis-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_postgis-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postgis-utils-3.5.3-4.el10.aarch64.rpm;name=aarch64_postgis-utils;unpack=0"
 SRC_URI[aarch64_postgis-utils.sha256sum] = "dc842b4c797bbaae5f192409c9f4a92e6fe4ae1442ec3e6a9b078513791c2f6e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/postgis-3.5.3-4.el10.riscv64.rpm;name=riscv64_postgis;unpack=0"
+SRC_URI[riscv64_postgis.sha256sum] = "5695a54948f0a65d57098c8b3f369c10dcf374f1f79ab5da19618af571dcf166"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/postgis-client-3.5.3-4.el10.riscv64.rpm;name=riscv64_postgis-client;unpack=0"
+SRC_URI[riscv64_postgis-client.sha256sum] = "e0912ee6aed0f52b09ead1bd2793d8526e89f863d938dc6e3dba82f06c859db2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/postgis-docs-3.5.3-4.el10.riscv64.rpm;name=riscv64_postgis-docs;unpack=0"
+SRC_URI[riscv64_postgis-docs.sha256sum] = "1736da28320162e9e7c4bc1320867fcb7efee4ac2c30eee74573066191b7020b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/postgis-upgrade-3.5.3-4.el10.riscv64.rpm;name=riscv64_postgis-upgrade;unpack=0"
+SRC_URI[riscv64_postgis-upgrade.sha256sum] = "de632566b1c906ff633ec27ca1f92bd5a93c66674ce017286b33488200301424"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/postgis-utils-3.5.3-4.el10.riscv64.rpm;name=riscv64_postgis-utils;unpack=0"
+SRC_URI[riscv64_postgis-utils.sha256sum] = "239856ecec7a5550c49249adf367f6a1d0547fa47accc07a03f90b7012e972b8"
 
 RDEPENDS:postgis:x86_64_v2 = " \
  gdal-libs \
@@ -77,6 +81,21 @@ RDEPENDS:postgis:x86_64_v2 = " \
  protobuf-c \
 "
 RDEPENDS:postgis:aarch64 = " \
+ gdal-libs \
+ geos \
+ glibc \
+ json-c \
+ libgcc \
+ libstdc++ \
+ libxml2 \
+ pcre2 \
+ perl-POSIX \
+ perl-interpreter \
+ perl-libs \
+ proj \
+ protobuf-c \
+"
+RDEPENDS:postgis:riscv64 = " \
  gdal-libs \
  geos \
  glibc \
@@ -114,6 +133,18 @@ RDEPENDS:postgis-client:aarch64 = " \
  postgresql-private-libs \
  proj \
 "
+RDEPENDS:postgis-client:riscv64 = " \
+ bash \
+ gdal-libs \
+ geos \
+ glibc \
+ perl-File-Basename \
+ perl-interpreter \
+ perl-libs \
+ postgis \
+ postgresql-private-libs \
+ proj \
+"
 RDEPENDS:postgis-docs = " \
  "
 RDEPENDS:postgis-upgrade:x86_64_v2 = " \
@@ -130,6 +161,20 @@ RDEPENDS:postgis-upgrade:x86_64_v2 = " \
  protobuf-c \
 "
 RDEPENDS:postgis-upgrade:aarch64 = " \
+ gdal-libs \
+ geos \
+ glibc \
+ json-c \
+ libgcc \
+ libstdc++ \
+ libxml2 \
+ pcre2 \
+ postgis \
+ postgresql-upgrade \
+ proj \
+ protobuf-c \
+"
+RDEPENDS:postgis-upgrade:riscv64 = " \
  gdal-libs \
  geos \
  glibc \

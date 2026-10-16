@@ -9,17 +9,17 @@ PACKAGES = " \
  docbook-dtds \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/docbook-dtds-1.0-92.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/docbook-dtds-1.0-92.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a4e7b419e92b1b8e2652775d06da7815b9cc58d2a111d25a7bf5cad8185ef7df"
 
-URI_x86_64_v2_docbook-dtds = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/docbook-dtds-1.0-92.el10.noarch.rpm;name=x86_64_v2_docbook-dtds;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_docbook-dtds}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/docbook-dtds-1.0-92.el10.noarch.rpm;name=x86_64_v2_docbook-dtds;unpack=0"
 SRC_URI[x86_64_v2_docbook-dtds.sha256sum] = "ad1a82acc980d822b4c6c05fa47de9105de6ec0e925574f3557684efedebd6b7"
 
-URI_aarch64_docbook-dtds = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/docbook-dtds-1.0-92.el10.noarch.rpm;name=aarch64_docbook-dtds;unpack=0"
-SRC_URI:append = " ${URI_aarch64_docbook-dtds}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/docbook-dtds-1.0-92.el10.noarch.rpm;name=aarch64_docbook-dtds;unpack=0"
 SRC_URI[aarch64_docbook-dtds.sha256sum] = "ad1a82acc980d822b4c6c05fa47de9105de6ec0e925574f3557684efedebd6b7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/docbook-dtds-1.0-92.el10.noarch.rpm;name=riscv64_docbook-dtds;unpack=0"
+SRC_URI[riscv64_docbook-dtds.sha256sum] = "ad1a82acc980d822b4c6c05fa47de9105de6ec0e925574f3557684efedebd6b7"
 
 RDEPENDS:docbook-dtds = " \
  bash \

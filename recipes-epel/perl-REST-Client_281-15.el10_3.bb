@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-REST-Client"
 PV = "281"
 PR = "15.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-REST-Client \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-REST-Client \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-REST-Client-281-15.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-REST-Client-281-15.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "02b400dded706b7c5667f4323a953a1aac3db69fb70def2c324f046b2adb7cca"
 
-URI_x86_64_v2_perl-REST-Client = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-REST-Client-281-15.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-REST-Client;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-REST-Client}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-REST-Client-281-15.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-REST-Client;unpack=0"
 SRC_URI[x86_64_v2_perl-REST-Client.sha256sum] = "375738b455cd7d0899e472e634cc50d63d0457a9ea93eff8ccee3adbad4c4ba0"
 
-URI_aarch64_perl-REST-Client = "${EPEL_MIRROR}/aarch64/Packages/p/perl-REST-Client-281-15.el10_3.noarch.rpm;name=aarch64_perl-REST-Client;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-REST-Client}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-REST-Client-281-15.el10_3.noarch.rpm;name=aarch64_perl-REST-Client;unpack=0"
 SRC_URI[aarch64_perl-REST-Client.sha256sum] = "7f1bc725e5654984c83816227a5652baa184c9502ee6de6349987092e61c43cd"
 
 RDEPENDS:perl-REST-Client = " \

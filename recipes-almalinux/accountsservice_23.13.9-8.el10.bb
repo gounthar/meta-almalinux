@@ -11,33 +11,35 @@ PACKAGES = " \
  accountsservice-libs \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/accountsservice-23.13.9-8.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/accountsservice-23.13.9-8.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "da193babdf28912939bd1021bd0ebe868e266f524a157392f725ff372a652045"
 
-URI_x86_64_v2_accountsservice = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/accountsservice-23.13.9-8.el10.x86_64_v2.rpm;name=x86_64_v2_accountsservice;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_accountsservice}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/accountsservice-23.13.9-8.el10.x86_64_v2.rpm;name=x86_64_v2_accountsservice;unpack=0"
 SRC_URI[x86_64_v2_accountsservice.sha256sum] = "a7b6eaf1f32639b42043d713bab975c0385f5cb8ffb257dcb4575f954bbf92de"
 
-URI_x86_64_v2_accountsservice-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/accountsservice-devel-23.13.9-8.el10.x86_64_v2.rpm;name=x86_64_v2_accountsservice-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_accountsservice-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/accountsservice-devel-23.13.9-8.el10.x86_64_v2.rpm;name=x86_64_v2_accountsservice-devel;unpack=0"
 SRC_URI[x86_64_v2_accountsservice-devel.sha256sum] = "cfa4f43141a2676d968c97f0756ddbb69b406e198ddefacde463f0fe34e94242"
 
-URI_x86_64_v2_accountsservice-libs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/accountsservice-libs-23.13.9-8.el10.x86_64_v2.rpm;name=x86_64_v2_accountsservice-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_accountsservice-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/accountsservice-libs-23.13.9-8.el10.x86_64_v2.rpm;name=x86_64_v2_accountsservice-libs;unpack=0"
 SRC_URI[x86_64_v2_accountsservice-libs.sha256sum] = "2e81fa38c22c8e6c87976931d88a2368732af72fa58176fb09c7a5879715c894"
 
-URI_aarch64_accountsservice = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/accountsservice-23.13.9-8.el10.aarch64.rpm;name=aarch64_accountsservice;unpack=0"
-SRC_URI:append = " ${URI_aarch64_accountsservice}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/accountsservice-23.13.9-8.el10.aarch64.rpm;name=aarch64_accountsservice;unpack=0"
 SRC_URI[aarch64_accountsservice.sha256sum] = "2ff00ced0545cdb1f012911cb2d505d54e592abd3147ebb833ec7ccc9100b5d6"
 
-URI_aarch64_accountsservice-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/accountsservice-devel-23.13.9-8.el10.aarch64.rpm;name=aarch64_accountsservice-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_accountsservice-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/accountsservice-devel-23.13.9-8.el10.aarch64.rpm;name=aarch64_accountsservice-devel;unpack=0"
 SRC_URI[aarch64_accountsservice-devel.sha256sum] = "1c9e97990f984bbef351b4c85d29f6a1a760c7cf832beb0affd8ac258e898b53"
 
-URI_aarch64_accountsservice-libs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/accountsservice-libs-23.13.9-8.el10.aarch64.rpm;name=aarch64_accountsservice-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_accountsservice-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/accountsservice-libs-23.13.9-8.el10.aarch64.rpm;name=aarch64_accountsservice-libs;unpack=0"
 SRC_URI[aarch64_accountsservice-libs.sha256sum] = "a1f1a37268a23ed115ac7a00aabdcc1e908fc4922063b5df80bc03bd79a5ea78"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/accountsservice-23.13.9-8.el10.riscv64.rpm;name=riscv64_accountsservice;unpack=0"
+SRC_URI[riscv64_accountsservice.sha256sum] = "ab25c17ed99819ee0c964db4112586cab8d583537408e1d81f15c40e8598e07e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/accountsservice-devel-23.13.9-8.el10.riscv64.rpm;name=riscv64_accountsservice-devel;unpack=0"
+SRC_URI[riscv64_accountsservice-devel.sha256sum] = "eed2b5999f42c6b3c4c3485a7a82304594a9e09781a5a2c7e9039d70d8afa259"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/accountsservice-libs-23.13.9-8.el10.riscv64.rpm;name=riscv64_accountsservice-libs;unpack=0"
+SRC_URI[riscv64_accountsservice-libs.sha256sum] = "00e1543f1deb655899fd0340a3fa3234b1278bea87e2e090fbabf088ec6ff4cd"
 
 RDEPENDS:accountsservice = " \
  bash \

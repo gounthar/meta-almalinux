@@ -44,150 +44,184 @@ PACKAGES:aarch64 = " \
  nbdkit-tmpdisk-plugin \
  nbdkit-xz-filter \
 "
+PACKAGES:riscv64 = " \
+ nbdkit \
+ nbdkit-bash-completion \
+ nbdkit-basic-filters \
+ nbdkit-basic-plugins \
+ nbdkit-curl-plugin \
+ nbdkit-devel \
+ nbdkit-example-plugins \
+ nbdkit-linuxdisk-plugin \
+ nbdkit-nbd-plugin \
+ nbdkit-python-plugin \
+ nbdkit-selinux \
+ nbdkit-server \
+ nbdkit-srpm-macros \
+ nbdkit-ssh-plugin \
+ nbdkit-tar-filter \
+ nbdkit-tmpdisk-plugin \
+ nbdkit-xz-filter \
+"
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/nbdkit-1.46.2-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/nbdkit-1.46.2-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7a6156f0ac810fc6e0df0154729017a8b4b399020f3efa238d218058840eefc4"
 
-URI_x86_64_v2_nbdkit = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nbdkit}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit;unpack=0"
 SRC_URI[x86_64_v2_nbdkit.sha256sum] = "ef285930b32b6472421e5700f8be857d79db4a3d2c9dcb552cee523908c851e3"
 
-URI_x86_64_v2_nbdkit-bash-completion = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-bash-completion-1.46.2-1.el10.noarch.rpm;name=x86_64_v2_nbdkit-bash-completion;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nbdkit-bash-completion}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-bash-completion-1.46.2-1.el10.noarch.rpm;name=x86_64_v2_nbdkit-bash-completion;unpack=0"
 SRC_URI[x86_64_v2_nbdkit-bash-completion.sha256sum] = "61320131d435036b53c192d701553836e9f1b1d30aa82675ef94f522a0bf15a0"
 
-URI_x86_64_v2_nbdkit-basic-filters = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-basic-filters-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-basic-filters;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nbdkit-basic-filters}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-basic-filters-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-basic-filters;unpack=0"
 SRC_URI[x86_64_v2_nbdkit-basic-filters.sha256sum] = "4379fe7c0dbceb89d666d8b247f14c2f130f51cf120da6e1e771ffe03f27f340"
 
-URI_x86_64_v2_nbdkit-basic-plugins = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-basic-plugins-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-basic-plugins;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nbdkit-basic-plugins}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-basic-plugins-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-basic-plugins;unpack=0"
 SRC_URI[x86_64_v2_nbdkit-basic-plugins.sha256sum] = "2ae0324ace6c0fb2d8d9e54583b2b6c5e3135f843239d2b310ac113798b3bef7"
 
-URI_x86_64_v2_nbdkit-curl-plugin = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-curl-plugin-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-curl-plugin;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nbdkit-curl-plugin}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-curl-plugin-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-curl-plugin;unpack=0"
 SRC_URI[x86_64_v2_nbdkit-curl-plugin.sha256sum] = "9ba584b6244a420c586ae878ac0a7ec77622ad8752e518b154a6d4a6fd3a6e2c"
 
-URI_x86_64_v2_nbdkit-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/nbdkit-devel-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nbdkit-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/nbdkit-devel-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-devel;unpack=0"
 SRC_URI[x86_64_v2_nbdkit-devel.sha256sum] = "43cf22d445f904f8bff6ad396becec8936bac8a8a3bec035bb7ace98eb5c4b32"
 
-URI_x86_64_v2_nbdkit-example-plugins = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/nbdkit-example-plugins-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-example-plugins;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nbdkit-example-plugins}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/nbdkit-example-plugins-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-example-plugins;unpack=0"
 SRC_URI[x86_64_v2_nbdkit-example-plugins.sha256sum] = "fbb8448f27a86dd4c1bd2f8559fb4c131efbef21a175a9470a88c0531c1fdf67"
 
-URI_x86_64_v2_nbdkit-linuxdisk-plugin = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-linuxdisk-plugin-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-linuxdisk-plugin;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nbdkit-linuxdisk-plugin}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-linuxdisk-plugin-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-linuxdisk-plugin;unpack=0"
 SRC_URI[x86_64_v2_nbdkit-linuxdisk-plugin.sha256sum] = "391f13513bbbed0386fc864db905ce2349ec474eea684efd85153859a715a260"
 
-URI_x86_64_v2_nbdkit-nbd-plugin = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-nbd-plugin-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-nbd-plugin;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nbdkit-nbd-plugin}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-nbd-plugin-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-nbd-plugin;unpack=0"
 SRC_URI[x86_64_v2_nbdkit-nbd-plugin.sha256sum] = "d0503416c5cc358c4a1af797683207cc9e04907478eea2e3cfb0ace5e4fe107f"
 
-URI_x86_64_v2_nbdkit-python-plugin = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-python-plugin-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-python-plugin;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nbdkit-python-plugin}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-python-plugin-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-python-plugin;unpack=0"
 SRC_URI[x86_64_v2_nbdkit-python-plugin.sha256sum] = "3b89c36dd7b902150ce22275fb37cde251242c5db855b46fd816dd875484f961"
 
-URI_x86_64_v2_nbdkit-selinux = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-selinux-1.46.2-1.el10.noarch.rpm;name=x86_64_v2_nbdkit-selinux;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nbdkit-selinux}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-selinux-1.46.2-1.el10.noarch.rpm;name=x86_64_v2_nbdkit-selinux;unpack=0"
 SRC_URI[x86_64_v2_nbdkit-selinux.sha256sum] = "9b335619d90653696d766af665669508e655d847faa6a9dbc192df02c92d6965"
 
-URI_x86_64_v2_nbdkit-server = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-server-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-server;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nbdkit-server}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-server-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-server;unpack=0"
 SRC_URI[x86_64_v2_nbdkit-server.sha256sum] = "610fffe546196bf22249108b36ed3395ade15eb5bd289316d8cc7a21e858d99b"
 
-URI_x86_64_v2_nbdkit-srpm-macros = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/nbdkit-srpm-macros-1.46.2-1.el10.noarch.rpm;name=x86_64_v2_nbdkit-srpm-macros;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nbdkit-srpm-macros}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/nbdkit-srpm-macros-1.46.2-1.el10.noarch.rpm;name=x86_64_v2_nbdkit-srpm-macros;unpack=0"
 SRC_URI[x86_64_v2_nbdkit-srpm-macros.sha256sum] = "c33f49adcbb8e92d5a81e15b9994200ab12914f4680036d6249148be24cfb65e"
 
-URI_x86_64_v2_nbdkit-ssh-plugin = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-ssh-plugin-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-ssh-plugin;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nbdkit-ssh-plugin}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-ssh-plugin-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-ssh-plugin;unpack=0"
 SRC_URI[x86_64_v2_nbdkit-ssh-plugin.sha256sum] = "282ed6c43c64513235233424e4fc67866c62765c6c97ec4cd43e596b0e992a43"
 
-URI_x86_64_v2_nbdkit-tar-filter = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-tar-filter-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-tar-filter;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nbdkit-tar-filter}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-tar-filter-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-tar-filter;unpack=0"
 SRC_URI[x86_64_v2_nbdkit-tar-filter.sha256sum] = "b35b8e28ff05b86293bcd87887b443228984b5702684570c481fc0603ef2608d"
 
-URI_x86_64_v2_nbdkit-tmpdisk-plugin = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-tmpdisk-plugin-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-tmpdisk-plugin;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nbdkit-tmpdisk-plugin}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-tmpdisk-plugin-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-tmpdisk-plugin;unpack=0"
 SRC_URI[x86_64_v2_nbdkit-tmpdisk-plugin.sha256sum] = "081f4b9432e1586385895feb3b795ee76604703f7eb17b07a37774862188dd3b"
 
-URI_x86_64_v2_nbdkit-vddk-plugin = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-vddk-plugin-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-vddk-plugin;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nbdkit-vddk-plugin}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-vddk-plugin-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-vddk-plugin;unpack=0"
 SRC_URI[x86_64_v2_nbdkit-vddk-plugin.sha256sum] = "ceef380623c0522816c6864319eb54f7eb5c6a558a6c0145b5cf6c5d26a87ee8"
 
-URI_x86_64_v2_nbdkit-xz-filter = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-xz-filter-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-xz-filter;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nbdkit-xz-filter}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nbdkit-xz-filter-1.46.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_nbdkit-xz-filter;unpack=0"
 SRC_URI[x86_64_v2_nbdkit-xz-filter.sha256sum] = "b0e1996ae93b4e28a021cc245d03d1cdaf14d6bac16dcc17e90680be638861a8"
 
-URI_aarch64_nbdkit = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nbdkit}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit;unpack=0"
 SRC_URI[aarch64_nbdkit.sha256sum] = "b20db5d82a67792cafcda6a7e19be66a5c3d1d1d96ee6a09dc29432c927d4b13"
 
-URI_aarch64_nbdkit-bash-completion = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-bash-completion-1.46.2-1.el10.noarch.rpm;name=aarch64_nbdkit-bash-completion;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nbdkit-bash-completion}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-bash-completion-1.46.2-1.el10.noarch.rpm;name=aarch64_nbdkit-bash-completion;unpack=0"
 SRC_URI[aarch64_nbdkit-bash-completion.sha256sum] = "61320131d435036b53c192d701553836e9f1b1d30aa82675ef94f522a0bf15a0"
 
-URI_aarch64_nbdkit-basic-filters = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-basic-filters-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-basic-filters;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nbdkit-basic-filters}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-basic-filters-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-basic-filters;unpack=0"
 SRC_URI[aarch64_nbdkit-basic-filters.sha256sum] = "2df3b476d833acf972c0a25084c875fb2b69abff60f1e3e263d1535057a1c5ce"
 
-URI_aarch64_nbdkit-basic-plugins = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-basic-plugins-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-basic-plugins;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nbdkit-basic-plugins}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-basic-plugins-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-basic-plugins;unpack=0"
 SRC_URI[aarch64_nbdkit-basic-plugins.sha256sum] = "bd76f82c040322efa3041927038dbc71a841f71e1d8010a34aca955704d2af75"
 
-URI_aarch64_nbdkit-curl-plugin = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-curl-plugin-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-curl-plugin;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nbdkit-curl-plugin}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-curl-plugin-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-curl-plugin;unpack=0"
 SRC_URI[aarch64_nbdkit-curl-plugin.sha256sum] = "3d3f881f7d99a75e41517b620ab9f0f55d29039c793c918054d4235f6b947b51"
 
-URI_aarch64_nbdkit-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/nbdkit-devel-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nbdkit-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/nbdkit-devel-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-devel;unpack=0"
 SRC_URI[aarch64_nbdkit-devel.sha256sum] = "cad56b4e9d95b417c9113e203d7b4a340442b960977acfc68020f0623f3c0671"
 
-URI_aarch64_nbdkit-example-plugins = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/nbdkit-example-plugins-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-example-plugins;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nbdkit-example-plugins}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/nbdkit-example-plugins-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-example-plugins;unpack=0"
 SRC_URI[aarch64_nbdkit-example-plugins.sha256sum] = "523932b4813a6483eeb199da43e83df2d921b2a4143415959a3102639f01b470"
 
-URI_aarch64_nbdkit-linuxdisk-plugin = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-linuxdisk-plugin-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-linuxdisk-plugin;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nbdkit-linuxdisk-plugin}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-linuxdisk-plugin-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-linuxdisk-plugin;unpack=0"
 SRC_URI[aarch64_nbdkit-linuxdisk-plugin.sha256sum] = "ce07195d6bae3606de5a207744299804bd270cd1ba16109a100822cbbbbcd564"
 
-URI_aarch64_nbdkit-nbd-plugin = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-nbd-plugin-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-nbd-plugin;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nbdkit-nbd-plugin}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-nbd-plugin-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-nbd-plugin;unpack=0"
 SRC_URI[aarch64_nbdkit-nbd-plugin.sha256sum] = "bdf1c0fe6bb7d236d67fdad35c815737eb25753df14ea30c82f4fc66237762ba"
 
-URI_aarch64_nbdkit-python-plugin = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-python-plugin-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-python-plugin;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nbdkit-python-plugin}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-python-plugin-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-python-plugin;unpack=0"
 SRC_URI[aarch64_nbdkit-python-plugin.sha256sum] = "191824f9d1a6e91e67424f6ea94481e08b24e022c2f3aa340df25addb6d118f1"
 
-URI_aarch64_nbdkit-selinux = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-selinux-1.46.2-1.el10.noarch.rpm;name=aarch64_nbdkit-selinux;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nbdkit-selinux}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-selinux-1.46.2-1.el10.noarch.rpm;name=aarch64_nbdkit-selinux;unpack=0"
 SRC_URI[aarch64_nbdkit-selinux.sha256sum] = "9b335619d90653696d766af665669508e655d847faa6a9dbc192df02c92d6965"
 
-URI_aarch64_nbdkit-server = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-server-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-server;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nbdkit-server}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-server-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-server;unpack=0"
 SRC_URI[aarch64_nbdkit-server.sha256sum] = "eb5b707aa9cd33ddd81810bf2602684995d7335018ca0d7456f308f695190e35"
 
-URI_aarch64_nbdkit-srpm-macros = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/nbdkit-srpm-macros-1.46.2-1.el10.noarch.rpm;name=aarch64_nbdkit-srpm-macros;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nbdkit-srpm-macros}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/nbdkit-srpm-macros-1.46.2-1.el10.noarch.rpm;name=aarch64_nbdkit-srpm-macros;unpack=0"
 SRC_URI[aarch64_nbdkit-srpm-macros.sha256sum] = "c33f49adcbb8e92d5a81e15b9994200ab12914f4680036d6249148be24cfb65e"
 
-URI_aarch64_nbdkit-ssh-plugin = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-ssh-plugin-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-ssh-plugin;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nbdkit-ssh-plugin}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-ssh-plugin-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-ssh-plugin;unpack=0"
 SRC_URI[aarch64_nbdkit-ssh-plugin.sha256sum] = "8131c064543df42c3a46c45aaea469e6ac80d8770726ad91997a36cbf5f10bd3"
 
-URI_aarch64_nbdkit-tar-filter = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-tar-filter-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-tar-filter;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nbdkit-tar-filter}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-tar-filter-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-tar-filter;unpack=0"
 SRC_URI[aarch64_nbdkit-tar-filter.sha256sum] = "91b5132e0f0d0c7b0dc30027fc336147a241518304066b8b8aa1268fd32414d9"
 
-URI_aarch64_nbdkit-tmpdisk-plugin = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-tmpdisk-plugin-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-tmpdisk-plugin;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nbdkit-tmpdisk-plugin}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-tmpdisk-plugin-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-tmpdisk-plugin;unpack=0"
 SRC_URI[aarch64_nbdkit-tmpdisk-plugin.sha256sum] = "f834431dfadde711264014c25e6e275422a81f1550d800d5dba59e0b4283fe1f"
 
-URI_aarch64_nbdkit-xz-filter = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-xz-filter-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-xz-filter;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nbdkit-xz-filter}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nbdkit-xz-filter-1.46.2-1.el10.aarch64.rpm;name=aarch64_nbdkit-xz-filter;unpack=0"
 SRC_URI[aarch64_nbdkit-xz-filter.sha256sum] = "a32ed06aaedbadf4bf6fb5c973e2330c32cfa779ca360810a19b4fbdb30bd8f4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nbdkit-1.46.2-1.el10.riscv64.rpm;name=riscv64_nbdkit;unpack=0"
+SRC_URI[riscv64_nbdkit.sha256sum] = "d091b0b98460cdf29ac657eb177724ff9b408894638fcd9573c5f054ff0b3cf6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nbdkit-bash-completion-1.46.2-1.el10.noarch.rpm;name=riscv64_nbdkit-bash-completion;unpack=0"
+SRC_URI[riscv64_nbdkit-bash-completion.sha256sum] = "61320131d435036b53c192d701553836e9f1b1d30aa82675ef94f522a0bf15a0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nbdkit-basic-filters-1.46.2-1.el10.riscv64.rpm;name=riscv64_nbdkit-basic-filters;unpack=0"
+SRC_URI[riscv64_nbdkit-basic-filters.sha256sum] = "013214452883e44ab39a6e35ffc3fc58682491b58e70653a91cdf257c4668d01"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nbdkit-basic-plugins-1.46.2-1.el10.riscv64.rpm;name=riscv64_nbdkit-basic-plugins;unpack=0"
+SRC_URI[riscv64_nbdkit-basic-plugins.sha256sum] = "3f2099037af4cb6c543692454eb232928df56b3546edf6547643702a587f8419"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nbdkit-curl-plugin-1.46.2-1.el10.riscv64.rpm;name=riscv64_nbdkit-curl-plugin;unpack=0"
+SRC_URI[riscv64_nbdkit-curl-plugin.sha256sum] = "4c0edad9fa6a1558b26c024a12ed218a8d443d60ce0f491ba1db81707b7ed31b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/nbdkit-devel-1.46.2-1.el10.riscv64.rpm;name=riscv64_nbdkit-devel;unpack=0"
+SRC_URI[riscv64_nbdkit-devel.sha256sum] = "20c8bcfc7de8bbe1a87cdcf81e1190fb8fa453571b4fd317565fc0e9f9dc2daf"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/nbdkit-example-plugins-1.46.2-1.el10.riscv64.rpm;name=riscv64_nbdkit-example-plugins;unpack=0"
+SRC_URI[riscv64_nbdkit-example-plugins.sha256sum] = "6e759e350f3c814a1c2b66c4ce6e5720770f14266b6e859863961adebbee27c7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nbdkit-linuxdisk-plugin-1.46.2-1.el10.riscv64.rpm;name=riscv64_nbdkit-linuxdisk-plugin;unpack=0"
+SRC_URI[riscv64_nbdkit-linuxdisk-plugin.sha256sum] = "1c552748f634bae85015fc34d80e5ec566eefbc0283eef1ba8d0c14c56fa3f57"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nbdkit-nbd-plugin-1.46.2-1.el10.riscv64.rpm;name=riscv64_nbdkit-nbd-plugin;unpack=0"
+SRC_URI[riscv64_nbdkit-nbd-plugin.sha256sum] = "c6dc704195fd965ac88028f65ae31c9463eb1033dd193b1047794961915d6221"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nbdkit-python-plugin-1.46.2-1.el10.riscv64.rpm;name=riscv64_nbdkit-python-plugin;unpack=0"
+SRC_URI[riscv64_nbdkit-python-plugin.sha256sum] = "d7bd206129ac5847ba55dbb095e093e265b1c856adccd8588c019674ab5935bb"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nbdkit-selinux-1.46.2-1.el10.noarch.rpm;name=riscv64_nbdkit-selinux;unpack=0"
+SRC_URI[riscv64_nbdkit-selinux.sha256sum] = "9b335619d90653696d766af665669508e655d847faa6a9dbc192df02c92d6965"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nbdkit-server-1.46.2-1.el10.riscv64.rpm;name=riscv64_nbdkit-server;unpack=0"
+SRC_URI[riscv64_nbdkit-server.sha256sum] = "744329d6dd71961d4968e613433b7048ffad9e980731264ea5ba8f40f7b22369"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/nbdkit-srpm-macros-1.46.2-1.el10.noarch.rpm;name=riscv64_nbdkit-srpm-macros;unpack=0"
+SRC_URI[riscv64_nbdkit-srpm-macros.sha256sum] = "c33f49adcbb8e92d5a81e15b9994200ab12914f4680036d6249148be24cfb65e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nbdkit-ssh-plugin-1.46.2-1.el10.riscv64.rpm;name=riscv64_nbdkit-ssh-plugin;unpack=0"
+SRC_URI[riscv64_nbdkit-ssh-plugin.sha256sum] = "5af99320ee3fc8d1ab12354c4f79906945dd4e9576c07dc5a44998184fbd35f2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nbdkit-tar-filter-1.46.2-1.el10.riscv64.rpm;name=riscv64_nbdkit-tar-filter;unpack=0"
+SRC_URI[riscv64_nbdkit-tar-filter.sha256sum] = "c1aa8973fa42160597dcdeb8d4cc3667644575af4e83b968604c2b1615812cc9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nbdkit-tmpdisk-plugin-1.46.2-1.el10.riscv64.rpm;name=riscv64_nbdkit-tmpdisk-plugin;unpack=0"
+SRC_URI[riscv64_nbdkit-tmpdisk-plugin.sha256sum] = "baacb65a84294a548c841330fbd8d1a91bb0cea78a070a0278f886b5b63bb671"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nbdkit-xz-filter-1.46.2-1.el10.riscv64.rpm;name=riscv64_nbdkit-xz-filter;unpack=0"
+SRC_URI[riscv64_nbdkit-xz-filter.sha256sum] = "1c337d350a5839f3afeb8b02c0cf75be7cdd06037dcdfa2a03829649073fa168"
 
 RDEPENDS:nbdkit = " \
  nbdkit-basic-filters \

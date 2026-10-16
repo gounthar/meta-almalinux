@@ -9,17 +9,17 @@ PACKAGES = " \
  gnome-shell-extension-dash-to-dock \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gnome-shell-extension-dash-to-dock-102-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gnome-shell-extension-dash-to-dock-102-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "5b79d7a312225e3c2fe0af9a344814956d9318740020717d2aa3aa820c054495"
 
-URI_x86_64_v2_gnome-shell-extension-dash-to-dock = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gnome-shell-extension-dash-to-dock-102-1.el10.noarch.rpm;name=x86_64_v2_gnome-shell-extension-dash-to-dock;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gnome-shell-extension-dash-to-dock}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gnome-shell-extension-dash-to-dock-102-1.el10.noarch.rpm;name=x86_64_v2_gnome-shell-extension-dash-to-dock;unpack=0"
 SRC_URI[x86_64_v2_gnome-shell-extension-dash-to-dock.sha256sum] = "b94c11e209ce888a63beea2181ff0d191dab2377c9a9bf6d522907972df0029c"
 
-URI_aarch64_gnome-shell-extension-dash-to-dock = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gnome-shell-extension-dash-to-dock-102-1.el10.noarch.rpm;name=aarch64_gnome-shell-extension-dash-to-dock;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gnome-shell-extension-dash-to-dock}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gnome-shell-extension-dash-to-dock-102-1.el10.noarch.rpm;name=aarch64_gnome-shell-extension-dash-to-dock;unpack=0"
 SRC_URI[aarch64_gnome-shell-extension-dash-to-dock.sha256sum] = "b94c11e209ce888a63beea2181ff0d191dab2377c9a9bf6d522907972df0029c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gnome-shell-extension-dash-to-dock-102-1.el10.noarch.rpm;name=riscv64_gnome-shell-extension-dash-to-dock;unpack=0"
+SRC_URI[riscv64_gnome-shell-extension-dash-to-dock.sha256sum] = "b94c11e209ce888a63beea2181ff0d191dab2377c9a9bf6d522907972df0029c"
 
 RDEPENDS:gnome-shell-extension-dash-to-dock = " \
  gnome-shell-extension-common \

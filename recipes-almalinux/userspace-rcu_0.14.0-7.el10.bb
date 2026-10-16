@@ -10,25 +10,26 @@ PACKAGES = " \
  userspace-rcu-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/userspace-rcu-0.14.0-7.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/userspace-rcu-0.14.0-7.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c633fa158e8c0544f028d659ac07321f2baec3c57de24336fe1b5f246e808862"
 
-URI_x86_64_v2_userspace-rcu = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/userspace-rcu-0.14.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_userspace-rcu;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_userspace-rcu}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/userspace-rcu-0.14.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_userspace-rcu;unpack=0"
 SRC_URI[x86_64_v2_userspace-rcu.sha256sum] = "69d599aa9782ebb739f38ef05fd0d2307ae3edbec3a1f6cdbacd1b4347f0e786"
 
-URI_x86_64_v2_userspace-rcu-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/userspace-rcu-devel-0.14.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_userspace-rcu-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_userspace-rcu-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/userspace-rcu-devel-0.14.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_userspace-rcu-devel;unpack=0"
 SRC_URI[x86_64_v2_userspace-rcu-devel.sha256sum] = "544e7d0dfc80e8d681df296b54be7f4beae8fb380faa336be8d85bf04513b68c"
 
-URI_aarch64_userspace-rcu = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/userspace-rcu-0.14.0-7.el10.aarch64.rpm;name=aarch64_userspace-rcu;unpack=0"
-SRC_URI:append = " ${URI_aarch64_userspace-rcu}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/userspace-rcu-0.14.0-7.el10.aarch64.rpm;name=aarch64_userspace-rcu;unpack=0"
 SRC_URI[aarch64_userspace-rcu.sha256sum] = "98c7ec07c8188dec0b8afa378f33fd19df08451dda264b1206ce8c5d8d512358"
 
-URI_aarch64_userspace-rcu-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/userspace-rcu-devel-0.14.0-7.el10.aarch64.rpm;name=aarch64_userspace-rcu-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_userspace-rcu-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/userspace-rcu-devel-0.14.0-7.el10.aarch64.rpm;name=aarch64_userspace-rcu-devel;unpack=0"
 SRC_URI[aarch64_userspace-rcu-devel.sha256sum] = "51fee1f255f2fc9067c137ecbb156774ba974215cd064cc1003b46b6086f8a7b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/userspace-rcu-0.14.0-7.el10.riscv64.rpm;name=riscv64_userspace-rcu;unpack=0"
+SRC_URI[riscv64_userspace-rcu.sha256sum] = "2f0f78393d01e914847782211c8e78fe4c65c37367a2056cce7fc93551175ffa"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/userspace-rcu-devel-0.14.0-7.el10.riscv64.rpm;name=riscv64_userspace-rcu-devel;unpack=0"
+SRC_URI[riscv64_userspace-rcu-devel.sha256sum] = "a74fdaeadd23c53d7b3a43a0f41b870c17380e1efa08a7424da77ae20122507f"
 
 RDEPENDS:userspace-rcu = " \
  glibc \

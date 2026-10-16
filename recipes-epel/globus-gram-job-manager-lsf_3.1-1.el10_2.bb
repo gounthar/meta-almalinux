@@ -5,43 +5,44 @@ inherit dnf-bridge
 PN = "globus-gram-job-manager-lsf"
 PV = "3.1"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  globus-gram-job-manager-lsf \
  globus-gram-job-manager-lsf-setup-poll \
  globus-gram-job-manager-lsf-setup-seg \
- "
+"
+PACKAGES:aarch64 = " \
+ globus-gram-job-manager-lsf \
+ globus-gram-job-manager-lsf-setup-poll \
+ globus-gram-job-manager-lsf-setup-seg \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/g/globus-gram-job-manager-lsf-3.1-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/g/globus-gram-job-manager-lsf-3.1-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1a7fa3dd38e3ae9d164afe5e1b7b5e97da0a9a5d1d6ee6be36e326a30fb0625b"
 
-URI_x86_64_v2_globus-gram-job-manager-lsf = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/globus-gram-job-manager-lsf-3.1-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_globus-gram-job-manager-lsf;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_globus-gram-job-manager-lsf}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/globus-gram-job-manager-lsf-3.1-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_globus-gram-job-manager-lsf;unpack=0"
 SRC_URI[x86_64_v2_globus-gram-job-manager-lsf.sha256sum] = "ee0723d26143b347e43f5585bb1877154415bc841c378f1850fcbb1425cc3e93"
 
-URI_x86_64_v2_globus-gram-job-manager-lsf-setup-poll = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/globus-gram-job-manager-lsf-setup-poll-3.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_globus-gram-job-manager-lsf-setup-poll;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_globus-gram-job-manager-lsf-setup-poll}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/globus-gram-job-manager-lsf-setup-poll-3.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_globus-gram-job-manager-lsf-setup-poll;unpack=0"
 SRC_URI[x86_64_v2_globus-gram-job-manager-lsf-setup-poll.sha256sum] = "f8e7201e91752b6515ecb0d3241eb9edfbdf679840744875383bbdd18f2109fd"
-RPROVIDES:globus-gram-job-manager-lsf-setup-poll:x86_64_v2 = "virtual/globus-gram-job-manager-lsf-setup_eq_3.1-1.el10_2.alma_altarch"
+RPROVIDES:globus-gram-job-manager-lsf-setup-poll:append:x86_64_v2 = " virtual/globus-gram-job-manager-lsf-setup_eq_3.1-1.el10_2.alma_altarch"
 
-URI_x86_64_v2_globus-gram-job-manager-lsf-setup-seg = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/globus-gram-job-manager-lsf-setup-seg-3.1-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_globus-gram-job-manager-lsf-setup-seg;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_globus-gram-job-manager-lsf-setup-seg}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/globus-gram-job-manager-lsf-setup-seg-3.1-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_globus-gram-job-manager-lsf-setup-seg;unpack=0"
 SRC_URI[x86_64_v2_globus-gram-job-manager-lsf-setup-seg.sha256sum] = "94c383b6178142e973d2786d05e588c760899dfc3ad34c6b16e08530bb9ec1fe"
-RPROVIDES:globus-gram-job-manager-lsf-setup-seg:x86_64_v2 = "virtual/globus-gram-job-manager-lsf-setup_eq_3.1-1.el10_2.alma_altarch"
+RPROVIDES:globus-gram-job-manager-lsf-setup-seg:append:x86_64_v2 = " virtual/globus-gram-job-manager-lsf-setup_eq_3.1-1.el10_2.alma_altarch"
 
-URI_aarch64_globus-gram-job-manager-lsf = "${EPEL_MIRROR}/aarch64/Packages/g/globus-gram-job-manager-lsf-3.1-1.el10_2.aarch64.rpm;name=aarch64_globus-gram-job-manager-lsf;unpack=0"
-SRC_URI:append = " ${URI_aarch64_globus-gram-job-manager-lsf}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/globus-gram-job-manager-lsf-3.1-1.el10_2.aarch64.rpm;name=aarch64_globus-gram-job-manager-lsf;unpack=0"
 SRC_URI[aarch64_globus-gram-job-manager-lsf.sha256sum] = "527b2543e2785f3156b8cfd9422b4dc083158f1b9527221b228f09251f18e632"
 
-URI_aarch64_globus-gram-job-manager-lsf-setup-poll = "${EPEL_MIRROR}/aarch64/Packages/g/globus-gram-job-manager-lsf-setup-poll-3.1-1.el10_2.noarch.rpm;name=aarch64_globus-gram-job-manager-lsf-setup-poll;unpack=0"
-SRC_URI:append = " ${URI_aarch64_globus-gram-job-manager-lsf-setup-poll}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/globus-gram-job-manager-lsf-setup-poll-3.1-1.el10_2.noarch.rpm;name=aarch64_globus-gram-job-manager-lsf-setup-poll;unpack=0"
 SRC_URI[aarch64_globus-gram-job-manager-lsf-setup-poll.sha256sum] = "765dfd4caa71c243a415aa449436477c0d67ff14494d7826f973e56adb756393"
-RPROVIDES:globus-gram-job-manager-lsf-setup-poll:aarch64 = "virtual/globus-gram-job-manager-lsf-setup_eq_3.1-1.el10_2"
+RPROVIDES:globus-gram-job-manager-lsf-setup-poll:append:aarch64 = " virtual/globus-gram-job-manager-lsf-setup_eq_3.1-1.el10_2"
 
-URI_aarch64_globus-gram-job-manager-lsf-setup-seg = "${EPEL_MIRROR}/aarch64/Packages/g/globus-gram-job-manager-lsf-setup-seg-3.1-1.el10_2.aarch64.rpm;name=aarch64_globus-gram-job-manager-lsf-setup-seg;unpack=0"
-SRC_URI:append = " ${URI_aarch64_globus-gram-job-manager-lsf-setup-seg}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/globus-gram-job-manager-lsf-setup-seg-3.1-1.el10_2.aarch64.rpm;name=aarch64_globus-gram-job-manager-lsf-setup-seg;unpack=0"
 SRC_URI[aarch64_globus-gram-job-manager-lsf-setup-seg.sha256sum] = "061155226a6b7b9f8578f15625c6b82d8c66d91ec6833c2408189d46ca6f5245"
-RPROVIDES:globus-gram-job-manager-lsf-setup-seg:aarch64 = "virtual/globus-gram-job-manager-lsf-setup_eq_3.1-1.el10_2"
+RPROVIDES:globus-gram-job-manager-lsf-setup-seg:append:aarch64 = " virtual/globus-gram-job-manager-lsf-setup_eq_3.1-1.el10_2"
 
 RDEPENDS:globus-gram-job-manager-lsf:x86_64_v2 = " \
  globus-common \
@@ -80,7 +81,3 @@ RDEPENDS:globus-gram-job-manager-lsf-setup-seg = " \
  globus-scheduler-event-generator-progs \
  systemd \
  "
-
-PROVIDES:append:x86_64_v2 = " rpm/virtual/globus-gram-job-manager-lsf-setup_eq_3.1-1.el10_2.alma_altarch"
-
-PROVIDES:append:aarch64 = " rpm/virtual/globus-gram-job-manager-lsf-setup_eq_3.1-1.el10_2"

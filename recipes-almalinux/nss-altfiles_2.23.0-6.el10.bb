@@ -9,17 +9,17 @@ PACKAGES = " \
  nss-altfiles \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/nss-altfiles-2.23.0-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/nss-altfiles-2.23.0-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b1f9da4bae8fde17b4bfde912e0ad30014cc3da12f3fc9172cd3b733438ff888"
 
-URI_x86_64_v2_nss-altfiles = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss-altfiles-2.23.0-6.el10.x86_64_v2.rpm;name=x86_64_v2_nss-altfiles;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nss-altfiles}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/nss-altfiles-2.23.0-6.el10.x86_64_v2.rpm;name=x86_64_v2_nss-altfiles;unpack=0"
 SRC_URI[x86_64_v2_nss-altfiles.sha256sum] = "b76350cdfb5cd2ad4e53c91bb4a852be8c3f9cca3935567c632530c4123a6338"
 
-URI_aarch64_nss-altfiles = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss-altfiles-2.23.0-6.el10.aarch64.rpm;name=aarch64_nss-altfiles;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nss-altfiles}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/nss-altfiles-2.23.0-6.el10.aarch64.rpm;name=aarch64_nss-altfiles;unpack=0"
 SRC_URI[aarch64_nss-altfiles.sha256sum] = "dfdf32669612451f7f06b5d06d8b22745d1981d1b4ba654e4fb1e585a3a12d36"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/nss-altfiles-2.23.0-6.el10.riscv64.rpm;name=riscv64_nss-altfiles;unpack=0"
+SRC_URI[riscv64_nss-altfiles.sha256sum] = "d689587229d0b571c05f14592f88049bef64b73d3fb39e8dc5e78fb91cbf0aab"
 
 RDEPENDS:nss-altfiles = " \
  glibc \

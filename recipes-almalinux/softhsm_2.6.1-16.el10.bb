@@ -9,17 +9,17 @@ PACKAGES = " \
  softhsm \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/softhsm-2.6.1-16.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/softhsm-2.6.1-16.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "aa76ac230b373352322f47d265276af7c5e8d4f0f20eb691b34537198d8deee0"
 
-URI_x86_64_v2_softhsm = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/softhsm-2.6.1-16.el10.x86_64_v2.rpm;name=x86_64_v2_softhsm;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_softhsm}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/softhsm-2.6.1-16.el10.x86_64_v2.rpm;name=x86_64_v2_softhsm;unpack=0"
 SRC_URI[x86_64_v2_softhsm.sha256sum] = "b84148d6a3aa5c50357373ea9d85ceb00120d653058a78c8d19765bd32c9ec12"
 
-URI_aarch64_softhsm = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/softhsm-2.6.1-16.el10.aarch64.rpm;name=aarch64_softhsm;unpack=0"
-SRC_URI:append = " ${URI_aarch64_softhsm}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/softhsm-2.6.1-16.el10.aarch64.rpm;name=aarch64_softhsm;unpack=0"
 SRC_URI[aarch64_softhsm.sha256sum] = "fea8003746a3c9d80c49bc7544e21fe112f76c4463c2723d07a255e013233b0c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/softhsm-2.6.1-16.el10.riscv64.rpm;name=riscv64_softhsm;unpack=0"
+SRC_URI[riscv64_softhsm.sha256sum] = "7fb8fc1466e1b616460c5eb4da82cd425c5a7ea6426d0e08592d0381199a925a"
 
 RDEPENDS:softhsm = " \
  bash \

@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-ironicclient"
 PV = "6.0.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-ironicclient \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-ironicclient \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-ironicclient-6.0.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-ironicclient-6.0.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "cafcc595a9b094345fbeacb26529dd4de8da87d539197dd4fbf6591131e61da1"
 
-URI_x86_64_v2_python3-ironicclient = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-ironicclient-6.0.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-ironicclient;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-ironicclient}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-ironicclient-6.0.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-ironicclient;unpack=0"
 SRC_URI[x86_64_v2_python3-ironicclient.sha256sum] = "534933e5921b95e85232b20c90c3c5f120cf10af9fdcfae5d47c20db7a2b7a75"
 
-URI_aarch64_python3-ironicclient = "${EPEL_MIRROR}/aarch64/Packages/p/python3-ironicclient-6.0.0-1.el10_3.noarch.rpm;name=aarch64_python3-ironicclient;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-ironicclient}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-ironicclient-6.0.0-1.el10_3.noarch.rpm;name=aarch64_python3-ironicclient;unpack=0"
 SRC_URI[aarch64_python3-ironicclient.sha256sum] = "d38e66fe69592a30ddce87b966604a593ef77080bd18910928453e43f740217a"
 
 RDEPENDS:python3-ironicclient = " \

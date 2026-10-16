@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "rust-uu_users"
 PV = "0.7.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-uu_users+default-devel \
  rust-uu_users+feat_systemd_logind-devel \
  rust-uu_users-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-uu_users+default-devel \
+ rust-uu_users+feat_systemd_logind-devel \
+ rust-uu_users-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-uu_users-0.7.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-uu_users-0.7.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "2d720de61d4d4603bb005e5022950ee351b25d9517de890d925586f5e155fb2a"
 
-URI_x86_64_v2_rust-uu_users+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_users+default-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_users+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_users+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_users+default-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_users+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_users+default-devel.sha256sum] = "2580c9832329d2ec7664ed77f872242964660f7f99150f43c741866dd28f0e9a"
 
-URI_x86_64_v2_rust-uu_users+feat_systemd_logind-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_users+feat_systemd_logind-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_users+feat_systemd_logind-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_users+feat_systemd_logind-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_users+feat_systemd_logind-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_users+feat_systemd_logind-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_users+feat_systemd_logind-devel.sha256sum] = "4e7ad154f2eeb22ae07e13d15ee7de88e89c82cef5ccca666b8d1c2e63d177ad"
 
-URI_x86_64_v2_rust-uu_users-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_users-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_users-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_users-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_users-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_users-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_users-devel.sha256sum] = "9d1b2bcea47e2790b4c93216463f605456a8d0040efe4f15acd1409c0e6c239d"
 
-URI_aarch64_rust-uu_users+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_users+default-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_users+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_users+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_users+default-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_users+default-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_users+default-devel.sha256sum] = "716d9b32dc86438b8b5cf2883b3b1f535fba3b7bdb5945bc90652a525bbde189"
 
-URI_aarch64_rust-uu_users+feat_systemd_logind-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_users+feat_systemd_logind-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_users+feat_systemd_logind-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_users+feat_systemd_logind-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_users+feat_systemd_logind-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_users+feat_systemd_logind-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_users+feat_systemd_logind-devel.sha256sum] = "e1cc94d52ae7b1e395c4192ae48028f919a232120e7a18a718e086ac77610c15"
 
-URI_aarch64_rust-uu_users-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_users-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_users-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_users-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_users-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_users-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_users-devel.sha256sum] = "03d9aaf3fa4c45dc7906fd67979c52f568b80f6a8058875495a73bcaaaa9afdb"
 
 RDEPENDS:rust-uu_users+default-devel = " \

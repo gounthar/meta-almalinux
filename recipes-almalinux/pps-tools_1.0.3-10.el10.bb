@@ -9,17 +9,17 @@ PACKAGES = " \
  pps-tools-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/pps-tools-1.0.3-10.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/pps-tools-1.0.3-10.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "094d8d83eae6bde762841d33474dbfc30f1d285d75e7fd479bf1132c9924dba5"
 
-URI_x86_64_v2_pps-tools-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/pps-tools-devel-1.0.3-10.el10.x86_64_v2.rpm;name=x86_64_v2_pps-tools-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pps-tools-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/pps-tools-devel-1.0.3-10.el10.x86_64_v2.rpm;name=x86_64_v2_pps-tools-devel;unpack=0"
 SRC_URI[x86_64_v2_pps-tools-devel.sha256sum] = "6c85b7a89b7ca3dde3736a7c2a05a47a716d045ae564cb05aa917385ca7cde6d"
 
-URI_aarch64_pps-tools-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/pps-tools-devel-1.0.3-10.el10.aarch64.rpm;name=aarch64_pps-tools-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pps-tools-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/pps-tools-devel-1.0.3-10.el10.aarch64.rpm;name=aarch64_pps-tools-devel;unpack=0"
 SRC_URI[aarch64_pps-tools-devel.sha256sum] = "f8d840c4d46834699e314ff59c2360873059807575d79b168130611151ff2c71"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/pps-tools-devel-1.0.3-10.el10.riscv64.rpm;name=riscv64_pps-tools-devel;unpack=0"
+SRC_URI[riscv64_pps-tools-devel.sha256sum] = "e61d13c324b85b08a4078f34c2cc09a0edf6fb8f435a3a21dbd4f780272c298f"
 
 RDEPENDS:pps-tools-devel = " \
  "

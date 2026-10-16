@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "rust-fixed_decimal"
 PV = "0.7.2"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-fixed_decimal+default-devel \
  rust-fixed_decimal+ryu-devel \
  rust-fixed_decimal-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-fixed_decimal+default-devel \
+ rust-fixed_decimal+ryu-devel \
+ rust-fixed_decimal-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-fixed_decimal-0.7.2-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-fixed_decimal-0.7.2-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "dc91fb770776fbd88626b4adb0664c552436bf3eb0ea4396f1886018c9e77563"
 
-URI_x86_64_v2_rust-fixed_decimal+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-fixed_decimal+default-devel-0.7.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-fixed_decimal+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-fixed_decimal+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-fixed_decimal+default-devel-0.7.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-fixed_decimal+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-fixed_decimal+default-devel.sha256sum] = "83cceea58a3cedb3ee3deff7aab347033cf65ce7edfa3a87937c4c93e84f6084"
 
-URI_x86_64_v2_rust-fixed_decimal+ryu-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-fixed_decimal+ryu-devel-0.7.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-fixed_decimal+ryu-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-fixed_decimal+ryu-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-fixed_decimal+ryu-devel-0.7.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-fixed_decimal+ryu-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-fixed_decimal+ryu-devel.sha256sum] = "989ec4e5bd90eaeeb5eb63d425390a9c852568372369b396eeba455a0e715ec2"
 
-URI_x86_64_v2_rust-fixed_decimal-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-fixed_decimal-devel-0.7.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-fixed_decimal-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-fixed_decimal-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-fixed_decimal-devel-0.7.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-fixed_decimal-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-fixed_decimal-devel.sha256sum] = "da66defc35ca83a09a35e5eb75452d57b987eea27a5805a0f6a51ccdf9fb2752"
 
-URI_aarch64_rust-fixed_decimal+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-fixed_decimal+default-devel-0.7.2-1.el10_3.noarch.rpm;name=aarch64_rust-fixed_decimal+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-fixed_decimal+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-fixed_decimal+default-devel-0.7.2-1.el10_3.noarch.rpm;name=aarch64_rust-fixed_decimal+default-devel;unpack=0"
 SRC_URI[aarch64_rust-fixed_decimal+default-devel.sha256sum] = "fb774db274e7c48572da971c8a64273f1383422b1b8daa51180559f17fe15bbc"
 
-URI_aarch64_rust-fixed_decimal+ryu-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-fixed_decimal+ryu-devel-0.7.2-1.el10_3.noarch.rpm;name=aarch64_rust-fixed_decimal+ryu-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-fixed_decimal+ryu-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-fixed_decimal+ryu-devel-0.7.2-1.el10_3.noarch.rpm;name=aarch64_rust-fixed_decimal+ryu-devel;unpack=0"
 SRC_URI[aarch64_rust-fixed_decimal+ryu-devel.sha256sum] = "c0abcdd1989acc8f3d625b5bf373834e994b6a5955458b597d406bc74504dcf2"
 
-URI_aarch64_rust-fixed_decimal-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-fixed_decimal-devel-0.7.2-1.el10_3.noarch.rpm;name=aarch64_rust-fixed_decimal-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-fixed_decimal-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-fixed_decimal-devel-0.7.2-1.el10_3.noarch.rpm;name=aarch64_rust-fixed_decimal-devel;unpack=0"
 SRC_URI[aarch64_rust-fixed_decimal-devel.sha256sum] = "b31d721b4c12e47d15ebbbaa672c1a7e757d0d8cb32e68f797d6cc1d263da915"
 
 RDEPENDS:rust-fixed_decimal+default-devel = " \

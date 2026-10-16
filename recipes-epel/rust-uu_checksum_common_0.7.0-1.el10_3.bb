@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-uu_checksum_common"
 PV = "0.7.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-uu_checksum_common+default-devel \
  rust-uu_checksum_common-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-uu_checksum_common+default-devel \
+ rust-uu_checksum_common-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-uu_checksum_common-0.7.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-uu_checksum_common-0.7.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e5d30db5cdc3040e04a1e67610ea1fc23458a341a0cfa7ca5483da506b9540b1"
 
-URI_x86_64_v2_rust-uu_checksum_common+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_checksum_common+default-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_checksum_common+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_checksum_common+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_checksum_common+default-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_checksum_common+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_checksum_common+default-devel.sha256sum] = "18d4ce499d475f1fcaec1edae38287d68d0275f32603c18cb9583f8ecb0cb8c6"
 
-URI_x86_64_v2_rust-uu_checksum_common-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_checksum_common-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_checksum_common-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_checksum_common-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_checksum_common-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_checksum_common-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_checksum_common-devel.sha256sum] = "8f894817570c9bafd939ae8600e40b5c2e373df81366f8d0971c13ddc5f2c287"
 
-URI_aarch64_rust-uu_checksum_common+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_checksum_common+default-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_checksum_common+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_checksum_common+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_checksum_common+default-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_checksum_common+default-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_checksum_common+default-devel.sha256sum] = "945fc420fdf85e514bc27e6a524edb64a01ca908d837b3b38f872fa6e42ccac4"
 
-URI_aarch64_rust-uu_checksum_common-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_checksum_common-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_checksum_common-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_checksum_common-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_checksum_common-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_checksum_common-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_checksum_common-devel.sha256sum] = "29ef78dc8d31d4989b0b5e316dc08a2a949f11a5af7dc41b6e98de3bcd1bd09b"
 
 RDEPENDS:rust-uu_checksum_common+default-devel = " \

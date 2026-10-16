@@ -11,35 +11,37 @@ PACKAGES = " \
  qt6-qt5compat-examples \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qt5compat-6.10.1-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qt5compat-6.10.1-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "9286e9c756b0cbd0f3e3d2478f62dc103deb539a0787c7be8b715602f9f048e3"
 
-URI_x86_64_v2_qt6-qt5compat = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qt5compat-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qt5compat;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qt5compat}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qt5compat-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qt5compat;unpack=0"
 SRC_URI[x86_64_v2_qt6-qt5compat.sha256sum] = "bcd092954f405764c38fe7b195d432b8099c9e7e414bebacecd9cdeef27daa9c"
 
-URI_x86_64_v2_qt6-qt5compat-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qt5compat-devel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qt5compat-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qt5compat-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qt5compat-devel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qt5compat-devel;unpack=0"
 SRC_URI[x86_64_v2_qt6-qt5compat-devel.sha256sum] = "d1b47e09103ac130d25f01fedf5f2eca2b1155c11894c09d5b9a4848c85b00a2"
 
-URI_x86_64_v2_qt6-qt5compat-examples = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qt5compat-examples-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qt5compat-examples;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qt5compat-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qt5compat-examples-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qt5compat-examples;unpack=0"
 SRC_URI[x86_64_v2_qt6-qt5compat-examples.sha256sum] = "9216f2a9dbd10d9f866e526267248876e4aeddb4b0d4d6f0a19e49996f74fc1a"
 
-URI_aarch64_qt6-qt5compat = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qt5compat-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qt5compat;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qt5compat}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qt5compat-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qt5compat;unpack=0"
 SRC_URI[aarch64_qt6-qt5compat.sha256sum] = "5a31aace238aa36ce6c6a017b4c0dd1865a409f9310aa1101d2bab6250f1eab3"
 
-URI_aarch64_qt6-qt5compat-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qt5compat-devel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qt5compat-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qt5compat-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qt5compat-devel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qt5compat-devel;unpack=0"
 SRC_URI[aarch64_qt6-qt5compat-devel.sha256sum] = "4ddb3e2f583b726d368b8cf58118682ca27d94f08241e2288f51019ea078f0fe"
 
-URI_aarch64_qt6-qt5compat-examples = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qt5compat-examples-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qt5compat-examples;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qt5compat-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qt5compat-examples-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qt5compat-examples;unpack=0"
 SRC_URI[aarch64_qt6-qt5compat-examples.sha256sum] = "c3fd2e8496df8befe143da87929b26a2ed115505554650f228ced781921f5b28"
 
-RDEPENDS:qt6-qt5compat = " \
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qt5compat-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qt5compat;unpack=0"
+SRC_URI[riscv64_qt6-qt5compat.sha256sum] = "1ab157ddccfbee92f20d659d97bd2cfc72bf59bea0361ac1f1f54b1077565970"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qt5compat-devel-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qt5compat-devel;unpack=0"
+SRC_URI[riscv64_qt6-qt5compat-devel.sha256sum] = "912fd2930225715ad542c5fe696a65fb8c07f135d298f1c52e923eb9a0e9281c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/qt6-qt5compat-examples-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qt5compat-examples;unpack=0"
+SRC_URI[riscv64_qt6-qt5compat-examples.sha256sum] = "9ee59f9ac9f873e0dba322dc8bf009a779cacbe8a6722f7eeac92225fca7164e"
+
+RDEPENDS:qt6-qt5compat:x86_64_v2 = " \
  glibc \
  libicu \
  libstdc++ \
@@ -47,7 +49,26 @@ RDEPENDS:qt6-qt5compat = " \
  qt6-qtbase-gui \
  qt6-qtdeclarative \
  qt6-qtshadertools \
- "
+"
+RDEPENDS:qt6-qt5compat:aarch64 = " \
+ glibc \
+ libicu \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtbase-gui \
+ qt6-qtdeclarative \
+ qt6-qtshadertools \
+"
+RDEPENDS:qt6-qt5compat:riscv64 = " \
+ glibc \
+ libgcc \
+ libicu \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtbase-gui \
+ qt6-qtdeclarative \
+ qt6-qtshadertools \
+"
 RDEPENDS:qt6-qt5compat-devel = " \
  cmake-filesystem \
  pkgconf-pkg-config \

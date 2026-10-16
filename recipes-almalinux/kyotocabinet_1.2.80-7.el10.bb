@@ -9,17 +9,17 @@ PACKAGES = " \
  kyotocabinet-libs \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/kyotocabinet-1.2.80-7.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/kyotocabinet-1.2.80-7.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1b16b26daf9475e4cdde56e3907d9816540beb18894a73a5b4358103c9787da3"
 
-URI_x86_64_v2_kyotocabinet-libs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/kyotocabinet-libs-1.2.80-7.el10.x86_64_v2.rpm;name=x86_64_v2_kyotocabinet-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_kyotocabinet-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/kyotocabinet-libs-1.2.80-7.el10.x86_64_v2.rpm;name=x86_64_v2_kyotocabinet-libs;unpack=0"
 SRC_URI[x86_64_v2_kyotocabinet-libs.sha256sum] = "b8ea964954a2c0a7de6f2e9f1ee7823330612dc7b06e436cf93091d1affb61a5"
 
-URI_aarch64_kyotocabinet-libs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/kyotocabinet-libs-1.2.80-7.el10.aarch64.rpm;name=aarch64_kyotocabinet-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_kyotocabinet-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/kyotocabinet-libs-1.2.80-7.el10.aarch64.rpm;name=aarch64_kyotocabinet-libs;unpack=0"
 SRC_URI[aarch64_kyotocabinet-libs.sha256sum] = "49128cd9a72eb609a9b23f54ffb127e79bc30ae73731d42a406b6bff49dacd91"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/kyotocabinet-libs-1.2.80-7.el10.riscv64.rpm;name=riscv64_kyotocabinet-libs;unpack=0"
+SRC_URI[riscv64_kyotocabinet-libs.sha256sum] = "5644b5d9099d5e9ea2b0202962bfe6118b4b3c0c3baef3c3a3ebbe608c5d4935"
 
 RDEPENDS:kyotocabinet-libs = " \
  glibc \

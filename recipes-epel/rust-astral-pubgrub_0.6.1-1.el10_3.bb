@@ -5,26 +5,39 @@ inherit dnf-bridge
 PN = "rust-astral-pubgrub"
 PV = "0.6.1"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-astral-pubgrub+default-devel \
  rust-astral-pubgrub+serde-devel \
  rust-astral-pubgrub-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-astral-pubgrub+default-devel \
+ rust-astral-pubgrub+serde-devel \
+ rust-astral-pubgrub-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-astral-pubgrub-0.6.1-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-astral-pubgrub-0.6.1-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "aa91ed47c4bde6df7b3b64334fc3409c13d990cf42e2034715e1fa69e7063fda"
 
-URI_aarch64_rust-astral-pubgrub+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-astral-pubgrub+default-devel-0.6.1-1.el10_3.noarch.rpm;name=aarch64_rust-astral-pubgrub+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-astral-pubgrub+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-astral-pubgrub+default-devel-0.6.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-astral-pubgrub+default-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-astral-pubgrub+default-devel.sha256sum] = "5e6170db8cebfd210ce486fb0af1c7e2e835c6d0f4dfff648f2e4f262a2c9aa1"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-astral-pubgrub+serde-devel-0.6.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-astral-pubgrub+serde-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-astral-pubgrub+serde-devel.sha256sum] = "8953fecf8ecce89b521d3539be27f50976eaea0a6e62b0fec415df0b08595efa"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-astral-pubgrub-devel-0.6.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-astral-pubgrub-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-astral-pubgrub-devel.sha256sum] = "dd810f511bb9331cc511f034c93ca6d86d773494c73fe4a9c210ac2dacb688da"
+
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-astral-pubgrub+default-devel-0.6.1-1.el10_3.noarch.rpm;name=aarch64_rust-astral-pubgrub+default-devel;unpack=0"
 SRC_URI[aarch64_rust-astral-pubgrub+default-devel.sha256sum] = "78a9234bb7baac34327c7a35d7048c2e9527158ff3c722a2c5092690f63bf2db"
 
-URI_aarch64_rust-astral-pubgrub+serde-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-astral-pubgrub+serde-devel-0.6.1-1.el10_3.noarch.rpm;name=aarch64_rust-astral-pubgrub+serde-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-astral-pubgrub+serde-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-astral-pubgrub+serde-devel-0.6.1-1.el10_3.noarch.rpm;name=aarch64_rust-astral-pubgrub+serde-devel;unpack=0"
 SRC_URI[aarch64_rust-astral-pubgrub+serde-devel.sha256sum] = "8c4e20473014e0fd8e4467edf3122baa1afe7a13dc7420080309aa51166d7e3c"
 
-URI_aarch64_rust-astral-pubgrub-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-astral-pubgrub-devel-0.6.1-1.el10_3.noarch.rpm;name=aarch64_rust-astral-pubgrub-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-astral-pubgrub-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-astral-pubgrub-devel-0.6.1-1.el10_3.noarch.rpm;name=aarch64_rust-astral-pubgrub-devel;unpack=0"
 SRC_URI[aarch64_rust-astral-pubgrub-devel.sha256sum] = "c79499acf90d23516af8df846f8e623829ccfd109c68bcd0c7e38c089e9ae29d"
 
 RDEPENDS:rust-astral-pubgrub+default-devel = " \

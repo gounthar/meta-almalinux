@@ -9,17 +9,17 @@ PACKAGES = " \
  low-memory-monitor \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/low-memory-monitor-2.1-12.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/low-memory-monitor-2.1-12.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f2066cc8476909a5eec996f71347b2ad0ce2b01d3563916cb578c697b2c43dcd"
 
-URI_x86_64_v2_low-memory-monitor = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/low-memory-monitor-2.1-12.el10.x86_64_v2.rpm;name=x86_64_v2_low-memory-monitor;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_low-memory-monitor}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/low-memory-monitor-2.1-12.el10.x86_64_v2.rpm;name=x86_64_v2_low-memory-monitor;unpack=0"
 SRC_URI[x86_64_v2_low-memory-monitor.sha256sum] = "b1b8a20f8fc9a95a26ee41edc569710855f34ccff7dbaaea53233e3b843be9a1"
 
-URI_aarch64_low-memory-monitor = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/low-memory-monitor-2.1-12.el10.aarch64.rpm;name=aarch64_low-memory-monitor;unpack=0"
-SRC_URI:append = " ${URI_aarch64_low-memory-monitor}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/low-memory-monitor-2.1-12.el10.aarch64.rpm;name=aarch64_low-memory-monitor;unpack=0"
 SRC_URI[aarch64_low-memory-monitor.sha256sum] = "fc456d34efc1e0c388704d55ba2dd51d2c556232bf52365e9dc4288d6d9d611b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/low-memory-monitor-2.1-12.el10.riscv64.rpm;name=riscv64_low-memory-monitor;unpack=0"
+SRC_URI[riscv64_low-memory-monitor.sha256sum] = "87d50e876733d822f465a3abfa33a37872c02ceedae4d91edee83e58b493f3e6"
 
 RDEPENDS:low-memory-monitor = " \
  bash \

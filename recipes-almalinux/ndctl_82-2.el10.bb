@@ -17,81 +17,89 @@ PACKAGES = " \
  ndctl-libs \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/ndctl-82-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/ndctl-82-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "ea80e4727ff4aab6443e1282cc2864de3a651f4b8764c279608a59fa71ce1832"
 
-URI_x86_64_v2_cxl-cli = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cxl-cli-82-2.el10.x86_64_v2.rpm;name=x86_64_v2_cxl-cli;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cxl-cli}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cxl-cli-82-2.el10.x86_64_v2.rpm;name=x86_64_v2_cxl-cli;unpack=0"
 SRC_URI[x86_64_v2_cxl-cli.sha256sum] = "cdcaf26d8c523dec82b35efbffc8deac012307b276cb440b3a1208efb095a6a4"
 
-URI_x86_64_v2_cxl-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/cxl-devel-82-2.el10.x86_64_v2.rpm;name=x86_64_v2_cxl-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cxl-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/cxl-devel-82-2.el10.x86_64_v2.rpm;name=x86_64_v2_cxl-devel;unpack=0"
 SRC_URI[x86_64_v2_cxl-devel.sha256sum] = "e82af4481bc80c672b9da103ad288ef23c1c73ffb54e8bdccf9282d4b6c0490c"
 
-URI_x86_64_v2_cxl-libs = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/cxl-libs-82-2.el10.x86_64_v2.rpm;name=x86_64_v2_cxl-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cxl-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/cxl-libs-82-2.el10.x86_64_v2.rpm;name=x86_64_v2_cxl-libs;unpack=0"
 SRC_URI[x86_64_v2_cxl-libs.sha256sum] = "c1adcab938b2e7f14995d89f94d98bc009c537255fbbb3f83e75b1842fc3da3c"
 
-URI_x86_64_v2_daxctl = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/daxctl-82-2.el10.x86_64_v2.rpm;name=x86_64_v2_daxctl;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_daxctl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/daxctl-82-2.el10.x86_64_v2.rpm;name=x86_64_v2_daxctl;unpack=0"
 SRC_URI[x86_64_v2_daxctl.sha256sum] = "fb2009e3c2eca689db2740ae3c6d3ff6e77708d51d44b2e47e43e12658ef9320"
 
-URI_x86_64_v2_daxctl-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/daxctl-devel-82-2.el10.x86_64_v2.rpm;name=x86_64_v2_daxctl-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_daxctl-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/daxctl-devel-82-2.el10.x86_64_v2.rpm;name=x86_64_v2_daxctl-devel;unpack=0"
 SRC_URI[x86_64_v2_daxctl-devel.sha256sum] = "259cb1079cfb06e38348f47a9183883804004c465e00c24af62d7153a71bd831"
 
-URI_x86_64_v2_daxctl-libs = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/daxctl-libs-82-2.el10.x86_64_v2.rpm;name=x86_64_v2_daxctl-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_daxctl-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/daxctl-libs-82-2.el10.x86_64_v2.rpm;name=x86_64_v2_daxctl-libs;unpack=0"
 SRC_URI[x86_64_v2_daxctl-libs.sha256sum] = "a7a792f2701524d84e66769af49909ba1b3e6ec2f15a26cdbaa32b723e956a4e"
 
-URI_x86_64_v2_ndctl = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/ndctl-82-2.el10.x86_64_v2.rpm;name=x86_64_v2_ndctl;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ndctl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/ndctl-82-2.el10.x86_64_v2.rpm;name=x86_64_v2_ndctl;unpack=0"
 SRC_URI[x86_64_v2_ndctl.sha256sum] = "0d9e5a010b5b8f3d23c8928f0daec5781f1a39ee5c30c6cdf492f87d7ca41274"
 
-URI_x86_64_v2_ndctl-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ndctl-devel-82-2.el10.x86_64_v2.rpm;name=x86_64_v2_ndctl-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ndctl-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ndctl-devel-82-2.el10.x86_64_v2.rpm;name=x86_64_v2_ndctl-devel;unpack=0"
 SRC_URI[x86_64_v2_ndctl-devel.sha256sum] = "142c661663ba1fa4a8de79bd7bcf6149b2e9b0c2a59894b705b9459262658592"
 
-URI_x86_64_v2_ndctl-libs = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/ndctl-libs-82-2.el10.x86_64_v2.rpm;name=x86_64_v2_ndctl-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ndctl-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/ndctl-libs-82-2.el10.x86_64_v2.rpm;name=x86_64_v2_ndctl-libs;unpack=0"
 SRC_URI[x86_64_v2_ndctl-libs.sha256sum] = "dc23b4d72226e59947a6829a963172b47c6ea2a8ecb9bcb5988812592c37d833"
 
-URI_aarch64_cxl-cli = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cxl-cli-82-2.el10.aarch64.rpm;name=aarch64_cxl-cli;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cxl-cli}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cxl-cli-82-2.el10.aarch64.rpm;name=aarch64_cxl-cli;unpack=0"
 SRC_URI[aarch64_cxl-cli.sha256sum] = "8c2838cf971d0fb59a1197b7156cfeab16530ee55625f2ef4ed90e3662009086"
 
-URI_aarch64_cxl-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/cxl-devel-82-2.el10.aarch64.rpm;name=aarch64_cxl-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cxl-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/cxl-devel-82-2.el10.aarch64.rpm;name=aarch64_cxl-devel;unpack=0"
 SRC_URI[aarch64_cxl-devel.sha256sum] = "74de68cfc33f8519ae380686e829b63f9e2640c934f0dd23ea631264c76340bc"
 
-URI_aarch64_cxl-libs = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/cxl-libs-82-2.el10.aarch64.rpm;name=aarch64_cxl-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cxl-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/cxl-libs-82-2.el10.aarch64.rpm;name=aarch64_cxl-libs;unpack=0"
 SRC_URI[aarch64_cxl-libs.sha256sum] = "dd01c95355f363df52eda74cacfedcc954acc51bff3608b9095b8506897a95ce"
 
-URI_aarch64_daxctl = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/daxctl-82-2.el10.aarch64.rpm;name=aarch64_daxctl;unpack=0"
-SRC_URI:append = " ${URI_aarch64_daxctl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/daxctl-82-2.el10.aarch64.rpm;name=aarch64_daxctl;unpack=0"
 SRC_URI[aarch64_daxctl.sha256sum] = "0d3dc9ec387a05a445fb0dd4ec0412b4a6af7ea3eab283b5696229b455e96665"
 
-URI_aarch64_daxctl-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/daxctl-devel-82-2.el10.aarch64.rpm;name=aarch64_daxctl-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_daxctl-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/daxctl-devel-82-2.el10.aarch64.rpm;name=aarch64_daxctl-devel;unpack=0"
 SRC_URI[aarch64_daxctl-devel.sha256sum] = "5d1e4b2f36308ed1ed22d5478087b3261d69cba7aa01b0324c003e957fb85e5c"
 
-URI_aarch64_daxctl-libs = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/daxctl-libs-82-2.el10.aarch64.rpm;name=aarch64_daxctl-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_daxctl-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/daxctl-libs-82-2.el10.aarch64.rpm;name=aarch64_daxctl-libs;unpack=0"
 SRC_URI[aarch64_daxctl-libs.sha256sum] = "83a9a6ed67cea2a02ec6ed44eaeacf4ce36395ce81f85c5a14de71ec5255c48e"
 
-URI_aarch64_ndctl = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/ndctl-82-2.el10.aarch64.rpm;name=aarch64_ndctl;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ndctl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/ndctl-82-2.el10.aarch64.rpm;name=aarch64_ndctl;unpack=0"
 SRC_URI[aarch64_ndctl.sha256sum] = "16695044f210b86bfd3a3500bdee25c4530a43a415d964a2fcca1721bf6f22a7"
 
-URI_aarch64_ndctl-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/ndctl-devel-82-2.el10.aarch64.rpm;name=aarch64_ndctl-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ndctl-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/ndctl-devel-82-2.el10.aarch64.rpm;name=aarch64_ndctl-devel;unpack=0"
 SRC_URI[aarch64_ndctl-devel.sha256sum] = "417c0071289901f68d57897b37b51c8cdfd6ae52822e39b9e5477570bf64c676"
 
-URI_aarch64_ndctl-libs = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/ndctl-libs-82-2.el10.aarch64.rpm;name=aarch64_ndctl-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ndctl-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/ndctl-libs-82-2.el10.aarch64.rpm;name=aarch64_ndctl-libs;unpack=0"
 SRC_URI[aarch64_ndctl-libs.sha256sum] = "50989fd60c5b3de28682da26dff3b31c8a704d1de81a80cbe78950df27e55451"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/cxl-cli-82-2.el10.riscv64.rpm;name=riscv64_cxl-cli;unpack=0"
+SRC_URI[riscv64_cxl-cli.sha256sum] = "5677adbd816b43e1c52e7e8f67718f38051003e4aaf394f94cb72d03a2bd99e6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/cxl-devel-82-2.el10.riscv64.rpm;name=riscv64_cxl-devel;unpack=0"
+SRC_URI[riscv64_cxl-devel.sha256sum] = "a2fe734973ed01e5a89f8c39010f4896f14190838bc702890374cccfaf97df17"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/cxl-libs-82-2.el10.riscv64.rpm;name=riscv64_cxl-libs;unpack=0"
+SRC_URI[riscv64_cxl-libs.sha256sum] = "6b1104ec3fab94a6a8be9941dfd724b81eaf76255620e9006aab804a8bfabfc4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/daxctl-82-2.el10.riscv64.rpm;name=riscv64_daxctl;unpack=0"
+SRC_URI[riscv64_daxctl.sha256sum] = "aedc1a8e38a2433538d0ff196dec41869628e06bad069b9f7f14f0ef560ad531"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/daxctl-devel-82-2.el10.riscv64.rpm;name=riscv64_daxctl-devel;unpack=0"
+SRC_URI[riscv64_daxctl-devel.sha256sum] = "ad02a84595fc77e90dc9426fddb999c7556632bf3e1fcb5b9ba73e06dbb7f8ac"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/daxctl-libs-82-2.el10.riscv64.rpm;name=riscv64_daxctl-libs;unpack=0"
+SRC_URI[riscv64_daxctl-libs.sha256sum] = "611de6c85dc0d05aa4ad4f5d3c1f3d4834f7633dcb0d73bbc818e0d158ddf96c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/ndctl-82-2.el10.riscv64.rpm;name=riscv64_ndctl;unpack=0"
+SRC_URI[riscv64_ndctl.sha256sum] = "a60c2bdb684a193179a0e727a167027c2da7eaae3218366e2a774bda07f32ad8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/ndctl-devel-82-2.el10.riscv64.rpm;name=riscv64_ndctl-devel;unpack=0"
+SRC_URI[riscv64_ndctl-devel.sha256sum] = "779c5c8cf6d42859a2f552d973dd585e199e5de28c85e0d14ab8387045153b79"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/ndctl-libs-82-2.el10.riscv64.rpm;name=riscv64_ndctl-libs;unpack=0"
+SRC_URI[riscv64_ndctl-libs.sha256sum] = "601955d74d54b08d6b6503c9bc43c3994e257459034bb7a231cad1c59418a0a8"
 
 RDEPENDS:cxl-cli = " \
  cxl-libs \

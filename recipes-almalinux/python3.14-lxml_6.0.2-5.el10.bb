@@ -9,17 +9,17 @@ PACKAGES = " \
  python3.14-lxml \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python3.14-lxml-6.0.2-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python3.14-lxml-6.0.2-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e59213ffc5369e0592cd88ac7dc7591c0c41d7f4be0493a21f3178603de5fc58"
 
-URI_x86_64_v2_python3.14-lxml = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3.14-lxml-6.0.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_python3.14-lxml;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3.14-lxml}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3.14-lxml-6.0.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_python3.14-lxml;unpack=0"
 SRC_URI[x86_64_v2_python3.14-lxml.sha256sum] = "8167eb0daf1a38b9a369dd65dcba5136c10e23756a67f38d69191b6312cf8427"
 
-URI_aarch64_python3.14-lxml = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3.14-lxml-6.0.2-5.el10.aarch64.rpm;name=aarch64_python3.14-lxml;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3.14-lxml}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3.14-lxml-6.0.2-5.el10.aarch64.rpm;name=aarch64_python3.14-lxml;unpack=0"
 SRC_URI[aarch64_python3.14-lxml.sha256sum] = "c4d421ed9d671bdb80191f5ff88b8c34bb6b7548ab1fbe77faad4b665612bb11"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3.14-lxml-6.0.2-5.el10.riscv64.rpm;name=riscv64_python3.14-lxml;unpack=0"
+SRC_URI[riscv64_python3.14-lxml.sha256sum] = "334a456e9850a01b56e87eb2c7017bf4c1f6488daeac6647445f785c532822e8"
 
 RDEPENDS:python3.14-lxml = " \
  glibc \

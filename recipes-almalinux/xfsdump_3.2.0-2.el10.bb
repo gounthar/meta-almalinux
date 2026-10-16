@@ -9,17 +9,17 @@ PACKAGES = " \
  xfsdump \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/xfsdump-3.2.0-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/xfsdump-3.2.0-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "adfaea661baba00edfc717a9c6ee99ef0ca075b401e54f9cf12443d01f70c054"
 
-URI_x86_64_v2_xfsdump = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/xfsdump-3.2.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_xfsdump;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_xfsdump}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/xfsdump-3.2.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_xfsdump;unpack=0"
 SRC_URI[x86_64_v2_xfsdump.sha256sum] = "596494ab8c23c2b19bbf6057efd1832c4416117b3651b70fdd36a95c4b22ad91"
 
-URI_aarch64_xfsdump = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/xfsdump-3.2.0-2.el10.aarch64.rpm;name=aarch64_xfsdump;unpack=0"
-SRC_URI:append = " ${URI_aarch64_xfsdump}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/xfsdump-3.2.0-2.el10.aarch64.rpm;name=aarch64_xfsdump;unpack=0"
 SRC_URI[aarch64_xfsdump.sha256sum] = "d719cb056a975793802835f2f9d1fdd9ce83c9c856b847337ed4814fb8976b16"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/xfsdump-3.2.0-2.el10.riscv64.rpm;name=riscv64_xfsdump;unpack=0"
+SRC_URI[riscv64_xfsdump.sha256sum] = "5d9d2879bc0ed554dba06428eb8a079149a97ace9e0fab97fccb3d74626cc49c"
 
 RDEPENDS:xfsdump = " \
  attr \

@@ -16,65 +16,71 @@ PACKAGES = " \
  quota-warnquota \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/quota-4.09-10.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/quota-4.09-10.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "4262ddd7783cd0aacd4a10baaca5db58eb66b74e95bb62cfd3d7fa2b635d9188"
 
-URI_x86_64_v2_quota = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/quota-4.09-10.el10.x86_64_v2.rpm;name=x86_64_v2_quota;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_quota}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/quota-4.09-10.el10.x86_64_v2.rpm;name=x86_64_v2_quota;unpack=0"
 SRC_URI[x86_64_v2_quota.sha256sum] = "4108ce59627a452ba67de5989d34fd4d7a055400b7f5c3f39e9dd178d175f1ba"
 
-URI_x86_64_v2_quota-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/quota-devel-4.09-10.el10.x86_64_v2.rpm;name=x86_64_v2_quota-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_quota-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/quota-devel-4.09-10.el10.x86_64_v2.rpm;name=x86_64_v2_quota-devel;unpack=0"
 SRC_URI[x86_64_v2_quota-devel.sha256sum] = "7cab7b0f4af9215cf4bcf7c60a8709be36982f4b80ac7beca85c66b82acbb686"
 
-URI_x86_64_v2_quota-doc = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/quota-doc-4.09-10.el10.noarch.rpm;name=x86_64_v2_quota-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_quota-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/quota-doc-4.09-10.el10.noarch.rpm;name=x86_64_v2_quota-doc;unpack=0"
 SRC_URI[x86_64_v2_quota-doc.sha256sum] = "586fc74b900ed0be21ebcca9415798ac0d348cfc47aec1a4e902068080f1cb4f"
 
-URI_x86_64_v2_quota-nld = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/quota-nld-4.09-10.el10.x86_64_v2.rpm;name=x86_64_v2_quota-nld;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_quota-nld}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/quota-nld-4.09-10.el10.x86_64_v2.rpm;name=x86_64_v2_quota-nld;unpack=0"
 SRC_URI[x86_64_v2_quota-nld.sha256sum] = "e03ea99ae75b8bacf4e04eaf1284ed7c8abe36eeed1695c8d164a9a035fefdf8"
 
-URI_x86_64_v2_quota-nls = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/quota-nls-4.09-10.el10.noarch.rpm;name=x86_64_v2_quota-nls;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_quota-nls}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/quota-nls-4.09-10.el10.noarch.rpm;name=x86_64_v2_quota-nls;unpack=0"
 SRC_URI[x86_64_v2_quota-nls.sha256sum] = "70902646be08b685dbe7c636092c2af98660e0891f60d8298744336c3234826c"
 
-URI_x86_64_v2_quota-rpc = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/quota-rpc-4.09-10.el10.x86_64_v2.rpm;name=x86_64_v2_quota-rpc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_quota-rpc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/quota-rpc-4.09-10.el10.x86_64_v2.rpm;name=x86_64_v2_quota-rpc;unpack=0"
 SRC_URI[x86_64_v2_quota-rpc.sha256sum] = "530034ac81e6d28d9937b4da94e17acc796edc0cca5c3a7b43e430a68ed6b867"
 
-URI_x86_64_v2_quota-warnquota = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/quota-warnquota-4.09-10.el10.x86_64_v2.rpm;name=x86_64_v2_quota-warnquota;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_quota-warnquota}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/quota-warnquota-4.09-10.el10.x86_64_v2.rpm;name=x86_64_v2_quota-warnquota;unpack=0"
 SRC_URI[x86_64_v2_quota-warnquota.sha256sum] = "5d81562b60851f33dd1250a52ae67a7b2df4ba2b77ec067a9c6050465cf66785"
 
-URI_aarch64_quota = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/quota-4.09-10.el10.aarch64.rpm;name=aarch64_quota;unpack=0"
-SRC_URI:append = " ${URI_aarch64_quota}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/quota-4.09-10.el10.aarch64.rpm;name=aarch64_quota;unpack=0"
 SRC_URI[aarch64_quota.sha256sum] = "a47e0f5d62b88c3147ea452395244f051ca125fac0372f13d5bca2b4074b6488"
 
-URI_aarch64_quota-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/quota-devel-4.09-10.el10.aarch64.rpm;name=aarch64_quota-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_quota-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/quota-devel-4.09-10.el10.aarch64.rpm;name=aarch64_quota-devel;unpack=0"
 SRC_URI[aarch64_quota-devel.sha256sum] = "d9dbc17b68e7a79b9eb595c68953986d67bfbb74dd1de780ba1efc5b09ee2d16"
 
-URI_aarch64_quota-doc = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/quota-doc-4.09-10.el10.noarch.rpm;name=aarch64_quota-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_quota-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/quota-doc-4.09-10.el10.noarch.rpm;name=aarch64_quota-doc;unpack=0"
 SRC_URI[aarch64_quota-doc.sha256sum] = "586fc74b900ed0be21ebcca9415798ac0d348cfc47aec1a4e902068080f1cb4f"
 
-URI_aarch64_quota-nld = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/quota-nld-4.09-10.el10.aarch64.rpm;name=aarch64_quota-nld;unpack=0"
-SRC_URI:append = " ${URI_aarch64_quota-nld}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/quota-nld-4.09-10.el10.aarch64.rpm;name=aarch64_quota-nld;unpack=0"
 SRC_URI[aarch64_quota-nld.sha256sum] = "3dbb4cf326b456332c404199b27e31787c46fe9c00191f04f6c75c138c84fb69"
 
-URI_aarch64_quota-nls = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/quota-nls-4.09-10.el10.noarch.rpm;name=aarch64_quota-nls;unpack=0"
-SRC_URI:append = " ${URI_aarch64_quota-nls}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/quota-nls-4.09-10.el10.noarch.rpm;name=aarch64_quota-nls;unpack=0"
 SRC_URI[aarch64_quota-nls.sha256sum] = "70902646be08b685dbe7c636092c2af98660e0891f60d8298744336c3234826c"
 
-URI_aarch64_quota-rpc = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/quota-rpc-4.09-10.el10.aarch64.rpm;name=aarch64_quota-rpc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_quota-rpc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/quota-rpc-4.09-10.el10.aarch64.rpm;name=aarch64_quota-rpc;unpack=0"
 SRC_URI[aarch64_quota-rpc.sha256sum] = "1a2bc6dfe6fec922ab826ae51704af66756420b70a07a1681709f976888198c3"
 
-URI_aarch64_quota-warnquota = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/quota-warnquota-4.09-10.el10.aarch64.rpm;name=aarch64_quota-warnquota;unpack=0"
-SRC_URI:append = " ${URI_aarch64_quota-warnquota}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/quota-warnquota-4.09-10.el10.aarch64.rpm;name=aarch64_quota-warnquota;unpack=0"
 SRC_URI[aarch64_quota-warnquota.sha256sum] = "991a8b3ea519f0903298eca7e344103c1d56cbb51476090762ecdc53f2e647b1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/quota-4.09-10.el10.riscv64.rpm;name=riscv64_quota;unpack=0"
+SRC_URI[riscv64_quota.sha256sum] = "0c53d8dd3aefaccba0a7b23b49d93c59c53ba8a3a5fd286c193e2b9bdcc3ffc8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/quota-devel-4.09-10.el10.riscv64.rpm;name=riscv64_quota-devel;unpack=0"
+SRC_URI[riscv64_quota-devel.sha256sum] = "99e4f6b0637199ef01127d7163ad899d007b936cba337e8ce632c1e5ed22b053"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/quota-doc-4.09-10.el10.noarch.rpm;name=riscv64_quota-doc;unpack=0"
+SRC_URI[riscv64_quota-doc.sha256sum] = "586fc74b900ed0be21ebcca9415798ac0d348cfc47aec1a4e902068080f1cb4f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/quota-nld-4.09-10.el10.riscv64.rpm;name=riscv64_quota-nld;unpack=0"
+SRC_URI[riscv64_quota-nld.sha256sum] = "1552adc513dc195f27b851e250e7ace8496119d1cdd6395f6cd1bdb3061c2e23"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/quota-nls-4.09-10.el10.noarch.rpm;name=riscv64_quota-nls;unpack=0"
+SRC_URI[riscv64_quota-nls.sha256sum] = "70902646be08b685dbe7c636092c2af98660e0891f60d8298744336c3234826c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/quota-rpc-4.09-10.el10.riscv64.rpm;name=riscv64_quota-rpc;unpack=0"
+SRC_URI[riscv64_quota-rpc.sha256sum] = "27dfce6a49f5f0b841dcdcae1e87bcf202f69d30a9cf2b413c3d538b9048dcbd"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/quota-warnquota-4.09-10.el10.riscv64.rpm;name=riscv64_quota-warnquota;unpack=0"
+SRC_URI[riscv64_quota-warnquota.sha256sum] = "10c81a85be8e48edc511d53e169a8db9e1d78144b143ef11d923004b4bd8b635"
 
 RDEPENDS:quota = " \
  e2fsprogs-libs \

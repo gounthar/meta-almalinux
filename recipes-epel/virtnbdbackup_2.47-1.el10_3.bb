@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "virtnbdbackup"
 PV = "2.47"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  virtnbdbackup \
- "
+"
+PACKAGES:aarch64 = " \
+ virtnbdbackup \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/v/virtnbdbackup-2.47-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/v/virtnbdbackup-2.47-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "65647ba2159c0b7a015577bed32be511d1e270d5448b7b8e549027ea90b8658e"
 
-URI_x86_64_v2_virtnbdbackup = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/virtnbdbackup-2.47-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_virtnbdbackup;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_virtnbdbackup}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/virtnbdbackup-2.47-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_virtnbdbackup;unpack=0"
 SRC_URI[x86_64_v2_virtnbdbackup.sha256sum] = "4f67555e4030e99e4d079c3b55b9ba5de949783cf3350e082a2b22d51c31730b"
 
-URI_aarch64_virtnbdbackup = "${EPEL_MIRROR}/aarch64/Packages/v/virtnbdbackup-2.47-1.el10_3.noarch.rpm;name=aarch64_virtnbdbackup;unpack=0"
-SRC_URI:append = " ${URI_aarch64_virtnbdbackup}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/v/virtnbdbackup-2.47-1.el10_3.noarch.rpm;name=aarch64_virtnbdbackup;unpack=0"
 SRC_URI[aarch64_virtnbdbackup.sha256sum] = "085c28e4b96ec9ecb386155c67504e58aa40575706fe76a73a7ef1ad4e84d04a"
 
 RDEPENDS:virtnbdbackup = " \

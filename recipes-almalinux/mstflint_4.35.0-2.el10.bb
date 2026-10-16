@@ -9,17 +9,17 @@ PACKAGES = " \
  mstflint \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/mstflint-4.35.0-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/mstflint-4.35.0-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a1e58117d4fd0cef4cb1ce10bafd4d163752c8ad0977f76e1074d230928f5398"
 
-URI_x86_64_v2_mstflint = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mstflint-4.35.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_mstflint;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mstflint}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mstflint-4.35.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_mstflint;unpack=0"
 SRC_URI[x86_64_v2_mstflint.sha256sum] = "9cb746e488c1239faf5ca622726b95d258f9fed5f1437859c626c2bde8f1bd1e"
 
-URI_aarch64_mstflint = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mstflint-4.35.0-2.el10.aarch64.rpm;name=aarch64_mstflint;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mstflint}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mstflint-4.35.0-2.el10.aarch64.rpm;name=aarch64_mstflint;unpack=0"
 SRC_URI[aarch64_mstflint.sha256sum] = "440b7c047ad694c74ca0e73398e99e295baa4e94d63956fb9b80335cd81dd327"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/mstflint-4.35.0-2.el10.riscv64.rpm;name=riscv64_mstflint;unpack=0"
+SRC_URI[riscv64_mstflint.sha256sum] = "70cec3eb92ad8974146da7bde4140452986dc1dbf6cca238c58b90600f4523a9"
 
 RDEPENDS:mstflint = " \
  bash \

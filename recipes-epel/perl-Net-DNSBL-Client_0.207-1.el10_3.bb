@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-Net-DNSBL-Client"
 PV = "0.207"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-Net-DNSBL-Client \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-Net-DNSBL-Client \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-Net-DNSBL-Client-0.207-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-Net-DNSBL-Client-0.207-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "0e452048282a166b027b9160c6cd580e05da3dc56fe9c854dbcad7dd50923c55"
 
-URI_x86_64_v2_perl-Net-DNSBL-Client = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Net-DNSBL-Client-0.207-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Net-DNSBL-Client;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Net-DNSBL-Client}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Net-DNSBL-Client-0.207-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Net-DNSBL-Client;unpack=0"
 SRC_URI[x86_64_v2_perl-Net-DNSBL-Client.sha256sum] = "0234469304f1e65bd1683965649586409e823348f10fa8b70675beb996ced85f"
 
-URI_aarch64_perl-Net-DNSBL-Client = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Net-DNSBL-Client-0.207-1.el10_3.noarch.rpm;name=aarch64_perl-Net-DNSBL-Client;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Net-DNSBL-Client}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Net-DNSBL-Client-0.207-1.el10_3.noarch.rpm;name=aarch64_perl-Net-DNSBL-Client;unpack=0"
 SRC_URI[aarch64_perl-Net-DNSBL-Client.sha256sum] = "7b5ba864fcaf8b2a6ed3a28394435949a3a7bc12c86768f8f2db6a95f93ac84e"
 
 RDEPENDS:perl-Net-DNSBL-Client = " \

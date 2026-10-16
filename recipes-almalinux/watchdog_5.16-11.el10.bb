@@ -9,17 +9,17 @@ PACKAGES = " \
  watchdog \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/watchdog-5.16-11.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/watchdog-5.16-11.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "cf454498ba5e75b47e1ba787a7852a1ca8e8c8bb4dadf66f2f7f709546f94d43"
 
-URI_x86_64_v2_watchdog = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/watchdog-5.16-11.el10.x86_64_v2.rpm;name=x86_64_v2_watchdog;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_watchdog}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/watchdog-5.16-11.el10.x86_64_v2.rpm;name=x86_64_v2_watchdog;unpack=0"
 SRC_URI[x86_64_v2_watchdog.sha256sum] = "f36f3750b3edd6718bebb48393b8036f33c8619eb2e72d49927dae8a4230c715"
 
-URI_aarch64_watchdog = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/watchdog-5.16-11.el10.aarch64.rpm;name=aarch64_watchdog;unpack=0"
-SRC_URI:append = " ${URI_aarch64_watchdog}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/watchdog-5.16-11.el10.aarch64.rpm;name=aarch64_watchdog;unpack=0"
 SRC_URI[aarch64_watchdog.sha256sum] = "1725a839ca38d13f47bbe7749a047cc39b5b4cab0119b12071e3f513fdcf77de"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/watchdog-5.16-11.el10.riscv64.rpm;name=riscv64_watchdog;unpack=0"
+SRC_URI[riscv64_watchdog.sha256sum] = "2f3ac2f9a87f4287b34e373972c458a58af58f04c74e7b5004f123af05ec6a67"
 
 RDEPENDS:watchdog = " \
  bash \

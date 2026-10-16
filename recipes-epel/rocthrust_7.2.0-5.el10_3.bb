@@ -11,13 +11,14 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rocthrust-7.2.0-5.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rocthrust-7.2.0-5.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b1d244c32821d9d46d9c749ea52bf45129102342f137f7d9b7741af586a6f525"
 
-URI_x86_64_v2_rocthrust-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocthrust-devel-7.2.0-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocthrust-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rocthrust-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocthrust-devel-7.2.0-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocthrust-devel;unpack=0"
 SRC_URI[x86_64_v2_rocthrust-devel.sha256sum] = "043578b6f2fd9b719bc567b0a6ca8f959a40552275ae10a821b72d98649e83f1"
 
 RDEPENDS:rocthrust-devel = " \

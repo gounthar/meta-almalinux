@@ -12,17 +12,17 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/fprintd-1.94.5-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/fprintd-1.94.5-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "82e3895701b832a71bec9b3528e750c909785ce1f99411d206964e6d4da362a5"
 
-URI_x86_64_v2_fprintd = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/fprintd-1.94.5-1.el10.x86_64_v2.rpm;name=x86_64_v2_fprintd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_fprintd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/fprintd-1.94.5-1.el10.x86_64_v2.rpm;name=x86_64_v2_fprintd;unpack=0"
 SRC_URI[x86_64_v2_fprintd.sha256sum] = "c0157f99f05c695a605001e681dcd9de95ba775ae3e7c762cee201acf9ba361b"
 
-URI_x86_64_v2_fprintd-pam = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/fprintd-pam-1.94.5-1.el10.x86_64_v2.rpm;name=x86_64_v2_fprintd-pam;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_fprintd-pam}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/fprintd-pam-1.94.5-1.el10.x86_64_v2.rpm;name=x86_64_v2_fprintd-pam;unpack=0"
 SRC_URI[x86_64_v2_fprintd-pam.sha256sum] = "ec6343143670404612620bd58b34219184799f877b29e10acb400376d79ce584"
 
 RDEPENDS:fprintd = " \

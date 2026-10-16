@@ -11,32 +11,46 @@ PACKAGES = " \
  aspell-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/aspell-0.60.8.1-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/aspell-0.60.8.1-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c0ead5d484d47df6147b2fd0b800ed19300883b47be39db09095cea62656b5ff"
 
-URI_x86_64_v2_aspell = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/aspell-0.60.8.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_aspell;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_aspell}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/aspell-0.60.8.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_aspell;unpack=0"
 SRC_URI[x86_64_v2_aspell.sha256sum] = "e41c59efae912890b426f5bd6270036a9fac77d392642a7054b72636bda5b019"
 
-URI_x86_64_v2_aspell-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/aspell-devel-0.60.8.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_aspell-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_aspell-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/aspell-devel-0.60.8.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_aspell-devel;unpack=0"
 SRC_URI[x86_64_v2_aspell-devel.sha256sum] = "9b2c693d6224692860d4ae16dfd2a1346903552686062f2d0b7c3bf14872a568"
 
-URI_aarch64_aspell = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/aspell-0.60.8.1-3.el10.aarch64.rpm;name=aarch64_aspell;unpack=0"
-SRC_URI:append = " ${URI_aarch64_aspell}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/aspell-0.60.8.1-3.el10.aarch64.rpm;name=aarch64_aspell;unpack=0"
 SRC_URI[aarch64_aspell.sha256sum] = "188f4ce0de3efa83c4e2c0f623276a8a37d572c676b09961a98a21337bbbf024"
 
-URI_aarch64_aspell-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/aspell-devel-0.60.8.1-3.el10.aarch64.rpm;name=aarch64_aspell-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_aspell-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/aspell-devel-0.60.8.1-3.el10.aarch64.rpm;name=aarch64_aspell-devel;unpack=0"
 SRC_URI[aarch64_aspell-devel.sha256sum] = "e8f2d772bbbdee3fa60f5a2b9647ac11604706e3cf1bface34ed9bd624853591"
 
-RDEPENDS:aspell = " \
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/aspell-0.60.8.1-3.el10.riscv64.rpm;name=riscv64_aspell;unpack=0"
+SRC_URI[riscv64_aspell.sha256sum] = "2ca4a6f41af972cea15aedb643a7ad7045bbde7a5fb0dcda1afb9bd69f898e90"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/aspell-devel-0.60.8.1-3.el10.riscv64.rpm;name=riscv64_aspell-devel;unpack=0"
+SRC_URI[riscv64_aspell-devel.sha256sum] = "b35cf3ec290f2bc2d51e2fc15273b5e90f0b00bed1d983a8631387fc8f608e8c"
+
+RDEPENDS:aspell:x86_64_v2 = " \
  bash \
  glibc \
  libstdc++ \
  ncurses-libs \
- "
+"
+RDEPENDS:aspell:aarch64 = " \
+ bash \
+ glibc \
+ libstdc++ \
+ ncurses-libs \
+"
+RDEPENDS:aspell:riscv64 = " \
+ bash \
+ glibc \
+ libgcc \
+ libstdc++ \
+ ncurses-libs \
+"
 RDEPENDS:aspell-devel = " \
  aspell \
  bash \

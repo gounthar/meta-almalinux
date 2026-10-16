@@ -11,33 +11,35 @@ PACKAGES = " \
  lame-libs \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/lame-3.100-19.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/lame-3.100-19.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "358f833c74f181c3e7bf96319fe0b9277c056c75cdb042b3285f1a875848a03d"
 
-URI_x86_64_v2_lame = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/lame-3.100-19.el10.x86_64_v2.rpm;name=x86_64_v2_lame;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lame}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/lame-3.100-19.el10.x86_64_v2.rpm;name=x86_64_v2_lame;unpack=0"
 SRC_URI[x86_64_v2_lame.sha256sum] = "fff8cbdc17fdc4b465ada39aed10996fcb9b647538496a9e135fd2c56ac65b8c"
 
-URI_x86_64_v2_lame-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/lame-devel-3.100-19.el10.x86_64_v2.rpm;name=x86_64_v2_lame-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lame-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/lame-devel-3.100-19.el10.x86_64_v2.rpm;name=x86_64_v2_lame-devel;unpack=0"
 SRC_URI[x86_64_v2_lame-devel.sha256sum] = "5b81062821198ce991c8b2e5ff5516b56446771810588f307e1e0cbc4d87c56e"
 
-URI_x86_64_v2_lame-libs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/lame-libs-3.100-19.el10.x86_64_v2.rpm;name=x86_64_v2_lame-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lame-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/lame-libs-3.100-19.el10.x86_64_v2.rpm;name=x86_64_v2_lame-libs;unpack=0"
 SRC_URI[x86_64_v2_lame-libs.sha256sum] = "f62027bd2b4452548c36196f6e6334cab76c1720bbe1bcafcc48e243ac8a8e34"
 
-URI_aarch64_lame = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/lame-3.100-19.el10.aarch64.rpm;name=aarch64_lame;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lame}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/lame-3.100-19.el10.aarch64.rpm;name=aarch64_lame;unpack=0"
 SRC_URI[aarch64_lame.sha256sum] = "7384c0e63b62e3f8cb28b028bc33445d52137a5dd5d2a8eb994fd0cf8a7cc8ea"
 
-URI_aarch64_lame-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/lame-devel-3.100-19.el10.aarch64.rpm;name=aarch64_lame-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lame-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/lame-devel-3.100-19.el10.aarch64.rpm;name=aarch64_lame-devel;unpack=0"
 SRC_URI[aarch64_lame-devel.sha256sum] = "5bf09e9f055ee2e833551d667a2ae3a290248b56ca80b072027198da0297e0e4"
 
-URI_aarch64_lame-libs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/lame-libs-3.100-19.el10.aarch64.rpm;name=aarch64_lame-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lame-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/lame-libs-3.100-19.el10.aarch64.rpm;name=aarch64_lame-libs;unpack=0"
 SRC_URI[aarch64_lame-libs.sha256sum] = "f0e7ddd268c116b4156d88b0f0bb81b5ef4c536555484ce03315596892a527f3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/lame-3.100-19.el10.riscv64.rpm;name=riscv64_lame;unpack=0"
+SRC_URI[riscv64_lame.sha256sum] = "5e0d66f3c33a52dc6d1f8089ec5bc29f955ec8a236a1e986fbfac5f7ec11796a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/lame-devel-3.100-19.el10.riscv64.rpm;name=riscv64_lame-devel;unpack=0"
+SRC_URI[riscv64_lame-devel.sha256sum] = "b1163e8c6b1b6c31258400f449e25057e8674a934c0bd2865daf39b595877f77"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/lame-libs-3.100-19.el10.riscv64.rpm;name=riscv64_lame-libs;unpack=0"
+SRC_URI[riscv64_lame-libs.sha256sum] = "6c401f6d2c957fb7603f938e319eeae1aed2ae487815654cd253ae3b82e41078"
 
 RDEPENDS:lame = " \
  glibc \

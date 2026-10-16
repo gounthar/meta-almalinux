@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-wiremock"
 PV = "0.6.5"
 PR = "3.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-wiremock+default-devel \
  rust-wiremock-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-wiremock+default-devel \
+ rust-wiremock-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-wiremock-0.6.5-3.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-wiremock-0.6.5-3.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "962134e51f5efdb9d451cf40320b73e9592d7ef05c840c4111dbc1bf51732fa8"
 
-URI_x86_64_v2_rust-wiremock+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-wiremock+default-devel-0.6.5-3.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-wiremock+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-wiremock+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-wiremock+default-devel-0.6.5-3.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-wiremock+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-wiremock+default-devel.sha256sum] = "96d9db0698779d8a0c19b2e657243d224b99e1a866172740f242e3647a9d1143"
 
-URI_x86_64_v2_rust-wiremock-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-wiremock-devel-0.6.5-3.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-wiremock-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-wiremock-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-wiremock-devel-0.6.5-3.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-wiremock-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-wiremock-devel.sha256sum] = "45adb2f244e76c67f44315c8931daa20de62edacd1fe22c2885caef1c18af275"
 
-URI_aarch64_rust-wiremock+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-wiremock+default-devel-0.6.5-3.el10_2.noarch.rpm;name=aarch64_rust-wiremock+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-wiremock+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-wiremock+default-devel-0.6.5-3.el10_2.noarch.rpm;name=aarch64_rust-wiremock+default-devel;unpack=0"
 SRC_URI[aarch64_rust-wiremock+default-devel.sha256sum] = "a03160433837f2205ef5afbd04aad5b45082f375a7df4210c4da92157389d713"
 
-URI_aarch64_rust-wiremock-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-wiremock-devel-0.6.5-3.el10_2.noarch.rpm;name=aarch64_rust-wiremock-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-wiremock-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-wiremock-devel-0.6.5-3.el10_2.noarch.rpm;name=aarch64_rust-wiremock-devel;unpack=0"
 SRC_URI[aarch64_rust-wiremock-devel.sha256sum] = "2ce8bf7712fb1f7931cf2220bad2f7cbce7c284ba13ed98315094182a770c5b4"
 
 RDEPENDS:rust-wiremock+default-devel = " \

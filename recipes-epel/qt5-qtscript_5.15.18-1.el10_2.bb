@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "qt5-qtscript"
 PV = "5.15.18"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  qt5-qtscript \
  qt5-qtscript-devel \
  qt5-qtscript-examples \
- "
+"
+PACKAGES:aarch64 = " \
+ qt5-qtscript \
+ qt5-qtscript-devel \
+ qt5-qtscript-examples \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/q/qt5-qtscript-5.15.18-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/q/qt5-qtscript-5.15.18-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3a2083bc3d47e543aef4965ce5023d8973cb387e203a9e7304e4a6fa39d5e40d"
 
-URI_x86_64_v2_qt5-qtscript = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt5-qtscript-5.15.18-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qt5-qtscript;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt5-qtscript}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt5-qtscript-5.15.18-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qt5-qtscript;unpack=0"
 SRC_URI[x86_64_v2_qt5-qtscript.sha256sum] = "29af30a15adefadd420d46966de71a3f2b04be1dd5cbc7923c76c1abc81977c5"
 
-URI_x86_64_v2_qt5-qtscript-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt5-qtscript-devel-5.15.18-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qt5-qtscript-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt5-qtscript-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt5-qtscript-devel-5.15.18-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qt5-qtscript-devel;unpack=0"
 SRC_URI[x86_64_v2_qt5-qtscript-devel.sha256sum] = "1f30bebf4f9c57f8426c08495ae49c9a5b153904844a606fab2332966179003a"
 
-URI_x86_64_v2_qt5-qtscript-examples = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt5-qtscript-examples-5.15.18-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qt5-qtscript-examples;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt5-qtscript-examples}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt5-qtscript-examples-5.15.18-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qt5-qtscript-examples;unpack=0"
 SRC_URI[x86_64_v2_qt5-qtscript-examples.sha256sum] = "89a5cd2e37f110c5ae38bc65f388c5f44d5e50a3018a4cc4dea1c0e68d670d82"
 
-URI_aarch64_qt5-qtscript = "${EPEL_MIRROR}/aarch64/Packages/q/qt5-qtscript-5.15.18-1.el10_2.aarch64.rpm;name=aarch64_qt5-qtscript;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt5-qtscript}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/q/qt5-qtscript-5.15.18-1.el10_2.aarch64.rpm;name=aarch64_qt5-qtscript;unpack=0"
 SRC_URI[aarch64_qt5-qtscript.sha256sum] = "518fe812fe30d3be8ef71bf91d7e4f79a06a858a21132eef0209a2df14e80003"
 
-URI_aarch64_qt5-qtscript-devel = "${EPEL_MIRROR}/aarch64/Packages/q/qt5-qtscript-devel-5.15.18-1.el10_2.aarch64.rpm;name=aarch64_qt5-qtscript-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt5-qtscript-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/q/qt5-qtscript-devel-5.15.18-1.el10_2.aarch64.rpm;name=aarch64_qt5-qtscript-devel;unpack=0"
 SRC_URI[aarch64_qt5-qtscript-devel.sha256sum] = "9d4175988750cb5c0823970ff58d0e3090c9d2524c66d3223e5955bcf6dda78b"
 
-URI_aarch64_qt5-qtscript-examples = "${EPEL_MIRROR}/aarch64/Packages/q/qt5-qtscript-examples-5.15.18-1.el10_2.aarch64.rpm;name=aarch64_qt5-qtscript-examples;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt5-qtscript-examples}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/q/qt5-qtscript-examples-5.15.18-1.el10_2.aarch64.rpm;name=aarch64_qt5-qtscript-examples;unpack=0"
 SRC_URI[aarch64_qt5-qtscript-examples.sha256sum] = "8375d1103a2031a9e60350b849d30739d5e94360d80d2e0e1f6055e3505dcc92"
 
 RDEPENDS:qt5-qtscript:x86_64_v2 = " \

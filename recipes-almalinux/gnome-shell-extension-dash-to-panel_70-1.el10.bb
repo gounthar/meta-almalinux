@@ -9,17 +9,17 @@ PACKAGES = " \
  gnome-shell-extension-dash-to-panel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gnome-shell-extension-dash-to-panel-70-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gnome-shell-extension-dash-to-panel-70-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "911946f75d54c697403515e0de3f256e81f7be7356645b893cb904d488f3c3ca"
 
-URI_x86_64_v2_gnome-shell-extension-dash-to-panel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gnome-shell-extension-dash-to-panel-70-1.el10.noarch.rpm;name=x86_64_v2_gnome-shell-extension-dash-to-panel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gnome-shell-extension-dash-to-panel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gnome-shell-extension-dash-to-panel-70-1.el10.noarch.rpm;name=x86_64_v2_gnome-shell-extension-dash-to-panel;unpack=0"
 SRC_URI[x86_64_v2_gnome-shell-extension-dash-to-panel.sha256sum] = "4fb21f20b7d0af377bee31434725be0ac007c4cebc417e19f1f89a600ef1fbb4"
 
-URI_aarch64_gnome-shell-extension-dash-to-panel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gnome-shell-extension-dash-to-panel-70-1.el10.noarch.rpm;name=aarch64_gnome-shell-extension-dash-to-panel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gnome-shell-extension-dash-to-panel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gnome-shell-extension-dash-to-panel-70-1.el10.noarch.rpm;name=aarch64_gnome-shell-extension-dash-to-panel;unpack=0"
 SRC_URI[aarch64_gnome-shell-extension-dash-to-panel.sha256sum] = "4fb21f20b7d0af377bee31434725be0ac007c4cebc417e19f1f89a600ef1fbb4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gnome-shell-extension-dash-to-panel-70-1.el10.noarch.rpm;name=riscv64_gnome-shell-extension-dash-to-panel;unpack=0"
+SRC_URI[riscv64_gnome-shell-extension-dash-to-panel.sha256sum] = "4fb21f20b7d0af377bee31434725be0ac007c4cebc417e19f1f89a600ef1fbb4"
 
 RDEPENDS:gnome-shell-extension-dash-to-panel = " \
  gnome-shell \

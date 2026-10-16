@@ -10,25 +10,26 @@ PACKAGES = " \
  tesseract-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/tesseract-5.3.4-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/tesseract-5.3.4-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "00cd4ac2bbe919120f0427b1480a0d58ff21e1082780dbb3b835acb92d9a34d8"
 
-URI_x86_64_v2_tesseract = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/tesseract-5.3.4-6.el10.x86_64_v2.rpm;name=x86_64_v2_tesseract;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_tesseract}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/tesseract-5.3.4-6.el10.x86_64_v2.rpm;name=x86_64_v2_tesseract;unpack=0"
 SRC_URI[x86_64_v2_tesseract.sha256sum] = "0bbb07ff103cfc4ac8b375222e95a71dd933d1733a3e5346efe5d460ba19c1fb"
 
-URI_x86_64_v2_tesseract-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/tesseract-devel-5.3.4-6.el10.x86_64_v2.rpm;name=x86_64_v2_tesseract-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_tesseract-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/tesseract-devel-5.3.4-6.el10.x86_64_v2.rpm;name=x86_64_v2_tesseract-devel;unpack=0"
 SRC_URI[x86_64_v2_tesseract-devel.sha256sum] = "9b56b36a571396049d25ed85afdfb1d69fe3acbd14c13d5c2d4036187cecba06"
 
-URI_aarch64_tesseract = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/tesseract-5.3.4-6.el10.aarch64.rpm;name=aarch64_tesseract;unpack=0"
-SRC_URI:append = " ${URI_aarch64_tesseract}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/tesseract-5.3.4-6.el10.aarch64.rpm;name=aarch64_tesseract;unpack=0"
 SRC_URI[aarch64_tesseract.sha256sum] = "bde0976fd8e7dba7bf2d15ab7fadb1dae161f8cbccd169bc473d62df1badbff1"
 
-URI_aarch64_tesseract-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/tesseract-devel-5.3.4-6.el10.aarch64.rpm;name=aarch64_tesseract-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_tesseract-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/tesseract-devel-5.3.4-6.el10.aarch64.rpm;name=aarch64_tesseract-devel;unpack=0"
 SRC_URI[aarch64_tesseract-devel.sha256sum] = "c18ab33b356cef0df2971a5fe6aa0f10ea0b57023b3a1ca074433838ebf6535b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/tesseract-5.3.4-6.el10.riscv64.rpm;name=riscv64_tesseract;unpack=0"
+SRC_URI[riscv64_tesseract.sha256sum] = "132430df91b0eb0ea6f4b6df6125e4d06eb31e505788739a2c5e1747bd36922b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/tesseract-devel-5.3.4-6.el10.riscv64.rpm;name=riscv64_tesseract-devel;unpack=0"
+SRC_URI[riscv64_tesseract-devel.sha256sum] = "8c8907f673e53a66f213aabce4b0e5db6fcac7ae37e1168ccb3cf32a54b4dded"
 
 RDEPENDS:tesseract = " \
  glibc \

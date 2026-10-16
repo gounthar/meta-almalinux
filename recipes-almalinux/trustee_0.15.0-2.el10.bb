@@ -9,17 +9,17 @@ PACKAGES = " \
  trustee-kbs \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/trustee-0.15.0-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/trustee-0.15.0-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a74a08284480f74e11abcf3b8880e61aaab49f51c6843e524920482f9d539ce3"
 
-URI_x86_64_v2_trustee-kbs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/trustee-kbs-0.15.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_trustee-kbs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_trustee-kbs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/trustee-kbs-0.15.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_trustee-kbs;unpack=0"
 SRC_URI[x86_64_v2_trustee-kbs.sha256sum] = "5319f3f8b2eafc2d4c8c8cb1b97ef2ca0fe702894c478e201a00ad92154fec4a"
 
-URI_aarch64_trustee-kbs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/trustee-kbs-0.15.0-2.el10.aarch64.rpm;name=aarch64_trustee-kbs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_trustee-kbs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/trustee-kbs-0.15.0-2.el10.aarch64.rpm;name=aarch64_trustee-kbs;unpack=0"
 SRC_URI[aarch64_trustee-kbs.sha256sum] = "90e4a72c3cb245287919c1cebb321f7c5e5205799ffd67f9db47527da97e8ba3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/trustee-kbs-0.15.0-2.el10.riscv64.rpm;name=riscv64_trustee-kbs;unpack=0"
+SRC_URI[riscv64_trustee-kbs.sha256sum] = "b517c343234b18c5a078735ede36fb7e13716d8b3347b9a17f1e046487f7ced8"
 
 RDEPENDS:trustee-kbs = " \
  glibc \

@@ -6,7 +6,7 @@ PN = "ImageMagick"
 PE = "1"
 PV = "7.1.2.27"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  ImageMagick \
  ImageMagick-c++ \
  ImageMagick-c++-devel \
@@ -16,10 +16,23 @@ PACKAGES = " \
  ImageMagick-heic \
  ImageMagick-libs \
  ImageMagick-perl \
- "
+"
+PACKAGES:aarch64 = " \
+ ImageMagick \
+ ImageMagick-c++ \
+ ImageMagick-c++-devel \
+ ImageMagick-devel \
+ ImageMagick-djvu \
+ ImageMagick-doc \
+ ImageMagick-heic \
+ ImageMagick-libs \
+ ImageMagick-perl \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/i/ImageMagick-7.1.2.27-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/i/ImageMagick-7.1.2.27-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f00fd451c34b07a3cbfe4d4966cdf823321f7843d37134688549f5e58cb751fd"
 
 ## Requires (aarch64) that were seen as not satisfiable in original repo:
@@ -27,76 +40,58 @@ SRC_URI[src.sha256sum] = "f00fd451c34b07a3cbfe4d4966cdf823321f7843d37134688549f5
 # - ImageMagick-libs: libcgraph.so.6()(64bit)
 # - ImageMagick-libs: libgvc.so.6()(64bit)
 
-URI_x86_64_v2_ImageMagick = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ImageMagick-7.1.2.27-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ImageMagick;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ImageMagick}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ImageMagick-7.1.2.27-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ImageMagick;unpack=0"
 SRC_URI[x86_64_v2_ImageMagick.sha256sum] = "b0fe5376596e7726ecb987fd452ea381775a545dd1b6ec075fb8af32ef9839eb"
 
-URI_x86_64_v2_ImageMagick-c++ = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ImageMagick-c++-7.1.2.27-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ImageMagick-c++;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ImageMagick-c++}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ImageMagick-c++-7.1.2.27-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ImageMagick-c++;unpack=0"
 SRC_URI[x86_64_v2_ImageMagick-c++.sha256sum] = "73b5ff69301569f2bae6a915190bfa238b9425b2d3426d14706fb454677eb620"
 
-URI_x86_64_v2_ImageMagick-c++-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ImageMagick-c++-devel-7.1.2.27-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ImageMagick-c++-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ImageMagick-c++-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ImageMagick-c++-devel-7.1.2.27-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ImageMagick-c++-devel;unpack=0"
 SRC_URI[x86_64_v2_ImageMagick-c++-devel.sha256sum] = "16dad250d4c142d60463f82b22a4b409812424788e02409c6b73ab96618fde53"
 
-URI_x86_64_v2_ImageMagick-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ImageMagick-devel-7.1.2.27-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ImageMagick-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ImageMagick-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ImageMagick-devel-7.1.2.27-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ImageMagick-devel;unpack=0"
 SRC_URI[x86_64_v2_ImageMagick-devel.sha256sum] = "2f0f53b6357c1f3991ddfc270b3dfea9751b9c393f53fc0c3361ad5740cfec9e"
 
-URI_x86_64_v2_ImageMagick-djvu = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ImageMagick-djvu-7.1.2.27-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ImageMagick-djvu;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ImageMagick-djvu}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ImageMagick-djvu-7.1.2.27-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ImageMagick-djvu;unpack=0"
 SRC_URI[x86_64_v2_ImageMagick-djvu.sha256sum] = "adab714292d1b181a118d89adb9d2e3818bb12d2e8d68bc2dadcb103c2cd17e1"
 
-URI_x86_64_v2_ImageMagick-doc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ImageMagick-doc-7.1.2.27-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ImageMagick-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ImageMagick-doc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ImageMagick-doc-7.1.2.27-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ImageMagick-doc;unpack=0"
 SRC_URI[x86_64_v2_ImageMagick-doc.sha256sum] = "d2462162d1dc6c705460e5a5b8888c21127f06038778935c89cb60f6cb6bd662"
 
-URI_x86_64_v2_ImageMagick-heic = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ImageMagick-heic-7.1.2.27-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ImageMagick-heic;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ImageMagick-heic}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ImageMagick-heic-7.1.2.27-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ImageMagick-heic;unpack=0"
 SRC_URI[x86_64_v2_ImageMagick-heic.sha256sum] = "9532d5eda0a58dd2662336cbbf2e70250db0da1c4542a3e83a4bbfc49bf8b512"
 
-URI_x86_64_v2_ImageMagick-libs = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ImageMagick-libs-7.1.2.27-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ImageMagick-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ImageMagick-libs}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ImageMagick-libs-7.1.2.27-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ImageMagick-libs;unpack=0"
 SRC_URI[x86_64_v2_ImageMagick-libs.sha256sum] = "4ccd2cb199971a6c951eb76f3a4306809a0cc2192aad5e2d3850b24afccaf5b3"
 
-URI_x86_64_v2_ImageMagick-perl = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ImageMagick-perl-7.1.2.27-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ImageMagick-perl;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ImageMagick-perl}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ImageMagick-perl-7.1.2.27-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ImageMagick-perl;unpack=0"
 SRC_URI[x86_64_v2_ImageMagick-perl.sha256sum] = "e0d7c425eb29d41a95a31570645036b169f04d264f91e938c4937c9493b54eed"
 
-URI_aarch64_ImageMagick = "${EPEL_MIRROR}/aarch64/Packages/i/ImageMagick-7.1.2.27-1.el10_3.aarch64.rpm;name=aarch64_ImageMagick;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ImageMagick}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/i/ImageMagick-7.1.2.27-1.el10_3.aarch64.rpm;name=aarch64_ImageMagick;unpack=0"
 SRC_URI[aarch64_ImageMagick.sha256sum] = "28799a96ee0d994afb6d1b764ee7b7110f823b6cc651a742e6b8afc66961ff75"
 
-URI_aarch64_ImageMagick-c++ = "${EPEL_MIRROR}/aarch64/Packages/i/ImageMagick-c++-7.1.2.27-1.el10_3.aarch64.rpm;name=aarch64_ImageMagick-c++;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ImageMagick-c++}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/i/ImageMagick-c++-7.1.2.27-1.el10_3.aarch64.rpm;name=aarch64_ImageMagick-c++;unpack=0"
 SRC_URI[aarch64_ImageMagick-c++.sha256sum] = "5468d7b1d49d826f23be91ea157409df5b2cba0a5369e1774889136522976607"
 
-URI_aarch64_ImageMagick-c++-devel = "${EPEL_MIRROR}/aarch64/Packages/i/ImageMagick-c++-devel-7.1.2.27-1.el10_3.aarch64.rpm;name=aarch64_ImageMagick-c++-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ImageMagick-c++-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/i/ImageMagick-c++-devel-7.1.2.27-1.el10_3.aarch64.rpm;name=aarch64_ImageMagick-c++-devel;unpack=0"
 SRC_URI[aarch64_ImageMagick-c++-devel.sha256sum] = "dd90fffe670465bca96bffe921fa8b87f48d87bb11f7a8310d0b408f924988d6"
 
-URI_aarch64_ImageMagick-devel = "${EPEL_MIRROR}/aarch64/Packages/i/ImageMagick-devel-7.1.2.27-1.el10_3.aarch64.rpm;name=aarch64_ImageMagick-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ImageMagick-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/i/ImageMagick-devel-7.1.2.27-1.el10_3.aarch64.rpm;name=aarch64_ImageMagick-devel;unpack=0"
 SRC_URI[aarch64_ImageMagick-devel.sha256sum] = "915f0b2a3712315030e9d93e7883e871d1d161a49642c50d684ed692c0acea26"
 
-URI_aarch64_ImageMagick-djvu = "${EPEL_MIRROR}/aarch64/Packages/i/ImageMagick-djvu-7.1.2.27-1.el10_3.aarch64.rpm;name=aarch64_ImageMagick-djvu;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ImageMagick-djvu}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/i/ImageMagick-djvu-7.1.2.27-1.el10_3.aarch64.rpm;name=aarch64_ImageMagick-djvu;unpack=0"
 SRC_URI[aarch64_ImageMagick-djvu.sha256sum] = "9475229a8e6da56354f027091f87861533ea8a3f411def683fbec445edfa7c8c"
 
-URI_aarch64_ImageMagick-doc = "${EPEL_MIRROR}/aarch64/Packages/i/ImageMagick-doc-7.1.2.27-1.el10_3.aarch64.rpm;name=aarch64_ImageMagick-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ImageMagick-doc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/i/ImageMagick-doc-7.1.2.27-1.el10_3.aarch64.rpm;name=aarch64_ImageMagick-doc;unpack=0"
 SRC_URI[aarch64_ImageMagick-doc.sha256sum] = "efd191cc3c2bb4685e8b7d320c5ffd6071403a91d5566f8d1c862b6bb3139e69"
 
-URI_aarch64_ImageMagick-heic = "${EPEL_MIRROR}/aarch64/Packages/i/ImageMagick-heic-7.1.2.27-1.el10_3.aarch64.rpm;name=aarch64_ImageMagick-heic;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ImageMagick-heic}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/i/ImageMagick-heic-7.1.2.27-1.el10_3.aarch64.rpm;name=aarch64_ImageMagick-heic;unpack=0"
 SRC_URI[aarch64_ImageMagick-heic.sha256sum] = "c2def033bd2ee28381eba961112c90b20828dc5fbbca05a44411ee8a1b74ea8a"
 
-URI_aarch64_ImageMagick-libs = "${EPEL_MIRROR}/aarch64/Packages/i/ImageMagick-libs-7.1.2.27-1.el10_3.aarch64.rpm;name=aarch64_ImageMagick-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ImageMagick-libs}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/i/ImageMagick-libs-7.1.2.27-1.el10_3.aarch64.rpm;name=aarch64_ImageMagick-libs;unpack=0"
 SRC_URI[aarch64_ImageMagick-libs.sha256sum] = "34e5234204886c37b798ab569707525792e2dbff6ee547d9a6b901f52711a882"
 
-URI_aarch64_ImageMagick-perl = "${EPEL_MIRROR}/aarch64/Packages/i/ImageMagick-perl-7.1.2.27-1.el10_3.aarch64.rpm;name=aarch64_ImageMagick-perl;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ImageMagick-perl}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/i/ImageMagick-perl-7.1.2.27-1.el10_3.aarch64.rpm;name=aarch64_ImageMagick-perl;unpack=0"
 SRC_URI[aarch64_ImageMagick-perl.sha256sum] = "46ff2879cd3ba9676a237434fb6d4b679f8d27738f28091771a95d6a22d5cc09"
 
 RDEPENDS:ImageMagick = " \

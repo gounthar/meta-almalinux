@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-pyftdi"
 PV = "0.57.2"
 PR = "3.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-pyftdi \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-pyftdi \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-pyftdi-0.57.2-3.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-pyftdi-0.57.2-3.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d498c329eb20ca6deaad8aa8ee63d54547bbfa73d3694467a12e0ae9d83927b2"
 
-URI_x86_64_v2_python3-pyftdi = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-pyftdi-0.57.2-3.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-pyftdi;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-pyftdi}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-pyftdi-0.57.2-3.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-pyftdi;unpack=0"
 SRC_URI[x86_64_v2_python3-pyftdi.sha256sum] = "1cf03e25fc003bd0a998e75e505ce1a7df8ae0a8e1556f72a46e11b6c985dbe1"
 
-URI_aarch64_python3-pyftdi = "${EPEL_MIRROR}/aarch64/Packages/p/python3-pyftdi-0.57.2-3.el10_3.noarch.rpm;name=aarch64_python3-pyftdi;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-pyftdi}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-pyftdi-0.57.2-3.el10_3.noarch.rpm;name=aarch64_python3-pyftdi;unpack=0"
 SRC_URI[aarch64_python3-pyftdi.sha256sum] = "ae2841451c139b59b1d455b5c25174f19cb58e01a3638e18da9f7c116c8cfd27"
 
 RDEPENDS:python3-pyftdi = " \

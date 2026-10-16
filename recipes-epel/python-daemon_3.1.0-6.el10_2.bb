@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-daemon"
 PV = "3.1.0"
 PR = "6.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-daemon \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-daemon \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-daemon-3.1.0-6.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-daemon-3.1.0-6.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1818dacaedc90f4cde73b44e8628d2e87c15f571de72bcbc00681f732fbbe697"
 
-URI_x86_64_v2_python3-daemon = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-daemon-3.1.0-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-daemon;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-daemon}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-daemon-3.1.0-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-daemon;unpack=0"
 SRC_URI[x86_64_v2_python3-daemon.sha256sum] = "e2948ad1f2a3f96d64a47e21fb87d1fb4ca45b4ddaee6dfd47a38db90abe4372"
 
-URI_aarch64_python3-daemon = "${EPEL_MIRROR}/aarch64/Packages/p/python3-daemon-3.1.0-6.el10_2.noarch.rpm;name=aarch64_python3-daemon;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-daemon}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-daemon-3.1.0-6.el10_2.noarch.rpm;name=aarch64_python3-daemon;unpack=0"
 SRC_URI[aarch64_python3-daemon.sha256sum] = "d1991b801ee8c0392f825a32a9cee385e2672ba32774090c1d748a6df532c989"
 
 RDEPENDS:python3-daemon = " \

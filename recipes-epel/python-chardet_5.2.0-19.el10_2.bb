@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-chardet"
 PV = "5.2.0"
 PR = "19.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-chardet \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-chardet \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-chardet-5.2.0-19.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-chardet-5.2.0-19.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "fd8043e0923be013b3fdbc3651d887ce1cb47afba8a6aaa4337ada855a0c1bfd"
 
-URI_x86_64_v2_python3-chardet = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-chardet-5.2.0-19.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-chardet;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-chardet}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-chardet-5.2.0-19.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-chardet;unpack=0"
 SRC_URI[x86_64_v2_python3-chardet.sha256sum] = "37db7eec0cc8b6b38b6b333245a0a80a171f6eaee58eb73b74e47202829e5818"
 
-URI_aarch64_python3-chardet = "${EPEL_MIRROR}/aarch64/Packages/p/python3-chardet-5.2.0-19.el10_2.noarch.rpm;name=aarch64_python3-chardet;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-chardet}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-chardet-5.2.0-19.el10_2.noarch.rpm;name=aarch64_python3-chardet;unpack=0"
 SRC_URI[aarch64_python3-chardet.sha256sum] = "c166713bb0fa3d7842a74d258fd3c1da81719d28e3b2d08324f701c1371d8478"
 
 RDEPENDS:python3-chardet = " \

@@ -14,57 +14,62 @@ PACKAGES = " \
  libss \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/e2fsprogs-1.47.1-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/e2fsprogs-1.47.1-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "45f91e9c273cadbae50de4527854215788ed6615964e42bd870568aace97c7ac"
 
-URI_x86_64_v2_e2fsprogs = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/e2fsprogs-1.47.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_e2fsprogs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_e2fsprogs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/e2fsprogs-1.47.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_e2fsprogs;unpack=0"
 SRC_URI[x86_64_v2_e2fsprogs.sha256sum] = "dad1c3d3db0a4b184b45da205a18e286910d3d09b9889a1a75a3b457366156c2"
 
-URI_x86_64_v2_e2fsprogs-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/e2fsprogs-devel-1.47.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_e2fsprogs-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_e2fsprogs-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/e2fsprogs-devel-1.47.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_e2fsprogs-devel;unpack=0"
 SRC_URI[x86_64_v2_e2fsprogs-devel.sha256sum] = "24c2a84a37489e4eaab0bb9056e35c4b42588f25bc419414e45b329b4640b5cd"
 
-URI_x86_64_v2_e2fsprogs-libs = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/e2fsprogs-libs-1.47.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_e2fsprogs-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_e2fsprogs-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/e2fsprogs-libs-1.47.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_e2fsprogs-libs;unpack=0"
 SRC_URI[x86_64_v2_e2fsprogs-libs.sha256sum] = "7605ab50d68543f9d4ac8e42cf84995795f3d10b00fe5f9498342a4e97c9e417"
 
-URI_x86_64_v2_libcom_err = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libcom_err-1.47.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libcom_err;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libcom_err}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libcom_err-1.47.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libcom_err;unpack=0"
 SRC_URI[x86_64_v2_libcom_err.sha256sum] = "9f3787ee879bd0e1c421c14f0ab27e96e2dffd5f50fa0670667e0a80fd961729"
 
-URI_x86_64_v2_libcom_err-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libcom_err-devel-1.47.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libcom_err-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libcom_err-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libcom_err-devel-1.47.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libcom_err-devel;unpack=0"
 SRC_URI[x86_64_v2_libcom_err-devel.sha256sum] = "c0709142f67d6696c9b64ac9003b07726fdb7d6676e2a622e2fdac177d4513be"
 
-URI_x86_64_v2_libss = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libss-1.47.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libss;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libss}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libss-1.47.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libss;unpack=0"
 SRC_URI[x86_64_v2_libss.sha256sum] = "28e7e5fd1fac104a5b523386e7d9b8bf82015160705afef0c121813207f42a5f"
 
-URI_aarch64_e2fsprogs = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/e2fsprogs-1.47.1-5.el10.aarch64.rpm;name=aarch64_e2fsprogs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_e2fsprogs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/e2fsprogs-1.47.1-5.el10.aarch64.rpm;name=aarch64_e2fsprogs;unpack=0"
 SRC_URI[aarch64_e2fsprogs.sha256sum] = "b3b093c91f53919b43a3b9dee74688b938e8446a7ac9abc3a363691d7aae1db4"
 
-URI_aarch64_e2fsprogs-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/e2fsprogs-devel-1.47.1-5.el10.aarch64.rpm;name=aarch64_e2fsprogs-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_e2fsprogs-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/e2fsprogs-devel-1.47.1-5.el10.aarch64.rpm;name=aarch64_e2fsprogs-devel;unpack=0"
 SRC_URI[aarch64_e2fsprogs-devel.sha256sum] = "4b3a813222bb82ab7ec8a3d8f61b1ac9136af11341573fa5cccaa37b0bc43731"
 
-URI_aarch64_e2fsprogs-libs = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/e2fsprogs-libs-1.47.1-5.el10.aarch64.rpm;name=aarch64_e2fsprogs-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_e2fsprogs-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/e2fsprogs-libs-1.47.1-5.el10.aarch64.rpm;name=aarch64_e2fsprogs-libs;unpack=0"
 SRC_URI[aarch64_e2fsprogs-libs.sha256sum] = "5604361fbdbc9137eed9ab2a4ed0b7e7920d027e3e3f9fdcffc676c10783891a"
 
-URI_aarch64_libcom_err = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libcom_err-1.47.1-5.el10.aarch64.rpm;name=aarch64_libcom_err;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libcom_err}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libcom_err-1.47.1-5.el10.aarch64.rpm;name=aarch64_libcom_err;unpack=0"
 SRC_URI[aarch64_libcom_err.sha256sum] = "d413398f035fae85184c3b6d321865f675c6daf3437671e15fdd47988d1ecd2b"
 
-URI_aarch64_libcom_err-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libcom_err-devel-1.47.1-5.el10.aarch64.rpm;name=aarch64_libcom_err-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libcom_err-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libcom_err-devel-1.47.1-5.el10.aarch64.rpm;name=aarch64_libcom_err-devel;unpack=0"
 SRC_URI[aarch64_libcom_err-devel.sha256sum] = "74f96c9f7c958423f5cd7b4f002917d892bd314a1064912c28e965dbea03c1cc"
 
-URI_aarch64_libss = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libss-1.47.1-5.el10.aarch64.rpm;name=aarch64_libss;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libss}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libss-1.47.1-5.el10.aarch64.rpm;name=aarch64_libss;unpack=0"
 SRC_URI[aarch64_libss.sha256sum] = "81c438d6aefb48dbc7f4d3af4ee76e573b71653368149fe9dd6b70acb8889c2c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/e2fsprogs-1.47.1-5.el10.riscv64.rpm;name=riscv64_e2fsprogs;unpack=0"
+SRC_URI[riscv64_e2fsprogs.sha256sum] = "72acd1c45c38b2e17622e6109a315f25790bd3ebda47b9df47bc49c66c3e7d32"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/e2fsprogs-devel-1.47.1-5.el10.riscv64.rpm;name=riscv64_e2fsprogs-devel;unpack=0"
+SRC_URI[riscv64_e2fsprogs-devel.sha256sum] = "c67d9fcdf474bab7f9c354d0d4fb71f57edeb53cdd9d70846e4d5798a2aa74d4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/e2fsprogs-libs-1.47.1-5.el10.riscv64.rpm;name=riscv64_e2fsprogs-libs;unpack=0"
+SRC_URI[riscv64_e2fsprogs-libs.sha256sum] = "7436deb2113f7ede3a02b97a68e89162f4517062a1187bf6f1f68361150e4720"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libcom_err-1.47.1-5.el10.riscv64.rpm;name=riscv64_libcom_err;unpack=0"
+SRC_URI[riscv64_libcom_err.sha256sum] = "a6c7d8af0ed313824ab8271daac2b3a22fae5f82ff0d1855f782f64983c359ca"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libcom_err-devel-1.47.1-5.el10.riscv64.rpm;name=riscv64_libcom_err-devel;unpack=0"
+SRC_URI[riscv64_libcom_err-devel.sha256sum] = "839efb51b5b1666fe2f706308954c4e7e4a4bd8484e143d2c60ec385f556ad33"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libss-1.47.1-5.el10.riscv64.rpm;name=riscv64_libss;unpack=0"
+SRC_URI[riscv64_libss.sha256sum] = "c211b2cb9ca847ebad857ed95ce22e2323dfbd6f04db94feb1585729160e06c3"
 
 RDEPENDS:e2fsprogs = " \
  e2fsprogs-libs \

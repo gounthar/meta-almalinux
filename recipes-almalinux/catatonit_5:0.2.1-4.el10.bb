@@ -10,18 +10,24 @@ PACKAGES = " \
  catatonit \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/catatonit-0.2.1-4.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/catatonit-0.2.1-4.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "cac6f74c3e701164a37683757f99e28fe8582abfe9ac2cee6d2ab51fe7d8dd98"
 
-URI_x86_64_v2_catatonit = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/catatonit-0.2.1-4.el10.x86_64_v2.rpm;name=x86_64_v2_catatonit;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_catatonit}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/catatonit-0.2.1-4.el10.x86_64_v2.rpm;name=x86_64_v2_catatonit;unpack=0"
 SRC_URI[x86_64_v2_catatonit.sha256sum] = "77a1b2a6e19bcd2f0987672be43636d2d8dc7b19826f864eb99b703c6f8d425d"
 
-URI_aarch64_catatonit = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/catatonit-0.2.1-4.el10.aarch64.rpm;name=aarch64_catatonit;unpack=0"
-SRC_URI:append = " ${URI_aarch64_catatonit}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/catatonit-0.2.1-4.el10.aarch64.rpm;name=aarch64_catatonit;unpack=0"
 SRC_URI[aarch64_catatonit.sha256sum] = "7d66cd1689237f8e4cc250617b6aeb6dd104767dd17aa3da1d20e8debad02c4f"
 
-RDEPENDS:catatonit = " \
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/catatonit-0.2.1-4.el10.riscv64.rpm;name=riscv64_catatonit;unpack=0"
+SRC_URI[riscv64_catatonit.sha256sum] = "ab4bc3030807296701c8300256b6cc25e1bfb66492a4184fdb140db0c0d41300"
+
+RDEPENDS:catatonit:x86_64_v2 = " \
  glibc \
- "
+"
+RDEPENDS:catatonit:aarch64 = " \
+ glibc \
+"
+RDEPENDS:catatonit:riscv64 = " \
+  \
+"

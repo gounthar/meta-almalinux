@@ -10,25 +10,26 @@ PACKAGES = " \
  qt6-qtshadertools-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtshadertools-6.10.1-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtshadertools-6.10.1-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b09e0e970689998ea3534d48ac66f05691707965442f3f5f27945ca1cc4d4e95"
 
-URI_x86_64_v2_qt6-qtshadertools = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtshadertools-6.10.1-2.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtshadertools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtshadertools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtshadertools-6.10.1-2.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtshadertools;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtshadertools.sha256sum] = "5ca3c86e291a41f6cd52321d1d3033ea8c1ad5644ab77af29bdef1290a5b4f55"
 
-URI_x86_64_v2_qt6-qtshadertools-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtshadertools-devel-6.10.1-2.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtshadertools-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtshadertools-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtshadertools-devel-6.10.1-2.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtshadertools-devel;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtshadertools-devel.sha256sum] = "dc420d493bd3d25dc74714b130996b2ef6938cbbc4aa5269bc03ff1262ea32e4"
 
-URI_aarch64_qt6-qtshadertools = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtshadertools-6.10.1-2.el10.aarch64.rpm;name=aarch64_qt6-qtshadertools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtshadertools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtshadertools-6.10.1-2.el10.aarch64.rpm;name=aarch64_qt6-qtshadertools;unpack=0"
 SRC_URI[aarch64_qt6-qtshadertools.sha256sum] = "01ab5dd038d9c4d2469d142a4a1592a153b35b4837a9560003a4d06377ca90c0"
 
-URI_aarch64_qt6-qtshadertools-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtshadertools-devel-6.10.1-2.el10.aarch64.rpm;name=aarch64_qt6-qtshadertools-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtshadertools-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtshadertools-devel-6.10.1-2.el10.aarch64.rpm;name=aarch64_qt6-qtshadertools-devel;unpack=0"
 SRC_URI[aarch64_qt6-qtshadertools-devel.sha256sum] = "b34dc83ffdbb2ffc2fb42f076c6593b01ad3dff43e31b8b682e194eb2ef12443"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtshadertools-6.10.1-2.el10.riscv64.rpm;name=riscv64_qt6-qtshadertools;unpack=0"
+SRC_URI[riscv64_qt6-qtshadertools.sha256sum] = "6f2990be252b003137ae3d1aeaf35af07bb4a58d1218b436321cd6b1b98f6bf4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtshadertools-devel-6.10.1-2.el10.riscv64.rpm;name=riscv64_qt6-qtshadertools-devel;unpack=0"
+SRC_URI[riscv64_qt6-qtshadertools-devel.sha256sum] = "912b92f52ff26c7881cf479127706a7e8b3070e33e3d9d045920d3b37b5d3f7e"
 
 RDEPENDS:qt6-qtshadertools = " \
  glibc \

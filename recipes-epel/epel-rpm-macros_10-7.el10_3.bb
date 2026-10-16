@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "epel-rpm-macros"
 PV = "10"
 PR = "7.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  epel-rpm-macros \
- "
+"
+PACKAGES:aarch64 = " \
+ epel-rpm-macros \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/e/epel-rpm-macros-10-7.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/e/epel-rpm-macros-10-7.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "410c6e7c6373f72140936402f90c15dab123ceb6158b613227eaba8ed68979b9"
 
-URI_x86_64_v2_epel-rpm-macros = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/epel-rpm-macros-10-7.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_epel-rpm-macros;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_epel-rpm-macros}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/epel-rpm-macros-10-7.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_epel-rpm-macros;unpack=0"
 SRC_URI[x86_64_v2_epel-rpm-macros.sha256sum] = "ce21df540e654927acf30f61b7f10f7a83bb1bb9457a7f816008b5d35949e413"
 
-URI_aarch64_epel-rpm-macros = "${EPEL_MIRROR}/aarch64/Packages/e/epel-rpm-macros-10-7.el10_3.noarch.rpm;name=aarch64_epel-rpm-macros;unpack=0"
-SRC_URI:append = " ${URI_aarch64_epel-rpm-macros}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/e/epel-rpm-macros-10-7.el10_3.noarch.rpm;name=aarch64_epel-rpm-macros;unpack=0"
 SRC_URI[aarch64_epel-rpm-macros.sha256sum] = "eb891a9edf3d378593aa19959f35351c5aad123aff587723607d437b459b6131"
 
 RDEPENDS:epel-rpm-macros = " \

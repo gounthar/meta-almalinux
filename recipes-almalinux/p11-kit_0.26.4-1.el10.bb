@@ -13,49 +13,53 @@ PACKAGES = " \
  p11-kit-trust \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/p11-kit-0.26.4-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/p11-kit-0.26.4-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3bb30820b1757e028a31b8a172d819b5f28da6628c4a0f73df8de98c406e302f"
 
-URI_x86_64_v2_p11-kit = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/p11-kit-0.26.4-1.el10.x86_64_v2.rpm;name=x86_64_v2_p11-kit;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_p11-kit}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/p11-kit-0.26.4-1.el10.x86_64_v2.rpm;name=x86_64_v2_p11-kit;unpack=0"
 SRC_URI[x86_64_v2_p11-kit.sha256sum] = "146f7482d5559dbf8d826ebbe8ef1bbb23d208d0f627c449014d3f1840aa6edf"
 
-URI_x86_64_v2_p11-kit-client = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/p11-kit-client-0.26.4-1.el10.x86_64_v2.rpm;name=x86_64_v2_p11-kit-client;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_p11-kit-client}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/p11-kit-client-0.26.4-1.el10.x86_64_v2.rpm;name=x86_64_v2_p11-kit-client;unpack=0"
 SRC_URI[x86_64_v2_p11-kit-client.sha256sum] = "4f73eb3adb7f580276b694c0d06ceddb4d5157a2c53eaaa8663ad8fe26982ebc"
 
-URI_x86_64_v2_p11-kit-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/p11-kit-devel-0.26.4-1.el10.x86_64_v2.rpm;name=x86_64_v2_p11-kit-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_p11-kit-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/p11-kit-devel-0.26.4-1.el10.x86_64_v2.rpm;name=x86_64_v2_p11-kit-devel;unpack=0"
 SRC_URI[x86_64_v2_p11-kit-devel.sha256sum] = "6f3338843f364d1cd72d9d9eddf9d9ee787e3caf76965b389b217fa14e0c839b"
 
-URI_x86_64_v2_p11-kit-server = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/p11-kit-server-0.26.4-1.el10.x86_64_v2.rpm;name=x86_64_v2_p11-kit-server;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_p11-kit-server}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/p11-kit-server-0.26.4-1.el10.x86_64_v2.rpm;name=x86_64_v2_p11-kit-server;unpack=0"
 SRC_URI[x86_64_v2_p11-kit-server.sha256sum] = "3184887ce01222d1a19e706b0cd268bf3c92650be5fd0fe6b8910f47a2b7cb03"
 
-URI_x86_64_v2_p11-kit-trust = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/p11-kit-trust-0.26.4-1.el10.x86_64_v2.rpm;name=x86_64_v2_p11-kit-trust;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_p11-kit-trust}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/p11-kit-trust-0.26.4-1.el10.x86_64_v2.rpm;name=x86_64_v2_p11-kit-trust;unpack=0"
 SRC_URI[x86_64_v2_p11-kit-trust.sha256sum] = "4da6aa46f7016fd1215892ff4d3f71bf19c72a56df3537783b96051d22b7a5e6"
 
-URI_aarch64_p11-kit = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/p11-kit-0.26.4-1.el10.aarch64.rpm;name=aarch64_p11-kit;unpack=0"
-SRC_URI:append = " ${URI_aarch64_p11-kit}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/p11-kit-0.26.4-1.el10.aarch64.rpm;name=aarch64_p11-kit;unpack=0"
 SRC_URI[aarch64_p11-kit.sha256sum] = "fde1f99a843303dbb034bdb5aebc1e2856cc0bd5c55513f11a7296dace6e8119"
 
-URI_aarch64_p11-kit-client = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/p11-kit-client-0.26.4-1.el10.aarch64.rpm;name=aarch64_p11-kit-client;unpack=0"
-SRC_URI:append = " ${URI_aarch64_p11-kit-client}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/p11-kit-client-0.26.4-1.el10.aarch64.rpm;name=aarch64_p11-kit-client;unpack=0"
 SRC_URI[aarch64_p11-kit-client.sha256sum] = "328dc46041a7f3a589d52b78f37626f482290efb69eac337308eab7b50a9964e"
 
-URI_aarch64_p11-kit-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/p11-kit-devel-0.26.4-1.el10.aarch64.rpm;name=aarch64_p11-kit-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_p11-kit-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/p11-kit-devel-0.26.4-1.el10.aarch64.rpm;name=aarch64_p11-kit-devel;unpack=0"
 SRC_URI[aarch64_p11-kit-devel.sha256sum] = "891676a87a1035eb23b9677427d3f6cd4b664b860541ed13d4435ffc1bb80769"
 
-URI_aarch64_p11-kit-server = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/p11-kit-server-0.26.4-1.el10.aarch64.rpm;name=aarch64_p11-kit-server;unpack=0"
-SRC_URI:append = " ${URI_aarch64_p11-kit-server}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/p11-kit-server-0.26.4-1.el10.aarch64.rpm;name=aarch64_p11-kit-server;unpack=0"
 SRC_URI[aarch64_p11-kit-server.sha256sum] = "b788ecb8f6d6cbe60c283007c9c1d80cc4c03b3c192f8f796681bdb952260a3b"
 
-URI_aarch64_p11-kit-trust = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/p11-kit-trust-0.26.4-1.el10.aarch64.rpm;name=aarch64_p11-kit-trust;unpack=0"
-SRC_URI:append = " ${URI_aarch64_p11-kit-trust}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/p11-kit-trust-0.26.4-1.el10.aarch64.rpm;name=aarch64_p11-kit-trust;unpack=0"
 SRC_URI[aarch64_p11-kit-trust.sha256sum] = "d3f9affda4baaa7f78ce68e8bc046eff5e1814030e7959173fc2be6dc8a8eafb"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/p11-kit-0.26.4-1.el10.riscv64.rpm;name=riscv64_p11-kit;unpack=0"
+SRC_URI[riscv64_p11-kit.sha256sum] = "b67bacc9942081b28628e84169abaace5beb0500e9aeb295af22f9591f528a73"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/p11-kit-client-0.26.4-1.el10.riscv64.rpm;name=riscv64_p11-kit-client;unpack=0"
+SRC_URI[riscv64_p11-kit-client.sha256sum] = "fd69d7eca44819c67930f9ff70a4ea7d1014709c314144e983525b7c8271eb33"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/p11-kit-devel-0.26.4-1.el10.riscv64.rpm;name=riscv64_p11-kit-devel;unpack=0"
+SRC_URI[riscv64_p11-kit-devel.sha256sum] = "1def15df4d872e568ad0bdf958241d6c0e4da95f4f395e2597e710238563bce1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/p11-kit-server-0.26.4-1.el10.riscv64.rpm;name=riscv64_p11-kit-server;unpack=0"
+SRC_URI[riscv64_p11-kit-server.sha256sum] = "d9a9e5f1c75312e58b2bd8272e4375871a4b684f2f8acb516c11f9ba0324dc8d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/p11-kit-trust-0.26.4-1.el10.riscv64.rpm;name=riscv64_p11-kit-trust;unpack=0"
+SRC_URI[riscv64_p11-kit-trust.sha256sum] = "604594e829a84e25d2d71a2ca8218f249262eb2b6b666794fdeeb43a6bdb9fc2"
 
 RDEPENDS:p11-kit = " \
  glibc \

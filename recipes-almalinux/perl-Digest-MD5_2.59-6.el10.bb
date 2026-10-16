@@ -9,17 +9,17 @@ PACKAGES = " \
  perl-Digest-MD5 \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/perl-Digest-MD5-2.59-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/perl-Digest-MD5-2.59-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8b31a977aa4f59f953eb9e5265379e3b60716f46342da47147ad451b25e0839e"
 
-URI_x86_64_v2_perl-Digest-MD5 = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/perl-Digest-MD5-2.59-6.el10.x86_64_v2.rpm;name=x86_64_v2_perl-Digest-MD5;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Digest-MD5}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/perl-Digest-MD5-2.59-6.el10.x86_64_v2.rpm;name=x86_64_v2_perl-Digest-MD5;unpack=0"
 SRC_URI[x86_64_v2_perl-Digest-MD5.sha256sum] = "3615b1689cb3274a2e938d68ff628c6ba67504a036a67221c4a59abafe769daa"
 
-URI_aarch64_perl-Digest-MD5 = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/perl-Digest-MD5-2.59-6.el10.aarch64.rpm;name=aarch64_perl-Digest-MD5;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Digest-MD5}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/perl-Digest-MD5-2.59-6.el10.aarch64.rpm;name=aarch64_perl-Digest-MD5;unpack=0"
 SRC_URI[aarch64_perl-Digest-MD5.sha256sum] = "79bcd22d72ab1371f5017c777ec4aa8b24d37bc8005177d03127b9f842c7ea7e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/perl-Digest-MD5-2.59-6.el10.riscv64.rpm;name=riscv64_perl-Digest-MD5;unpack=0"
+SRC_URI[riscv64_perl-Digest-MD5.sha256sum] = "4ed305e045cedee391ff1d3a8da32a315705c4687ae8ebcfeca16a91fbb8c236"
 
 RDEPENDS:perl-Digest-MD5 = " \
  glibc \

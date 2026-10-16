@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-instability"
 PV = "0.3.10"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-instability+default-devel \
  rust-instability-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-instability+default-devel \
+ rust-instability-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-instability-0.3.10-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-instability-0.3.10-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7c5396a7858fbf8e150801d59b9557c3a9655ac134766ec9beb10f145a3179f1"
 
-URI_x86_64_v2_rust-instability+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-instability+default-devel-0.3.10-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-instability+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-instability+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-instability+default-devel-0.3.10-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-instability+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-instability+default-devel.sha256sum] = "b68975b577caecb5114ce56c5c9c0d19c2bbaf84f973e2b2d128ef516d9cfd0d"
 
-URI_x86_64_v2_rust-instability-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-instability-devel-0.3.10-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-instability-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-instability-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-instability-devel-0.3.10-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-instability-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-instability-devel.sha256sum] = "061c8d9f87656b1078ceb760efcb8f1219fcd45a342a509b2e1f76f9b074061c"
 
-URI_aarch64_rust-instability+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-instability+default-devel-0.3.10-1.el10_2.noarch.rpm;name=aarch64_rust-instability+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-instability+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-instability+default-devel-0.3.10-1.el10_2.noarch.rpm;name=aarch64_rust-instability+default-devel;unpack=0"
 SRC_URI[aarch64_rust-instability+default-devel.sha256sum] = "061888a273b43acfda0baa3b84032f7999f782c08d46d005ab7bb41223a88c40"
 
-URI_aarch64_rust-instability-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-instability-devel-0.3.10-1.el10_2.noarch.rpm;name=aarch64_rust-instability-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-instability-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-instability-devel-0.3.10-1.el10_2.noarch.rpm;name=aarch64_rust-instability-devel;unpack=0"
 SRC_URI[aarch64_rust-instability-devel.sha256sum] = "7bfe6491b488478a40d7d2bf07a4cae71232b12f9ccbb2197e5cf4b9e7245f52"
 
 RDEPENDS:rust-instability+default-devel = " \

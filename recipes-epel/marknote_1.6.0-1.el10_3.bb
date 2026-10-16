@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "marknote"
 PV = "1.6.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  marknote \
- "
+"
+PACKAGES:aarch64 = " \
+ marknote \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/m/marknote-1.6.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/m/marknote-1.6.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "5bd920f9320b6c0c43b0e152228ec5225fa2dd5e74723cf61a43a4a77e9dd1b7"
 
-URI_x86_64_v2_marknote = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/marknote-1.6.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_marknote;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_marknote}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/marknote-1.6.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_marknote;unpack=0"
 SRC_URI[x86_64_v2_marknote.sha256sum] = "000f122c6029873fcc9b175c8e605fb9b64454d528941087134f188f4825a214"
 
-URI_aarch64_marknote = "${EPEL_MIRROR}/aarch64/Packages/m/marknote-1.6.0-1.el10_3.aarch64.rpm;name=aarch64_marknote;unpack=0"
-SRC_URI:append = " ${URI_aarch64_marknote}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/m/marknote-1.6.0-1.el10_3.aarch64.rpm;name=aarch64_marknote;unpack=0"
 SRC_URI[aarch64_marknote.sha256sum] = "ecdee038e89eed48981eaa22c9d85e47ac681b0f45b3bdb2ea5785e94df886d9"
 
 RDEPENDS:marknote = " \

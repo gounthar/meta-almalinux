@@ -5,16 +5,25 @@ inherit dnf-bridge
 PN = "nut"
 PV = "2.8.2.1"
 PR = "0.el10_1.1.git20240703pr2505"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  nut \
  nut-cgi \
  nut-client \
  nut-devel \
  nut-xml \
- "
+"
+PACKAGES:aarch64 = " \
+ nut \
+ nut-cgi \
+ nut-client \
+ nut-devel \
+ nut-xml \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/n/nut-2.8.2.1-0.el10_1.1.git20240703pr2505.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/n/nut-2.8.2.1-0.el10_1.1.git20240703pr2505.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e7d30d7c33ac5383461bd5a6a7f590b1ccdfe5deeed9505953727566c227197d"
 
 ## Requires (x86_64_v2) that were seen as not satisfiable in original repo:
@@ -28,44 +37,34 @@ SRC_URI[src.sha256sum] = "e7d30d7c33ac5383461bd5a6a7f590b1ccdfe5deeed95059537275
 # - nut-xml: nut-client = 2.8.2.1-0.el10_1.1.git20240703pr2505.alma_altarch.1.git20240703pr2505
 # - nut: libupsclient.so.6()(64bit)
 
-URI_x86_64_v2_nut = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nut-2.8.2.1-0.el10_1.1.git20240703pr2505.alma_altarch.1.git20240703pr2505.x86_64_v2.rpm;name=x86_64_v2_nut;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nut}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nut-2.8.2.1-0.el10_1.1.git20240703pr2505.alma_altarch.1.git20240703pr2505.x86_64_v2.rpm;name=x86_64_v2_nut;unpack=0"
 SRC_URI[x86_64_v2_nut.sha256sum] = "fec3e3b18199059c3ae7f62314cec5bfe5954f59a568f76f80a5e90366071afc"
 
-URI_x86_64_v2_nut-cgi = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nut-cgi-2.8.2.1-0.el10_1.1.git20240703pr2505.alma_altarch.1.git20240703pr2505.x86_64_v2.rpm;name=x86_64_v2_nut-cgi;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nut-cgi}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nut-cgi-2.8.2.1-0.el10_1.1.git20240703pr2505.alma_altarch.1.git20240703pr2505.x86_64_v2.rpm;name=x86_64_v2_nut-cgi;unpack=0"
 SRC_URI[x86_64_v2_nut-cgi.sha256sum] = "6c4ced0d3b3aa48eb1bb346af941e32672d4e70a635548b913fe7e4888ef0d6f"
 
-URI_x86_64_v2_nut-client = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nut-client-2.8.2.1-0.el10_1.1.git20240703pr2505.alma_altarch.1.git20240703pr2505.x86_64_v2.rpm;name=x86_64_v2_nut-client;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nut-client}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nut-client-2.8.2.1-0.el10_1.1.git20240703pr2505.alma_altarch.1.git20240703pr2505.x86_64_v2.rpm;name=x86_64_v2_nut-client;unpack=0"
 SRC_URI[x86_64_v2_nut-client.sha256sum] = "53ad3b3fe721c47d687c5a743d67f68e82141ef37b28f0948ebbff524519f3d2"
 
-URI_x86_64_v2_nut-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nut-devel-2.8.2.1-0.el10_1.1.git20240703pr2505.alma_altarch.1.git20240703pr2505.x86_64_v2.rpm;name=x86_64_v2_nut-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nut-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nut-devel-2.8.2.1-0.el10_1.1.git20240703pr2505.alma_altarch.1.git20240703pr2505.x86_64_v2.rpm;name=x86_64_v2_nut-devel;unpack=0"
 SRC_URI[x86_64_v2_nut-devel.sha256sum] = "e65c80d37b925ce96876271159052c612d2013935511bbbc59674e69a21bde68"
 
-URI_x86_64_v2_nut-xml = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nut-xml-2.8.2.1-0.el10_1.1.git20240703pr2505.alma_altarch.1.git20240703pr2505.x86_64_v2.rpm;name=x86_64_v2_nut-xml;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nut-xml}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nut-xml-2.8.2.1-0.el10_1.1.git20240703pr2505.alma_altarch.1.git20240703pr2505.x86_64_v2.rpm;name=x86_64_v2_nut-xml;unpack=0"
 SRC_URI[x86_64_v2_nut-xml.sha256sum] = "3a20b3149d634aefff1e6f1172b765cbd9c0e08b810a69a64b35e74b9d6b78fe"
 
-URI_aarch64_nut = "${EPEL_MIRROR}/aarch64/Packages/n/nut-2.8.2.1-0.el10_1.1.git20240703pr2505.aarch64.rpm;name=aarch64_nut;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nut}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nut-2.8.2.1-0.el10_1.1.git20240703pr2505.aarch64.rpm;name=aarch64_nut;unpack=0"
 SRC_URI[aarch64_nut.sha256sum] = "4bb2142627836f4003fa9ec98e02c8ac4a79e4635becff1aac326f975abebf31"
 
-URI_aarch64_nut-cgi = "${EPEL_MIRROR}/aarch64/Packages/n/nut-cgi-2.8.2.1-0.el10_1.1.git20240703pr2505.aarch64.rpm;name=aarch64_nut-cgi;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nut-cgi}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nut-cgi-2.8.2.1-0.el10_1.1.git20240703pr2505.aarch64.rpm;name=aarch64_nut-cgi;unpack=0"
 SRC_URI[aarch64_nut-cgi.sha256sum] = "178694da406a36bfebe141f8b20130443a7c3469c845f04ab9d54cad27280520"
 
-URI_aarch64_nut-client = "${EPEL_MIRROR}/aarch64/Packages/n/nut-client-2.8.2.1-0.el10_1.1.git20240703pr2505.aarch64.rpm;name=aarch64_nut-client;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nut-client}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nut-client-2.8.2.1-0.el10_1.1.git20240703pr2505.aarch64.rpm;name=aarch64_nut-client;unpack=0"
 SRC_URI[aarch64_nut-client.sha256sum] = "29c20b2d946d7b0d434d5f3425c7c7951c8e55bfca4e11ab3a5afd1c52ef0b5f"
 
-URI_aarch64_nut-devel = "${EPEL_MIRROR}/aarch64/Packages/n/nut-devel-2.8.2.1-0.el10_1.1.git20240703pr2505.aarch64.rpm;name=aarch64_nut-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nut-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nut-devel-2.8.2.1-0.el10_1.1.git20240703pr2505.aarch64.rpm;name=aarch64_nut-devel;unpack=0"
 SRC_URI[aarch64_nut-devel.sha256sum] = "aa5e16d1058258bb7cb172af45e7ba30304592220ef5c947ce918de67b4f8f6a"
 
-URI_aarch64_nut-xml = "${EPEL_MIRROR}/aarch64/Packages/n/nut-xml-2.8.2.1-0.el10_1.1.git20240703pr2505.aarch64.rpm;name=aarch64_nut-xml;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nut-xml}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nut-xml-2.8.2.1-0.el10_1.1.git20240703pr2505.aarch64.rpm;name=aarch64_nut-xml;unpack=0"
 SRC_URI[aarch64_nut-xml.sha256sum] = "5e480602fe7bdbf10c3bdc26a8ae746bfb1168aec378bbd030b0660db1f281b2"
 
 RDEPENDS:nut:x86_64_v2 = " \

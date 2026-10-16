@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-clearscreen"
 PV = "4.0.6"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-clearscreen+default-devel \
  rust-clearscreen-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-clearscreen+default-devel \
+ rust-clearscreen-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-clearscreen-4.0.6-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-clearscreen-4.0.6-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "dc8ed805ae31a05d0905c5e883fba1aef52c1c0eb91fa97732501cd8476cd733"
 
-URI_x86_64_v2_rust-clearscreen+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-clearscreen+default-devel-4.0.6-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-clearscreen+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-clearscreen+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-clearscreen+default-devel-4.0.6-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-clearscreen+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-clearscreen+default-devel.sha256sum] = "1cea7c7d2a7db402973f88a06966d5eebbcdcc820fcadd8e00a88da7b6eaa522"
 
-URI_x86_64_v2_rust-clearscreen-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-clearscreen-devel-4.0.6-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-clearscreen-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-clearscreen-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-clearscreen-devel-4.0.6-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-clearscreen-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-clearscreen-devel.sha256sum] = "ac951f3dff75c541769d73dab4b905f2393d798ac3ac6a95428083e2fd9f44d1"
 
-URI_aarch64_rust-clearscreen+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-clearscreen+default-devel-4.0.6-1.el10_3.noarch.rpm;name=aarch64_rust-clearscreen+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-clearscreen+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-clearscreen+default-devel-4.0.6-1.el10_3.noarch.rpm;name=aarch64_rust-clearscreen+default-devel;unpack=0"
 SRC_URI[aarch64_rust-clearscreen+default-devel.sha256sum] = "a6113b66b6ee0cd31a984c59d8ae1a0543d927ec5e687fd13f1bfd8308d4446b"
 
-URI_aarch64_rust-clearscreen-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-clearscreen-devel-4.0.6-1.el10_3.noarch.rpm;name=aarch64_rust-clearscreen-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-clearscreen-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-clearscreen-devel-4.0.6-1.el10_3.noarch.rpm;name=aarch64_rust-clearscreen-devel;unpack=0"
 SRC_URI[aarch64_rust-clearscreen-devel.sha256sum] = "c4afdb10e3116b27b7e292b78ea47de5caa7cb6d5c231b5d9c24868ba933144c"
 
 RDEPENDS:rust-clearscreen+default-devel = " \

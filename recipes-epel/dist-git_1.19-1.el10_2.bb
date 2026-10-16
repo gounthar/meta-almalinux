@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "dist-git"
 PV = "1.19"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  dist-git \
  dist-git-selinux \
- "
+"
+PACKAGES:aarch64 = " \
+ dist-git \
+ dist-git-selinux \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/d/dist-git-1.19-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/d/dist-git-1.19-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3b5289cd04cd80f21e75dd28952add36c3282b4e663d718750eeb96c2c80373a"
 
-URI_x86_64_v2_dist-git = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/dist-git-1.19-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_dist-git;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_dist-git}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/dist-git-1.19-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_dist-git;unpack=0"
 SRC_URI[x86_64_v2_dist-git.sha256sum] = "dc662aa4f5ec8cb079106280dddb0a4f4c1e135c6f5f7520166a22f001da60e0"
 
-URI_x86_64_v2_dist-git-selinux = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/dist-git-selinux-1.19-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_dist-git-selinux;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_dist-git-selinux}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/dist-git-selinux-1.19-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_dist-git-selinux;unpack=0"
 SRC_URI[x86_64_v2_dist-git-selinux.sha256sum] = "318857bece9e14fc6214d19e8d3824be9d4003ad1b4bfcae840db6d392ae51bb"
 
-URI_aarch64_dist-git = "${EPEL_MIRROR}/aarch64/Packages/d/dist-git-1.19-1.el10_2.noarch.rpm;name=aarch64_dist-git;unpack=0"
-SRC_URI:append = " ${URI_aarch64_dist-git}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/d/dist-git-1.19-1.el10_2.noarch.rpm;name=aarch64_dist-git;unpack=0"
 SRC_URI[aarch64_dist-git.sha256sum] = "3a6d26ef70e7ac72976bc21f25f7033d58f031d359986de2459161774d6ca6bb"
 
-URI_aarch64_dist-git-selinux = "${EPEL_MIRROR}/aarch64/Packages/d/dist-git-selinux-1.19-1.el10_2.noarch.rpm;name=aarch64_dist-git-selinux;unpack=0"
-SRC_URI:append = " ${URI_aarch64_dist-git-selinux}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/d/dist-git-selinux-1.19-1.el10_2.noarch.rpm;name=aarch64_dist-git-selinux;unpack=0"
 SRC_URI[aarch64_dist-git-selinux.sha256sum] = "51e9d22ebd28027c7061e3ee1499582e228f3f6fc002c543f84fc7036e78f729"
 
 RDEPENDS:dist-git = " \

@@ -10,25 +10,26 @@ PACKAGES = " \
  llhttp-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/llhttp-9.1.3-10.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/llhttp-9.1.3-10.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "582e6ac425cf66ddbec3749199bb2b26e673cf5e92a33be6748d3a3d1855dd2b"
 
-URI_x86_64_v2_llhttp = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/llhttp-9.1.3-10.el10.x86_64_v2.rpm;name=x86_64_v2_llhttp;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_llhttp}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/llhttp-9.1.3-10.el10.x86_64_v2.rpm;name=x86_64_v2_llhttp;unpack=0"
 SRC_URI[x86_64_v2_llhttp.sha256sum] = "4008fc78a3c7bdf2fa3161263a65a40ce4c38cca14cf9da93a66087ea7a4ddf9"
 
-URI_x86_64_v2_llhttp-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/llhttp-devel-9.1.3-10.el10.x86_64_v2.rpm;name=x86_64_v2_llhttp-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_llhttp-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/llhttp-devel-9.1.3-10.el10.x86_64_v2.rpm;name=x86_64_v2_llhttp-devel;unpack=0"
 SRC_URI[x86_64_v2_llhttp-devel.sha256sum] = "54492f8c4ede7dcc009ab62b202b060b979ced3731a37796b05e70296719d1e4"
 
-URI_aarch64_llhttp = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/llhttp-9.1.3-10.el10.aarch64.rpm;name=aarch64_llhttp;unpack=0"
-SRC_URI:append = " ${URI_aarch64_llhttp}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/llhttp-9.1.3-10.el10.aarch64.rpm;name=aarch64_llhttp;unpack=0"
 SRC_URI[aarch64_llhttp.sha256sum] = "89a79fc3b766a5fd94b16a71fa6ae93ba2e655c5627a451a3301552fe72141a8"
 
-URI_aarch64_llhttp-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/llhttp-devel-9.1.3-10.el10.aarch64.rpm;name=aarch64_llhttp-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_llhttp-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/llhttp-devel-9.1.3-10.el10.aarch64.rpm;name=aarch64_llhttp-devel;unpack=0"
 SRC_URI[aarch64_llhttp-devel.sha256sum] = "e9bf03fff17eeb56091ff0e00d4749dd27e32bdb66e54965ac1faa8a5aedc02e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/llhttp-9.1.3-10.el10.riscv64.rpm;name=riscv64_llhttp;unpack=0"
+SRC_URI[riscv64_llhttp.sha256sum] = "2fe5c3c76fa1f87be0eb4f7870ff2399b8a629ded1c44b14e1bea2f43c8ab0d3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/llhttp-devel-9.1.3-10.el10.riscv64.rpm;name=riscv64_llhttp-devel;unpack=0"
+SRC_URI[riscv64_llhttp-devel.sha256sum] = "a3aa47f42bd1843e2ff6741782474a476f6734164b9c1160df090380a33b6ffb"
 
 RDEPENDS:llhttp = " \
  glibc \

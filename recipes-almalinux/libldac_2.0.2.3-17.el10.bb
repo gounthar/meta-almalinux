@@ -9,17 +9,17 @@ PACKAGES = " \
  libldac \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libldac-2.0.2.3-17.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libldac-2.0.2.3-17.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c94db0c90282c841eecc31a40502091672f279f01d47c92727e408872129b03d"
 
-URI_x86_64_v2_libldac = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libldac-2.0.2.3-17.el10.x86_64_v2.rpm;name=x86_64_v2_libldac;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libldac}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libldac-2.0.2.3-17.el10.x86_64_v2.rpm;name=x86_64_v2_libldac;unpack=0"
 SRC_URI[x86_64_v2_libldac.sha256sum] = "219662b2291bfec8326b8115a91b542a279e23037b7462aeba0e85b8dc33bf22"
 
-URI_aarch64_libldac = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libldac-2.0.2.3-17.el10.aarch64.rpm;name=aarch64_libldac;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libldac}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libldac-2.0.2.3-17.el10.aarch64.rpm;name=aarch64_libldac;unpack=0"
 SRC_URI[aarch64_libldac.sha256sum] = "0074d8af85357fb290e876b869002cd40c3754b62f90dd2fd413bf443f89bf03"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libldac-2.0.2.3-17.el10.riscv64.rpm;name=riscv64_libldac;unpack=0"
+SRC_URI[riscv64_libldac.sha256sum] = "4e326703c78ba22026a4fe483eb8247dfb04d661f82a608a333f562d40762caa"
 
 RDEPENDS:libldac = " \
  glibc \

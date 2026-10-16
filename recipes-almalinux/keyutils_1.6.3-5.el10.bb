@@ -11,33 +11,35 @@ PACKAGES = " \
  keyutils-libs-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/keyutils-1.6.3-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/keyutils-1.6.3-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f96ebb838cec9d288aa4b9629af73126861a05970c6aea26b5b95ca6a3b78900"
 
-URI_x86_64_v2_keyutils = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/keyutils-1.6.3-5.el10.x86_64_v2.rpm;name=x86_64_v2_keyutils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_keyutils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/keyutils-1.6.3-5.el10.x86_64_v2.rpm;name=x86_64_v2_keyutils;unpack=0"
 SRC_URI[x86_64_v2_keyutils.sha256sum] = "438d1f71ea507db0319d2a22968cc0d243b29e9ec418d9b2452c0e352818fe1c"
 
-URI_x86_64_v2_keyutils-libs = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/keyutils-libs-1.6.3-5.el10.x86_64_v2.rpm;name=x86_64_v2_keyutils-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_keyutils-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/keyutils-libs-1.6.3-5.el10.x86_64_v2.rpm;name=x86_64_v2_keyutils-libs;unpack=0"
 SRC_URI[x86_64_v2_keyutils-libs.sha256sum] = "ee3a85de8a0736af01c12c07fbe1ee43648d179a1faac9675c2269485a468c6a"
 
-URI_x86_64_v2_keyutils-libs-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/keyutils-libs-devel-1.6.3-5.el10.x86_64_v2.rpm;name=x86_64_v2_keyutils-libs-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_keyutils-libs-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/keyutils-libs-devel-1.6.3-5.el10.x86_64_v2.rpm;name=x86_64_v2_keyutils-libs-devel;unpack=0"
 SRC_URI[x86_64_v2_keyutils-libs-devel.sha256sum] = "f4db7ab62f93c22022cb75422e67f45fc6b2d5056dc764314718e41b5fe7debe"
 
-URI_aarch64_keyutils = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/keyutils-1.6.3-5.el10.aarch64.rpm;name=aarch64_keyutils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_keyutils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/keyutils-1.6.3-5.el10.aarch64.rpm;name=aarch64_keyutils;unpack=0"
 SRC_URI[aarch64_keyutils.sha256sum] = "8d52f2ccfe49a385f408deb684a39ad1bb8982f8da36428a804f3e86721fd05a"
 
-URI_aarch64_keyutils-libs = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/keyutils-libs-1.6.3-5.el10.aarch64.rpm;name=aarch64_keyutils-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_keyutils-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/keyutils-libs-1.6.3-5.el10.aarch64.rpm;name=aarch64_keyutils-libs;unpack=0"
 SRC_URI[aarch64_keyutils-libs.sha256sum] = "27960866fcce55e3ff1547e73280cf1403591f18db524630990a01b3b50615c2"
 
-URI_aarch64_keyutils-libs-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/keyutils-libs-devel-1.6.3-5.el10.aarch64.rpm;name=aarch64_keyutils-libs-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_keyutils-libs-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/keyutils-libs-devel-1.6.3-5.el10.aarch64.rpm;name=aarch64_keyutils-libs-devel;unpack=0"
 SRC_URI[aarch64_keyutils-libs-devel.sha256sum] = "041c1fed1f818679bb2dd41f92cfe3d30a8ab7ef8656c9649a9db77c3b87c2c0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/keyutils-1.6.3-5.el10.riscv64.rpm;name=riscv64_keyutils;unpack=0"
+SRC_URI[riscv64_keyutils.sha256sum] = "76191f521542d859e4d64bcfaed5b3dae90f5ba9a505faf396c59c438e62fd9a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/keyutils-libs-1.6.3-5.el10.riscv64.rpm;name=riscv64_keyutils-libs;unpack=0"
+SRC_URI[riscv64_keyutils-libs.sha256sum] = "d9fb11b5664caccf5d11ef27c4cdef0edf2b8ebcc65f3793557e530dde225217"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/keyutils-libs-devel-1.6.3-5.el10.riscv64.rpm;name=riscv64_keyutils-libs-devel;unpack=0"
+SRC_URI[riscv64_keyutils-libs-devel.sha256sum] = "f4eb9bacfe0c31b63593602fd3ac2a9c99965a39be609456f0eb22bd9ca207be"
 
 RDEPENDS:keyutils = " \
  bash \

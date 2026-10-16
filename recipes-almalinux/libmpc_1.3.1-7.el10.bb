@@ -10,25 +10,26 @@ PACKAGES = " \
  libmpc-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libmpc-1.3.1-7.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libmpc-1.3.1-7.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "66a86c91b84ff5c85e1f01f96e9b9d287d680e34baf9fd96a98c4c474d15ded1"
 
-URI_x86_64_v2_libmpc = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libmpc-1.3.1-7.el10.x86_64_v2.rpm;name=x86_64_v2_libmpc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libmpc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libmpc-1.3.1-7.el10.x86_64_v2.rpm;name=x86_64_v2_libmpc;unpack=0"
 SRC_URI[x86_64_v2_libmpc.sha256sum] = "70b3ff7fee3c35bb5fc707d627c01af302fa048172d86252b47281fde2fd5725"
 
-URI_x86_64_v2_libmpc-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libmpc-devel-1.3.1-7.el10.x86_64_v2.rpm;name=x86_64_v2_libmpc-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libmpc-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libmpc-devel-1.3.1-7.el10.x86_64_v2.rpm;name=x86_64_v2_libmpc-devel;unpack=0"
 SRC_URI[x86_64_v2_libmpc-devel.sha256sum] = "2fd38f7a74dbca060d73e40f38bef14eb5300ce3b47a2c5c4ba8ea4e91263b14"
 
-URI_aarch64_libmpc = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libmpc-1.3.1-7.el10.aarch64.rpm;name=aarch64_libmpc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libmpc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libmpc-1.3.1-7.el10.aarch64.rpm;name=aarch64_libmpc;unpack=0"
 SRC_URI[aarch64_libmpc.sha256sum] = "733a04fe8fbcd0d22d8d378a880009d73cdafbf529469abe14aff2ff6d8f1d17"
 
-URI_aarch64_libmpc-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libmpc-devel-1.3.1-7.el10.aarch64.rpm;name=aarch64_libmpc-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libmpc-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libmpc-devel-1.3.1-7.el10.aarch64.rpm;name=aarch64_libmpc-devel;unpack=0"
 SRC_URI[aarch64_libmpc-devel.sha256sum] = "f6b3974b89b3edd111cdfaa5af70c26649070dc7d34c2280459b16eb0a3a5f5a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libmpc-1.3.1-7.el10.riscv64.rpm;name=riscv64_libmpc;unpack=0"
+SRC_URI[riscv64_libmpc.sha256sum] = "ec283fb4d2b5039a8c9b4bda766ba64649a3c3deb48b49db1c69a35b27f454a0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libmpc-devel-1.3.1-7.el10.riscv64.rpm;name=riscv64_libmpc-devel;unpack=0"
+SRC_URI[riscv64_libmpc-devel.sha256sum] = "48f6e9f0bf5cf030850d1b77ca8c65f9fb151a2162c1fa1a6dc7d3694324e2b3"
 
 RDEPENDS:libmpc = " \
  glibc \

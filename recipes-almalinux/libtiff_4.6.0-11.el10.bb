@@ -11,35 +11,38 @@ PACKAGES = " \
  libtiff-tools \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libtiff-4.6.0-11.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libtiff-4.6.0-11.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "44fc028b62dc905010823408cdc06d0f783b486a6ce47b7b1a6fd9a64f546a39"
 
-URI_x86_64_v2_libtiff = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libtiff-4.6.0-11.el10.x86_64_v2.rpm;name=x86_64_v2_libtiff;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libtiff}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libtiff-4.6.0-11.el10.x86_64_v2.rpm;name=x86_64_v2_libtiff;unpack=0"
 SRC_URI[x86_64_v2_libtiff.sha256sum] = "ef82d92e21ccd0d34e87224e71fca85b8bf00a51e9798ab118e3b2460ae87cf9"
-RPROVIDES:libtiff:x86_64_v2 = "virtual/libtiffxx.so.6___64bit_"
+RPROVIDES:libtiff:append:x86_64_v2 = " virtual/libtiffxx.so.6___64bit_"
 
-URI_x86_64_v2_libtiff-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libtiff-devel-4.6.0-11.el10.x86_64_v2.rpm;name=x86_64_v2_libtiff-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libtiff-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libtiff-devel-4.6.0-11.el10.x86_64_v2.rpm;name=x86_64_v2_libtiff-devel;unpack=0"
 SRC_URI[x86_64_v2_libtiff-devel.sha256sum] = "65402f75093cab9786db934617b05bb4480a29287a494585343d46a559d8c4e4"
 
-URI_x86_64_v2_libtiff-tools = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libtiff-tools-4.6.0-11.el10.x86_64_v2.rpm;name=x86_64_v2_libtiff-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libtiff-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libtiff-tools-4.6.0-11.el10.x86_64_v2.rpm;name=x86_64_v2_libtiff-tools;unpack=0"
 SRC_URI[x86_64_v2_libtiff-tools.sha256sum] = "ae274cb93f1c84628feae36519c0013d8865d1aa6e7f364b6709c19321721671"
 
-URI_aarch64_libtiff = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libtiff-4.6.0-11.el10.aarch64.rpm;name=aarch64_libtiff;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libtiff}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libtiff-4.6.0-11.el10.aarch64.rpm;name=aarch64_libtiff;unpack=0"
 SRC_URI[aarch64_libtiff.sha256sum] = "c2296e257dd6a266219c16b03a4cf85390c1a97034be93475b7db4cf6ebd4e20"
-RPROVIDES:libtiff:aarch64 = "virtual/libtiffxx.so.6___64bit_"
+RPROVIDES:libtiff:append:aarch64 = " virtual/libtiffxx.so.6___64bit_"
 
-URI_aarch64_libtiff-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libtiff-devel-4.6.0-11.el10.aarch64.rpm;name=aarch64_libtiff-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libtiff-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libtiff-devel-4.6.0-11.el10.aarch64.rpm;name=aarch64_libtiff-devel;unpack=0"
 SRC_URI[aarch64_libtiff-devel.sha256sum] = "96bab7d02fa3d02de0c2f90b8017950de31c80c441ce3c6834412d1f45a88af8"
 
-URI_aarch64_libtiff-tools = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libtiff-tools-4.6.0-11.el10.aarch64.rpm;name=aarch64_libtiff-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libtiff-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libtiff-tools-4.6.0-11.el10.aarch64.rpm;name=aarch64_libtiff-tools;unpack=0"
 SRC_URI[aarch64_libtiff-tools.sha256sum] = "3b7740bdee829cf1e3d8686206b7b6c51af12587831d1c96ebb944ab814c7cc4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libtiff-4.6.0-11.el10.riscv64.rpm;name=riscv64_libtiff;unpack=0"
+SRC_URI[riscv64_libtiff.sha256sum] = "efdca3b6d6ec7f717daa46865b52eeea90eeb088437201a619a96db018626c3c"
+RPROVIDES:libtiff:append:riscv64 = " virtual/libtiffxx.so.6___64bit_"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libtiff-devel-4.6.0-11.el10.riscv64.rpm;name=riscv64_libtiff-devel;unpack=0"
+SRC_URI[riscv64_libtiff-devel.sha256sum] = "3e779510a56e95e3851689b77958fed0a773866d473d9c9970250075c3f8af55"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libtiff-tools-4.6.0-11.el10.riscv64.rpm;name=riscv64_libtiff-tools;unpack=0"
+SRC_URI[riscv64_libtiff-tools.sha256sum] = "3d03d7ec08691c5212ce321581cce9a55bbdc60ad61fe9adfd801bbedd73202c"
 
 RDEPENDS:libtiff = " \
  glibc \
@@ -65,7 +68,3 @@ RDEPENDS:libtiff-tools = " \
  glibc \
  libtiff \
  "
-
-PROVIDES:append:x86_64_v2 = " rpm/virtual/libtiffxx.so.6___64bit_"
-
-PROVIDES:append:aarch64 = " rpm/virtual/libtiffxx.so.6___64bit_"

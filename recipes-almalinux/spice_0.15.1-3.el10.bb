@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "spice"
 PV = "0.15.1"
 PR = "3.el10"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  spice-server \
- "
+"
+PACKAGES:aarch64 = " \
+ spice-server \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/spice-0.15.1-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/spice-0.15.1-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "acbf0753c59150219defdccc8e917e95b444e3141b020e3da37c8d3210f6623b"
 
-URI_x86_64_v2_spice-server = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/spice-server-0.15.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_spice-server;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_spice-server}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/spice-server-0.15.1-3.el10.x86_64_v2.rpm;name=x86_64_v2_spice-server;unpack=0"
 SRC_URI[x86_64_v2_spice-server.sha256sum] = "d77fe8134215da8a2be115c93bc0f49a83b964b88ce913de2385dcb23924f655"
 
-URI_aarch64_spice-server = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/spice-server-0.15.1-3.el10.aarch64.rpm;name=aarch64_spice-server;unpack=0"
-SRC_URI:append = " ${URI_aarch64_spice-server}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/spice-server-0.15.1-3.el10.aarch64.rpm;name=aarch64_spice-server;unpack=0"
 SRC_URI[aarch64_spice-server.sha256sum] = "6a9126b32557a10c9924280723df51dda0693781b4641175b26b86a2eafde9db"
 
 RDEPENDS:spice-server = " \

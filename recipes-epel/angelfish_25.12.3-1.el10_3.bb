@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "angelfish"
 PV = "25.12.3"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  angelfish \
- "
+"
+PACKAGES:aarch64 = " \
+ angelfish \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/a/angelfish-25.12.3-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/a/angelfish-25.12.3-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c3a95d737afe0a8c0abca062dd170e85ca0fdc45ee028c19a94047af0cf5f342"
 
-URI_x86_64_v2_angelfish = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/angelfish-25.12.3-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_angelfish;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_angelfish}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/angelfish-25.12.3-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_angelfish;unpack=0"
 SRC_URI[x86_64_v2_angelfish.sha256sum] = "32e7550c6875e868b2907c005d68b79b53c6bd6c583cf1047d7b1d9eee94a339"
 
-URI_aarch64_angelfish = "${EPEL_MIRROR}/aarch64/Packages/a/angelfish-25.12.3-1.el10_3.aarch64.rpm;name=aarch64_angelfish;unpack=0"
-SRC_URI:append = " ${URI_aarch64_angelfish}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/a/angelfish-25.12.3-1.el10_3.aarch64.rpm;name=aarch64_angelfish;unpack=0"
 SRC_URI[aarch64_angelfish.sha256sum] = "54b5e527c832317262bb295f097c158b67d4df32639abdff08d09a6cc418c70e"
 
 RDEPENDS:angelfish = " \

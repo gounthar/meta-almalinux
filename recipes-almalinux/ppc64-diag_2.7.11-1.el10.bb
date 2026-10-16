@@ -8,7 +8,6 @@ PR = "1.el10"
 PACKAGES = " \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/ppc64-diag-2.7.11-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/ppc64-diag-2.7.11-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d7bcba3a331da086dc02a54f709bdec481ae09e2f5725bf3b549294af40d17c6"
 

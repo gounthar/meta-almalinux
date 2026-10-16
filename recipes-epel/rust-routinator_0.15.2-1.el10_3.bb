@@ -5,7 +5,7 @@ inherit dnf-bridge
 PN = "rust-routinator"
 PV = "0.15.2"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  routinator \
  rust-routinator+arbitrary-devel \
  rust-routinator+default-devel \
@@ -14,74 +14,70 @@ PACKAGES = " \
  rust-routinator+socks-devel \
  rust-routinator+ui-devel \
  rust-routinator-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ routinator \
+ rust-routinator+arbitrary-devel \
+ rust-routinator+default-devel \
+ rust-routinator+native-tls-devel \
+ rust-routinator+rta-devel \
+ rust-routinator+socks-devel \
+ rust-routinator+ui-devel \
+ rust-routinator-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-routinator-0.15.2-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-routinator-0.15.2-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "141b43aadfbe6fe79b476ce6095cf81b7d3570b4ea51c75291feea2c28edf6dd"
 
-URI_x86_64_v2_routinator = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/routinator-0.15.2-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_routinator;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_routinator}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/routinator-0.15.2-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_routinator;unpack=0"
 SRC_URI[x86_64_v2_routinator.sha256sum] = "f99cef536a8c1e3c3ad79a8f1eeb629e71748dea65ce1b7e6d0c53c5624344bd"
 
-URI_x86_64_v2_rust-routinator+arbitrary-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-routinator+arbitrary-devel-0.15.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-routinator+arbitrary-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-routinator+arbitrary-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-routinator+arbitrary-devel-0.15.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-routinator+arbitrary-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-routinator+arbitrary-devel.sha256sum] = "8eb62fe28b00786c00158bebd67de10f811c265668dfe3a0ca9b0b99d504a2ad"
 
-URI_x86_64_v2_rust-routinator+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-routinator+default-devel-0.15.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-routinator+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-routinator+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-routinator+default-devel-0.15.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-routinator+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-routinator+default-devel.sha256sum] = "aa8c3e1c36edc1355b2483a005f96b9cc34d0d60cdaaabceaddae18bca383e90"
 
-URI_x86_64_v2_rust-routinator+native-tls-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-routinator+native-tls-devel-0.15.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-routinator+native-tls-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-routinator+native-tls-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-routinator+native-tls-devel-0.15.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-routinator+native-tls-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-routinator+native-tls-devel.sha256sum] = "349371bef81e721dbd1c717a66f061ac2cd87ac0a73eb1206bd3fb846da127d6"
 
-URI_x86_64_v2_rust-routinator+rta-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-routinator+rta-devel-0.15.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-routinator+rta-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-routinator+rta-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-routinator+rta-devel-0.15.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-routinator+rta-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-routinator+rta-devel.sha256sum] = "559f6a25d2ae6c36112cef784e050d0c21d368032c5512631a5d5253ac5e5f52"
 
-URI_x86_64_v2_rust-routinator+socks-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-routinator+socks-devel-0.15.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-routinator+socks-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-routinator+socks-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-routinator+socks-devel-0.15.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-routinator+socks-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-routinator+socks-devel.sha256sum] = "370da474e0cc3f672200bc6a5ad771644fa6253c6c8f02deb9970747dd4b9cfc"
 
-URI_x86_64_v2_rust-routinator+ui-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-routinator+ui-devel-0.15.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-routinator+ui-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-routinator+ui-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-routinator+ui-devel-0.15.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-routinator+ui-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-routinator+ui-devel.sha256sum] = "d51795718d129218293b807c8a90ecc5821a926f9aa4eea7f54740d3bc15e33b"
 
-URI_x86_64_v2_rust-routinator-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-routinator-devel-0.15.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-routinator-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-routinator-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-routinator-devel-0.15.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-routinator-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-routinator-devel.sha256sum] = "61658bcca2b0568d7492ded46937f044b530e715603e726844beb6ac5fea49ef"
 
-URI_aarch64_routinator = "${EPEL_MIRROR}/aarch64/Packages/r/routinator-0.15.2-1.el10_3.aarch64.rpm;name=aarch64_routinator;unpack=0"
-SRC_URI:append = " ${URI_aarch64_routinator}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/routinator-0.15.2-1.el10_3.aarch64.rpm;name=aarch64_routinator;unpack=0"
 SRC_URI[aarch64_routinator.sha256sum] = "c2e9575ffba72f83dae51acb7c998a4b9fe1a7d1ed7d610527f17d2324940092"
 
-URI_aarch64_rust-routinator+arbitrary-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-routinator+arbitrary-devel-0.15.2-1.el10_3.noarch.rpm;name=aarch64_rust-routinator+arbitrary-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-routinator+arbitrary-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-routinator+arbitrary-devel-0.15.2-1.el10_3.noarch.rpm;name=aarch64_rust-routinator+arbitrary-devel;unpack=0"
 SRC_URI[aarch64_rust-routinator+arbitrary-devel.sha256sum] = "6ca01746696e84eb59c9ef4ac6abfb2ed35965aa5a3b1a76ce76b7b9782ef836"
 
-URI_aarch64_rust-routinator+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-routinator+default-devel-0.15.2-1.el10_3.noarch.rpm;name=aarch64_rust-routinator+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-routinator+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-routinator+default-devel-0.15.2-1.el10_3.noarch.rpm;name=aarch64_rust-routinator+default-devel;unpack=0"
 SRC_URI[aarch64_rust-routinator+default-devel.sha256sum] = "09bbbf5b09b165e57c5e3f2fe79a2e46652488c1d0d202b3cd9667346a7abd60"
 
-URI_aarch64_rust-routinator+native-tls-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-routinator+native-tls-devel-0.15.2-1.el10_3.noarch.rpm;name=aarch64_rust-routinator+native-tls-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-routinator+native-tls-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-routinator+native-tls-devel-0.15.2-1.el10_3.noarch.rpm;name=aarch64_rust-routinator+native-tls-devel;unpack=0"
 SRC_URI[aarch64_rust-routinator+native-tls-devel.sha256sum] = "1c097e574f58ea3f2d7841110ec876416a14149650e95f509b9a3426ba231eb0"
 
-URI_aarch64_rust-routinator+rta-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-routinator+rta-devel-0.15.2-1.el10_3.noarch.rpm;name=aarch64_rust-routinator+rta-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-routinator+rta-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-routinator+rta-devel-0.15.2-1.el10_3.noarch.rpm;name=aarch64_rust-routinator+rta-devel;unpack=0"
 SRC_URI[aarch64_rust-routinator+rta-devel.sha256sum] = "4adb8003034e21c38c6bc326a60019f21995e7fdf0dd997e2b7f2fee07fbff68"
 
-URI_aarch64_rust-routinator+socks-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-routinator+socks-devel-0.15.2-1.el10_3.noarch.rpm;name=aarch64_rust-routinator+socks-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-routinator+socks-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-routinator+socks-devel-0.15.2-1.el10_3.noarch.rpm;name=aarch64_rust-routinator+socks-devel;unpack=0"
 SRC_URI[aarch64_rust-routinator+socks-devel.sha256sum] = "35df9f69beb166d5558e8a04409a884e87b5d7292e820a90b705bf0d16cef69f"
 
-URI_aarch64_rust-routinator+ui-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-routinator+ui-devel-0.15.2-1.el10_3.noarch.rpm;name=aarch64_rust-routinator+ui-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-routinator+ui-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-routinator+ui-devel-0.15.2-1.el10_3.noarch.rpm;name=aarch64_rust-routinator+ui-devel;unpack=0"
 SRC_URI[aarch64_rust-routinator+ui-devel.sha256sum] = "562f47c69272c9e2ebec87056d0b822c9f09faa9431bc5e6022188142ed68650"
 
-URI_aarch64_rust-routinator-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-routinator-devel-0.15.2-1.el10_3.noarch.rpm;name=aarch64_rust-routinator-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-routinator-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-routinator-devel-0.15.2-1.el10_3.noarch.rpm;name=aarch64_rust-routinator-devel;unpack=0"
 SRC_URI[aarch64_rust-routinator-devel.sha256sum] = "bb50e989707a1ffc313a67bf75d3db9807484908f9553d7088e9062cbf54c276"
 
 RDEPENDS:routinator = " \

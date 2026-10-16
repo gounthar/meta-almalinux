@@ -10,30 +10,40 @@ PACKAGES = " \
  snappy-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/snappy-1.1.10-7.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/snappy-1.1.10-7.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "0bf9429c2823917beddaed0f5c2e9881ee12b89fd54aa10f34182edb7ce099be"
 
-URI_x86_64_v2_snappy = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/snappy-1.1.10-7.el10.x86_64_v2.rpm;name=x86_64_v2_snappy;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_snappy}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/snappy-1.1.10-7.el10.x86_64_v2.rpm;name=x86_64_v2_snappy;unpack=0"
 SRC_URI[x86_64_v2_snappy.sha256sum] = "a88a8903c5d10ad2ae33763362075228af3300ccc6cae9b1da9b5f0c0242250d"
 
-URI_x86_64_v2_snappy-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/snappy-devel-1.1.10-7.el10.x86_64_v2.rpm;name=x86_64_v2_snappy-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_snappy-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/snappy-devel-1.1.10-7.el10.x86_64_v2.rpm;name=x86_64_v2_snappy-devel;unpack=0"
 SRC_URI[x86_64_v2_snappy-devel.sha256sum] = "bb5269ce8af8113c5f6152ae732280332d291b8cf49cd5e3257f9a9ebe8ef4b8"
 
-URI_aarch64_snappy = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/snappy-1.1.10-7.el10.aarch64.rpm;name=aarch64_snappy;unpack=0"
-SRC_URI:append = " ${URI_aarch64_snappy}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/snappy-1.1.10-7.el10.aarch64.rpm;name=aarch64_snappy;unpack=0"
 SRC_URI[aarch64_snappy.sha256sum] = "905f5eceefa786f15050a989a3199d8804afc15df001dc3c262d633899337f86"
 
-URI_aarch64_snappy-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/snappy-devel-1.1.10-7.el10.aarch64.rpm;name=aarch64_snappy-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_snappy-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/snappy-devel-1.1.10-7.el10.aarch64.rpm;name=aarch64_snappy-devel;unpack=0"
 SRC_URI[aarch64_snappy-devel.sha256sum] = "2e4d7664b5c136a8fa84c7cfe52cc95f7ac4ed048d1de2d1dde245ae7e2fd5f9"
 
-RDEPENDS:snappy = " \
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/snappy-1.1.10-7.el10.riscv64.rpm;name=riscv64_snappy;unpack=0"
+SRC_URI[riscv64_snappy.sha256sum] = "3058d8e4bbd443cc0bfabd6b58666fe496f3b8bd22ffaddbcba84d9745538357"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/snappy-devel-1.1.10-7.el10.riscv64.rpm;name=riscv64_snappy-devel;unpack=0"
+SRC_URI[riscv64_snappy-devel.sha256sum] = "b7b6d3087b191cc5729a599c0fcfa96f196a2db18385468a76e745ff34345a24"
+
+RDEPENDS:snappy:x86_64_v2 = " \
  glibc \
  libstdc++ \
- "
+"
+RDEPENDS:snappy:aarch64 = " \
+ glibc \
+ libstdc++ \
+"
+RDEPENDS:snappy:riscv64 = " \
+ glibc \
+ libgcc \
+ libstdc++ \
+"
 RDEPENDS:snappy-devel = " \
  cmake-filesystem \
  pkgconf-pkg-config \

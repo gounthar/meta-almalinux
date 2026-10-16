@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "rlwrap"
 PV = "0.47.1"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rlwrap \
- "
+"
+PACKAGES:aarch64 = " \
+ rlwrap \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rlwrap-0.47.1-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rlwrap-0.47.1-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b5a4975aacafac6711958103983afea47760d9485db37eb2395b398cfffe9bf9"
 
-URI_x86_64_v2_rlwrap = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rlwrap-0.47.1-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rlwrap;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rlwrap}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rlwrap-0.47.1-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rlwrap;unpack=0"
 SRC_URI[x86_64_v2_rlwrap.sha256sum] = "d9edc9f0fb426b20ce18412c2b9eba50d420eecdc61b8881db521b59b9c0e805"
 
-URI_aarch64_rlwrap = "${EPEL_MIRROR}/aarch64/Packages/r/rlwrap-0.47.1-1.el10_2.aarch64.rpm;name=aarch64_rlwrap;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rlwrap}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rlwrap-0.47.1-1.el10_2.aarch64.rpm;name=aarch64_rlwrap;unpack=0"
 SRC_URI[aarch64_rlwrap.sha256sum] = "354fec3f12ac87abb783c51a329e46c3fd26f931e7ba5ad8eb8486427767d9a2"
 
 RDEPENDS:rlwrap = " \

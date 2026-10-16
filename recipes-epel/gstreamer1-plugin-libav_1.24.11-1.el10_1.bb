@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "gstreamer1-plugin-libav"
 PV = "1.24.11"
 PR = "1.el10_1"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  gstreamer1-plugin-libav \
- "
+"
+PACKAGES:aarch64 = " \
+ gstreamer1-plugin-libav \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/g/gstreamer1-plugin-libav-1.24.11-1.el10_1.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/g/gstreamer1-plugin-libav-1.24.11-1.el10_1.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d6cbb4cee4d9c70770fb460cec94b1ac40ecc09d4e74ce63308e4513fca6651e"
 
-URI_x86_64_v2_gstreamer1-plugin-libav = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gstreamer1-plugin-libav-1.24.11-1.el10_1.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_gstreamer1-plugin-libav;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gstreamer1-plugin-libav}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gstreamer1-plugin-libav-1.24.11-1.el10_1.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_gstreamer1-plugin-libav;unpack=0"
 SRC_URI[x86_64_v2_gstreamer1-plugin-libav.sha256sum] = "29125b20995fb04324129d31a75bc734b5d2c17f40abcf194e2b806f6308ef54"
 
-URI_aarch64_gstreamer1-plugin-libav = "${EPEL_MIRROR}/aarch64/Packages/g/gstreamer1-plugin-libav-1.24.11-1.el10_1.aarch64.rpm;name=aarch64_gstreamer1-plugin-libav;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gstreamer1-plugin-libav}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/gstreamer1-plugin-libav-1.24.11-1.el10_1.aarch64.rpm;name=aarch64_gstreamer1-plugin-libav;unpack=0"
 SRC_URI[aarch64_gstreamer1-plugin-libav.sha256sum] = "23be3eb2d42423995d5c3566786e78b5e540ba00a2c21da91f7b0d7b24cff7e1"
 
 RDEPENDS:gstreamer1-plugin-libav = " \

@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "decklink"
 PV = "16.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  decklink-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ decklink-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/d/decklink-16.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/d/decklink-16.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "0b4ba0e4cee73a88522acce6e65a7e978b5a38909fc8522718a651f7809824ba"
 
-URI_x86_64_v2_decklink-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/decklink-devel-16.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_decklink-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_decklink-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/decklink-devel-16.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_decklink-devel;unpack=0"
 SRC_URI[x86_64_v2_decklink-devel.sha256sum] = "24014d6760b1fd42a409b7e28de5a6d645d181b6cb420268e12566e2d01c81ca"
 
-URI_aarch64_decklink-devel = "${EPEL_MIRROR}/aarch64/Packages/d/decklink-devel-16.0-1.el10_3.noarch.rpm;name=aarch64_decklink-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_decklink-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/d/decklink-devel-16.0-1.el10_3.noarch.rpm;name=aarch64_decklink-devel;unpack=0"
 SRC_URI[aarch64_decklink-devel.sha256sum] = "b0781103e15e126fc93fda6149b7cc9bd79ddcfab717f40f1626cf2f40a91cae"
 
 RDEPENDS:decklink-devel = " \

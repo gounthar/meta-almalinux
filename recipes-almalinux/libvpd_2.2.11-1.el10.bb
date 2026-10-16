@@ -8,7 +8,6 @@ PR = "1.el10"
 PACKAGES = " \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libvpd-2.2.11-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libvpd-2.2.11-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "51600a0288f1976b8128a310a6ea6dcc3fb374059c01bf2af83067fea337a6cc"
 

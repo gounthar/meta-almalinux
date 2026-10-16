@@ -17,73 +17,80 @@ PACKAGES = " \
  cups-printerapp \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/cups-2.4.10-18.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/cups-2.4.10-18.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e8d0e875076234f0b85da44abe88d7fe8e681e6207126e00f9ad77261eda6310"
 
-URI_x86_64_v2_cups = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cups-2.4.10-18.el10.x86_64_v2.rpm;name=x86_64_v2_cups;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cups}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cups-2.4.10-18.el10.x86_64_v2.rpm;name=x86_64_v2_cups;unpack=0"
 SRC_URI[x86_64_v2_cups.sha256sum] = "d0959ed540b831129a7237ad3959873f3d9f4ab7e3e8705f41c33d2cfce62553"
 
-URI_x86_64_v2_cups-client = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cups-client-2.4.10-18.el10.x86_64_v2.rpm;name=x86_64_v2_cups-client;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cups-client}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cups-client-2.4.10-18.el10.x86_64_v2.rpm;name=x86_64_v2_cups-client;unpack=0"
 SRC_URI[x86_64_v2_cups-client.sha256sum] = "42ebd30d9bc0530a3488ef7e99b9d4bf41f2711a75c378033ed095026634ce27"
 
-URI_x86_64_v2_cups-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cups-devel-2.4.10-18.el10.x86_64_v2.rpm;name=x86_64_v2_cups-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cups-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cups-devel-2.4.10-18.el10.x86_64_v2.rpm;name=x86_64_v2_cups-devel;unpack=0"
 SRC_URI[x86_64_v2_cups-devel.sha256sum] = "0a8c67ebd782720cfdaa31b762844c11f7bde2de0ebb5cef513aef82eaa62002"
 
-URI_x86_64_v2_cups-filesystem = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cups-filesystem-2.4.10-18.el10.noarch.rpm;name=x86_64_v2_cups-filesystem;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cups-filesystem}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cups-filesystem-2.4.10-18.el10.noarch.rpm;name=x86_64_v2_cups-filesystem;unpack=0"
 SRC_URI[x86_64_v2_cups-filesystem.sha256sum] = "ac1b6b376a58860d4dbb540bbb5101b467b5fe2bd9aa6aab69d97a95759436aa"
 
-URI_x86_64_v2_cups-ipptool = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cups-ipptool-2.4.10-18.el10.x86_64_v2.rpm;name=x86_64_v2_cups-ipptool;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cups-ipptool}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cups-ipptool-2.4.10-18.el10.x86_64_v2.rpm;name=x86_64_v2_cups-ipptool;unpack=0"
 SRC_URI[x86_64_v2_cups-ipptool.sha256sum] = "5521ffe5981bec1735763ec85147cda1be8c217ff58cbbee15b67eb77bb86cd5"
 
-URI_x86_64_v2_cups-libs = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/cups-libs-2.4.10-18.el10.x86_64_v2.rpm;name=x86_64_v2_cups-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cups-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/cups-libs-2.4.10-18.el10.x86_64_v2.rpm;name=x86_64_v2_cups-libs;unpack=0"
 SRC_URI[x86_64_v2_cups-libs.sha256sum] = "ddd2eb3b6a18e2a388ec44993e10dbe1354c06f4e2a831094c3e023aca0fad24"
 
-URI_x86_64_v2_cups-lpd = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cups-lpd-2.4.10-18.el10.x86_64_v2.rpm;name=x86_64_v2_cups-lpd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cups-lpd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cups-lpd-2.4.10-18.el10.x86_64_v2.rpm;name=x86_64_v2_cups-lpd;unpack=0"
 SRC_URI[x86_64_v2_cups-lpd.sha256sum] = "ca8604fb0176410f9d25b61670426fd1659a8b07c6818f18fa8b7de6c4aac28d"
 
-URI_x86_64_v2_cups-printerapp = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cups-printerapp-2.4.10-18.el10.x86_64_v2.rpm;name=x86_64_v2_cups-printerapp;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cups-printerapp}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cups-printerapp-2.4.10-18.el10.x86_64_v2.rpm;name=x86_64_v2_cups-printerapp;unpack=0"
 SRC_URI[x86_64_v2_cups-printerapp.sha256sum] = "20862780d7323d491ff01d6e2c8555d8b214a65c970c0987166666d214b0f696"
 
-URI_aarch64_cups = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cups-2.4.10-18.el10.aarch64.rpm;name=aarch64_cups;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cups}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cups-2.4.10-18.el10.aarch64.rpm;name=aarch64_cups;unpack=0"
 SRC_URI[aarch64_cups.sha256sum] = "448492f4fca0065b8159cc83a8abeedeb13e3bd92e3bde8c246f599397e2aa00"
 
-URI_aarch64_cups-client = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cups-client-2.4.10-18.el10.aarch64.rpm;name=aarch64_cups-client;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cups-client}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cups-client-2.4.10-18.el10.aarch64.rpm;name=aarch64_cups-client;unpack=0"
 SRC_URI[aarch64_cups-client.sha256sum] = "8ab98a1538460968547a6dd939238b8786cbf70132c937758b5b48e812f29ecd"
 
-URI_aarch64_cups-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cups-devel-2.4.10-18.el10.aarch64.rpm;name=aarch64_cups-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cups-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cups-devel-2.4.10-18.el10.aarch64.rpm;name=aarch64_cups-devel;unpack=0"
 SRC_URI[aarch64_cups-devel.sha256sum] = "edaca96aacb01255a2a034bfaeef75a664c72873882a74fc95416f5d2d78821e"
 
-URI_aarch64_cups-filesystem = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cups-filesystem-2.4.10-18.el10.noarch.rpm;name=aarch64_cups-filesystem;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cups-filesystem}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cups-filesystem-2.4.10-18.el10.noarch.rpm;name=aarch64_cups-filesystem;unpack=0"
 SRC_URI[aarch64_cups-filesystem.sha256sum] = "ac1b6b376a58860d4dbb540bbb5101b467b5fe2bd9aa6aab69d97a95759436aa"
 
-URI_aarch64_cups-ipptool = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cups-ipptool-2.4.10-18.el10.aarch64.rpm;name=aarch64_cups-ipptool;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cups-ipptool}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cups-ipptool-2.4.10-18.el10.aarch64.rpm;name=aarch64_cups-ipptool;unpack=0"
 SRC_URI[aarch64_cups-ipptool.sha256sum] = "fdc6f3df86d2cc5da9c3abed908f897ace7dc0d4235ebbb7bd36ba6e5127837c"
 
-URI_aarch64_cups-libs = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/cups-libs-2.4.10-18.el10.aarch64.rpm;name=aarch64_cups-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cups-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/cups-libs-2.4.10-18.el10.aarch64.rpm;name=aarch64_cups-libs;unpack=0"
 SRC_URI[aarch64_cups-libs.sha256sum] = "89653e60fb8f5d8036d1e88a7adaea1b0b5f10b1588971fedb8a7d6a1335762e"
 
-URI_aarch64_cups-lpd = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cups-lpd-2.4.10-18.el10.aarch64.rpm;name=aarch64_cups-lpd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cups-lpd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cups-lpd-2.4.10-18.el10.aarch64.rpm;name=aarch64_cups-lpd;unpack=0"
 SRC_URI[aarch64_cups-lpd.sha256sum] = "9a7e62a5524d5822362bd4469255cc149df276bed3da0957fc4dc1bbd40d6703"
 
-URI_aarch64_cups-printerapp = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cups-printerapp-2.4.10-18.el10.aarch64.rpm;name=aarch64_cups-printerapp;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cups-printerapp}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cups-printerapp-2.4.10-18.el10.aarch64.rpm;name=aarch64_cups-printerapp;unpack=0"
 SRC_URI[aarch64_cups-printerapp.sha256sum] = "2d4eb30b48fb9532e79e30d43bde3e75046bda49ff36ed60abb4a0b3efb71f00"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/cups-2.4.10-18.el10.riscv64.rpm;name=riscv64_cups;unpack=0"
+SRC_URI[riscv64_cups.sha256sum] = "2900133efbd369671302e3d03b0568c344f5337f7ac165ea2cdbca9c93488e27"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/cups-client-2.4.10-18.el10.riscv64.rpm;name=riscv64_cups-client;unpack=0"
+SRC_URI[riscv64_cups-client.sha256sum] = "bd423a4b2765bf87d931843ba0d959416e9d716ab77aa6f597e77d3761d4bf3d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/cups-devel-2.4.10-18.el10.riscv64.rpm;name=riscv64_cups-devel;unpack=0"
+SRC_URI[riscv64_cups-devel.sha256sum] = "4a856fc54b17569f37d32f42f7ec7ad36228d2ce8a3e235650a45f2c2077f387"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/cups-filesystem-2.4.10-18.el10.noarch.rpm;name=riscv64_cups-filesystem;unpack=0"
+SRC_URI[riscv64_cups-filesystem.sha256sum] = "ac1b6b376a58860d4dbb540bbb5101b467b5fe2bd9aa6aab69d97a95759436aa"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/cups-ipptool-2.4.10-18.el10.riscv64.rpm;name=riscv64_cups-ipptool;unpack=0"
+SRC_URI[riscv64_cups-ipptool.sha256sum] = "4aa0ded4489e46bfea531645cca251e0f81ad6ddedc33c3908ba9454b70faeda"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/cups-libs-2.4.10-18.el10.riscv64.rpm;name=riscv64_cups-libs;unpack=0"
+SRC_URI[riscv64_cups-libs.sha256sum] = "e2dd25f806f2a695e18dcbd3d5b37a4dc40d105760b6938453eb04c2ea18bf70"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/cups-lpd-2.4.10-18.el10.riscv64.rpm;name=riscv64_cups-lpd;unpack=0"
+SRC_URI[riscv64_cups-lpd.sha256sum] = "faa45b81fd967e2c0a433b31188be068c5743631588857a24beb6410c0e22067"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/cups-printerapp-2.4.10-18.el10.riscv64.rpm;name=riscv64_cups-printerapp;unpack=0"
+SRC_URI[riscv64_cups-printerapp.sha256sum] = "dc8272c1c5e2edf68c8ef1409229422015e3125baff157253634168f9a0d6e45"
 
 RDEPENDS:cups = " \
  acl \

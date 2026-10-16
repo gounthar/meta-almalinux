@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-prost-derive"
 PV = "0.14.3"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-prost-derive+default-devel \
  rust-prost-derive-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-prost-derive+default-devel \
+ rust-prost-derive-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-prost-derive-0.14.3-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-prost-derive-0.14.3-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "cb0c4d89eb6d51043433f8e50a86eddb968a288937cf597be01d96c0e4d87075"
 
-URI_x86_64_v2_rust-prost-derive+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-prost-derive+default-devel-0.14.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-prost-derive+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-prost-derive+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-prost-derive+default-devel-0.14.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-prost-derive+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-prost-derive+default-devel.sha256sum] = "0f88fd03ee70ce855f64ae4b7832534ff6bb5a722cc94afbac9a064ab9a875f7"
 
-URI_x86_64_v2_rust-prost-derive-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-prost-derive-devel-0.14.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-prost-derive-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-prost-derive-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-prost-derive-devel-0.14.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-prost-derive-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-prost-derive-devel.sha256sum] = "05b4abe25eff0965495496a5554a7bc929c59b68c15ef125b8701adbdd658e61"
 
-URI_aarch64_rust-prost-derive+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-prost-derive+default-devel-0.14.3-1.el10_3.noarch.rpm;name=aarch64_rust-prost-derive+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-prost-derive+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-prost-derive+default-devel-0.14.3-1.el10_3.noarch.rpm;name=aarch64_rust-prost-derive+default-devel;unpack=0"
 SRC_URI[aarch64_rust-prost-derive+default-devel.sha256sum] = "e63b9e8031dc1fe3f926f3d79404d71865056c0b7579072fef3311ff45698295"
 
-URI_aarch64_rust-prost-derive-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-prost-derive-devel-0.14.3-1.el10_3.noarch.rpm;name=aarch64_rust-prost-derive-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-prost-derive-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-prost-derive-devel-0.14.3-1.el10_3.noarch.rpm;name=aarch64_rust-prost-derive-devel;unpack=0"
 SRC_URI[aarch64_rust-prost-derive-devel.sha256sum] = "90a1bb0042c750a9212584849d299ec81e44f1185132e38df1525aa5975eae4d"
 
 RDEPENDS:rust-prost-derive+default-devel = " \

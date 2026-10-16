@@ -9,17 +9,17 @@ PACKAGES = " \
  podman-sequoia \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/rust-podman-sequoia-0.4.0~pqc.3-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/rust-podman-sequoia-0.4.0~pqc.3-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "286a062749c215c9523e06db7d92bcbdc559c3ec7e21aecce6c5ba08fa5cdafa"
 
-URI_x86_64_v2_podman-sequoia = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/podman-sequoia-0.4.0~pqc.3-1.el10.x86_64_v2.rpm;name=x86_64_v2_podman-sequoia;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_podman-sequoia}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/podman-sequoia-0.4.0~pqc.3-1.el10.x86_64_v2.rpm;name=x86_64_v2_podman-sequoia;unpack=0"
 SRC_URI[x86_64_v2_podman-sequoia.sha256sum] = "d8ef218644bf4b5baf8eb3b8b368740065d4a7964af6b3cee700644acd6ad95a"
 
-URI_aarch64_podman-sequoia = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/podman-sequoia-0.4.0~pqc.3-1.el10.aarch64.rpm;name=aarch64_podman-sequoia;unpack=0"
-SRC_URI:append = " ${URI_aarch64_podman-sequoia}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/podman-sequoia-0.4.0~pqc.3-1.el10.aarch64.rpm;name=aarch64_podman-sequoia;unpack=0"
 SRC_URI[aarch64_podman-sequoia.sha256sum] = "67a6dba6a4cbf5cd2263d887cc3427fa5df910d25bd38e8fb63a13ae1b287646"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/podman-sequoia-0.4.0~pqc.3-1.el10.riscv64.rpm;name=riscv64_podman-sequoia;unpack=0"
+SRC_URI[riscv64_podman-sequoia.sha256sum] = "2d5376c6b02279468c57c1beb005f1738f31323ed2cedd6e131d488c4f4e1e6e"
 
 RDEPENDS:podman-sequoia = " \
  glibc \

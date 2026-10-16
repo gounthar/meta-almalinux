@@ -10,25 +10,26 @@ PACKAGES = " \
  iowatcher \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/blktrace-1.3.0-13.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/blktrace-1.3.0-13.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "4e69fe7af6793f1edf1e51e122246ae9eaf42a006bea49faddcbfbb7d7d3e01e"
 
-URI_x86_64_v2_blktrace = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/blktrace-1.3.0-13.el10.x86_64_v2.rpm;name=x86_64_v2_blktrace;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_blktrace}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/blktrace-1.3.0-13.el10.x86_64_v2.rpm;name=x86_64_v2_blktrace;unpack=0"
 SRC_URI[x86_64_v2_blktrace.sha256sum] = "34ec28dbc403db1bae67e82b048f601d92c51f8c881e64424128f4b93d481ee2"
 
-URI_x86_64_v2_iowatcher = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/iowatcher-1.3.0-13.el10.x86_64_v2.rpm;name=x86_64_v2_iowatcher;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_iowatcher}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/iowatcher-1.3.0-13.el10.x86_64_v2.rpm;name=x86_64_v2_iowatcher;unpack=0"
 SRC_URI[x86_64_v2_iowatcher.sha256sum] = "61367ec6a782131573371c0dee08dca9d68b64c874c04d1804cdbeea03e86cb8"
 
-URI_aarch64_blktrace = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/blktrace-1.3.0-13.el10.aarch64.rpm;name=aarch64_blktrace;unpack=0"
-SRC_URI:append = " ${URI_aarch64_blktrace}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/blktrace-1.3.0-13.el10.aarch64.rpm;name=aarch64_blktrace;unpack=0"
 SRC_URI[aarch64_blktrace.sha256sum] = "077ae3a1afe483d68b89993b6df534ac1696e4c3bfd66fec1ec4f9023a8aec90"
 
-URI_aarch64_iowatcher = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/iowatcher-1.3.0-13.el10.aarch64.rpm;name=aarch64_iowatcher;unpack=0"
-SRC_URI:append = " ${URI_aarch64_iowatcher}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/iowatcher-1.3.0-13.el10.aarch64.rpm;name=aarch64_iowatcher;unpack=0"
 SRC_URI[aarch64_iowatcher.sha256sum] = "b847283b20c152404ba22956538f3882681976c32b85eeaca35bbed6dae2e3b2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/blktrace-1.3.0-13.el10.riscv64.rpm;name=riscv64_blktrace;unpack=0"
+SRC_URI[riscv64_blktrace.sha256sum] = "990cf66f031dc528cfdf1d82fb4a357424036780418d0f9c8ef6cfa65e02a24c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/iowatcher-1.3.0-13.el10.riscv64.rpm;name=riscv64_iowatcher;unpack=0"
+SRC_URI[riscv64_iowatcher.sha256sum] = "e2b42d6298cba0af7a18cd4977f0d16964f87fbb7b90d9af3ff067b1831dfa0e"
 
 RDEPENDS:blktrace = " \
  bash \

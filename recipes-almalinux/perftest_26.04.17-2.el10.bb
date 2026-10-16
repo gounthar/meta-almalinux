@@ -9,17 +9,17 @@ PACKAGES = " \
  perftest \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/perftest-26.04.17-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/perftest-26.04.17-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "888b5bf251be7abe624d7efd5c092ee961945697fa2844f4fbdfe011fe760907"
 
-URI_x86_64_v2_perftest = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/perftest-26.04.17-2.el10.x86_64_v2.rpm;name=x86_64_v2_perftest;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perftest}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/perftest-26.04.17-2.el10.x86_64_v2.rpm;name=x86_64_v2_perftest;unpack=0"
 SRC_URI[x86_64_v2_perftest.sha256sum] = "730e3ecb395315661a7ad1abbc2ac8d1b838a9a1e05f44b417cbb93e0e4fb618"
 
-URI_aarch64_perftest = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/perftest-26.04.17-2.el10.aarch64.rpm;name=aarch64_perftest;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perftest}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/perftest-26.04.17-2.el10.aarch64.rpm;name=aarch64_perftest;unpack=0"
 SRC_URI[aarch64_perftest.sha256sum] = "10dc14aebda1cc6a3d3248f06f3d7415368069332ebadba5046207c8ca813e0a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/perftest-26.04.17-2.el10.riscv64.rpm;name=riscv64_perftest;unpack=0"
+SRC_URI[riscv64_perftest.sha256sum] = "bae34577a633336f7cf903c7e3a1c4ae5058902707fabdeaf3864574c7d49223"
 
 RDEPENDS:perftest = " \
  glibc \

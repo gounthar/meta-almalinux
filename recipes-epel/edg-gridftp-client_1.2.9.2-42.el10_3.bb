@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "edg-gridftp-client"
 PV = "1.2.9.2"
 PR = "42.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  edg-gridftp-client \
- "
+"
+PACKAGES:aarch64 = " \
+ edg-gridftp-client \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/e/edg-gridftp-client-1.2.9.2-42.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/e/edg-gridftp-client-1.2.9.2-42.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7fbd399aed5dcc36747d57e7a92e09f0f488fb332910891554ed33ce747acdb0"
 
-URI_x86_64_v2_edg-gridftp-client = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/edg-gridftp-client-1.2.9.2-42.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_edg-gridftp-client;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_edg-gridftp-client}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/edg-gridftp-client-1.2.9.2-42.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_edg-gridftp-client;unpack=0"
 SRC_URI[x86_64_v2_edg-gridftp-client.sha256sum] = "bce206dc1708fbc73ebe826593e4f77804badb4d7efebb0335e936d246813be4"
 
-URI_aarch64_edg-gridftp-client = "${EPEL_MIRROR}/aarch64/Packages/e/edg-gridftp-client-1.2.9.2-42.el10_3.aarch64.rpm;name=aarch64_edg-gridftp-client;unpack=0"
-SRC_URI:append = " ${URI_aarch64_edg-gridftp-client}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/e/edg-gridftp-client-1.2.9.2-42.el10_3.aarch64.rpm;name=aarch64_edg-gridftp-client;unpack=0"
 SRC_URI[aarch64_edg-gridftp-client.sha256sum] = "e724e705e3f6d6693fa3df216c10129bb45e0de219e1d9c9de86d517af9998cc"
 
 RDEPENDS:edg-gridftp-client = " \

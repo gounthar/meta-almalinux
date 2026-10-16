@@ -10,25 +10,26 @@ PACKAGES = " \
  libnfnetlink-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libnfnetlink-1.0.2-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libnfnetlink-1.0.2-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "30bfdada4b0b7e669f05f83167456f18dc70024e18d448daa5256e4eaeca9d5a"
 
-URI_x86_64_v2_libnfnetlink = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libnfnetlink-1.0.2-3.el10.x86_64_v2.rpm;name=x86_64_v2_libnfnetlink;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libnfnetlink}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libnfnetlink-1.0.2-3.el10.x86_64_v2.rpm;name=x86_64_v2_libnfnetlink;unpack=0"
 SRC_URI[x86_64_v2_libnfnetlink.sha256sum] = "1ba976a217dd2d39cea6f2cede9cbd4a56fde0504c5297c6faafb4157447d4bf"
 
-URI_x86_64_v2_libnfnetlink-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libnfnetlink-devel-1.0.2-3.el10.x86_64_v2.rpm;name=x86_64_v2_libnfnetlink-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libnfnetlink-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libnfnetlink-devel-1.0.2-3.el10.x86_64_v2.rpm;name=x86_64_v2_libnfnetlink-devel;unpack=0"
 SRC_URI[x86_64_v2_libnfnetlink-devel.sha256sum] = "2d0fe5af006586c29279b841169a04c6775940fb32ddd68126225e7e26433b97"
 
-URI_aarch64_libnfnetlink = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libnfnetlink-1.0.2-3.el10.aarch64.rpm;name=aarch64_libnfnetlink;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libnfnetlink}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libnfnetlink-1.0.2-3.el10.aarch64.rpm;name=aarch64_libnfnetlink;unpack=0"
 SRC_URI[aarch64_libnfnetlink.sha256sum] = "a5e9e7b70bc0fd506a25aa77e9b3c2404acbbc2bf389e9a562d40b2811608a9d"
 
-URI_aarch64_libnfnetlink-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libnfnetlink-devel-1.0.2-3.el10.aarch64.rpm;name=aarch64_libnfnetlink-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libnfnetlink-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libnfnetlink-devel-1.0.2-3.el10.aarch64.rpm;name=aarch64_libnfnetlink-devel;unpack=0"
 SRC_URI[aarch64_libnfnetlink-devel.sha256sum] = "8243ae014415e1e12a0699ba58f344ddcfcdab49b30761509589d42c9cf82a8f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libnfnetlink-1.0.2-3.el10.riscv64.rpm;name=riscv64_libnfnetlink;unpack=0"
+SRC_URI[riscv64_libnfnetlink.sha256sum] = "63324064fbff1f5dd09fdf79fc87e04bdc60970eb2d0422f09d8dfa272a2b27c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libnfnetlink-devel-1.0.2-3.el10.riscv64.rpm;name=riscv64_libnfnetlink-devel;unpack=0"
+SRC_URI[riscv64_libnfnetlink-devel.sha256sum] = "d4b9fb04e4732e114893d8a0d4773b8bbc4fc2c7a56b372e147f8b8a39e96851"
 
 RDEPENDS:libnfnetlink = " \
  glibc \

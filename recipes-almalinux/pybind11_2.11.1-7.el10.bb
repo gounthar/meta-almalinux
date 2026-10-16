@@ -10,25 +10,26 @@ PACKAGES = " \
  python3-pybind11 \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/pybind11-2.11.1-7.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/pybind11-2.11.1-7.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b45eaf1ffc30dfa9f1c4f0fb0f9c223ec1d3dab8db17f9c03fa5461561619c01"
 
-URI_x86_64_v2_pybind11-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/pybind11-devel-2.11.1-7.el10.x86_64_v2.rpm;name=x86_64_v2_pybind11-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pybind11-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/pybind11-devel-2.11.1-7.el10.x86_64_v2.rpm;name=x86_64_v2_pybind11-devel;unpack=0"
 SRC_URI[x86_64_v2_pybind11-devel.sha256sum] = "c0504881cffd795d653b4a85c4f533c309e3a2a0265533773499724ff08bfdd6"
 
-URI_x86_64_v2_python3-pybind11 = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3-pybind11-2.11.1-7.el10.x86_64_v2.rpm;name=x86_64_v2_python3-pybind11;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-pybind11}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3-pybind11-2.11.1-7.el10.x86_64_v2.rpm;name=x86_64_v2_python3-pybind11;unpack=0"
 SRC_URI[x86_64_v2_python3-pybind11.sha256sum] = "4984fc02f2d972f31f0b06ef6da81cf7763ba7fa54660bc323f2d4ae650bdb74"
 
-URI_aarch64_pybind11-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/pybind11-devel-2.11.1-7.el10.aarch64.rpm;name=aarch64_pybind11-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pybind11-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/pybind11-devel-2.11.1-7.el10.aarch64.rpm;name=aarch64_pybind11-devel;unpack=0"
 SRC_URI[aarch64_pybind11-devel.sha256sum] = "5209013fc95a00114bf97f54363eb988ec62e7f0b549808fda057f3457f9e134"
 
-URI_aarch64_python3-pybind11 = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3-pybind11-2.11.1-7.el10.aarch64.rpm;name=aarch64_python3-pybind11;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-pybind11}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3-pybind11-2.11.1-7.el10.aarch64.rpm;name=aarch64_python3-pybind11;unpack=0"
 SRC_URI[aarch64_python3-pybind11.sha256sum] = "eb5f93f888f1f21760283b230ccbcce8fd1ddb027ed84818b6db5139c9fe91ff"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/pybind11-devel-2.11.1-7.el10.riscv64.rpm;name=riscv64_pybind11-devel;unpack=0"
+SRC_URI[riscv64_pybind11-devel.sha256sum] = "ed09b8bcd92311fc2713ef04ad045fcc02233affe8089296455598637de5a4ac"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/python3-pybind11-2.11.1-7.el10.riscv64.rpm;name=riscv64_python3-pybind11;unpack=0"
+SRC_URI[riscv64_python3-pybind11.sha256sum] = "4d565d361bc1ea4909431c80d40b85f349dce101f1f82f95f1cb9d8b95356a37"
 
 RDEPENDS:pybind11-devel = " \
  cmake \

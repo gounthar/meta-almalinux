@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-Module-CPANTS-Analyse"
 PV = "1.03"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-Module-CPANTS-Analyse \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-Module-CPANTS-Analyse \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-Module-CPANTS-Analyse-1.03-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-Module-CPANTS-Analyse-1.03-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "4e0f89ca5d4a2eb88ae24093ee1f3a709f41fe04bd17f2724b3da3ac7bf2891c"
 
-URI_x86_64_v2_perl-Module-CPANTS-Analyse = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Module-CPANTS-Analyse-1.03-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Module-CPANTS-Analyse;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Module-CPANTS-Analyse}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Module-CPANTS-Analyse-1.03-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Module-CPANTS-Analyse;unpack=0"
 SRC_URI[x86_64_v2_perl-Module-CPANTS-Analyse.sha256sum] = "44c9a2dd0fcd696e45d075dc6d559366049ec3354f7dec2eab69374253477d67"
 
-URI_aarch64_perl-Module-CPANTS-Analyse = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Module-CPANTS-Analyse-1.03-1.el10_3.noarch.rpm;name=aarch64_perl-Module-CPANTS-Analyse;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Module-CPANTS-Analyse}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Module-CPANTS-Analyse-1.03-1.el10_3.noarch.rpm;name=aarch64_perl-Module-CPANTS-Analyse;unpack=0"
 SRC_URI[aarch64_perl-Module-CPANTS-Analyse.sha256sum] = "959e571360223f100c26341754001cfb9b933ac40a40deadc9ddcd64871ed36d"
 
 RDEPENDS:perl-Module-CPANTS-Analyse = " \

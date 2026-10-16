@@ -17,73 +17,80 @@ PACKAGES = " \
  python3-net-snmp \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/net-snmp-5.9.4-20.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/net-snmp-5.9.4-20.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "affac3fbb0479ae5d373f564f72871c2abd7f12666fc52bcf6e24cd7f1050098"
 
-URI_x86_64_v2_net-snmp = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/net-snmp-5.9.4-20.el10.x86_64_v2.rpm;name=x86_64_v2_net-snmp;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_net-snmp}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/net-snmp-5.9.4-20.el10.x86_64_v2.rpm;name=x86_64_v2_net-snmp;unpack=0"
 SRC_URI[x86_64_v2_net-snmp.sha256sum] = "8afe6abf0273fcdae3bd8f9a655aff6929aec7ef637adae08dedec79a43b7714"
 
-URI_x86_64_v2_net-snmp-agent-libs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/net-snmp-agent-libs-5.9.4-20.el10.x86_64_v2.rpm;name=x86_64_v2_net-snmp-agent-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_net-snmp-agent-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/net-snmp-agent-libs-5.9.4-20.el10.x86_64_v2.rpm;name=x86_64_v2_net-snmp-agent-libs;unpack=0"
 SRC_URI[x86_64_v2_net-snmp-agent-libs.sha256sum] = "89dcdc115c148a2eb56a156673151561b15b1824f8d6e4b683720c6cf296983d"
 
-URI_x86_64_v2_net-snmp-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/net-snmp-devel-5.9.4-20.el10.x86_64_v2.rpm;name=x86_64_v2_net-snmp-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_net-snmp-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/net-snmp-devel-5.9.4-20.el10.x86_64_v2.rpm;name=x86_64_v2_net-snmp-devel;unpack=0"
 SRC_URI[x86_64_v2_net-snmp-devel.sha256sum] = "164c386d54e21f6cd4d21560e10cd19b510d6d5f7e6439f991f13a7e03a042a0"
 
-URI_x86_64_v2_net-snmp-libs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/net-snmp-libs-5.9.4-20.el10.x86_64_v2.rpm;name=x86_64_v2_net-snmp-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_net-snmp-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/net-snmp-libs-5.9.4-20.el10.x86_64_v2.rpm;name=x86_64_v2_net-snmp-libs;unpack=0"
 SRC_URI[x86_64_v2_net-snmp-libs.sha256sum] = "65678e8ce27778b49708ecacd2b3494579650b3bf836edab7f078e50eb8110cb"
 
-URI_x86_64_v2_net-snmp-perl = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/net-snmp-perl-5.9.4-20.el10.x86_64_v2.rpm;name=x86_64_v2_net-snmp-perl;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_net-snmp-perl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/net-snmp-perl-5.9.4-20.el10.x86_64_v2.rpm;name=x86_64_v2_net-snmp-perl;unpack=0"
 SRC_URI[x86_64_v2_net-snmp-perl.sha256sum] = "3a4492de65853377611f139570316bfeae110e8fd114648f8f7ad8e542997bef"
 
-URI_x86_64_v2_net-snmp-perl-module = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/net-snmp-perl-module-5.9.4-20.el10.x86_64_v2.rpm;name=x86_64_v2_net-snmp-perl-module;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_net-snmp-perl-module}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/net-snmp-perl-module-5.9.4-20.el10.x86_64_v2.rpm;name=x86_64_v2_net-snmp-perl-module;unpack=0"
 SRC_URI[x86_64_v2_net-snmp-perl-module.sha256sum] = "da436e0bc701cc0dc741ffe0b8a605544df0d587ed6a43faddd9b50fb2ad198b"
 
-URI_x86_64_v2_net-snmp-utils = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/net-snmp-utils-5.9.4-20.el10.x86_64_v2.rpm;name=x86_64_v2_net-snmp-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_net-snmp-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/net-snmp-utils-5.9.4-20.el10.x86_64_v2.rpm;name=x86_64_v2_net-snmp-utils;unpack=0"
 SRC_URI[x86_64_v2_net-snmp-utils.sha256sum] = "a0c705f4f45e332ddedb296c682608a1118cbce09794b4ce57f6b8ba6c322e28"
 
-URI_x86_64_v2_python3-net-snmp = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-net-snmp-5.9.4-20.el10.x86_64_v2.rpm;name=x86_64_v2_python3-net-snmp;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-net-snmp}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-net-snmp-5.9.4-20.el10.x86_64_v2.rpm;name=x86_64_v2_python3-net-snmp;unpack=0"
 SRC_URI[x86_64_v2_python3-net-snmp.sha256sum] = "b695c24148382682b90dcb4c07e67d10517ea671492358fb7567a14ce7b7fe39"
 
-URI_aarch64_net-snmp = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/net-snmp-5.9.4-20.el10.aarch64.rpm;name=aarch64_net-snmp;unpack=0"
-SRC_URI:append = " ${URI_aarch64_net-snmp}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/net-snmp-5.9.4-20.el10.aarch64.rpm;name=aarch64_net-snmp;unpack=0"
 SRC_URI[aarch64_net-snmp.sha256sum] = "d9b8ff2acce1cf150a7f3b4312b701c4d9ce5be082678b265ad4a7f2cf6da630"
 
-URI_aarch64_net-snmp-agent-libs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/net-snmp-agent-libs-5.9.4-20.el10.aarch64.rpm;name=aarch64_net-snmp-agent-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_net-snmp-agent-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/net-snmp-agent-libs-5.9.4-20.el10.aarch64.rpm;name=aarch64_net-snmp-agent-libs;unpack=0"
 SRC_URI[aarch64_net-snmp-agent-libs.sha256sum] = "ea41269c2689431832bfde94060ed6fb84891929aed91829401c4ea5e539668f"
 
-URI_aarch64_net-snmp-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/net-snmp-devel-5.9.4-20.el10.aarch64.rpm;name=aarch64_net-snmp-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_net-snmp-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/net-snmp-devel-5.9.4-20.el10.aarch64.rpm;name=aarch64_net-snmp-devel;unpack=0"
 SRC_URI[aarch64_net-snmp-devel.sha256sum] = "6c7b808401a298339314bb2728f9023a288789bd5416ef1d5883c937b9fdb307"
 
-URI_aarch64_net-snmp-libs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/net-snmp-libs-5.9.4-20.el10.aarch64.rpm;name=aarch64_net-snmp-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_net-snmp-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/net-snmp-libs-5.9.4-20.el10.aarch64.rpm;name=aarch64_net-snmp-libs;unpack=0"
 SRC_URI[aarch64_net-snmp-libs.sha256sum] = "72a3a4ec93f639e0f644aff978af31107124ce34d8663dc2b182b5cd6e9070f5"
 
-URI_aarch64_net-snmp-perl = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/net-snmp-perl-5.9.4-20.el10.aarch64.rpm;name=aarch64_net-snmp-perl;unpack=0"
-SRC_URI:append = " ${URI_aarch64_net-snmp-perl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/net-snmp-perl-5.9.4-20.el10.aarch64.rpm;name=aarch64_net-snmp-perl;unpack=0"
 SRC_URI[aarch64_net-snmp-perl.sha256sum] = "8e0ad58be554b9ec7e02ab37c7db89c59eb5477dc92a3bdfd968b374fe415e78"
 
-URI_aarch64_net-snmp-perl-module = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/net-snmp-perl-module-5.9.4-20.el10.aarch64.rpm;name=aarch64_net-snmp-perl-module;unpack=0"
-SRC_URI:append = " ${URI_aarch64_net-snmp-perl-module}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/net-snmp-perl-module-5.9.4-20.el10.aarch64.rpm;name=aarch64_net-snmp-perl-module;unpack=0"
 SRC_URI[aarch64_net-snmp-perl-module.sha256sum] = "c8b557252b9f30aae7b45c3e06b36bbc6d9eb2553d2284aae21dbe03e2f1db30"
 
-URI_aarch64_net-snmp-utils = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/net-snmp-utils-5.9.4-20.el10.aarch64.rpm;name=aarch64_net-snmp-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_net-snmp-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/net-snmp-utils-5.9.4-20.el10.aarch64.rpm;name=aarch64_net-snmp-utils;unpack=0"
 SRC_URI[aarch64_net-snmp-utils.sha256sum] = "38b1db607ecba7f51ddcdbed74cf86452e458ea622d4a553200dbde1832cee4e"
 
-URI_aarch64_python3-net-snmp = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-net-snmp-5.9.4-20.el10.aarch64.rpm;name=aarch64_python3-net-snmp;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-net-snmp}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-net-snmp-5.9.4-20.el10.aarch64.rpm;name=aarch64_python3-net-snmp;unpack=0"
 SRC_URI[aarch64_python3-net-snmp.sha256sum] = "023d4262bbe4df00179e09f60abe852a2fa824776b47f0907e551d225fad73fd"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/net-snmp-5.9.4-20.el10.riscv64.rpm;name=riscv64_net-snmp;unpack=0"
+SRC_URI[riscv64_net-snmp.sha256sum] = "c53172652d91a94787eafd37c8be4023c251bb7338f9d35cd3dc5364ae439962"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/net-snmp-agent-libs-5.9.4-20.el10.riscv64.rpm;name=riscv64_net-snmp-agent-libs;unpack=0"
+SRC_URI[riscv64_net-snmp-agent-libs.sha256sum] = "5af5323b98e6aa3d04fceaa4c70aac3675cca68bb953cd4864535cc9e0a7abca"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/net-snmp-devel-5.9.4-20.el10.riscv64.rpm;name=riscv64_net-snmp-devel;unpack=0"
+SRC_URI[riscv64_net-snmp-devel.sha256sum] = "3af5a602f10e27b17fd0130c98e38c51c1be8d4cf033786c99e6cd565d78e92f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/net-snmp-libs-5.9.4-20.el10.riscv64.rpm;name=riscv64_net-snmp-libs;unpack=0"
+SRC_URI[riscv64_net-snmp-libs.sha256sum] = "42cc54fe36e8d5631ae4eed8b989bfcfc7eb6be65b373a296dd60376c870ecff"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/net-snmp-perl-5.9.4-20.el10.riscv64.rpm;name=riscv64_net-snmp-perl;unpack=0"
+SRC_URI[riscv64_net-snmp-perl.sha256sum] = "b0081f12f960057e74af01f1b8a9ca9d527fac75cc1693244a991a36e1192651"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/net-snmp-perl-module-5.9.4-20.el10.riscv64.rpm;name=riscv64_net-snmp-perl-module;unpack=0"
+SRC_URI[riscv64_net-snmp-perl-module.sha256sum] = "e64c367a2312d54268d97a190385e085cf3e8f49ee37b443aaf303cdbf5871b6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/net-snmp-utils-5.9.4-20.el10.riscv64.rpm;name=riscv64_net-snmp-utils;unpack=0"
+SRC_URI[riscv64_net-snmp-utils.sha256sum] = "b7bff72808bf0e032eccfb5bf087d9e624b58c22d30465b04735f6dfa2c1f3f7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-net-snmp-5.9.4-20.el10.riscv64.rpm;name=riscv64_python3-net-snmp;unpack=0"
+SRC_URI[riscv64_python3-net-snmp.sha256sum] = "03b2a817f65aedd627806f0983d3fcbd2ae8ca9eeb857f2245d067f3c85dfa55"
 
 RDEPENDS:net-snmp = " \
  bash \

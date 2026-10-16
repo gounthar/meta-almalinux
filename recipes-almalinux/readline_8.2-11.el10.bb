@@ -10,25 +10,26 @@ PACKAGES = " \
  readline-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/readline-8.2-11.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/readline-8.2-11.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c5f45f935633181b1f42be16e2381622ae4298d1fbe9524bc4ce93ad13238692"
 
-URI_x86_64_v2_readline = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/readline-8.2-11.el10.x86_64_v2.rpm;name=x86_64_v2_readline;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_readline}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/readline-8.2-11.el10.x86_64_v2.rpm;name=x86_64_v2_readline;unpack=0"
 SRC_URI[x86_64_v2_readline.sha256sum] = "2f1613b41d576a6177696c3909a193a833fddb70d374ff21d6cf95d3c4ef9c5e"
 
-URI_x86_64_v2_readline-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/readline-devel-8.2-11.el10.x86_64_v2.rpm;name=x86_64_v2_readline-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_readline-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/readline-devel-8.2-11.el10.x86_64_v2.rpm;name=x86_64_v2_readline-devel;unpack=0"
 SRC_URI[x86_64_v2_readline-devel.sha256sum] = "708af3720e998c0ff01dceecfd742770e8825cc3b13e13710830f06937e56537"
 
-URI_aarch64_readline = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/readline-8.2-11.el10.aarch64.rpm;name=aarch64_readline;unpack=0"
-SRC_URI:append = " ${URI_aarch64_readline}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/readline-8.2-11.el10.aarch64.rpm;name=aarch64_readline;unpack=0"
 SRC_URI[aarch64_readline.sha256sum] = "3a0e19ecd07c1cf9269a7dabb57c6c6426172112d78e0f7228cead17690cb716"
 
-URI_aarch64_readline-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/readline-devel-8.2-11.el10.aarch64.rpm;name=aarch64_readline-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_readline-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/readline-devel-8.2-11.el10.aarch64.rpm;name=aarch64_readline-devel;unpack=0"
 SRC_URI[aarch64_readline-devel.sha256sum] = "a3c0e95d6cd6446a97e9c1ae48467271668fb879e99121882df1309ae59e9a10"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/readline-8.2-11.el10.riscv64.rpm;name=riscv64_readline;unpack=0"
+SRC_URI[riscv64_readline.sha256sum] = "ff3c9ad0298a75ce106c77c69b8b670bb008865fe76450181eece3c28f995ef0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/readline-devel-8.2-11.el10.riscv64.rpm;name=riscv64_readline-devel;unpack=0"
+SRC_URI[riscv64_readline-devel.sha256sum] = "a22260623f658b68f50f73b31255d938cbe877e2949e79cc8a98ecb1ba9a7de8"
 
 RDEPENDS:readline = " \
  glibc \

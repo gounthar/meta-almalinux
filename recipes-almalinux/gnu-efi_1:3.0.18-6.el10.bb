@@ -11,25 +11,26 @@ PACKAGES = " \
  gnu-efi-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gnu-efi-3.0.18-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gnu-efi-3.0.18-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1ed07eb0756eb75284af52c0445c852086f30ad86084f3e94a07ad154befb588"
 
-URI_x86_64_v2_gnu-efi = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gnu-efi-3.0.18-6.el10.x86_64_v2.rpm;name=x86_64_v2_gnu-efi;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gnu-efi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gnu-efi-3.0.18-6.el10.x86_64_v2.rpm;name=x86_64_v2_gnu-efi;unpack=0"
 SRC_URI[x86_64_v2_gnu-efi.sha256sum] = "80e408db90c839af347273f875abca836fb00f4039f8986eae07fe016f3435fc"
 
-URI_x86_64_v2_gnu-efi-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/gnu-efi-devel-3.0.18-6.el10.x86_64_v2.rpm;name=x86_64_v2_gnu-efi-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gnu-efi-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/gnu-efi-devel-3.0.18-6.el10.x86_64_v2.rpm;name=x86_64_v2_gnu-efi-devel;unpack=0"
 SRC_URI[x86_64_v2_gnu-efi-devel.sha256sum] = "b384676d602d455a653002cef1224aa3d00866d3ff6b5ab575a63f5c761777f2"
 
-URI_aarch64_gnu-efi = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gnu-efi-3.0.18-6.el10.aarch64.rpm;name=aarch64_gnu-efi;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gnu-efi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gnu-efi-3.0.18-6.el10.aarch64.rpm;name=aarch64_gnu-efi;unpack=0"
 SRC_URI[aarch64_gnu-efi.sha256sum] = "dbc83f3e46b4c3d4728dd62cf9e19da3275d0d03b285338dec38374940946578"
 
-URI_aarch64_gnu-efi-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/gnu-efi-devel-3.0.18-6.el10.aarch64.rpm;name=aarch64_gnu-efi-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gnu-efi-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/gnu-efi-devel-3.0.18-6.el10.aarch64.rpm;name=aarch64_gnu-efi-devel;unpack=0"
 SRC_URI[aarch64_gnu-efi-devel.sha256sum] = "dc108c04f45c426896e4688a95c9b8af430e49aadf79979bd6c562156c3559b5"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gnu-efi-3.0.18-6.el10.riscv64.rpm;name=riscv64_gnu-efi;unpack=0"
+SRC_URI[riscv64_gnu-efi.sha256sum] = "8ee1e3433b9bf8522d8e8ca4ee462266e6a9c539f45fd3d7d844813de2038d6e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/gnu-efi-devel-3.0.18-6.el10.riscv64.rpm;name=riscv64_gnu-efi-devel;unpack=0"
+SRC_URI[riscv64_gnu-efi-devel.sha256sum] = "3831ea34a57c810d7a860a1e967eade23f249e61e95e33a88b29ab5aba032299"
 
 RDEPENDS:gnu-efi = " \
  "

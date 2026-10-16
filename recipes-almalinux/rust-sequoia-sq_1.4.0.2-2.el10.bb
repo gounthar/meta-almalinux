@@ -9,17 +9,17 @@ PACKAGES = " \
  sequoia-sq \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/rust-sequoia-sq-1.4.0.2-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/rust-sequoia-sq-1.4.0.2-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "047c65bdd29a6e342b642babf71c255f7acd3c7506f6f97ad56a75c024639f08"
 
-URI_x86_64_v2_sequoia-sq = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sequoia-sq-1.4.0.2-2.el10.x86_64_v2.rpm;name=x86_64_v2_sequoia-sq;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_sequoia-sq}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sequoia-sq-1.4.0.2-2.el10.x86_64_v2.rpm;name=x86_64_v2_sequoia-sq;unpack=0"
 SRC_URI[x86_64_v2_sequoia-sq.sha256sum] = "bb7f4e37eb0ae02daece4e4559c4d72105dbe2ac0aa93fe2e94bc6b7ff519161"
 
-URI_aarch64_sequoia-sq = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/sequoia-sq-1.4.0.2-2.el10.aarch64.rpm;name=aarch64_sequoia-sq;unpack=0"
-SRC_URI:append = " ${URI_aarch64_sequoia-sq}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/sequoia-sq-1.4.0.2-2.el10.aarch64.rpm;name=aarch64_sequoia-sq;unpack=0"
 SRC_URI[aarch64_sequoia-sq.sha256sum] = "0cdbc3d3ba1adcbe4520aa98ce52ef879dbbbf3910e3675c7134ab1ec25d2e02"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/sequoia-sq-1.4.0.2-2.el10.riscv64.rpm;name=riscv64_sequoia-sq;unpack=0"
+SRC_URI[riscv64_sequoia-sq.sha256sum] = "3c3e8f462a557dad3cb1f728c9118d4c5d139a358a3d83d5ef12baaf5aaf90fe"
 
 RDEPENDS:sequoia-sq = " \
  glibc \

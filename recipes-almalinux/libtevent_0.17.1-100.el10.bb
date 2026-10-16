@@ -11,33 +11,35 @@ PACKAGES = " \
  python3-tevent \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libtevent-0.17.1-100.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libtevent-0.17.1-100.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "370499e90d05bab09d4ecb192a94c301bb2dfa99084906587d971a3140ddd38f"
 
-URI_x86_64_v2_libtevent = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libtevent-0.17.1-100.el10.x86_64_v2.rpm;name=x86_64_v2_libtevent;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libtevent}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libtevent-0.17.1-100.el10.x86_64_v2.rpm;name=x86_64_v2_libtevent;unpack=0"
 SRC_URI[x86_64_v2_libtevent.sha256sum] = "f66e8886dc0528e2cddaf14719023a25e89b1fe7ecf293544d67544076dea30e"
 
-URI_x86_64_v2_libtevent-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libtevent-devel-0.17.1-100.el10.x86_64_v2.rpm;name=x86_64_v2_libtevent-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libtevent-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libtevent-devel-0.17.1-100.el10.x86_64_v2.rpm;name=x86_64_v2_libtevent-devel;unpack=0"
 SRC_URI[x86_64_v2_libtevent-devel.sha256sum] = "d507fc28ddb8341901c2df70054ed76dc0c5d4669966aa6f3b527372b38bedaa"
 
-URI_x86_64_v2_python3-tevent = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/python3-tevent-0.17.1-100.el10.x86_64_v2.rpm;name=x86_64_v2_python3-tevent;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-tevent}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/python3-tevent-0.17.1-100.el10.x86_64_v2.rpm;name=x86_64_v2_python3-tevent;unpack=0"
 SRC_URI[x86_64_v2_python3-tevent.sha256sum] = "28d051ae2aae9ec9f137070a47f3190579e60ef50f75deccf26b17c69df3787f"
 
-URI_aarch64_libtevent = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libtevent-0.17.1-100.el10.aarch64.rpm;name=aarch64_libtevent;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libtevent}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libtevent-0.17.1-100.el10.aarch64.rpm;name=aarch64_libtevent;unpack=0"
 SRC_URI[aarch64_libtevent.sha256sum] = "516fc6253962ab4335c8de8bb35b59bf3db9b99463dbd1471ba61f8ccfe13b29"
 
-URI_aarch64_libtevent-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libtevent-devel-0.17.1-100.el10.aarch64.rpm;name=aarch64_libtevent-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libtevent-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libtevent-devel-0.17.1-100.el10.aarch64.rpm;name=aarch64_libtevent-devel;unpack=0"
 SRC_URI[aarch64_libtevent-devel.sha256sum] = "78c4370da10e9b2685e43257fc47e4477286270d6981f950b3bef756c46c2de6"
 
-URI_aarch64_python3-tevent = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/python3-tevent-0.17.1-100.el10.aarch64.rpm;name=aarch64_python3-tevent;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-tevent}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/python3-tevent-0.17.1-100.el10.aarch64.rpm;name=aarch64_python3-tevent;unpack=0"
 SRC_URI[aarch64_python3-tevent.sha256sum] = "398a2534498b03f26ff6b164c45d6ccf395b37cdc6ffe29741d4458583fe425e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libtevent-0.17.1-100.el10.riscv64.rpm;name=riscv64_libtevent;unpack=0"
+SRC_URI[riscv64_libtevent.sha256sum] = "8de5ed1574f51bd595050b0c4ebbc4400f43b0214333c4ea1ae6f27a45b9eb48"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libtevent-devel-0.17.1-100.el10.riscv64.rpm;name=riscv64_libtevent-devel;unpack=0"
+SRC_URI[riscv64_libtevent-devel.sha256sum] = "ca474201e044ebefefc3efeac9f97e1da19e3af6d29976230b24c843bfa532c8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/python3-tevent-0.17.1-100.el10.riscv64.rpm;name=riscv64_python3-tevent;unpack=0"
+SRC_URI[riscv64_python3-tevent.sha256sum] = "1b64efc85c878aa63f7195b7cda8237d93853f0ccba5e1870ec87e0d5b4446ff"
 
 RDEPENDS:libtevent = " \
  glibc \

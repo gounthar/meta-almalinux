@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-quote-use-macros"
 PV = "0.8.4"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-quote-use-macros+default-devel \
  rust-quote-use-macros-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-quote-use-macros+default-devel \
+ rust-quote-use-macros-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-quote-use-macros-0.8.4-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-quote-use-macros-0.8.4-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "123088773ba17d29dc648014a624d5013920544d7241aa44ad6a6e9ca6f865f8"
 
-URI_x86_64_v2_rust-quote-use-macros+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-quote-use-macros+default-devel-0.8.4-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-quote-use-macros+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-quote-use-macros+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-quote-use-macros+default-devel-0.8.4-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-quote-use-macros+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-quote-use-macros+default-devel.sha256sum] = "3ffc233d8eb6cab4b28f4c2e4d6b1b2ddd2409042d6ba54e622401b65114a402"
 
-URI_x86_64_v2_rust-quote-use-macros-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-quote-use-macros-devel-0.8.4-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-quote-use-macros-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-quote-use-macros-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-quote-use-macros-devel-0.8.4-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-quote-use-macros-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-quote-use-macros-devel.sha256sum] = "e07b31bbbdda0526ab82bc1633fb86bbf41e5a3af8fc1e967e627a06a19e2575"
 
-URI_aarch64_rust-quote-use-macros+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-quote-use-macros+default-devel-0.8.4-1.el10_2.noarch.rpm;name=aarch64_rust-quote-use-macros+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-quote-use-macros+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-quote-use-macros+default-devel-0.8.4-1.el10_2.noarch.rpm;name=aarch64_rust-quote-use-macros+default-devel;unpack=0"
 SRC_URI[aarch64_rust-quote-use-macros+default-devel.sha256sum] = "8a7ea2c93747a872c6d2fc3a3f36eab865ab1c3340c6fc9899eac47a45eaff4d"
 
-URI_aarch64_rust-quote-use-macros-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-quote-use-macros-devel-0.8.4-1.el10_2.noarch.rpm;name=aarch64_rust-quote-use-macros-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-quote-use-macros-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-quote-use-macros-devel-0.8.4-1.el10_2.noarch.rpm;name=aarch64_rust-quote-use-macros-devel;unpack=0"
 SRC_URI[aarch64_rust-quote-use-macros-devel.sha256sum] = "36e4fe33862105d5ee5af4077f65e0d65f9a7e83fa3d5b83cbfd3b6e6f3012d4"
 
 RDEPENDS:rust-quote-use-macros+default-devel = " \

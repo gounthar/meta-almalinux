@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-unic-locale-macros"
 PV = "0.9.6"
 PR = "2.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-unic-locale-macros+default-devel \
  rust-unic-locale-macros-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-unic-locale-macros+default-devel \
+ rust-unic-locale-macros-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-unic-locale-macros-0.9.6-2.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-unic-locale-macros-0.9.6-2.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d7f766a06adec510d0c7cdfb1d75b6293a6835523b25aafa333ae49bed25952e"
 
-URI_x86_64_v2_rust-unic-locale-macros+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-unic-locale-macros+default-devel-0.9.6-2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-unic-locale-macros+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-unic-locale-macros+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-unic-locale-macros+default-devel-0.9.6-2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-unic-locale-macros+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-unic-locale-macros+default-devel.sha256sum] = "0798ab2fedcf1b474d49a754be13b0085f3f91bc675f250c9da7529c810af7cd"
 
-URI_x86_64_v2_rust-unic-locale-macros-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-unic-locale-macros-devel-0.9.6-2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-unic-locale-macros-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-unic-locale-macros-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-unic-locale-macros-devel-0.9.6-2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-unic-locale-macros-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-unic-locale-macros-devel.sha256sum] = "45ad181e91047eab2542790a672324a026d468dff2f70a5e5de88ce07b24fbd9"
 
-URI_aarch64_rust-unic-locale-macros+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-unic-locale-macros+default-devel-0.9.6-2.el10_2.noarch.rpm;name=aarch64_rust-unic-locale-macros+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-unic-locale-macros+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-unic-locale-macros+default-devel-0.9.6-2.el10_2.noarch.rpm;name=aarch64_rust-unic-locale-macros+default-devel;unpack=0"
 SRC_URI[aarch64_rust-unic-locale-macros+default-devel.sha256sum] = "1acb93277eb3ea8aa555818c0d14f44b919e55d9a66f460bcad877dda1c69592"
 
-URI_aarch64_rust-unic-locale-macros-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-unic-locale-macros-devel-0.9.6-2.el10_2.noarch.rpm;name=aarch64_rust-unic-locale-macros-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-unic-locale-macros-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-unic-locale-macros-devel-0.9.6-2.el10_2.noarch.rpm;name=aarch64_rust-unic-locale-macros-devel;unpack=0"
 SRC_URI[aarch64_rust-unic-locale-macros-devel.sha256sum] = "0332bc090df88390e435a12362eb7097926f33434ce289657b23b7ee3e294787"
 
 RDEPENDS:rust-unic-locale-macros+default-devel = " \

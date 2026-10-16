@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-serde-untagged"
 PV = "0.1.9"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-serde-untagged+default-devel \
  rust-serde-untagged-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-serde-untagged+default-devel \
+ rust-serde-untagged-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-serde-untagged-0.1.9-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-serde-untagged-0.1.9-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "087a8ba872b2b376ca11080731565f400c9e7e82ea1c0d16214cce0dd5cbbdb6"
 
-URI_x86_64_v2_rust-serde-untagged+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-serde-untagged+default-devel-0.1.9-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-serde-untagged+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-serde-untagged+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-serde-untagged+default-devel-0.1.9-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-serde-untagged+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-serde-untagged+default-devel.sha256sum] = "7f52635c9a37e1dc40de92e79271832e7dbcffc7139b2663472d2e66f332efd1"
 
-URI_x86_64_v2_rust-serde-untagged-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-serde-untagged-devel-0.1.9-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-serde-untagged-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-serde-untagged-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-serde-untagged-devel-0.1.9-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-serde-untagged-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-serde-untagged-devel.sha256sum] = "a7b8f7f82e474db023522ba8baa021574234738d294cd945fbfe6bc901a96da5"
 
-URI_aarch64_rust-serde-untagged+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-serde-untagged+default-devel-0.1.9-1.el10_2.noarch.rpm;name=aarch64_rust-serde-untagged+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-serde-untagged+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-serde-untagged+default-devel-0.1.9-1.el10_2.noarch.rpm;name=aarch64_rust-serde-untagged+default-devel;unpack=0"
 SRC_URI[aarch64_rust-serde-untagged+default-devel.sha256sum] = "1088e6cf01c5ee1e89e6a40812933f6d744888e043385b04086f0d4276ed4b52"
 
-URI_aarch64_rust-serde-untagged-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-serde-untagged-devel-0.1.9-1.el10_2.noarch.rpm;name=aarch64_rust-serde-untagged-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-serde-untagged-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-serde-untagged-devel-0.1.9-1.el10_2.noarch.rpm;name=aarch64_rust-serde-untagged-devel;unpack=0"
 SRC_URI[aarch64_rust-serde-untagged-devel.sha256sum] = "be797c535f8b900ccb9e903a74fb2e82b9183cadbd2edbbeff8aab5f745ae5b6"
 
 RDEPENDS:rust-serde-untagged+default-devel = " \

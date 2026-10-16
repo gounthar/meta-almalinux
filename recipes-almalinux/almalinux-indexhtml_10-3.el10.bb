@@ -9,17 +9,17 @@ PACKAGES = " \
  almalinux-indexhtml \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/almalinux-indexhtml-10-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/almalinux-indexhtml-10-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e311d6d73bfefbb6a0666fd161a146346b41f18bc671d3c0fb3ce2cc309ecb20"
 
-URI_x86_64_v2_almalinux-indexhtml = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/almalinux-indexhtml-10-3.el10.noarch.rpm;name=x86_64_v2_almalinux-indexhtml;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_almalinux-indexhtml}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/almalinux-indexhtml-10-3.el10.noarch.rpm;name=x86_64_v2_almalinux-indexhtml;unpack=0"
 SRC_URI[x86_64_v2_almalinux-indexhtml.sha256sum] = "5dd94a0b4fe75d4bd2ef34277e998572d518bf00043844a8b0824e103b68f490"
 
-URI_aarch64_almalinux-indexhtml = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/almalinux-indexhtml-10-3.el10.noarch.rpm;name=aarch64_almalinux-indexhtml;unpack=0"
-SRC_URI:append = " ${URI_aarch64_almalinux-indexhtml}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/almalinux-indexhtml-10-3.el10.noarch.rpm;name=aarch64_almalinux-indexhtml;unpack=0"
 SRC_URI[aarch64_almalinux-indexhtml.sha256sum] = "5dd94a0b4fe75d4bd2ef34277e998572d518bf00043844a8b0824e103b68f490"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/almalinux-indexhtml-10-3.el10.noarch.rpm;name=riscv64_almalinux-indexhtml;unpack=0"
+SRC_URI[riscv64_almalinux-indexhtml.sha256sum] = "5dd94a0b4fe75d4bd2ef34277e998572d518bf00043844a8b0824e103b68f490"
 
 RDEPENDS:almalinux-indexhtml = " \
  "

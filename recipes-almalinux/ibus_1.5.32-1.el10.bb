@@ -17,81 +17,89 @@ PACKAGES = " \
  ibus-wayland \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/ibus-1.5.32-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/ibus-1.5.32-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a56496b169d01808fb6e378677d0c89fc735b60809a1d8803d4398c2a6c2c08f"
 
-URI_x86_64_v2_ibus = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ibus-1.5.32-1.el10.x86_64_v2.rpm;name=x86_64_v2_ibus;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ibus}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ibus-1.5.32-1.el10.x86_64_v2.rpm;name=x86_64_v2_ibus;unpack=0"
 SRC_URI[x86_64_v2_ibus.sha256sum] = "85b22aeca13053f66d923d6fb4d9d51775c94b1d56f53c3a8aa6e439e6919fe6"
 
-URI_x86_64_v2_ibus-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/ibus-devel-1.5.32-1.el10.x86_64_v2.rpm;name=x86_64_v2_ibus-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ibus-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/ibus-devel-1.5.32-1.el10.x86_64_v2.rpm;name=x86_64_v2_ibus-devel;unpack=0"
 SRC_URI[x86_64_v2_ibus-devel.sha256sum] = "438b7de0a1abb39436b3569fc81f23f5303c93e2f8d9e10f134b38f257facc1c"
 
-URI_x86_64_v2_ibus-devel-docs = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/ibus-devel-docs-1.5.32-1.el10.noarch.rpm;name=x86_64_v2_ibus-devel-docs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ibus-devel-docs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/ibus-devel-docs-1.5.32-1.el10.noarch.rpm;name=x86_64_v2_ibus-devel-docs;unpack=0"
 SRC_URI[x86_64_v2_ibus-devel-docs.sha256sum] = "77f0f9ba4b1f48f16414bd489e5a958c44a4e7768bce1a64284ea67a1d891465"
 
-URI_x86_64_v2_ibus-gtk3 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ibus-gtk3-1.5.32-1.el10.x86_64_v2.rpm;name=x86_64_v2_ibus-gtk3;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ibus-gtk3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ibus-gtk3-1.5.32-1.el10.x86_64_v2.rpm;name=x86_64_v2_ibus-gtk3;unpack=0"
 SRC_URI[x86_64_v2_ibus-gtk3.sha256sum] = "5bc0810181fc362ea87d6ca93eb6f3d03d1686f742e0dc3b3c7b84d2e4b8480b"
 
-URI_x86_64_v2_ibus-gtk4 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ibus-gtk4-1.5.32-1.el10.x86_64_v2.rpm;name=x86_64_v2_ibus-gtk4;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ibus-gtk4}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ibus-gtk4-1.5.32-1.el10.x86_64_v2.rpm;name=x86_64_v2_ibus-gtk4;unpack=0"
 SRC_URI[x86_64_v2_ibus-gtk4.sha256sum] = "1a20f3156e84f767a079493a4e06f8994d0eb3820ff5809981d04042f698e66b"
 
-URI_x86_64_v2_ibus-libs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ibus-libs-1.5.32-1.el10.x86_64_v2.rpm;name=x86_64_v2_ibus-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ibus-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ibus-libs-1.5.32-1.el10.x86_64_v2.rpm;name=x86_64_v2_ibus-libs;unpack=0"
 SRC_URI[x86_64_v2_ibus-libs.sha256sum] = "352f004966bcaaf6b50b367143f278cee13efc1f29f4fd8196386766d8a5b6fa"
 
-URI_x86_64_v2_ibus-panel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/ibus-panel-1.5.32-1.el10.x86_64_v2.rpm;name=x86_64_v2_ibus-panel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ibus-panel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/ibus-panel-1.5.32-1.el10.x86_64_v2.rpm;name=x86_64_v2_ibus-panel;unpack=0"
 SRC_URI[x86_64_v2_ibus-panel.sha256sum] = "a21e9256bad060f586df72094ce0f9d6417e382a78d09b3ae711abe76177d1d6"
 
-URI_x86_64_v2_ibus-setup = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ibus-setup-1.5.32-1.el10.noarch.rpm;name=x86_64_v2_ibus-setup;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ibus-setup}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ibus-setup-1.5.32-1.el10.noarch.rpm;name=x86_64_v2_ibus-setup;unpack=0"
 SRC_URI[x86_64_v2_ibus-setup.sha256sum] = "4fc572c69cefc437a3868a08e0dfb09e5899216598dd383417acdeae471030ae"
 
-URI_x86_64_v2_ibus-wayland = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ibus-wayland-1.5.32-1.el10.x86_64_v2.rpm;name=x86_64_v2_ibus-wayland;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ibus-wayland}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ibus-wayland-1.5.32-1.el10.x86_64_v2.rpm;name=x86_64_v2_ibus-wayland;unpack=0"
 SRC_URI[x86_64_v2_ibus-wayland.sha256sum] = "4cda5d9eacf9dc6debbb9bfe0d4378f6eb123749236ebd9bb58c8c6eb6dbfb03"
 
-URI_aarch64_ibus = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ibus-1.5.32-1.el10.aarch64.rpm;name=aarch64_ibus;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ibus}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ibus-1.5.32-1.el10.aarch64.rpm;name=aarch64_ibus;unpack=0"
 SRC_URI[aarch64_ibus.sha256sum] = "2e3ccdce0655d1c9a1f37edbb0813d29d5a584f38854cb306abad1694f0691d8"
 
-URI_aarch64_ibus-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/ibus-devel-1.5.32-1.el10.aarch64.rpm;name=aarch64_ibus-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ibus-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/ibus-devel-1.5.32-1.el10.aarch64.rpm;name=aarch64_ibus-devel;unpack=0"
 SRC_URI[aarch64_ibus-devel.sha256sum] = "2f6aea9ca57066a347ff85402f742d3ea077687d6ff48e28d3ac752816cf22a8"
 
-URI_aarch64_ibus-devel-docs = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/ibus-devel-docs-1.5.32-1.el10.noarch.rpm;name=aarch64_ibus-devel-docs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ibus-devel-docs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/ibus-devel-docs-1.5.32-1.el10.noarch.rpm;name=aarch64_ibus-devel-docs;unpack=0"
 SRC_URI[aarch64_ibus-devel-docs.sha256sum] = "77f0f9ba4b1f48f16414bd489e5a958c44a4e7768bce1a64284ea67a1d891465"
 
-URI_aarch64_ibus-gtk3 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ibus-gtk3-1.5.32-1.el10.aarch64.rpm;name=aarch64_ibus-gtk3;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ibus-gtk3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ibus-gtk3-1.5.32-1.el10.aarch64.rpm;name=aarch64_ibus-gtk3;unpack=0"
 SRC_URI[aarch64_ibus-gtk3.sha256sum] = "d7484d0030411ce8b5efabd0150ece0aadc830a6d90decf0e2a99e0109d581ef"
 
-URI_aarch64_ibus-gtk4 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ibus-gtk4-1.5.32-1.el10.aarch64.rpm;name=aarch64_ibus-gtk4;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ibus-gtk4}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ibus-gtk4-1.5.32-1.el10.aarch64.rpm;name=aarch64_ibus-gtk4;unpack=0"
 SRC_URI[aarch64_ibus-gtk4.sha256sum] = "a35a1d9167c5e8cdeabf21055eb1dbdc6ddf0faaed80c0daf45126c294fbea9b"
 
-URI_aarch64_ibus-libs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ibus-libs-1.5.32-1.el10.aarch64.rpm;name=aarch64_ibus-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ibus-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ibus-libs-1.5.32-1.el10.aarch64.rpm;name=aarch64_ibus-libs;unpack=0"
 SRC_URI[aarch64_ibus-libs.sha256sum] = "cef31b85ddb33ca7a7f12b9583357fda40fe2e1bd93b00f259afac58de1f26f5"
 
-URI_aarch64_ibus-panel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/ibus-panel-1.5.32-1.el10.aarch64.rpm;name=aarch64_ibus-panel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ibus-panel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/ibus-panel-1.5.32-1.el10.aarch64.rpm;name=aarch64_ibus-panel;unpack=0"
 SRC_URI[aarch64_ibus-panel.sha256sum] = "5fec43c31caf575baf5ddcb9297a61928adb125f0db547e8e23bf51fc7917899"
 
-URI_aarch64_ibus-setup = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ibus-setup-1.5.32-1.el10.noarch.rpm;name=aarch64_ibus-setup;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ibus-setup}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ibus-setup-1.5.32-1.el10.noarch.rpm;name=aarch64_ibus-setup;unpack=0"
 SRC_URI[aarch64_ibus-setup.sha256sum] = "4fc572c69cefc437a3868a08e0dfb09e5899216598dd383417acdeae471030ae"
 
-URI_aarch64_ibus-wayland = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ibus-wayland-1.5.32-1.el10.aarch64.rpm;name=aarch64_ibus-wayland;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ibus-wayland}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ibus-wayland-1.5.32-1.el10.aarch64.rpm;name=aarch64_ibus-wayland;unpack=0"
 SRC_URI[aarch64_ibus-wayland.sha256sum] = "d496c4a326e3b64c4d85a4b2a65a7c50911322cb39781a857e05fa40f95dea95"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/ibus-1.5.32-1.el10.riscv64.rpm;name=riscv64_ibus;unpack=0"
+SRC_URI[riscv64_ibus.sha256sum] = "ff13ce0e3d4194a25f855b6456e8fa844b65ab5733f83be75e40010b7de9891b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/ibus-devel-1.5.32-1.el10.riscv64.rpm;name=riscv64_ibus-devel;unpack=0"
+SRC_URI[riscv64_ibus-devel.sha256sum] = "3dd550d9939b80db5e09163e998c510262e2c0e41ac6157526206e30700ab803"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/ibus-devel-docs-1.5.32-1.el10.noarch.rpm;name=riscv64_ibus-devel-docs;unpack=0"
+SRC_URI[riscv64_ibus-devel-docs.sha256sum] = "77f0f9ba4b1f48f16414bd489e5a958c44a4e7768bce1a64284ea67a1d891465"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/ibus-gtk3-1.5.32-1.el10.riscv64.rpm;name=riscv64_ibus-gtk3;unpack=0"
+SRC_URI[riscv64_ibus-gtk3.sha256sum] = "d47a04abd200cdd5593eece2023c519f28ca887a76feb2744d2ebc7197c9e5a2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/ibus-gtk4-1.5.32-1.el10.riscv64.rpm;name=riscv64_ibus-gtk4;unpack=0"
+SRC_URI[riscv64_ibus-gtk4.sha256sum] = "05cb4c7050d02e8ba593c09075989806cfb8721543d30e50a9a555b5890ce7b0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/ibus-libs-1.5.32-1.el10.riscv64.rpm;name=riscv64_ibus-libs;unpack=0"
+SRC_URI[riscv64_ibus-libs.sha256sum] = "337cfdfd2fc753875b74cf55cf40458a888d8ecb137b0337507adf4c927e3826"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/ibus-panel-1.5.32-1.el10.riscv64.rpm;name=riscv64_ibus-panel;unpack=0"
+SRC_URI[riscv64_ibus-panel.sha256sum] = "fa32358667878135f7f6331b19a538b754c2c0a0b0b1e6e55d058b33b6997034"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/ibus-setup-1.5.32-1.el10.noarch.rpm;name=riscv64_ibus-setup;unpack=0"
+SRC_URI[riscv64_ibus-setup.sha256sum] = "4fc572c69cefc437a3868a08e0dfb09e5899216598dd383417acdeae471030ae"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/ibus-wayland-1.5.32-1.el10.riscv64.rpm;name=riscv64_ibus-wayland;unpack=0"
+SRC_URI[riscv64_ibus-wayland.sha256sum] = "e6eb57682b3027605860d9f38e3289e6fa982702c9f7ce2c92f93a10be88bf2c"
 
 RDEPENDS:ibus = " \
  alternatives \

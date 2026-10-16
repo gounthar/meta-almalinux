@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-YAML-Syck"
 PV = "1.47"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-YAML-Syck \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-YAML-Syck \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-YAML-Syck-1.47-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-YAML-Syck-1.47-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "ec0ebea281d977b112c1ddd2f84124b478272d64ebf31ffee7e9b92f0f323641"
 
-URI_x86_64_v2_perl-YAML-Syck = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-YAML-Syck-1.47-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_perl-YAML-Syck;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-YAML-Syck}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-YAML-Syck-1.47-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_perl-YAML-Syck;unpack=0"
 SRC_URI[x86_64_v2_perl-YAML-Syck.sha256sum] = "569034c5aa7072bebec631d6835e556d745f98bacdedc7096421e8240b69d60b"
 
-URI_aarch64_perl-YAML-Syck = "${EPEL_MIRROR}/aarch64/Packages/p/perl-YAML-Syck-1.47-1.el10_3.aarch64.rpm;name=aarch64_perl-YAML-Syck;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-YAML-Syck}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-YAML-Syck-1.47-1.el10_3.aarch64.rpm;name=aarch64_perl-YAML-Syck;unpack=0"
 SRC_URI[aarch64_perl-YAML-Syck.sha256sum] = "5220bd071ac345c259039caf29033584ee767fa43b63cd0240ae139fd679899a"
 
 RDEPENDS:perl-YAML-Syck = " \

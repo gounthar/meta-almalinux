@@ -10,25 +10,26 @@ PACKAGES = " \
  mpfr-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/mpfr-4.2.1-8.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/mpfr-4.2.1-8.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "47e628a9ce72b7fb4fc42dd80391b211cbff8d18fc367146092ce2f4e2259bb9"
 
-URI_x86_64_v2_mpfr = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/mpfr-4.2.1-8.el10.x86_64_v2.rpm;name=x86_64_v2_mpfr;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mpfr}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/mpfr-4.2.1-8.el10.x86_64_v2.rpm;name=x86_64_v2_mpfr;unpack=0"
 SRC_URI[x86_64_v2_mpfr.sha256sum] = "8c5ca2b563b2208c401c07dd39ad4b49ac5e3db4ea5c475ce114aad4bc6302bf"
 
-URI_x86_64_v2_mpfr-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mpfr-devel-4.2.1-8.el10.x86_64_v2.rpm;name=x86_64_v2_mpfr-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mpfr-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mpfr-devel-4.2.1-8.el10.x86_64_v2.rpm;name=x86_64_v2_mpfr-devel;unpack=0"
 SRC_URI[x86_64_v2_mpfr-devel.sha256sum] = "a30e39dfdebcf30c1f6ddc203ed2fa537940dd60369a6627eb753d93e1a47d95"
 
-URI_aarch64_mpfr = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/mpfr-4.2.1-8.el10.aarch64.rpm;name=aarch64_mpfr;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mpfr}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/mpfr-4.2.1-8.el10.aarch64.rpm;name=aarch64_mpfr;unpack=0"
 SRC_URI[aarch64_mpfr.sha256sum] = "8962a1f5b072ad02de4003626268c0865494a5134bdbd7611abe2461cf133be3"
 
-URI_aarch64_mpfr-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mpfr-devel-4.2.1-8.el10.aarch64.rpm;name=aarch64_mpfr-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mpfr-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mpfr-devel-4.2.1-8.el10.aarch64.rpm;name=aarch64_mpfr-devel;unpack=0"
 SRC_URI[aarch64_mpfr-devel.sha256sum] = "8c394554f329986b625fd39aef5b04fa2c67714b08f1e3bfeb9d0cc63f0ee09d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/mpfr-4.2.1-8.el10.riscv64.rpm;name=riscv64_mpfr;unpack=0"
+SRC_URI[riscv64_mpfr.sha256sum] = "09bf303b1921e7bf0bc1caf8ab13e05e0181515d06b92f5080fada4bbb610cc0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/mpfr-devel-4.2.1-8.el10.riscv64.rpm;name=riscv64_mpfr-devel;unpack=0"
+SRC_URI[riscv64_mpfr-devel.sha256sum] = "2992a271e00b4438d82df1d8b04d16cc1a0055fb5aead057090ae3ef1b8ea310"
 
 RDEPENDS:mpfr = " \
  glibc \

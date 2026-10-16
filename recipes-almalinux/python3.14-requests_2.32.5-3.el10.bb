@@ -9,17 +9,17 @@ PACKAGES = " \
  python3.14-requests \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python3.14-requests-2.32.5-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python3.14-requests-2.32.5-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "2b72bad96341ed3476739d201bd49fa77e735bb5f95f8fb8d0d438ffcbd1da1e"
 
-URI_x86_64_v2_python3.14-requests = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3.14-requests-2.32.5-3.el10.noarch.rpm;name=x86_64_v2_python3.14-requests;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3.14-requests}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3.14-requests-2.32.5-3.el10.noarch.rpm;name=x86_64_v2_python3.14-requests;unpack=0"
 SRC_URI[x86_64_v2_python3.14-requests.sha256sum] = "e1907dd68bb432e971954d2c96783bf0980818cad3070b851fe346f09511731d"
 
-URI_aarch64_python3.14-requests = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3.14-requests-2.32.5-3.el10.noarch.rpm;name=aarch64_python3.14-requests;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3.14-requests}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3.14-requests-2.32.5-3.el10.noarch.rpm;name=aarch64_python3.14-requests;unpack=0"
 SRC_URI[aarch64_python3.14-requests.sha256sum] = "e1907dd68bb432e971954d2c96783bf0980818cad3070b851fe346f09511731d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3.14-requests-2.32.5-3.el10.noarch.rpm;name=riscv64_python3.14-requests;unpack=0"
+SRC_URI[riscv64_python3.14-requests.sha256sum] = "e1907dd68bb432e971954d2c96783bf0980818cad3070b851fe346f09511731d"
 
 RDEPENDS:python3.14-requests = " \
  python3.14 \

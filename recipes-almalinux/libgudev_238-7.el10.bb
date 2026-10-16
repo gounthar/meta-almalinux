@@ -10,25 +10,26 @@ PACKAGES = " \
  libgudev-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libgudev-238-7.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libgudev-238-7.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b6c28908cf9e451670b44ccd7f2842cbae4753f1f1ba9a9bf6ebbbbe276b288b"
 
-URI_x86_64_v2_libgudev = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libgudev-238-7.el10.x86_64_v2.rpm;name=x86_64_v2_libgudev;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libgudev}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libgudev-238-7.el10.x86_64_v2.rpm;name=x86_64_v2_libgudev;unpack=0"
 SRC_URI[x86_64_v2_libgudev.sha256sum] = "4688a5cb81d1fdcf760fc6dbfdc9a49938422e4c4ea835619b4edeffd3257316"
 
-URI_x86_64_v2_libgudev-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libgudev-devel-238-7.el10.x86_64_v2.rpm;name=x86_64_v2_libgudev-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libgudev-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libgudev-devel-238-7.el10.x86_64_v2.rpm;name=x86_64_v2_libgudev-devel;unpack=0"
 SRC_URI[x86_64_v2_libgudev-devel.sha256sum] = "538baafba6fe10b3bc6c1079c3f7e85ab1421bafc714a5ebec1c96de5c9344a8"
 
-URI_aarch64_libgudev = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libgudev-238-7.el10.aarch64.rpm;name=aarch64_libgudev;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libgudev}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libgudev-238-7.el10.aarch64.rpm;name=aarch64_libgudev;unpack=0"
 SRC_URI[aarch64_libgudev.sha256sum] = "3998b7a146a8789dcd3f0fd892c22584632aa70fe6418204741d85e85ff69a8a"
 
-URI_aarch64_libgudev-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libgudev-devel-238-7.el10.aarch64.rpm;name=aarch64_libgudev-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libgudev-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libgudev-devel-238-7.el10.aarch64.rpm;name=aarch64_libgudev-devel;unpack=0"
 SRC_URI[aarch64_libgudev-devel.sha256sum] = "c3be7d6d92ff331c4014b9bf7e2b1319e59c798fb4a990184b4b977e9831be96"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libgudev-238-7.el10.riscv64.rpm;name=riscv64_libgudev;unpack=0"
+SRC_URI[riscv64_libgudev.sha256sum] = "9d3b001dd68d80dc137dd17972f1b2809de8acc5a4c98a88499a52969c8527ee"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libgudev-devel-238-7.el10.riscv64.rpm;name=riscv64_libgudev-devel;unpack=0"
+SRC_URI[riscv64_libgudev-devel.sha256sum] = "3edb958252f1f5785ca385134998c8442a994c82460522eb6062cf5c0cd94a0a"
 
 RDEPENDS:libgudev = " \
  glib2 \

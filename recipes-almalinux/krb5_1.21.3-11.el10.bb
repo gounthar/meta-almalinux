@@ -16,73 +16,80 @@ PACKAGES = " \
  libkadm5 \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/krb5-1.21.3-11.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/krb5-1.21.3-11.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e1722641b2773c1cfbf8c1439984b4cad5f7e09dd5d1ddeb51359b6c669ba141"
 
-URI_x86_64_v2_krb5-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/krb5-devel-1.21.3-11.el10.x86_64_v2.rpm;name=x86_64_v2_krb5-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_krb5-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/krb5-devel-1.21.3-11.el10.x86_64_v2.rpm;name=x86_64_v2_krb5-devel;unpack=0"
 SRC_URI[x86_64_v2_krb5-devel.sha256sum] = "ae4bb34e88353c0c56f109791c90a6d07beb7608c7a2519c3f8c996d09753111"
 
-URI_x86_64_v2_krb5-libs = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/krb5-libs-1.21.3-11.el10.x86_64_v2.rpm;name=x86_64_v2_krb5-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_krb5-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/krb5-libs-1.21.3-11.el10.x86_64_v2.rpm;name=x86_64_v2_krb5-libs;unpack=0"
 SRC_URI[x86_64_v2_krb5-libs.sha256sum] = "5a2f6214f0de90c89dd9e9c4c83edf5309efc0bf8cd530b90e8b112e0bdb49c2"
 
-URI_x86_64_v2_krb5-pkinit = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/krb5-pkinit-1.21.3-11.el10.x86_64_v2.rpm;name=x86_64_v2_krb5-pkinit;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_krb5-pkinit}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/krb5-pkinit-1.21.3-11.el10.x86_64_v2.rpm;name=x86_64_v2_krb5-pkinit;unpack=0"
 SRC_URI[x86_64_v2_krb5-pkinit.sha256sum] = "78289800266f9132ded363fb78c62a946ecbd94cd550d03696a3155123a12f2c"
 
-URI_x86_64_v2_krb5-server = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/krb5-server-1.21.3-11.el10.x86_64_v2.rpm;name=x86_64_v2_krb5-server;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_krb5-server}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/krb5-server-1.21.3-11.el10.x86_64_v2.rpm;name=x86_64_v2_krb5-server;unpack=0"
 SRC_URI[x86_64_v2_krb5-server.sha256sum] = "1d0cc38acf924277c60925fbb93f272bea5484019b4e75664167700a5b13fe41"
 
-URI_x86_64_v2_krb5-server-ldap = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/krb5-server-ldap-1.21.3-11.el10.x86_64_v2.rpm;name=x86_64_v2_krb5-server-ldap;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_krb5-server-ldap}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/krb5-server-ldap-1.21.3-11.el10.x86_64_v2.rpm;name=x86_64_v2_krb5-server-ldap;unpack=0"
 SRC_URI[x86_64_v2_krb5-server-ldap.sha256sum] = "802b0c14e49ccc6c68de963f359d9643072ceb80698d548c5b3f156d36536e1e"
 
-URI_x86_64_v2_krb5-workstation = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/krb5-workstation-1.21.3-11.el10.x86_64_v2.rpm;name=x86_64_v2_krb5-workstation;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_krb5-workstation}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/krb5-workstation-1.21.3-11.el10.x86_64_v2.rpm;name=x86_64_v2_krb5-workstation;unpack=0"
 SRC_URI[x86_64_v2_krb5-workstation.sha256sum] = "bbd30d82fb2ba6911651b6c1aa1ef756500fab139b7eb254a81d2d7b72303741"
 
-URI_x86_64_v2_krb5-xrealmauthz = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/krb5-xrealmauthz-1.21.3-11.el10.x86_64_v2.rpm;name=x86_64_v2_krb5-xrealmauthz;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_krb5-xrealmauthz}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/krb5-xrealmauthz-1.21.3-11.el10.x86_64_v2.rpm;name=x86_64_v2_krb5-xrealmauthz;unpack=0"
 SRC_URI[x86_64_v2_krb5-xrealmauthz.sha256sum] = "07cea08492711404881cdec0d7fd7505dc6543c43d96a65fb08ec95a0b596268"
 
-URI_x86_64_v2_libkadm5 = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libkadm5-1.21.3-11.el10.x86_64_v2.rpm;name=x86_64_v2_libkadm5;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libkadm5}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libkadm5-1.21.3-11.el10.x86_64_v2.rpm;name=x86_64_v2_libkadm5;unpack=0"
 SRC_URI[x86_64_v2_libkadm5.sha256sum] = "559c176185ad08b9e9b62aac74d1c9a4e1802c844f5be61ee669d047f7a3fd6e"
 
-URI_aarch64_krb5-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/krb5-devel-1.21.3-11.el10.aarch64.rpm;name=aarch64_krb5-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_krb5-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/krb5-devel-1.21.3-11.el10.aarch64.rpm;name=aarch64_krb5-devel;unpack=0"
 SRC_URI[aarch64_krb5-devel.sha256sum] = "d7c4e251aa2a11975719975fc27a99ebe06619912655af3fa0b696e78e0f3ee0"
 
-URI_aarch64_krb5-libs = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/krb5-libs-1.21.3-11.el10.aarch64.rpm;name=aarch64_krb5-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_krb5-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/krb5-libs-1.21.3-11.el10.aarch64.rpm;name=aarch64_krb5-libs;unpack=0"
 SRC_URI[aarch64_krb5-libs.sha256sum] = "09c1aa45b722de59f8afddc5764ffe9c258badd6026f704e2a6fb00f6d7a91d4"
 
-URI_aarch64_krb5-pkinit = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/krb5-pkinit-1.21.3-11.el10.aarch64.rpm;name=aarch64_krb5-pkinit;unpack=0"
-SRC_URI:append = " ${URI_aarch64_krb5-pkinit}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/krb5-pkinit-1.21.3-11.el10.aarch64.rpm;name=aarch64_krb5-pkinit;unpack=0"
 SRC_URI[aarch64_krb5-pkinit.sha256sum] = "1fdb354572059f2028db858054311aff71e582c3e080e60be67199074f1c0aff"
 
-URI_aarch64_krb5-server = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/krb5-server-1.21.3-11.el10.aarch64.rpm;name=aarch64_krb5-server;unpack=0"
-SRC_URI:append = " ${URI_aarch64_krb5-server}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/krb5-server-1.21.3-11.el10.aarch64.rpm;name=aarch64_krb5-server;unpack=0"
 SRC_URI[aarch64_krb5-server.sha256sum] = "db35139dfec0493ac9d4f312b7e0e19e0285affc18b24a7bfdad8f00f73f560a"
 
-URI_aarch64_krb5-server-ldap = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/krb5-server-ldap-1.21.3-11.el10.aarch64.rpm;name=aarch64_krb5-server-ldap;unpack=0"
-SRC_URI:append = " ${URI_aarch64_krb5-server-ldap}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/krb5-server-ldap-1.21.3-11.el10.aarch64.rpm;name=aarch64_krb5-server-ldap;unpack=0"
 SRC_URI[aarch64_krb5-server-ldap.sha256sum] = "5296f518aba0f16735af35a6aad07bf678d4691c2d0569c0e7225eeb3a5b42f7"
 
-URI_aarch64_krb5-workstation = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/krb5-workstation-1.21.3-11.el10.aarch64.rpm;name=aarch64_krb5-workstation;unpack=0"
-SRC_URI:append = " ${URI_aarch64_krb5-workstation}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/krb5-workstation-1.21.3-11.el10.aarch64.rpm;name=aarch64_krb5-workstation;unpack=0"
 SRC_URI[aarch64_krb5-workstation.sha256sum] = "85e04a5a00b6f174bbd408376fb685eb1998f7bd91623fb8197a175b3de55a44"
 
-URI_aarch64_krb5-xrealmauthz = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/krb5-xrealmauthz-1.21.3-11.el10.aarch64.rpm;name=aarch64_krb5-xrealmauthz;unpack=0"
-SRC_URI:append = " ${URI_aarch64_krb5-xrealmauthz}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/krb5-xrealmauthz-1.21.3-11.el10.aarch64.rpm;name=aarch64_krb5-xrealmauthz;unpack=0"
 SRC_URI[aarch64_krb5-xrealmauthz.sha256sum] = "50f82f8048363226f32601320a14c7ad3fef23b0fe460704ca49b083d713ee5c"
 
-URI_aarch64_libkadm5 = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libkadm5-1.21.3-11.el10.aarch64.rpm;name=aarch64_libkadm5;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libkadm5}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libkadm5-1.21.3-11.el10.aarch64.rpm;name=aarch64_libkadm5;unpack=0"
 SRC_URI[aarch64_libkadm5.sha256sum] = "e06662505a01d82e8b7da31eff5423cd3d112b7e96230fb38466308b89740915"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/krb5-devel-1.21.3-11.el10.riscv64.rpm;name=riscv64_krb5-devel;unpack=0"
+SRC_URI[riscv64_krb5-devel.sha256sum] = "44db77ff751b03e9608f49b0594706d27a20199c93fe3d1d70c3cf281c551490"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/krb5-libs-1.21.3-11.el10.riscv64.rpm;name=riscv64_krb5-libs;unpack=0"
+SRC_URI[riscv64_krb5-libs.sha256sum] = "0027bc1cf468ddc95908c7b4bd2c1b57526e34826d659ccf011c06ca9db8d5a0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/krb5-pkinit-1.21.3-11.el10.riscv64.rpm;name=riscv64_krb5-pkinit;unpack=0"
+SRC_URI[riscv64_krb5-pkinit.sha256sum] = "f163aff8588f77088f6feb915043149eaeb60ed64a2b3edbbe9d8417ac21ec5b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/krb5-server-1.21.3-11.el10.riscv64.rpm;name=riscv64_krb5-server;unpack=0"
+SRC_URI[riscv64_krb5-server.sha256sum] = "7806b7f2ace47377672543929efb3d0a6933f41c454aa2bc268bfef7d87439a0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/krb5-server-ldap-1.21.3-11.el10.riscv64.rpm;name=riscv64_krb5-server-ldap;unpack=0"
+SRC_URI[riscv64_krb5-server-ldap.sha256sum] = "880097edb762e6c50ad5479c862559f3514125c2edebe6137f2947ed26c09099"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/krb5-workstation-1.21.3-11.el10.riscv64.rpm;name=riscv64_krb5-workstation;unpack=0"
+SRC_URI[riscv64_krb5-workstation.sha256sum] = "e3e6a878ad64adf8d0bbe9ed3ada87bdfc45026c004978bde892c81ee4ecd8cf"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/krb5-xrealmauthz-1.21.3-11.el10.riscv64.rpm;name=riscv64_krb5-xrealmauthz;unpack=0"
+SRC_URI[riscv64_krb5-xrealmauthz.sha256sum] = "b78f6e243ea4f02bcae02b69dbe20775394f5f5237acb57b6292a323fa7b7d7d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libkadm5-1.21.3-11.el10.riscv64.rpm;name=riscv64_libkadm5;unpack=0"
+SRC_URI[riscv64_libkadm5.sha256sum] = "371812e41de42669b6c082a6e7cc7bb0f4cd7be9eb9702b0d4977d0692961aaa"
 
 RDEPENDS:krb5-devel = " \
  bash \

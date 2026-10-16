@@ -10,25 +10,26 @@ PACKAGES = " \
  vulkan-loader-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/vulkan-loader-1.4.341.0-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/vulkan-loader-1.4.341.0-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "df9750218f21128a7b16f261be30f698b500e148761d522c9e9b7fc8b8819c36"
 
-URI_x86_64_v2_vulkan-loader = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/vulkan-loader-1.4.341.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_vulkan-loader;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_vulkan-loader}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/vulkan-loader-1.4.341.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_vulkan-loader;unpack=0"
 SRC_URI[x86_64_v2_vulkan-loader.sha256sum] = "6257b1aa5d24645197bbd687c07377ab2512dc0435e7ec86f9f5633ca13416e1"
 
-URI_x86_64_v2_vulkan-loader-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/vulkan-loader-devel-1.4.341.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_vulkan-loader-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_vulkan-loader-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/vulkan-loader-devel-1.4.341.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_vulkan-loader-devel;unpack=0"
 SRC_URI[x86_64_v2_vulkan-loader-devel.sha256sum] = "3b677806d7c2cac16ef85fd5973731ab670259f64fc478557bf37224a6214923"
 
-URI_aarch64_vulkan-loader = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/vulkan-loader-1.4.341.0-1.el10.aarch64.rpm;name=aarch64_vulkan-loader;unpack=0"
-SRC_URI:append = " ${URI_aarch64_vulkan-loader}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/vulkan-loader-1.4.341.0-1.el10.aarch64.rpm;name=aarch64_vulkan-loader;unpack=0"
 SRC_URI[aarch64_vulkan-loader.sha256sum] = "5a81b8390b6a68d9a232eae6dd57a47385937dd2242dcb5755d44bb03db1901f"
 
-URI_aarch64_vulkan-loader-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/vulkan-loader-devel-1.4.341.0-1.el10.aarch64.rpm;name=aarch64_vulkan-loader-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_vulkan-loader-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/vulkan-loader-devel-1.4.341.0-1.el10.aarch64.rpm;name=aarch64_vulkan-loader-devel;unpack=0"
 SRC_URI[aarch64_vulkan-loader-devel.sha256sum] = "c822196b30f5ac024f59b0ab6328948730ed88ea57f6eff29e4371b073546559"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/vulkan-loader-1.4.341.0-1.el10.riscv64.rpm;name=riscv64_vulkan-loader;unpack=0"
+SRC_URI[riscv64_vulkan-loader.sha256sum] = "4cd7ff60f63665ac69564474b910ddf4c60349824728aaf8e9c7d4c5bbc184ad"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/vulkan-loader-devel-1.4.341.0-1.el10.riscv64.rpm;name=riscv64_vulkan-loader-devel;unpack=0"
+SRC_URI[riscv64_vulkan-loader-devel.sha256sum] = "c2bcdec2d34c1106203628cb740a97b46e2b105d1b91917fd117677cf6245da0"
 
 RDEPENDS:vulkan-loader = " \
  glibc \

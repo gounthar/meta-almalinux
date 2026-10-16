@@ -12,41 +12,44 @@ PACKAGES = " \
  jasper-utils \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/jasper-4.1.0-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/jasper-4.1.0-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e2f2ddeb0c2a19e18c2894641121ef3b0497bfd5ab8de102e429930300e7c0b9"
 
-URI_x86_64_v2_jasper = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/jasper-4.1.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_jasper;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_jasper}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/jasper-4.1.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_jasper;unpack=0"
 SRC_URI[x86_64_v2_jasper.sha256sum] = "6d6dc7474bc3d727be708e25af23da5fa01c8a42cc87662d028dc5461d392adc"
 
-URI_x86_64_v2_jasper-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/jasper-devel-4.1.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_jasper-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_jasper-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/jasper-devel-4.1.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_jasper-devel;unpack=0"
 SRC_URI[x86_64_v2_jasper-devel.sha256sum] = "5c1ba70c7316c88ea587fd93a45709b7ae9e9b53456f446703314950c626e64b"
 
-URI_x86_64_v2_jasper-libs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/jasper-libs-4.1.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_jasper-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_jasper-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/jasper-libs-4.1.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_jasper-libs;unpack=0"
 SRC_URI[x86_64_v2_jasper-libs.sha256sum] = "64ef37c3a665dd79ca6edd729ad991a27e5d820872d4c51067ce0de04ec4e74f"
 
-URI_x86_64_v2_jasper-utils = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/jasper-utils-4.1.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_jasper-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_jasper-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/jasper-utils-4.1.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_jasper-utils;unpack=0"
 SRC_URI[x86_64_v2_jasper-utils.sha256sum] = "dde4f1001bd259e5ea546182e8266952e1cf4c7e8313522a7adc8f34f475cc73"
 
-URI_aarch64_jasper = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/jasper-4.1.0-5.el10.aarch64.rpm;name=aarch64_jasper;unpack=0"
-SRC_URI:append = " ${URI_aarch64_jasper}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/jasper-4.1.0-5.el10.aarch64.rpm;name=aarch64_jasper;unpack=0"
 SRC_URI[aarch64_jasper.sha256sum] = "7156ef059274c70d76b959517fd542f5bca16384517510a93ad2a8365f5d58a6"
 
-URI_aarch64_jasper-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/jasper-devel-4.1.0-5.el10.aarch64.rpm;name=aarch64_jasper-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_jasper-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/jasper-devel-4.1.0-5.el10.aarch64.rpm;name=aarch64_jasper-devel;unpack=0"
 SRC_URI[aarch64_jasper-devel.sha256sum] = "646cd4f2445f7a62f166b489c576b08677e6ae7476982c6876681cc90deb61d7"
 
-URI_aarch64_jasper-libs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/jasper-libs-4.1.0-5.el10.aarch64.rpm;name=aarch64_jasper-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_jasper-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/jasper-libs-4.1.0-5.el10.aarch64.rpm;name=aarch64_jasper-libs;unpack=0"
 SRC_URI[aarch64_jasper-libs.sha256sum] = "8bc95e36fd23779f5b178eb63426a65baaa52fd41f4e2d6df8d983c301dd61ef"
 
-URI_aarch64_jasper-utils = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/jasper-utils-4.1.0-5.el10.aarch64.rpm;name=aarch64_jasper-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_jasper-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/jasper-utils-4.1.0-5.el10.aarch64.rpm;name=aarch64_jasper-utils;unpack=0"
 SRC_URI[aarch64_jasper-utils.sha256sum] = "7fdabec98eb214b1755aff473da9b12e2667c213570ccad05cf86c83647a5c1f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/jasper-4.1.0-5.el10.riscv64.rpm;name=riscv64_jasper;unpack=0"
+SRC_URI[riscv64_jasper.sha256sum] = "f7e94e68c5ce50fd6d6401286feb6fb6270f9820393ab8c369171d15635ac822"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/jasper-devel-4.1.0-5.el10.riscv64.rpm;name=riscv64_jasper-devel;unpack=0"
+SRC_URI[riscv64_jasper-devel.sha256sum] = "c380d7dada4457160a1bcee74164013a2785f715f19b4c10070a8ab46966afd3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/jasper-libs-4.1.0-5.el10.riscv64.rpm;name=riscv64_jasper-libs;unpack=0"
+SRC_URI[riscv64_jasper-libs.sha256sum] = "add682f9c3b31dab099f81bc8afc25006ca42b44a0c4fb8daa290e7e4f6d5490"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/jasper-utils-4.1.0-5.el10.riscv64.rpm;name=riscv64_jasper-utils;unpack=0"
+SRC_URI[riscv64_jasper-utils.sha256sum] = "d0ff9681eea775a7a64a0d466b5e5711edbfe079aec541c1c3a749472aa486a5"
 
 RDEPENDS:jasper = " \
  glibc \

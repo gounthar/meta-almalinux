@@ -13,49 +13,53 @@ PACKAGES = " \
  zlib-ng-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/zlib-ng-2.2.3-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/zlib-ng-2.2.3-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "9326c5f2b40eea92952a90c9de55c6dbed9787a212749496ba9cb8efd2ececd2"
 
-URI_x86_64_v2_zlib-ng = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/zlib-ng-2.2.3-3.el10.x86_64_v2.rpm;name=x86_64_v2_zlib-ng;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_zlib-ng}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/zlib-ng-2.2.3-3.el10.x86_64_v2.rpm;name=x86_64_v2_zlib-ng;unpack=0"
 SRC_URI[x86_64_v2_zlib-ng.sha256sum] = "8ab2784067005ffc923e25e54dbdfe1404bfab9eda8585133dd0fbf124f58f39"
 
-URI_x86_64_v2_zlib-ng-compat = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/zlib-ng-compat-2.2.3-3.el10.x86_64_v2.rpm;name=x86_64_v2_zlib-ng-compat;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_zlib-ng-compat}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/zlib-ng-compat-2.2.3-3.el10.x86_64_v2.rpm;name=x86_64_v2_zlib-ng-compat;unpack=0"
 SRC_URI[x86_64_v2_zlib-ng-compat.sha256sum] = "b97d9a1ca25b9cbcf5869faaf4c93ba52ba0d58ae6091e4185a7550eb3b390b5"
 
-URI_x86_64_v2_zlib-ng-compat-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/zlib-ng-compat-devel-2.2.3-3.el10.x86_64_v2.rpm;name=x86_64_v2_zlib-ng-compat-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_zlib-ng-compat-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/zlib-ng-compat-devel-2.2.3-3.el10.x86_64_v2.rpm;name=x86_64_v2_zlib-ng-compat-devel;unpack=0"
 SRC_URI[x86_64_v2_zlib-ng-compat-devel.sha256sum] = "c6c7ee026a1622e0ae3f237f6e68fb464b85a8c29ccbfd1cfaed1ea38b926dec"
 
-URI_x86_64_v2_zlib-ng-compat-static = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/zlib-ng-compat-static-2.2.3-3.el10.x86_64_v2.rpm;name=x86_64_v2_zlib-ng-compat-static;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_zlib-ng-compat-static}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/zlib-ng-compat-static-2.2.3-3.el10.x86_64_v2.rpm;name=x86_64_v2_zlib-ng-compat-static;unpack=0"
 SRC_URI[x86_64_v2_zlib-ng-compat-static.sha256sum] = "8ba0499b611e0076a17a41821d59c652ee453b318a35a584f08cb7b7abdfe04d"
 
-URI_x86_64_v2_zlib-ng-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/zlib-ng-devel-2.2.3-3.el10.x86_64_v2.rpm;name=x86_64_v2_zlib-ng-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_zlib-ng-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/zlib-ng-devel-2.2.3-3.el10.x86_64_v2.rpm;name=x86_64_v2_zlib-ng-devel;unpack=0"
 SRC_URI[x86_64_v2_zlib-ng-devel.sha256sum] = "65583586630444e060254d3757cf64c2dacd6a5c1deb73616a35380df5ccb903"
 
-URI_aarch64_zlib-ng = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/zlib-ng-2.2.3-3.el10.aarch64.rpm;name=aarch64_zlib-ng;unpack=0"
-SRC_URI:append = " ${URI_aarch64_zlib-ng}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/zlib-ng-2.2.3-3.el10.aarch64.rpm;name=aarch64_zlib-ng;unpack=0"
 SRC_URI[aarch64_zlib-ng.sha256sum] = "89a351db295040109a26974f6e94a9d254e3c7330ed76a0206fbcd1184b47a62"
 
-URI_aarch64_zlib-ng-compat = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/zlib-ng-compat-2.2.3-3.el10.aarch64.rpm;name=aarch64_zlib-ng-compat;unpack=0"
-SRC_URI:append = " ${URI_aarch64_zlib-ng-compat}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/zlib-ng-compat-2.2.3-3.el10.aarch64.rpm;name=aarch64_zlib-ng-compat;unpack=0"
 SRC_URI[aarch64_zlib-ng-compat.sha256sum] = "32883dd2a3f61866c67e84c8c562158e295e2689daa8d24fe9d07136b590ba9b"
 
-URI_aarch64_zlib-ng-compat-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/zlib-ng-compat-devel-2.2.3-3.el10.aarch64.rpm;name=aarch64_zlib-ng-compat-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_zlib-ng-compat-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/zlib-ng-compat-devel-2.2.3-3.el10.aarch64.rpm;name=aarch64_zlib-ng-compat-devel;unpack=0"
 SRC_URI[aarch64_zlib-ng-compat-devel.sha256sum] = "6247dd01402bee6a5d315deffc1cb380177d68bf0a7a1ea6e893bbf97fbe638b"
 
-URI_aarch64_zlib-ng-compat-static = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/zlib-ng-compat-static-2.2.3-3.el10.aarch64.rpm;name=aarch64_zlib-ng-compat-static;unpack=0"
-SRC_URI:append = " ${URI_aarch64_zlib-ng-compat-static}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/zlib-ng-compat-static-2.2.3-3.el10.aarch64.rpm;name=aarch64_zlib-ng-compat-static;unpack=0"
 SRC_URI[aarch64_zlib-ng-compat-static.sha256sum] = "0bb3db77a3527145d545e7764f192143277d5c10bd80b0b8729c4e8f63285ffc"
 
-URI_aarch64_zlib-ng-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/zlib-ng-devel-2.2.3-3.el10.aarch64.rpm;name=aarch64_zlib-ng-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_zlib-ng-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/zlib-ng-devel-2.2.3-3.el10.aarch64.rpm;name=aarch64_zlib-ng-devel;unpack=0"
 SRC_URI[aarch64_zlib-ng-devel.sha256sum] = "cc081c88dd2d3a3b55226769a42bb4faa38dd5c7b690114d0f659ee923c0ad08"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/zlib-ng-2.2.3-3.el10.riscv64.rpm;name=riscv64_zlib-ng;unpack=0"
+SRC_URI[riscv64_zlib-ng.sha256sum] = "5005af1a5e623f8f084834fc36c59166c71f3eb35bf8a9835e346b9cd18bfc84"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/zlib-ng-compat-2.2.3-3.el10.riscv64.rpm;name=riscv64_zlib-ng-compat;unpack=0"
+SRC_URI[riscv64_zlib-ng-compat.sha256sum] = "0851ebebf1431ad3a0aab3f786ce6397b35836898189566ec11b615a47b9e9fd"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/zlib-ng-compat-devel-2.2.3-3.el10.riscv64.rpm;name=riscv64_zlib-ng-compat-devel;unpack=0"
+SRC_URI[riscv64_zlib-ng-compat-devel.sha256sum] = "c1240983ea7a41e1af1ce4624cb03f93046a0b5ad160e9ca19049ef265d912a4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/zlib-ng-compat-static-2.2.3-3.el10.riscv64.rpm;name=riscv64_zlib-ng-compat-static;unpack=0"
+SRC_URI[riscv64_zlib-ng-compat-static.sha256sum] = "9a2e2cda28f0240128b2b18923021a81611274e4bad08adbd8cc6d8bfba3a484"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/zlib-ng-devel-2.2.3-3.el10.riscv64.rpm;name=riscv64_zlib-ng-devel;unpack=0"
+SRC_URI[riscv64_zlib-ng-devel.sha256sum] = "80672296ca4a6c8a6a69eae7b02312bfaf12d851352eb39ae23d6e4613c8a65c"
 
 RDEPENDS:zlib-ng = " \
  glibc \

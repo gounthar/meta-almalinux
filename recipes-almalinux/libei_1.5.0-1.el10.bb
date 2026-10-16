@@ -14,57 +14,62 @@ PACKAGES = " \
  liboeffis-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libei-1.5.0-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libei-1.5.0-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f5b7e44a22ca3b3580618393c9a905797ab7839c35816c64cb7377c9d748a6e8"
 
-URI_x86_64_v2_libei = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libei-1.5.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libei;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libei}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libei-1.5.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libei;unpack=0"
 SRC_URI[x86_64_v2_libei.sha256sum] = "ae33c20c5265e7ac598df6d8b218fa098d7c8f0a5bef5668cb11198a020cdac6"
 
-URI_x86_64_v2_libei-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libei-devel-1.5.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libei-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libei-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libei-devel-1.5.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libei-devel;unpack=0"
 SRC_URI[x86_64_v2_libei-devel.sha256sum] = "7d5923230bf7cc7f6d722a7b4a63f27a8a86493234ac723c67e20dfbae97ef47"
 
-URI_x86_64_v2_libeis = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libeis-1.5.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libeis;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libeis}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libeis-1.5.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libeis;unpack=0"
 SRC_URI[x86_64_v2_libeis.sha256sum] = "3c5542c2910998cdb65a7fdda6827099218a73602d73ce2544f19c3c71b05dbb"
 
-URI_x86_64_v2_libeis-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libeis-devel-1.5.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libeis-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libeis-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libeis-devel-1.5.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_libeis-devel;unpack=0"
 SRC_URI[x86_64_v2_libeis-devel.sha256sum] = "bd96bce350aac49762ba251478bae675c54ea13e509d3230520a3d4b48e467c2"
 
-URI_x86_64_v2_liboeffis = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/liboeffis-1.5.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_liboeffis;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_liboeffis}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/liboeffis-1.5.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_liboeffis;unpack=0"
 SRC_URI[x86_64_v2_liboeffis.sha256sum] = "e2299ed6899418fd7113288370f66875c0852f8e6bf7350b0242312c8f9eface"
 
-URI_x86_64_v2_liboeffis-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/liboeffis-devel-1.5.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_liboeffis-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_liboeffis-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/liboeffis-devel-1.5.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_liboeffis-devel;unpack=0"
 SRC_URI[x86_64_v2_liboeffis-devel.sha256sum] = "b28452008b207a00f504dc140720d8516edb5dd391ebaf942f504ce756828333"
 
-URI_aarch64_libei = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libei-1.5.0-1.el10.aarch64.rpm;name=aarch64_libei;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libei}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libei-1.5.0-1.el10.aarch64.rpm;name=aarch64_libei;unpack=0"
 SRC_URI[aarch64_libei.sha256sum] = "e69d0f36244fae7abb92600b76e292a01e384d7ead0d6bffad28bac96e125fa2"
 
-URI_aarch64_libei-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libei-devel-1.5.0-1.el10.aarch64.rpm;name=aarch64_libei-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libei-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libei-devel-1.5.0-1.el10.aarch64.rpm;name=aarch64_libei-devel;unpack=0"
 SRC_URI[aarch64_libei-devel.sha256sum] = "500340982907022a305a10656852b81e494e4b5d3e3b195ac500520a88a204c3"
 
-URI_aarch64_libeis = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libeis-1.5.0-1.el10.aarch64.rpm;name=aarch64_libeis;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libeis}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libeis-1.5.0-1.el10.aarch64.rpm;name=aarch64_libeis;unpack=0"
 SRC_URI[aarch64_libeis.sha256sum] = "39e725ff55ea91d06ae8a7d61f12bacc4580eeb1e434ab9ca80d1f2a6c013103"
 
-URI_aarch64_libeis-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libeis-devel-1.5.0-1.el10.aarch64.rpm;name=aarch64_libeis-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libeis-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libeis-devel-1.5.0-1.el10.aarch64.rpm;name=aarch64_libeis-devel;unpack=0"
 SRC_URI[aarch64_libeis-devel.sha256sum] = "79435f7e2de527e45737bf5f15698c3e623a00d3a5750f723b82581302ef6154"
 
-URI_aarch64_liboeffis = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/liboeffis-1.5.0-1.el10.aarch64.rpm;name=aarch64_liboeffis;unpack=0"
-SRC_URI:append = " ${URI_aarch64_liboeffis}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/liboeffis-1.5.0-1.el10.aarch64.rpm;name=aarch64_liboeffis;unpack=0"
 SRC_URI[aarch64_liboeffis.sha256sum] = "cfbce88d65f3e8fd6b9093d9a45c524c25f71ad0738b54c82a293448bde3d775"
 
-URI_aarch64_liboeffis-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/liboeffis-devel-1.5.0-1.el10.aarch64.rpm;name=aarch64_liboeffis-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_liboeffis-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/liboeffis-devel-1.5.0-1.el10.aarch64.rpm;name=aarch64_liboeffis-devel;unpack=0"
 SRC_URI[aarch64_liboeffis-devel.sha256sum] = "7c30b3fe77e07e010fac5b60d8427f7cd0a18eba680337d449ba3e9f06ebc563"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libei-1.5.0-1.el10.riscv64.rpm;name=riscv64_libei;unpack=0"
+SRC_URI[riscv64_libei.sha256sum] = "26319b705f884467ad226ea72360267060546ab6c04adc5f8fe9e1c170478644"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libei-devel-1.5.0-1.el10.riscv64.rpm;name=riscv64_libei-devel;unpack=0"
+SRC_URI[riscv64_libei-devel.sha256sum] = "6362975b22a2b2fbdaa7a32d15b7e6b86bef035f3a9f85d855d2782d1f215262"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libeis-1.5.0-1.el10.riscv64.rpm;name=riscv64_libeis;unpack=0"
+SRC_URI[riscv64_libeis.sha256sum] = "ae415b0d61c80c20d2de270e2bc9dbfb27688e9d56171c1805e11bd5921e6288"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libeis-devel-1.5.0-1.el10.riscv64.rpm;name=riscv64_libeis-devel;unpack=0"
+SRC_URI[riscv64_libeis-devel.sha256sum] = "e41fed554e1014cb386e947f6a1ec3667f59f8947ee985762e41475e3423bdea"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/liboeffis-1.5.0-1.el10.riscv64.rpm;name=riscv64_liboeffis;unpack=0"
+SRC_URI[riscv64_liboeffis.sha256sum] = "8b5bf2b36b70c023210f7e81a8b609a256396539c06dbf561cf350d45cf847d7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/liboeffis-devel-1.5.0-1.el10.riscv64.rpm;name=riscv64_liboeffis-devel;unpack=0"
+SRC_URI[riscv64_liboeffis-devel.sha256sum] = "86ba1b915234b24b7fff006100a147ad2a344f4ffa12a54747f8c3f208be6ece"
 
 RDEPENDS:libei = " \
  glibc \

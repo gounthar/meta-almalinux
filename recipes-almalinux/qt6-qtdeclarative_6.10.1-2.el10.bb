@@ -12,41 +12,44 @@ PACKAGES = " \
  qt6-qtdeclarative-static \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtdeclarative-6.10.1-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtdeclarative-6.10.1-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "25bedb78ee0d24bddca51cc32dde7c16e4a54c59445166fcdececeaf271a5a07"
 
-URI_x86_64_v2_qt6-qtdeclarative = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtdeclarative-6.10.1-2.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtdeclarative;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtdeclarative}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtdeclarative-6.10.1-2.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtdeclarative;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtdeclarative.sha256sum] = "41a03847a276567ca051a404919baca0337ce079a6bbe2e9aa11d666b7b503f6"
 
-URI_x86_64_v2_qt6-qtdeclarative-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtdeclarative-devel-6.10.1-2.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtdeclarative-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtdeclarative-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtdeclarative-devel-6.10.1-2.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtdeclarative-devel;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtdeclarative-devel.sha256sum] = "d1d6d15ce2f69aabf8efbb933e8b027ca256ad0165355b61fc4e23b0cccbb908"
 
-URI_x86_64_v2_qt6-qtdeclarative-examples = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtdeclarative-examples-6.10.1-2.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtdeclarative-examples;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtdeclarative-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtdeclarative-examples-6.10.1-2.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtdeclarative-examples;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtdeclarative-examples.sha256sum] = "ef3685be2a7b8b181be7ec687dc433bb1f87af3a655290a817c6899b2024f5c0"
 
-URI_x86_64_v2_qt6-qtdeclarative-static = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtdeclarative-static-6.10.1-2.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtdeclarative-static;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtdeclarative-static}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtdeclarative-static-6.10.1-2.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtdeclarative-static;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtdeclarative-static.sha256sum] = "beec4de6869d06c3a03ce693515a2d887b3dc54ca7d81e347bdccfbb8a30e999"
 
-URI_aarch64_qt6-qtdeclarative = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtdeclarative-6.10.1-2.el10.aarch64.rpm;name=aarch64_qt6-qtdeclarative;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtdeclarative}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtdeclarative-6.10.1-2.el10.aarch64.rpm;name=aarch64_qt6-qtdeclarative;unpack=0"
 SRC_URI[aarch64_qt6-qtdeclarative.sha256sum] = "bfb9df41224ee9f9db41d0a319b775105d8bbfb938052f9e5925f7b45200381a"
 
-URI_aarch64_qt6-qtdeclarative-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtdeclarative-devel-6.10.1-2.el10.aarch64.rpm;name=aarch64_qt6-qtdeclarative-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtdeclarative-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtdeclarative-devel-6.10.1-2.el10.aarch64.rpm;name=aarch64_qt6-qtdeclarative-devel;unpack=0"
 SRC_URI[aarch64_qt6-qtdeclarative-devel.sha256sum] = "efbacaa5174e47e4087c953ad136b474c465b9ad0c1ca9a48248bcc28807d5b3"
 
-URI_aarch64_qt6-qtdeclarative-examples = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtdeclarative-examples-6.10.1-2.el10.aarch64.rpm;name=aarch64_qt6-qtdeclarative-examples;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtdeclarative-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtdeclarative-examples-6.10.1-2.el10.aarch64.rpm;name=aarch64_qt6-qtdeclarative-examples;unpack=0"
 SRC_URI[aarch64_qt6-qtdeclarative-examples.sha256sum] = "d1f8c45c41ad6f43dd903065139b3035072dd2985fa197126895b8543aea1c2b"
 
-URI_aarch64_qt6-qtdeclarative-static = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtdeclarative-static-6.10.1-2.el10.aarch64.rpm;name=aarch64_qt6-qtdeclarative-static;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtdeclarative-static}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtdeclarative-static-6.10.1-2.el10.aarch64.rpm;name=aarch64_qt6-qtdeclarative-static;unpack=0"
 SRC_URI[aarch64_qt6-qtdeclarative-static.sha256sum] = "e6b0bf3e91a5e4d9191a15a6f69cdf8f625b8d572d9e6b1fc5d9c1a17cef92ce"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtdeclarative-6.10.1-2.el10.riscv64.rpm;name=riscv64_qt6-qtdeclarative;unpack=0"
+SRC_URI[riscv64_qt6-qtdeclarative.sha256sum] = "2f13e9b1e5e0a97609f27418311968a6a7b001bcd8f041e86a08cb5ded790ed7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtdeclarative-devel-6.10.1-2.el10.riscv64.rpm;name=riscv64_qt6-qtdeclarative-devel;unpack=0"
+SRC_URI[riscv64_qt6-qtdeclarative-devel.sha256sum] = "4f51fe43619f6a88e239a0988b380038d26f0431d9e305376592ef469acf9d0d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/qt6-qtdeclarative-examples-6.10.1-2.el10.riscv64.rpm;name=riscv64_qt6-qtdeclarative-examples;unpack=0"
+SRC_URI[riscv64_qt6-qtdeclarative-examples.sha256sum] = "4c3dec756aba8d03ab1320ee5b7ad160ce41cc0f8358ceec5dec1239430640f9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/qt6-qtdeclarative-static-6.10.1-2.el10.riscv64.rpm;name=riscv64_qt6-qtdeclarative-static;unpack=0"
+SRC_URI[riscv64_qt6-qtdeclarative-static.sha256sum] = "33e42ea97b17e0782080e76044965f761a99b00f752f737eb4333c37ce781f3d"
 
 RDEPENDS:qt6-qtdeclarative:x86_64_v2 = " \
  glibc \
@@ -63,7 +66,15 @@ RDEPENDS:qt6-qtdeclarative:aarch64 = " \
  qt6-qtbase-gui \
  qt6-qtsvg \
 "
-RDEPENDS:qt6-qtdeclarative-devel = " \
+RDEPENDS:qt6-qtdeclarative:riscv64 = " \
+ glibc \
+ libgcc \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtbase-gui \
+ qt6-qtsvg \
+"
+RDEPENDS:qt6-qtdeclarative-devel:x86_64_v2 = " \
  cmake-filesystem \
  glibc \
  libstdc++ \
@@ -73,7 +84,30 @@ RDEPENDS:qt6-qtdeclarative-devel = " \
  qt6-qtbase-gui \
  qt6-qtdeclarative \
  qt6-qtdeclarative-devel \
- "
+"
+RDEPENDS:qt6-qtdeclarative-devel:aarch64 = " \
+ cmake-filesystem \
+ glibc \
+ libstdc++ \
+ pkgconf-pkg-config \
+ qt6-qtbase \
+ qt6-qtbase-devel \
+ qt6-qtbase-gui \
+ qt6-qtdeclarative \
+ qt6-qtdeclarative-devel \
+"
+RDEPENDS:qt6-qtdeclarative-devel:riscv64 = " \
+ cmake-filesystem \
+ glibc \
+ libgcc \
+ libstdc++ \
+ pkgconf-pkg-config \
+ qt6-qtbase \
+ qt6-qtbase-devel \
+ qt6-qtbase-gui \
+ qt6-qtdeclarative \
+ qt6-qtdeclarative-devel \
+"
 RDEPENDS:qt6-qtdeclarative-examples = " \
  glibc \
  libgcc \

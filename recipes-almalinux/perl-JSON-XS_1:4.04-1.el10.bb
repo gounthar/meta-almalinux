@@ -10,17 +10,17 @@ PACKAGES = " \
  perl-JSON-XS \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/perl-JSON-XS-4.04-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/perl-JSON-XS-4.04-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8d80629fb8cae1c14c967ec0f2b8554ce1b6f0821020a140db2907eb8f496df8"
 
-URI_x86_64_v2_perl-JSON-XS = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/perl-JSON-XS-4.04-1.el10.x86_64_v2.rpm;name=x86_64_v2_perl-JSON-XS;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-JSON-XS}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/perl-JSON-XS-4.04-1.el10.x86_64_v2.rpm;name=x86_64_v2_perl-JSON-XS;unpack=0"
 SRC_URI[x86_64_v2_perl-JSON-XS.sha256sum] = "4ee96606a108fb26483e8f0e8fefa949a4ff551947266f88a012778a432af536"
 
-URI_aarch64_perl-JSON-XS = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/perl-JSON-XS-4.04-1.el10.aarch64.rpm;name=aarch64_perl-JSON-XS;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-JSON-XS}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/perl-JSON-XS-4.04-1.el10.aarch64.rpm;name=aarch64_perl-JSON-XS;unpack=0"
 SRC_URI[aarch64_perl-JSON-XS.sha256sum] = "b0bc98eba3e3f38a6332d1692865d7007c1764a994964671e80413bbd5286c46"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/perl-JSON-XS-4.04-1.el10.riscv64.rpm;name=riscv64_perl-JSON-XS;unpack=0"
+SRC_URI[riscv64_perl-JSON-XS.sha256sum] = "7545e5b427a36b23c522196ea2f3d7a03709c2892ad497c1a31974d3da703bb6"
 
 RDEPENDS:perl-JSON-XS = " \
  glibc \

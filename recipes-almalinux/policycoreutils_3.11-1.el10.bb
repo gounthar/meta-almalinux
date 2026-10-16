@@ -17,81 +17,89 @@ PACKAGES = " \
  python3-policycoreutils \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/policycoreutils-3.11-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/policycoreutils-3.11-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3bace5a169349b8c6402405986f77e25d4baea55213691538fc7a4a8c0876af6"
 
-URI_x86_64_v2_policycoreutils = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/policycoreutils-3.11-1.el10.x86_64_v2.rpm;name=x86_64_v2_policycoreutils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_policycoreutils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/policycoreutils-3.11-1.el10.x86_64_v2.rpm;name=x86_64_v2_policycoreutils;unpack=0"
 SRC_URI[x86_64_v2_policycoreutils.sha256sum] = "52719cf17b76157fdb390f50e52e9cca7738828e9b16ea3e0f2d3b57ace97812"
 
-URI_x86_64_v2_policycoreutils-dbus = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/policycoreutils-dbus-3.11-1.el10.noarch.rpm;name=x86_64_v2_policycoreutils-dbus;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_policycoreutils-dbus}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/policycoreutils-dbus-3.11-1.el10.noarch.rpm;name=x86_64_v2_policycoreutils-dbus;unpack=0"
 SRC_URI[x86_64_v2_policycoreutils-dbus.sha256sum] = "5e971d4acd72a681fa4de2a10913f927c1b82a0d8497825128f91f41b3577c38"
 
-URI_x86_64_v2_policycoreutils-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/policycoreutils-devel-3.11-1.el10.x86_64_v2.rpm;name=x86_64_v2_policycoreutils-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_policycoreutils-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/policycoreutils-devel-3.11-1.el10.x86_64_v2.rpm;name=x86_64_v2_policycoreutils-devel;unpack=0"
 SRC_URI[x86_64_v2_policycoreutils-devel.sha256sum] = "59145d501aec4bed2aaa7971eab87f13551a1c3c8a28661026565323eb5b5d54"
 
-URI_x86_64_v2_policycoreutils-gui = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/policycoreutils-gui-3.11-1.el10.noarch.rpm;name=x86_64_v2_policycoreutils-gui;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_policycoreutils-gui}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/policycoreutils-gui-3.11-1.el10.noarch.rpm;name=x86_64_v2_policycoreutils-gui;unpack=0"
 SRC_URI[x86_64_v2_policycoreutils-gui.sha256sum] = "218b168687462d05be6562b9f8f4a9bc5e7a695bed6ac2cee869d7d9cf91b0bb"
 
-URI_x86_64_v2_policycoreutils-newrole = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/policycoreutils-newrole-3.11-1.el10.x86_64_v2.rpm;name=x86_64_v2_policycoreutils-newrole;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_policycoreutils-newrole}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/policycoreutils-newrole-3.11-1.el10.x86_64_v2.rpm;name=x86_64_v2_policycoreutils-newrole;unpack=0"
 SRC_URI[x86_64_v2_policycoreutils-newrole.sha256sum] = "96a5789407383065ea5d6bf7127b0726520365897d31cbe53b47ecde9964cdcb"
 
-URI_x86_64_v2_policycoreutils-python-utils = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/policycoreutils-python-utils-3.11-1.el10.noarch.rpm;name=x86_64_v2_policycoreutils-python-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_policycoreutils-python-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/policycoreutils-python-utils-3.11-1.el10.noarch.rpm;name=x86_64_v2_policycoreutils-python-utils;unpack=0"
 SRC_URI[x86_64_v2_policycoreutils-python-utils.sha256sum] = "4120a3251a2e7046ba3e9645756326447485f288a666be3e7c6b6bdf68255fc4"
 
-URI_x86_64_v2_policycoreutils-restorecond = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/policycoreutils-restorecond-3.11-1.el10.x86_64_v2.rpm;name=x86_64_v2_policycoreutils-restorecond;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_policycoreutils-restorecond}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/policycoreutils-restorecond-3.11-1.el10.x86_64_v2.rpm;name=x86_64_v2_policycoreutils-restorecond;unpack=0"
 SRC_URI[x86_64_v2_policycoreutils-restorecond.sha256sum] = "72d7a76baa27bef39d3980483a476025ec7d3e733a83f76f2ee598715480a122"
 
-URI_x86_64_v2_policycoreutils-sandbox = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/policycoreutils-sandbox-3.11-1.el10.x86_64_v2.rpm;name=x86_64_v2_policycoreutils-sandbox;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_policycoreutils-sandbox}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/policycoreutils-sandbox-3.11-1.el10.x86_64_v2.rpm;name=x86_64_v2_policycoreutils-sandbox;unpack=0"
 SRC_URI[x86_64_v2_policycoreutils-sandbox.sha256sum] = "8d2ba9ac1f1b840483409637a6cb2822ff57510bc0346b71cd59e7f1c2416909"
 
-URI_x86_64_v2_python3-policycoreutils = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-policycoreutils-3.11-1.el10.noarch.rpm;name=x86_64_v2_python3-policycoreutils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-policycoreutils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-policycoreutils-3.11-1.el10.noarch.rpm;name=x86_64_v2_python3-policycoreutils;unpack=0"
 SRC_URI[x86_64_v2_python3-policycoreutils.sha256sum] = "e381715ca08331e1a9879eb80352022268888dbd55f246a8fe06067733e8f53e"
 
-URI_aarch64_policycoreutils = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/policycoreutils-3.11-1.el10.aarch64.rpm;name=aarch64_policycoreutils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_policycoreutils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/policycoreutils-3.11-1.el10.aarch64.rpm;name=aarch64_policycoreutils;unpack=0"
 SRC_URI[aarch64_policycoreutils.sha256sum] = "8d6fa914de7de7966dc6252de3a303e16e098972a0af09ad19e594a86dd3a22e"
 
-URI_aarch64_policycoreutils-dbus = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/policycoreutils-dbus-3.11-1.el10.noarch.rpm;name=aarch64_policycoreutils-dbus;unpack=0"
-SRC_URI:append = " ${URI_aarch64_policycoreutils-dbus}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/policycoreutils-dbus-3.11-1.el10.noarch.rpm;name=aarch64_policycoreutils-dbus;unpack=0"
 SRC_URI[aarch64_policycoreutils-dbus.sha256sum] = "5e971d4acd72a681fa4de2a10913f927c1b82a0d8497825128f91f41b3577c38"
 
-URI_aarch64_policycoreutils-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/policycoreutils-devel-3.11-1.el10.aarch64.rpm;name=aarch64_policycoreutils-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_policycoreutils-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/policycoreutils-devel-3.11-1.el10.aarch64.rpm;name=aarch64_policycoreutils-devel;unpack=0"
 SRC_URI[aarch64_policycoreutils-devel.sha256sum] = "6e9b9c9e12a8938882241762241f39faf61b6deff08e845447326cf6e29c321a"
 
-URI_aarch64_policycoreutils-gui = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/policycoreutils-gui-3.11-1.el10.noarch.rpm;name=aarch64_policycoreutils-gui;unpack=0"
-SRC_URI:append = " ${URI_aarch64_policycoreutils-gui}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/policycoreutils-gui-3.11-1.el10.noarch.rpm;name=aarch64_policycoreutils-gui;unpack=0"
 SRC_URI[aarch64_policycoreutils-gui.sha256sum] = "218b168687462d05be6562b9f8f4a9bc5e7a695bed6ac2cee869d7d9cf91b0bb"
 
-URI_aarch64_policycoreutils-newrole = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/policycoreutils-newrole-3.11-1.el10.aarch64.rpm;name=aarch64_policycoreutils-newrole;unpack=0"
-SRC_URI:append = " ${URI_aarch64_policycoreutils-newrole}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/policycoreutils-newrole-3.11-1.el10.aarch64.rpm;name=aarch64_policycoreutils-newrole;unpack=0"
 SRC_URI[aarch64_policycoreutils-newrole.sha256sum] = "393306c7d86f4246009ebf2a802d4d8efa06393d9ee24803d7007f9c8321a105"
 
-URI_aarch64_policycoreutils-python-utils = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/policycoreutils-python-utils-3.11-1.el10.noarch.rpm;name=aarch64_policycoreutils-python-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_policycoreutils-python-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/policycoreutils-python-utils-3.11-1.el10.noarch.rpm;name=aarch64_policycoreutils-python-utils;unpack=0"
 SRC_URI[aarch64_policycoreutils-python-utils.sha256sum] = "4120a3251a2e7046ba3e9645756326447485f288a666be3e7c6b6bdf68255fc4"
 
-URI_aarch64_policycoreutils-restorecond = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/policycoreutils-restorecond-3.11-1.el10.aarch64.rpm;name=aarch64_policycoreutils-restorecond;unpack=0"
-SRC_URI:append = " ${URI_aarch64_policycoreutils-restorecond}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/policycoreutils-restorecond-3.11-1.el10.aarch64.rpm;name=aarch64_policycoreutils-restorecond;unpack=0"
 SRC_URI[aarch64_policycoreutils-restorecond.sha256sum] = "3d028ca7d51628941b268285b5542e29dee0bf5035a7323f37beaf0a6da92a00"
 
-URI_aarch64_policycoreutils-sandbox = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/policycoreutils-sandbox-3.11-1.el10.aarch64.rpm;name=aarch64_policycoreutils-sandbox;unpack=0"
-SRC_URI:append = " ${URI_aarch64_policycoreutils-sandbox}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/policycoreutils-sandbox-3.11-1.el10.aarch64.rpm;name=aarch64_policycoreutils-sandbox;unpack=0"
 SRC_URI[aarch64_policycoreutils-sandbox.sha256sum] = "1e530d55eb46984f67550094ff601b1af8760df84a99a7b11a4862771fd05d3c"
 
-URI_aarch64_python3-policycoreutils = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-policycoreutils-3.11-1.el10.noarch.rpm;name=aarch64_python3-policycoreutils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-policycoreutils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-policycoreutils-3.11-1.el10.noarch.rpm;name=aarch64_python3-policycoreutils;unpack=0"
 SRC_URI[aarch64_python3-policycoreutils.sha256sum] = "e381715ca08331e1a9879eb80352022268888dbd55f246a8fe06067733e8f53e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/policycoreutils-3.11-1.el10.riscv64.rpm;name=riscv64_policycoreutils;unpack=0"
+SRC_URI[riscv64_policycoreutils.sha256sum] = "c8f65626da196d3cac933b99e0af69640bfc386def774993644688b8d5a85384"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/policycoreutils-dbus-3.11-1.el10.noarch.rpm;name=riscv64_policycoreutils-dbus;unpack=0"
+SRC_URI[riscv64_policycoreutils-dbus.sha256sum] = "5e971d4acd72a681fa4de2a10913f927c1b82a0d8497825128f91f41b3577c38"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/policycoreutils-devel-3.11-1.el10.riscv64.rpm;name=riscv64_policycoreutils-devel;unpack=0"
+SRC_URI[riscv64_policycoreutils-devel.sha256sum] = "0e99d385c60f474548a4f2b9096a328d3fe2d30e333102ad97ed8f0eebcbd59f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/policycoreutils-gui-3.11-1.el10.noarch.rpm;name=riscv64_policycoreutils-gui;unpack=0"
+SRC_URI[riscv64_policycoreutils-gui.sha256sum] = "218b168687462d05be6562b9f8f4a9bc5e7a695bed6ac2cee869d7d9cf91b0bb"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/policycoreutils-newrole-3.11-1.el10.riscv64.rpm;name=riscv64_policycoreutils-newrole;unpack=0"
+SRC_URI[riscv64_policycoreutils-newrole.sha256sum] = "fcb995ee0b0142e27aca1a06d98227f70a35069cd335b73659f9a5a8423dad2a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/policycoreutils-python-utils-3.11-1.el10.noarch.rpm;name=riscv64_policycoreutils-python-utils;unpack=0"
+SRC_URI[riscv64_policycoreutils-python-utils.sha256sum] = "4120a3251a2e7046ba3e9645756326447485f288a666be3e7c6b6bdf68255fc4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/policycoreutils-restorecond-3.11-1.el10.riscv64.rpm;name=riscv64_policycoreutils-restorecond;unpack=0"
+SRC_URI[riscv64_policycoreutils-restorecond.sha256sum] = "3d7235a147b3fcde9e1783456c84856160e60c1ce32f4006ca97e34e28b05958"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/policycoreutils-sandbox-3.11-1.el10.riscv64.rpm;name=riscv64_policycoreutils-sandbox;unpack=0"
+SRC_URI[riscv64_policycoreutils-sandbox.sha256sum] = "8f6accc68c4c18d3fefda89401d4a0055a284557658b9f9a1e2a3fd0bfa026c1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-policycoreutils-3.11-1.el10.noarch.rpm;name=riscv64_python3-policycoreutils;unpack=0"
+SRC_URI[riscv64_python3-policycoreutils.sha256sum] = "e381715ca08331e1a9879eb80352022268888dbd55f246a8fe06067733e8f53e"
 
 RDEPENDS:policycoreutils = " \
  audit-libs \

@@ -9,17 +9,17 @@ PACKAGES = " \
  lftp \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/lftp-4.9.2-20.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/lftp-4.9.2-20.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8d651ebf68fabae067406fff8f8067e664de0f4e2065e82dd0442ecbf0a82ff1"
 
-URI_x86_64_v2_lftp = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/lftp-4.9.2-20.el10.x86_64_v2.rpm;name=x86_64_v2_lftp;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lftp}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/lftp-4.9.2-20.el10.x86_64_v2.rpm;name=x86_64_v2_lftp;unpack=0"
 SRC_URI[x86_64_v2_lftp.sha256sum] = "4cdf612ccb5fc143971e0c641a647ff9d059d7f30a83113319ac13c525d8f734"
 
-URI_aarch64_lftp = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/lftp-4.9.2-20.el10.aarch64.rpm;name=aarch64_lftp;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lftp}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/lftp-4.9.2-20.el10.aarch64.rpm;name=aarch64_lftp;unpack=0"
 SRC_URI[aarch64_lftp.sha256sum] = "7a32570f3c8975d361570425122a47bf55c3d2fee28c5c315282dcf33547d6fd"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/lftp-4.9.2-20.el10.riscv64.rpm;name=riscv64_lftp;unpack=0"
+SRC_URI[riscv64_lftp.sha256sum] = "ac2144a070d97384a432cbbe38eebe084689e07168138e2fd31fe7c487b0ab08"
 
 RDEPENDS:lftp = " \
  bash \

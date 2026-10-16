@@ -10,25 +10,26 @@ PACKAGES = " \
  apache-commons-cli-javadoc \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/apache-commons-cli-1.9.0-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/apache-commons-cli-1.9.0-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "4aa85f63e1a8677b0f14dea8c5ec5305848d313b5c80efe6045302cb93512ece"
 
-URI_x86_64_v2_apache-commons-cli = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/apache-commons-cli-1.9.0-1.el10.noarch.rpm;name=x86_64_v2_apache-commons-cli;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_apache-commons-cli}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/apache-commons-cli-1.9.0-1.el10.noarch.rpm;name=x86_64_v2_apache-commons-cli;unpack=0"
 SRC_URI[x86_64_v2_apache-commons-cli.sha256sum] = "2fce56cbe56e57fca99b4e3448d20880f0b403c399a96675215fb771927b77d4"
 
-URI_x86_64_v2_apache-commons-cli-javadoc = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/apache-commons-cli-javadoc-1.9.0-1.el10.noarch.rpm;name=x86_64_v2_apache-commons-cli-javadoc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_apache-commons-cli-javadoc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/apache-commons-cli-javadoc-1.9.0-1.el10.noarch.rpm;name=x86_64_v2_apache-commons-cli-javadoc;unpack=0"
 SRC_URI[x86_64_v2_apache-commons-cli-javadoc.sha256sum] = "f3afc607d3fed28132de3f8878d9b8617d86d22f54b0a58c00f651391280a220"
 
-URI_aarch64_apache-commons-cli = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/apache-commons-cli-1.9.0-1.el10.noarch.rpm;name=aarch64_apache-commons-cli;unpack=0"
-SRC_URI:append = " ${URI_aarch64_apache-commons-cli}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/apache-commons-cli-1.9.0-1.el10.noarch.rpm;name=aarch64_apache-commons-cli;unpack=0"
 SRC_URI[aarch64_apache-commons-cli.sha256sum] = "2fce56cbe56e57fca99b4e3448d20880f0b403c399a96675215fb771927b77d4"
 
-URI_aarch64_apache-commons-cli-javadoc = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/apache-commons-cli-javadoc-1.9.0-1.el10.noarch.rpm;name=aarch64_apache-commons-cli-javadoc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_apache-commons-cli-javadoc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/apache-commons-cli-javadoc-1.9.0-1.el10.noarch.rpm;name=aarch64_apache-commons-cli-javadoc;unpack=0"
 SRC_URI[aarch64_apache-commons-cli-javadoc.sha256sum] = "f3afc607d3fed28132de3f8878d9b8617d86d22f54b0a58c00f651391280a220"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/apache-commons-cli-1.9.0-1.el10.noarch.rpm;name=riscv64_apache-commons-cli;unpack=0"
+SRC_URI[riscv64_apache-commons-cli.sha256sum] = "2fce56cbe56e57fca99b4e3448d20880f0b403c399a96675215fb771927b77d4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/apache-commons-cli-javadoc-1.9.0-1.el10.noarch.rpm;name=riscv64_apache-commons-cli-javadoc;unpack=0"
+SRC_URI[riscv64_apache-commons-cli-javadoc.sha256sum] = "f3afc607d3fed28132de3f8878d9b8617d86d22f54b0a58c00f651391280a220"
 
 RDEPENDS:apache-commons-cli = " \
  javapackages-filesystem \

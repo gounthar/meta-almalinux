@@ -5,47 +5,47 @@ inherit dnf-bridge
 PN = "rust-anstyle-parse0.2"
 PV = "0.2.7"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-anstyle-parse0.2+core-devel \
  rust-anstyle-parse0.2+default-devel \
  rust-anstyle-parse0.2+utf8-devel \
  rust-anstyle-parse0.2-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-anstyle-parse0.2+core-devel \
+ rust-anstyle-parse0.2+default-devel \
+ rust-anstyle-parse0.2+utf8-devel \
+ rust-anstyle-parse0.2-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-anstyle-parse0.2-0.2.7-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-anstyle-parse0.2-0.2.7-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "db1335d8e56ebfa60377760f13c06099329489fe851330612275484783d82839"
 
-URI_x86_64_v2_rust-anstyle-parse0.2+core-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-anstyle-parse0.2+core-devel-0.2.7-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-anstyle-parse0.2+core-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-anstyle-parse0.2+core-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-anstyle-parse0.2+core-devel-0.2.7-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-anstyle-parse0.2+core-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-anstyle-parse0.2+core-devel.sha256sum] = "0317704527ce866b6e40ec9f221735491e9ce23415f500bf4b488ba677c953fa"
 
-URI_x86_64_v2_rust-anstyle-parse0.2+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-anstyle-parse0.2+default-devel-0.2.7-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-anstyle-parse0.2+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-anstyle-parse0.2+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-anstyle-parse0.2+default-devel-0.2.7-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-anstyle-parse0.2+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-anstyle-parse0.2+default-devel.sha256sum] = "cdcac438b0d05f2e3f632ccabf6187003cd5a8053d4e0b52d8c834f2b095cf57"
 
-URI_x86_64_v2_rust-anstyle-parse0.2+utf8-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-anstyle-parse0.2+utf8-devel-0.2.7-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-anstyle-parse0.2+utf8-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-anstyle-parse0.2+utf8-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-anstyle-parse0.2+utf8-devel-0.2.7-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-anstyle-parse0.2+utf8-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-anstyle-parse0.2+utf8-devel.sha256sum] = "de94db25ea2565441b160178e0f5875d6570d37ed9f6ff50e9f4b0c2975c3128"
 
-URI_x86_64_v2_rust-anstyle-parse0.2-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-anstyle-parse0.2-devel-0.2.7-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-anstyle-parse0.2-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-anstyle-parse0.2-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-anstyle-parse0.2-devel-0.2.7-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-anstyle-parse0.2-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-anstyle-parse0.2-devel.sha256sum] = "7430a0519bce5e8057a5b5547480014ef1bd342dd77d7eb999b71fe05a76bd96"
 
-URI_aarch64_rust-anstyle-parse0.2+core-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-anstyle-parse0.2+core-devel-0.2.7-1.el10_2.noarch.rpm;name=aarch64_rust-anstyle-parse0.2+core-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-anstyle-parse0.2+core-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-anstyle-parse0.2+core-devel-0.2.7-1.el10_2.noarch.rpm;name=aarch64_rust-anstyle-parse0.2+core-devel;unpack=0"
 SRC_URI[aarch64_rust-anstyle-parse0.2+core-devel.sha256sum] = "293c1b677b8b00eb2c775bdb03b6f1421514ce761f70d9877bff28569ccc1323"
 
-URI_aarch64_rust-anstyle-parse0.2+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-anstyle-parse0.2+default-devel-0.2.7-1.el10_2.noarch.rpm;name=aarch64_rust-anstyle-parse0.2+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-anstyle-parse0.2+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-anstyle-parse0.2+default-devel-0.2.7-1.el10_2.noarch.rpm;name=aarch64_rust-anstyle-parse0.2+default-devel;unpack=0"
 SRC_URI[aarch64_rust-anstyle-parse0.2+default-devel.sha256sum] = "1b488c2167460a83e546c77e6e75ec1bc5d538e22a112e7a8694f389c3eb3075"
 
-URI_aarch64_rust-anstyle-parse0.2+utf8-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-anstyle-parse0.2+utf8-devel-0.2.7-1.el10_2.noarch.rpm;name=aarch64_rust-anstyle-parse0.2+utf8-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-anstyle-parse0.2+utf8-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-anstyle-parse0.2+utf8-devel-0.2.7-1.el10_2.noarch.rpm;name=aarch64_rust-anstyle-parse0.2+utf8-devel;unpack=0"
 SRC_URI[aarch64_rust-anstyle-parse0.2+utf8-devel.sha256sum] = "705e1974b5942884f08641b7de59f4b1a4112b5661cc071070fc296d05f013e1"
 
-URI_aarch64_rust-anstyle-parse0.2-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-anstyle-parse0.2-devel-0.2.7-1.el10_2.noarch.rpm;name=aarch64_rust-anstyle-parse0.2-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-anstyle-parse0.2-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-anstyle-parse0.2-devel-0.2.7-1.el10_2.noarch.rpm;name=aarch64_rust-anstyle-parse0.2-devel;unpack=0"
 SRC_URI[aarch64_rust-anstyle-parse0.2-devel.sha256sum] = "a98387d8015afd196af346904c35f0165bedf0be9431c5c4101dd2db3d097aa1"
 
 RDEPENDS:rust-anstyle-parse0.2+core-devel = " \

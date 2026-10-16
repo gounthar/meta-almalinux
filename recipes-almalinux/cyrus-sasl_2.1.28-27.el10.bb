@@ -18,89 +18,98 @@ PACKAGES = " \
  cyrus-sasl-sql \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/cyrus-sasl-2.1.28-27.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/cyrus-sasl-2.1.28-27.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "4e32c62010fd86ecb45d1fb1d4c1d6891b45820216d643ad79be9a88e1e2274d"
 
-URI_x86_64_v2_cyrus-sasl = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/cyrus-sasl-2.1.28-27.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-sasl;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cyrus-sasl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/cyrus-sasl-2.1.28-27.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-sasl;unpack=0"
 SRC_URI[x86_64_v2_cyrus-sasl.sha256sum] = "585ef230ca5b8a618e9310a82e3e0de79f7fb8cc607a1a613ff52b4882652973"
 
-URI_x86_64_v2_cyrus-sasl-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cyrus-sasl-devel-2.1.28-27.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-sasl-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cyrus-sasl-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cyrus-sasl-devel-2.1.28-27.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-sasl-devel;unpack=0"
 SRC_URI[x86_64_v2_cyrus-sasl-devel.sha256sum] = "431c1ab898a514b7c5106ff18780480f6c962dd8828eef276ab48bae1011af5d"
 
-URI_x86_64_v2_cyrus-sasl-gs2 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cyrus-sasl-gs2-2.1.28-27.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-sasl-gs2;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cyrus-sasl-gs2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cyrus-sasl-gs2-2.1.28-27.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-sasl-gs2;unpack=0"
 SRC_URI[x86_64_v2_cyrus-sasl-gs2.sha256sum] = "c397dd9dc890d64343ae8a080f8e075f17b6ad719618528a690e06b8e349a586"
 
-URI_x86_64_v2_cyrus-sasl-gssapi = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/cyrus-sasl-gssapi-2.1.28-27.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-sasl-gssapi;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cyrus-sasl-gssapi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/cyrus-sasl-gssapi-2.1.28-27.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-sasl-gssapi;unpack=0"
 SRC_URI[x86_64_v2_cyrus-sasl-gssapi.sha256sum] = "2fc570d3f57f609287076e255fc542d66606886db9408ab814162a80641fb86e"
 
-URI_x86_64_v2_cyrus-sasl-ldap = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cyrus-sasl-ldap-2.1.28-27.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-sasl-ldap;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cyrus-sasl-ldap}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cyrus-sasl-ldap-2.1.28-27.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-sasl-ldap;unpack=0"
 SRC_URI[x86_64_v2_cyrus-sasl-ldap.sha256sum] = "976abc6d194bb9399bc54d5dfa3c6b5f60091713c17de6f563900c9d400cb0f3"
 
-URI_x86_64_v2_cyrus-sasl-lib = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/cyrus-sasl-lib-2.1.28-27.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-sasl-lib;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cyrus-sasl-lib}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/cyrus-sasl-lib-2.1.28-27.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-sasl-lib;unpack=0"
 SRC_URI[x86_64_v2_cyrus-sasl-lib.sha256sum] = "55975f7bd6bb9500ff6084b137101e7b7764ab69e51c3400b2adc7d811a36263"
 
-URI_x86_64_v2_cyrus-sasl-md5 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cyrus-sasl-md5-2.1.28-27.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-sasl-md5;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cyrus-sasl-md5}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cyrus-sasl-md5-2.1.28-27.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-sasl-md5;unpack=0"
 SRC_URI[x86_64_v2_cyrus-sasl-md5.sha256sum] = "3390df29d0f4b85eea439d9d4af29843fc2a661136a25a38e7d1022d54769d8c"
 
-URI_x86_64_v2_cyrus-sasl-plain = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/cyrus-sasl-plain-2.1.28-27.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-sasl-plain;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cyrus-sasl-plain}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/cyrus-sasl-plain-2.1.28-27.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-sasl-plain;unpack=0"
 SRC_URI[x86_64_v2_cyrus-sasl-plain.sha256sum] = "a09da4da004564648f860dbb6360b9d22e668dd3412f7f70203ca7d5baeb8d62"
 
-URI_x86_64_v2_cyrus-sasl-scram = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/cyrus-sasl-scram-2.1.28-27.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-sasl-scram;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cyrus-sasl-scram}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/cyrus-sasl-scram-2.1.28-27.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-sasl-scram;unpack=0"
 SRC_URI[x86_64_v2_cyrus-sasl-scram.sha256sum] = "92a5ffa8d800c7df7c36abf9a4d6f74aa4855e1729d69eabcf97655bf9ffefaf"
 
-URI_x86_64_v2_cyrus-sasl-sql = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cyrus-sasl-sql-2.1.28-27.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-sasl-sql;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cyrus-sasl-sql}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cyrus-sasl-sql-2.1.28-27.el10.x86_64_v2.rpm;name=x86_64_v2_cyrus-sasl-sql;unpack=0"
 SRC_URI[x86_64_v2_cyrus-sasl-sql.sha256sum] = "3cbff549c698307a5c7f37ad5137b29d4a30ae3af218f0179406e2c97bcb399b"
 
-URI_aarch64_cyrus-sasl = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/cyrus-sasl-2.1.28-27.el10.aarch64.rpm;name=aarch64_cyrus-sasl;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cyrus-sasl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/cyrus-sasl-2.1.28-27.el10.aarch64.rpm;name=aarch64_cyrus-sasl;unpack=0"
 SRC_URI[aarch64_cyrus-sasl.sha256sum] = "dca8b04dfc7dad3c2eba144bbe4ffe1957965f71d227889d4aae188767a97407"
 
-URI_aarch64_cyrus-sasl-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cyrus-sasl-devel-2.1.28-27.el10.aarch64.rpm;name=aarch64_cyrus-sasl-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cyrus-sasl-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cyrus-sasl-devel-2.1.28-27.el10.aarch64.rpm;name=aarch64_cyrus-sasl-devel;unpack=0"
 SRC_URI[aarch64_cyrus-sasl-devel.sha256sum] = "4bc78222799a7be04c60a4a6f26f7c0ce63a9f856330d7af2abe7689c6dd1f59"
 
-URI_aarch64_cyrus-sasl-gs2 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cyrus-sasl-gs2-2.1.28-27.el10.aarch64.rpm;name=aarch64_cyrus-sasl-gs2;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cyrus-sasl-gs2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cyrus-sasl-gs2-2.1.28-27.el10.aarch64.rpm;name=aarch64_cyrus-sasl-gs2;unpack=0"
 SRC_URI[aarch64_cyrus-sasl-gs2.sha256sum] = "8ed1fc73c02fe2cc1514aca3497b520de31d396b07dae029e2701803409ac7a6"
 
-URI_aarch64_cyrus-sasl-gssapi = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/cyrus-sasl-gssapi-2.1.28-27.el10.aarch64.rpm;name=aarch64_cyrus-sasl-gssapi;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cyrus-sasl-gssapi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/cyrus-sasl-gssapi-2.1.28-27.el10.aarch64.rpm;name=aarch64_cyrus-sasl-gssapi;unpack=0"
 SRC_URI[aarch64_cyrus-sasl-gssapi.sha256sum] = "ac4fd94458220eb2fb2f7765b222fff1fa256e2c17575bcab9e8fbc18c957c18"
 
-URI_aarch64_cyrus-sasl-ldap = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cyrus-sasl-ldap-2.1.28-27.el10.aarch64.rpm;name=aarch64_cyrus-sasl-ldap;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cyrus-sasl-ldap}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cyrus-sasl-ldap-2.1.28-27.el10.aarch64.rpm;name=aarch64_cyrus-sasl-ldap;unpack=0"
 SRC_URI[aarch64_cyrus-sasl-ldap.sha256sum] = "7088ed2a49d47a2fb6e4104744825c405edc21847f9efa1e4e4a7477dc92f435"
 
-URI_aarch64_cyrus-sasl-lib = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/cyrus-sasl-lib-2.1.28-27.el10.aarch64.rpm;name=aarch64_cyrus-sasl-lib;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cyrus-sasl-lib}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/cyrus-sasl-lib-2.1.28-27.el10.aarch64.rpm;name=aarch64_cyrus-sasl-lib;unpack=0"
 SRC_URI[aarch64_cyrus-sasl-lib.sha256sum] = "49c1b2621709fc4fe730e084b89c5a91ebfdfdeb34e0cf5cea06161729acfb45"
 
-URI_aarch64_cyrus-sasl-md5 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cyrus-sasl-md5-2.1.28-27.el10.aarch64.rpm;name=aarch64_cyrus-sasl-md5;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cyrus-sasl-md5}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cyrus-sasl-md5-2.1.28-27.el10.aarch64.rpm;name=aarch64_cyrus-sasl-md5;unpack=0"
 SRC_URI[aarch64_cyrus-sasl-md5.sha256sum] = "0f0686c98a379604cfd60b9c73ae18b614e97a57c5a0d83dac89178bd7ff45f9"
 
-URI_aarch64_cyrus-sasl-plain = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/cyrus-sasl-plain-2.1.28-27.el10.aarch64.rpm;name=aarch64_cyrus-sasl-plain;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cyrus-sasl-plain}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/cyrus-sasl-plain-2.1.28-27.el10.aarch64.rpm;name=aarch64_cyrus-sasl-plain;unpack=0"
 SRC_URI[aarch64_cyrus-sasl-plain.sha256sum] = "b51872dc7e9c87838774769e4df820c218861e0e8e21d618a4d622f0d6dddd0f"
 
-URI_aarch64_cyrus-sasl-scram = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/cyrus-sasl-scram-2.1.28-27.el10.aarch64.rpm;name=aarch64_cyrus-sasl-scram;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cyrus-sasl-scram}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/cyrus-sasl-scram-2.1.28-27.el10.aarch64.rpm;name=aarch64_cyrus-sasl-scram;unpack=0"
 SRC_URI[aarch64_cyrus-sasl-scram.sha256sum] = "2b16ae4d67016af91bd7cb659ed1e93c56e6916cfecadb9fdce7150453d9a488"
 
-URI_aarch64_cyrus-sasl-sql = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cyrus-sasl-sql-2.1.28-27.el10.aarch64.rpm;name=aarch64_cyrus-sasl-sql;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cyrus-sasl-sql}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cyrus-sasl-sql-2.1.28-27.el10.aarch64.rpm;name=aarch64_cyrus-sasl-sql;unpack=0"
 SRC_URI[aarch64_cyrus-sasl-sql.sha256sum] = "40ffded3d8682c59762f7a084f5f05acdeebf7a2360cf29fbb08b2686152ccf3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/cyrus-sasl-2.1.28-27.el10.riscv64.rpm;name=riscv64_cyrus-sasl;unpack=0"
+SRC_URI[riscv64_cyrus-sasl.sha256sum] = "3e3edd8df0fdf19293f84947338276e25fa6bd4ee47834d173eb9d196257e151"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/cyrus-sasl-devel-2.1.28-27.el10.riscv64.rpm;name=riscv64_cyrus-sasl-devel;unpack=0"
+SRC_URI[riscv64_cyrus-sasl-devel.sha256sum] = "ec4ee5b0ec2ddad3480b2b203466d533072357eb5ca6ebf0b8d195fd7551af21"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/cyrus-sasl-gs2-2.1.28-27.el10.riscv64.rpm;name=riscv64_cyrus-sasl-gs2;unpack=0"
+SRC_URI[riscv64_cyrus-sasl-gs2.sha256sum] = "7939ab5a0c78146615c1466e0a8c235bc2b8402b9e43d221841c80f6e51a1e54"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/cyrus-sasl-gssapi-2.1.28-27.el10.riscv64.rpm;name=riscv64_cyrus-sasl-gssapi;unpack=0"
+SRC_URI[riscv64_cyrus-sasl-gssapi.sha256sum] = "3f9fb7d078892b97730ab88712c7e8e43e2951ab72368d25ee2a2a0cc5b36420"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/cyrus-sasl-ldap-2.1.28-27.el10.riscv64.rpm;name=riscv64_cyrus-sasl-ldap;unpack=0"
+SRC_URI[riscv64_cyrus-sasl-ldap.sha256sum] = "620445b692d19667f25c28e2088fa218ccc29bacfd972f9881128d00c04b7d8d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/cyrus-sasl-lib-2.1.28-27.el10.riscv64.rpm;name=riscv64_cyrus-sasl-lib;unpack=0"
+SRC_URI[riscv64_cyrus-sasl-lib.sha256sum] = "abf253212cc45957bd1cea3ffc997ca39534d045bfb13c540ea6a77e0c2f383f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/cyrus-sasl-md5-2.1.28-27.el10.riscv64.rpm;name=riscv64_cyrus-sasl-md5;unpack=0"
+SRC_URI[riscv64_cyrus-sasl-md5.sha256sum] = "0e476b15391778b541d51fb75d830a6aa3cabdabefb73ea8cbba02d60a35a32b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/cyrus-sasl-plain-2.1.28-27.el10.riscv64.rpm;name=riscv64_cyrus-sasl-plain;unpack=0"
+SRC_URI[riscv64_cyrus-sasl-plain.sha256sum] = "691ef80f704fc468f02894e0cbcfc0e5984b1ae6aceb3df7dd0f242178e05888"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/cyrus-sasl-scram-2.1.28-27.el10.riscv64.rpm;name=riscv64_cyrus-sasl-scram;unpack=0"
+SRC_URI[riscv64_cyrus-sasl-scram.sha256sum] = "677550ebbb688069d051bcd1029eec979f308011c975d5a6bc69b706cc055a7d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/cyrus-sasl-sql-2.1.28-27.el10.riscv64.rpm;name=riscv64_cyrus-sasl-sql;unpack=0"
+SRC_URI[riscv64_cyrus-sasl-sql.sha256sum] = "262603100a7c580dd525bcb0d30165b43389797afc96a69954d33e6feb93e45f"
 
 RDEPENDS:cyrus-sasl = " \
  bash \

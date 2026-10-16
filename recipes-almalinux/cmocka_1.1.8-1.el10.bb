@@ -10,25 +10,26 @@ PACKAGES = " \
  libcmocka-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/cmocka-1.1.8-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/cmocka-1.1.8-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b71e29673a3b37c49fb2fe8f2c4ea1f516885209ec1ab274908a6ec2be0e36ba"
 
-URI_x86_64_v2_libcmocka = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libcmocka-1.1.8-1.el10.x86_64_v2.rpm;name=x86_64_v2_libcmocka;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libcmocka}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libcmocka-1.1.8-1.el10.x86_64_v2.rpm;name=x86_64_v2_libcmocka;unpack=0"
 SRC_URI[x86_64_v2_libcmocka.sha256sum] = "0850d9bb5a5af0b7375e0b1388f3626ad745c2e8e76aeee4effd6a19f7179e76"
 
-URI_x86_64_v2_libcmocka-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libcmocka-devel-1.1.8-1.el10.x86_64_v2.rpm;name=x86_64_v2_libcmocka-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libcmocka-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libcmocka-devel-1.1.8-1.el10.x86_64_v2.rpm;name=x86_64_v2_libcmocka-devel;unpack=0"
 SRC_URI[x86_64_v2_libcmocka-devel.sha256sum] = "39e4fabb4870dd7fa235d5b023f43b36b6061c627cdf78871941e3226b5b880a"
 
-URI_aarch64_libcmocka = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libcmocka-1.1.8-1.el10.aarch64.rpm;name=aarch64_libcmocka;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libcmocka}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libcmocka-1.1.8-1.el10.aarch64.rpm;name=aarch64_libcmocka;unpack=0"
 SRC_URI[aarch64_libcmocka.sha256sum] = "4efe0bdcedd3ecf94150dc1b33052b45b78c10dbf4939c165c58e99dd243c286"
 
-URI_aarch64_libcmocka-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libcmocka-devel-1.1.8-1.el10.aarch64.rpm;name=aarch64_libcmocka-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libcmocka-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libcmocka-devel-1.1.8-1.el10.aarch64.rpm;name=aarch64_libcmocka-devel;unpack=0"
 SRC_URI[aarch64_libcmocka-devel.sha256sum] = "594a8332f58999dff0d6410c50899bed3fe972ea7015a243632ce34291df453e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libcmocka-1.1.8-1.el10.riscv64.rpm;name=riscv64_libcmocka;unpack=0"
+SRC_URI[riscv64_libcmocka.sha256sum] = "6f3d3af20066ffe381ad2745b91cf6831cecd26929d1130cf636bcc3450a3ee2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libcmocka-devel-1.1.8-1.el10.riscv64.rpm;name=riscv64_libcmocka-devel;unpack=0"
+SRC_URI[riscv64_libcmocka-devel.sha256sum] = "b72da0bd68b38ae64c92a3ac49ca871cfeee208ea56c6396f5488ddc514a5f1e"
 
 RDEPENDS:libcmocka = " \
  glibc \

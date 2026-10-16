@@ -5,7 +5,7 @@ inherit dnf-bridge
 PN = "rust-io-lifetimes"
 PV = "3.0.1"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-io-lifetimes+async-std-devel \
  rust-io-lifetimes+close-devel \
  rust-io-lifetimes+default-devel \
@@ -15,46 +15,77 @@ PACKAGES = " \
  rust-io-lifetimes+socket2-devel \
  rust-io-lifetimes+tokio-devel \
  rust-io-lifetimes-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-io-lifetimes+async-std-devel \
+ rust-io-lifetimes+close-devel \
+ rust-io-lifetimes+default-devel \
+ rust-io-lifetimes+libc-devel \
+ rust-io-lifetimes+mio-devel \
+ rust-io-lifetimes+os_pipe-devel \
+ rust-io-lifetimes+socket2-devel \
+ rust-io-lifetimes+tokio-devel \
+ rust-io-lifetimes-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-io-lifetimes-3.0.1-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-io-lifetimes-3.0.1-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "70030554756f3f3b130f38674583afc069d150474c7f1d11ead1ef6b1464f06d"
 
-URI_aarch64_rust-io-lifetimes+async-std-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-io-lifetimes+async-std-devel-3.0.1-1.el10_3.noarch.rpm;name=aarch64_rust-io-lifetimes+async-std-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-io-lifetimes+async-std-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-io-lifetimes+async-std-devel-3.0.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-io-lifetimes+async-std-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-io-lifetimes+async-std-devel.sha256sum] = "524a453c56a6eb1001a73f78662be4fe9275f348a5966f53e3d0f77806f3c9a2"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-io-lifetimes+close-devel-3.0.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-io-lifetimes+close-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-io-lifetimes+close-devel.sha256sum] = "08d20006f83e7b10a8d6e765d7c7ce1786298d3f5035a3cf0db95b17dd7ade82"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-io-lifetimes+default-devel-3.0.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-io-lifetimes+default-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-io-lifetimes+default-devel.sha256sum] = "7f45e11ab4b7242ee9e0569c238e396d31e9bb651ff76e10033d7b98d12127b8"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-io-lifetimes+libc-devel-3.0.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-io-lifetimes+libc-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-io-lifetimes+libc-devel.sha256sum] = "37f0c541d4cded775731056439c8db33baafb33e10d994637d469cf39f5b2305"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-io-lifetimes+mio-devel-3.0.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-io-lifetimes+mio-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-io-lifetimes+mio-devel.sha256sum] = "9627736426a31d39b22a7105faf59127eb2e8a155809ae4d1256f100788aa739"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-io-lifetimes+os_pipe-devel-3.0.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-io-lifetimes+os_pipe-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-io-lifetimes+os_pipe-devel.sha256sum] = "ee92053c18a2f72e11acd6c48358719d710bceef78f7fe91ee5006b310a5ec14"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-io-lifetimes+socket2-devel-3.0.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-io-lifetimes+socket2-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-io-lifetimes+socket2-devel.sha256sum] = "6fe43bd2e36bc03a350be3a01e2b54355dd0cae6a5a296a48c7ef18147b793ac"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-io-lifetimes+tokio-devel-3.0.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-io-lifetimes+tokio-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-io-lifetimes+tokio-devel.sha256sum] = "89043a2ba375fdd229dd2c9f3db0da46e98f81d83c80d94a82c9e8ed2070cbb5"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-io-lifetimes-devel-3.0.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-io-lifetimes-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-io-lifetimes-devel.sha256sum] = "310d7474261e44c1fa0c1a3eb6ef639e6d4dea0e2b1f749daad1118a8c2b3980"
+
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-io-lifetimes+async-std-devel-3.0.1-1.el10_3.noarch.rpm;name=aarch64_rust-io-lifetimes+async-std-devel;unpack=0"
 SRC_URI[aarch64_rust-io-lifetimes+async-std-devel.sha256sum] = "3815deb2c47e9b9e8e912cac9eb0bb934b36e0de6c965adebc13fbde14c74644"
 
-URI_aarch64_rust-io-lifetimes+close-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-io-lifetimes+close-devel-3.0.1-1.el10_3.noarch.rpm;name=aarch64_rust-io-lifetimes+close-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-io-lifetimes+close-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-io-lifetimes+close-devel-3.0.1-1.el10_3.noarch.rpm;name=aarch64_rust-io-lifetimes+close-devel;unpack=0"
 SRC_URI[aarch64_rust-io-lifetimes+close-devel.sha256sum] = "3583b0db7d9ab68aaee54688f0878ffd9227f5dfc2a11562857e1bf7adf562f1"
 
-URI_aarch64_rust-io-lifetimes+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-io-lifetimes+default-devel-3.0.1-1.el10_3.noarch.rpm;name=aarch64_rust-io-lifetimes+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-io-lifetimes+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-io-lifetimes+default-devel-3.0.1-1.el10_3.noarch.rpm;name=aarch64_rust-io-lifetimes+default-devel;unpack=0"
 SRC_URI[aarch64_rust-io-lifetimes+default-devel.sha256sum] = "2b8fe0bcc9c6b8609cb359e87eedd95acdc8cd2b4440389c85c1b25e18a496e4"
 
-URI_aarch64_rust-io-lifetimes+libc-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-io-lifetimes+libc-devel-3.0.1-1.el10_3.noarch.rpm;name=aarch64_rust-io-lifetimes+libc-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-io-lifetimes+libc-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-io-lifetimes+libc-devel-3.0.1-1.el10_3.noarch.rpm;name=aarch64_rust-io-lifetimes+libc-devel;unpack=0"
 SRC_URI[aarch64_rust-io-lifetimes+libc-devel.sha256sum] = "f3cc35e95372e1d49cc02d292f2b24eff7293458a48435330644d1625d023e41"
 
-URI_aarch64_rust-io-lifetimes+mio-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-io-lifetimes+mio-devel-3.0.1-1.el10_3.noarch.rpm;name=aarch64_rust-io-lifetimes+mio-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-io-lifetimes+mio-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-io-lifetimes+mio-devel-3.0.1-1.el10_3.noarch.rpm;name=aarch64_rust-io-lifetimes+mio-devel;unpack=0"
 SRC_URI[aarch64_rust-io-lifetimes+mio-devel.sha256sum] = "fdb9043fa6373edef79bea4f1fd03c26c766bfb473548e52b27f65f15ca57c6a"
 
-URI_aarch64_rust-io-lifetimes+os_pipe-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-io-lifetimes+os_pipe-devel-3.0.1-1.el10_3.noarch.rpm;name=aarch64_rust-io-lifetimes+os_pipe-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-io-lifetimes+os_pipe-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-io-lifetimes+os_pipe-devel-3.0.1-1.el10_3.noarch.rpm;name=aarch64_rust-io-lifetimes+os_pipe-devel;unpack=0"
 SRC_URI[aarch64_rust-io-lifetimes+os_pipe-devel.sha256sum] = "4fb4c09b95a099b9f5cd6d67530c487070fd8cd8d0e8fd63876c595cf0ab9f95"
 
-URI_aarch64_rust-io-lifetimes+socket2-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-io-lifetimes+socket2-devel-3.0.1-1.el10_3.noarch.rpm;name=aarch64_rust-io-lifetimes+socket2-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-io-lifetimes+socket2-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-io-lifetimes+socket2-devel-3.0.1-1.el10_3.noarch.rpm;name=aarch64_rust-io-lifetimes+socket2-devel;unpack=0"
 SRC_URI[aarch64_rust-io-lifetimes+socket2-devel.sha256sum] = "2df389e1f444a719f411a9b10ed44bc794d51c0bcb1a72442dd8ea0f6bdbb467"
 
-URI_aarch64_rust-io-lifetimes+tokio-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-io-lifetimes+tokio-devel-3.0.1-1.el10_3.noarch.rpm;name=aarch64_rust-io-lifetimes+tokio-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-io-lifetimes+tokio-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-io-lifetimes+tokio-devel-3.0.1-1.el10_3.noarch.rpm;name=aarch64_rust-io-lifetimes+tokio-devel;unpack=0"
 SRC_URI[aarch64_rust-io-lifetimes+tokio-devel.sha256sum] = "a5d2347b87f1a6e1c247e13acd344b1d60b69124b4d1531554a97fb479cffcd7"
 
-URI_aarch64_rust-io-lifetimes-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-io-lifetimes-devel-3.0.1-1.el10_3.noarch.rpm;name=aarch64_rust-io-lifetimes-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-io-lifetimes-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-io-lifetimes-devel-3.0.1-1.el10_3.noarch.rpm;name=aarch64_rust-io-lifetimes-devel;unpack=0"
 SRC_URI[aarch64_rust-io-lifetimes-devel.sha256sum] = "8a27c1e602fe42caba20e699a6cb75b6ecb948bee1989e33e7bd74154273c4b0"
 
 RDEPENDS:rust-io-lifetimes+async-std-devel = " \

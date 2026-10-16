@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "debmirror"
 PV = "2.48"
 PR = "3.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  debmirror \
- "
+"
+PACKAGES:aarch64 = " \
+ debmirror \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/d/debmirror-2.48-3.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/d/debmirror-2.48-3.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "43eb802d411234f605d518e8cf2d6a515ae9ecc3d7f964a65e909d31502b9536"
 
-URI_x86_64_v2_debmirror = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/debmirror-2.48-3.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_debmirror;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_debmirror}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/debmirror-2.48-3.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_debmirror;unpack=0"
 SRC_URI[x86_64_v2_debmirror.sha256sum] = "592ca03e1c1d8025d80c43d8fea3bb7f21b2a00ecb725593fb5da97224af610a"
 
-URI_aarch64_debmirror = "${EPEL_MIRROR}/aarch64/Packages/d/debmirror-2.48-3.el10_3.noarch.rpm;name=aarch64_debmirror;unpack=0"
-SRC_URI:append = " ${URI_aarch64_debmirror}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/d/debmirror-2.48-3.el10_3.noarch.rpm;name=aarch64_debmirror;unpack=0"
 SRC_URI[aarch64_debmirror.sha256sum] = "12436452180af2394bf444717badac0749b6dd9bd7bb3b9a8ceb96fba604997d"
 
 RDEPENDS:debmirror = " \

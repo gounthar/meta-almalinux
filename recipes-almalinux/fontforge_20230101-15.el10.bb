@@ -9,17 +9,17 @@ PACKAGES = " \
  fontforge \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/fontforge-20230101-15.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/fontforge-20230101-15.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6cf83425920280a96597ac208e72fe4d9365004fa612a2c624721bea0bc4fa9e"
 
-URI_x86_64_v2_fontforge = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/fontforge-20230101-15.el10.x86_64_v2.rpm;name=x86_64_v2_fontforge;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_fontforge}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/fontforge-20230101-15.el10.x86_64_v2.rpm;name=x86_64_v2_fontforge;unpack=0"
 SRC_URI[x86_64_v2_fontforge.sha256sum] = "03ff5ccbe4aabd1f99361107a99d5e50a977b03b7c0a1cf008fd55262147f2a6"
 
-URI_aarch64_fontforge = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/fontforge-20230101-15.el10.aarch64.rpm;name=aarch64_fontforge;unpack=0"
-SRC_URI:append = " ${URI_aarch64_fontforge}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/fontforge-20230101-15.el10.aarch64.rpm;name=aarch64_fontforge;unpack=0"
 SRC_URI[aarch64_fontforge.sha256sum] = "c21e8e1655adc7cc8e0c3401620ec3cc9607ee53b983939e9d382cc390c98fc3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/fontforge-20230101-15.el10.riscv64.rpm;name=riscv64_fontforge;unpack=0"
+SRC_URI[riscv64_fontforge.sha256sum] = "0ed26947f390fb965945df6ae9d2f2090fc26e8bc34b655fc37335da3f691a4c"
 
 RDEPENDS:fontforge = " \
  cairo \

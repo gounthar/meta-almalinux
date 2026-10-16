@@ -12,17 +12,17 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/h/hiprand-7.2.0-4.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/h/hiprand-7.2.0-4.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "9af4c770263cdb25cabb38107f4c6ea18b77c862c22f267524316d0b526ec7c1"
 
-URI_x86_64_v2_hiprand = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/hiprand-7.2.0-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_hiprand;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_hiprand}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/hiprand-7.2.0-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_hiprand;unpack=0"
 SRC_URI[x86_64_v2_hiprand.sha256sum] = "9021d636cbd379c45885555c75427b0cd8df8b841ac4db66b7e7afe060997930"
 
-URI_x86_64_v2_hiprand-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/hiprand-devel-7.2.0-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_hiprand-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_hiprand-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/hiprand-devel-7.2.0-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_hiprand-devel;unpack=0"
 SRC_URI[x86_64_v2_hiprand-devel.sha256sum] = "ce495b3da2789645650612dec60712d2ce9ef4a57163fe72714c90cecf253e05"
 
 RDEPENDS:hiprand = " \

@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-tracing-indicatif"
 PV = "0.3.14"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-tracing-indicatif+default-devel \
  rust-tracing-indicatif-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-tracing-indicatif+default-devel \
+ rust-tracing-indicatif-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-tracing-indicatif-0.3.14-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-tracing-indicatif-0.3.14-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "98ede0704de86b51f7582316695856f92ea3cc59dbcb933c761df7432be6f04e"
 
-URI_x86_64_v2_rust-tracing-indicatif+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-tracing-indicatif+default-devel-0.3.14-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-tracing-indicatif+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-tracing-indicatif+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-tracing-indicatif+default-devel-0.3.14-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-tracing-indicatif+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-tracing-indicatif+default-devel.sha256sum] = "8c7b1a154e062a37f9d04a04369359b1eb4ef5a18e21c810705df40b0cdd1483"
 
-URI_x86_64_v2_rust-tracing-indicatif-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-tracing-indicatif-devel-0.3.14-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-tracing-indicatif-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-tracing-indicatif-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-tracing-indicatif-devel-0.3.14-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-tracing-indicatif-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-tracing-indicatif-devel.sha256sum] = "f231eb8e944cd1d4fe38e138ddb0ec5b829d27ee64c21eb9f130168c95b417b5"
 
-URI_aarch64_rust-tracing-indicatif+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-tracing-indicatif+default-devel-0.3.14-1.el10_3.noarch.rpm;name=aarch64_rust-tracing-indicatif+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-tracing-indicatif+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-tracing-indicatif+default-devel-0.3.14-1.el10_3.noarch.rpm;name=aarch64_rust-tracing-indicatif+default-devel;unpack=0"
 SRC_URI[aarch64_rust-tracing-indicatif+default-devel.sha256sum] = "e2e94ba440f3170b601756534b4998006d87c40abb3e32411db20f05faddd4fb"
 
-URI_aarch64_rust-tracing-indicatif-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-tracing-indicatif-devel-0.3.14-1.el10_3.noarch.rpm;name=aarch64_rust-tracing-indicatif-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-tracing-indicatif-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-tracing-indicatif-devel-0.3.14-1.el10_3.noarch.rpm;name=aarch64_rust-tracing-indicatif-devel;unpack=0"
 SRC_URI[aarch64_rust-tracing-indicatif-devel.sha256sum] = "11949068aa666006049393683fb6e308474a72b1415eac46938d6dea4bdf7d5d"
 
 RDEPENDS:rust-tracing-indicatif+default-devel = " \

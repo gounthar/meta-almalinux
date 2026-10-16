@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "postfwd"
 PV = "2.03"
 PR = "11.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  postfwd \
- "
+"
+PACKAGES:aarch64 = " \
+ postfwd \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/postfwd-2.03-11.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/postfwd-2.03-11.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "538e206c444130fd942908b95552b340adc71a164255847e77b60c13b46756e8"
 
-URI_x86_64_v2_postfwd = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/postfwd-2.03-11.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_postfwd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_postfwd}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/postfwd-2.03-11.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_postfwd;unpack=0"
 SRC_URI[x86_64_v2_postfwd.sha256sum] = "49c0370c9efe4d10a3e825ab53abc71892deb148ab36532c2bf5c5c81ce15adc"
 
-URI_aarch64_postfwd = "${EPEL_MIRROR}/aarch64/Packages/p/postfwd-2.03-11.el10_3.noarch.rpm;name=aarch64_postfwd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_postfwd}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/postfwd-2.03-11.el10_3.noarch.rpm;name=aarch64_postfwd;unpack=0"
 SRC_URI[aarch64_postfwd.sha256sum] = "37d3b1be59fab17e76fdb3336bfd5f1bbb2ba0fff08cd606cc731c723c55a252"
 
 RDEPENDS:postfwd = " \

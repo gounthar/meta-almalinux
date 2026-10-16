@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "pspg"
 PV = "5.8.16"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  pspg \
- "
+"
+PACKAGES:aarch64 = " \
+ pspg \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/pspg-5.8.16-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/pspg-5.8.16-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "341e05f0bab6dd36c1cdd7e35484d90b46e169d26d4fbb46ba351b292f3f65ed"
 
-URI_x86_64_v2_pspg = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/pspg-5.8.16-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_pspg;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pspg}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/pspg-5.8.16-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_pspg;unpack=0"
 SRC_URI[x86_64_v2_pspg.sha256sum] = "c7c6a6ccc325e3b505f791b23dd7f8f0dc34bf581da3b249773c88613a3a9fa6"
 
-URI_aarch64_pspg = "${EPEL_MIRROR}/aarch64/Packages/p/pspg-5.8.16-1.el10_2.aarch64.rpm;name=aarch64_pspg;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pspg}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/pspg-5.8.16-1.el10_2.aarch64.rpm;name=aarch64_pspg;unpack=0"
 SRC_URI[aarch64_pspg.sha256sum] = "febd13a95b58ef8b534bb53c288be564d8a75ae11af9aafbc29c35d895ec2cb2"
 
 RDEPENDS:pspg = " \

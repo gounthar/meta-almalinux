@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "nbd"
 PV = "3.27.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  nbd \
- "
+"
+PACKAGES:aarch64 = " \
+ nbd \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/n/nbd-3.27.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/n/nbd-3.27.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1e420203367c5158ebaaee583380911a816e5e9d6afa0eb14997c4716f575f81"
 
-URI_x86_64_v2_nbd = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nbd-3.27.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nbd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nbd}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/nbd-3.27.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_nbd;unpack=0"
 SRC_URI[x86_64_v2_nbd.sha256sum] = "d8ed620e2b405f38b056eeea72c139956cfcda126e4e6da0f0f16ccc5a6a0f09"
 
-URI_aarch64_nbd = "${EPEL_MIRROR}/aarch64/Packages/n/nbd-3.27.0-1.el10_3.aarch64.rpm;name=aarch64_nbd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nbd}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/n/nbd-3.27.0-1.el10_3.aarch64.rpm;name=aarch64_nbd;unpack=0"
 SRC_URI[aarch64_nbd.sha256sum] = "60a6c9fbdb7cc2337ceb66c28593e3dcd27b48ca243205e2a1418711f6fd6404"
 
 RDEPENDS:nbd = " \

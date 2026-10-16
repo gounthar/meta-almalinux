@@ -9,17 +9,17 @@ PACKAGES = " \
  drgn \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python-drgn-0.0.33-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python-drgn-0.0.33-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "50e8a2dcd17ae4c119245f6f24f3ba48377e540894769c2c582680bdb916008c"
 
-URI_x86_64_v2_drgn = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/drgn-0.0.33-1.el10.x86_64_v2.rpm;name=x86_64_v2_drgn;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_drgn}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/drgn-0.0.33-1.el10.x86_64_v2.rpm;name=x86_64_v2_drgn;unpack=0"
 SRC_URI[x86_64_v2_drgn.sha256sum] = "ec2c6ea436938de96a82a6b97f6195950c4a40a2be840325c0bdd5b1af247733"
 
-URI_aarch64_drgn = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/drgn-0.0.33-1.el10.aarch64.rpm;name=aarch64_drgn;unpack=0"
-SRC_URI:append = " ${URI_aarch64_drgn}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/drgn-0.0.33-1.el10.aarch64.rpm;name=aarch64_drgn;unpack=0"
 SRC_URI[aarch64_drgn.sha256sum] = "cf1a7085d27408ca37aa25d9d924ad467a4b966874d71e66104ff797ebec6457"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/drgn-0.0.33-1.el10.riscv64.rpm;name=riscv64_drgn;unpack=0"
+SRC_URI[riscv64_drgn.sha256sum] = "a7e1e8cc358d36c57911e14413d2513db293f528d3267cef6a58230375b9e272"
 
 RDEPENDS:drgn = " \
  elfutils-libelf \

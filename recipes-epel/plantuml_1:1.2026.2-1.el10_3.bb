@@ -6,23 +6,26 @@ PN = "plantuml"
 PE = "1"
 PV = "1.2026.2"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  plantuml \
- "
+"
+PACKAGES:aarch64 = " \
+ plantuml \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/plantuml-1.2026.2-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/plantuml-1.2026.2-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "2581212b50d2b07e385f37aed69065f4ea792969c4b0014f68a0fbc33638f086"
 
 ## Requires (aarch64) that were seen as not satisfiable in original repo:
 # - plantuml: graphviz
 
-URI_x86_64_v2_plantuml = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/plantuml-1.2026.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_plantuml;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_plantuml}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/plantuml-1.2026.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_plantuml;unpack=0"
 SRC_URI[x86_64_v2_plantuml.sha256sum] = "8050a7010ef4c3c241986e72ba9135c8b167b68ef40242f42d408dd24c8431bb"
 
-URI_aarch64_plantuml = "${EPEL_MIRROR}/aarch64/Packages/p/plantuml-1.2026.2-1.el10_3.noarch.rpm;name=aarch64_plantuml;unpack=0"
-SRC_URI:append = " ${URI_aarch64_plantuml}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/plantuml-1.2026.2-1.el10_3.noarch.rpm;name=aarch64_plantuml;unpack=0"
 SRC_URI[aarch64_plantuml.sha256sum] = "ab0ce691295580a9c4deacd4a51e1adec20dbb01cbe746495a9512934f77f772"
 
 RDEPENDS:plantuml:x86_64_v2 = " \

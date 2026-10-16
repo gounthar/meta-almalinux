@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-uu_base32"
 PV = "0.7.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-uu_base32+default-devel \
  rust-uu_base32-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-uu_base32+default-devel \
+ rust-uu_base32-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-uu_base32-0.7.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-uu_base32-0.7.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e54e66198164dde48c07db54a01c63cdd677220f7a47c07cd12b6fc37dd289f0"
 
-URI_x86_64_v2_rust-uu_base32+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_base32+default-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_base32+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_base32+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_base32+default-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_base32+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_base32+default-devel.sha256sum] = "ae94f18c4628699e1a6e7f7a8b6d0ab8f1d45cb0646bb673bf90917e56c7451e"
 
-URI_x86_64_v2_rust-uu_base32-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_base32-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_base32-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_base32-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_base32-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_base32-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_base32-devel.sha256sum] = "fe56bf61cf05b2013033b073399b1350fb47ff5541f85e6416c9bc77461c8074"
 
-URI_aarch64_rust-uu_base32+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_base32+default-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_base32+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_base32+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_base32+default-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_base32+default-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_base32+default-devel.sha256sum] = "b6b1aed77e1937d958399974aa1e3aa588efd0cc0212d2f00b4cc5b3d86402e5"
 
-URI_aarch64_rust-uu_base32-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_base32-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_base32-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_base32-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_base32-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_base32-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_base32-devel.sha256sum] = "41c7d629ce50b176168788240fd139600780b39dea657c564ae57bdac5964daa"
 
 RDEPENDS:rust-uu_base32+default-devel = " \

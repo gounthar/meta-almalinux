@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-ndarray-stats"
 PV = "0.6.0"
 PR = "4.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-ndarray-stats+default-devel \
  rust-ndarray-stats-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-ndarray-stats+default-devel \
+ rust-ndarray-stats-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-ndarray-stats-0.6.0-4.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-ndarray-stats-0.6.0-4.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "60aff5cf52de59529ad99bf7ee1fe49862c18e810227f5d5da27af4b1aa42e6c"
 
-URI_x86_64_v2_rust-ndarray-stats+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-ndarray-stats+default-devel-0.6.0-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-ndarray-stats+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-ndarray-stats+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-ndarray-stats+default-devel-0.6.0-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-ndarray-stats+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-ndarray-stats+default-devel.sha256sum] = "00cd2f10aab7b3fd900657c716902bcbafe0b8d9172825c8a608df078d18cf18"
 
-URI_x86_64_v2_rust-ndarray-stats-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-ndarray-stats-devel-0.6.0-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-ndarray-stats-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-ndarray-stats-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-ndarray-stats-devel-0.6.0-4.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-ndarray-stats-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-ndarray-stats-devel.sha256sum] = "26221abcdbfedefcab904c6a5e73156f4d2f277faeead54a90353be958dbd588"
 
-URI_aarch64_rust-ndarray-stats+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-ndarray-stats+default-devel-0.6.0-4.el10_3.noarch.rpm;name=aarch64_rust-ndarray-stats+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-ndarray-stats+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-ndarray-stats+default-devel-0.6.0-4.el10_3.noarch.rpm;name=aarch64_rust-ndarray-stats+default-devel;unpack=0"
 SRC_URI[aarch64_rust-ndarray-stats+default-devel.sha256sum] = "d441f3ffc561d66180483cf67bfda0b787de573adb78dc3f66cf66e3f37bbb73"
 
-URI_aarch64_rust-ndarray-stats-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-ndarray-stats-devel-0.6.0-4.el10_3.noarch.rpm;name=aarch64_rust-ndarray-stats-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-ndarray-stats-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-ndarray-stats-devel-0.6.0-4.el10_3.noarch.rpm;name=aarch64_rust-ndarray-stats-devel;unpack=0"
 SRC_URI[aarch64_rust-ndarray-stats-devel.sha256sum] = "1dfafb4ee5d9798745c6de3dac58b1456afb369a0c4e3a484e3fde2ce48f1b34"
 
 RDEPENDS:rust-ndarray-stats+default-devel = " \

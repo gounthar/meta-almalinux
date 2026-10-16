@@ -9,17 +9,17 @@ PACKAGES = " \
  python3-requests \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/python-requests-2.32.4-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/python-requests-2.32.4-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "79d658e166498cad34058f0d3e8931d36be569b051e247f0086b1c92faa746c5"
 
-URI_x86_64_v2_python3-requests = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/python3-requests-2.32.4-1.el10.noarch.rpm;name=x86_64_v2_python3-requests;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-requests}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/python3-requests-2.32.4-1.el10.noarch.rpm;name=x86_64_v2_python3-requests;unpack=0"
 SRC_URI[x86_64_v2_python3-requests.sha256sum] = "e3979e91c2bacd3506ba491adec6e488e07334a74331894f76f605b51e509684"
 
-URI_aarch64_python3-requests = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/python3-requests-2.32.4-1.el10.noarch.rpm;name=aarch64_python3-requests;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-requests}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/python3-requests-2.32.4-1.el10.noarch.rpm;name=aarch64_python3-requests;unpack=0"
 SRC_URI[aarch64_python3-requests.sha256sum] = "e3979e91c2bacd3506ba491adec6e488e07334a74331894f76f605b51e509684"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/python3-requests-2.32.4-1.el10.noarch.rpm;name=riscv64_python3-requests;unpack=0"
+SRC_URI[riscv64_python3-requests.sha256sum] = "e3979e91c2bacd3506ba491adec6e488e07334a74331894f76f605b51e509684"
 
 RDEPENDS:python3-requests = " \
  python3 \

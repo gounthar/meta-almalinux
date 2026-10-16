@@ -18,83 +18,91 @@ PACKAGES = " \
  postfix-sqlite \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/postfix-3.8.5-11.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/postfix-3.8.5-11.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3637b009b29509acd85f7b64222aa1cc2d51dd921e981d3e91dbbe76cc1d3b55"
 
-URI_x86_64_v2_postfix = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postfix-3.8.5-11.el10.x86_64_v2.rpm;name=x86_64_v2_postfix;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_postfix}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postfix-3.8.5-11.el10.x86_64_v2.rpm;name=x86_64_v2_postfix;unpack=0"
 SRC_URI[x86_64_v2_postfix.sha256sum] = "9a4e32b9156c5cbecd109fdde55838a48841a22478de608e6b852d0d42a3f70c"
-RPROVIDES:postfix:x86_64_v2 = "virtual//usr/bin/mailq virtual//usr/sbin/sendmail virtual/smtpdaemon"
+RPROVIDES:postfix:append:x86_64_v2 = " virtual//usr/bin/mailq virtual//usr/sbin/sendmail virtual/smtpdaemon"
 
-URI_x86_64_v2_postfix-cdb = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postfix-cdb-3.8.5-11.el10.x86_64_v2.rpm;name=x86_64_v2_postfix-cdb;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_postfix-cdb}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postfix-cdb-3.8.5-11.el10.x86_64_v2.rpm;name=x86_64_v2_postfix-cdb;unpack=0"
 SRC_URI[x86_64_v2_postfix-cdb.sha256sum] = "8b23ce09f6a4bd3a52c03c23b164ca781efed69027e512c2418448284274fc93"
 
-URI_x86_64_v2_postfix-ldap = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postfix-ldap-3.8.5-11.el10.x86_64_v2.rpm;name=x86_64_v2_postfix-ldap;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_postfix-ldap}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postfix-ldap-3.8.5-11.el10.x86_64_v2.rpm;name=x86_64_v2_postfix-ldap;unpack=0"
 SRC_URI[x86_64_v2_postfix-ldap.sha256sum] = "09e77110ec078cfbe32d897e8764db200e65ced2765d4736a6419f1eda9db080"
 
-URI_x86_64_v2_postfix-lmdb = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postfix-lmdb-3.8.5-11.el10.x86_64_v2.rpm;name=x86_64_v2_postfix-lmdb;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_postfix-lmdb}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postfix-lmdb-3.8.5-11.el10.x86_64_v2.rpm;name=x86_64_v2_postfix-lmdb;unpack=0"
 SRC_URI[x86_64_v2_postfix-lmdb.sha256sum] = "41a56909b9f5bae762264e65893ee9fd4e4d95df58a2e9f54ffe3b05315d561e"
 
-URI_x86_64_v2_postfix-mysql = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postfix-mysql-3.8.5-11.el10.x86_64_v2.rpm;name=x86_64_v2_postfix-mysql;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_postfix-mysql}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postfix-mysql-3.8.5-11.el10.x86_64_v2.rpm;name=x86_64_v2_postfix-mysql;unpack=0"
 SRC_URI[x86_64_v2_postfix-mysql.sha256sum] = "3dc4cf0b36bb217f8e2a95b26bbcfcbaa5f170b4924ccc7390fa82e28eda03b2"
 
-URI_x86_64_v2_postfix-pcre = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postfix-pcre-3.8.5-11.el10.x86_64_v2.rpm;name=x86_64_v2_postfix-pcre;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_postfix-pcre}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postfix-pcre-3.8.5-11.el10.x86_64_v2.rpm;name=x86_64_v2_postfix-pcre;unpack=0"
 SRC_URI[x86_64_v2_postfix-pcre.sha256sum] = "bd0533f92db71cae6c35c67aa8fa775d0a3878235e0312aa2f562909c6f7e599"
 
-URI_x86_64_v2_postfix-perl-scripts = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postfix-perl-scripts-3.8.5-11.el10.x86_64_v2.rpm;name=x86_64_v2_postfix-perl-scripts;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_postfix-perl-scripts}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postfix-perl-scripts-3.8.5-11.el10.x86_64_v2.rpm;name=x86_64_v2_postfix-perl-scripts;unpack=0"
 SRC_URI[x86_64_v2_postfix-perl-scripts.sha256sum] = "b671630bd57ff4effe55b885cf4fe6b83f29f65c607b34511a2b19940f64fe29"
 
-URI_x86_64_v2_postfix-pgsql = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postfix-pgsql-3.8.5-11.el10.x86_64_v2.rpm;name=x86_64_v2_postfix-pgsql;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_postfix-pgsql}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postfix-pgsql-3.8.5-11.el10.x86_64_v2.rpm;name=x86_64_v2_postfix-pgsql;unpack=0"
 SRC_URI[x86_64_v2_postfix-pgsql.sha256sum] = "45130bc08c602a29f852b097e8740ef64a1bc21977743acc2d8716e361f509c3"
 
-URI_x86_64_v2_postfix-sqlite = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postfix-sqlite-3.8.5-11.el10.x86_64_v2.rpm;name=x86_64_v2_postfix-sqlite;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_postfix-sqlite}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/postfix-sqlite-3.8.5-11.el10.x86_64_v2.rpm;name=x86_64_v2_postfix-sqlite;unpack=0"
 SRC_URI[x86_64_v2_postfix-sqlite.sha256sum] = "a8dfe588e1e97e7be90e1a153787b3a691c93e8fcb7984c68b52fae876208bf5"
 
-URI_aarch64_postfix = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postfix-3.8.5-11.el10.aarch64.rpm;name=aarch64_postfix;unpack=0"
-SRC_URI:append = " ${URI_aarch64_postfix}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postfix-3.8.5-11.el10.aarch64.rpm;name=aarch64_postfix;unpack=0"
 SRC_URI[aarch64_postfix.sha256sum] = "3b0ce1b8dba0cb00a186d9bc95fc3784d28a5f976bbc7911da56619defadab0f"
-RPROVIDES:postfix:aarch64 = "virtual//usr/bin/mailq virtual//usr/sbin/sendmail virtual/smtpdaemon"
+RPROVIDES:postfix:append:aarch64 = " virtual//usr/bin/mailq virtual//usr/sbin/sendmail virtual/smtpdaemon"
 
-URI_aarch64_postfix-cdb = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postfix-cdb-3.8.5-11.el10.aarch64.rpm;name=aarch64_postfix-cdb;unpack=0"
-SRC_URI:append = " ${URI_aarch64_postfix-cdb}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postfix-cdb-3.8.5-11.el10.aarch64.rpm;name=aarch64_postfix-cdb;unpack=0"
 SRC_URI[aarch64_postfix-cdb.sha256sum] = "df787fa44ddd65cab7a1da7ed7de413acce03339d1692aead0162be341c0c94d"
 
-URI_aarch64_postfix-ldap = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postfix-ldap-3.8.5-11.el10.aarch64.rpm;name=aarch64_postfix-ldap;unpack=0"
-SRC_URI:append = " ${URI_aarch64_postfix-ldap}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postfix-ldap-3.8.5-11.el10.aarch64.rpm;name=aarch64_postfix-ldap;unpack=0"
 SRC_URI[aarch64_postfix-ldap.sha256sum] = "899dea5263ac74cd5a7e9fe980d5fb2bfa1cfa2386f53f736b68eb2f4ca916a3"
 
-URI_aarch64_postfix-lmdb = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postfix-lmdb-3.8.5-11.el10.aarch64.rpm;name=aarch64_postfix-lmdb;unpack=0"
-SRC_URI:append = " ${URI_aarch64_postfix-lmdb}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postfix-lmdb-3.8.5-11.el10.aarch64.rpm;name=aarch64_postfix-lmdb;unpack=0"
 SRC_URI[aarch64_postfix-lmdb.sha256sum] = "2f9bbd6e258c8d8127ad9fafad4572aae5d34980cc3e74bacaf6ea477610a62b"
 
-URI_aarch64_postfix-mysql = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postfix-mysql-3.8.5-11.el10.aarch64.rpm;name=aarch64_postfix-mysql;unpack=0"
-SRC_URI:append = " ${URI_aarch64_postfix-mysql}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postfix-mysql-3.8.5-11.el10.aarch64.rpm;name=aarch64_postfix-mysql;unpack=0"
 SRC_URI[aarch64_postfix-mysql.sha256sum] = "9f1c5471d0f32f628b0b27b99e16789a0bf619b0e057653fd8993b2283448d6e"
 
-URI_aarch64_postfix-pcre = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postfix-pcre-3.8.5-11.el10.aarch64.rpm;name=aarch64_postfix-pcre;unpack=0"
-SRC_URI:append = " ${URI_aarch64_postfix-pcre}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postfix-pcre-3.8.5-11.el10.aarch64.rpm;name=aarch64_postfix-pcre;unpack=0"
 SRC_URI[aarch64_postfix-pcre.sha256sum] = "adcc2497c75ef6b86db8eeb215311c1efd00f01db76722f26dd793d8069e5fff"
 
-URI_aarch64_postfix-perl-scripts = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postfix-perl-scripts-3.8.5-11.el10.aarch64.rpm;name=aarch64_postfix-perl-scripts;unpack=0"
-SRC_URI:append = " ${URI_aarch64_postfix-perl-scripts}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postfix-perl-scripts-3.8.5-11.el10.aarch64.rpm;name=aarch64_postfix-perl-scripts;unpack=0"
 SRC_URI[aarch64_postfix-perl-scripts.sha256sum] = "83ca954b3c732d8e89251e8ef9f51c0d5b203a3a6c719a8e12692e42fc5cb39d"
 
-URI_aarch64_postfix-pgsql = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postfix-pgsql-3.8.5-11.el10.aarch64.rpm;name=aarch64_postfix-pgsql;unpack=0"
-SRC_URI:append = " ${URI_aarch64_postfix-pgsql}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postfix-pgsql-3.8.5-11.el10.aarch64.rpm;name=aarch64_postfix-pgsql;unpack=0"
 SRC_URI[aarch64_postfix-pgsql.sha256sum] = "df9577cc2269f1161f6283c53d7257238226b8c5a4ca76afe44e0e7300e9cd6f"
 
-URI_aarch64_postfix-sqlite = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postfix-sqlite-3.8.5-11.el10.aarch64.rpm;name=aarch64_postfix-sqlite;unpack=0"
-SRC_URI:append = " ${URI_aarch64_postfix-sqlite}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/postfix-sqlite-3.8.5-11.el10.aarch64.rpm;name=aarch64_postfix-sqlite;unpack=0"
 SRC_URI[aarch64_postfix-sqlite.sha256sum] = "fc0fcafb1232e0579281b832b612435ad6b0fb1698befbf99ef87fde51e7efe6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/postfix-3.8.5-11.el10.riscv64.rpm;name=riscv64_postfix;unpack=0"
+SRC_URI[riscv64_postfix.sha256sum] = "ffaecaec278ee3e7e7a3ee22bf7d8406567e3200b8bdb4f96a8b37de2fd4b6de"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/postfix-cdb-3.8.5-11.el10.riscv64.rpm;name=riscv64_postfix-cdb;unpack=0"
+SRC_URI[riscv64_postfix-cdb.sha256sum] = "359bb53fd515b980a2aad1cb179286f72f99c542e21e769d59a60a82a108d1f9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/postfix-ldap-3.8.5-11.el10.riscv64.rpm;name=riscv64_postfix-ldap;unpack=0"
+SRC_URI[riscv64_postfix-ldap.sha256sum] = "dd2daaf494d9c70b4efa1aaada92fc2fe0b765e8fd6c0acccc513df611334ae3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/postfix-lmdb-3.8.5-11.el10.riscv64.rpm;name=riscv64_postfix-lmdb;unpack=0"
+SRC_URI[riscv64_postfix-lmdb.sha256sum] = "9f4fcb5760bf64aad31a0868d9ba633384ed7ee9a28e0cf879692425c59fe129"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/postfix-mysql-3.8.5-11.el10.riscv64.rpm;name=riscv64_postfix-mysql;unpack=0"
+SRC_URI[riscv64_postfix-mysql.sha256sum] = "c72b0bd723677acd9d20eb9d8d9752f56b1ea2d7254393c5d198d774cb7b56bb"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/postfix-pcre-3.8.5-11.el10.riscv64.rpm;name=riscv64_postfix-pcre;unpack=0"
+SRC_URI[riscv64_postfix-pcre.sha256sum] = "a8b74ac9de41a282c0b2e8a81c23cb010f0d0fc84325b5b8a402fc05df635953"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/postfix-perl-scripts-3.8.5-11.el10.riscv64.rpm;name=riscv64_postfix-perl-scripts;unpack=0"
+SRC_URI[riscv64_postfix-perl-scripts.sha256sum] = "59ddec7280ec0a321de92dedbe174e51aca5f2d075c0bbdbf8d19cebd34122c9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/postfix-pgsql-3.8.5-11.el10.riscv64.rpm;name=riscv64_postfix-pgsql;unpack=0"
+SRC_URI[riscv64_postfix-pgsql.sha256sum] = "ab7dd53f579be6186db014deae7984284d06d4fa403407c79d4aa7507e0bd7cf"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/postfix-sqlite-3.8.5-11.el10.riscv64.rpm;name=riscv64_postfix-sqlite;unpack=0"
+SRC_URI[riscv64_postfix-sqlite.sha256sum] = "5b73bc5b54daa9cb88e1cfe4d29ede648dc3bfefc759eed5b3d320ed3f17b9e9"
 
 RDEPENDS:postfix = " \
  alternatives \
@@ -158,7 +166,3 @@ RDEPENDS:postfix-sqlite = " \
  postfix \
  sqlite-libs \
  "
-
-PROVIDES:append:x86_64_v2 = " rpm/virtual//usr/bin/mailq rpm/virtual//usr/sbin/sendmail rpm/virtual/smtpdaemon"
-
-PROVIDES:append:aarch64 = " rpm/virtual//usr/bin/mailq rpm/virtual//usr/sbin/sendmail rpm/virtual/smtpdaemon"

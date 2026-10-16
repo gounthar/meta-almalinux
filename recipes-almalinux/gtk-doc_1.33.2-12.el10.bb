@@ -9,17 +9,17 @@ PACKAGES = " \
  gtk-doc \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/gtk-doc-1.33.2-12.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/gtk-doc-1.33.2-12.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "ed96e37be631326af03da26f5815945811adbeea7e34945d3cb546e8bd2f15c0"
 
-URI_x86_64_v2_gtk-doc = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/gtk-doc-1.33.2-12.el10.x86_64_v2.rpm;name=x86_64_v2_gtk-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gtk-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/gtk-doc-1.33.2-12.el10.x86_64_v2.rpm;name=x86_64_v2_gtk-doc;unpack=0"
 SRC_URI[x86_64_v2_gtk-doc.sha256sum] = "27f2e3122bbd4bc9af032d204a83e6a9acd66c507a5d3c1df30d9c91a11fd4e3"
 
-URI_aarch64_gtk-doc = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/gtk-doc-1.33.2-12.el10.aarch64.rpm;name=aarch64_gtk-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gtk-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/gtk-doc-1.33.2-12.el10.aarch64.rpm;name=aarch64_gtk-doc;unpack=0"
 SRC_URI[aarch64_gtk-doc.sha256sum] = "932d06f20c482a619e81e1fa45762a7fc11b446d5fe0c1664c572991505686d9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/gtk-doc-1.33.2-12.el10.riscv64.rpm;name=riscv64_gtk-doc;unpack=0"
+SRC_URI[riscv64_gtk-doc.sha256sum] = "592fbed9ef9e2541e5c196c38f40e46aacbce8875602e6350fc06915961f6ce2"
 
 RDEPENDS:gtk-doc = " \
  bash \

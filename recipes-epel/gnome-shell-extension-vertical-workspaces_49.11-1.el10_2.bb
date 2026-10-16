@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "gnome-shell-extension-vertical-workspaces"
 PV = "49.11"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  gnome-shell-extension-vertical-workspaces \
- "
+"
+PACKAGES:aarch64 = " \
+ gnome-shell-extension-vertical-workspaces \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/g/gnome-shell-extension-vertical-workspaces-49.11-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/g/gnome-shell-extension-vertical-workspaces-49.11-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e10554439e2fe763d60ae1046e7487942364db571e18ac42f7b4c946dc0dc7d9"
 
-URI_x86_64_v2_gnome-shell-extension-vertical-workspaces = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gnome-shell-extension-vertical-workspaces-49.11-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_gnome-shell-extension-vertical-workspaces;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gnome-shell-extension-vertical-workspaces}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gnome-shell-extension-vertical-workspaces-49.11-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_gnome-shell-extension-vertical-workspaces;unpack=0"
 SRC_URI[x86_64_v2_gnome-shell-extension-vertical-workspaces.sha256sum] = "2b716ae9a8be41c86cf6bd5d73b2b0d695601cea888fd22978a4cad603b090f8"
 
-URI_aarch64_gnome-shell-extension-vertical-workspaces = "${EPEL_MIRROR}/aarch64/Packages/g/gnome-shell-extension-vertical-workspaces-49.11-1.el10_2.noarch.rpm;name=aarch64_gnome-shell-extension-vertical-workspaces;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gnome-shell-extension-vertical-workspaces}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/gnome-shell-extension-vertical-workspaces-49.11-1.el10_2.noarch.rpm;name=aarch64_gnome-shell-extension-vertical-workspaces;unpack=0"
 SRC_URI[aarch64_gnome-shell-extension-vertical-workspaces.sha256sum] = "b3e37af27db3857ac391a91f09d8c9d45f42c2cea5eb3b39ca7ef8a4a6c8d5e1"
 
 RDEPENDS:gnome-shell-extension-vertical-workspaces = " \

@@ -9,17 +9,17 @@ PACKAGES = " \
  cloud-init \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/cloud-init-24.4-7.el10.1.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/cloud-init-24.4-7.el10.1.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "47e032692c5fa6be1fd214d3035310e6f3b69a46dcc0f30a8e7ab6a9ac3b4d39"
 
-URI_x86_64_v2_cloud-init = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cloud-init-24.4-7.el10.1.noarch.rpm;name=x86_64_v2_cloud-init;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_cloud-init}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/cloud-init-24.4-7.el10.1.noarch.rpm;name=x86_64_v2_cloud-init;unpack=0"
 SRC_URI[x86_64_v2_cloud-init.sha256sum] = "8b239379b9b095ec56b9e35b9a7c69b2f588697e99c52e087fe3e44104b9e9d9"
 
-URI_aarch64_cloud-init = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cloud-init-24.4-7.el10.1.noarch.rpm;name=aarch64_cloud-init;unpack=0"
-SRC_URI:append = " ${URI_aarch64_cloud-init}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/cloud-init-24.4-7.el10.1.noarch.rpm;name=aarch64_cloud-init;unpack=0"
 SRC_URI[aarch64_cloud-init.sha256sum] = "8b239379b9b095ec56b9e35b9a7c69b2f588697e99c52e087fe3e44104b9e9d9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/cloud-init-24.4-7.el10.1.noarch.rpm;name=riscv64_cloud-init;unpack=0"
+SRC_URI[riscv64_cloud-init.sha256sum] = "8b239379b9b095ec56b9e35b9a7c69b2f588697e99c52e087fe3e44104b9e9d9"
 
 RDEPENDS:cloud-init = " \
  bash \

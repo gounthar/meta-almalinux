@@ -10,25 +10,26 @@ PACKAGES = " \
  dconf-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/dconf-0.40.0-17.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/dconf-0.40.0-17.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "bde35a0f2b76b4e66d37c04971421a56b70c9cea332f14618c907dc1f693784d"
 
-URI_x86_64_v2_dconf = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/dconf-0.40.0-17.el10.x86_64_v2.rpm;name=x86_64_v2_dconf;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_dconf}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/dconf-0.40.0-17.el10.x86_64_v2.rpm;name=x86_64_v2_dconf;unpack=0"
 SRC_URI[x86_64_v2_dconf.sha256sum] = "d4ea04dd30dd6358f25c73761a9e5cc966bfa69a4ed558d8b764c2f2692aa49f"
 
-URI_x86_64_v2_dconf-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/dconf-devel-0.40.0-17.el10.x86_64_v2.rpm;name=x86_64_v2_dconf-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_dconf-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/dconf-devel-0.40.0-17.el10.x86_64_v2.rpm;name=x86_64_v2_dconf-devel;unpack=0"
 SRC_URI[x86_64_v2_dconf-devel.sha256sum] = "dd0e379e14c4de2e54e23378696db727dd6a4e3aa51b04355e453f6f08adeef4"
 
-URI_aarch64_dconf = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/dconf-0.40.0-17.el10.aarch64.rpm;name=aarch64_dconf;unpack=0"
-SRC_URI:append = " ${URI_aarch64_dconf}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/dconf-0.40.0-17.el10.aarch64.rpm;name=aarch64_dconf;unpack=0"
 SRC_URI[aarch64_dconf.sha256sum] = "72fe9199e6b42c0066d577d3a00c544a6ed3dc730d8d4aefe633e2bb59e6ee3e"
 
-URI_aarch64_dconf-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/dconf-devel-0.40.0-17.el10.aarch64.rpm;name=aarch64_dconf-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_dconf-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/dconf-devel-0.40.0-17.el10.aarch64.rpm;name=aarch64_dconf-devel;unpack=0"
 SRC_URI[aarch64_dconf-devel.sha256sum] = "3951300a25b74f34d572f8e0e36eed69e24368de38fd080420c8963ba6e6ace7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/dconf-0.40.0-17.el10.riscv64.rpm;name=riscv64_dconf;unpack=0"
+SRC_URI[riscv64_dconf.sha256sum] = "23595de4a47432bac9286dc0db8cc7ef462ff447b3fd92c6cbbf0306e32ec015"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/dconf-devel-0.40.0-17.el10.riscv64.rpm;name=riscv64_dconf-devel;unpack=0"
+SRC_URI[riscv64_dconf-devel.sha256sum] = "8839344f3420388bc45607b64aefe2460bb1dff8c00db6b70a67aac0377a7525"
 
 RDEPENDS:dconf = " \
  bash \

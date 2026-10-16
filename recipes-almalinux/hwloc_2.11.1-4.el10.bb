@@ -12,41 +12,44 @@ PACKAGES = " \
  hwloc-libs \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/hwloc-2.11.1-4.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/hwloc-2.11.1-4.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "502f1e970fed9d4bfe8379f1dff23d48aefe77c4d8f9874e00f9ae982c298104"
 
-URI_x86_64_v2_hwloc = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/hwloc-2.11.1-4.el10.x86_64_v2.rpm;name=x86_64_v2_hwloc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_hwloc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/hwloc-2.11.1-4.el10.x86_64_v2.rpm;name=x86_64_v2_hwloc;unpack=0"
 SRC_URI[x86_64_v2_hwloc.sha256sum] = "d69181233ef92f4e53a1850b95393724e7407b5f51ff7bbf161b07b1c66e7d72"
 
-URI_x86_64_v2_hwloc-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/hwloc-devel-2.11.1-4.el10.x86_64_v2.rpm;name=x86_64_v2_hwloc-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_hwloc-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/hwloc-devel-2.11.1-4.el10.x86_64_v2.rpm;name=x86_64_v2_hwloc-devel;unpack=0"
 SRC_URI[x86_64_v2_hwloc-devel.sha256sum] = "c2f7a7177c7613f29b86563056011e722747437478b55b7c5ad1f817e5b68360"
 
-URI_x86_64_v2_hwloc-gui = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/hwloc-gui-2.11.1-4.el10.x86_64_v2.rpm;name=x86_64_v2_hwloc-gui;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_hwloc-gui}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/hwloc-gui-2.11.1-4.el10.x86_64_v2.rpm;name=x86_64_v2_hwloc-gui;unpack=0"
 SRC_URI[x86_64_v2_hwloc-gui.sha256sum] = "ebe7f56e71f05d3b532f36360ebb2349cd65f23a50f27a0d27b5495ce007eda6"
 
-URI_x86_64_v2_hwloc-libs = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/hwloc-libs-2.11.1-4.el10.x86_64_v2.rpm;name=x86_64_v2_hwloc-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_hwloc-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/hwloc-libs-2.11.1-4.el10.x86_64_v2.rpm;name=x86_64_v2_hwloc-libs;unpack=0"
 SRC_URI[x86_64_v2_hwloc-libs.sha256sum] = "a2214cc9f7b02b1f1167acac03ccabb51e57d131675bee38098c6f712acbb6fb"
 
-URI_aarch64_hwloc = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/hwloc-2.11.1-4.el10.aarch64.rpm;name=aarch64_hwloc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_hwloc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/hwloc-2.11.1-4.el10.aarch64.rpm;name=aarch64_hwloc;unpack=0"
 SRC_URI[aarch64_hwloc.sha256sum] = "f6e8a666868d3a917de38de3e44095aeeb2108aaed5bdc3ef7e152153a56dd70"
 
-URI_aarch64_hwloc-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/hwloc-devel-2.11.1-4.el10.aarch64.rpm;name=aarch64_hwloc-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_hwloc-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/hwloc-devel-2.11.1-4.el10.aarch64.rpm;name=aarch64_hwloc-devel;unpack=0"
 SRC_URI[aarch64_hwloc-devel.sha256sum] = "054de22e2c71fe15ed9c917a0b624a4e8d8f379ddb02cab5053d78f79da1c62f"
 
-URI_aarch64_hwloc-gui = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/hwloc-gui-2.11.1-4.el10.aarch64.rpm;name=aarch64_hwloc-gui;unpack=0"
-SRC_URI:append = " ${URI_aarch64_hwloc-gui}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/hwloc-gui-2.11.1-4.el10.aarch64.rpm;name=aarch64_hwloc-gui;unpack=0"
 SRC_URI[aarch64_hwloc-gui.sha256sum] = "67f1f145830773642d22aa191fb93f06c1eee6c83594565222408aefa7bbbab1"
 
-URI_aarch64_hwloc-libs = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/hwloc-libs-2.11.1-4.el10.aarch64.rpm;name=aarch64_hwloc-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_hwloc-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/hwloc-libs-2.11.1-4.el10.aarch64.rpm;name=aarch64_hwloc-libs;unpack=0"
 SRC_URI[aarch64_hwloc-libs.sha256sum] = "c43ae2ade8ac2b5e4e6acc6b6bf4af142b6793312a2b4021843c8c86951584b8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/hwloc-2.11.1-4.el10.riscv64.rpm;name=riscv64_hwloc;unpack=0"
+SRC_URI[riscv64_hwloc.sha256sum] = "613a349e3e58385a31e78b74b2ef73a128ca96e25d40fb0e4879581c0d7ad6b9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/hwloc-devel-2.11.1-4.el10.riscv64.rpm;name=riscv64_hwloc-devel;unpack=0"
+SRC_URI[riscv64_hwloc-devel.sha256sum] = "d3e0dadc0d9d30a31e4a7f300223dc0e4b4f6d5c2f8ff1e6c7a91234dcf0f9fa"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/hwloc-gui-2.11.1-4.el10.riscv64.rpm;name=riscv64_hwloc-gui;unpack=0"
+SRC_URI[riscv64_hwloc-gui.sha256sum] = "22f3745675a13c494547e09fd42671d42d54d5f9e5a438f13b40b4ca0da136d0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/hwloc-libs-2.11.1-4.el10.riscv64.rpm;name=riscv64_hwloc-libs;unpack=0"
+SRC_URI[riscv64_hwloc-libs.sha256sum] = "a64499ad1ea392b7f45e46773942245492eb906882aeca57580a265e6b8a1e8b"
 
 RDEPENDS:hwloc:x86_64_v2 = " \
  bash \
@@ -56,6 +59,12 @@ RDEPENDS:hwloc:x86_64_v2 = " \
  systemd \
 "
 RDEPENDS:hwloc:aarch64 = " \
+ bash \
+ glibc \
+ hwloc-libs \
+ ncurses-libs \
+"
+RDEPENDS:hwloc:riscv64 = " \
  bash \
  glibc \
  hwloc-libs \

@@ -11,25 +11,26 @@ PACKAGES = " \
  tk-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/tk-8.6.13-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/tk-8.6.13-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e8ba27da47113cc5e1de846721d546bcb3bb653844517ba2595e2af522af3424"
 
-URI_x86_64_v2_tk = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/tk-8.6.13-5.el10.x86_64_v2.rpm;name=x86_64_v2_tk;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_tk}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/tk-8.6.13-5.el10.x86_64_v2.rpm;name=x86_64_v2_tk;unpack=0"
 SRC_URI[x86_64_v2_tk.sha256sum] = "0bd0498a9737db8f440a9af5fbe837dd94f3226f70824c32c936e289121aba2d"
 
-URI_x86_64_v2_tk-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/tk-devel-8.6.13-5.el10.x86_64_v2.rpm;name=x86_64_v2_tk-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_tk-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/tk-devel-8.6.13-5.el10.x86_64_v2.rpm;name=x86_64_v2_tk-devel;unpack=0"
 SRC_URI[x86_64_v2_tk-devel.sha256sum] = "72b1232f5263df2979b33cd11c4eaea951fa470f60a1798bf96ec44054719b7c"
 
-URI_aarch64_tk = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/tk-8.6.13-5.el10.aarch64.rpm;name=aarch64_tk;unpack=0"
-SRC_URI:append = " ${URI_aarch64_tk}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/tk-8.6.13-5.el10.aarch64.rpm;name=aarch64_tk;unpack=0"
 SRC_URI[aarch64_tk.sha256sum] = "a9c9d5a617a7752c3620092f40792a7dc150a0bcbb252563098a0e265d78d9db"
 
-URI_aarch64_tk-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/tk-devel-8.6.13-5.el10.aarch64.rpm;name=aarch64_tk-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_tk-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/tk-devel-8.6.13-5.el10.aarch64.rpm;name=aarch64_tk-devel;unpack=0"
 SRC_URI[aarch64_tk-devel.sha256sum] = "ffa9a68737f7f1f74ec56f9cdcb5328e01ae8c37a1a9750ad42fb433945e8fb3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/tk-8.6.13-5.el10.riscv64.rpm;name=riscv64_tk;unpack=0"
+SRC_URI[riscv64_tk.sha256sum] = "1f9752f8674203c0acb57f12e03c0acd6cda27e32933b15214eaebbd5d65a3fc"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/tk-devel-8.6.13-5.el10.riscv64.rpm;name=riscv64_tk-devel;unpack=0"
+SRC_URI[riscv64_tk-devel.sha256sum] = "8a89e7e69f8038337827403ee7d6f7a25e18214d37c6aa0fb8051b925de45ac3"
 
 RDEPENDS:tk = " \
  bash \

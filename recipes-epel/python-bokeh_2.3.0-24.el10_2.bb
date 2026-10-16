@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-bokeh"
 PV = "2.3.0"
 PR = "24.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-bokeh \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-bokeh \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-bokeh-2.3.0-24.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-bokeh-2.3.0-24.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6b423ce284a4883d31ec940a1ef44c1e9f89b7f248796e1760291c43f069bde0"
 
-URI_x86_64_v2_python3-bokeh = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-bokeh-2.3.0-24.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-bokeh;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-bokeh}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-bokeh-2.3.0-24.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-bokeh;unpack=0"
 SRC_URI[x86_64_v2_python3-bokeh.sha256sum] = "94c45aec3c3f51249106d93a0a1902869d20ed31e29a9f998321e26fe4577acc"
 
-URI_aarch64_python3-bokeh = "${EPEL_MIRROR}/aarch64/Packages/p/python3-bokeh-2.3.0-24.el10_2.noarch.rpm;name=aarch64_python3-bokeh;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-bokeh}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-bokeh-2.3.0-24.el10_2.noarch.rpm;name=aarch64_python3-bokeh;unpack=0"
 SRC_URI[aarch64_python3-bokeh.sha256sum] = "368e08035f0edd2c26a2da0e19545a0ce03c1acf3fc55ac2d1ea02dbda2437f5"
 
 RDEPENDS:python3-bokeh = " \

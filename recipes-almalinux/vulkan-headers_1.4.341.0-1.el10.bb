@@ -9,17 +9,17 @@ PACKAGES = " \
  vulkan-headers \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/vulkan-headers-1.4.341.0-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/vulkan-headers-1.4.341.0-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6d45b0bbea0ac7948cc64423d85024b6446bad3dc48d329a614bad2526f6bbfe"
 
-URI_x86_64_v2_vulkan-headers = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/vulkan-headers-1.4.341.0-1.el10.noarch.rpm;name=x86_64_v2_vulkan-headers;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_vulkan-headers}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/vulkan-headers-1.4.341.0-1.el10.noarch.rpm;name=x86_64_v2_vulkan-headers;unpack=0"
 SRC_URI[x86_64_v2_vulkan-headers.sha256sum] = "116096f75f506c12daf87c149faa1ce38e092552b5f5bf69800ce967bcb4e98a"
 
-URI_aarch64_vulkan-headers = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/vulkan-headers-1.4.341.0-1.el10.noarch.rpm;name=aarch64_vulkan-headers;unpack=0"
-SRC_URI:append = " ${URI_aarch64_vulkan-headers}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/vulkan-headers-1.4.341.0-1.el10.noarch.rpm;name=aarch64_vulkan-headers;unpack=0"
 SRC_URI[aarch64_vulkan-headers.sha256sum] = "116096f75f506c12daf87c149faa1ce38e092552b5f5bf69800ce967bcb4e98a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/vulkan-headers-1.4.341.0-1.el10.noarch.rpm;name=riscv64_vulkan-headers;unpack=0"
+SRC_URI[riscv64_vulkan-headers.sha256sum] = "116096f75f506c12daf87c149faa1ce38e092552b5f5bf69800ce967bcb4e98a"
 
 RDEPENDS:vulkan-headers = " \
  cmake-filesystem \

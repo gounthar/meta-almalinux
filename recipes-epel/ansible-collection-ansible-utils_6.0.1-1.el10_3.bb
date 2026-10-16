@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "ansible-collection-ansible-utils"
 PV = "6.0.1"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  ansible-collection-ansible-utils \
- "
+"
+PACKAGES:aarch64 = " \
+ ansible-collection-ansible-utils \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/a/ansible-collection-ansible-utils-6.0.1-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/a/ansible-collection-ansible-utils-6.0.1-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c63e6066f94bc65d3aef847576e56b8f5ea39e4767ec095c77f0010a4f82d9ad"
 
-URI_x86_64_v2_ansible-collection-ansible-utils = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ansible-collection-ansible-utils-6.0.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_ansible-collection-ansible-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ansible-collection-ansible-utils}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ansible-collection-ansible-utils-6.0.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_ansible-collection-ansible-utils;unpack=0"
 SRC_URI[x86_64_v2_ansible-collection-ansible-utils.sha256sum] = "fb75c90e032b8db86097131e0ce3815b9c1a3193724542becaffd6805af29975"
 
-URI_aarch64_ansible-collection-ansible-utils = "${EPEL_MIRROR}/aarch64/Packages/a/ansible-collection-ansible-utils-6.0.1-1.el10_3.noarch.rpm;name=aarch64_ansible-collection-ansible-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ansible-collection-ansible-utils}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/a/ansible-collection-ansible-utils-6.0.1-1.el10_3.noarch.rpm;name=aarch64_ansible-collection-ansible-utils;unpack=0"
 SRC_URI[aarch64_ansible-collection-ansible-utils.sha256sum] = "fb6dc736b4b8d0e7b17aa94f14d252b23b8576dc4f0678c4db6b296c1cd2473a"
 
 RDEPENDS:ansible-collection-ansible-utils = " \

@@ -5,23 +5,26 @@ inherit dnf-bridge
 PN = "sdubby"
 PV = "1.0"
 PR = "12.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  sdubby \
- "
+"
+PACKAGES:aarch64 = " \
+ sdubby \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/s/sdubby-1.0-12.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/s/sdubby-1.0-12.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "2ecc9496d13fdeb5bde9b6793ffb61b9950854f7584f63a9685096845b5a4d40"
 
-URI_x86_64_v2_sdubby = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/sdubby-1.0-12.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_sdubby;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_sdubby}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/sdubby-1.0-12.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_sdubby;unpack=0"
 SRC_URI[x86_64_v2_sdubby.sha256sum] = "1839942398172e66daa57e068fb566dd543937b0c564568163f1c3b4dfc53520"
-RPROVIDES:sdubby:x86_64_v2 = "virtual/grubby_or_sdubby"
+RPROVIDES:sdubby:append:x86_64_v2 = " virtual/grubby_or_sdubby"
 
-URI_aarch64_sdubby = "${EPEL_MIRROR}/aarch64/Packages/s/sdubby-1.0-12.el10_3.noarch.rpm;name=aarch64_sdubby;unpack=0"
-SRC_URI:append = " ${URI_aarch64_sdubby}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/s/sdubby-1.0-12.el10_3.noarch.rpm;name=aarch64_sdubby;unpack=0"
 SRC_URI[aarch64_sdubby.sha256sum] = "3548c7e102619936e8953a086ba23806b47e19326ef2edc891b409e819e2e49d"
-RPROVIDES:sdubby:aarch64 = "virtual/grubby_or_sdubby"
+RPROVIDES:sdubby:append:aarch64 = " virtual/grubby_or_sdubby"
 
 RDEPENDS:sdubby = " \
  bash \
@@ -31,7 +34,3 @@ RDEPENDS:sdubby = " \
  util-linux \
  virtual/coreutils \
  "
-
-PROVIDES:append:x86_64_v2 = " rpm/virtual/grubby_or_sdubby"
-
-PROVIDES:append:aarch64 = " rpm/virtual/grubby_or_sdubby"

@@ -11,25 +11,26 @@ PACKAGES = " \
  scl-utils-build \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/scl-utils-2.0.3-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/scl-utils-2.0.3-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "92bd9d978b0e831771221592d8be4f4b6825910f8519a6e5854b6f036eaa1fff"
 
-URI_x86_64_v2_scl-utils = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/scl-utils-2.0.3-5.el10.x86_64_v2.rpm;name=x86_64_v2_scl-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_scl-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/scl-utils-2.0.3-5.el10.x86_64_v2.rpm;name=x86_64_v2_scl-utils;unpack=0"
 SRC_URI[x86_64_v2_scl-utils.sha256sum] = "af0b03cc600db3ef637f036427546080b500dd75797b57d38cd1fca79b84eef2"
 
-URI_x86_64_v2_scl-utils-build = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/scl-utils-build-2.0.3-5.el10.x86_64_v2.rpm;name=x86_64_v2_scl-utils-build;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_scl-utils-build}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/scl-utils-build-2.0.3-5.el10.x86_64_v2.rpm;name=x86_64_v2_scl-utils-build;unpack=0"
 SRC_URI[x86_64_v2_scl-utils-build.sha256sum] = "075362f5fb167dd4d4f95fd0e986c30f4a831c89c0c33bbea3ef8635f1829e70"
 
-URI_aarch64_scl-utils = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/scl-utils-2.0.3-5.el10.aarch64.rpm;name=aarch64_scl-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_scl-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/scl-utils-2.0.3-5.el10.aarch64.rpm;name=aarch64_scl-utils;unpack=0"
 SRC_URI[aarch64_scl-utils.sha256sum] = "090f255c0f006e9f4600c8b1fa485944380617b09634ff7993e405e204c330e5"
 
-URI_aarch64_scl-utils-build = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/scl-utils-build-2.0.3-5.el10.aarch64.rpm;name=aarch64_scl-utils-build;unpack=0"
-SRC_URI:append = " ${URI_aarch64_scl-utils-build}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/scl-utils-build-2.0.3-5.el10.aarch64.rpm;name=aarch64_scl-utils-build;unpack=0"
 SRC_URI[aarch64_scl-utils-build.sha256sum] = "13476c1051f3c5d3df52e5f88ab9ffa8701ce182cea6038b1a42e7cdee51dd31"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/scl-utils-2.0.3-5.el10.riscv64.rpm;name=riscv64_scl-utils;unpack=0"
+SRC_URI[riscv64_scl-utils.sha256sum] = "1eca4b9652b012995f1be8be1dca0b1d92170757e99c200050b16b3839de61fb"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/scl-utils-build-2.0.3-5.el10.riscv64.rpm;name=riscv64_scl-utils-build;unpack=0"
+SRC_URI[riscv64_scl-utils-build.sha256sum] = "daf4a8e57f9d4c7b118c1379a6777f5adc90473bd290443fb5458fb8f820bfb5"
 
 RDEPENDS:scl-utils = " \
  bash \

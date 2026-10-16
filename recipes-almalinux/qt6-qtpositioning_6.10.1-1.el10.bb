@@ -11,33 +11,35 @@ PACKAGES = " \
  qt6-qtpositioning-examples \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtpositioning-6.10.1-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtpositioning-6.10.1-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "27a4abdcd25f8dcd4b5d32766f97d952bcbb8bc93486d06ed0669defa188f070"
 
-URI_x86_64_v2_qt6-qtpositioning = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtpositioning-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtpositioning;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtpositioning}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtpositioning-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtpositioning;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtpositioning.sha256sum] = "bd319c50b6c26a89ec3a1f1e229df675b9a6c3cec8a751624be71023591a0f18"
 
-URI_x86_64_v2_qt6-qtpositioning-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtpositioning-devel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtpositioning-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtpositioning-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtpositioning-devel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtpositioning-devel;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtpositioning-devel.sha256sum] = "b7d2e4ef4714df6ce0e20302af90deb645294b7dcb8704d32182570a678462f5"
 
-URI_x86_64_v2_qt6-qtpositioning-examples = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtpositioning-examples-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtpositioning-examples;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtpositioning-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/qt6-qtpositioning-examples-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtpositioning-examples;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtpositioning-examples.sha256sum] = "305c38f61479c425aa74a187a09fb2894dc1f9b421d44793a9e0179b04fec8f2"
 
-URI_aarch64_qt6-qtpositioning = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtpositioning-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtpositioning;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtpositioning}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtpositioning-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtpositioning;unpack=0"
 SRC_URI[aarch64_qt6-qtpositioning.sha256sum] = "f41ec9c6f0beac7f524adb581e88b56c12332dbadc5c1f92ba6f258197045965"
 
-URI_aarch64_qt6-qtpositioning-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtpositioning-devel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtpositioning-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtpositioning-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtpositioning-devel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtpositioning-devel;unpack=0"
 SRC_URI[aarch64_qt6-qtpositioning-devel.sha256sum] = "5dcc637700459f6d9e3cfb38e1eb563c6f2b39b892326bd7f7fc46bab2e53342"
 
-URI_aarch64_qt6-qtpositioning-examples = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtpositioning-examples-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtpositioning-examples;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtpositioning-examples}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/qt6-qtpositioning-examples-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtpositioning-examples;unpack=0"
 SRC_URI[aarch64_qt6-qtpositioning-examples.sha256sum] = "0f284f24ef3e690d8cf15c0069932a1a0e3daf9d28048ee47c678d9619261fdd"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtpositioning-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtpositioning;unpack=0"
+SRC_URI[riscv64_qt6-qtpositioning.sha256sum] = "633faef5e7fd3cc24d0935df8c836134c8d866ebf7e224c0ce17bb25a854d213"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtpositioning-devel-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtpositioning-devel;unpack=0"
+SRC_URI[riscv64_qt6-qtpositioning-devel.sha256sum] = "66516cf72781f0c87afb991acbf995ca9b7f1290e1d1cd05120ddd88a37af2a2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/qt6-qtpositioning-examples-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtpositioning-examples;unpack=0"
+SRC_URI[riscv64_qt6-qtpositioning-examples.sha256sum] = "b4e3772433f83448f2cbb95a8b21ede2a03f37db917f7ec7c968f1a097b4086f"
 
 RDEPENDS:qt6-qtpositioning = " \
  glibc \

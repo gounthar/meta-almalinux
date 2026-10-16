@@ -16,37 +16,32 @@ PACKAGES:aarch64 = " \
  ghc-simple-cabal-doc \
  ghc-simple-cabal-prof \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/g/ghc-simple-cabal-0.2.1-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/g/ghc-simple-cabal-0.2.1-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d340dd34506b488d9191dc636cf1a01fe238c312b276277bd142dde64546eb2d"
 
-URI_x86_64_v2_ghc-simple-cabal = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-simple-cabal-0.2.1-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-simple-cabal;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-simple-cabal}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-simple-cabal-0.2.1-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-simple-cabal;unpack=0"
 SRC_URI[x86_64_v2_ghc-simple-cabal.sha256sum] = "b07410e18a4552adc3bef7b27befc6c384309968e6f1f348436f3e2d31c30fe0"
 
-URI_x86_64_v2_ghc-simple-cabal-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-simple-cabal-devel-0.2.1-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-simple-cabal-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-simple-cabal-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-simple-cabal-devel-0.2.1-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-simple-cabal-devel;unpack=0"
 SRC_URI[x86_64_v2_ghc-simple-cabal-devel.sha256sum] = "80146bacffec4771f017fa33760106f479f65158b5df16017ff719206b3ea8bf"
 
-URI_x86_64_v2_ghc-simple-cabal-doc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-simple-cabal-doc-0.2.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_ghc-simple-cabal-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-simple-cabal-doc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-simple-cabal-doc-0.2.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_ghc-simple-cabal-doc;unpack=0"
 SRC_URI[x86_64_v2_ghc-simple-cabal-doc.sha256sum] = "fea61b49fdf006dc259ddfc754be93947bac5d2e57bf85c389a4b5fc23fe46db"
 
-URI_aarch64_ghc-simple-cabal = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-simple-cabal-0.2.1-1.el10_2.aarch64.rpm;name=aarch64_ghc-simple-cabal;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-simple-cabal}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-simple-cabal-0.2.1-1.el10_2.aarch64.rpm;name=aarch64_ghc-simple-cabal;unpack=0"
 SRC_URI[aarch64_ghc-simple-cabal.sha256sum] = "977b4810de9705a20584089e5ed0092e877faaca6e048a35574259d39d16a6a5"
 
-URI_aarch64_ghc-simple-cabal-devel = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-simple-cabal-devel-0.2.1-1.el10_2.aarch64.rpm;name=aarch64_ghc-simple-cabal-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-simple-cabal-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-simple-cabal-devel-0.2.1-1.el10_2.aarch64.rpm;name=aarch64_ghc-simple-cabal-devel;unpack=0"
 SRC_URI[aarch64_ghc-simple-cabal-devel.sha256sum] = "af7b6a2f33deb1a8e11d774f3cad7fd22db16c4f7d3fbe943b9d6f9fda894e25"
 
-URI_aarch64_ghc-simple-cabal-doc = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-simple-cabal-doc-0.2.1-1.el10_2.noarch.rpm;name=aarch64_ghc-simple-cabal-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-simple-cabal-doc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-simple-cabal-doc-0.2.1-1.el10_2.noarch.rpm;name=aarch64_ghc-simple-cabal-doc;unpack=0"
 SRC_URI[aarch64_ghc-simple-cabal-doc.sha256sum] = "f7ee561544d7e64616314cc4b1053ba19f0c785ba0b9f55952d2301e8122d415"
 
-URI_aarch64_ghc-simple-cabal-prof = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-simple-cabal-prof-0.2.1-1.el10_2.aarch64.rpm;name=aarch64_ghc-simple-cabal-prof;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-simple-cabal-prof}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-simple-cabal-prof-0.2.1-1.el10_2.aarch64.rpm;name=aarch64_ghc-simple-cabal-prof;unpack=0"
 SRC_URI[aarch64_ghc-simple-cabal-prof.sha256sum] = "ffe307d23d5be126bb6a06ef92d8668792f423a6a74dd9ee9d654381e85ec5af"
 
 RDEPENDS:ghc-simple-cabal = " \

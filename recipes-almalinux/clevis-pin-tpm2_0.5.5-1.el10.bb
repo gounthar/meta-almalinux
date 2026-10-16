@@ -9,17 +9,17 @@ PACKAGES = " \
  clevis-pin-tpm2 \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/clevis-pin-tpm2-0.5.5-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/clevis-pin-tpm2-0.5.5-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "0c9e76e4516d2fc334a8800669c57152da766174104cecb673ed6624f0d4a475"
 
-URI_x86_64_v2_clevis-pin-tpm2 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/clevis-pin-tpm2-0.5.5-1.el10.x86_64_v2.rpm;name=x86_64_v2_clevis-pin-tpm2;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_clevis-pin-tpm2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/clevis-pin-tpm2-0.5.5-1.el10.x86_64_v2.rpm;name=x86_64_v2_clevis-pin-tpm2;unpack=0"
 SRC_URI[x86_64_v2_clevis-pin-tpm2.sha256sum] = "7022b15b621c4d53e3210cf4d6a70a559f64ea5539db24a2a35ddce06c98f0e1"
 
-URI_aarch64_clevis-pin-tpm2 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/clevis-pin-tpm2-0.5.5-1.el10.aarch64.rpm;name=aarch64_clevis-pin-tpm2;unpack=0"
-SRC_URI:append = " ${URI_aarch64_clevis-pin-tpm2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/clevis-pin-tpm2-0.5.5-1.el10.aarch64.rpm;name=aarch64_clevis-pin-tpm2;unpack=0"
 SRC_URI[aarch64_clevis-pin-tpm2.sha256sum] = "055986a4112c3743c8d96ada1a8626176f2d7b8e69cdef20581d65c1f5c254b0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/clevis-pin-tpm2-0.5.5-1.el10.riscv64.rpm;name=riscv64_clevis-pin-tpm2;unpack=0"
+SRC_URI[riscv64_clevis-pin-tpm2.sha256sum] = "b7292c7bc8388ac1c33804a2aaa0961c5fcf778d786896ae53d85a488e6569f5"
 
 RDEPENDS:clevis-pin-tpm2 = " \
  clevis \

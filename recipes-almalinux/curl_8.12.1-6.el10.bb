@@ -12,47 +12,52 @@ PACKAGES = " \
  libcurl-minimal \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/curl-8.12.1-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/curl-8.12.1-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d49de9ca611600cdd47f5e96f264531f5a415c8a458aa5baebd674f851233346"
 
-URI_x86_64_v2_curl = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/curl-8.12.1-6.el10.x86_64_v2.rpm;name=x86_64_v2_curl;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_curl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/curl-8.12.1-6.el10.x86_64_v2.rpm;name=x86_64_v2_curl;unpack=0"
 SRC_URI[x86_64_v2_curl.sha256sum] = "1f299c60ab740682420f2a26cdd7e7d41883d1facf660fad6e8c3d1309fe1653"
-RPROVIDES:curl:x86_64_v2 = "virtual/wget_or_curl"
+RPROVIDES:curl:append:x86_64_v2 = " virtual/wget_or_curl"
 
-URI_x86_64_v2_libcurl = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libcurl-8.12.1-6.el10.x86_64_v2.rpm;name=x86_64_v2_libcurl;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libcurl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libcurl-8.12.1-6.el10.x86_64_v2.rpm;name=x86_64_v2_libcurl;unpack=0"
 SRC_URI[x86_64_v2_libcurl.sha256sum] = "a7584c149b7039f1b41db70835d8e61cdbd8e9248ee9c085554872fef544350b"
-RPROVIDES:libcurl:x86_64_v2 = "virtual/libcurl virtual/libcurl.so.4___64bit_ virtual/libcurl_ge_7.12.0 virtual/libcurl_ge_7.21.7-2 virtual/libcurl_x86-64_ virtual/libcurl_x86-64__eq_8.12.1-6.el10 virtual/libcurl_x86-64__ge_7.29.0 virtual/libcurl_x86-64__ge_7.52.0 virtual/libcurl_x86-64__ge_8.12.1-6.el10 virtual/libcurl_x86-64__ge_8.9.1"
+RPROVIDES:libcurl:append:x86_64_v2 = " virtual/libcurl virtual/libcurl.so.4___64bit_ virtual/libcurl_ge_7.12.0 virtual/libcurl_ge_7.21.7-2 virtual/libcurl_x86-64_ virtual/libcurl_x86-64__eq_8.12.1-6.el10 virtual/libcurl_x86-64__ge_7.29.0 virtual/libcurl_x86-64__ge_7.52.0 virtual/libcurl_x86-64__ge_8.12.1-6.el10 virtual/libcurl_x86-64__ge_8.9.1"
 
-URI_x86_64_v2_libcurl-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libcurl-devel-8.12.1-6.el10.x86_64_v2.rpm;name=x86_64_v2_libcurl-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libcurl-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libcurl-devel-8.12.1-6.el10.x86_64_v2.rpm;name=x86_64_v2_libcurl-devel;unpack=0"
 SRC_URI[x86_64_v2_libcurl-devel.sha256sum] = "76516ca05980e05fbe0caef7e18d492315bd59b465a7b0e85f26b99f5d9ec00d"
 
-URI_x86_64_v2_libcurl-minimal = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libcurl-minimal-8.12.1-6.el10.x86_64_v2.rpm;name=x86_64_v2_libcurl-minimal;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libcurl-minimal}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libcurl-minimal-8.12.1-6.el10.x86_64_v2.rpm;name=x86_64_v2_libcurl-minimal;unpack=0"
 SRC_URI[x86_64_v2_libcurl-minimal.sha256sum] = "58bbf715fa815a55768e1cafd322c5da51680acc289a26393584ffa8f9c03ed9"
-RPROVIDES:libcurl-minimal:x86_64_v2 = "virtual/libcurl virtual/libcurl.so.4___64bit_ virtual/libcurl_ge_7.12.0 virtual/libcurl_ge_7.21.7-2 virtual/libcurl_x86-64_ virtual/libcurl_x86-64__eq_8.12.1-6.el10 virtual/libcurl_x86-64__ge_7.29.0 virtual/libcurl_x86-64__ge_7.52.0 virtual/libcurl_x86-64__ge_8.12.1-6.el10 virtual/libcurl_x86-64__ge_8.9.1"
+RPROVIDES:libcurl-minimal:append:x86_64_v2 = " virtual/libcurl virtual/libcurl.so.4___64bit_ virtual/libcurl_ge_7.12.0 virtual/libcurl_ge_7.21.7-2 virtual/libcurl_x86-64_ virtual/libcurl_x86-64__eq_8.12.1-6.el10 virtual/libcurl_x86-64__ge_7.29.0 virtual/libcurl_x86-64__ge_7.52.0 virtual/libcurl_x86-64__ge_8.12.1-6.el10 virtual/libcurl_x86-64__ge_8.9.1"
 
-URI_aarch64_curl = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/curl-8.12.1-6.el10.aarch64.rpm;name=aarch64_curl;unpack=0"
-SRC_URI:append = " ${URI_aarch64_curl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/curl-8.12.1-6.el10.aarch64.rpm;name=aarch64_curl;unpack=0"
 SRC_URI[aarch64_curl.sha256sum] = "021dcc56dfb2af8693945599ba60a0b366967a67aab87e7b7e74206c8c66e31c"
-RPROVIDES:curl:aarch64 = "virtual/wget_or_curl"
+RPROVIDES:curl:append:aarch64 = " virtual/wget_or_curl"
 
-URI_aarch64_libcurl = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libcurl-8.12.1-6.el10.aarch64.rpm;name=aarch64_libcurl;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libcurl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libcurl-8.12.1-6.el10.aarch64.rpm;name=aarch64_libcurl;unpack=0"
 SRC_URI[aarch64_libcurl.sha256sum] = "de24b4b6757e2599611b6a3b814cfb5823019d21fbc58852dc588e3fd4c332af"
-RPROVIDES:libcurl:aarch64 = "virtual/libcurl virtual/libcurl.so.4___64bit_ virtual/libcurl_aarch-64_ virtual/libcurl_aarch-64__eq_8.12.1-6.el10 virtual/libcurl_aarch-64__ge_7.29.0 virtual/libcurl_aarch-64__ge_7.52.0 virtual/libcurl_aarch-64__ge_8.12.1-6.el10 virtual/libcurl_aarch-64__ge_8.9.1 virtual/libcurl_ge_7.12.0 virtual/libcurl_ge_7.21.7-2"
+RPROVIDES:libcurl:append:aarch64 = " virtual/libcurl virtual/libcurl.so.4___64bit_ virtual/libcurl_aarch-64_ virtual/libcurl_aarch-64__eq_8.12.1-6.el10 virtual/libcurl_aarch-64__ge_7.29.0 virtual/libcurl_aarch-64__ge_7.52.0 virtual/libcurl_aarch-64__ge_8.12.1-6.el10 virtual/libcurl_aarch-64__ge_8.9.1 virtual/libcurl_ge_7.12.0 virtual/libcurl_ge_7.21.7-2"
 
-URI_aarch64_libcurl-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libcurl-devel-8.12.1-6.el10.aarch64.rpm;name=aarch64_libcurl-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libcurl-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libcurl-devel-8.12.1-6.el10.aarch64.rpm;name=aarch64_libcurl-devel;unpack=0"
 SRC_URI[aarch64_libcurl-devel.sha256sum] = "92cb4908d18c8abf95ebf3b5ffec56a0f54917888cf04402f83d494c80b2473b"
 
-URI_aarch64_libcurl-minimal = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libcurl-minimal-8.12.1-6.el10.aarch64.rpm;name=aarch64_libcurl-minimal;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libcurl-minimal}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libcurl-minimal-8.12.1-6.el10.aarch64.rpm;name=aarch64_libcurl-minimal;unpack=0"
 SRC_URI[aarch64_libcurl-minimal.sha256sum] = "374b407066a290fa57241d29f84a9153337c0a02a5a84b231fb8c5a90fec1c43"
-RPROVIDES:libcurl-minimal:aarch64 = "virtual/libcurl virtual/libcurl.so.4___64bit_ virtual/libcurl_aarch-64_ virtual/libcurl_aarch-64__eq_8.12.1-6.el10 virtual/libcurl_aarch-64__ge_7.29.0 virtual/libcurl_aarch-64__ge_7.52.0 virtual/libcurl_aarch-64__ge_8.12.1-6.el10 virtual/libcurl_aarch-64__ge_8.9.1 virtual/libcurl_ge_7.12.0 virtual/libcurl_ge_7.21.7-2"
+RPROVIDES:libcurl-minimal:append:aarch64 = " virtual/libcurl virtual/libcurl.so.4___64bit_ virtual/libcurl_aarch-64_ virtual/libcurl_aarch-64__eq_8.12.1-6.el10 virtual/libcurl_aarch-64__ge_7.29.0 virtual/libcurl_aarch-64__ge_7.52.0 virtual/libcurl_aarch-64__ge_8.12.1-6.el10 virtual/libcurl_aarch-64__ge_8.9.1 virtual/libcurl_ge_7.12.0 virtual/libcurl_ge_7.21.7-2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/curl-8.12.1-6.el10.riscv64.rpm;name=riscv64_curl;unpack=0"
+SRC_URI[riscv64_curl.sha256sum] = "a1e118c6f2b91ec8b56b72f593754afa2e6cd865ba866229dd4a3c6aec2a734f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libcurl-8.12.1-6.el10.riscv64.rpm;name=riscv64_libcurl;unpack=0"
+SRC_URI[riscv64_libcurl.sha256sum] = "5bf8b1ac0a5a6f06248e57beb86ec297aff3d6b872588cb9d76aa2903c23f5de"
+RPROVIDES:libcurl:append:riscv64 = " virtual/libcurl virtual/libcurl.so.4___64bit_ virtual/libcurl_ge_7.12.0 virtual/libcurl_ge_7.21.7-2 virtual/libcurl_riscv-64__eq_8.12.1-6.el10 virtual/libcurl_riscv-64__ge_7.29.0 virtual/libcurl_riscv-64__ge_7.52.0 virtual/libcurl_riscv-64__ge_8.12.1-6.el10"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libcurl-devel-8.12.1-6.el10.riscv64.rpm;name=riscv64_libcurl-devel;unpack=0"
+SRC_URI[riscv64_libcurl-devel.sha256sum] = "db56c1b31e22a8c2e3b34d615d584239209f97aaf36eab4efb48c49492758cac"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libcurl-minimal-8.12.1-6.el10.riscv64.rpm;name=riscv64_libcurl-minimal;unpack=0"
+SRC_URI[riscv64_libcurl-minimal.sha256sum] = "22a152dd2c44d2629bab383ed66c934f7e86b5ef1a8567065032089526b78e40"
+RPROVIDES:libcurl-minimal:append:riscv64 = " virtual/libcurl virtual/libcurl.so.4___64bit_ virtual/libcurl_ge_7.12.0 virtual/libcurl_ge_7.21.7-2 virtual/libcurl_riscv-64__eq_8.12.1-6.el10 virtual/libcurl_riscv-64__ge_7.29.0 virtual/libcurl_riscv-64__ge_7.52.0 virtual/libcurl_riscv-64__ge_8.12.1-6.el10"
 
 RDEPENDS:curl:x86_64_v2 = " \
  glibc \
@@ -63,6 +68,11 @@ RDEPENDS:curl:aarch64 = " \
  glibc \
  virtual/libcurl.so.4___64bit_ \
  virtual/libcurl_aarch-64__ge_8.12.1-6.el10 \
+"
+RDEPENDS:curl:riscv64 = " \
+ glibc \
+ virtual/libcurl.so.4___64bit_ \
+ virtual/libcurl_riscv-64__ge_8.12.1-6.el10 \
 "
 RDEPENDS:libcurl = " \
  glibc \
@@ -104,6 +114,20 @@ RDEPENDS:libcurl-devel:aarch64 = " \
  virtual/libcurl_aarch-64__eq_8.12.1-6.el10 \
  zlib-ng-compat-devel \
 "
+RDEPENDS:libcurl-devel:riscv64 = " \
+ bash \
+ brotli-devel \
+ krb5-devel \
+ libidn2-devel \
+ libnghttp2-devel \
+ libpsl-devel \
+ libssh-devel \
+ openssl-devel \
+ pkgconf-pkg-config \
+ virtual/libcurl.so.4___64bit_ \
+ virtual/libcurl_riscv-64__eq_8.12.1-6.el10 \
+ zlib-ng-compat-devel \
+"
 RDEPENDS:libcurl-minimal = " \
  glibc \
  krb5-libs \
@@ -112,7 +136,3 @@ RDEPENDS:libcurl-minimal = " \
  openssl-libs \
  zlib-ng-compat \
  "
-
-PROVIDES:append:x86_64_v2 = " rpm/virtual/libcurl rpm/virtual/libcurl.so.4___64bit_ rpm/virtual/libcurl_ge_7.12.0 rpm/virtual/libcurl_ge_7.21.7-2 rpm/virtual/libcurl_x86-64_ rpm/virtual/libcurl_x86-64__eq_8.12.1-6.el10 rpm/virtual/libcurl_x86-64__ge_7.29.0 rpm/virtual/libcurl_x86-64__ge_7.52.0 rpm/virtual/libcurl_x86-64__ge_8.12.1-6.el10 rpm/virtual/libcurl_x86-64__ge_8.9.1 rpm/virtual/wget_or_curl"
-
-PROVIDES:append:aarch64 = " rpm/virtual/libcurl rpm/virtual/libcurl.so.4___64bit_ rpm/virtual/libcurl_aarch-64_ rpm/virtual/libcurl_aarch-64__eq_8.12.1-6.el10 rpm/virtual/libcurl_aarch-64__ge_7.29.0 rpm/virtual/libcurl_aarch-64__ge_7.52.0 rpm/virtual/libcurl_aarch-64__ge_8.12.1-6.el10 rpm/virtual/libcurl_aarch-64__ge_8.9.1 rpm/virtual/libcurl_ge_7.12.0 rpm/virtual/libcurl_ge_7.21.7-2 rpm/virtual/wget_or_curl"

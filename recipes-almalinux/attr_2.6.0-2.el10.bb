@@ -11,33 +11,35 @@ PACKAGES = " \
  libattr-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/attr-2.6.0-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/attr-2.6.0-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "ce38f44aed5dc162d833e4995cdcb2c446665cdd36dd36112720ab743e65df44"
 
-URI_x86_64_v2_attr = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/attr-2.6.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_attr;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_attr}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/attr-2.6.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_attr;unpack=0"
 SRC_URI[x86_64_v2_attr.sha256sum] = "2eb448982eb97d2d96a39b121f8a4e1c621fd27c4ed1b95e0eb5077a0c2927ac"
 
-URI_x86_64_v2_libattr = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libattr-2.6.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_libattr;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libattr}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libattr-2.6.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_libattr;unpack=0"
 SRC_URI[x86_64_v2_libattr.sha256sum] = "eb843d7878e4f7cf34c6031a826a371ed7254ee05dff013198a10dedf04774ed"
 
-URI_x86_64_v2_libattr-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libattr-devel-2.6.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_libattr-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libattr-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libattr-devel-2.6.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_libattr-devel;unpack=0"
 SRC_URI[x86_64_v2_libattr-devel.sha256sum] = "8e5d19a15f393c7fef85f9db042d4e6323dec3e1993119262bce17bfbf5305c9"
 
-URI_aarch64_attr = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/attr-2.6.0-2.el10.aarch64.rpm;name=aarch64_attr;unpack=0"
-SRC_URI:append = " ${URI_aarch64_attr}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/attr-2.6.0-2.el10.aarch64.rpm;name=aarch64_attr;unpack=0"
 SRC_URI[aarch64_attr.sha256sum] = "9ede1ea9ea2e385da1ecf2938ec1d247bbbe06f3d6dcb3bd5f7cdca27884acfc"
 
-URI_aarch64_libattr = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libattr-2.6.0-2.el10.aarch64.rpm;name=aarch64_libattr;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libattr}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libattr-2.6.0-2.el10.aarch64.rpm;name=aarch64_libattr;unpack=0"
 SRC_URI[aarch64_libattr.sha256sum] = "ec2670f222579df85a0b15696e85dae87187e8af860e1b41b99cbc3f6c4e5b30"
 
-URI_aarch64_libattr-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libattr-devel-2.6.0-2.el10.aarch64.rpm;name=aarch64_libattr-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libattr-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libattr-devel-2.6.0-2.el10.aarch64.rpm;name=aarch64_libattr-devel;unpack=0"
 SRC_URI[aarch64_libattr-devel.sha256sum] = "78955f7790e2625f759c5c1c9b118599e1b1aacbe2736b1f9ae8471af360ad88"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/attr-2.6.0-2.el10.riscv64.rpm;name=riscv64_attr;unpack=0"
+SRC_URI[riscv64_attr.sha256sum] = "41a8184e6d31af3ef3b57eca263b75c72559b5f3f9c8b6026da71e060e2b47f3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libattr-2.6.0-2.el10.riscv64.rpm;name=riscv64_libattr;unpack=0"
+SRC_URI[riscv64_libattr.sha256sum] = "8178ac33ca922ca56e7cccdfb21d6cab8047b932ee968ef35de09130878c5d10"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libattr-devel-2.6.0-2.el10.riscv64.rpm;name=riscv64_libattr-devel;unpack=0"
+SRC_URI[riscv64_libattr-devel.sha256sum] = "41db88a4d7b1010ecf5041be40cebbb74e461c398ad971c442f375777b920dc7"
 
 RDEPENDS:attr = " \
  glibc \

@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-rpyc"
 PV = "6.0.2"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-rpyc \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-rpyc \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-rpyc-6.0.2-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-rpyc-6.0.2-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "48dc6536b088f965f46d1fd0bb7700c9b5aca3f0ec560b9a4da1ae55eab3efcb"
 
-URI_x86_64_v2_python3-rpyc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-rpyc-6.0.2-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-rpyc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-rpyc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-rpyc-6.0.2-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-rpyc;unpack=0"
 SRC_URI[x86_64_v2_python3-rpyc.sha256sum] = "716def1e769b7b7b9c52d1e66bb118ace92fa1e2a4eecd3c13aea328fc93d58b"
 
-URI_aarch64_python3-rpyc = "${EPEL_MIRROR}/aarch64/Packages/p/python3-rpyc-6.0.2-1.el10_2.noarch.rpm;name=aarch64_python3-rpyc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-rpyc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-rpyc-6.0.2-1.el10_2.noarch.rpm;name=aarch64_python3-rpyc;unpack=0"
 SRC_URI[aarch64_python3-rpyc.sha256sum] = "834be01486dac3754696ffe40d9634ba480374bf47fe1cf7bfdc0305f25a91d9"
 
 RDEPENDS:python3-rpyc = " \

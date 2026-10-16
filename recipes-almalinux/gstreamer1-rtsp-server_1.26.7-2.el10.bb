@@ -9,17 +9,17 @@ PACKAGES = " \
  gstreamer1-rtsp-server \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gstreamer1-rtsp-server-1.26.7-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gstreamer1-rtsp-server-1.26.7-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f20702f2440cfcdbdfc4fe4955f8fb0b9f0a7b3b1fe09d4863091a2ed283bea4"
 
-URI_x86_64_v2_gstreamer1-rtsp-server = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gstreamer1-rtsp-server-1.26.7-2.el10.x86_64_v2.rpm;name=x86_64_v2_gstreamer1-rtsp-server;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gstreamer1-rtsp-server}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gstreamer1-rtsp-server-1.26.7-2.el10.x86_64_v2.rpm;name=x86_64_v2_gstreamer1-rtsp-server;unpack=0"
 SRC_URI[x86_64_v2_gstreamer1-rtsp-server.sha256sum] = "db32e493fb4e7655111fd575acdb0b02eebe4529eca71df0d5275c036b5d9282"
 
-URI_aarch64_gstreamer1-rtsp-server = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gstreamer1-rtsp-server-1.26.7-2.el10.aarch64.rpm;name=aarch64_gstreamer1-rtsp-server;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gstreamer1-rtsp-server}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gstreamer1-rtsp-server-1.26.7-2.el10.aarch64.rpm;name=aarch64_gstreamer1-rtsp-server;unpack=0"
 SRC_URI[aarch64_gstreamer1-rtsp-server.sha256sum] = "e24f875755a9f516591a9b5c89d67f04a4393e2d13ef54cbd9d4ddcd6b4c7946"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gstreamer1-rtsp-server-1.26.7-2.el10.riscv64.rpm;name=riscv64_gstreamer1-rtsp-server;unpack=0"
+SRC_URI[riscv64_gstreamer1-rtsp-server.sha256sum] = "cbc1465caf68294852ea33f5d7a6e3fac6c26159b96239dfe78c43c78dc0d4db"
 
 RDEPENDS:gstreamer1-rtsp-server = " \
  glib2 \

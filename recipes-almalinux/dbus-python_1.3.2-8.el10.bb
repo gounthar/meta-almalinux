@@ -10,25 +10,26 @@ PACKAGES = " \
  python3-dbus \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/dbus-python-1.3.2-8.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/dbus-python-1.3.2-8.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7fc39e071e552931ba2383a78e0caf7fd487e075f5b253bfdf9985aaa12ac19d"
 
-URI_x86_64_v2_dbus-python-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/dbus-python-devel-1.3.2-8.el10.x86_64_v2.rpm;name=x86_64_v2_dbus-python-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_dbus-python-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/dbus-python-devel-1.3.2-8.el10.x86_64_v2.rpm;name=x86_64_v2_dbus-python-devel;unpack=0"
 SRC_URI[x86_64_v2_dbus-python-devel.sha256sum] = "1f0886b8e941cb994174f2cd47ae13261aa55c6376c9c62dbd7e72b699a9ac27"
 
-URI_x86_64_v2_python3-dbus = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/python3-dbus-1.3.2-8.el10.x86_64_v2.rpm;name=x86_64_v2_python3-dbus;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-dbus}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/python3-dbus-1.3.2-8.el10.x86_64_v2.rpm;name=x86_64_v2_python3-dbus;unpack=0"
 SRC_URI[x86_64_v2_python3-dbus.sha256sum] = "08b7bedeb61cbd8fadc25ecadaa14a4010daf84e20ad1a8216ca60d1490656bb"
 
-URI_aarch64_dbus-python-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/dbus-python-devel-1.3.2-8.el10.aarch64.rpm;name=aarch64_dbus-python-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_dbus-python-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/dbus-python-devel-1.3.2-8.el10.aarch64.rpm;name=aarch64_dbus-python-devel;unpack=0"
 SRC_URI[aarch64_dbus-python-devel.sha256sum] = "068c394e6249dca109f6ad8c2ace3ac68af212ab4e42fedbd317547d32294a65"
 
-URI_aarch64_python3-dbus = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/python3-dbus-1.3.2-8.el10.aarch64.rpm;name=aarch64_python3-dbus;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-dbus}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/python3-dbus-1.3.2-8.el10.aarch64.rpm;name=aarch64_python3-dbus;unpack=0"
 SRC_URI[aarch64_python3-dbus.sha256sum] = "0335fdd866a82a04e2e9149b61eb54f1046a764af4c0e7d21a9f08452f7be881"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/dbus-python-devel-1.3.2-8.el10.riscv64.rpm;name=riscv64_dbus-python-devel;unpack=0"
+SRC_URI[riscv64_dbus-python-devel.sha256sum] = "11a2a1acca2f5b3acd713d779689e8816d52be689a274371efd46c672a227f0b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/python3-dbus-1.3.2-8.el10.riscv64.rpm;name=riscv64_python3-dbus;unpack=0"
+SRC_URI[riscv64_python3-dbus.sha256sum] = "422ef63fa60fb9a32c063ac204135fa57a52c9e7ed28820307d4c740db2f139f"
 
 RDEPENDS:dbus-python-devel = " \
  dbus-devel \

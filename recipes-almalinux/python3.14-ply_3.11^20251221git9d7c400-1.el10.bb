@@ -9,17 +9,17 @@ PACKAGES = " \
  python3.14-ply \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python3.14-ply-3.11^20251221git9d7c400-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python3.14-ply-3.11^20251221git9d7c400-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f0de31a7634055b334b8a8070b8bffd39ae747eed07ad435691e9be3e4868c56"
 
-URI_x86_64_v2_python3.14-ply = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3.14-ply-3.11^20251221git9d7c400-1.el10.noarch.rpm;name=x86_64_v2_python3.14-ply;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3.14-ply}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3.14-ply-3.11^20251221git9d7c400-1.el10.noarch.rpm;name=x86_64_v2_python3.14-ply;unpack=0"
 SRC_URI[x86_64_v2_python3.14-ply.sha256sum] = "6a0a105db5b50b7662c580bd18eb21158776cfbc1f9b9a999639c2d8d30b574a"
 
-URI_aarch64_python3.14-ply = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3.14-ply-3.11^20251221git9d7c400-1.el10.noarch.rpm;name=aarch64_python3.14-ply;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3.14-ply}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3.14-ply-3.11^20251221git9d7c400-1.el10.noarch.rpm;name=aarch64_python3.14-ply;unpack=0"
 SRC_URI[aarch64_python3.14-ply.sha256sum] = "6a0a105db5b50b7662c580bd18eb21158776cfbc1f9b9a999639c2d8d30b574a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3.14-ply-3.11^20251221git9d7c400-1.el10.noarch.rpm;name=riscv64_python3.14-ply;unpack=0"
+SRC_URI[riscv64_python3.14-ply.sha256sum] = "6a0a105db5b50b7662c580bd18eb21158776cfbc1f9b9a999639c2d8d30b574a"
 
 RDEPENDS:python3.14-ply = " \
  python3.14 \

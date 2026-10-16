@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-Email-Date-Format"
 PV = "1.008"
 PR = "5.el10_0"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-Email-Date-Format \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-Email-Date-Format \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-Email-Date-Format-1.008-5.el10_0.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-Email-Date-Format-1.008-5.el10_0.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "93494f10163a00a3e21681b35dc1407667973b6bce54361464c8d7d6fe64cfae"
 
-URI_x86_64_v2_perl-Email-Date-Format = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Email-Date-Format-1.008-5.el10_0.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Email-Date-Format;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Email-Date-Format}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Email-Date-Format-1.008-5.el10_0.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Email-Date-Format;unpack=0"
 SRC_URI[x86_64_v2_perl-Email-Date-Format.sha256sum] = "b061f20b83cdfc6ab5559098f52f518461c55247a9ade61508b588e2be61bda7"
 
-URI_aarch64_perl-Email-Date-Format = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Email-Date-Format-1.008-5.el10_0.noarch.rpm;name=aarch64_perl-Email-Date-Format;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Email-Date-Format}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Email-Date-Format-1.008-5.el10_0.noarch.rpm;name=aarch64_perl-Email-Date-Format;unpack=0"
 SRC_URI[aarch64_perl-Email-Date-Format.sha256sum] = "e1b5a0efe3979472ce2815e7a83e27a918777cbc3635e1a0d3b3c37cf816df8f"
 
 RDEPENDS:perl-Email-Date-Format = " \

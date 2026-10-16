@@ -9,17 +9,17 @@ PACKAGES = " \
  php-pecl-rrd \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/php-pecl-rrd-2.0.3-15.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/php-pecl-rrd-2.0.3-15.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b257b30c28b816c90c3e1f199e6685906caf056e61badf1db5a1fe28b12a49cb"
 
-URI_x86_64_v2_php-pecl-rrd = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/php-pecl-rrd-2.0.3-15.el10.x86_64_v2.rpm;name=x86_64_v2_php-pecl-rrd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_php-pecl-rrd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/php-pecl-rrd-2.0.3-15.el10.x86_64_v2.rpm;name=x86_64_v2_php-pecl-rrd;unpack=0"
 SRC_URI[x86_64_v2_php-pecl-rrd.sha256sum] = "da06dfd412c2aa77b4f1abd2cecb96b9a72fd31959593310374942ef8cf0388c"
 
-URI_aarch64_php-pecl-rrd = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/php-pecl-rrd-2.0.3-15.el10.aarch64.rpm;name=aarch64_php-pecl-rrd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_php-pecl-rrd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/php-pecl-rrd-2.0.3-15.el10.aarch64.rpm;name=aarch64_php-pecl-rrd;unpack=0"
 SRC_URI[aarch64_php-pecl-rrd.sha256sum] = "ec36c8407d7dce76a3f6f4ec256927e6dd9f08703bdf23fc40c368b37431855a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/php-pecl-rrd-2.0.3-15.el10.riscv64.rpm;name=riscv64_php-pecl-rrd;unpack=0"
+SRC_URI[riscv64_php-pecl-rrd.sha256sum] = "b5a6f4572f7d2ca2e1ee4ad2ab24b56c310ab0e9fee91fe6e01493c62b59671c"
 
 RDEPENDS:php-pecl-rrd = " \
  glibc \

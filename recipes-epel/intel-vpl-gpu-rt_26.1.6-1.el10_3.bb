@@ -12,17 +12,17 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/i/intel-vpl-gpu-rt-26.1.6-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/i/intel-vpl-gpu-rt-26.1.6-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7a2d61a38193dfebdb684ffc4d1408e90e78bcd2119a94e63b304fd8060a6fdf"
 
-URI_x86_64_v2_intel-vpl-gpu-rt = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/intel-vpl-gpu-rt-26.1.6-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_intel-vpl-gpu-rt;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_intel-vpl-gpu-rt}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/intel-vpl-gpu-rt-26.1.6-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_intel-vpl-gpu-rt;unpack=0"
 SRC_URI[x86_64_v2_intel-vpl-gpu-rt.sha256sum] = "c67b8c2e8f17855f7b6b26c15777aef9344aeb0bbed7340dba21e3a4a209b643"
 
-URI_x86_64_v2_intel-vpl-gpu-rt-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/intel-vpl-gpu-rt-devel-26.1.6-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_intel-vpl-gpu-rt-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_intel-vpl-gpu-rt-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/intel-vpl-gpu-rt-devel-26.1.6-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_intel-vpl-gpu-rt-devel;unpack=0"
 SRC_URI[x86_64_v2_intel-vpl-gpu-rt-devel.sha256sum] = "a3287db03830eef520b3cd9698136210b5c5a4a46390d7046c7564ade82e58fb"
 
 RDEPENDS:intel-vpl-gpu-rt = " \

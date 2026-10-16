@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-signal-hook-registry"
 PV = "1.4.8"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-signal-hook-registry+default-devel \
  rust-signal-hook-registry-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-signal-hook-registry+default-devel \
+ rust-signal-hook-registry-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-signal-hook-registry-1.4.8-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-signal-hook-registry-1.4.8-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3d19407736e73336b621577aaf7c1c1da575e2a69b426270ab3387f4a8bd0d6a"
 
-URI_x86_64_v2_rust-signal-hook-registry+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-signal-hook-registry+default-devel-1.4.8-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-signal-hook-registry+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-signal-hook-registry+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-signal-hook-registry+default-devel-1.4.8-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-signal-hook-registry+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-signal-hook-registry+default-devel.sha256sum] = "0f71275c510205f4b3451c8060c19b95c58dcdabd90413b3217bca3cca367083"
 
-URI_x86_64_v2_rust-signal-hook-registry-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-signal-hook-registry-devel-1.4.8-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-signal-hook-registry-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-signal-hook-registry-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-signal-hook-registry-devel-1.4.8-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-signal-hook-registry-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-signal-hook-registry-devel.sha256sum] = "4ebcb55840310346515e894c6bb22bc82309a43714096cc6d3d27714119a6cee"
 
-URI_aarch64_rust-signal-hook-registry+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-signal-hook-registry+default-devel-1.4.8-1.el10_2.noarch.rpm;name=aarch64_rust-signal-hook-registry+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-signal-hook-registry+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-signal-hook-registry+default-devel-1.4.8-1.el10_2.noarch.rpm;name=aarch64_rust-signal-hook-registry+default-devel;unpack=0"
 SRC_URI[aarch64_rust-signal-hook-registry+default-devel.sha256sum] = "153a374bd5e8180f71fb34c465622fcbdc1534baf7095b1943ce99828e4e31ff"
 
-URI_aarch64_rust-signal-hook-registry-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-signal-hook-registry-devel-1.4.8-1.el10_2.noarch.rpm;name=aarch64_rust-signal-hook-registry-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-signal-hook-registry-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-signal-hook-registry-devel-1.4.8-1.el10_2.noarch.rpm;name=aarch64_rust-signal-hook-registry-devel;unpack=0"
 SRC_URI[aarch64_rust-signal-hook-registry-devel.sha256sum] = "c16889e88069e76c079bd38f5fe7750d5ea604fa063cb8b30eeb05be47b35f7f"
 
 RDEPENDS:rust-signal-hook-registry+default-devel = " \

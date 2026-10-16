@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-Future"
 PV = "0.52"
 PR = "3.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-Future \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-Future \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-Future-0.52-3.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-Future-0.52-3.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "cf7cf3f2ab7f65a216f981b1df46740237ca9d0cb0f36dc3cd531e29a65d49d2"
 
-URI_x86_64_v2_perl-Future = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Future-0.52-3.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Future;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Future}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Future-0.52-3.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Future;unpack=0"
 SRC_URI[x86_64_v2_perl-Future.sha256sum] = "459b069cbf75e98c788be18fb566f6bfcd64d6e25c4ecde11af42c5800160366"
 
-URI_aarch64_perl-Future = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Future-0.52-3.el10_3.noarch.rpm;name=aarch64_perl-Future;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Future}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Future-0.52-3.el10_3.noarch.rpm;name=aarch64_perl-Future;unpack=0"
 SRC_URI[aarch64_perl-Future.sha256sum] = "719f394f72a6e39ce0a0733938b8e1b42bd208ce89433ce7d3f04637976d837a"
 
 RDEPENDS:perl-Future = " \

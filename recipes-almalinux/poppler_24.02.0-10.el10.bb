@@ -18,89 +18,98 @@ PACKAGES = " \
  poppler-utils \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/poppler-24.02.0-10.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/poppler-24.02.0-10.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "87c034c2e6f170a2089cc8830bc1e3eaad784258b3375c650a0d869b334372d1"
 
-URI_x86_64_v2_poppler = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/poppler-24.02.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_poppler;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_poppler}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/poppler-24.02.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_poppler;unpack=0"
 SRC_URI[x86_64_v2_poppler.sha256sum] = "a9ace9d39752434ac7bc1354dc2d2e2eeef402952242e7fe5f9ee17491441ad5"
 
-URI_x86_64_v2_poppler-cpp = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/poppler-cpp-24.02.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_poppler-cpp;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_poppler-cpp}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/poppler-cpp-24.02.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_poppler-cpp;unpack=0"
 SRC_URI[x86_64_v2_poppler-cpp.sha256sum] = "fa0347dd710a5db24881f8092301936f33efd47670a55cb0efeda4f886a1522b"
 
-URI_x86_64_v2_poppler-cpp-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/poppler-cpp-devel-24.02.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_poppler-cpp-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_poppler-cpp-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/poppler-cpp-devel-24.02.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_poppler-cpp-devel;unpack=0"
 SRC_URI[x86_64_v2_poppler-cpp-devel.sha256sum] = "4351e7ee8a035e7eb2e11bd300bd3a541f4af71e53015b39eacec250913b9ec1"
 
-URI_x86_64_v2_poppler-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/poppler-devel-24.02.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_poppler-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_poppler-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/poppler-devel-24.02.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_poppler-devel;unpack=0"
 SRC_URI[x86_64_v2_poppler-devel.sha256sum] = "9a77c733a697bab43d3e0ef2c18bc8cffd4a229c2a2590eb7cc820a28e47275f"
 
-URI_x86_64_v2_poppler-glib = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/poppler-glib-24.02.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_poppler-glib;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_poppler-glib}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/poppler-glib-24.02.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_poppler-glib;unpack=0"
 SRC_URI[x86_64_v2_poppler-glib.sha256sum] = "0cbc2608764f07da456b0642321d5361f177b28fe7fa941ea26f6be99fe62300"
 
-URI_x86_64_v2_poppler-glib-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/poppler-glib-devel-24.02.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_poppler-glib-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_poppler-glib-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/poppler-glib-devel-24.02.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_poppler-glib-devel;unpack=0"
 SRC_URI[x86_64_v2_poppler-glib-devel.sha256sum] = "1f1a000e662c68eed0733dc71604601e8c858815a5056a57d2687811eec3a896"
 
-URI_x86_64_v2_poppler-glib-doc = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/poppler-glib-doc-24.02.0-10.el10.noarch.rpm;name=x86_64_v2_poppler-glib-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_poppler-glib-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/poppler-glib-doc-24.02.0-10.el10.noarch.rpm;name=x86_64_v2_poppler-glib-doc;unpack=0"
 SRC_URI[x86_64_v2_poppler-glib-doc.sha256sum] = "6018ecdc6e2c97bdffc7ebea8e61574c5c3396a44e9b44251ac21888c61ac2c8"
 
-URI_x86_64_v2_poppler-qt6 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/poppler-qt6-24.02.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_poppler-qt6;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_poppler-qt6}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/poppler-qt6-24.02.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_poppler-qt6;unpack=0"
 SRC_URI[x86_64_v2_poppler-qt6.sha256sum] = "6e98b150549688f77349fcc7739369c0b59184a36306bc2d8f954192bc7bc60c"
 
-URI_x86_64_v2_poppler-qt6-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/poppler-qt6-devel-24.02.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_poppler-qt6-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_poppler-qt6-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/poppler-qt6-devel-24.02.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_poppler-qt6-devel;unpack=0"
 SRC_URI[x86_64_v2_poppler-qt6-devel.sha256sum] = "8b33be50a94b0816262113584f2b6a012888005c34f8d2a3e5369b8d731a2488"
 
-URI_x86_64_v2_poppler-utils = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/poppler-utils-24.02.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_poppler-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_poppler-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/poppler-utils-24.02.0-10.el10.x86_64_v2.rpm;name=x86_64_v2_poppler-utils;unpack=0"
 SRC_URI[x86_64_v2_poppler-utils.sha256sum] = "5df6d98fcdec4970b689c438f6f1b1a8191a126566e2ec7fa0d16c62f22681b6"
 
-URI_aarch64_poppler = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/poppler-24.02.0-10.el10.aarch64.rpm;name=aarch64_poppler;unpack=0"
-SRC_URI:append = " ${URI_aarch64_poppler}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/poppler-24.02.0-10.el10.aarch64.rpm;name=aarch64_poppler;unpack=0"
 SRC_URI[aarch64_poppler.sha256sum] = "9a63ef015ae3642c68e7b07edf23bbd0a75ce45a0bdcc68d183736c1154023a9"
 
-URI_aarch64_poppler-cpp = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/poppler-cpp-24.02.0-10.el10.aarch64.rpm;name=aarch64_poppler-cpp;unpack=0"
-SRC_URI:append = " ${URI_aarch64_poppler-cpp}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/poppler-cpp-24.02.0-10.el10.aarch64.rpm;name=aarch64_poppler-cpp;unpack=0"
 SRC_URI[aarch64_poppler-cpp.sha256sum] = "1d8f021d784e06acf9ffb79883c23d7c6263798d788968daaf40aaf1fa7d2c68"
 
-URI_aarch64_poppler-cpp-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/poppler-cpp-devel-24.02.0-10.el10.aarch64.rpm;name=aarch64_poppler-cpp-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_poppler-cpp-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/poppler-cpp-devel-24.02.0-10.el10.aarch64.rpm;name=aarch64_poppler-cpp-devel;unpack=0"
 SRC_URI[aarch64_poppler-cpp-devel.sha256sum] = "6ca5b72ea71d2ea503b57ad068d44df4bdf13b78ac7461dc315e26dfc467b2e2"
 
-URI_aarch64_poppler-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/poppler-devel-24.02.0-10.el10.aarch64.rpm;name=aarch64_poppler-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_poppler-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/poppler-devel-24.02.0-10.el10.aarch64.rpm;name=aarch64_poppler-devel;unpack=0"
 SRC_URI[aarch64_poppler-devel.sha256sum] = "f42cfa30ef875fd528b9253c7e5bdcd167806210978c9b1eb2a8437a07da7cfc"
 
-URI_aarch64_poppler-glib = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/poppler-glib-24.02.0-10.el10.aarch64.rpm;name=aarch64_poppler-glib;unpack=0"
-SRC_URI:append = " ${URI_aarch64_poppler-glib}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/poppler-glib-24.02.0-10.el10.aarch64.rpm;name=aarch64_poppler-glib;unpack=0"
 SRC_URI[aarch64_poppler-glib.sha256sum] = "dfd896ccd8ef477605d286b1dc0271c1f849777b77f4ee7b9fcab5ca0188ad46"
 
-URI_aarch64_poppler-glib-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/poppler-glib-devel-24.02.0-10.el10.aarch64.rpm;name=aarch64_poppler-glib-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_poppler-glib-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/poppler-glib-devel-24.02.0-10.el10.aarch64.rpm;name=aarch64_poppler-glib-devel;unpack=0"
 SRC_URI[aarch64_poppler-glib-devel.sha256sum] = "1150dd722ef20a5946a3a20a79118a4e452e4749c59e678c16fb003461140162"
 
-URI_aarch64_poppler-glib-doc = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/poppler-glib-doc-24.02.0-10.el10.noarch.rpm;name=aarch64_poppler-glib-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_poppler-glib-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/poppler-glib-doc-24.02.0-10.el10.noarch.rpm;name=aarch64_poppler-glib-doc;unpack=0"
 SRC_URI[aarch64_poppler-glib-doc.sha256sum] = "6018ecdc6e2c97bdffc7ebea8e61574c5c3396a44e9b44251ac21888c61ac2c8"
 
-URI_aarch64_poppler-qt6 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/poppler-qt6-24.02.0-10.el10.aarch64.rpm;name=aarch64_poppler-qt6;unpack=0"
-SRC_URI:append = " ${URI_aarch64_poppler-qt6}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/poppler-qt6-24.02.0-10.el10.aarch64.rpm;name=aarch64_poppler-qt6;unpack=0"
 SRC_URI[aarch64_poppler-qt6.sha256sum] = "20949d2aed8aa7bea0a5be5b505298aca0a06504f8fd1522629d0653cd33f98f"
 
-URI_aarch64_poppler-qt6-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/poppler-qt6-devel-24.02.0-10.el10.aarch64.rpm;name=aarch64_poppler-qt6-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_poppler-qt6-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/poppler-qt6-devel-24.02.0-10.el10.aarch64.rpm;name=aarch64_poppler-qt6-devel;unpack=0"
 SRC_URI[aarch64_poppler-qt6-devel.sha256sum] = "86b4aa806ba94597da151b19da1d534c1335ddf0fd02edac773a285502e50a3b"
 
-URI_aarch64_poppler-utils = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/poppler-utils-24.02.0-10.el10.aarch64.rpm;name=aarch64_poppler-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_poppler-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/poppler-utils-24.02.0-10.el10.aarch64.rpm;name=aarch64_poppler-utils;unpack=0"
 SRC_URI[aarch64_poppler-utils.sha256sum] = "ed794f94434b0287b492e93ca56a3c6cbc5a1083cfc76562a662ae9f8c7ad16e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/poppler-24.02.0-10.el10.riscv64.rpm;name=riscv64_poppler;unpack=0"
+SRC_URI[riscv64_poppler.sha256sum] = "db6b1829da811ff6f4322248ebf47c7c40519654227eda42855f48d7406633e5"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/poppler-cpp-24.02.0-10.el10.riscv64.rpm;name=riscv64_poppler-cpp;unpack=0"
+SRC_URI[riscv64_poppler-cpp.sha256sum] = "7897866b6456d022de178af530cf527cd0605dea2a0038b2d01111973283b627"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/poppler-cpp-devel-24.02.0-10.el10.riscv64.rpm;name=riscv64_poppler-cpp-devel;unpack=0"
+SRC_URI[riscv64_poppler-cpp-devel.sha256sum] = "fbb3e022d021cc59df21fccc4f99938ca7be3b3f15974354f673691f6f95f9cc"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/poppler-devel-24.02.0-10.el10.riscv64.rpm;name=riscv64_poppler-devel;unpack=0"
+SRC_URI[riscv64_poppler-devel.sha256sum] = "07af03628b7f1ddc88911b5802356cddbfc5406e5b8150f9b59f3f8c8d6cf513"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/poppler-glib-24.02.0-10.el10.riscv64.rpm;name=riscv64_poppler-glib;unpack=0"
+SRC_URI[riscv64_poppler-glib.sha256sum] = "ec40ecd9aa225a0351b9c45577f762064c262a5adea04618cee6c4e2c831540a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/poppler-glib-devel-24.02.0-10.el10.riscv64.rpm;name=riscv64_poppler-glib-devel;unpack=0"
+SRC_URI[riscv64_poppler-glib-devel.sha256sum] = "8234b1558748eb8bc57c69e8fa6308c8c013c56ba7efa49595e1f26866140275"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/poppler-glib-doc-24.02.0-10.el10.noarch.rpm;name=riscv64_poppler-glib-doc;unpack=0"
+SRC_URI[riscv64_poppler-glib-doc.sha256sum] = "6018ecdc6e2c97bdffc7ebea8e61574c5c3396a44e9b44251ac21888c61ac2c8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/poppler-qt6-24.02.0-10.el10.riscv64.rpm;name=riscv64_poppler-qt6;unpack=0"
+SRC_URI[riscv64_poppler-qt6.sha256sum] = "928c018e98a2e534ef923f10bea0be007fdab087561189f998a55226e7f18485"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/poppler-qt6-devel-24.02.0-10.el10.riscv64.rpm;name=riscv64_poppler-qt6-devel;unpack=0"
+SRC_URI[riscv64_poppler-qt6-devel.sha256sum] = "aa2b0288849b57fd2474001e0cb3bb4e719a2e2449493f7025f8c199b704076c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/poppler-utils-24.02.0-10.el10.riscv64.rpm;name=riscv64_poppler-utils;unpack=0"
+SRC_URI[riscv64_poppler-utils.sha256sum] = "2e267469a6e21ad23e00abd178f76726c0ba9378817c34f57bc7d8301fa22f68"
 
 RDEPENDS:poppler = " \
  fontconfig \

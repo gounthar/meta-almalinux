@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "qt5-qtcharts"
 PV = "5.15.18"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  qt5-qtcharts \
  qt5-qtcharts-devel \
  qt5-qtcharts-examples \
- "
+"
+PACKAGES:aarch64 = " \
+ qt5-qtcharts \
+ qt5-qtcharts-devel \
+ qt5-qtcharts-examples \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/q/qt5-qtcharts-5.15.18-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/q/qt5-qtcharts-5.15.18-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7b47914f5efd6dbf6daecaf3cbca49d7e32a623b125798a83b22622d58e189de"
 
-URI_x86_64_v2_qt5-qtcharts = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt5-qtcharts-5.15.18-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qt5-qtcharts;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt5-qtcharts}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt5-qtcharts-5.15.18-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qt5-qtcharts;unpack=0"
 SRC_URI[x86_64_v2_qt5-qtcharts.sha256sum] = "37ff54db65b067bdb06984e30a1912ceeae0ad98eee8fe7c547f430a58486b76"
 
-URI_x86_64_v2_qt5-qtcharts-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt5-qtcharts-devel-5.15.18-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qt5-qtcharts-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt5-qtcharts-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt5-qtcharts-devel-5.15.18-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qt5-qtcharts-devel;unpack=0"
 SRC_URI[x86_64_v2_qt5-qtcharts-devel.sha256sum] = "e957db0870e37d02d99032ae2fc9a67f7df0a3d48cb89c91cd33a00d812cef82"
 
-URI_x86_64_v2_qt5-qtcharts-examples = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt5-qtcharts-examples-5.15.18-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qt5-qtcharts-examples;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt5-qtcharts-examples}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt5-qtcharts-examples-5.15.18-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_qt5-qtcharts-examples;unpack=0"
 SRC_URI[x86_64_v2_qt5-qtcharts-examples.sha256sum] = "29e175d119d7c8d69edb87968a8605f48784463b44a7a727d0e0a745f0f2e07e"
 
-URI_aarch64_qt5-qtcharts = "${EPEL_MIRROR}/aarch64/Packages/q/qt5-qtcharts-5.15.18-1.el10_2.aarch64.rpm;name=aarch64_qt5-qtcharts;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt5-qtcharts}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/q/qt5-qtcharts-5.15.18-1.el10_2.aarch64.rpm;name=aarch64_qt5-qtcharts;unpack=0"
 SRC_URI[aarch64_qt5-qtcharts.sha256sum] = "460dbeab63dd2a54f5c17a3a5367b195ce02ac6711b3d448e6434a58d01855f2"
 
-URI_aarch64_qt5-qtcharts-devel = "${EPEL_MIRROR}/aarch64/Packages/q/qt5-qtcharts-devel-5.15.18-1.el10_2.aarch64.rpm;name=aarch64_qt5-qtcharts-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt5-qtcharts-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/q/qt5-qtcharts-devel-5.15.18-1.el10_2.aarch64.rpm;name=aarch64_qt5-qtcharts-devel;unpack=0"
 SRC_URI[aarch64_qt5-qtcharts-devel.sha256sum] = "f3cf58945664b29f2e07b875cdbc0d04b56250fb9e267a70360a7a28b702bafc"
 
-URI_aarch64_qt5-qtcharts-examples = "${EPEL_MIRROR}/aarch64/Packages/q/qt5-qtcharts-examples-5.15.18-1.el10_2.aarch64.rpm;name=aarch64_qt5-qtcharts-examples;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt5-qtcharts-examples}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/q/qt5-qtcharts-examples-5.15.18-1.el10_2.aarch64.rpm;name=aarch64_qt5-qtcharts-examples;unpack=0"
 SRC_URI[aarch64_qt5-qtcharts-examples.sha256sum] = "2d5c440fd81650f696362e49503a1cbb4dd06eca0d16a39ce247119a4ae90927"
 
 RDEPENDS:qt5-qtcharts = " \

@@ -5,47 +5,47 @@ inherit dnf-bridge
 PN = "python-gitlab"
 PV = "8.3.0"
 PR = "2.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-gitlab \
  python3-gitlab+autocompletion \
  python3-gitlab+graphql \
  python3-gitlab+yaml \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-gitlab \
+ python3-gitlab+autocompletion \
+ python3-gitlab+graphql \
+ python3-gitlab+yaml \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-gitlab-8.3.0-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-gitlab-8.3.0-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d81fef8b4135636d744eb2b4ddf415376dbdd24a858a92d83567b7e11125eef0"
 
-URI_x86_64_v2_python3-gitlab = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-gitlab-8.3.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-gitlab;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-gitlab}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-gitlab-8.3.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-gitlab;unpack=0"
 SRC_URI[x86_64_v2_python3-gitlab.sha256sum] = "dbac210d2ff990da0335b594c0a68116e8da7a360e0660203ea68b9ae7d3122a"
 
-URI_x86_64_v2_python3-gitlab+autocompletion = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-gitlab+autocompletion-8.3.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-gitlab+autocompletion;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-gitlab+autocompletion}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-gitlab+autocompletion-8.3.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-gitlab+autocompletion;unpack=0"
 SRC_URI[x86_64_v2_python3-gitlab+autocompletion.sha256sum] = "1828da1026f7022ee238cab6d45c0324bebdb3ee7f5d4a6927e084059e61465b"
 
-URI_x86_64_v2_python3-gitlab+graphql = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-gitlab+graphql-8.3.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-gitlab+graphql;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-gitlab+graphql}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-gitlab+graphql-8.3.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-gitlab+graphql;unpack=0"
 SRC_URI[x86_64_v2_python3-gitlab+graphql.sha256sum] = "d0bc7429163ff08c18cdd2007278aa16134265a640859869a18b3e18690d02d3"
 
-URI_x86_64_v2_python3-gitlab+yaml = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-gitlab+yaml-8.3.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-gitlab+yaml;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-gitlab+yaml}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-gitlab+yaml-8.3.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-gitlab+yaml;unpack=0"
 SRC_URI[x86_64_v2_python3-gitlab+yaml.sha256sum] = "95cc21ed51125c46c51c2bc00275baf9e2e9d3286be0c269910ddb2341cf3060"
 
-URI_aarch64_python3-gitlab = "${EPEL_MIRROR}/aarch64/Packages/p/python3-gitlab-8.3.0-2.el10_3.noarch.rpm;name=aarch64_python3-gitlab;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-gitlab}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-gitlab-8.3.0-2.el10_3.noarch.rpm;name=aarch64_python3-gitlab;unpack=0"
 SRC_URI[aarch64_python3-gitlab.sha256sum] = "2cc359779320a0c8ea6efe1fcbc00b489408e261b7cccf46189cf7a8dea66149"
 
-URI_aarch64_python3-gitlab+autocompletion = "${EPEL_MIRROR}/aarch64/Packages/p/python3-gitlab+autocompletion-8.3.0-2.el10_3.noarch.rpm;name=aarch64_python3-gitlab+autocompletion;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-gitlab+autocompletion}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-gitlab+autocompletion-8.3.0-2.el10_3.noarch.rpm;name=aarch64_python3-gitlab+autocompletion;unpack=0"
 SRC_URI[aarch64_python3-gitlab+autocompletion.sha256sum] = "4af9269de51a1d09da9929e9d18793c557e9a177f34fa560eaf002792b6c7b42"
 
-URI_aarch64_python3-gitlab+graphql = "${EPEL_MIRROR}/aarch64/Packages/p/python3-gitlab+graphql-8.3.0-2.el10_3.noarch.rpm;name=aarch64_python3-gitlab+graphql;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-gitlab+graphql}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-gitlab+graphql-8.3.0-2.el10_3.noarch.rpm;name=aarch64_python3-gitlab+graphql;unpack=0"
 SRC_URI[aarch64_python3-gitlab+graphql.sha256sum] = "4e2f1ef2a2a4e1dba9ade735601edd442700ad4c4004bb053295407684ffb444"
 
-URI_aarch64_python3-gitlab+yaml = "${EPEL_MIRROR}/aarch64/Packages/p/python3-gitlab+yaml-8.3.0-2.el10_3.noarch.rpm;name=aarch64_python3-gitlab+yaml;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-gitlab+yaml}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-gitlab+yaml-8.3.0-2.el10_3.noarch.rpm;name=aarch64_python3-gitlab+yaml;unpack=0"
 SRC_URI[aarch64_python3-gitlab+yaml.sha256sum] = "285263dc1411bb97fb8bb4e9d543c52771bf0bb3301213eac2e3b82b9adf3d50"
 
 RDEPENDS:python3-gitlab = " \

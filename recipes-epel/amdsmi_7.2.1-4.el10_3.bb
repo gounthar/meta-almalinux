@@ -12,17 +12,17 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/a/amdsmi-7.2.1-4.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/a/amdsmi-7.2.1-4.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "604431e2df3c2a149b999054221d828200bab3861a0fed3c0e77ef670d056d37"
 
-URI_x86_64_v2_amdsmi = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/amdsmi-7.2.1-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_amdsmi;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_amdsmi}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/amdsmi-7.2.1-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_amdsmi;unpack=0"
 SRC_URI[x86_64_v2_amdsmi.sha256sum] = "2d6529b2ce530b095b3f6f99a01365f6c16d0a152f84342a02543433f107ab86"
 
-URI_x86_64_v2_amdsmi-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/amdsmi-devel-7.2.1-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_amdsmi-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_amdsmi-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/amdsmi-devel-7.2.1-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_amdsmi-devel;unpack=0"
 SRC_URI[x86_64_v2_amdsmi-devel.sha256sum] = "ee04beb09967a5e2456a35a691f3cb1654267c24e7aeb5e1cf25423b1aa9b26f"
 
 RDEPENDS:amdsmi = " \

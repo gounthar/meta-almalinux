@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "rust-prost-build"
 PV = "0.14.3"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-prost-build+default-devel \
  rust-prost-build+format-devel \
  rust-prost-build-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-prost-build+default-devel \
+ rust-prost-build+format-devel \
+ rust-prost-build-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-prost-build-0.14.3-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-prost-build-0.14.3-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1f1a3eead0e32fc1223c17fa685e1e7fecbe1d54f6d661f9068add9d21acd3f2"
 
-URI_x86_64_v2_rust-prost-build+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-prost-build+default-devel-0.14.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-prost-build+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-prost-build+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-prost-build+default-devel-0.14.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-prost-build+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-prost-build+default-devel.sha256sum] = "fed5ea9fe676e7d9af9cebbe8cb1160346db481c10de4bc07736320c1e04ff50"
 
-URI_x86_64_v2_rust-prost-build+format-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-prost-build+format-devel-0.14.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-prost-build+format-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-prost-build+format-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-prost-build+format-devel-0.14.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-prost-build+format-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-prost-build+format-devel.sha256sum] = "f3c4c082b236d631887795c0dffd876823bb5bff302433176df593c240c68fd1"
 
-URI_x86_64_v2_rust-prost-build-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-prost-build-devel-0.14.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-prost-build-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-prost-build-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-prost-build-devel-0.14.3-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-prost-build-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-prost-build-devel.sha256sum] = "a76455f95728b80597aa0f16a05eb9ddc1331b0da22dfe8bbc2d482887d686b4"
 
-URI_aarch64_rust-prost-build+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-prost-build+default-devel-0.14.3-1.el10_3.noarch.rpm;name=aarch64_rust-prost-build+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-prost-build+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-prost-build+default-devel-0.14.3-1.el10_3.noarch.rpm;name=aarch64_rust-prost-build+default-devel;unpack=0"
 SRC_URI[aarch64_rust-prost-build+default-devel.sha256sum] = "4f5d9d2f5715fca00bf8d557be14f1e7fe393266498d3ac7e2ccbc7e1a8276e3"
 
-URI_aarch64_rust-prost-build+format-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-prost-build+format-devel-0.14.3-1.el10_3.noarch.rpm;name=aarch64_rust-prost-build+format-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-prost-build+format-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-prost-build+format-devel-0.14.3-1.el10_3.noarch.rpm;name=aarch64_rust-prost-build+format-devel;unpack=0"
 SRC_URI[aarch64_rust-prost-build+format-devel.sha256sum] = "843ef017e53fda4594089cb786690cc882b509a04e8c05e6a6daddd79dd71b5a"
 
-URI_aarch64_rust-prost-build-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-prost-build-devel-0.14.3-1.el10_3.noarch.rpm;name=aarch64_rust-prost-build-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-prost-build-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-prost-build-devel-0.14.3-1.el10_3.noarch.rpm;name=aarch64_rust-prost-build-devel;unpack=0"
 SRC_URI[aarch64_rust-prost-build-devel.sha256sum] = "ca917edb73da29c26525184bb0f228efc94ed295047b01c7a4542518436854cb"
 
 RDEPENDS:rust-prost-build+default-devel = " \

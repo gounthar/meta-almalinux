@@ -12,41 +12,44 @@ PACKAGES = " \
  almalinux-sb-certs \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/almalinux-kitten-release-10.0-21.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/almalinux-kitten-release-10.0-21.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "ec3afafcc277adca24fef7d82987730abe495c4ed3e08605f2a2c40f76265473"
 
-URI_x86_64_v2_almalinux-gpg-keys = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/almalinux-gpg-keys-10.0-21.el10.x86_64_v2.rpm;name=x86_64_v2_almalinux-gpg-keys;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_almalinux-gpg-keys}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/almalinux-gpg-keys-10.0-21.el10.x86_64_v2.rpm;name=x86_64_v2_almalinux-gpg-keys;unpack=0"
 SRC_URI[x86_64_v2_almalinux-gpg-keys.sha256sum] = "9e2bba62a4f66df1137096bfb17230c2c3e895c46b534fb19008a21c789fa478"
 
-URI_x86_64_v2_almalinux-kitten-release = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/almalinux-kitten-release-10.0-21.el10.x86_64_v2.rpm;name=x86_64_v2_almalinux-kitten-release;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_almalinux-kitten-release}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/almalinux-kitten-release-10.0-21.el10.x86_64_v2.rpm;name=x86_64_v2_almalinux-kitten-release;unpack=0"
 SRC_URI[x86_64_v2_almalinux-kitten-release.sha256sum] = "66b13118b5634ea659f4c2df50df9f4867ea67db4150d4d6928b34982b5fddc4"
 
-URI_x86_64_v2_almalinux-kitten-repos = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/almalinux-kitten-repos-10.0-21.el10.x86_64_v2.rpm;name=x86_64_v2_almalinux-kitten-repos;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_almalinux-kitten-repos}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/almalinux-kitten-repos-10.0-21.el10.x86_64_v2.rpm;name=x86_64_v2_almalinux-kitten-repos;unpack=0"
 SRC_URI[x86_64_v2_almalinux-kitten-repos.sha256sum] = "92a79d2f081a42acb00d6f98a60bf88cf837274f56210432cc7b8739800dc945"
 
-URI_x86_64_v2_almalinux-sb-certs = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/almalinux-sb-certs-10.0-21.el10.x86_64_v2.rpm;name=x86_64_v2_almalinux-sb-certs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_almalinux-sb-certs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/almalinux-sb-certs-10.0-21.el10.x86_64_v2.rpm;name=x86_64_v2_almalinux-sb-certs;unpack=0"
 SRC_URI[x86_64_v2_almalinux-sb-certs.sha256sum] = "8591ce107ea2108061cd5711ed7d57e29aaa731a25abf1217be66dd662b1917a"
 
-URI_aarch64_almalinux-gpg-keys = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/almalinux-gpg-keys-10.0-21.el10.aarch64.rpm;name=aarch64_almalinux-gpg-keys;unpack=0"
-SRC_URI:append = " ${URI_aarch64_almalinux-gpg-keys}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/almalinux-gpg-keys-10.0-21.el10.aarch64.rpm;name=aarch64_almalinux-gpg-keys;unpack=0"
 SRC_URI[aarch64_almalinux-gpg-keys.sha256sum] = "b64af26c0ca3430ac5af3650d209754b26b3d1ffdf893941290c382750e34af4"
 
-URI_aarch64_almalinux-kitten-release = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/almalinux-kitten-release-10.0-21.el10.aarch64.rpm;name=aarch64_almalinux-kitten-release;unpack=0"
-SRC_URI:append = " ${URI_aarch64_almalinux-kitten-release}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/almalinux-kitten-release-10.0-21.el10.aarch64.rpm;name=aarch64_almalinux-kitten-release;unpack=0"
 SRC_URI[aarch64_almalinux-kitten-release.sha256sum] = "064fa565247ed96b1882e518dba2df32c8b33c33ddf9c94962d95e85d872ed1f"
 
-URI_aarch64_almalinux-kitten-repos = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/almalinux-kitten-repos-10.0-21.el10.aarch64.rpm;name=aarch64_almalinux-kitten-repos;unpack=0"
-SRC_URI:append = " ${URI_aarch64_almalinux-kitten-repos}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/almalinux-kitten-repos-10.0-21.el10.aarch64.rpm;name=aarch64_almalinux-kitten-repos;unpack=0"
 SRC_URI[aarch64_almalinux-kitten-repos.sha256sum] = "1236a55392efcd4f83d24b826efd9093ed609ee9698c85fc64b498d610087d6c"
 
-URI_aarch64_almalinux-sb-certs = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/almalinux-sb-certs-10.0-21.el10.aarch64.rpm;name=aarch64_almalinux-sb-certs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_almalinux-sb-certs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/almalinux-sb-certs-10.0-21.el10.aarch64.rpm;name=aarch64_almalinux-sb-certs;unpack=0"
 SRC_URI[aarch64_almalinux-sb-certs.sha256sum] = "338c39a0a52a613dfc450377ea58a044882ac65a894cbd24930815b51d82661c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/almalinux-gpg-keys-10.0-21.el10.riscv64.rpm;name=riscv64_almalinux-gpg-keys;unpack=0"
+SRC_URI[riscv64_almalinux-gpg-keys.sha256sum] = "8f3033dd8bbc7119e7b13efad9a6650739439feb16def2efb53fc3758c8be042"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/almalinux-kitten-release-10.0-21.el10.riscv64.rpm;name=riscv64_almalinux-kitten-release;unpack=0"
+SRC_URI[riscv64_almalinux-kitten-release.sha256sum] = "510c50f4126315fdea59f8205f95d966a31821d2762273d49eb7a465ab5cc6be"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/almalinux-kitten-repos-10.0-21.el10.riscv64.rpm;name=riscv64_almalinux-kitten-repos;unpack=0"
+SRC_URI[riscv64_almalinux-kitten-repos.sha256sum] = "52cbc523b9897002e8d02f266be8eb8b16b1766bb69d40e1a40b3899fb966981"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/almalinux-sb-certs-10.0-21.el10.riscv64.rpm;name=riscv64_almalinux-sb-certs;unpack=0"
+SRC_URI[riscv64_almalinux-sb-certs.sha256sum] = "7021ae752bcef6644d1813bfbfba23d7a9fe196c3bcf7b4f03aa98736e24ac7e"
 
 RDEPENDS:almalinux-gpg-keys = " \
  "

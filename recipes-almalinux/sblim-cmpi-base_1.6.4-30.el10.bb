@@ -9,17 +9,17 @@ PACKAGES = " \
  sblim-cmpi-base \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/sblim-cmpi-base-1.6.4-30.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/sblim-cmpi-base-1.6.4-30.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d49a859df3df94862f5371c66befc9de0394de65a072c67c88d1f0ef6cb9c804"
 
-URI_x86_64_v2_sblim-cmpi-base = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sblim-cmpi-base-1.6.4-30.el10.x86_64_v2.rpm;name=x86_64_v2_sblim-cmpi-base;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_sblim-cmpi-base}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sblim-cmpi-base-1.6.4-30.el10.x86_64_v2.rpm;name=x86_64_v2_sblim-cmpi-base;unpack=0"
 SRC_URI[x86_64_v2_sblim-cmpi-base.sha256sum] = "65eb8e39977778f96d6221798ca4deaf0da3239f817c10f22653d99e20866a6e"
 
-URI_aarch64_sblim-cmpi-base = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/sblim-cmpi-base-1.6.4-30.el10.aarch64.rpm;name=aarch64_sblim-cmpi-base;unpack=0"
-SRC_URI:append = " ${URI_aarch64_sblim-cmpi-base}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/sblim-cmpi-base-1.6.4-30.el10.aarch64.rpm;name=aarch64_sblim-cmpi-base;unpack=0"
 SRC_URI[aarch64_sblim-cmpi-base.sha256sum] = "9b003df58a6c98e1b51511a4f747a98b2d7712b56d69b661f97a119e9ba44f34"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/sblim-cmpi-base-1.6.4-30.el10.riscv64.rpm;name=riscv64_sblim-cmpi-base;unpack=0"
+SRC_URI[riscv64_sblim-cmpi-base.sha256sum] = "6cda667fe4d6f945bfbfbce89f25994ccd7e6e5dac2759937462791e1f63d580"
 
 RDEPENDS:sblim-cmpi-base = " \
  bash \

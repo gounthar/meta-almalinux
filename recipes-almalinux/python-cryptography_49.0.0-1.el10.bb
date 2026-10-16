@@ -9,17 +9,17 @@ PACKAGES = " \
  python3-cryptography \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/python-cryptography-49.0.0-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/python-cryptography-49.0.0-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8119dfad5358f49857eb35ee03223c2f46fc6ab19f6ceaa5738b900dff5182fe"
 
-URI_x86_64_v2_python3-cryptography = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/python3-cryptography-49.0.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_python3-cryptography;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-cryptography}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/python3-cryptography-49.0.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_python3-cryptography;unpack=0"
 SRC_URI[x86_64_v2_python3-cryptography.sha256sum] = "0058ea037fac198fe705d33b998beb24522e62b6e5e7b265baa0c491947efee2"
 
-URI_aarch64_python3-cryptography = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/python3-cryptography-49.0.0-1.el10.aarch64.rpm;name=aarch64_python3-cryptography;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-cryptography}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/python3-cryptography-49.0.0-1.el10.aarch64.rpm;name=aarch64_python3-cryptography;unpack=0"
 SRC_URI[aarch64_python3-cryptography.sha256sum] = "4036778df29839c5d71dea23550f0d55382c2586ae6cfd8865e432be3c6f06e5"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/python3-cryptography-49.0.0-1.el10.riscv64.rpm;name=riscv64_python3-cryptography;unpack=0"
+SRC_URI[riscv64_python3-cryptography.sha256sum] = "ec280f9aba90fdd113a9679195b6858dd5af457d7f26d40bfd9875f71456d448"
 
 RDEPENDS:python3-cryptography = " \
  glibc \

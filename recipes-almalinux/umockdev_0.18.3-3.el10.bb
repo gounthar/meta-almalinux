@@ -9,17 +9,17 @@ PACKAGES = " \
  umockdev \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/umockdev-0.18.3-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/umockdev-0.18.3-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "5cdd40d7539661fc624535e14f993f40f2e3b4c6a4b6cfa099fbc1e5caf546a0"
 
-URI_x86_64_v2_umockdev = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/umockdev-0.18.3-3.el10.x86_64_v2.rpm;name=x86_64_v2_umockdev;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_umockdev}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/umockdev-0.18.3-3.el10.x86_64_v2.rpm;name=x86_64_v2_umockdev;unpack=0"
 SRC_URI[x86_64_v2_umockdev.sha256sum] = "eae9d8a8088cfa1b44ababe1b243fa0c12a622258fe4676b1f054fe31ae6ecf7"
 
-URI_aarch64_umockdev = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/umockdev-0.18.3-3.el10.aarch64.rpm;name=aarch64_umockdev;unpack=0"
-SRC_URI:append = " ${URI_aarch64_umockdev}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/umockdev-0.18.3-3.el10.aarch64.rpm;name=aarch64_umockdev;unpack=0"
 SRC_URI[aarch64_umockdev.sha256sum] = "f994f4145b3b41819a578c9504e2a9c4dfb16d2f56fb8a0a8f5c3caf9da36161"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/umockdev-0.18.3-3.el10.riscv64.rpm;name=riscv64_umockdev;unpack=0"
+SRC_URI[riscv64_umockdev.sha256sum] = "ff89371881da10f3be45aa417fc0f083cb9ef2b375ef02011df0a8d03c222582"
 
 RDEPENDS:umockdev = " \
  bash \

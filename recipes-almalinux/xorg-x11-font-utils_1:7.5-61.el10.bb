@@ -10,17 +10,17 @@ PACKAGES = " \
  xorg-x11-font-utils \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/xorg-x11-font-utils-7.5-61.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/xorg-x11-font-utils-7.5-61.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "24a68aeac4c9472b3ec6342c32d8014d44319c52cd4aabd39c1245d3e98586af"
 
-URI_x86_64_v2_xorg-x11-font-utils = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/xorg-x11-font-utils-7.5-61.el10.x86_64_v2.rpm;name=x86_64_v2_xorg-x11-font-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_xorg-x11-font-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/xorg-x11-font-utils-7.5-61.el10.x86_64_v2.rpm;name=x86_64_v2_xorg-x11-font-utils;unpack=0"
 SRC_URI[x86_64_v2_xorg-x11-font-utils.sha256sum] = "47a495a01a2df47362fa6d00f634e14679cc12ebb4cd438e879113355fdce68b"
 
-URI_aarch64_xorg-x11-font-utils = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/xorg-x11-font-utils-7.5-61.el10.aarch64.rpm;name=aarch64_xorg-x11-font-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_xorg-x11-font-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/xorg-x11-font-utils-7.5-61.el10.aarch64.rpm;name=aarch64_xorg-x11-font-utils;unpack=0"
 SRC_URI[aarch64_xorg-x11-font-utils.sha256sum] = "981e7f638e8b7ea11317d8c90a2846a369f1aa41cbb6fabcfcc003f9c32c5f5e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/xorg-x11-font-utils-7.5-61.el10.riscv64.rpm;name=riscv64_xorg-x11-font-utils;unpack=0"
+SRC_URI[riscv64_xorg-x11-font-utils.sha256sum] = "0b0389228919116099c8ffb7d58b6cf8c610561c1d604730efe2531a7604cc29"
 
 RDEPENDS:xorg-x11-font-utils = " \
  bash \

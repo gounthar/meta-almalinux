@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "rust-tree-sitter-cli"
 PV = "0.25.10"
 PR = "3.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-tree-sitter-cli+default-devel \
  rust-tree-sitter-cli-devel \
  tree-sitter-cli \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-tree-sitter-cli+default-devel \
+ rust-tree-sitter-cli-devel \
+ tree-sitter-cli \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-tree-sitter-cli-0.25.10-3.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-tree-sitter-cli-0.25.10-3.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "78442eaaa9b19932f6561412ca999e4b2cf198a6160fd34e9676148601927a76"
 
-URI_x86_64_v2_rust-tree-sitter-cli+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-tree-sitter-cli+default-devel-0.25.10-3.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-tree-sitter-cli+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-tree-sitter-cli+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-tree-sitter-cli+default-devel-0.25.10-3.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-tree-sitter-cli+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-tree-sitter-cli+default-devel.sha256sum] = "4aa51acdbb22e894742448ccc1a51cfb53f635a668f5742a4df2d3b9e080b9f5"
 
-URI_x86_64_v2_rust-tree-sitter-cli-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-tree-sitter-cli-devel-0.25.10-3.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-tree-sitter-cli-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-tree-sitter-cli-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-tree-sitter-cli-devel-0.25.10-3.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-tree-sitter-cli-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-tree-sitter-cli-devel.sha256sum] = "061940c96f3c14c8507119bc054fb7cade19ec5e2c954bd8dd2e22065178e5e8"
 
-URI_x86_64_v2_tree-sitter-cli = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/tree-sitter-cli-0.25.10-3.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_tree-sitter-cli;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_tree-sitter-cli}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/tree-sitter-cli-0.25.10-3.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_tree-sitter-cli;unpack=0"
 SRC_URI[x86_64_v2_tree-sitter-cli.sha256sum] = "9788a6af7ca7ec872b57a21d726da1df9cd71c440397cb05f46fb7e3a5bcb9a8"
 
-URI_aarch64_rust-tree-sitter-cli+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-tree-sitter-cli+default-devel-0.25.10-3.el10_3.noarch.rpm;name=aarch64_rust-tree-sitter-cli+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-tree-sitter-cli+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-tree-sitter-cli+default-devel-0.25.10-3.el10_3.noarch.rpm;name=aarch64_rust-tree-sitter-cli+default-devel;unpack=0"
 SRC_URI[aarch64_rust-tree-sitter-cli+default-devel.sha256sum] = "c59c33672ed5ab7788966a2d85e7a700b10d87f179db3ce1669d163851aa202a"
 
-URI_aarch64_rust-tree-sitter-cli-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-tree-sitter-cli-devel-0.25.10-3.el10_3.noarch.rpm;name=aarch64_rust-tree-sitter-cli-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-tree-sitter-cli-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-tree-sitter-cli-devel-0.25.10-3.el10_3.noarch.rpm;name=aarch64_rust-tree-sitter-cli-devel;unpack=0"
 SRC_URI[aarch64_rust-tree-sitter-cli-devel.sha256sum] = "daaa3703bd897c7d0fef15f1fbaeb7079e88521f4518bd369584e77219046415"
 
-URI_aarch64_tree-sitter-cli = "${EPEL_MIRROR}/aarch64/Packages/t/tree-sitter-cli-0.25.10-3.el10_3.aarch64.rpm;name=aarch64_tree-sitter-cli;unpack=0"
-SRC_URI:append = " ${URI_aarch64_tree-sitter-cli}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/t/tree-sitter-cli-0.25.10-3.el10_3.aarch64.rpm;name=aarch64_tree-sitter-cli;unpack=0"
 SRC_URI[aarch64_tree-sitter-cli.sha256sum] = "9f602a8108e89222361138077500559abb834bf0bacefc74b895eb5dc2b53a28"
 
 RDEPENDS:rust-tree-sitter-cli+default-devel = " \

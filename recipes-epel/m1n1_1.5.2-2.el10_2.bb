@@ -14,29 +14,26 @@ PACKAGES:aarch64 = " \
  m1n1-stage1 \
  m1n1-tools \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/m/m1n1-1.5.2-2.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/m/m1n1-1.5.2-2.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b73e92c4f27c3991dd3c30ee27a53e5d8fa8c774dcea37d900695e00196f6293"
 
-URI_x86_64_v2_m1n1 = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/m1n1-1.5.2-2.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_m1n1;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_m1n1}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/m1n1-1.5.2-2.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_m1n1;unpack=0"
 SRC_URI[x86_64_v2_m1n1.sha256sum] = "5e38e24cd8bc89f2fe82ec5f578cd70d0817bad7f280158eb5ee7adbe5e74c32"
 
-URI_x86_64_v2_m1n1-tools = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/m1n1-tools-1.5.2-2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_m1n1-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_m1n1-tools}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/m1n1-tools-1.5.2-2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_m1n1-tools;unpack=0"
 SRC_URI[x86_64_v2_m1n1-tools.sha256sum] = "4977824849d24740d05c4fa7208ff52c9627bc2ef2be58db1b8f9619fe583d91"
 
-URI_aarch64_m1n1 = "${EPEL_MIRROR}/aarch64/Packages/m/m1n1-1.5.2-2.el10_2.aarch64.rpm;name=aarch64_m1n1;unpack=0"
-SRC_URI:append = " ${URI_aarch64_m1n1}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/m/m1n1-1.5.2-2.el10_2.aarch64.rpm;name=aarch64_m1n1;unpack=0"
 SRC_URI[aarch64_m1n1.sha256sum] = "f1ce372d0251a24a22ce250086f44b6127644f0fad49ac582fdcc0749ecd0729"
 
-URI_aarch64_m1n1-stage1 = "${EPEL_MIRROR}/aarch64/Packages/m/m1n1-stage1-1.5.2-2.el10_2.aarch64.rpm;name=aarch64_m1n1-stage1;unpack=0"
-SRC_URI:append = " ${URI_aarch64_m1n1-stage1}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/m/m1n1-stage1-1.5.2-2.el10_2.aarch64.rpm;name=aarch64_m1n1-stage1;unpack=0"
 SRC_URI[aarch64_m1n1-stage1.sha256sum] = "3b4df1d2de9358eedb2cefb1b668dc4870627e7835c376c29d5a804caf87eefd"
 
-URI_aarch64_m1n1-tools = "${EPEL_MIRROR}/aarch64/Packages/m/m1n1-tools-1.5.2-2.el10_2.noarch.rpm;name=aarch64_m1n1-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_m1n1-tools}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/m/m1n1-tools-1.5.2-2.el10_2.noarch.rpm;name=aarch64_m1n1-tools;unpack=0"
 SRC_URI[aarch64_m1n1-tools.sha256sum] = "983fe3cfb0287ed57aee98b3c73eb3ee916c49ad6f87b6cecd4e90e93f798df9"
 
 RDEPENDS:m1n1 = " \

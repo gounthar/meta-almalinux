@@ -16,37 +16,32 @@ PACKAGES:aarch64 = " \
  ghc-koji-doc \
  ghc-koji-prof \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/g/ghc-koji-0.0.2-17.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/g/ghc-koji-0.0.2-17.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "ad3a784b29522007b285e107cfaa9a7ba299c2cfc21aef4bf3bee7abd2cc1bf7"
 
-URI_x86_64_v2_ghc-koji = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-koji-0.0.2-17.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-koji;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-koji}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-koji-0.0.2-17.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-koji;unpack=0"
 SRC_URI[x86_64_v2_ghc-koji.sha256sum] = "3867284510e2fa4153943f9dac3bc21724a168f08b23b6fa0255686871f823d3"
 
-URI_x86_64_v2_ghc-koji-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-koji-devel-0.0.2-17.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-koji-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-koji-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-koji-devel-0.0.2-17.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-koji-devel;unpack=0"
 SRC_URI[x86_64_v2_ghc-koji-devel.sha256sum] = "cc9f120307f16a23b523bcb55b7fd413ddd20149c572a7d06c6a721a405b61f3"
 
-URI_x86_64_v2_ghc-koji-doc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-koji-doc-0.0.2-17.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_ghc-koji-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-koji-doc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-koji-doc-0.0.2-17.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_ghc-koji-doc;unpack=0"
 SRC_URI[x86_64_v2_ghc-koji-doc.sha256sum] = "3a69e26d2379404a238b7f168ea0b6d5b2d845db6b2b8162ef74e903e0f91c3b"
 
-URI_aarch64_ghc-koji = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-koji-0.0.2-17.el10_2.aarch64.rpm;name=aarch64_ghc-koji;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-koji}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-koji-0.0.2-17.el10_2.aarch64.rpm;name=aarch64_ghc-koji;unpack=0"
 SRC_URI[aarch64_ghc-koji.sha256sum] = "933b6cfa1483dc48e29679b9a75093b8575a476a6539e774e239e7d4cb2f9c8b"
 
-URI_aarch64_ghc-koji-devel = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-koji-devel-0.0.2-17.el10_2.aarch64.rpm;name=aarch64_ghc-koji-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-koji-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-koji-devel-0.0.2-17.el10_2.aarch64.rpm;name=aarch64_ghc-koji-devel;unpack=0"
 SRC_URI[aarch64_ghc-koji-devel.sha256sum] = "726595046fac37562f2f9cc0edd446725d2add7140f3e8d26412d67c7baeae67"
 
-URI_aarch64_ghc-koji-doc = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-koji-doc-0.0.2-17.el10_2.noarch.rpm;name=aarch64_ghc-koji-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-koji-doc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-koji-doc-0.0.2-17.el10_2.noarch.rpm;name=aarch64_ghc-koji-doc;unpack=0"
 SRC_URI[aarch64_ghc-koji-doc.sha256sum] = "8193e01ddaab34a06327899a63fc6fef042491002083a5fef1b9f17aeed020f0"
 
-URI_aarch64_ghc-koji-prof = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-koji-prof-0.0.2-17.el10_2.aarch64.rpm;name=aarch64_ghc-koji-prof;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-koji-prof}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-koji-prof-0.0.2-17.el10_2.aarch64.rpm;name=aarch64_ghc-koji-prof;unpack=0"
 SRC_URI[aarch64_ghc-koji-prof.sha256sum] = "871d0e87f8e4f66bbccf064e5488b48b92ea640468dc793bc356274d73709a6d"
 
 RDEPENDS:ghc-koji = " \

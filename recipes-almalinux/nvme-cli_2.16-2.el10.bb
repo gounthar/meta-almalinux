@@ -9,17 +9,17 @@ PACKAGES = " \
  nvme-cli \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/nvme-cli-2.16-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/nvme-cli-2.16-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "0e2e49bef0e1a7ad26dbf9cbeeeda53e7d0c017f91f2bc2033071a3892c8e465"
 
-URI_x86_64_v2_nvme-cli = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/nvme-cli-2.16-2.el10.x86_64_v2.rpm;name=x86_64_v2_nvme-cli;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_nvme-cli}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/nvme-cli-2.16-2.el10.x86_64_v2.rpm;name=x86_64_v2_nvme-cli;unpack=0"
 SRC_URI[x86_64_v2_nvme-cli.sha256sum] = "9f101ed10faacb37ba8425d7e55c1807ea1f45a688f1bdaf9b15587c47e8022a"
 
-URI_aarch64_nvme-cli = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/nvme-cli-2.16-2.el10.aarch64.rpm;name=aarch64_nvme-cli;unpack=0"
-SRC_URI:append = " ${URI_aarch64_nvme-cli}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/nvme-cli-2.16-2.el10.aarch64.rpm;name=aarch64_nvme-cli;unpack=0"
 SRC_URI[aarch64_nvme-cli.sha256sum] = "39ef498ec6aae12c8c1b620d1d8eda062b0814000e9f881c3de51c25f715cade"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/nvme-cli-2.16-2.el10.riscv64.rpm;name=riscv64_nvme-cli;unpack=0"
+SRC_URI[riscv64_nvme-cli.sha256sum] = "c4bdafb3bc6810239a26d3a1b2cccdc15da09d510fd531aba2548394d15011df"
 
 RDEPENDS:nvme-cli = " \
  bash \

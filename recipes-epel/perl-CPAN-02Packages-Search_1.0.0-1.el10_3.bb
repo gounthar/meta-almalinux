@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "perl-CPAN-02Packages-Search"
 PV = "1.0.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-CPAN-02Packages-Search \
  perl-CPAN-02Packages-Search-tests \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-CPAN-02Packages-Search \
+ perl-CPAN-02Packages-Search-tests \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-CPAN-02Packages-Search-1.0.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-CPAN-02Packages-Search-1.0.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "34466b1ef1bee6ee9c0c1d290fccad0b15148b7a85c9e001bbccdcb1d9bde352"
 
-URI_x86_64_v2_perl-CPAN-02Packages-Search = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-CPAN-02Packages-Search-1.0.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-CPAN-02Packages-Search;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-CPAN-02Packages-Search}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-CPAN-02Packages-Search-1.0.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-CPAN-02Packages-Search;unpack=0"
 SRC_URI[x86_64_v2_perl-CPAN-02Packages-Search.sha256sum] = "fa777079be18f766cccc0d61b0446fb2653dfa3a745b92dfdf24b5e5cb4bc7d8"
 
-URI_x86_64_v2_perl-CPAN-02Packages-Search-tests = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-CPAN-02Packages-Search-tests-1.0.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-CPAN-02Packages-Search-tests;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-CPAN-02Packages-Search-tests}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-CPAN-02Packages-Search-tests-1.0.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-CPAN-02Packages-Search-tests;unpack=0"
 SRC_URI[x86_64_v2_perl-CPAN-02Packages-Search-tests.sha256sum] = "fefbf9ce809cbdebd5196c072d9c3c57065a11024ed2cfed28fc4d871bedb562"
 
-URI_aarch64_perl-CPAN-02Packages-Search = "${EPEL_MIRROR}/aarch64/Packages/p/perl-CPAN-02Packages-Search-1.0.0-1.el10_3.noarch.rpm;name=aarch64_perl-CPAN-02Packages-Search;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-CPAN-02Packages-Search}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-CPAN-02Packages-Search-1.0.0-1.el10_3.noarch.rpm;name=aarch64_perl-CPAN-02Packages-Search;unpack=0"
 SRC_URI[aarch64_perl-CPAN-02Packages-Search.sha256sum] = "c98d3e3ccf3bca78657da28f6ac00436b726ecf0174f92373e4b7bc523d1ddd9"
 
-URI_aarch64_perl-CPAN-02Packages-Search-tests = "${EPEL_MIRROR}/aarch64/Packages/p/perl-CPAN-02Packages-Search-tests-1.0.0-1.el10_3.noarch.rpm;name=aarch64_perl-CPAN-02Packages-Search-tests;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-CPAN-02Packages-Search-tests}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-CPAN-02Packages-Search-tests-1.0.0-1.el10_3.noarch.rpm;name=aarch64_perl-CPAN-02Packages-Search-tests;unpack=0"
 SRC_URI[aarch64_perl-CPAN-02Packages-Search-tests.sha256sum] = "820dc6182b0cf62ecbf897afe7f2504280fc32e4aad8f33e13926ebfefac638b"
 
 RDEPENDS:perl-CPAN-02Packages-Search = " \

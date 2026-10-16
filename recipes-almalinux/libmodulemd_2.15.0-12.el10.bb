@@ -11,33 +11,35 @@ PACKAGES = " \
  python3-libmodulemd \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libmodulemd-2.15.0-12.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libmodulemd-2.15.0-12.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6224c6986c63f30e51a3385eff748f1758e422915d37d924e0dd0b61f2ede595"
 
-URI_x86_64_v2_libmodulemd = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libmodulemd-2.15.0-12.el10.x86_64_v2.rpm;name=x86_64_v2_libmodulemd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libmodulemd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libmodulemd-2.15.0-12.el10.x86_64_v2.rpm;name=x86_64_v2_libmodulemd;unpack=0"
 SRC_URI[x86_64_v2_libmodulemd.sha256sum] = "b456e569d04cf4352bf04cd32e5fb51b33f879a540b2dd312d61bc6c73a00f41"
 
-URI_x86_64_v2_libmodulemd-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libmodulemd-devel-2.15.0-12.el10.x86_64_v2.rpm;name=x86_64_v2_libmodulemd-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libmodulemd-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libmodulemd-devel-2.15.0-12.el10.x86_64_v2.rpm;name=x86_64_v2_libmodulemd-devel;unpack=0"
 SRC_URI[x86_64_v2_libmodulemd-devel.sha256sum] = "6bb07e15095906dc7a0f462cbbff3d61f9666f4c85deeeabd00864f4f06aa3c0"
 
-URI_x86_64_v2_python3-libmodulemd = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-libmodulemd-2.15.0-12.el10.x86_64_v2.rpm;name=x86_64_v2_python3-libmodulemd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-libmodulemd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-libmodulemd-2.15.0-12.el10.x86_64_v2.rpm;name=x86_64_v2_python3-libmodulemd;unpack=0"
 SRC_URI[x86_64_v2_python3-libmodulemd.sha256sum] = "21d10476473070cd50c0fc64f0b91813e9c440e248ab5371708a5ae0cfb7217e"
 
-URI_aarch64_libmodulemd = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libmodulemd-2.15.0-12.el10.aarch64.rpm;name=aarch64_libmodulemd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libmodulemd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libmodulemd-2.15.0-12.el10.aarch64.rpm;name=aarch64_libmodulemd;unpack=0"
 SRC_URI[aarch64_libmodulemd.sha256sum] = "edc244d9b69ab0442686f09da06ad2646d4b01ce249a52bba4c98459bfbbb0db"
 
-URI_aarch64_libmodulemd-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libmodulemd-devel-2.15.0-12.el10.aarch64.rpm;name=aarch64_libmodulemd-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libmodulemd-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libmodulemd-devel-2.15.0-12.el10.aarch64.rpm;name=aarch64_libmodulemd-devel;unpack=0"
 SRC_URI[aarch64_libmodulemd-devel.sha256sum] = "f671e7173e5ff48de696b54359cbf0bf39b0e5795ab2f945ab66e086b0eb83e5"
 
-URI_aarch64_python3-libmodulemd = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-libmodulemd-2.15.0-12.el10.aarch64.rpm;name=aarch64_python3-libmodulemd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-libmodulemd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-libmodulemd-2.15.0-12.el10.aarch64.rpm;name=aarch64_python3-libmodulemd;unpack=0"
 SRC_URI[aarch64_python3-libmodulemd.sha256sum] = "6a20fd9ed2c79656476083cef166496fcd0f429c4c92187d0635fde482707448"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libmodulemd-2.15.0-12.el10.riscv64.rpm;name=riscv64_libmodulemd;unpack=0"
+SRC_URI[riscv64_libmodulemd.sha256sum] = "17b6ee021892f11a5ac0158a3327c23199dfbfce9f78cbab6119220e671da87e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libmodulemd-devel-2.15.0-12.el10.riscv64.rpm;name=riscv64_libmodulemd-devel;unpack=0"
+SRC_URI[riscv64_libmodulemd-devel.sha256sum] = "56edb79194c28b4bb3fca319f74ff6f0739df28e676fb8ac2227da7167f648fd"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-libmodulemd-2.15.0-12.el10.riscv64.rpm;name=riscv64_python3-libmodulemd;unpack=0"
+SRC_URI[riscv64_python3-libmodulemd.sha256sum] = "c80eee4c6c6e2d0f179f255d2a87f223b0f08af870e86382ff168bd53cf29f4a"
 
 RDEPENDS:libmodulemd = " \
  glib2 \

@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-B-Hooks-EndOfScope"
 PV = "0.28"
 PR = "1.el10_0"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-B-Hooks-EndOfScope \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-B-Hooks-EndOfScope \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-B-Hooks-EndOfScope-0.28-1.el10_0.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-B-Hooks-EndOfScope-0.28-1.el10_0.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "5aafc03f6dee11154c94ff576f37a0ac711e57c204e450066a957daf7132ad96"
 
-URI_x86_64_v2_perl-B-Hooks-EndOfScope = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-B-Hooks-EndOfScope-0.28-1.el10_0.alma_altarch.noarch.rpm;name=x86_64_v2_perl-B-Hooks-EndOfScope;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-B-Hooks-EndOfScope}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-B-Hooks-EndOfScope-0.28-1.el10_0.alma_altarch.noarch.rpm;name=x86_64_v2_perl-B-Hooks-EndOfScope;unpack=0"
 SRC_URI[x86_64_v2_perl-B-Hooks-EndOfScope.sha256sum] = "b1a12aac8397512962d421c15763d1004957885dd9563d507a772a87de8e2401"
 
-URI_aarch64_perl-B-Hooks-EndOfScope = "${EPEL_MIRROR}/aarch64/Packages/p/perl-B-Hooks-EndOfScope-0.28-1.el10_0.noarch.rpm;name=aarch64_perl-B-Hooks-EndOfScope;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-B-Hooks-EndOfScope}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-B-Hooks-EndOfScope-0.28-1.el10_0.noarch.rpm;name=aarch64_perl-B-Hooks-EndOfScope;unpack=0"
 SRC_URI[aarch64_perl-B-Hooks-EndOfScope.sha256sum] = "04ddaf6857f382362a7debb808f560aedcae136835593cac2a8152152893e1e2"
 
 RDEPENDS:perl-B-Hooks-EndOfScope = " \

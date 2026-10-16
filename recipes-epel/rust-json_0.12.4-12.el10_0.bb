@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-json"
 PV = "0.12.4"
 PR = "12.el10_0"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-json+default-devel \
  rust-json-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-json+default-devel \
+ rust-json-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-json-0.12.4-12.el10_0.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-json-0.12.4-12.el10_0.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "06b5c7e8fd499df4577f853bc4fa35ad5ad1b794c051d9bdebef3dea880e290f"
 
-URI_x86_64_v2_rust-json+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-json+default-devel-0.12.4-12.el10_0.alma_altarch.noarch.rpm;name=x86_64_v2_rust-json+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-json+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-json+default-devel-0.12.4-12.el10_0.alma_altarch.noarch.rpm;name=x86_64_v2_rust-json+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-json+default-devel.sha256sum] = "41e2192ebb2c8d225bfce57c9e5e666cff3a56f4aec7cc8e94df8bbbd84ec41c"
 
-URI_x86_64_v2_rust-json-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-json-devel-0.12.4-12.el10_0.alma_altarch.noarch.rpm;name=x86_64_v2_rust-json-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-json-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-json-devel-0.12.4-12.el10_0.alma_altarch.noarch.rpm;name=x86_64_v2_rust-json-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-json-devel.sha256sum] = "4244c679272abe9274d2fd6a0639927545930e580863ef65c01aedf7e2d29c0a"
 
-URI_aarch64_rust-json+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-json+default-devel-0.12.4-12.el10_0.noarch.rpm;name=aarch64_rust-json+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-json+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-json+default-devel-0.12.4-12.el10_0.noarch.rpm;name=aarch64_rust-json+default-devel;unpack=0"
 SRC_URI[aarch64_rust-json+default-devel.sha256sum] = "7e284885e26001da2b3aa9ceb8af9557da846d7bcb5886187dd6ca99034ae90f"
 
-URI_aarch64_rust-json-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-json-devel-0.12.4-12.el10_0.noarch.rpm;name=aarch64_rust-json-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-json-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-json-devel-0.12.4-12.el10_0.noarch.rpm;name=aarch64_rust-json-devel;unpack=0"
 SRC_URI[aarch64_rust-json-devel.sha256sum] = "102b215ce5a789d7643fa4b8fc9f64d147d0d9cb7b9b083829678aa4f7477bcb"
 
 RDEPENDS:rust-json+default-devel = " \

@@ -10,8 +10,7 @@ PACKAGES = " \
  insights-client-ros \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/insights-client-3.10.4-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/insights-client-3.10.4-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d0aa49f90df2a33d12d7582cba554d1ca48e063d4ff03025341ec7da1ea5d207"
 
 ## Requires (x86_64_v2) that were seen as not satisfiable in original repo:
@@ -20,21 +19,26 @@ SRC_URI[src.sha256sum] = "d0aa49f90df2a33d12d7582cba554d1ca48e063d4ff03025341ec7
 ## Requires (aarch64) that were seen as not satisfiable in original repo:
 # - insights-client: insights-core >= 3.6.7
 
-URI_x86_64_v2_insights-client = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/insights-client-3.10.4-2.el10.noarch.rpm;name=x86_64_v2_insights-client;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_insights-client}"
+## Requires (riscv64) that were seen as not satisfiable in original repo:
+# - insights-client: insights-core >= 3.6.7
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/insights-client-3.10.4-2.el10.noarch.rpm;name=x86_64_v2_insights-client;unpack=0"
 SRC_URI[x86_64_v2_insights-client.sha256sum] = "de07619a71e8e7990a4b0a90be2fba8f9c6e4f11f68588045d5d46864d37961d"
 
-URI_x86_64_v2_insights-client-ros = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/insights-client-ros-3.10.4-2.el10.noarch.rpm;name=x86_64_v2_insights-client-ros;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_insights-client-ros}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/insights-client-ros-3.10.4-2.el10.noarch.rpm;name=x86_64_v2_insights-client-ros;unpack=0"
 SRC_URI[x86_64_v2_insights-client-ros.sha256sum] = "7aa165e65f5a0037527b9da75fb1d0f72023550ee8321b1930a60fcd503cd3b6"
 
-URI_aarch64_insights-client = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/insights-client-3.10.4-2.el10.noarch.rpm;name=aarch64_insights-client;unpack=0"
-SRC_URI:append = " ${URI_aarch64_insights-client}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/insights-client-3.10.4-2.el10.noarch.rpm;name=aarch64_insights-client;unpack=0"
 SRC_URI[aarch64_insights-client.sha256sum] = "de07619a71e8e7990a4b0a90be2fba8f9c6e4f11f68588045d5d46864d37961d"
 
-URI_aarch64_insights-client-ros = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/insights-client-ros-3.10.4-2.el10.noarch.rpm;name=aarch64_insights-client-ros;unpack=0"
-SRC_URI:append = " ${URI_aarch64_insights-client-ros}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/insights-client-ros-3.10.4-2.el10.noarch.rpm;name=aarch64_insights-client-ros;unpack=0"
 SRC_URI[aarch64_insights-client-ros.sha256sum] = "7aa165e65f5a0037527b9da75fb1d0f72023550ee8321b1930a60fcd503cd3b6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/insights-client-3.10.4-2.el10.noarch.rpm;name=riscv64_insights-client;unpack=0"
+SRC_URI[riscv64_insights-client.sha256sum] = "de07619a71e8e7990a4b0a90be2fba8f9c6e4f11f68588045d5d46864d37961d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/insights-client-ros-3.10.4-2.el10.noarch.rpm;name=riscv64_insights-client-ros;unpack=0"
+SRC_URI[riscv64_insights-client-ros.sha256sum] = "7aa165e65f5a0037527b9da75fb1d0f72023550ee8321b1930a60fcd503cd3b6"
 
 RDEPENDS:insights-client = " \
  bash \

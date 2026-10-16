@@ -9,20 +9,23 @@ PACKAGES = " \
  rng-tools \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/rng-tools-6.17-10.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/rng-tools-6.17-10.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f7c6b5efc8ff5cac121f1701fbb78092ad587cabfb4dc83b06e1fb46bb9e89fa"
 
 ## Requires (aarch64) that were seen as not satisfiable in original repo:
 # - rng-tools: libcap.so.2()(64bit)
 
-URI_x86_64_v2_rng-tools = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/rng-tools-6.17-10.el10.x86_64_v2.rpm;name=x86_64_v2_rng-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rng-tools}"
+## Requires (riscv64) that were seen as not satisfiable in original repo:
+# - rng-tools: libcap.so.2()(64bit)
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/rng-tools-6.17-10.el10.x86_64_v2.rpm;name=x86_64_v2_rng-tools;unpack=0"
 SRC_URI[x86_64_v2_rng-tools.sha256sum] = "8e3ad2bcb0212d0e08daa8654ff699dfd425d00a770776d4a782e123241f37ec"
 
-URI_aarch64_rng-tools = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/rng-tools-6.17-10.el10.aarch64.rpm;name=aarch64_rng-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rng-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/rng-tools-6.17-10.el10.aarch64.rpm;name=aarch64_rng-tools;unpack=0"
 SRC_URI[aarch64_rng-tools.sha256sum] = "3ee2269b7e134806e7600fa1bdee7d122396ed1efb8f9cf5373e01c074c61288"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/rng-tools-6.17-10.el10.riscv64.rpm;name=riscv64_rng-tools;unpack=0"
+SRC_URI[riscv64_rng-tools.sha256sum] = "abe99fe5c116fc20762ee426beb7da4d252e541bf240c4a3d1495c4f5b5db576"
 
 RDEPENDS:rng-tools:x86_64_v2 = " \
  bash \
@@ -36,6 +39,16 @@ RDEPENDS:rng-tools:x86_64_v2 = " \
  virtual/libcurl.so.4___64bit_ \
 "
 RDEPENDS:rng-tools:aarch64 = " \
+ bash \
+ glibc \
+ jansson \
+ jitterentropy \
+ openssl-libs \
+ selinux-policy \
+ systemd \
+ virtual/libcurl.so.4___64bit_ \
+"
+RDEPENDS:rng-tools:riscv64 = " \
  bash \
  glibc \
  jansson \

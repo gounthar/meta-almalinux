@@ -11,33 +11,35 @@ PACKAGES = " \
  sbc-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/sbc-2.0-7.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/sbc-2.0-7.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c83b9b5bb6a2e9d25daf595e0468d6cc0f02743a647a460b76344f84a74bf390"
 
-URI_x86_64_v2_libsbc = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libsbc-2.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_libsbc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libsbc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libsbc-2.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_libsbc;unpack=0"
 SRC_URI[x86_64_v2_libsbc.sha256sum] = "f34f5c55e1d22bf224150d9c910b9058cc1d144a3fb8985eaee4dfd29721c5b9"
 
-URI_x86_64_v2_sbc = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sbc-2.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_sbc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_sbc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/sbc-2.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_sbc;unpack=0"
 SRC_URI[x86_64_v2_sbc.sha256sum] = "3dab04ae9214d7e0edf6a1661775aadc75aaae41ab029c202d14c3f8f7d7de50"
 
-URI_x86_64_v2_sbc-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/sbc-devel-2.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_sbc-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_sbc-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/sbc-devel-2.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_sbc-devel;unpack=0"
 SRC_URI[x86_64_v2_sbc-devel.sha256sum] = "8a339ebe5c95fe960b611bc9efd436f2ed78a628ca6f6b0211cf03a0e945ce7c"
 
-URI_aarch64_libsbc = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libsbc-2.0-7.el10.aarch64.rpm;name=aarch64_libsbc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libsbc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libsbc-2.0-7.el10.aarch64.rpm;name=aarch64_libsbc;unpack=0"
 SRC_URI[aarch64_libsbc.sha256sum] = "66294ce829f9dcdb80c61ddeaafacf4583fd51a24e2e8810700e0f38ab708aca"
 
-URI_aarch64_sbc = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/sbc-2.0-7.el10.aarch64.rpm;name=aarch64_sbc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_sbc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/sbc-2.0-7.el10.aarch64.rpm;name=aarch64_sbc;unpack=0"
 SRC_URI[aarch64_sbc.sha256sum] = "b4be327f4dff8c893a8198f51d02a4f6c65904b9f54937ba287256f3cb01ba52"
 
-URI_aarch64_sbc-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/sbc-devel-2.0-7.el10.aarch64.rpm;name=aarch64_sbc-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_sbc-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/sbc-devel-2.0-7.el10.aarch64.rpm;name=aarch64_sbc-devel;unpack=0"
 SRC_URI[aarch64_sbc-devel.sha256sum] = "c021dff608a5636ba4a55dbe528d2e23fe3c845a6d296b8a2a95ac8d020ab179"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libsbc-2.0-7.el10.riscv64.rpm;name=riscv64_libsbc;unpack=0"
+SRC_URI[riscv64_libsbc.sha256sum] = "38eab10e8e0ca55066530c5d3fde76243d525c618a2f1ead455b434aec312dd2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/sbc-2.0-7.el10.riscv64.rpm;name=riscv64_sbc;unpack=0"
+SRC_URI[riscv64_sbc.sha256sum] = "d3ebb5f73c035ff303e629eb54405c9a82b9a6e88526eff75ef4d3f3243c13dc"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/sbc-devel-2.0-7.el10.riscv64.rpm;name=riscv64_sbc-devel;unpack=0"
+SRC_URI[riscv64_sbc-devel.sha256sum] = "569636683f789c907ed6f8ccc10c55039e9e958f4b6d05be1ef7a3278138e962"
 
 RDEPENDS:libsbc = " \
  glibc \

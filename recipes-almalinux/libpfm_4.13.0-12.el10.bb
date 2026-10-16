@@ -11,33 +11,35 @@ PACKAGES = " \
  python3-libpfm \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libpfm-4.13.0-12.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libpfm-4.13.0-12.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "9d4fa409af615daf8daa70882d4d9e4c7712bf15245d5473f16a6cfe7778cec0"
 
-URI_x86_64_v2_libpfm = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libpfm-4.13.0-12.el10.x86_64_v2.rpm;name=x86_64_v2_libpfm;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libpfm}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libpfm-4.13.0-12.el10.x86_64_v2.rpm;name=x86_64_v2_libpfm;unpack=0"
 SRC_URI[x86_64_v2_libpfm.sha256sum] = "ae79de5bda11aed5e119d7bba8646a4e89950def4987e90631a00d1590beb4df"
 
-URI_x86_64_v2_libpfm-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libpfm-devel-4.13.0-12.el10.x86_64_v2.rpm;name=x86_64_v2_libpfm-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libpfm-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libpfm-devel-4.13.0-12.el10.x86_64_v2.rpm;name=x86_64_v2_libpfm-devel;unpack=0"
 SRC_URI[x86_64_v2_libpfm-devel.sha256sum] = "dd62d863b04417ed5d611f01543fec249daf57fca9e64b070c8e38ea52777757"
 
-URI_x86_64_v2_python3-libpfm = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3-libpfm-4.13.0-12.el10.x86_64_v2.rpm;name=x86_64_v2_python3-libpfm;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-libpfm}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3-libpfm-4.13.0-12.el10.x86_64_v2.rpm;name=x86_64_v2_python3-libpfm;unpack=0"
 SRC_URI[x86_64_v2_python3-libpfm.sha256sum] = "f9e967842a5efd212a1de352fc8a21a8ed97d13285ca8cfbaa9e41cd1ce9e639"
 
-URI_aarch64_libpfm = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libpfm-4.13.0-12.el10.aarch64.rpm;name=aarch64_libpfm;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libpfm}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libpfm-4.13.0-12.el10.aarch64.rpm;name=aarch64_libpfm;unpack=0"
 SRC_URI[aarch64_libpfm.sha256sum] = "20a57d18ec50f34baad5b995efb9a463c39525fee0c35442eb35b0e534244625"
 
-URI_aarch64_libpfm-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libpfm-devel-4.13.0-12.el10.aarch64.rpm;name=aarch64_libpfm-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libpfm-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libpfm-devel-4.13.0-12.el10.aarch64.rpm;name=aarch64_libpfm-devel;unpack=0"
 SRC_URI[aarch64_libpfm-devel.sha256sum] = "20aefea9965d6f4d392f54cd5d38ac372ed3b74b7fed1a1aa455d5c0b7d3da47"
 
-URI_aarch64_python3-libpfm = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3-libpfm-4.13.0-12.el10.aarch64.rpm;name=aarch64_python3-libpfm;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-libpfm}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3-libpfm-4.13.0-12.el10.aarch64.rpm;name=aarch64_python3-libpfm;unpack=0"
 SRC_URI[aarch64_python3-libpfm.sha256sum] = "d1f067bdb205070454849d302b2c366ced1440b216875a6741be9553c4b6acdf"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libpfm-4.13.0-12.el10.riscv64.rpm;name=riscv64_libpfm;unpack=0"
+SRC_URI[riscv64_libpfm.sha256sum] = "1d6f4887dfe31b48e4e4a33dd5b6ce351d985e34a8bdf02b6fcd6288c27e433e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libpfm-devel-4.13.0-12.el10.riscv64.rpm;name=riscv64_libpfm-devel;unpack=0"
+SRC_URI[riscv64_libpfm-devel.sha256sum] = "f7f786a9169a177ac91b12bafbed32eacb93de2f6f0d4308293ab0fa50b98726"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/python3-libpfm-4.13.0-12.el10.riscv64.rpm;name=riscv64_python3-libpfm;unpack=0"
+SRC_URI[riscv64_python3-libpfm.sha256sum] = "f2fe548e0e8e7a968795c788764a3b3773d8a1b5a5f14b62a6ae1812ab5cd419"
 
 RDEPENDS:libpfm = " \
  glibc \

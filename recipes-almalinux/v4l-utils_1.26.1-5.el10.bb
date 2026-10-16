@@ -12,41 +12,44 @@ PACKAGES = " \
  v4l-utils \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/v4l-utils-1.26.1-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/v4l-utils-1.26.1-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "62676c4e1b8058b228d17bfad21cb90c19027dce13b05d7a3665c13670cae95b"
 
-URI_x86_64_v2_libdvbv5 = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libdvbv5-1.26.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libdvbv5;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libdvbv5}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libdvbv5-1.26.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libdvbv5;unpack=0"
 SRC_URI[x86_64_v2_libdvbv5.sha256sum] = "bc3e2f9ffa37a1fede0f8571fd570e2fa622bb450f0124576dd71e11398d7337"
 
-URI_x86_64_v2_libv4l = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libv4l-1.26.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libv4l;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libv4l}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libv4l-1.26.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libv4l;unpack=0"
 SRC_URI[x86_64_v2_libv4l.sha256sum] = "6ace3ef303c11921b8409f603229fb761956f5bbe332e4ae2d1c030ba6e4e609"
 
-URI_x86_64_v2_libv4l-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libv4l-devel-1.26.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libv4l-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libv4l-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libv4l-devel-1.26.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_libv4l-devel;unpack=0"
 SRC_URI[x86_64_v2_libv4l-devel.sha256sum] = "542ca7dcba502783855cce9181aa5d408c64bba1b622603884662bf8f02ff1da"
 
-URI_x86_64_v2_v4l-utils = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/v4l-utils-1.26.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_v4l-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_v4l-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/v4l-utils-1.26.1-5.el10.x86_64_v2.rpm;name=x86_64_v2_v4l-utils;unpack=0"
 SRC_URI[x86_64_v2_v4l-utils.sha256sum] = "dcdf82af8bca288217aec99a3de3698809640034eb5de5bc8ec093a3a246338f"
 
-URI_aarch64_libdvbv5 = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libdvbv5-1.26.1-5.el10.aarch64.rpm;name=aarch64_libdvbv5;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libdvbv5}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libdvbv5-1.26.1-5.el10.aarch64.rpm;name=aarch64_libdvbv5;unpack=0"
 SRC_URI[aarch64_libdvbv5.sha256sum] = "5af6b8c071c29cf88c0dde9ff465bd1f49f2a397d337b7b160189b8111ccf93e"
 
-URI_aarch64_libv4l = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libv4l-1.26.1-5.el10.aarch64.rpm;name=aarch64_libv4l;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libv4l}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libv4l-1.26.1-5.el10.aarch64.rpm;name=aarch64_libv4l;unpack=0"
 SRC_URI[aarch64_libv4l.sha256sum] = "0bf97c64a4d9e7bc5ff7121803282f07b778951ab8e8f31d58cac379ddefbb2b"
 
-URI_aarch64_libv4l-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libv4l-devel-1.26.1-5.el10.aarch64.rpm;name=aarch64_libv4l-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libv4l-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libv4l-devel-1.26.1-5.el10.aarch64.rpm;name=aarch64_libv4l-devel;unpack=0"
 SRC_URI[aarch64_libv4l-devel.sha256sum] = "469f884460ae107b4d1f78f95bcb33c228735d88904c3ec63ef409251f757e22"
 
-URI_aarch64_v4l-utils = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/v4l-utils-1.26.1-5.el10.aarch64.rpm;name=aarch64_v4l-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_v4l-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/v4l-utils-1.26.1-5.el10.aarch64.rpm;name=aarch64_v4l-utils;unpack=0"
 SRC_URI[aarch64_v4l-utils.sha256sum] = "1810685fddd585ff621c69c1d4fc0862f6a8a92e1f7d30d87877e3a8d3499e6f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libdvbv5-1.26.1-5.el10.riscv64.rpm;name=riscv64_libdvbv5;unpack=0"
+SRC_URI[riscv64_libdvbv5.sha256sum] = "af52fe2e24077ad083b76cd6bdf74d2f402e3a6e6c7fee3c7ec04d476b1f27e2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libv4l-1.26.1-5.el10.riscv64.rpm;name=riscv64_libv4l;unpack=0"
+SRC_URI[riscv64_libv4l.sha256sum] = "45c0683de19ab596f1ab710be5feacbf684494ff377321816d87ee5fca5d7f26"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libv4l-devel-1.26.1-5.el10.riscv64.rpm;name=riscv64_libv4l-devel;unpack=0"
+SRC_URI[riscv64_libv4l-devel.sha256sum] = "c99d5afc3d6e1aeccb62a04c3f5c00702a1028fa4820d770ce6d34376ebb712b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/v4l-utils-1.26.1-5.el10.riscv64.rpm;name=riscv64_v4l-utils;unpack=0"
+SRC_URI[riscv64_v4l-utils.sha256sum] = "ca8836a47f9dcaa98b5db2b9c636b5f3ce7ab31299e91e9d2864832477ecb54f"
 
 RDEPENDS:libdvbv5 = " \
  glibc \

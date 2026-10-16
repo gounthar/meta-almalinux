@@ -12,18 +12,25 @@ PACKAGES:aarch64 = " \
  opencsd \
  opencsd-devel \
 "
+PACKAGES:riscv64 = " \
+ opencsd \
+ opencsd-devel \
+"
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/opencsd-1.6.1-0.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/opencsd-1.6.1-0.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "46e1c03ab8c9adda965f8b5a59cf2e5701c1b3f7bd166d2c34bb18784cc605ff"
 
-URI_aarch64_opencsd = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/opencsd-1.6.1-0.el10.aarch64.rpm;name=aarch64_opencsd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_opencsd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/opencsd-1.6.1-0.el10.aarch64.rpm;name=aarch64_opencsd;unpack=0"
 SRC_URI[aarch64_opencsd.sha256sum] = "09bf2695ccbd0cc339fd6d45223887d865bcefefefb15d1575ada7bbbce28779"
 
-URI_aarch64_opencsd-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/opencsd-devel-1.6.1-0.el10.aarch64.rpm;name=aarch64_opencsd-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_opencsd-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/opencsd-devel-1.6.1-0.el10.aarch64.rpm;name=aarch64_opencsd-devel;unpack=0"
 SRC_URI[aarch64_opencsd-devel.sha256sum] = "cc58bc6c80caf6e30afae0b4ffdd4356fc91d9d2b01b57d165a5f160856f2e1d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/opencsd-1.6.1-0.el10.riscv64.rpm;name=riscv64_opencsd;unpack=0"
+SRC_URI[riscv64_opencsd.sha256sum] = "7b2d286d7d89a4721d97d29eb7f4f43d4cd7fdc2d3643167917c5373eb4217ed"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/opencsd-devel-1.6.1-0.el10.riscv64.rpm;name=riscv64_opencsd-devel;unpack=0"
+SRC_URI[riscv64_opencsd-devel.sha256sum] = "d251dd10a355b93e296600dd25bc0736da5d9445804579ed2be005df2e6f4a34"
 
 RDEPENDS:opencsd = " \
  glibc \

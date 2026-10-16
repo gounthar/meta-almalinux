@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-docstring-parser"
 PV = "0.17.0"
 PR = "2.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-docstring-parser \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-docstring-parser \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-docstring-parser-0.17.0-2.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-docstring-parser-0.17.0-2.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "da223b860fbc63f42f56474100f61408f92ae19758ddefb113f7baac1c8c77da"
 
-URI_x86_64_v2_python3-docstring-parser = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-docstring-parser-0.17.0-2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-docstring-parser;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-docstring-parser}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-docstring-parser-0.17.0-2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-docstring-parser;unpack=0"
 SRC_URI[x86_64_v2_python3-docstring-parser.sha256sum] = "60eb19e9ae078493be920ec17bb105ba1c434bfa80e4011552344e2d2f9d323e"
 
-URI_aarch64_python3-docstring-parser = "${EPEL_MIRROR}/aarch64/Packages/p/python3-docstring-parser-0.17.0-2.el10_2.noarch.rpm;name=aarch64_python3-docstring-parser;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-docstring-parser}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-docstring-parser-0.17.0-2.el10_2.noarch.rpm;name=aarch64_python3-docstring-parser;unpack=0"
 SRC_URI[aarch64_python3-docstring-parser.sha256sum] = "ec4889c708b0c4239cdf3fcaf728b38d3a326d56821845a241ddf8d8b8aa31bb"
 
 RDEPENDS:python3-docstring-parser = " \

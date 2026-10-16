@@ -12,41 +12,44 @@ PACKAGES = " \
  libsane-hpaio \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/hplip-3.23.12-11.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/hplip-3.23.12-11.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "586717a80e2b774fb5e5a1221554fc5f023337f4ac62c49587fbbc293d2e9a18"
 
-URI_x86_64_v2_hplip = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/hplip-3.23.12-11.el10.x86_64_v2.rpm;name=x86_64_v2_hplip;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_hplip}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/hplip-3.23.12-11.el10.x86_64_v2.rpm;name=x86_64_v2_hplip;unpack=0"
 SRC_URI[x86_64_v2_hplip.sha256sum] = "4d7e3850221794528dce59c38bb46b3221dc3c456f019ebfea55343745ea5098"
 
-URI_x86_64_v2_hplip-common = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/hplip-common-3.23.12-11.el10.x86_64_v2.rpm;name=x86_64_v2_hplip-common;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_hplip-common}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/hplip-common-3.23.12-11.el10.x86_64_v2.rpm;name=x86_64_v2_hplip-common;unpack=0"
 SRC_URI[x86_64_v2_hplip-common.sha256sum] = "b79b0dba52179159d2e0033ccb06c09c266735d1036d13960143313af1bf14d1"
 
-URI_x86_64_v2_hplip-libs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/hplip-libs-3.23.12-11.el10.x86_64_v2.rpm;name=x86_64_v2_hplip-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_hplip-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/hplip-libs-3.23.12-11.el10.x86_64_v2.rpm;name=x86_64_v2_hplip-libs;unpack=0"
 SRC_URI[x86_64_v2_hplip-libs.sha256sum] = "c1335bd0ccf474145650a5266613022b91e5bb4c8f4c7a7476505c0d2cb19e60"
 
-URI_x86_64_v2_libsane-hpaio = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libsane-hpaio-3.23.12-11.el10.x86_64_v2.rpm;name=x86_64_v2_libsane-hpaio;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libsane-hpaio}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libsane-hpaio-3.23.12-11.el10.x86_64_v2.rpm;name=x86_64_v2_libsane-hpaio;unpack=0"
 SRC_URI[x86_64_v2_libsane-hpaio.sha256sum] = "ac2875d719c100b2a8ac0e5f2645abcf53f1e1958240558513d2f4b9c9892e76"
 
-URI_aarch64_hplip = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/hplip-3.23.12-11.el10.aarch64.rpm;name=aarch64_hplip;unpack=0"
-SRC_URI:append = " ${URI_aarch64_hplip}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/hplip-3.23.12-11.el10.aarch64.rpm;name=aarch64_hplip;unpack=0"
 SRC_URI[aarch64_hplip.sha256sum] = "db1136aec6e96c6e497c1123bfcf251dd764054695c21b27e5d04f98d85a64a6"
 
-URI_aarch64_hplip-common = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/hplip-common-3.23.12-11.el10.aarch64.rpm;name=aarch64_hplip-common;unpack=0"
-SRC_URI:append = " ${URI_aarch64_hplip-common}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/hplip-common-3.23.12-11.el10.aarch64.rpm;name=aarch64_hplip-common;unpack=0"
 SRC_URI[aarch64_hplip-common.sha256sum] = "e683872701f6de45462a3d9b5c00c916e3340f10bb2e1765f326f7b0a4800b7d"
 
-URI_aarch64_hplip-libs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/hplip-libs-3.23.12-11.el10.aarch64.rpm;name=aarch64_hplip-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_hplip-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/hplip-libs-3.23.12-11.el10.aarch64.rpm;name=aarch64_hplip-libs;unpack=0"
 SRC_URI[aarch64_hplip-libs.sha256sum] = "8b78fd65a567b1f704b89769e70a3812c900bea13e4c1eb10fd6fcafdd19a748"
 
-URI_aarch64_libsane-hpaio = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libsane-hpaio-3.23.12-11.el10.aarch64.rpm;name=aarch64_libsane-hpaio;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libsane-hpaio}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libsane-hpaio-3.23.12-11.el10.aarch64.rpm;name=aarch64_libsane-hpaio;unpack=0"
 SRC_URI[aarch64_libsane-hpaio.sha256sum] = "0992172091c32617b1bedfcc89210968eeb6e1d5dd4316a95f71b5a779496570"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/hplip-3.23.12-11.el10.riscv64.rpm;name=riscv64_hplip;unpack=0"
+SRC_URI[riscv64_hplip.sha256sum] = "65cb34de1bd2c9656360d440c136c7eb2c9b259e44905a553b39c5a63c8eb8eb"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/hplip-common-3.23.12-11.el10.riscv64.rpm;name=riscv64_hplip-common;unpack=0"
+SRC_URI[riscv64_hplip-common.sha256sum] = "4423dadd9306c2cb57e68433c8a730f437130ba2b6dd1c231f7ce13c8ce4b020"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/hplip-libs-3.23.12-11.el10.riscv64.rpm;name=riscv64_hplip-libs;unpack=0"
+SRC_URI[riscv64_hplip-libs.sha256sum] = "5030c9410769bea65f726d2a9c24c4fa26e61f4450c1a953f5ef2a41313a22b7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libsane-hpaio-3.23.12-11.el10.riscv64.rpm;name=riscv64_libsane-hpaio;unpack=0"
+SRC_URI[riscv64_libsane-hpaio.sha256sum] = "692915460a7c805657684e7a7d67a4182c7aa00be06e3923ca5e7fd473a76b37"
 
 RDEPENDS:hplip = " \
  bash \

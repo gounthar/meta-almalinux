@@ -11,33 +11,35 @@ PACKAGES = " \
  efivar-libs \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/efivar-39-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/efivar-39-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7c9706643660205d8dc59b1b7523856a7744beb4571324dd871ceb96a000039d"
 
-URI_x86_64_v2_efivar = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/efivar-39-3.el10.x86_64_v2.rpm;name=x86_64_v2_efivar;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_efivar}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/efivar-39-3.el10.x86_64_v2.rpm;name=x86_64_v2_efivar;unpack=0"
 SRC_URI[x86_64_v2_efivar.sha256sum] = "bcfc297d4020f363d7c24fad15a59c8abd195900e6812e13d86de7214fd49d0b"
 
-URI_x86_64_v2_efivar-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/efivar-devel-39-3.el10.x86_64_v2.rpm;name=x86_64_v2_efivar-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_efivar-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/efivar-devel-39-3.el10.x86_64_v2.rpm;name=x86_64_v2_efivar-devel;unpack=0"
 SRC_URI[x86_64_v2_efivar-devel.sha256sum] = "a1c0338eca9e5811a921acc7cdab8078cdf7a426e68c30409099d3ff6d3fc164"
 
-URI_x86_64_v2_efivar-libs = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/efivar-libs-39-3.el10.x86_64_v2.rpm;name=x86_64_v2_efivar-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_efivar-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/efivar-libs-39-3.el10.x86_64_v2.rpm;name=x86_64_v2_efivar-libs;unpack=0"
 SRC_URI[x86_64_v2_efivar-libs.sha256sum] = "e9bea7306dbfa4cf6e77b4d9b6d4152f99ab2f7bd62608205620fa8eb7f62c3c"
 
-URI_aarch64_efivar = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/efivar-39-3.el10.aarch64.rpm;name=aarch64_efivar;unpack=0"
-SRC_URI:append = " ${URI_aarch64_efivar}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/efivar-39-3.el10.aarch64.rpm;name=aarch64_efivar;unpack=0"
 SRC_URI[aarch64_efivar.sha256sum] = "b98a97213f0d1b697c0f8227f179a070de7374ddf13db510b4b6f00fd1a61578"
 
-URI_aarch64_efivar-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/efivar-devel-39-3.el10.aarch64.rpm;name=aarch64_efivar-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_efivar-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/efivar-devel-39-3.el10.aarch64.rpm;name=aarch64_efivar-devel;unpack=0"
 SRC_URI[aarch64_efivar-devel.sha256sum] = "fed601c7c23eeb2b039d66f12ee1a229fe2b0e2b29f0d88df2f5c10c21ce77eb"
 
-URI_aarch64_efivar-libs = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/efivar-libs-39-3.el10.aarch64.rpm;name=aarch64_efivar-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_efivar-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/efivar-libs-39-3.el10.aarch64.rpm;name=aarch64_efivar-libs;unpack=0"
 SRC_URI[aarch64_efivar-libs.sha256sum] = "a9a9e27306818c694fcb23ac2863d75c47a77975b79c67a4db53ea028e642104"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/efivar-39-3.el10.riscv64.rpm;name=riscv64_efivar;unpack=0"
+SRC_URI[riscv64_efivar.sha256sum] = "59137e39e0d59b1bfa1c30b8fa56687438b02088ff43b47b054b3b383c5f67bd"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/efivar-devel-39-3.el10.riscv64.rpm;name=riscv64_efivar-devel;unpack=0"
+SRC_URI[riscv64_efivar-devel.sha256sum] = "4ec0346844abf50e3ff4cc26000fcd81e85d7cb67958372b19321de2a3581a99"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/efivar-libs-39-3.el10.riscv64.rpm;name=riscv64_efivar-libs;unpack=0"
+SRC_URI[riscv64_efivar-libs.sha256sum] = "1185795fffc16aaffa62f6bce930ac0bd84c479b43dd744bb35f2c429fbf3fb1"
 
 RDEPENDS:efivar = " \
  efivar-libs \

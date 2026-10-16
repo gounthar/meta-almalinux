@@ -9,8 +9,7 @@ PACKAGES = " \
  redhat-rpm-config \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/redhat-rpm-config-296-1.el10.alma.2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/redhat-rpm-config-296-1.el10.alma.2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "068e571950295c7dee7c2a7cb7346ed18aa7c90c4d070e3602b3cebfbc3f5bb2"
 
 ## Requires (x86_64_v2) that were seen as not satisfiable in original repo:
@@ -19,13 +18,17 @@ SRC_URI[src.sha256sum] = "068e571950295c7dee7c2a7cb7346ed18aa7c90c4d070e3602b3ce
 ## Requires (aarch64) that were seen as not satisfiable in original repo:
 # - redhat-rpm-config: ocaml-srpm-macros
 
-URI_x86_64_v2_redhat-rpm-config = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/redhat-rpm-config-296-1.el10.alma.2.noarch.rpm;name=x86_64_v2_redhat-rpm-config;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_redhat-rpm-config}"
+## Requires (riscv64) that were seen as not satisfiable in original repo:
+# - redhat-rpm-config: ocaml-srpm-macros
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/redhat-rpm-config-296-1.el10.alma.2.noarch.rpm;name=x86_64_v2_redhat-rpm-config;unpack=0"
 SRC_URI[x86_64_v2_redhat-rpm-config.sha256sum] = "d8a082597eedfb402afa11285fc1f765a77baa237e968d7ca97bb89091b1cef2"
 
-URI_aarch64_redhat-rpm-config = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/redhat-rpm-config-296-1.el10.alma.2.noarch.rpm;name=aarch64_redhat-rpm-config;unpack=0"
-SRC_URI:append = " ${URI_aarch64_redhat-rpm-config}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/redhat-rpm-config-296-1.el10.alma.2.noarch.rpm;name=aarch64_redhat-rpm-config;unpack=0"
 SRC_URI[aarch64_redhat-rpm-config.sha256sum] = "d8a082597eedfb402afa11285fc1f765a77baa237e968d7ca97bb89091b1cef2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/redhat-rpm-config-296-1.el10.alma.2.noarch.rpm;name=riscv64_redhat-rpm-config;unpack=0"
+SRC_URI[riscv64_redhat-rpm-config.sha256sum] = "d8a082597eedfb402afa11285fc1f765a77baa237e968d7ca97bb89091b1cef2"
 
 RDEPENDS:redhat-rpm-config = " \
  annobin-plugin-gcc \

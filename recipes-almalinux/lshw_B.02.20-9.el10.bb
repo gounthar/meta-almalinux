@@ -10,25 +10,26 @@ PACKAGES = " \
  lshw-gui \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/lshw-B.02.20-9.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/lshw-B.02.20-9.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "900eba30c1e06a56a70c38b42c7ded4f1822c27e7baedbe101ff901881c9003a"
 
-URI_x86_64_v2_lshw = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/lshw-B.02.20-9.el10.x86_64_v2.rpm;name=x86_64_v2_lshw;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lshw}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/lshw-B.02.20-9.el10.x86_64_v2.rpm;name=x86_64_v2_lshw;unpack=0"
 SRC_URI[x86_64_v2_lshw.sha256sum] = "a06c377f3c15964ec3eac6e3e13f7cf3f0f898e29afb466672a3906810ce3357"
 
-URI_x86_64_v2_lshw-gui = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/lshw-gui-B.02.20-9.el10.x86_64_v2.rpm;name=x86_64_v2_lshw-gui;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lshw-gui}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/lshw-gui-B.02.20-9.el10.x86_64_v2.rpm;name=x86_64_v2_lshw-gui;unpack=0"
 SRC_URI[x86_64_v2_lshw-gui.sha256sum] = "a42fa8b388782e84dc2fefa82e528f512b504c6e21e0f23426f696efd7c1c5a2"
 
-URI_aarch64_lshw = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/lshw-B.02.20-9.el10.aarch64.rpm;name=aarch64_lshw;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lshw}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/lshw-B.02.20-9.el10.aarch64.rpm;name=aarch64_lshw;unpack=0"
 SRC_URI[aarch64_lshw.sha256sum] = "249f2383da72b97d494c4e48b9c08a006b09e7bc415d3b4c8d154d0218cc744b"
 
-URI_aarch64_lshw-gui = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/lshw-gui-B.02.20-9.el10.aarch64.rpm;name=aarch64_lshw-gui;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lshw-gui}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/lshw-gui-B.02.20-9.el10.aarch64.rpm;name=aarch64_lshw-gui;unpack=0"
 SRC_URI[aarch64_lshw-gui.sha256sum] = "0478e63d40dd27de2368826e62a5537d38970f1067d41f4eff464a8fd2fc797a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/lshw-B.02.20-9.el10.riscv64.rpm;name=riscv64_lshw;unpack=0"
+SRC_URI[riscv64_lshw.sha256sum] = "706ea4c0faa6e85878de30b1ee79e342ba1d171160113bd0468dbb71b65034ce"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/lshw-gui-B.02.20-9.el10.riscv64.rpm;name=riscv64_lshw-gui;unpack=0"
+SRC_URI[riscv64_lshw-gui.sha256sum] = "81f26b604b848c66426c0b489bf84500804b59fcc12a73ca0b53a2e80e56b061"
 
 RDEPENDS:lshw = " \
  glibc \

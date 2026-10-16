@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "dnsperf"
 PV = "2.15.0"
 PR = "2.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  dnsperf \
- "
+"
+PACKAGES:aarch64 = " \
+ dnsperf \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/d/dnsperf-2.15.0-2.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/d/dnsperf-2.15.0-2.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "720bdd1e50a2955bccd052c05497f5c72e1f92f64c05a1ff955218ad36a6c529"
 
-URI_x86_64_v2_dnsperf = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/dnsperf-2.15.0-2.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_dnsperf;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_dnsperf}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/dnsperf-2.15.0-2.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_dnsperf;unpack=0"
 SRC_URI[x86_64_v2_dnsperf.sha256sum] = "d08715a5efe787828dc28e85b0bf7d3fc0276c546da72c92256233570267691c"
 
-URI_aarch64_dnsperf = "${EPEL_MIRROR}/aarch64/Packages/d/dnsperf-2.15.0-2.el10_2.aarch64.rpm;name=aarch64_dnsperf;unpack=0"
-SRC_URI:append = " ${URI_aarch64_dnsperf}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/d/dnsperf-2.15.0-2.el10_2.aarch64.rpm;name=aarch64_dnsperf;unpack=0"
 SRC_URI[aarch64_dnsperf.sha256sum] = "ec9d76245c3928203f91daebefa680265b81f4d16113a271a72eea81e6d47711"
 
 RDEPENDS:dnsperf = " \

@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-thiserror-impl"
 PV = "2.0.20"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-thiserror-impl+default-devel \
  rust-thiserror-impl-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-thiserror-impl+default-devel \
+ rust-thiserror-impl-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-thiserror-impl-2.0.20-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-thiserror-impl-2.0.20-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "643d1a89111cf59e7f0243bcd86d6eba91640b0e9d95ec43f9fce8bbae40cfae"
 
-URI_x86_64_v2_rust-thiserror-impl+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-thiserror-impl+default-devel-2.0.20-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-thiserror-impl+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-thiserror-impl+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-thiserror-impl+default-devel-2.0.20-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-thiserror-impl+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-thiserror-impl+default-devel.sha256sum] = "781ed7427095daf9fec4d41bdb43dd85eacf45862999aea71887ba5947bb74bc"
 
-URI_x86_64_v2_rust-thiserror-impl-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-thiserror-impl-devel-2.0.20-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-thiserror-impl-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-thiserror-impl-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-thiserror-impl-devel-2.0.20-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-thiserror-impl-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-thiserror-impl-devel.sha256sum] = "04b4048815e056fddff595d6cedb53323b12b306f9452748700d20583f7ece6a"
 
-URI_aarch64_rust-thiserror-impl+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-thiserror-impl+default-devel-2.0.20-1.el10_3.noarch.rpm;name=aarch64_rust-thiserror-impl+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-thiserror-impl+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-thiserror-impl+default-devel-2.0.20-1.el10_3.noarch.rpm;name=aarch64_rust-thiserror-impl+default-devel;unpack=0"
 SRC_URI[aarch64_rust-thiserror-impl+default-devel.sha256sum] = "45cc22e2215845802ab775a3917c66fe3965502f1419cad85b5eaea3f5876024"
 
-URI_aarch64_rust-thiserror-impl-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-thiserror-impl-devel-2.0.20-1.el10_3.noarch.rpm;name=aarch64_rust-thiserror-impl-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-thiserror-impl-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-thiserror-impl-devel-2.0.20-1.el10_3.noarch.rpm;name=aarch64_rust-thiserror-impl-devel;unpack=0"
 SRC_URI[aarch64_rust-thiserror-impl-devel.sha256sum] = "ce6cc9df5bd6a2e06f2fdeddba362162c2407d91746465395b554c99dab8ff2d"
 
 RDEPENDS:rust-thiserror-impl+default-devel = " \

@@ -10,25 +10,26 @@ PACKAGES = " \
  libxkbfile-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libxkbfile-1.1.3-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libxkbfile-1.1.3-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "09caef3c5420c1ea2fc9cf3e2cc108b6e3c910e5ff7f27c651f4f38f48398764"
 
-URI_x86_64_v2_libxkbfile = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libxkbfile-1.1.3-3.el10.x86_64_v2.rpm;name=x86_64_v2_libxkbfile;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libxkbfile}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libxkbfile-1.1.3-3.el10.x86_64_v2.rpm;name=x86_64_v2_libxkbfile;unpack=0"
 SRC_URI[x86_64_v2_libxkbfile.sha256sum] = "41cc6503c961a4fe954fc2f845daeab69fd90be2531ebbbec7a909f8ce27420c"
 
-URI_x86_64_v2_libxkbfile-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libxkbfile-devel-1.1.3-3.el10.x86_64_v2.rpm;name=x86_64_v2_libxkbfile-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libxkbfile-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libxkbfile-devel-1.1.3-3.el10.x86_64_v2.rpm;name=x86_64_v2_libxkbfile-devel;unpack=0"
 SRC_URI[x86_64_v2_libxkbfile-devel.sha256sum] = "5840a04dfa6dea3938137074b94902732f9a308c75e7e7f1897a4f64ad6594b4"
 
-URI_aarch64_libxkbfile = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libxkbfile-1.1.3-3.el10.aarch64.rpm;name=aarch64_libxkbfile;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libxkbfile}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libxkbfile-1.1.3-3.el10.aarch64.rpm;name=aarch64_libxkbfile;unpack=0"
 SRC_URI[aarch64_libxkbfile.sha256sum] = "3103ad83af2be5384fa74e1edafb0b0a4b7993530b303f2ce2d81772206f7163"
 
-URI_aarch64_libxkbfile-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libxkbfile-devel-1.1.3-3.el10.aarch64.rpm;name=aarch64_libxkbfile-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libxkbfile-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libxkbfile-devel-1.1.3-3.el10.aarch64.rpm;name=aarch64_libxkbfile-devel;unpack=0"
 SRC_URI[aarch64_libxkbfile-devel.sha256sum] = "2d25ef742b6f387b98e05d2b99873f1eadf2107d909522d864f43f439578af9d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libxkbfile-1.1.3-3.el10.riscv64.rpm;name=riscv64_libxkbfile;unpack=0"
+SRC_URI[riscv64_libxkbfile.sha256sum] = "c2e56d4c492ecbb648ed4a1bec45b1d4584ef18da1923bec03adeb2a42fad608"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libxkbfile-devel-1.1.3-3.el10.riscv64.rpm;name=riscv64_libxkbfile-devel;unpack=0"
+SRC_URI[riscv64_libxkbfile-devel.sha256sum] = "24a3ea52e8db8524e87e95f4f6b4bf5530748539b2d2d67ddf4fb1af5bf17e32"
 
 RDEPENDS:libxkbfile = " \
  glibc \

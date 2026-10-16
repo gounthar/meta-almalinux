@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "git-review"
 PV = "2.5.0"
 PR = "2.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  git-review \
- "
+"
+PACKAGES:aarch64 = " \
+ git-review \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/g/git-review-2.5.0-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/g/git-review-2.5.0-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1347041a3d5a975cb90ede72cf5c525898c7efa9d5115c7a9ca1849743727d1a"
 
-URI_x86_64_v2_git-review = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/git-review-2.5.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_git-review;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_git-review}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/git-review-2.5.0-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_git-review;unpack=0"
 SRC_URI[x86_64_v2_git-review.sha256sum] = "2bdaf3e255cbeeeb2378d574593f96ae56e6b18174f6be9e5d96d0c6ece866c2"
 
-URI_aarch64_git-review = "${EPEL_MIRROR}/aarch64/Packages/g/git-review-2.5.0-2.el10_3.noarch.rpm;name=aarch64_git-review;unpack=0"
-SRC_URI:append = " ${URI_aarch64_git-review}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/git-review-2.5.0-2.el10_3.noarch.rpm;name=aarch64_git-review;unpack=0"
 SRC_URI[aarch64_git-review.sha256sum] = "b97f84a9b5a7c57313f21db92dfbd288d44ac7334938d36d2e83a3321b4592fa"
 
 RDEPENDS:git-review = " \

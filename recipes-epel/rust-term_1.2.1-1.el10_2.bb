@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-term"
 PV = "1.2.1"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-term+default-devel \
  rust-term-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-term+default-devel \
+ rust-term-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-term-1.2.1-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-term-1.2.1-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "32c5d6f623110d8567d80576f4759d86d116b37da915098f7fbdb2724338b00b"
 
-URI_x86_64_v2_rust-term+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-term+default-devel-1.2.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-term+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-term+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-term+default-devel-1.2.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-term+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-term+default-devel.sha256sum] = "f19c0c7a86ab2a5beeaae5cee24f8c0e865f2e7dff361416a21fb8b51136f390"
 
-URI_x86_64_v2_rust-term-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-term-devel-1.2.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-term-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-term-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-term-devel-1.2.1-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-term-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-term-devel.sha256sum] = "35ce121bbec1037cd679e3327adbe2c2e9de741953713503d2afe7a9aff64f8c"
 
-URI_aarch64_rust-term+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-term+default-devel-1.2.1-1.el10_2.noarch.rpm;name=aarch64_rust-term+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-term+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-term+default-devel-1.2.1-1.el10_2.noarch.rpm;name=aarch64_rust-term+default-devel;unpack=0"
 SRC_URI[aarch64_rust-term+default-devel.sha256sum] = "b54fe92bff0c9c61fdf60d002873636eb4958e919adf19053ffc3099c41b185b"
 
-URI_aarch64_rust-term-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-term-devel-1.2.1-1.el10_2.noarch.rpm;name=aarch64_rust-term-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-term-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-term-devel-1.2.1-1.el10_2.noarch.rpm;name=aarch64_rust-term-devel;unpack=0"
 SRC_URI[aarch64_rust-term-devel.sha256sum] = "8db22f24f80ca53b5f9e36769c2c244849f8f4bb6f998f02ad01d6ae870801fe"
 
 RDEPENDS:rust-term+default-devel = " \

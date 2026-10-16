@@ -9,17 +9,17 @@ PACKAGES = " \
  libabigail \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/libabigail-2.10-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/libabigail-2.10-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b590813716c71997fe744d0c1368eaef916d17086b86ccae51974b53e7b59cf7"
 
-URI_x86_64_v2_libabigail = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libabigail-2.10-1.el10.x86_64_v2.rpm;name=x86_64_v2_libabigail;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libabigail}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libabigail-2.10-1.el10.x86_64_v2.rpm;name=x86_64_v2_libabigail;unpack=0"
 SRC_URI[x86_64_v2_libabigail.sha256sum] = "33a95f27863039f63969af1a48e0548f60f1f65379019eee34f7f5cef7dc4d0b"
 
-URI_aarch64_libabigail = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libabigail-2.10-1.el10.aarch64.rpm;name=aarch64_libabigail;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libabigail}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libabigail-2.10-1.el10.aarch64.rpm;name=aarch64_libabigail;unpack=0"
 SRC_URI[aarch64_libabigail.sha256sum] = "40e334da58279f0cbcbbabfce8c74a770fc8ec32ab04f2957a9c7bfb3d2785a7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libabigail-2.10-1.el10.riscv64.rpm;name=riscv64_libabigail;unpack=0"
+SRC_URI[riscv64_libabigail.sha256sum] = "94a94283988e9fe822b61113ba2f35a0bdfc76f58949c65a4152172d25c55598"
 
 RDEPENDS:libabigail = " \
  elfutils-libelf \

@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-autopage"
 PV = "0.6.0"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-autopage \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-autopage \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-autopage-0.6.0-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-autopage-0.6.0-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d9b97ef71a6b88ad04fb8a9d835fa10da89dd3461825182b3bd024e43bba1553"
 
-URI_x86_64_v2_python3-autopage = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-autopage-0.6.0-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-autopage;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-autopage}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-autopage-0.6.0-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-autopage;unpack=0"
 SRC_URI[x86_64_v2_python3-autopage.sha256sum] = "88a0d78d5e406782acb0db819984650f92cd3b956859f45cf6fe4211f6cc91db"
 
-URI_aarch64_python3-autopage = "${EPEL_MIRROR}/aarch64/Packages/p/python3-autopage-0.6.0-1.el10_2.noarch.rpm;name=aarch64_python3-autopage;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-autopage}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-autopage-0.6.0-1.el10_2.noarch.rpm;name=aarch64_python3-autopage;unpack=0"
 SRC_URI[aarch64_python3-autopage.sha256sum] = "19f78ca2c95f153ebbbde4119f55afdd9480b53cb2e30693604142f01d0ef571"
 
 RDEPENDS:python3-autopage = " \

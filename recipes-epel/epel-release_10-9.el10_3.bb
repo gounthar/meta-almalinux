@@ -5,16 +5,17 @@ inherit dnf-bridge
 PN = "epel-release"
 PV = "10"
 PR = "9.el10_3"
-PACKAGES = " \
+PACKAGES:aarch64 = " \
  epel-release \
- "
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/e/epel-release-10-9.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/e/epel-release-10-9.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7766f6f74801ea84d3e90fcb82938c849061992c2a90d389fdf386ff0e6a7117"
 
-URI_aarch64_epel-release = "${EPEL_MIRROR}/aarch64/Packages/e/epel-release-10-9.el10_3.noarch.rpm;name=aarch64_epel-release;unpack=0"
-SRC_URI:append = " ${URI_aarch64_epel-release}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/e/epel-release-10-9.el10_3.noarch.rpm;name=aarch64_epel-release;unpack=0"
 SRC_URI[aarch64_epel-release.sha256sum] = "f567aa5c3cde55f579ba5c41c79df97da692a391efddd14b123a4eec0824fbc0"
 
 RDEPENDS:epel-release = " \

@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "yakuake"
 PV = "25.12.3"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  yakuake \
- "
+"
+PACKAGES:aarch64 = " \
+ yakuake \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/y/yakuake-25.12.3-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/y/yakuake-25.12.3-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "16745b37c3118f45fa38b0db7810dd1f38eb3a6a34d5dc03d59dbfac20d70ac3"
 
-URI_x86_64_v2_yakuake = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/yakuake-25.12.3-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_yakuake;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_yakuake}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/yakuake-25.12.3-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_yakuake;unpack=0"
 SRC_URI[x86_64_v2_yakuake.sha256sum] = "b3b3ff2b3ba817271461e2d91445104d15ec67d55b5ddab9ccb06fb20abe73a1"
 
-URI_aarch64_yakuake = "${EPEL_MIRROR}/aarch64/Packages/y/yakuake-25.12.3-1.el10_3.aarch64.rpm;name=aarch64_yakuake;unpack=0"
-SRC_URI:append = " ${URI_aarch64_yakuake}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/y/yakuake-25.12.3-1.el10_3.aarch64.rpm;name=aarch64_yakuake;unpack=0"
 SRC_URI[aarch64_yakuake.sha256sum] = "669d42b86e0e00d0c3391a20e947a5658ddb6326e252493b29fd0c81e2d54577"
 
 RDEPENDS:yakuake = " \

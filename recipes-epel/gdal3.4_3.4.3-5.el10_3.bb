@@ -5,7 +5,7 @@ inherit dnf-bridge
 PN = "gdal3.4"
 PV = "3.4.3"
 PR = "5.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  gdal3.4 \
  gdal3.4-devel \
  gdal3.4-doc \
@@ -15,88 +15,83 @@ PACKAGES = " \
  gdal3.4-perl \
  gdal3.4-python-tools \
  python3-gdal3.4 \
- "
+"
+PACKAGES:aarch64 = " \
+ gdal3.4 \
+ gdal3.4-devel \
+ gdal3.4-doc \
+ gdal3.4-java \
+ gdal3.4-javadoc \
+ gdal3.4-libs \
+ gdal3.4-perl \
+ gdal3.4-python-tools \
+ python3-gdal3.4 \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/g/gdal3.4-3.4.3-5.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/g/gdal3.4-3.4.3-5.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "af9b06dafad878112803582ba3bd25af834fcde95f232fd6c4bcff8653a97816"
 
 ## Requires (x86_64_v2) that were seen as not satisfiable in original repo:
 # - gdal3.4-java: libgeos_c.so.1()(64bit)
 # - gdal3.4-libs: libgeos_c.so.1()(64bit)
 
-URI_x86_64_v2_gdal3.4 = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gdal3.4-3.4.3-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_gdal3.4;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gdal3.4}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gdal3.4-3.4.3-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_gdal3.4;unpack=0"
 SRC_URI[x86_64_v2_gdal3.4.sha256sum] = "240159bb795869a3ace173b7cb63e9df2222fb67e6594990f7b624e0e80536e0"
 
-URI_x86_64_v2_gdal3.4-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gdal3.4-devel-3.4.3-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_gdal3.4-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gdal3.4-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gdal3.4-devel-3.4.3-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_gdal3.4-devel;unpack=0"
 SRC_URI[x86_64_v2_gdal3.4-devel.sha256sum] = "7cfa58994b4beaafbaa3a85a7d10496b20c48ecf4a1712fcb6be96ffc468b915"
-RPROVIDES:gdal3.4-devel:x86_64_v2 = "virtual/pkgconfig_gdal_"
+RPROVIDES:gdal3.4-devel:append:x86_64_v2 = " virtual/pkgconfig_gdal_"
 
-URI_x86_64_v2_gdal3.4-doc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gdal3.4-doc-3.4.3-5.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_gdal3.4-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gdal3.4-doc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gdal3.4-doc-3.4.3-5.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_gdal3.4-doc;unpack=0"
 SRC_URI[x86_64_v2_gdal3.4-doc.sha256sum] = "7fa2c304bef16485740ba6ad129fe7dbc3e3e57d352230adb0549e9914588a36"
 
-URI_x86_64_v2_gdal3.4-java = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gdal3.4-java-3.4.3-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_gdal3.4-java;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gdal3.4-java}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gdal3.4-java-3.4.3-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_gdal3.4-java;unpack=0"
 SRC_URI[x86_64_v2_gdal3.4-java.sha256sum] = "8235af0de3679a1ff0679c3ba2bc814ae9e720625927a18b6d58fc39529ac9b2"
 
-URI_x86_64_v2_gdal3.4-javadoc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gdal3.4-javadoc-3.4.3-5.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_gdal3.4-javadoc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gdal3.4-javadoc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gdal3.4-javadoc-3.4.3-5.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_gdal3.4-javadoc;unpack=0"
 SRC_URI[x86_64_v2_gdal3.4-javadoc.sha256sum] = "ec4fe573c271614cf3beb51a88f51fd2e0ac7d99c810508749e8621c8bc28d7c"
 
-URI_x86_64_v2_gdal3.4-libs = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gdal3.4-libs-3.4.3-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_gdal3.4-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gdal3.4-libs}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gdal3.4-libs-3.4.3-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_gdal3.4-libs;unpack=0"
 SRC_URI[x86_64_v2_gdal3.4-libs.sha256sum] = "cb829d6db67db8d702b98e027ba1c40c1ea364e3312cae2fc661b27fb028dc7e"
 
-URI_x86_64_v2_gdal3.4-perl = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gdal3.4-perl-3.4.3-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_gdal3.4-perl;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gdal3.4-perl}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gdal3.4-perl-3.4.3-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_gdal3.4-perl;unpack=0"
 SRC_URI[x86_64_v2_gdal3.4-perl.sha256sum] = "7924611b3c7266eb0c4eb414998edacad474b149c55e7c7d63765967c863e17a"
 
-URI_x86_64_v2_gdal3.4-python-tools = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gdal3.4-python-tools-3.4.3-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_gdal3.4-python-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gdal3.4-python-tools}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gdal3.4-python-tools-3.4.3-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_gdal3.4-python-tools;unpack=0"
 SRC_URI[x86_64_v2_gdal3.4-python-tools.sha256sum] = "7820e783bf8ddbcebe04bc6527cf2d8752c256bb24f966c62c97f3ae2543fc20"
 
-URI_x86_64_v2_python3-gdal3.4 = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-gdal3.4-3.4.3-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_python3-gdal3.4;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-gdal3.4}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-gdal3.4-3.4.3-5.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_python3-gdal3.4;unpack=0"
 SRC_URI[x86_64_v2_python3-gdal3.4.sha256sum] = "693e813fac08dafcfacba8485d10317b60c81e392d4355836dd43574e7f4716b"
 
-URI_aarch64_gdal3.4 = "${EPEL_MIRROR}/aarch64/Packages/g/gdal3.4-3.4.3-5.el10_3.aarch64.rpm;name=aarch64_gdal3.4;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gdal3.4}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/gdal3.4-3.4.3-5.el10_3.aarch64.rpm;name=aarch64_gdal3.4;unpack=0"
 SRC_URI[aarch64_gdal3.4.sha256sum] = "46f556e75352dbbe497c4ef82010f713e38a50208b775ae7e31aea20137a4aee"
 
-URI_aarch64_gdal3.4-devel = "${EPEL_MIRROR}/aarch64/Packages/g/gdal3.4-devel-3.4.3-5.el10_3.aarch64.rpm;name=aarch64_gdal3.4-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gdal3.4-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/gdal3.4-devel-3.4.3-5.el10_3.aarch64.rpm;name=aarch64_gdal3.4-devel;unpack=0"
 SRC_URI[aarch64_gdal3.4-devel.sha256sum] = "08d6bf487d5476878b23db08d615afa03f590465d2aa0c1e945ea6ac299baa92"
-RPROVIDES:gdal3.4-devel:aarch64 = "virtual/pkgconfig_gdal_"
+RPROVIDES:gdal3.4-devel:append:aarch64 = " virtual/pkgconfig_gdal_"
 
-URI_aarch64_gdal3.4-doc = "${EPEL_MIRROR}/aarch64/Packages/g/gdal3.4-doc-3.4.3-5.el10_3.noarch.rpm;name=aarch64_gdal3.4-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gdal3.4-doc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/gdal3.4-doc-3.4.3-5.el10_3.noarch.rpm;name=aarch64_gdal3.4-doc;unpack=0"
 SRC_URI[aarch64_gdal3.4-doc.sha256sum] = "9349b9263d44dc1fb4360258803ef38d09506f1260052873adfb279280557316"
 
-URI_aarch64_gdal3.4-java = "${EPEL_MIRROR}/aarch64/Packages/g/gdal3.4-java-3.4.3-5.el10_3.aarch64.rpm;name=aarch64_gdal3.4-java;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gdal3.4-java}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/gdal3.4-java-3.4.3-5.el10_3.aarch64.rpm;name=aarch64_gdal3.4-java;unpack=0"
 SRC_URI[aarch64_gdal3.4-java.sha256sum] = "4296425faf080eab1b5a2173a3a112b1fdac5fedeabc3a5cee5c2337683c778e"
 
-URI_aarch64_gdal3.4-javadoc = "${EPEL_MIRROR}/aarch64/Packages/g/gdal3.4-javadoc-3.4.3-5.el10_3.noarch.rpm;name=aarch64_gdal3.4-javadoc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gdal3.4-javadoc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/gdal3.4-javadoc-3.4.3-5.el10_3.noarch.rpm;name=aarch64_gdal3.4-javadoc;unpack=0"
 SRC_URI[aarch64_gdal3.4-javadoc.sha256sum] = "ed90557023306633f482165e511f25ed25fd53d4722a4cb358d9cd0ee340e24e"
 
-URI_aarch64_gdal3.4-libs = "${EPEL_MIRROR}/aarch64/Packages/g/gdal3.4-libs-3.4.3-5.el10_3.aarch64.rpm;name=aarch64_gdal3.4-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gdal3.4-libs}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/gdal3.4-libs-3.4.3-5.el10_3.aarch64.rpm;name=aarch64_gdal3.4-libs;unpack=0"
 SRC_URI[aarch64_gdal3.4-libs.sha256sum] = "6d8ec05a55c2990da08cef70dcefeebf88650cfa2d1418f210def1df13ff1dca"
 
-URI_aarch64_gdal3.4-perl = "${EPEL_MIRROR}/aarch64/Packages/g/gdal3.4-perl-3.4.3-5.el10_3.aarch64.rpm;name=aarch64_gdal3.4-perl;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gdal3.4-perl}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/gdal3.4-perl-3.4.3-5.el10_3.aarch64.rpm;name=aarch64_gdal3.4-perl;unpack=0"
 SRC_URI[aarch64_gdal3.4-perl.sha256sum] = "bb20216ee74652faaeea27742d5ce3c217d26bd49d0a4af5d4807ccb0496fcff"
 
-URI_aarch64_gdal3.4-python-tools = "${EPEL_MIRROR}/aarch64/Packages/g/gdal3.4-python-tools-3.4.3-5.el10_3.aarch64.rpm;name=aarch64_gdal3.4-python-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gdal3.4-python-tools}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/gdal3.4-python-tools-3.4.3-5.el10_3.aarch64.rpm;name=aarch64_gdal3.4-python-tools;unpack=0"
 SRC_URI[aarch64_gdal3.4-python-tools.sha256sum] = "e0eab5f7a2a5d715dc300707f959df2802180e52740877907203c6636e17c499"
 
-URI_aarch64_python3-gdal3.4 = "${EPEL_MIRROR}/aarch64/Packages/p/python3-gdal3.4-3.4.3-5.el10_3.aarch64.rpm;name=aarch64_python3-gdal3.4;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-gdal3.4}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-gdal3.4-3.4.3-5.el10_3.aarch64.rpm;name=aarch64_python3-gdal3.4;unpack=0"
 SRC_URI[aarch64_python3-gdal3.4.sha256sum] = "56e10b3f0fb15ee82761e8c3cb6e1905317468d8b50aa339b618def57ad9f8d4"
 
 RDEPENDS:gdal3.4 = " \
@@ -312,7 +307,3 @@ RDEPENDS:python3-gdal3.4 = " \
  python3 \
  python3-numpy \
  "
-
-PROVIDES:append:x86_64_v2 = " rpm/virtual/pkgconfig_gdal_"
-
-PROVIDES:append:aarch64 = " rpm/virtual/pkgconfig_gdal_"

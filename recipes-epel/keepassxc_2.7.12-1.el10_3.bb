@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "keepassxc"
 PV = "2.7.12"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  keepassxc \
- "
+"
+PACKAGES:aarch64 = " \
+ keepassxc \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/k/keepassxc-2.7.12-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/k/keepassxc-2.7.12-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "dafdf829393000f0cf6373ffebbb06bd7bf151fb27b0bbe44577061061ce4ecf"
 
-URI_x86_64_v2_keepassxc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/keepassxc-2.7.12-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_keepassxc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_keepassxc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/keepassxc-2.7.12-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_keepassxc;unpack=0"
 SRC_URI[x86_64_v2_keepassxc.sha256sum] = "22b0915616bf8d2d9075330508f0c1d32a45928dce8c954122da9b911b2be779"
 
-URI_aarch64_keepassxc = "${EPEL_MIRROR}/aarch64/Packages/k/keepassxc-2.7.12-1.el10_3.aarch64.rpm;name=aarch64_keepassxc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_keepassxc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/k/keepassxc-2.7.12-1.el10_3.aarch64.rpm;name=aarch64_keepassxc;unpack=0"
 SRC_URI[aarch64_keepassxc.sha256sum] = "60144da207e4358dec0a6c768ef13f3c864a2843f0524f9a164e44be09a9edac"
 
 RDEPENDS:keepassxc = " \

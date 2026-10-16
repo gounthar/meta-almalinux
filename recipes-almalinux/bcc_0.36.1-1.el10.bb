@@ -14,57 +14,62 @@ PACKAGES = " \
  python3-bcc \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/bcc-0.36.1-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/bcc-0.36.1-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "49a6767ac1829404407c3901cc24186c4070508c4b3341b112f4c600dcccfa51"
 
-URI_x86_64_v2_bcc = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/bcc-0.36.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_bcc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_bcc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/bcc-0.36.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_bcc;unpack=0"
 SRC_URI[x86_64_v2_bcc.sha256sum] = "728dfe65849d0beadc14f80bff699b498b57bb639c03ac6f2ddf0e3983dff8f7"
 
-URI_x86_64_v2_bcc-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/bcc-devel-0.36.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_bcc-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_bcc-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/bcc-devel-0.36.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_bcc-devel;unpack=0"
 SRC_URI[x86_64_v2_bcc-devel.sha256sum] = "b5ba407d785bbc9eb248ae5c1b35e38cc70101ced99d4c0c89e0587cb9f2e21f"
 
-URI_x86_64_v2_bcc-doc = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/bcc-doc-0.36.1-1.el10.noarch.rpm;name=x86_64_v2_bcc-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_bcc-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/bcc-doc-0.36.1-1.el10.noarch.rpm;name=x86_64_v2_bcc-doc;unpack=0"
 SRC_URI[x86_64_v2_bcc-doc.sha256sum] = "5080688098c0ab579921c82a404d9bc25c97fc16904abe9ca462e058e93f978d"
 
-URI_x86_64_v2_bcc-tools = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/bcc-tools-0.36.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_bcc-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_bcc-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/bcc-tools-0.36.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_bcc-tools;unpack=0"
 SRC_URI[x86_64_v2_bcc-tools.sha256sum] = "2ac1228159b0965c6807ee0bfa796c6af33ef181dd331a49c9546deed103f2e8"
 
-URI_x86_64_v2_libbpf-tools = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libbpf-tools-0.36.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_libbpf-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libbpf-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libbpf-tools-0.36.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_libbpf-tools;unpack=0"
 SRC_URI[x86_64_v2_libbpf-tools.sha256sum] = "ad0b96594be5d0453a5d3d83f1423a7f63191e1591e09055e84dd88f571eb12e"
 
-URI_x86_64_v2_python3-bcc = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-bcc-0.36.1-1.el10.noarch.rpm;name=x86_64_v2_python3-bcc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-bcc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-bcc-0.36.1-1.el10.noarch.rpm;name=x86_64_v2_python3-bcc;unpack=0"
 SRC_URI[x86_64_v2_python3-bcc.sha256sum] = "74e3406ea82cf80a7a3893258e1589845e6f6b195d8821459701d2c1700c18ba"
 
-URI_aarch64_bcc = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/bcc-0.36.1-1.el10.aarch64.rpm;name=aarch64_bcc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_bcc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/bcc-0.36.1-1.el10.aarch64.rpm;name=aarch64_bcc;unpack=0"
 SRC_URI[aarch64_bcc.sha256sum] = "90ec2c9fc68583fbddadd55e443fc7bdec8d83f6c18d68e11eb0b16d4abc1603"
 
-URI_aarch64_bcc-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/bcc-devel-0.36.1-1.el10.aarch64.rpm;name=aarch64_bcc-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_bcc-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/bcc-devel-0.36.1-1.el10.aarch64.rpm;name=aarch64_bcc-devel;unpack=0"
 SRC_URI[aarch64_bcc-devel.sha256sum] = "6f566d30a4f1f2ef1adc729d942c3c732e059b3c8119eb1a683890fbde75d152"
 
-URI_aarch64_bcc-doc = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/bcc-doc-0.36.1-1.el10.noarch.rpm;name=aarch64_bcc-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_bcc-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/bcc-doc-0.36.1-1.el10.noarch.rpm;name=aarch64_bcc-doc;unpack=0"
 SRC_URI[aarch64_bcc-doc.sha256sum] = "5080688098c0ab579921c82a404d9bc25c97fc16904abe9ca462e058e93f978d"
 
-URI_aarch64_bcc-tools = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/bcc-tools-0.36.1-1.el10.aarch64.rpm;name=aarch64_bcc-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_bcc-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/bcc-tools-0.36.1-1.el10.aarch64.rpm;name=aarch64_bcc-tools;unpack=0"
 SRC_URI[aarch64_bcc-tools.sha256sum] = "176b87718cd1512be3af9ed13078d0fe28d904a504f1ac675ef36d9df4da537a"
 
-URI_aarch64_libbpf-tools = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libbpf-tools-0.36.1-1.el10.aarch64.rpm;name=aarch64_libbpf-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libbpf-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libbpf-tools-0.36.1-1.el10.aarch64.rpm;name=aarch64_libbpf-tools;unpack=0"
 SRC_URI[aarch64_libbpf-tools.sha256sum] = "f316d0fafdb178591e96f21f06df9a1198cc55da8efa31b1420857196dff9aa0"
 
-URI_aarch64_python3-bcc = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-bcc-0.36.1-1.el10.noarch.rpm;name=aarch64_python3-bcc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-bcc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-bcc-0.36.1-1.el10.noarch.rpm;name=aarch64_python3-bcc;unpack=0"
 SRC_URI[aarch64_python3-bcc.sha256sum] = "74e3406ea82cf80a7a3893258e1589845e6f6b195d8821459701d2c1700c18ba"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/bcc-0.36.1-1.el10.riscv64.rpm;name=riscv64_bcc;unpack=0"
+SRC_URI[riscv64_bcc.sha256sum] = "12ac862998ef5f0b77ee3d57be0b5fd9a4ea54ea0bca4d3710d0e1d0306afc47"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/bcc-devel-0.36.1-1.el10.riscv64.rpm;name=riscv64_bcc-devel;unpack=0"
+SRC_URI[riscv64_bcc-devel.sha256sum] = "d236d5d068e9773d3e8894dbefe161f6177cd5bab80d2a25a6621c21a479ddc0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/bcc-doc-0.36.1-1.el10.noarch.rpm;name=riscv64_bcc-doc;unpack=0"
+SRC_URI[riscv64_bcc-doc.sha256sum] = "5080688098c0ab579921c82a404d9bc25c97fc16904abe9ca462e058e93f978d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/bcc-tools-0.36.1-1.el10.riscv64.rpm;name=riscv64_bcc-tools;unpack=0"
+SRC_URI[riscv64_bcc-tools.sha256sum] = "b7546d3587de0507031d33ada4003abb46bc8bc579f1e8c2aea2da9d9faa878a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libbpf-tools-0.36.1-1.el10.riscv64.rpm;name=riscv64_libbpf-tools;unpack=0"
+SRC_URI[riscv64_libbpf-tools.sha256sum] = "947284ee4421513724bf49972280c8303f073a8ad3776d8db2db1344c8bf21ab"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-bcc-0.36.1-1.el10.noarch.rpm;name=riscv64_python3-bcc;unpack=0"
+SRC_URI[riscv64_python3-bcc.sha256sum] = "74e3406ea82cf80a7a3893258e1589845e6f6b195d8821459701d2c1700c18ba"
 
 RDEPENDS:bcc = " \
  clang-libs \

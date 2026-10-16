@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "strawberry"
 PV = "1.2.27"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  strawberry \
- "
+"
+PACKAGES:aarch64 = " \
+ strawberry \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/s/strawberry-1.2.27-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/s/strawberry-1.2.27-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "33da63a95974737f8dadbebb94e1dc6d4149b9483bd120ff672933da7e05b44e"
 
-URI_x86_64_v2_strawberry = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/strawberry-1.2.27-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_strawberry;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_strawberry}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/strawberry-1.2.27-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_strawberry;unpack=0"
 SRC_URI[x86_64_v2_strawberry.sha256sum] = "57f13fba46b233de83bb3eea2f5562d34fe7bc949b7ff913f7d1f79f8620ca5c"
 
-URI_aarch64_strawberry = "${EPEL_MIRROR}/aarch64/Packages/s/strawberry-1.2.27-1.el10_3.aarch64.rpm;name=aarch64_strawberry;unpack=0"
-SRC_URI:append = " ${URI_aarch64_strawberry}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/s/strawberry-1.2.27-1.el10_3.aarch64.rpm;name=aarch64_strawberry;unpack=0"
 SRC_URI[aarch64_strawberry.sha256sum] = "3b0d066a30ca4d5e42d4c5f26a917f3689d08ab15418499c0d4e08344c2c9197"
 
 RDEPENDS:strawberry = " \

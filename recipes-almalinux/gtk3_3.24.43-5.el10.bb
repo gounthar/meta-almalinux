@@ -14,57 +14,62 @@ PACKAGES = " \
  gtk3-immodules \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gtk3-3.24.43-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gtk3-3.24.43-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3044d289310ccb0542d360df94c6f5c604b15bb64425bcafc0e12b2f3193fa24"
 
-URI_x86_64_v2_gtk-update-icon-cache = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gtk-update-icon-cache-3.24.43-5.el10.x86_64_v2.rpm;name=x86_64_v2_gtk-update-icon-cache;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gtk-update-icon-cache}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gtk-update-icon-cache-3.24.43-5.el10.x86_64_v2.rpm;name=x86_64_v2_gtk-update-icon-cache;unpack=0"
 SRC_URI[x86_64_v2_gtk-update-icon-cache.sha256sum] = "f20b54080cc827b56813cee770f4ee0e7626e80cfd42ea8baf4ab7b9d73053dd"
 
-URI_x86_64_v2_gtk3 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gtk3-3.24.43-5.el10.x86_64_v2.rpm;name=x86_64_v2_gtk3;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gtk3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gtk3-3.24.43-5.el10.x86_64_v2.rpm;name=x86_64_v2_gtk3;unpack=0"
 SRC_URI[x86_64_v2_gtk3.sha256sum] = "2e2b7bd028c9b6d45f5f35d2b7aa87a407922ba049817b98c69d918e392d9241"
 
-URI_x86_64_v2_gtk3-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gtk3-devel-3.24.43-5.el10.x86_64_v2.rpm;name=x86_64_v2_gtk3-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gtk3-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gtk3-devel-3.24.43-5.el10.x86_64_v2.rpm;name=x86_64_v2_gtk3-devel;unpack=0"
 SRC_URI[x86_64_v2_gtk3-devel.sha256sum] = "2f86b853b1931bb1dc117c3f918b7f55a8771e34997fd7623509c8daa615314f"
 
-URI_x86_64_v2_gtk3-devel-docs = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/gtk3-devel-docs-3.24.43-5.el10.x86_64_v2.rpm;name=x86_64_v2_gtk3-devel-docs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gtk3-devel-docs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/gtk3-devel-docs-3.24.43-5.el10.x86_64_v2.rpm;name=x86_64_v2_gtk3-devel-docs;unpack=0"
 SRC_URI[x86_64_v2_gtk3-devel-docs.sha256sum] = "f666e2db450e6560e46ab5d4eb9bb9acec216004782919a0cc008cc8a41d2b24"
 
-URI_x86_64_v2_gtk3-immodule-xim = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gtk3-immodule-xim-3.24.43-5.el10.x86_64_v2.rpm;name=x86_64_v2_gtk3-immodule-xim;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gtk3-immodule-xim}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gtk3-immodule-xim-3.24.43-5.el10.x86_64_v2.rpm;name=x86_64_v2_gtk3-immodule-xim;unpack=0"
 SRC_URI[x86_64_v2_gtk3-immodule-xim.sha256sum] = "c0a58865e437ab73f9725568102c67b5d5bf575384d82c3d350e40399c4d8c89"
 
-URI_x86_64_v2_gtk3-immodules = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gtk3-immodules-3.24.43-5.el10.x86_64_v2.rpm;name=x86_64_v2_gtk3-immodules;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gtk3-immodules}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gtk3-immodules-3.24.43-5.el10.x86_64_v2.rpm;name=x86_64_v2_gtk3-immodules;unpack=0"
 SRC_URI[x86_64_v2_gtk3-immodules.sha256sum] = "06571159902ed69c84083136f649a5c2f3ad740289eef1b2ca6f55bb9d9a16a6"
 
-URI_aarch64_gtk-update-icon-cache = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gtk-update-icon-cache-3.24.43-5.el10.aarch64.rpm;name=aarch64_gtk-update-icon-cache;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gtk-update-icon-cache}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gtk-update-icon-cache-3.24.43-5.el10.aarch64.rpm;name=aarch64_gtk-update-icon-cache;unpack=0"
 SRC_URI[aarch64_gtk-update-icon-cache.sha256sum] = "18276ae8d7bbe5eb1f64ab0cc1971faf0df10aeecdabf95fb27f92696028d58d"
 
-URI_aarch64_gtk3 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gtk3-3.24.43-5.el10.aarch64.rpm;name=aarch64_gtk3;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gtk3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gtk3-3.24.43-5.el10.aarch64.rpm;name=aarch64_gtk3;unpack=0"
 SRC_URI[aarch64_gtk3.sha256sum] = "3ca4943509bb432cb96b518a18c3c89c4ebe99e74eb0b8e693261459236a2423"
 
-URI_aarch64_gtk3-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gtk3-devel-3.24.43-5.el10.aarch64.rpm;name=aarch64_gtk3-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gtk3-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gtk3-devel-3.24.43-5.el10.aarch64.rpm;name=aarch64_gtk3-devel;unpack=0"
 SRC_URI[aarch64_gtk3-devel.sha256sum] = "69c3768d942b86cc24464b6f4747ec34a8ed20db3ed6dd58f6870ed46a2c96b2"
 
-URI_aarch64_gtk3-devel-docs = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/gtk3-devel-docs-3.24.43-5.el10.aarch64.rpm;name=aarch64_gtk3-devel-docs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gtk3-devel-docs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/gtk3-devel-docs-3.24.43-5.el10.aarch64.rpm;name=aarch64_gtk3-devel-docs;unpack=0"
 SRC_URI[aarch64_gtk3-devel-docs.sha256sum] = "7909b3b4bb29fda0aa595eef83f67b273de6528b9a1dfd8384fd769831ed29dd"
 
-URI_aarch64_gtk3-immodule-xim = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gtk3-immodule-xim-3.24.43-5.el10.aarch64.rpm;name=aarch64_gtk3-immodule-xim;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gtk3-immodule-xim}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gtk3-immodule-xim-3.24.43-5.el10.aarch64.rpm;name=aarch64_gtk3-immodule-xim;unpack=0"
 SRC_URI[aarch64_gtk3-immodule-xim.sha256sum] = "6f9fe7f560d2e73c396c9454dba22763bd7839b0b0d6ecf35adc536ff8b21855"
 
-URI_aarch64_gtk3-immodules = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gtk3-immodules-3.24.43-5.el10.aarch64.rpm;name=aarch64_gtk3-immodules;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gtk3-immodules}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gtk3-immodules-3.24.43-5.el10.aarch64.rpm;name=aarch64_gtk3-immodules;unpack=0"
 SRC_URI[aarch64_gtk3-immodules.sha256sum] = "3c04cf8f44c191e5435a7a9cff8f6d42369022998edc896c73ca2d816d0b4d82"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gtk-update-icon-cache-3.24.43-5.el10.riscv64.rpm;name=riscv64_gtk-update-icon-cache;unpack=0"
+SRC_URI[riscv64_gtk-update-icon-cache.sha256sum] = "70fb8a3db2ca8a74f9d7e8bc8d893c6f08f2b5ad4290772dd8078f4987810cae"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gtk3-3.24.43-5.el10.riscv64.rpm;name=riscv64_gtk3;unpack=0"
+SRC_URI[riscv64_gtk3.sha256sum] = "e8de30829b8d8713d3ba48175e10c5fccfd80537802a3bcba48f9809f5322bf7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gtk3-devel-3.24.43-5.el10.riscv64.rpm;name=riscv64_gtk3-devel;unpack=0"
+SRC_URI[riscv64_gtk3-devel.sha256sum] = "ce4a2bdd7593b19938c7bef1c998f45d394167b022ad0cbc3d390f2880457b96"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/gtk3-devel-docs-3.24.43-5.el10.riscv64.rpm;name=riscv64_gtk3-devel-docs;unpack=0"
+SRC_URI[riscv64_gtk3-devel-docs.sha256sum] = "5f3d03d3148be0a849ae6397e4c17764811f75b1933b531d4e14b9eccada2065"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gtk3-immodule-xim-3.24.43-5.el10.riscv64.rpm;name=riscv64_gtk3-immodule-xim;unpack=0"
+SRC_URI[riscv64_gtk3-immodule-xim.sha256sum] = "a6d94503ffae32e0cfd49609127f8f3d72dbd9ce43a4f62d3ab9609ad292d594"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gtk3-immodules-3.24.43-5.el10.riscv64.rpm;name=riscv64_gtk3-immodules;unpack=0"
+SRC_URI[riscv64_gtk3-immodules.sha256sum] = "8a93102439412c605f51191447ce859f345c9c55d92f1044fac776675ba8b13b"
 
 RDEPENDS:gtk-update-icon-cache = " \
  gdk-pixbuf2 \

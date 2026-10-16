@@ -11,13 +11,14 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/i/intel-level-zero-gpu-raytracing-1.2.3-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/i/intel-level-zero-gpu-raytracing-1.2.3-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "72928c9ebc4e7632354ead03eec01c3224cc70cf207df96e851d383839962af6"
 
-URI_x86_64_v2_intel-level-zero-gpu-raytracing = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/intel-level-zero-gpu-raytracing-1.2.3-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_intel-level-zero-gpu-raytracing;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_intel-level-zero-gpu-raytracing}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/intel-level-zero-gpu-raytracing-1.2.3-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_intel-level-zero-gpu-raytracing;unpack=0"
 SRC_URI[x86_64_v2_intel-level-zero-gpu-raytracing.sha256sum] = "89480b2a4c24101e3017e218ea2a898c92e82db6c8c3f53f6b3b6822fe0b2666"
 
 RDEPENDS:intel-level-zero-gpu-raytracing = " \

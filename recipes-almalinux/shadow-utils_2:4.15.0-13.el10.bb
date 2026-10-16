@@ -12,33 +12,35 @@ PACKAGES = " \
  shadow-utils-subid-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/shadow-utils-4.15.0-13.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/shadow-utils-4.15.0-13.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "56e7bc6c58f99c5368b6261cd04ff4ed6cd25a334df2990e5a14a0898ee064ec"
 
-URI_x86_64_v2_shadow-utils = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/shadow-utils-4.15.0-13.el10.x86_64_v2.rpm;name=x86_64_v2_shadow-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_shadow-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/shadow-utils-4.15.0-13.el10.x86_64_v2.rpm;name=x86_64_v2_shadow-utils;unpack=0"
 SRC_URI[x86_64_v2_shadow-utils.sha256sum] = "ccf2b22ab1df0c58742fd7dbb5ba86878fbbfbd68cb9e145d432abb45bd7709e"
 
-URI_x86_64_v2_shadow-utils-subid = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/shadow-utils-subid-4.15.0-13.el10.x86_64_v2.rpm;name=x86_64_v2_shadow-utils-subid;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_shadow-utils-subid}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/shadow-utils-subid-4.15.0-13.el10.x86_64_v2.rpm;name=x86_64_v2_shadow-utils-subid;unpack=0"
 SRC_URI[x86_64_v2_shadow-utils-subid.sha256sum] = "485d0a8d3a369a0e31ef55bd6024040a91b99c9155827627308a18867e09cf8a"
 
-URI_x86_64_v2_shadow-utils-subid-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/shadow-utils-subid-devel-4.15.0-13.el10.x86_64_v2.rpm;name=x86_64_v2_shadow-utils-subid-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_shadow-utils-subid-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/shadow-utils-subid-devel-4.15.0-13.el10.x86_64_v2.rpm;name=x86_64_v2_shadow-utils-subid-devel;unpack=0"
 SRC_URI[x86_64_v2_shadow-utils-subid-devel.sha256sum] = "1f92deb53baf609e965092fa11911c3cd751f45695fe3d2c286994a75f1e0b40"
 
-URI_aarch64_shadow-utils = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/shadow-utils-4.15.0-13.el10.aarch64.rpm;name=aarch64_shadow-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_shadow-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/shadow-utils-4.15.0-13.el10.aarch64.rpm;name=aarch64_shadow-utils;unpack=0"
 SRC_URI[aarch64_shadow-utils.sha256sum] = "e9b7a1c1aa4fe7e16e0ef9bc548291b2e96065772b80f964f6832dd988dd3c08"
 
-URI_aarch64_shadow-utils-subid = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/shadow-utils-subid-4.15.0-13.el10.aarch64.rpm;name=aarch64_shadow-utils-subid;unpack=0"
-SRC_URI:append = " ${URI_aarch64_shadow-utils-subid}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/shadow-utils-subid-4.15.0-13.el10.aarch64.rpm;name=aarch64_shadow-utils-subid;unpack=0"
 SRC_URI[aarch64_shadow-utils-subid.sha256sum] = "3308f4697618036ea4dec8782978bf67cf112bc7c7d267c49c6c363372fb3018"
 
-URI_aarch64_shadow-utils-subid-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/shadow-utils-subid-devel-4.15.0-13.el10.aarch64.rpm;name=aarch64_shadow-utils-subid-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_shadow-utils-subid-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/shadow-utils-subid-devel-4.15.0-13.el10.aarch64.rpm;name=aarch64_shadow-utils-subid-devel;unpack=0"
 SRC_URI[aarch64_shadow-utils-subid-devel.sha256sum] = "6c66b872bf844ab4931350b121c6b72d689bb5855ed1ba32a45820e8ffd54b94"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/shadow-utils-4.15.0-13.el10.riscv64.rpm;name=riscv64_shadow-utils;unpack=0"
+SRC_URI[riscv64_shadow-utils.sha256sum] = "042f9258903668d37d0d7d143ac1624f642126c03f9e8e9a3cd4bdc490917740"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/shadow-utils-subid-4.15.0-13.el10.riscv64.rpm;name=riscv64_shadow-utils-subid;unpack=0"
+SRC_URI[riscv64_shadow-utils-subid.sha256sum] = "63f0639843f27bb510835f3724ea1c3124f3aa226d86707c9490509fca6b91f0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/shadow-utils-subid-devel-4.15.0-13.el10.riscv64.rpm;name=riscv64_shadow-utils-subid-devel;unpack=0"
+SRC_URI[riscv64_shadow-utils-subid-devel.sha256sum] = "4587b89bfd4d6413919d53e8433806b23fd01a8b5e66005bf7e86ae446a3b535"
 
 RDEPENDS:shadow-utils = " \
  audit-libs \

@@ -11,13 +11,14 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-torch-2.9.1-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-torch-2.9.1-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "108a05caf834e80178e6164657a9138780fa87b8437478b8985e151e38d7bc13"
 
-URI_x86_64_v2_python3-torch = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-torch-2.9.1-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_python3-torch;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-torch}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-torch-2.9.1-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_python3-torch;unpack=0"
 SRC_URI[x86_64_v2_python3-torch.sha256sum] = "e6fa82b0ef8df0b56297286116d9f6b309e3df19af403e20b5e535c13837b3af"
 
 RDEPENDS:python3-torch = " \

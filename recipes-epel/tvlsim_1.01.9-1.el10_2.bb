@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "tvlsim"
 PV = "1.01.9"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  tvlsim \
  tvlsim-devel \
  tvlsim-doc \
- "
+"
+PACKAGES:aarch64 = " \
+ tvlsim \
+ tvlsim-devel \
+ tvlsim-doc \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/t/tvlsim-1.01.9-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/t/tvlsim-1.01.9-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "697cbfbd604eb0a7d1b7584cce08e0f16fefd84e55e3f98e96dcf8b6057cd573"
 
-URI_x86_64_v2_tvlsim = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/tvlsim-1.01.9-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_tvlsim;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_tvlsim}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/tvlsim-1.01.9-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_tvlsim;unpack=0"
 SRC_URI[x86_64_v2_tvlsim.sha256sum] = "528ac44857b2ff67d669f217cb5f2b7a4a5cf4434e3c16b08b0f9c8aa73fee9e"
 
-URI_x86_64_v2_tvlsim-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/tvlsim-devel-1.01.9-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_tvlsim-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_tvlsim-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/tvlsim-devel-1.01.9-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_tvlsim-devel;unpack=0"
 SRC_URI[x86_64_v2_tvlsim-devel.sha256sum] = "d1d7b0f0507351d011702aeeb5276e93aa5988bb60837dec6726eac90c7716d4"
 
-URI_x86_64_v2_tvlsim-doc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/tvlsim-doc-1.01.9-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_tvlsim-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_tvlsim-doc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/tvlsim-doc-1.01.9-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_tvlsim-doc;unpack=0"
 SRC_URI[x86_64_v2_tvlsim-doc.sha256sum] = "f142eb4bc62a814118d369b0870f79999404e5fb3b191314e77b02a3b4fe2aae"
 
-URI_aarch64_tvlsim = "${EPEL_MIRROR}/aarch64/Packages/t/tvlsim-1.01.9-1.el10_2.aarch64.rpm;name=aarch64_tvlsim;unpack=0"
-SRC_URI:append = " ${URI_aarch64_tvlsim}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/t/tvlsim-1.01.9-1.el10_2.aarch64.rpm;name=aarch64_tvlsim;unpack=0"
 SRC_URI[aarch64_tvlsim.sha256sum] = "94443d828dea1d9a07c1b5ff5b4c8ca858c9bb558a04b93cc4e15f90e81eedc4"
 
-URI_aarch64_tvlsim-devel = "${EPEL_MIRROR}/aarch64/Packages/t/tvlsim-devel-1.01.9-1.el10_2.aarch64.rpm;name=aarch64_tvlsim-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_tvlsim-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/t/tvlsim-devel-1.01.9-1.el10_2.aarch64.rpm;name=aarch64_tvlsim-devel;unpack=0"
 SRC_URI[aarch64_tvlsim-devel.sha256sum] = "ebd9427bb810279e5cc98b0c571fe5b39e899609f795ac70ca012b4c47138d53"
 
-URI_aarch64_tvlsim-doc = "${EPEL_MIRROR}/aarch64/Packages/t/tvlsim-doc-1.01.9-1.el10_2.noarch.rpm;name=aarch64_tvlsim-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_tvlsim-doc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/t/tvlsim-doc-1.01.9-1.el10_2.noarch.rpm;name=aarch64_tvlsim-doc;unpack=0"
 SRC_URI[aarch64_tvlsim-doc.sha256sum] = "db7553376d1f4bf115de9e298f9198879acebb38ea4ed27be0547a2968dd4d31"
 
 RDEPENDS:tvlsim = " \

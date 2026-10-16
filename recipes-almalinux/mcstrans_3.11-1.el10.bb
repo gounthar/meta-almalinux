@@ -9,20 +9,23 @@ PACKAGES = " \
  mcstrans \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/mcstrans-3.11-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/mcstrans-3.11-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3e700527fef285c947c5429ef1bd1f52024f94500c6756170a33caab15b42615"
 
 ## Requires (aarch64) that were seen as not satisfiable in original repo:
 # - mcstrans: libcap.so.2()(64bit)
 
-URI_x86_64_v2_mcstrans = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/mcstrans-3.11-1.el10.x86_64_v2.rpm;name=x86_64_v2_mcstrans;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mcstrans}"
+## Requires (riscv64) that were seen as not satisfiable in original repo:
+# - mcstrans: libcap.so.2()(64bit)
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/mcstrans-3.11-1.el10.x86_64_v2.rpm;name=x86_64_v2_mcstrans;unpack=0"
 SRC_URI[x86_64_v2_mcstrans.sha256sum] = "ffcbb64f465bd78ac347689cb0c6f44e365dff9601856d62a904631e9a67ad9d"
 
-URI_aarch64_mcstrans = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/mcstrans-3.11-1.el10.aarch64.rpm;name=aarch64_mcstrans;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mcstrans}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/mcstrans-3.11-1.el10.aarch64.rpm;name=aarch64_mcstrans;unpack=0"
 SRC_URI[aarch64_mcstrans.sha256sum] = "784dff02b65077c5bea588512290ff572022c28e41765dd073cb9e5add3676db"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/mcstrans-3.11-1.el10.riscv64.rpm;name=riscv64_mcstrans;unpack=0"
+SRC_URI[riscv64_mcstrans.sha256sum] = "a233d03cd1b95d7a471cfd4ad91314dc52e099df6d084608d961b550af707c10"
 
 RDEPENDS:mcstrans:x86_64_v2 = " \
  bash \
@@ -33,6 +36,13 @@ RDEPENDS:mcstrans:x86_64_v2 = " \
  systemd \
 "
 RDEPENDS:mcstrans:aarch64 = " \
+ bash \
+ glibc \
+ libselinux \
+ pcre2 \
+ systemd \
+"
+RDEPENDS:mcstrans:riscv64 = " \
  bash \
  glibc \
  libselinux \

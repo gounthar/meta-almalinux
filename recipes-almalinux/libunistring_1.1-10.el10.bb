@@ -10,25 +10,26 @@ PACKAGES = " \
  libunistring-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libunistring-1.1-10.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libunistring-1.1-10.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6f4d3e23d27107539e31602f94d97d047537b9bc88e675353411e52e8cbc46df"
 
-URI_x86_64_v2_libunistring = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libunistring-1.1-10.el10.x86_64_v2.rpm;name=x86_64_v2_libunistring;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libunistring}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libunistring-1.1-10.el10.x86_64_v2.rpm;name=x86_64_v2_libunistring;unpack=0"
 SRC_URI[x86_64_v2_libunistring.sha256sum] = "48d79b2364d82df1ce80e97a63754cf8d340bc481ebd5ea0968a83bcf2dfab94"
 
-URI_x86_64_v2_libunistring-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libunistring-devel-1.1-10.el10.x86_64_v2.rpm;name=x86_64_v2_libunistring-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libunistring-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libunistring-devel-1.1-10.el10.x86_64_v2.rpm;name=x86_64_v2_libunistring-devel;unpack=0"
 SRC_URI[x86_64_v2_libunistring-devel.sha256sum] = "cb3099b866fbe915b85b042b4c3e1b314b5ffee3d296df203770865f1b4503fc"
 
-URI_aarch64_libunistring = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libunistring-1.1-10.el10.aarch64.rpm;name=aarch64_libunistring;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libunistring}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libunistring-1.1-10.el10.aarch64.rpm;name=aarch64_libunistring;unpack=0"
 SRC_URI[aarch64_libunistring.sha256sum] = "301f645effa68cb92be0e379ca7ff406cc7cdbde17715b7dae09022a2b13e40b"
 
-URI_aarch64_libunistring-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libunistring-devel-1.1-10.el10.aarch64.rpm;name=aarch64_libunistring-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libunistring-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libunistring-devel-1.1-10.el10.aarch64.rpm;name=aarch64_libunistring-devel;unpack=0"
 SRC_URI[aarch64_libunistring-devel.sha256sum] = "d6ea9ec7cf67556cf7219bb69ba5939e3cca7406f8b87aa41a9912a006f42012"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libunistring-1.1-10.el10.riscv64.rpm;name=riscv64_libunistring;unpack=0"
+SRC_URI[riscv64_libunistring.sha256sum] = "0d11a3a560a153d93cdd7d43e5eac89f26cb7efc2117c942c080c68808fd67d7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libunistring-devel-1.1-10.el10.riscv64.rpm;name=riscv64_libunistring-devel;unpack=0"
+SRC_URI[riscv64_libunistring-devel.sha256sum] = "8ce93e853c5ab50d4614d1cbce320e1cc56b29340a1364ac6918cc7fbe983886"
 
 RDEPENDS:libunistring = " \
  glibc \

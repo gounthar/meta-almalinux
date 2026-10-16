@@ -11,33 +11,35 @@ PACKAGES = " \
  gcr3-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gcr3-3.41.1-10.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gcr3-3.41.1-10.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "39c08c37d9d299b3d007c5a62203c703d03fa106210b6fce6839cc849b795380"
 
-URI_x86_64_v2_gcr3 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gcr3-3.41.1-10.el10.x86_64_v2.rpm;name=x86_64_v2_gcr3;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gcr3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gcr3-3.41.1-10.el10.x86_64_v2.rpm;name=x86_64_v2_gcr3;unpack=0"
 SRC_URI[x86_64_v2_gcr3.sha256sum] = "062bde94bdbc62bb2fc9729d34ed7a848aed34854912fc0da95bc037b587d2eb"
 
-URI_x86_64_v2_gcr3-base = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gcr3-base-3.41.1-10.el10.x86_64_v2.rpm;name=x86_64_v2_gcr3-base;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gcr3-base}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gcr3-base-3.41.1-10.el10.x86_64_v2.rpm;name=x86_64_v2_gcr3-base;unpack=0"
 SRC_URI[x86_64_v2_gcr3-base.sha256sum] = "5be5b64fdf37e634903f5ca27844a35de4997cb8da67667195755e7906e8d2e7"
 
-URI_x86_64_v2_gcr3-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/gcr3-devel-3.41.1-10.el10.x86_64_v2.rpm;name=x86_64_v2_gcr3-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gcr3-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/gcr3-devel-3.41.1-10.el10.x86_64_v2.rpm;name=x86_64_v2_gcr3-devel;unpack=0"
 SRC_URI[x86_64_v2_gcr3-devel.sha256sum] = "a10bad341fce18e4be6c95fca2e35edeb4a6a610d5c654f78673bc07d50088ef"
 
-URI_aarch64_gcr3 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gcr3-3.41.1-10.el10.aarch64.rpm;name=aarch64_gcr3;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gcr3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gcr3-3.41.1-10.el10.aarch64.rpm;name=aarch64_gcr3;unpack=0"
 SRC_URI[aarch64_gcr3.sha256sum] = "02010cce2bbbca02ee56f07aa6219d72f3f4d3da8b64d34c58b35853f684988e"
 
-URI_aarch64_gcr3-base = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gcr3-base-3.41.1-10.el10.aarch64.rpm;name=aarch64_gcr3-base;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gcr3-base}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gcr3-base-3.41.1-10.el10.aarch64.rpm;name=aarch64_gcr3-base;unpack=0"
 SRC_URI[aarch64_gcr3-base.sha256sum] = "39026a706e11e92bdcaddf59f9f7779f80d5ef73576c5753c5d950ef3b30881a"
 
-URI_aarch64_gcr3-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/gcr3-devel-3.41.1-10.el10.aarch64.rpm;name=aarch64_gcr3-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gcr3-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/gcr3-devel-3.41.1-10.el10.aarch64.rpm;name=aarch64_gcr3-devel;unpack=0"
 SRC_URI[aarch64_gcr3-devel.sha256sum] = "8699956f951c6b9373b9e275b6073a02fe8e9bb0f2a411a1fc9f2e3dc6818c0a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gcr3-3.41.1-10.el10.riscv64.rpm;name=riscv64_gcr3;unpack=0"
+SRC_URI[riscv64_gcr3.sha256sum] = "fb813b0e3ba08b523cf2c002ba75844251424f49698fbfe7c228ae90cb3fc9f4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gcr3-base-3.41.1-10.el10.riscv64.rpm;name=riscv64_gcr3-base;unpack=0"
+SRC_URI[riscv64_gcr3-base.sha256sum] = "b410c0177894e7947a9a0ce388e27cb6e6933452e42aca81eaeccb884159caa6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/gcr3-devel-3.41.1-10.el10.riscv64.rpm;name=riscv64_gcr3-devel;unpack=0"
+SRC_URI[riscv64_gcr3-devel.sha256sum] = "d4d062cca244d368c60a329045c8d1aae232a4ed80540c942fc9323525f31105"
 
 RDEPENDS:gcr3 = " \
  cairo \

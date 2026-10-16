@@ -9,17 +9,17 @@ PACKAGES = " \
  radii-hwdata-nv \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/radii-hwdata-nv-0.23.48.01-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/radii-hwdata-nv-0.23.48.01-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d96798b36218fc45155c90e40af38acceebdbc620e0b0eae14bdddded583247a"
 
-URI_x86_64_v2_radii-hwdata-nv = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/radii-hwdata-nv-0.23.48.01-1.el10.noarch.rpm;name=x86_64_v2_radii-hwdata-nv;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_radii-hwdata-nv}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/radii-hwdata-nv-0.23.48.01-1.el10.noarch.rpm;name=x86_64_v2_radii-hwdata-nv;unpack=0"
 SRC_URI[x86_64_v2_radii-hwdata-nv.sha256sum] = "05099c13507e824ab55ac01b14cf5531dbd22448fd1c73865e5dbf89f0a3597b"
 
-URI_aarch64_radii-hwdata-nv = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/radii-hwdata-nv-0.23.48.01-1.el10.noarch.rpm;name=aarch64_radii-hwdata-nv;unpack=0"
-SRC_URI:append = " ${URI_aarch64_radii-hwdata-nv}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/radii-hwdata-nv-0.23.48.01-1.el10.noarch.rpm;name=aarch64_radii-hwdata-nv;unpack=0"
 SRC_URI[aarch64_radii-hwdata-nv.sha256sum] = "05099c13507e824ab55ac01b14cf5531dbd22448fd1c73865e5dbf89f0a3597b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/radii-hwdata-nv-0.23.48.01-1.el10.noarch.rpm;name=riscv64_radii-hwdata-nv;unpack=0"
+SRC_URI[riscv64_radii-hwdata-nv.sha256sum] = "05099c13507e824ab55ac01b14cf5531dbd22448fd1c73865e5dbf89f0a3597b"
 
 RDEPENDS:radii-hwdata-nv = " \
  "

@@ -9,17 +9,17 @@ PACKAGES = " \
  urlview \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/urlview-0.9-39.20131022git08767a.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/urlview-0.9-39.20131022git08767a.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "09b852068dbd76c59fa3d050dc50e807622a854825152e40d3bccdaa65b762d0"
 
-URI_x86_64_v2_urlview = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/urlview-0.9-39.20131022git08767a.el10.x86_64_v2.rpm;name=x86_64_v2_urlview;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_urlview}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/urlview-0.9-39.20131022git08767a.el10.x86_64_v2.rpm;name=x86_64_v2_urlview;unpack=0"
 SRC_URI[x86_64_v2_urlview.sha256sum] = "39cec6a43a8c9bbecb5c0acbf049c24692d775324f25209144a1a1a4879218a7"
 
-URI_aarch64_urlview = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/urlview-0.9-39.20131022git08767a.el10.aarch64.rpm;name=aarch64_urlview;unpack=0"
-SRC_URI:append = " ${URI_aarch64_urlview}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/urlview-0.9-39.20131022git08767a.el10.aarch64.rpm;name=aarch64_urlview;unpack=0"
 SRC_URI[aarch64_urlview.sha256sum] = "bdb232a75f725e834d2b7eb3216fb22d748812390d4d267a8cbdb7ea8ad4ea17"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/urlview-0.9-39.20131022git08767a.el10.riscv64.rpm;name=riscv64_urlview;unpack=0"
+SRC_URI[riscv64_urlview.sha256sum] = "491904f01cc6d534a1b2b0d3b26467728439d45937c7a5df1cc4ef7690964c2a"
 
 RDEPENDS:urlview = " \
  bash \

@@ -12,41 +12,44 @@ PACKAGES = " \
  python3-capstone \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/capstone-5.0.1-8.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/capstone-5.0.1-8.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "bcf788b33db1f1213f8d885eda62d63fe9cead80ce9982ce74206990c32698ec"
 
-URI_x86_64_v2_capstone = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/capstone-5.0.1-8.el10.x86_64_v2.rpm;name=x86_64_v2_capstone;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_capstone}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/capstone-5.0.1-8.el10.x86_64_v2.rpm;name=x86_64_v2_capstone;unpack=0"
 SRC_URI[x86_64_v2_capstone.sha256sum] = "47545b6e34508cbb1e922eaf71ffa81f17c91611253e42149bf0c3847a07f361"
 
-URI_x86_64_v2_capstone-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/capstone-devel-5.0.1-8.el10.x86_64_v2.rpm;name=x86_64_v2_capstone-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_capstone-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/capstone-devel-5.0.1-8.el10.x86_64_v2.rpm;name=x86_64_v2_capstone-devel;unpack=0"
 SRC_URI[x86_64_v2_capstone-devel.sha256sum] = "5fffa622da59861417a6339ac05f7aa9ea9efe79808ca280eb114b7eeab69f34"
 
-URI_x86_64_v2_capstone-java = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/capstone-java-5.0.1-8.el10.noarch.rpm;name=x86_64_v2_capstone-java;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_capstone-java}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/capstone-java-5.0.1-8.el10.noarch.rpm;name=x86_64_v2_capstone-java;unpack=0"
 SRC_URI[x86_64_v2_capstone-java.sha256sum] = "28b5dd226e99dd01a4793e8d3d78ae8c85802e202d524d183eaad17f26cd1593"
 
-URI_x86_64_v2_python3-capstone = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3-capstone-5.0.1-8.el10.noarch.rpm;name=x86_64_v2_python3-capstone;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-capstone}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3-capstone-5.0.1-8.el10.noarch.rpm;name=x86_64_v2_python3-capstone;unpack=0"
 SRC_URI[x86_64_v2_python3-capstone.sha256sum] = "563d60daa881520a7cdc30d764955b8d727a7f77c81fe69c7de1c5dba33e914e"
 
-URI_aarch64_capstone = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/capstone-5.0.1-8.el10.aarch64.rpm;name=aarch64_capstone;unpack=0"
-SRC_URI:append = " ${URI_aarch64_capstone}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/capstone-5.0.1-8.el10.aarch64.rpm;name=aarch64_capstone;unpack=0"
 SRC_URI[aarch64_capstone.sha256sum] = "bc229089f3c2a2bd3baf1531c5944cb9295dce018e17c4c350692fd62667e49c"
 
-URI_aarch64_capstone-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/capstone-devel-5.0.1-8.el10.aarch64.rpm;name=aarch64_capstone-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_capstone-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/capstone-devel-5.0.1-8.el10.aarch64.rpm;name=aarch64_capstone-devel;unpack=0"
 SRC_URI[aarch64_capstone-devel.sha256sum] = "0fdfde210d1807bdffcfc6a2e120839dc32095c3d3a4f3ca4313cdcb428a5775"
 
-URI_aarch64_capstone-java = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/capstone-java-5.0.1-8.el10.noarch.rpm;name=aarch64_capstone-java;unpack=0"
-SRC_URI:append = " ${URI_aarch64_capstone-java}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/capstone-java-5.0.1-8.el10.noarch.rpm;name=aarch64_capstone-java;unpack=0"
 SRC_URI[aarch64_capstone-java.sha256sum] = "28b5dd226e99dd01a4793e8d3d78ae8c85802e202d524d183eaad17f26cd1593"
 
-URI_aarch64_python3-capstone = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3-capstone-5.0.1-8.el10.noarch.rpm;name=aarch64_python3-capstone;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-capstone}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3-capstone-5.0.1-8.el10.noarch.rpm;name=aarch64_python3-capstone;unpack=0"
 SRC_URI[aarch64_python3-capstone.sha256sum] = "563d60daa881520a7cdc30d764955b8d727a7f77c81fe69c7de1c5dba33e914e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/capstone-5.0.1-8.el10.riscv64.rpm;name=riscv64_capstone;unpack=0"
+SRC_URI[riscv64_capstone.sha256sum] = "1457f0ce39ae8404b21dbc4cc7e6eb825cead3877a4a2a1ed9157a6db26dd53c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/capstone-devel-5.0.1-8.el10.riscv64.rpm;name=riscv64_capstone-devel;unpack=0"
+SRC_URI[riscv64_capstone-devel.sha256sum] = "583f7ecfa44fdb078bd0964786ff9dec21dfdc7bb35761f2978fb6699e822cf9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/capstone-java-5.0.1-8.el10.noarch.rpm;name=riscv64_capstone-java;unpack=0"
+SRC_URI[riscv64_capstone-java.sha256sum] = "28b5dd226e99dd01a4793e8d3d78ae8c85802e202d524d183eaad17f26cd1593"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/python3-capstone-5.0.1-8.el10.noarch.rpm;name=riscv64_python3-capstone;unpack=0"
+SRC_URI[riscv64_python3-capstone.sha256sum] = "563d60daa881520a7cdc30d764955b8d727a7f77c81fe69c7de1c5dba33e914e"
 
 RDEPENDS:capstone = " \
  glibc \

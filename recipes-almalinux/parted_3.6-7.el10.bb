@@ -10,25 +10,26 @@ PACKAGES = " \
  parted-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/parted-3.6-7.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/parted-3.6-7.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3917da0c69ed921c2a0b74d2ab6919bc6854982dd6fd1ae1a15c91841674ef10"
 
-URI_x86_64_v2_parted = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/parted-3.6-7.el10.x86_64_v2.rpm;name=x86_64_v2_parted;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_parted}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/parted-3.6-7.el10.x86_64_v2.rpm;name=x86_64_v2_parted;unpack=0"
 SRC_URI[x86_64_v2_parted.sha256sum] = "bdaae6eb3cea12dc4c48b6f68031fab3bf971d939e303b1a1d0f3c388b89c43f"
 
-URI_x86_64_v2_parted-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/parted-devel-3.6-7.el10.x86_64_v2.rpm;name=x86_64_v2_parted-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_parted-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/parted-devel-3.6-7.el10.x86_64_v2.rpm;name=x86_64_v2_parted-devel;unpack=0"
 SRC_URI[x86_64_v2_parted-devel.sha256sum] = "627dfabb6ec29f8688eac0029baf5509c7840eee6703ac058da7247f24f3b10e"
 
-URI_aarch64_parted = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/parted-3.6-7.el10.aarch64.rpm;name=aarch64_parted;unpack=0"
-SRC_URI:append = " ${URI_aarch64_parted}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/parted-3.6-7.el10.aarch64.rpm;name=aarch64_parted;unpack=0"
 SRC_URI[aarch64_parted.sha256sum] = "a4df0b50bdf2460f1be36eada2be4a3f1587c53e119ae94932158c94516bd72f"
 
-URI_aarch64_parted-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/parted-devel-3.6-7.el10.aarch64.rpm;name=aarch64_parted-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_parted-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/parted-devel-3.6-7.el10.aarch64.rpm;name=aarch64_parted-devel;unpack=0"
 SRC_URI[aarch64_parted-devel.sha256sum] = "23e2cc94f73d214ec19f8a553fb15d4293f996d38489859608357dd1a097b9bd"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/parted-3.6-7.el10.riscv64.rpm;name=riscv64_parted;unpack=0"
+SRC_URI[riscv64_parted.sha256sum] = "9db810f23e3e5b50303d0cfb4b3956bc98927fded054e80e22f4f0c188d43025"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/parted-devel-3.6-7.el10.riscv64.rpm;name=riscv64_parted-devel;unpack=0"
+SRC_URI[riscv64_parted-devel.sha256sum] = "0a138843904d03d788d6aa1fb75a727b515481b4818735aa942f6c0c05a159a0"
 
 RDEPENDS:parted = " \
  device-mapper-libs \

@@ -10,25 +10,26 @@ PACKAGES = " \
  libtree-sitter-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/tree-sitter-0.23.0-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/tree-sitter-0.23.0-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6e72f9ae5f86f91079a7a9131bf02ee41502f931051ea3ad1fd8ab06503e9aa9"
 
-URI_x86_64_v2_libtree-sitter = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libtree-sitter-0.23.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libtree-sitter;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libtree-sitter}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libtree-sitter-0.23.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libtree-sitter;unpack=0"
 SRC_URI[x86_64_v2_libtree-sitter.sha256sum] = "1f8c2b9d5f607ff3924a2f3a90f9af63b9af1b9a28c29a65fa7d6fb3cc07ce85"
 
-URI_x86_64_v2_libtree-sitter-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libtree-sitter-devel-0.23.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libtree-sitter-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libtree-sitter-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libtree-sitter-devel-0.23.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libtree-sitter-devel;unpack=0"
 SRC_URI[x86_64_v2_libtree-sitter-devel.sha256sum] = "d03baec2e408ee48d2972751f74bad82464a0dfa69e936fdf6446985adcf2b52"
 
-URI_aarch64_libtree-sitter = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libtree-sitter-0.23.0-3.el10.aarch64.rpm;name=aarch64_libtree-sitter;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libtree-sitter}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libtree-sitter-0.23.0-3.el10.aarch64.rpm;name=aarch64_libtree-sitter;unpack=0"
 SRC_URI[aarch64_libtree-sitter.sha256sum] = "41020929c9b832dc8852323d1ad362dff56dfab06633c42877c406eed2c5a8bd"
 
-URI_aarch64_libtree-sitter-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libtree-sitter-devel-0.23.0-3.el10.aarch64.rpm;name=aarch64_libtree-sitter-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libtree-sitter-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libtree-sitter-devel-0.23.0-3.el10.aarch64.rpm;name=aarch64_libtree-sitter-devel;unpack=0"
 SRC_URI[aarch64_libtree-sitter-devel.sha256sum] = "88b8ff9c9b0aef6b1b4190d2de122c662d9556280d17f5b63f8042a8724c234d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libtree-sitter-0.23.0-3.el10.riscv64.rpm;name=riscv64_libtree-sitter;unpack=0"
+SRC_URI[riscv64_libtree-sitter.sha256sum] = "e9a1723c41762fd00f5a8537334c8f804be406a1488a3a75483918875cdeef61"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libtree-sitter-devel-0.23.0-3.el10.riscv64.rpm;name=riscv64_libtree-sitter-devel;unpack=0"
+SRC_URI[riscv64_libtree-sitter-devel.sha256sum] = "c0f364886133159b6b8e521205bc9581a64b29f4b985756bfe0ac70149a92b04"
 
 RDEPENDS:libtree-sitter = " \
  glibc \

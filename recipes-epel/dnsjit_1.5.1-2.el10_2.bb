@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "dnsjit"
 PV = "1.5.1"
 PR = "2.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  dnsjit \
  dnsjit-devel \
  dnsjit-examples \
- "
+"
+PACKAGES:aarch64 = " \
+ dnsjit \
+ dnsjit-devel \
+ dnsjit-examples \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/d/dnsjit-1.5.1-2.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/d/dnsjit-1.5.1-2.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "efd612cbce27c912905b15bd21f917655d546de51ce1b0f2a21274501a07391b"
 
-URI_x86_64_v2_dnsjit = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/dnsjit-1.5.1-2.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_dnsjit;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_dnsjit}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/dnsjit-1.5.1-2.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_dnsjit;unpack=0"
 SRC_URI[x86_64_v2_dnsjit.sha256sum] = "32131113eb09f2107c76cc2ea8fa26dd3bb84c5f1c50d023d34783f6c130d509"
 
-URI_x86_64_v2_dnsjit-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/dnsjit-devel-1.5.1-2.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_dnsjit-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_dnsjit-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/dnsjit-devel-1.5.1-2.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_dnsjit-devel;unpack=0"
 SRC_URI[x86_64_v2_dnsjit-devel.sha256sum] = "0ce59316c349e6a444e2921ae8b410353ec3bf9fbff984a6eebc64a919f05638"
 
-URI_x86_64_v2_dnsjit-examples = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/dnsjit-examples-1.5.1-2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_dnsjit-examples;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_dnsjit-examples}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/dnsjit-examples-1.5.1-2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_dnsjit-examples;unpack=0"
 SRC_URI[x86_64_v2_dnsjit-examples.sha256sum] = "89fa807f675e5158979547b49d4b91e958ae9bea6c8eaa2b0c68f97ad5b89809"
 
-URI_aarch64_dnsjit = "${EPEL_MIRROR}/aarch64/Packages/d/dnsjit-1.5.1-2.el10_2.aarch64.rpm;name=aarch64_dnsjit;unpack=0"
-SRC_URI:append = " ${URI_aarch64_dnsjit}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/d/dnsjit-1.5.1-2.el10_2.aarch64.rpm;name=aarch64_dnsjit;unpack=0"
 SRC_URI[aarch64_dnsjit.sha256sum] = "81fdf5f2e9cd707bf989d49d24eafa0e6e33f74d25b125abb6aa87aa60dac216"
 
-URI_aarch64_dnsjit-devel = "${EPEL_MIRROR}/aarch64/Packages/d/dnsjit-devel-1.5.1-2.el10_2.aarch64.rpm;name=aarch64_dnsjit-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_dnsjit-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/d/dnsjit-devel-1.5.1-2.el10_2.aarch64.rpm;name=aarch64_dnsjit-devel;unpack=0"
 SRC_URI[aarch64_dnsjit-devel.sha256sum] = "87f6dc784456c6a7f717d211195bee94490ba0ac39494467cc49677cd9b0bebc"
 
-URI_aarch64_dnsjit-examples = "${EPEL_MIRROR}/aarch64/Packages/d/dnsjit-examples-1.5.1-2.el10_2.noarch.rpm;name=aarch64_dnsjit-examples;unpack=0"
-SRC_URI:append = " ${URI_aarch64_dnsjit-examples}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/d/dnsjit-examples-1.5.1-2.el10_2.noarch.rpm;name=aarch64_dnsjit-examples;unpack=0"
 SRC_URI[aarch64_dnsjit-examples.sha256sum] = "6818bfddb6670d3ec643cc7f2e81a18e2fe4c56c57cddd49d004943057283154"
 
 RDEPENDS:dnsjit = " \

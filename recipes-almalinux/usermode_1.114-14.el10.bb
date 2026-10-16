@@ -9,17 +9,17 @@ PACKAGES = " \
  usermode \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/usermode-1.114-14.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/usermode-1.114-14.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c885b3888e06792670ab7c9a08e9ee85d183b423f64339392b97d1a4267aa1b9"
 
-URI_x86_64_v2_usermode = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/usermode-1.114-14.el10.x86_64_v2.rpm;name=x86_64_v2_usermode;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_usermode}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/usermode-1.114-14.el10.x86_64_v2.rpm;name=x86_64_v2_usermode;unpack=0"
 SRC_URI[x86_64_v2_usermode.sha256sum] = "41b0ef80e8b145fac74831f30665652275d193aac32eedec1d03ecfd7904ea7c"
 
-URI_aarch64_usermode = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/usermode-1.114-14.el10.aarch64.rpm;name=aarch64_usermode;unpack=0"
-SRC_URI:append = " ${URI_aarch64_usermode}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/usermode-1.114-14.el10.aarch64.rpm;name=aarch64_usermode;unpack=0"
 SRC_URI[aarch64_usermode.sha256sum] = "bde9a22b03eae6e810ccfc4e5d013f792b12305b9fddf014b7ddccff01024f27"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/usermode-1.114-14.el10.riscv64.rpm;name=riscv64_usermode;unpack=0"
+SRC_URI[riscv64_usermode.sha256sum] = "9ca694b879ab84d933e14ca84a3df1242c1f15c83c23e182051c5e23413cdc91"
 
 RDEPENDS:usermode = " \
  glib2 \

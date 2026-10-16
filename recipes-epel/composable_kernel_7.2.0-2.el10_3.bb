@@ -12,17 +12,17 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/c/composable_kernel-7.2.0-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/c/composable_kernel-7.2.0-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "273f25852c784eada028794d06301f8909d120751f522c25771ea472c4eb6132"
 
-URI_x86_64_v2_composable_kernel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/composable_kernel-7.2.0-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_composable_kernel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_composable_kernel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/composable_kernel-7.2.0-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_composable_kernel;unpack=0"
 SRC_URI[x86_64_v2_composable_kernel.sha256sum] = "dddb81f55016fe11992effd73bfb31de7cd74397d54c20d12aa4abee39e7eaf6"
 
-URI_x86_64_v2_composable_kernel-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/composable_kernel-devel-7.2.0-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_composable_kernel-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_composable_kernel-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/composable_kernel-devel-7.2.0-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_composable_kernel-devel;unpack=0"
 SRC_URI[x86_64_v2_composable_kernel-devel.sha256sum] = "38997d30495c357bcc1e9485dfd2254bb2c94effcc5a24ccfdce1b048b85e9f0"
 
 RDEPENDS:composable_kernel = " \

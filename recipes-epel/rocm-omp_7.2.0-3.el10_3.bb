@@ -11,20 +11,19 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rocm-omp-7.2.0-3.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rocm-omp-7.2.0-3.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "9d6c8bb03080d966f32b44a268a1eeecc4d7eb0eedaa756480db756c33896574"
 
-URI_x86_64_v2_rocm-omp-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocm-omp-devel-7.2.0-3.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocm-omp-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rocm-omp-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rocm-omp-devel-7.2.0-3.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rocm-omp-devel;unpack=0"
 SRC_URI[x86_64_v2_rocm-omp-devel.sha256sum] = "068963ee492c1c37ffb3c7f8a66a6a962fca913bba1d4289966e10ce29b06a85"
-RPROVIDES:rocm-omp-devel:x86_64_v2 = "virtual/libomp.so_VERSION__64bit_ virtual/libomp.so___64bit_"
+RPROVIDES:rocm-omp-devel:append:x86_64_v2 = " virtual/libomp.so_VERSION__64bit_ virtual/libomp.so___64bit_"
 
 RDEPENDS:rocm-omp-devel = " \
  glibc \
  rocm-filesystem \
  rocm-llvm-filesystem \
  "
-
-PROVIDES:append:x86_64_v2 = " rpm/virtual/libomp.so_VERSION__64bit_ rpm/virtual/libomp.so___64bit_"

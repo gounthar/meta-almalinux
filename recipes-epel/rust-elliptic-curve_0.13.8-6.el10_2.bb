@@ -5,7 +5,7 @@ inherit dnf-bridge
 PN = "rust-elliptic-curve"
 PV = "0.13.8"
 PR = "6.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-elliptic-curve+alloc-devel \
  rust-elliptic-curve+arithmetic-devel \
  rust-elliptic-curve+bits-devel \
@@ -25,162 +25,147 @@ PACKAGES = " \
  rust-elliptic-curve+std-devel \
  rust-elliptic-curve+voprf-devel \
  rust-elliptic-curve-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-elliptic-curve+alloc-devel \
+ rust-elliptic-curve+arithmetic-devel \
+ rust-elliptic-curve+bits-devel \
+ rust-elliptic-curve+default-devel \
+ rust-elliptic-curve+dev-devel \
+ rust-elliptic-curve+digest-devel \
+ rust-elliptic-curve+ecdh-devel \
+ rust-elliptic-curve+ff-devel \
+ rust-elliptic-curve+group-devel \
+ rust-elliptic-curve+hash2curve-devel \
+ rust-elliptic-curve+hazmat-devel \
+ rust-elliptic-curve+jwk-devel \
+ rust-elliptic-curve+pem-devel \
+ rust-elliptic-curve+pkcs8-devel \
+ rust-elliptic-curve+sec1-devel \
+ rust-elliptic-curve+serde-devel \
+ rust-elliptic-curve+std-devel \
+ rust-elliptic-curve+voprf-devel \
+ rust-elliptic-curve-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-elliptic-curve-0.13.8-6.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-elliptic-curve-0.13.8-6.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e7bd281e1992296f3376126edf6b0aea7d8a396c2905f35753ab835ce274f6ea"
 
-URI_x86_64_v2_rust-elliptic-curve+alloc-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+alloc-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+alloc-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-elliptic-curve+alloc-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+alloc-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+alloc-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-elliptic-curve+alloc-devel.sha256sum] = "4f0dd9cbc7b5c81762e50721b35f47da6370b71106dabf25961fbce43afa6c79"
 
-URI_x86_64_v2_rust-elliptic-curve+arithmetic-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+arithmetic-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+arithmetic-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-elliptic-curve+arithmetic-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+arithmetic-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+arithmetic-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-elliptic-curve+arithmetic-devel.sha256sum] = "256cea6c91a558f1c0ea871a1d4c6445cecb4c0135a529fa17619423b0ad5eab"
 
-URI_x86_64_v2_rust-elliptic-curve+bits-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+bits-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+bits-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-elliptic-curve+bits-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+bits-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+bits-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-elliptic-curve+bits-devel.sha256sum] = "a6dc85353c4873612d20f997ed6355621b795e4a20d19e16fcb9d36eb103fb82"
 
-URI_x86_64_v2_rust-elliptic-curve+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+default-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-elliptic-curve+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+default-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-elliptic-curve+default-devel.sha256sum] = "8de8666fb17130c68f86b48d31f11fb69acca524413b612cee326d8898d69941"
 
-URI_x86_64_v2_rust-elliptic-curve+dev-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+dev-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+dev-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-elliptic-curve+dev-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+dev-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+dev-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-elliptic-curve+dev-devel.sha256sum] = "4335ea18d5234ee5523fefd10a95b434233cc08c85c15f66f7e27d40baee5f64"
 
-URI_x86_64_v2_rust-elliptic-curve+digest-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+digest-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+digest-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-elliptic-curve+digest-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+digest-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+digest-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-elliptic-curve+digest-devel.sha256sum] = "85fd87f06f85cdf494790032cd2bf99b9dbdd010bc435367c9a4456997e4cad6"
 
-URI_x86_64_v2_rust-elliptic-curve+ecdh-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+ecdh-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+ecdh-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-elliptic-curve+ecdh-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+ecdh-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+ecdh-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-elliptic-curve+ecdh-devel.sha256sum] = "012f8b31a65739ef8112c2771b23adc3087b88f08835fcec0ee393e9560c1bfb"
 
-URI_x86_64_v2_rust-elliptic-curve+ff-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+ff-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+ff-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-elliptic-curve+ff-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+ff-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+ff-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-elliptic-curve+ff-devel.sha256sum] = "8ca8bf2de466d057548a739f369fe5a000e0c0c40f95531f310134f0458f689e"
 
-URI_x86_64_v2_rust-elliptic-curve+group-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+group-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+group-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-elliptic-curve+group-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+group-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+group-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-elliptic-curve+group-devel.sha256sum] = "3fe792d2bfcd3efe05e69665b1cd7323231fdb739f67747c802141f9f122a31b"
 
-URI_x86_64_v2_rust-elliptic-curve+hash2curve-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+hash2curve-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+hash2curve-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-elliptic-curve+hash2curve-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+hash2curve-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+hash2curve-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-elliptic-curve+hash2curve-devel.sha256sum] = "d81151fd3c99c8696e1f334ac8394d3816721de5cdad1ae5739e398b76731372"
 
-URI_x86_64_v2_rust-elliptic-curve+hazmat-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+hazmat-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+hazmat-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-elliptic-curve+hazmat-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+hazmat-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+hazmat-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-elliptic-curve+hazmat-devel.sha256sum] = "4504c3117892032577282a2846bb2505fa079ae8c4a7139f6bab301981d4c393"
 
-URI_x86_64_v2_rust-elliptic-curve+jwk-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+jwk-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+jwk-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-elliptic-curve+jwk-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+jwk-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+jwk-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-elliptic-curve+jwk-devel.sha256sum] = "d289bd1b773cd1eb872d8eee80d742d8ccd0b85e84ba0d8b105badb7c68004c4"
 
-URI_x86_64_v2_rust-elliptic-curve+pem-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+pem-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+pem-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-elliptic-curve+pem-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+pem-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+pem-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-elliptic-curve+pem-devel.sha256sum] = "9d8d93716919bc45982305ab06a6454302143fc69c6bf75b6903c34cb57cbdeb"
 
-URI_x86_64_v2_rust-elliptic-curve+pkcs8-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+pkcs8-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+pkcs8-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-elliptic-curve+pkcs8-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+pkcs8-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+pkcs8-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-elliptic-curve+pkcs8-devel.sha256sum] = "acd7ca1c36f975a70086e6f1d4221a1b534beaa6e0be65bab0b1eefe4b7c03cd"
 
-URI_x86_64_v2_rust-elliptic-curve+sec1-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+sec1-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+sec1-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-elliptic-curve+sec1-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+sec1-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+sec1-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-elliptic-curve+sec1-devel.sha256sum] = "bb1ecc75826404cba0ad673e46dd45e0468dd2b7cd9586405a6feb7c58c94d13"
 
-URI_x86_64_v2_rust-elliptic-curve+serde-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+serde-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+serde-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-elliptic-curve+serde-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+serde-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+serde-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-elliptic-curve+serde-devel.sha256sum] = "267c629b7a17dcd4f2a99eb280d68d842d25b0fc2e13d4d1b963e40300b5c0c9"
 
-URI_x86_64_v2_rust-elliptic-curve+std-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+std-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+std-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-elliptic-curve+std-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+std-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+std-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-elliptic-curve+std-devel.sha256sum] = "c4a93f758748f84a12bc855b55fb629f84ed301cdb6ff4b9f78d16f00b9035a6"
 
-URI_x86_64_v2_rust-elliptic-curve+voprf-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+voprf-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+voprf-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-elliptic-curve+voprf-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve+voprf-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve+voprf-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-elliptic-curve+voprf-devel.sha256sum] = "77b89cd89e9742e29d43b5f2e917c364c02604fcb0581c3d6df4826cd186a72d"
 
-URI_x86_64_v2_rust-elliptic-curve-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-elliptic-curve-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-elliptic-curve-devel-0.13.8-6.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-elliptic-curve-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-elliptic-curve-devel.sha256sum] = "e5f7135d42613f5e59ee9796f9f50dd9372844efcddb9ae73d48d8fec10c80d2"
 
-URI_aarch64_rust-elliptic-curve+alloc-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+alloc-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+alloc-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-elliptic-curve+alloc-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+alloc-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+alloc-devel;unpack=0"
 SRC_URI[aarch64_rust-elliptic-curve+alloc-devel.sha256sum] = "bdd38bfc2b131c2206e05248f69436c2aa5ec9def976c7240838388ddf164577"
 
-URI_aarch64_rust-elliptic-curve+arithmetic-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+arithmetic-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+arithmetic-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-elliptic-curve+arithmetic-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+arithmetic-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+arithmetic-devel;unpack=0"
 SRC_URI[aarch64_rust-elliptic-curve+arithmetic-devel.sha256sum] = "ea538775f0e85219980913aa42c6bf519eb0b4ff0c345758d85c08c270d73a9a"
 
-URI_aarch64_rust-elliptic-curve+bits-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+bits-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+bits-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-elliptic-curve+bits-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+bits-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+bits-devel;unpack=0"
 SRC_URI[aarch64_rust-elliptic-curve+bits-devel.sha256sum] = "be2e56c91ae18343a5d03a34fd408593973c33c632668d5d1cdb6a445db49b1a"
 
-URI_aarch64_rust-elliptic-curve+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+default-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-elliptic-curve+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+default-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+default-devel;unpack=0"
 SRC_URI[aarch64_rust-elliptic-curve+default-devel.sha256sum] = "e76b6db11927a8ed96424564af2ac485a99d3e92a0ca1003b2bc92c93e74fc1a"
 
-URI_aarch64_rust-elliptic-curve+dev-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+dev-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+dev-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-elliptic-curve+dev-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+dev-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+dev-devel;unpack=0"
 SRC_URI[aarch64_rust-elliptic-curve+dev-devel.sha256sum] = "40b03f45c9e11114763e34d43e2205582af3f72428c6fdb01b60fb379d01a63f"
 
-URI_aarch64_rust-elliptic-curve+digest-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+digest-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+digest-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-elliptic-curve+digest-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+digest-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+digest-devel;unpack=0"
 SRC_URI[aarch64_rust-elliptic-curve+digest-devel.sha256sum] = "535c584e2f6c609af7f34e9bc3fea2a85922117cb2c98e28adc40e030b60dfbe"
 
-URI_aarch64_rust-elliptic-curve+ecdh-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+ecdh-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+ecdh-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-elliptic-curve+ecdh-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+ecdh-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+ecdh-devel;unpack=0"
 SRC_URI[aarch64_rust-elliptic-curve+ecdh-devel.sha256sum] = "d9eab8142d534953bd4ef97c373403822a9028dc9c152a445681b7b7b6d6f43b"
 
-URI_aarch64_rust-elliptic-curve+ff-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+ff-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+ff-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-elliptic-curve+ff-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+ff-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+ff-devel;unpack=0"
 SRC_URI[aarch64_rust-elliptic-curve+ff-devel.sha256sum] = "8a538e2a3b47459347d65e802c122071b0500f77ae62763ce0af4988ef6f8061"
 
-URI_aarch64_rust-elliptic-curve+group-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+group-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+group-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-elliptic-curve+group-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+group-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+group-devel;unpack=0"
 SRC_URI[aarch64_rust-elliptic-curve+group-devel.sha256sum] = "4f6f082581431c02fe61d8fbc51bd6378535f468f709f9a8794a095261f3ff55"
 
-URI_aarch64_rust-elliptic-curve+hash2curve-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+hash2curve-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+hash2curve-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-elliptic-curve+hash2curve-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+hash2curve-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+hash2curve-devel;unpack=0"
 SRC_URI[aarch64_rust-elliptic-curve+hash2curve-devel.sha256sum] = "77454da6ee5feb51f2c8288f06241befffed8cd2cfcb6b7533e5794bcf990909"
 
-URI_aarch64_rust-elliptic-curve+hazmat-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+hazmat-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+hazmat-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-elliptic-curve+hazmat-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+hazmat-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+hazmat-devel;unpack=0"
 SRC_URI[aarch64_rust-elliptic-curve+hazmat-devel.sha256sum] = "980d9a7d8901661597a8a50a65d5833192e1815cfcd0a485b68ed234ec199438"
 
-URI_aarch64_rust-elliptic-curve+jwk-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+jwk-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+jwk-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-elliptic-curve+jwk-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+jwk-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+jwk-devel;unpack=0"
 SRC_URI[aarch64_rust-elliptic-curve+jwk-devel.sha256sum] = "af919440b11feccea400eb5201d0563894a532f73e0cd3566404b8fe4c5fe416"
 
-URI_aarch64_rust-elliptic-curve+pem-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+pem-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+pem-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-elliptic-curve+pem-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+pem-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+pem-devel;unpack=0"
 SRC_URI[aarch64_rust-elliptic-curve+pem-devel.sha256sum] = "77e5182598e9d318ef20b55404ece29080dd259e8d6b72a1149f24c2f719ba3a"
 
-URI_aarch64_rust-elliptic-curve+pkcs8-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+pkcs8-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+pkcs8-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-elliptic-curve+pkcs8-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+pkcs8-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+pkcs8-devel;unpack=0"
 SRC_URI[aarch64_rust-elliptic-curve+pkcs8-devel.sha256sum] = "a9add0692765888178a3a9a93291297e269767ebe52ea8a3c34d93419a6cfdb7"
 
-URI_aarch64_rust-elliptic-curve+sec1-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+sec1-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+sec1-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-elliptic-curve+sec1-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+sec1-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+sec1-devel;unpack=0"
 SRC_URI[aarch64_rust-elliptic-curve+sec1-devel.sha256sum] = "9e65394b1e9dac3e8370cdaa9d8c41f7573b77c11234637f1edc93b0a8def43c"
 
-URI_aarch64_rust-elliptic-curve+serde-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+serde-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+serde-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-elliptic-curve+serde-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+serde-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+serde-devel;unpack=0"
 SRC_URI[aarch64_rust-elliptic-curve+serde-devel.sha256sum] = "c26281576a8f2f33bc61c311fb359ae8fe787cad1155f72d8584c1593221ae99"
 
-URI_aarch64_rust-elliptic-curve+std-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+std-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+std-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-elliptic-curve+std-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+std-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+std-devel;unpack=0"
 SRC_URI[aarch64_rust-elliptic-curve+std-devel.sha256sum] = "d6575e5170b7dead51d7eaa23d97eca22e50ce278533353fc38356224006a289"
 
-URI_aarch64_rust-elliptic-curve+voprf-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+voprf-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+voprf-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-elliptic-curve+voprf-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve+voprf-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve+voprf-devel;unpack=0"
 SRC_URI[aarch64_rust-elliptic-curve+voprf-devel.sha256sum] = "b53c9c811beb3202758893bc043e42e971879047c1eac766f87052dd371a7b5e"
 
-URI_aarch64_rust-elliptic-curve-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-elliptic-curve-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-elliptic-curve-devel-0.13.8-6.el10_2.noarch.rpm;name=aarch64_rust-elliptic-curve-devel;unpack=0"
 SRC_URI[aarch64_rust-elliptic-curve-devel.sha256sum] = "fd171ed3eeb0200efe0cee1b92731e06d3b14741e706022bc68eb85e62196b65"
 
 RDEPENDS:rust-elliptic-curve+alloc-devel = " \

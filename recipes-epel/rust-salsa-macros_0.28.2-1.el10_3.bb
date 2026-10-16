@@ -5,26 +5,39 @@ inherit dnf-bridge
 PN = "rust-salsa-macros"
 PV = "0.28.2"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-salsa-macros+default-devel \
  rust-salsa-macros+persistence-devel \
  rust-salsa-macros-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-salsa-macros+default-devel \
+ rust-salsa-macros+persistence-devel \
+ rust-salsa-macros-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-salsa-macros-0.28.2-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-salsa-macros-0.28.2-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "776ba8787da3ddffd19063b23f7dbdc0132db8d7366bb7e4fb18e01751cc672a"
 
-URI_aarch64_rust-salsa-macros+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa-macros+default-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa-macros+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-salsa-macros+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-salsa-macros+default-devel-0.28.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-salsa-macros+default-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-salsa-macros+default-devel.sha256sum] = "fd3bd38147953fc0f4bce5be073e1d9c4cc0fb02f057bc80b1f367c468c382bf"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-salsa-macros+persistence-devel-0.28.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-salsa-macros+persistence-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-salsa-macros+persistence-devel.sha256sum] = "55cff0e4380cb80064a01b2029ff0dfd9323a3b1c4e5ac28348a01f488e63565"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-salsa-macros-devel-0.28.2-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-salsa-macros-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-salsa-macros-devel.sha256sum] = "4b571f840535e5b38cc6b594d467e6683fcda4d2f6682208f3db6a9bf3dac5f2"
+
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa-macros+default-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa-macros+default-devel;unpack=0"
 SRC_URI[aarch64_rust-salsa-macros+default-devel.sha256sum] = "29ed54e4ad967287ea0cb53a6c0ee6c859e7020c62fc2e8ca4bfa5034e9b1f02"
 
-URI_aarch64_rust-salsa-macros+persistence-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa-macros+persistence-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa-macros+persistence-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-salsa-macros+persistence-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa-macros+persistence-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa-macros+persistence-devel;unpack=0"
 SRC_URI[aarch64_rust-salsa-macros+persistence-devel.sha256sum] = "d04c263cca5a4b87e17d39c9908392eee10adcf46b84520b909a503c5548eb8c"
 
-URI_aarch64_rust-salsa-macros-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa-macros-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa-macros-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-salsa-macros-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-salsa-macros-devel-0.28.2-1.el10_3.noarch.rpm;name=aarch64_rust-salsa-macros-devel;unpack=0"
 SRC_URI[aarch64_rust-salsa-macros-devel.sha256sum] = "4e75dc85834ef734d5a49a21c7f13c43a17e6662f2b9bf5d3fc938074276b66d"
 
 RDEPENDS:rust-salsa-macros+default-devel = " \

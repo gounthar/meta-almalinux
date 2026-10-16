@@ -15,65 +15,71 @@ PACKAGES = " \
  fio-engine-rdma \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/fio-3.36-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/fio-3.36-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "ce08049dfabf0e9423e7b38389bf0af86f37e5e89fb31e7448a6b47e22b6fc99"
 
-URI_x86_64_v2_fio = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/fio-3.36-5.el10.x86_64_v2.rpm;name=x86_64_v2_fio;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_fio}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/fio-3.36-5.el10.x86_64_v2.rpm;name=x86_64_v2_fio;unpack=0"
 SRC_URI[x86_64_v2_fio.sha256sum] = "b95ffd2e3cbb07817b9c086af786276740170847743a230188e733fd565709a5"
 
-URI_x86_64_v2_fio-engine-http = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/fio-engine-http-3.36-5.el10.x86_64_v2.rpm;name=x86_64_v2_fio-engine-http;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_fio-engine-http}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/fio-engine-http-3.36-5.el10.x86_64_v2.rpm;name=x86_64_v2_fio-engine-http;unpack=0"
 SRC_URI[x86_64_v2_fio-engine-http.sha256sum] = "9d52a4f07d1ea35078fa6adec6d113ca33bd579438c6307563eb497432316fe9"
 
-URI_x86_64_v2_fio-engine-libaio = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/fio-engine-libaio-3.36-5.el10.x86_64_v2.rpm;name=x86_64_v2_fio-engine-libaio;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_fio-engine-libaio}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/fio-engine-libaio-3.36-5.el10.x86_64_v2.rpm;name=x86_64_v2_fio-engine-libaio;unpack=0"
 SRC_URI[x86_64_v2_fio-engine-libaio.sha256sum] = "c865a356fc320a30632e6c2d9c7cee12869b29587c8ef803442eb30b438f985f"
 
-URI_x86_64_v2_fio-engine-nbd = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/fio-engine-nbd-3.36-5.el10.x86_64_v2.rpm;name=x86_64_v2_fio-engine-nbd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_fio-engine-nbd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/fio-engine-nbd-3.36-5.el10.x86_64_v2.rpm;name=x86_64_v2_fio-engine-nbd;unpack=0"
 SRC_URI[x86_64_v2_fio-engine-nbd.sha256sum] = "d0fb6b1e9f89f075b25080dfb098414088863953a4bdd15a4679500e46c5b45a"
 
-URI_x86_64_v2_fio-engine-rados = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/fio-engine-rados-3.36-5.el10.x86_64_v2.rpm;name=x86_64_v2_fio-engine-rados;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_fio-engine-rados}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/fio-engine-rados-3.36-5.el10.x86_64_v2.rpm;name=x86_64_v2_fio-engine-rados;unpack=0"
 SRC_URI[x86_64_v2_fio-engine-rados.sha256sum] = "f46ab64442273a73cc17ae4988eec5fc16482c1b9e0abf488cdc6494430237a8"
 
-URI_x86_64_v2_fio-engine-rbd = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/fio-engine-rbd-3.36-5.el10.x86_64_v2.rpm;name=x86_64_v2_fio-engine-rbd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_fio-engine-rbd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/fio-engine-rbd-3.36-5.el10.x86_64_v2.rpm;name=x86_64_v2_fio-engine-rbd;unpack=0"
 SRC_URI[x86_64_v2_fio-engine-rbd.sha256sum] = "aa4ecbcab11f45657ab4bdae60b2df2c91ec6f194bbda0fe4114be56ad313722"
 
-URI_x86_64_v2_fio-engine-rdma = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/fio-engine-rdma-3.36-5.el10.x86_64_v2.rpm;name=x86_64_v2_fio-engine-rdma;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_fio-engine-rdma}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/fio-engine-rdma-3.36-5.el10.x86_64_v2.rpm;name=x86_64_v2_fio-engine-rdma;unpack=0"
 SRC_URI[x86_64_v2_fio-engine-rdma.sha256sum] = "3fe14254ee41294bf93210fba002976cdcf1805374ddce7b76db8d10646b3b58"
 
-URI_aarch64_fio = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/fio-3.36-5.el10.aarch64.rpm;name=aarch64_fio;unpack=0"
-SRC_URI:append = " ${URI_aarch64_fio}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/fio-3.36-5.el10.aarch64.rpm;name=aarch64_fio;unpack=0"
 SRC_URI[aarch64_fio.sha256sum] = "83ecc1ac41baff89ef494d0f9d398e37df839f29cdc8336da4ff5b8e800f2516"
 
-URI_aarch64_fio-engine-http = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/fio-engine-http-3.36-5.el10.aarch64.rpm;name=aarch64_fio-engine-http;unpack=0"
-SRC_URI:append = " ${URI_aarch64_fio-engine-http}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/fio-engine-http-3.36-5.el10.aarch64.rpm;name=aarch64_fio-engine-http;unpack=0"
 SRC_URI[aarch64_fio-engine-http.sha256sum] = "869bc8e6c1dc82acf1c1a2b46564cd3d4d6ac8e9c74153d0c8a9e8bdf946c554"
 
-URI_aarch64_fio-engine-libaio = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/fio-engine-libaio-3.36-5.el10.aarch64.rpm;name=aarch64_fio-engine-libaio;unpack=0"
-SRC_URI:append = " ${URI_aarch64_fio-engine-libaio}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/fio-engine-libaio-3.36-5.el10.aarch64.rpm;name=aarch64_fio-engine-libaio;unpack=0"
 SRC_URI[aarch64_fio-engine-libaio.sha256sum] = "5c8869602f66ab2fd02bad0dae3d63edbe2f14f5942717374a1aa2a4dc0453f4"
 
-URI_aarch64_fio-engine-nbd = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/fio-engine-nbd-3.36-5.el10.aarch64.rpm;name=aarch64_fio-engine-nbd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_fio-engine-nbd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/fio-engine-nbd-3.36-5.el10.aarch64.rpm;name=aarch64_fio-engine-nbd;unpack=0"
 SRC_URI[aarch64_fio-engine-nbd.sha256sum] = "e8453c0e09dd6a825319f32288d6b39398adf0b31c4162eb097fea3c7f727fde"
 
-URI_aarch64_fio-engine-rados = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/fio-engine-rados-3.36-5.el10.aarch64.rpm;name=aarch64_fio-engine-rados;unpack=0"
-SRC_URI:append = " ${URI_aarch64_fio-engine-rados}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/fio-engine-rados-3.36-5.el10.aarch64.rpm;name=aarch64_fio-engine-rados;unpack=0"
 SRC_URI[aarch64_fio-engine-rados.sha256sum] = "1f5bd1f31779497e9f1904d40938cc5dc48aff5a572864cc649a116f6ca7da1e"
 
-URI_aarch64_fio-engine-rbd = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/fio-engine-rbd-3.36-5.el10.aarch64.rpm;name=aarch64_fio-engine-rbd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_fio-engine-rbd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/fio-engine-rbd-3.36-5.el10.aarch64.rpm;name=aarch64_fio-engine-rbd;unpack=0"
 SRC_URI[aarch64_fio-engine-rbd.sha256sum] = "11471648564d5f3ed4d8204d189904a8f284a1e133a093ee26e9bddd7523c24c"
 
-URI_aarch64_fio-engine-rdma = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/fio-engine-rdma-3.36-5.el10.aarch64.rpm;name=aarch64_fio-engine-rdma;unpack=0"
-SRC_URI:append = " ${URI_aarch64_fio-engine-rdma}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/fio-engine-rdma-3.36-5.el10.aarch64.rpm;name=aarch64_fio-engine-rdma;unpack=0"
 SRC_URI[aarch64_fio-engine-rdma.sha256sum] = "af172d0e13eab3c629f5f1bff84fb1c80d861564baa6cae73444856fa84b00d1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/fio-3.36-5.el10.riscv64.rpm;name=riscv64_fio;unpack=0"
+SRC_URI[riscv64_fio.sha256sum] = "cc9064632f1c447c949cebe873b6cce24b29b348d9d0f70d5fbc8a2bef475653"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/fio-engine-http-3.36-5.el10.riscv64.rpm;name=riscv64_fio-engine-http;unpack=0"
+SRC_URI[riscv64_fio-engine-http.sha256sum] = "460dc7cbac778910b07913ac1f536d1aa58d2b55573a463fe400e89a34d516c2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/fio-engine-libaio-3.36-5.el10.riscv64.rpm;name=riscv64_fio-engine-libaio;unpack=0"
+SRC_URI[riscv64_fio-engine-libaio.sha256sum] = "bdb3eed38bed94d96b4f961e74020f5d8b9b6fbdf814a189d6ec55743b87da7a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/fio-engine-nbd-3.36-5.el10.riscv64.rpm;name=riscv64_fio-engine-nbd;unpack=0"
+SRC_URI[riscv64_fio-engine-nbd.sha256sum] = "d00ec42e781b172f8b31d9bb23eaa48d7ab3baf85b03d0f7b39777b2b0fb7ac7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/fio-engine-rados-3.36-5.el10.riscv64.rpm;name=riscv64_fio-engine-rados;unpack=0"
+SRC_URI[riscv64_fio-engine-rados.sha256sum] = "2ad3f9485e4d31bedbd45a70cd658566d10eddb95abed0a84a065ea9099d4106"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/fio-engine-rbd-3.36-5.el10.riscv64.rpm;name=riscv64_fio-engine-rbd;unpack=0"
+SRC_URI[riscv64_fio-engine-rbd.sha256sum] = "fe9f4c7726612a7aa18cb4889087f1ca2dd538dfe04cdb7c4d91ed726a33c788"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/fio-engine-rdma-3.36-5.el10.riscv64.rpm;name=riscv64_fio-engine-rdma;unpack=0"
+SRC_URI[riscv64_fio-engine-rdma.sha256sum] = "63faad0411246df5f0f394af55af0df32daf3dd92822ed20df4f8dacf2455fd7"
 
 RDEPENDS:fio = " \
  bash \

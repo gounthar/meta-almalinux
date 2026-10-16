@@ -5,26 +5,39 @@ inherit dnf-bridge
 PN = "rust-path-absolutize"
 PV = "4.0.1"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-path-absolutize+default-devel \
  rust-path-absolutize+fixed_workdir-devel \
  rust-path-absolutize-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-path-absolutize+default-devel \
+ rust-path-absolutize+fixed_workdir-devel \
+ rust-path-absolutize-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-path-absolutize-4.0.1-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-path-absolutize-4.0.1-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "765488f260c21f926615e6656d7b25c7709d7b519bd937fa044897c8896d3fc4"
 
-URI_aarch64_rust-path-absolutize+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-path-absolutize+default-devel-4.0.1-1.el10_3.noarch.rpm;name=aarch64_rust-path-absolutize+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-path-absolutize+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-path-absolutize+default-devel-4.0.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-path-absolutize+default-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-path-absolutize+default-devel.sha256sum] = "47656ee9452a83735ccd78cdb97c2d7713b2578e1576922caef7031c81e7aee5"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-path-absolutize+fixed_workdir-devel-4.0.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-path-absolutize+fixed_workdir-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-path-absolutize+fixed_workdir-devel.sha256sum] = "54a605f0d1a36aa9ee697dda33fd10fe5cebdfbbb92a0323a6ec7392d71f7311"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-path-absolutize-devel-4.0.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-path-absolutize-devel;unpack=0"
+SRC_URI[x86_64_v2_rust-path-absolutize-devel.sha256sum] = "2bf15d939a178a90c85ef74d82025498f3233d574d52aa553aca7261f0c12bab"
+
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-path-absolutize+default-devel-4.0.1-1.el10_3.noarch.rpm;name=aarch64_rust-path-absolutize+default-devel;unpack=0"
 SRC_URI[aarch64_rust-path-absolutize+default-devel.sha256sum] = "3e5761e084166e79f9fa58213cec0e1e07f16a10535242a9115cce12bf0ffcc0"
 
-URI_aarch64_rust-path-absolutize+fixed_workdir-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-path-absolutize+fixed_workdir-devel-4.0.1-1.el10_3.noarch.rpm;name=aarch64_rust-path-absolutize+fixed_workdir-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-path-absolutize+fixed_workdir-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-path-absolutize+fixed_workdir-devel-4.0.1-1.el10_3.noarch.rpm;name=aarch64_rust-path-absolutize+fixed_workdir-devel;unpack=0"
 SRC_URI[aarch64_rust-path-absolutize+fixed_workdir-devel.sha256sum] = "a40736e682e258337212a5bd0625c6d37c8182b9a8b33b7406e1606d63420747"
 
-URI_aarch64_rust-path-absolutize-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-path-absolutize-devel-4.0.1-1.el10_3.noarch.rpm;name=aarch64_rust-path-absolutize-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-path-absolutize-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-path-absolutize-devel-4.0.1-1.el10_3.noarch.rpm;name=aarch64_rust-path-absolutize-devel;unpack=0"
 SRC_URI[aarch64_rust-path-absolutize-devel.sha256sum] = "be402836b5a4b173e52b4269dfda1a0e8aa0de97db0f602551d69b5beba30d61"
 
 RDEPENDS:rust-path-absolutize+default-devel = " \

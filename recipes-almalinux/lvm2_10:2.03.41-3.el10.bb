@@ -20,97 +20,107 @@ PACKAGES = " \
  lvm2-lockd \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/lvm2-2.03.41-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/lvm2-2.03.41-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "50c0d2d23bbb3ef1bafecbe1e04522fe54efbdb22d05901f128533da83f9a4ee"
 
-URI_x86_64_v2_device-mapper = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/device-mapper-1.02.215-3.el10.x86_64_v2.rpm;name=x86_64_v2_device-mapper;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_device-mapper}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/device-mapper-1.02.215-3.el10.x86_64_v2.rpm;name=x86_64_v2_device-mapper;unpack=0"
 SRC_URI[x86_64_v2_device-mapper.sha256sum] = "73ac067268b1e68b11d60d19cbe6016991760df3d7dd3142bbb597b812fc7253"
 
-URI_x86_64_v2_device-mapper-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/device-mapper-devel-1.02.215-3.el10.x86_64_v2.rpm;name=x86_64_v2_device-mapper-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_device-mapper-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/device-mapper-devel-1.02.215-3.el10.x86_64_v2.rpm;name=x86_64_v2_device-mapper-devel;unpack=0"
 SRC_URI[x86_64_v2_device-mapper-devel.sha256sum] = "db23d502751e41fe8b8a064c0a589c567f820bf4b210c750f54c8b7a314961e8"
 
-URI_x86_64_v2_device-mapper-event = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/device-mapper-event-1.02.215-3.el10.x86_64_v2.rpm;name=x86_64_v2_device-mapper-event;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_device-mapper-event}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/device-mapper-event-1.02.215-3.el10.x86_64_v2.rpm;name=x86_64_v2_device-mapper-event;unpack=0"
 SRC_URI[x86_64_v2_device-mapper-event.sha256sum] = "82b02e2b67d71c819dd03941cf7ffc08e729f9c3291494c64989d97f6b81d2b1"
 
-URI_x86_64_v2_device-mapper-event-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/device-mapper-event-devel-1.02.215-3.el10.x86_64_v2.rpm;name=x86_64_v2_device-mapper-event-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_device-mapper-event-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/device-mapper-event-devel-1.02.215-3.el10.x86_64_v2.rpm;name=x86_64_v2_device-mapper-event-devel;unpack=0"
 SRC_URI[x86_64_v2_device-mapper-event-devel.sha256sum] = "1dd4919ab2cef989de31507d1cf4e6a151ae075203bf264e2b661bf6ae0ce949"
 
-URI_x86_64_v2_device-mapper-event-libs = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/device-mapper-event-libs-1.02.215-3.el10.x86_64_v2.rpm;name=x86_64_v2_device-mapper-event-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_device-mapper-event-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/device-mapper-event-libs-1.02.215-3.el10.x86_64_v2.rpm;name=x86_64_v2_device-mapper-event-libs;unpack=0"
 SRC_URI[x86_64_v2_device-mapper-event-libs.sha256sum] = "dcfb25955703d81aa518311ae950069c99455adae37a0a0988b204dbf4ec5291"
 
-URI_x86_64_v2_device-mapper-libs = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/device-mapper-libs-1.02.215-3.el10.x86_64_v2.rpm;name=x86_64_v2_device-mapper-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_device-mapper-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/device-mapper-libs-1.02.215-3.el10.x86_64_v2.rpm;name=x86_64_v2_device-mapper-libs;unpack=0"
 SRC_URI[x86_64_v2_device-mapper-libs.sha256sum] = "1f354731d6ea6ea5d9c4bfff39a0666e4b169eb1c6fc88a911c357fcda75a40c"
 
-URI_x86_64_v2_lvm2 = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/lvm2-2.03.41-3.el10.x86_64_v2.rpm;name=x86_64_v2_lvm2;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lvm2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/lvm2-2.03.41-3.el10.x86_64_v2.rpm;name=x86_64_v2_lvm2;unpack=0"
 SRC_URI[x86_64_v2_lvm2.sha256sum] = "86a159af2f0c372497efcb17800ec34508dc80f0595861e2648f52992dfebf7c"
 
-URI_x86_64_v2_lvm2-dbusd = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/lvm2-dbusd-2.03.41-3.el10.noarch.rpm;name=x86_64_v2_lvm2-dbusd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lvm2-dbusd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/lvm2-dbusd-2.03.41-3.el10.noarch.rpm;name=x86_64_v2_lvm2-dbusd;unpack=0"
 SRC_URI[x86_64_v2_lvm2-dbusd.sha256sum] = "809288786c19443e8ee0d6beaff3edb22656cfafe09ad8cf2de88a5fe8667d9a"
 
-URI_x86_64_v2_lvm2-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/lvm2-devel-2.03.41-3.el10.x86_64_v2.rpm;name=x86_64_v2_lvm2-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lvm2-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/lvm2-devel-2.03.41-3.el10.x86_64_v2.rpm;name=x86_64_v2_lvm2-devel;unpack=0"
 SRC_URI[x86_64_v2_lvm2-devel.sha256sum] = "4d298b4e2673738baafb8dfaaee6cb8bbd18535bdb7e9637e7ce69702dcdb4ca"
 
-URI_x86_64_v2_lvm2-libs = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/lvm2-libs-2.03.41-3.el10.x86_64_v2.rpm;name=x86_64_v2_lvm2-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lvm2-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/lvm2-libs-2.03.41-3.el10.x86_64_v2.rpm;name=x86_64_v2_lvm2-libs;unpack=0"
 SRC_URI[x86_64_v2_lvm2-libs.sha256sum] = "0100f72a1115644f488c4b7daf2b39517e792a23456d888158e72b5bd30b1d6c"
 
-URI_x86_64_v2_lvm2-lockd = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/lvm2-lockd-2.03.41-3.el10.x86_64_v2.rpm;name=x86_64_v2_lvm2-lockd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lvm2-lockd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/lvm2-lockd-2.03.41-3.el10.x86_64_v2.rpm;name=x86_64_v2_lvm2-lockd;unpack=0"
 SRC_URI[x86_64_v2_lvm2-lockd.sha256sum] = "ad83241d4a4d0fd8c0efb9fc4c746ba61f6b27e598be10fb8c099cd11cf8099b"
 
-URI_aarch64_device-mapper = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/device-mapper-1.02.215-3.el10.aarch64.rpm;name=aarch64_device-mapper;unpack=0"
-SRC_URI:append = " ${URI_aarch64_device-mapper}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/device-mapper-1.02.215-3.el10.aarch64.rpm;name=aarch64_device-mapper;unpack=0"
 SRC_URI[aarch64_device-mapper.sha256sum] = "9ecd8d0dfc83bb9e2a5e1a11fd22246b6db392c15cfe4eb0458ee7c2009dfefd"
 
-URI_aarch64_device-mapper-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/device-mapper-devel-1.02.215-3.el10.aarch64.rpm;name=aarch64_device-mapper-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_device-mapper-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/device-mapper-devel-1.02.215-3.el10.aarch64.rpm;name=aarch64_device-mapper-devel;unpack=0"
 SRC_URI[aarch64_device-mapper-devel.sha256sum] = "28675a577e3201fe2979879d408fef173181e4dbb44a1cd293eb10ee5b23c81d"
 
-URI_aarch64_device-mapper-event = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/device-mapper-event-1.02.215-3.el10.aarch64.rpm;name=aarch64_device-mapper-event;unpack=0"
-SRC_URI:append = " ${URI_aarch64_device-mapper-event}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/device-mapper-event-1.02.215-3.el10.aarch64.rpm;name=aarch64_device-mapper-event;unpack=0"
 SRC_URI[aarch64_device-mapper-event.sha256sum] = "db83c429c80ef00ff642014d765062e1a192e5a2ba8e019c6370aee136c78353"
 
-URI_aarch64_device-mapper-event-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/device-mapper-event-devel-1.02.215-3.el10.aarch64.rpm;name=aarch64_device-mapper-event-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_device-mapper-event-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/device-mapper-event-devel-1.02.215-3.el10.aarch64.rpm;name=aarch64_device-mapper-event-devel;unpack=0"
 SRC_URI[aarch64_device-mapper-event-devel.sha256sum] = "7dce5e6935bdbbdb592800460ebb0a46f8e16eeeae62ff891dd190c1240314fe"
 
-URI_aarch64_device-mapper-event-libs = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/device-mapper-event-libs-1.02.215-3.el10.aarch64.rpm;name=aarch64_device-mapper-event-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_device-mapper-event-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/device-mapper-event-libs-1.02.215-3.el10.aarch64.rpm;name=aarch64_device-mapper-event-libs;unpack=0"
 SRC_URI[aarch64_device-mapper-event-libs.sha256sum] = "4434e2c3a543ba9316c6018bd1b27ad1830b04d07135ee1624977b6b4a269bbc"
 
-URI_aarch64_device-mapper-libs = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/device-mapper-libs-1.02.215-3.el10.aarch64.rpm;name=aarch64_device-mapper-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_device-mapper-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/device-mapper-libs-1.02.215-3.el10.aarch64.rpm;name=aarch64_device-mapper-libs;unpack=0"
 SRC_URI[aarch64_device-mapper-libs.sha256sum] = "51a68c5f63d70aaef87ed614a6e3d008c91095e4a2030c6a260350f8c0b49dac"
 
-URI_aarch64_lvm2 = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/lvm2-2.03.41-3.el10.aarch64.rpm;name=aarch64_lvm2;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lvm2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/lvm2-2.03.41-3.el10.aarch64.rpm;name=aarch64_lvm2;unpack=0"
 SRC_URI[aarch64_lvm2.sha256sum] = "e0ac48d99a784a11b70de2d17aec8bff9affc0f28291ac3a9cffa264d7b92b66"
 
-URI_aarch64_lvm2-dbusd = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/lvm2-dbusd-2.03.41-3.el10.noarch.rpm;name=aarch64_lvm2-dbusd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lvm2-dbusd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/lvm2-dbusd-2.03.41-3.el10.noarch.rpm;name=aarch64_lvm2-dbusd;unpack=0"
 SRC_URI[aarch64_lvm2-dbusd.sha256sum] = "809288786c19443e8ee0d6beaff3edb22656cfafe09ad8cf2de88a5fe8667d9a"
 
-URI_aarch64_lvm2-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/lvm2-devel-2.03.41-3.el10.aarch64.rpm;name=aarch64_lvm2-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lvm2-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/lvm2-devel-2.03.41-3.el10.aarch64.rpm;name=aarch64_lvm2-devel;unpack=0"
 SRC_URI[aarch64_lvm2-devel.sha256sum] = "90c87172bc4ba782c970dcc9de0dbfa8df5a4964e08abc3e311bf648ad041cc5"
 
-URI_aarch64_lvm2-libs = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/lvm2-libs-2.03.41-3.el10.aarch64.rpm;name=aarch64_lvm2-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lvm2-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/lvm2-libs-2.03.41-3.el10.aarch64.rpm;name=aarch64_lvm2-libs;unpack=0"
 SRC_URI[aarch64_lvm2-libs.sha256sum] = "e4c00ade6a3ae8a52bd7eaf0a9d595b3aa39568a315ad108d620957cd5a99594"
 
-URI_aarch64_lvm2-lockd = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/lvm2-lockd-2.03.41-3.el10.aarch64.rpm;name=aarch64_lvm2-lockd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lvm2-lockd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/lvm2-lockd-2.03.41-3.el10.aarch64.rpm;name=aarch64_lvm2-lockd;unpack=0"
 SRC_URI[aarch64_lvm2-lockd.sha256sum] = "89cb900f0c6222521bacd592096d4b98840190c038a387d143f7d7c58e5432b7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/device-mapper-1.02.215-3.el10.riscv64.rpm;name=riscv64_device-mapper;unpack=0"
+SRC_URI[riscv64_device-mapper.sha256sum] = "d4813faca493d4691ee2a6d43701a83a953ff5ce9a3b6d7c3a775f1cdee61a4e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/device-mapper-devel-1.02.215-3.el10.riscv64.rpm;name=riscv64_device-mapper-devel;unpack=0"
+SRC_URI[riscv64_device-mapper-devel.sha256sum] = "d469fcbf066078301b6e46f4225d21c6fe66f2ae9746abde0379d51bef51c67a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/device-mapper-event-1.02.215-3.el10.riscv64.rpm;name=riscv64_device-mapper-event;unpack=0"
+SRC_URI[riscv64_device-mapper-event.sha256sum] = "f56950c87949c835d0d3024bc7e572ce6b1b95b2dd5d8e20233cd2ed85d6d831"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/device-mapper-event-devel-1.02.215-3.el10.riscv64.rpm;name=riscv64_device-mapper-event-devel;unpack=0"
+SRC_URI[riscv64_device-mapper-event-devel.sha256sum] = "3ea5cf34f636efde08340d058b15c527fe9338c0761b9a0c7fb7d94f22f32094"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/device-mapper-event-libs-1.02.215-3.el10.riscv64.rpm;name=riscv64_device-mapper-event-libs;unpack=0"
+SRC_URI[riscv64_device-mapper-event-libs.sha256sum] = "99c1d80f82a0d9b4542c436ea33592e8696990fd0031abc9676aa96113f3c746"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/device-mapper-libs-1.02.215-3.el10.riscv64.rpm;name=riscv64_device-mapper-libs;unpack=0"
+SRC_URI[riscv64_device-mapper-libs.sha256sum] = "51838013bbbb12acf14e3404303085af6db4dde103ece7ab9854d8fc326cf942"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/lvm2-2.03.41-3.el10.riscv64.rpm;name=riscv64_lvm2;unpack=0"
+SRC_URI[riscv64_lvm2.sha256sum] = "ed4fb0131f52e1e3d052f7e8f2c5285bb9f3d408d0a6640f2028803ac7c57fe5"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/lvm2-dbusd-2.03.41-3.el10.noarch.rpm;name=riscv64_lvm2-dbusd;unpack=0"
+SRC_URI[riscv64_lvm2-dbusd.sha256sum] = "809288786c19443e8ee0d6beaff3edb22656cfafe09ad8cf2de88a5fe8667d9a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/lvm2-devel-2.03.41-3.el10.riscv64.rpm;name=riscv64_lvm2-devel;unpack=0"
+SRC_URI[riscv64_lvm2-devel.sha256sum] = "62c44314a68cafbd6bc60781e63ad3ee7c8123650350e3fd4598e90624db1d7c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/lvm2-libs-2.03.41-3.el10.riscv64.rpm;name=riscv64_lvm2-libs;unpack=0"
+SRC_URI[riscv64_lvm2-libs.sha256sum] = "2ff68b3b5835a206e144b93b053abf401870d36c6eea9b5675b55d04bd47af3c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/lvm2-lockd-2.03.41-3.el10.riscv64.rpm;name=riscv64_lvm2-lockd;unpack=0"
+SRC_URI[riscv64_lvm2-lockd.sha256sum] = "1b3f54e86dbb3e149430854dfb56a00370a17373f216b381cbb089d4af155f1c"
 
 RDEPENDS:device-mapper = " \
  bash \

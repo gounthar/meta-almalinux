@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-pydepsdev"
 PV = "0.2.3"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-pydepsdev \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-pydepsdev \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-pydepsdev-0.2.3-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-pydepsdev-0.2.3-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3406d2e5fb45172007e7fbdb6a32cf7dfd917de29ea74c676102037765c473bd"
 
-URI_x86_64_v2_python3-pydepsdev = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-pydepsdev-0.2.3-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-pydepsdev;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-pydepsdev}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-pydepsdev-0.2.3-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-pydepsdev;unpack=0"
 SRC_URI[x86_64_v2_python3-pydepsdev.sha256sum] = "fdaacf3c8d0e7a6555d76d9f98a26cf8f2f63d17d050bdf360c8547d11930d34"
 
-URI_aarch64_python3-pydepsdev = "${EPEL_MIRROR}/aarch64/Packages/p/python3-pydepsdev-0.2.3-1.el10_2.noarch.rpm;name=aarch64_python3-pydepsdev;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-pydepsdev}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-pydepsdev-0.2.3-1.el10_2.noarch.rpm;name=aarch64_python3-pydepsdev;unpack=0"
 SRC_URI[aarch64_python3-pydepsdev.sha256sum] = "d329ab14d895924df12135669d22831a842a79b3a217711763c93defdfa6e854"
 
 RDEPENDS:python3-pydepsdev = " \

@@ -9,17 +9,17 @@ PACKAGES = " \
  tpm2-openssl \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/tpm2-openssl-1.2.0-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/tpm2-openssl-1.2.0-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d6cd3ca55472a48fc95dbe5f441b6171904e61b680f6917219c827224d71a1e8"
 
-URI_x86_64_v2_tpm2-openssl = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/tpm2-openssl-1.2.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_tpm2-openssl;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_tpm2-openssl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/tpm2-openssl-1.2.0-5.el10.x86_64_v2.rpm;name=x86_64_v2_tpm2-openssl;unpack=0"
 SRC_URI[x86_64_v2_tpm2-openssl.sha256sum] = "307d20bbd17b88133af577da0243459e5d90df726c7c9549739dc594d9fb2acd"
 
-URI_aarch64_tpm2-openssl = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/tpm2-openssl-1.2.0-5.el10.aarch64.rpm;name=aarch64_tpm2-openssl;unpack=0"
-SRC_URI:append = " ${URI_aarch64_tpm2-openssl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/tpm2-openssl-1.2.0-5.el10.aarch64.rpm;name=aarch64_tpm2-openssl;unpack=0"
 SRC_URI[aarch64_tpm2-openssl.sha256sum] = "ce29b2811a067334be322194c511f06345e0b74e8146a356e4fc4073b10cd73c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/tpm2-openssl-1.2.0-5.el10.riscv64.rpm;name=riscv64_tpm2-openssl;unpack=0"
+SRC_URI[riscv64_tpm2-openssl.sha256sum] = "0ecfceb23a8c97ee503f7b55f19b6384fea9902c107a80c5ed345320bfe112ff"
 
 RDEPENDS:tpm2-openssl = " \
  glibc \

@@ -14,57 +14,62 @@ PACKAGES = " \
  papers-thumbnailer \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/papers-48.7-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/papers-48.7-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f34ab47169fad5a9f944a8328c56abaa4f8843b247320cee839656e46dc34205"
 
-URI_x86_64_v2_papers = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/papers-48.7-3.el10.x86_64_v2.rpm;name=x86_64_v2_papers;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_papers}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/papers-48.7-3.el10.x86_64_v2.rpm;name=x86_64_v2_papers;unpack=0"
 SRC_URI[x86_64_v2_papers.sha256sum] = "3c5e3b34ca5e0cf252dbcdd7b04736ab5bf4eb1985ea0daafcc9d6358f3a3a5a"
 
-URI_x86_64_v2_papers-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/papers-devel-48.7-3.el10.x86_64_v2.rpm;name=x86_64_v2_papers-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_papers-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/papers-devel-48.7-3.el10.x86_64_v2.rpm;name=x86_64_v2_papers-devel;unpack=0"
 SRC_URI[x86_64_v2_papers-devel.sha256sum] = "bc87348efae4fb52fddfe65a0de10bd8c7b0b1d54f80d13cc0af3cf95c4a73d4"
 
-URI_x86_64_v2_papers-libs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/papers-libs-48.7-3.el10.x86_64_v2.rpm;name=x86_64_v2_papers-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_papers-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/papers-libs-48.7-3.el10.x86_64_v2.rpm;name=x86_64_v2_papers-libs;unpack=0"
 SRC_URI[x86_64_v2_papers-libs.sha256sum] = "d333f4a30554f6c1b5b5852ff05271c11abeb07dcae60edb5afb90896114649c"
 
-URI_x86_64_v2_papers-nautilus = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/papers-nautilus-48.7-3.el10.x86_64_v2.rpm;name=x86_64_v2_papers-nautilus;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_papers-nautilus}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/papers-nautilus-48.7-3.el10.x86_64_v2.rpm;name=x86_64_v2_papers-nautilus;unpack=0"
 SRC_URI[x86_64_v2_papers-nautilus.sha256sum] = "a9db4711b6046e9e45bb81749b162108b712a541ee0713ef7df42973758abe9b"
 
-URI_x86_64_v2_papers-previewer = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/papers-previewer-48.7-3.el10.x86_64_v2.rpm;name=x86_64_v2_papers-previewer;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_papers-previewer}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/papers-previewer-48.7-3.el10.x86_64_v2.rpm;name=x86_64_v2_papers-previewer;unpack=0"
 SRC_URI[x86_64_v2_papers-previewer.sha256sum] = "741ebaa6ce93102eccffadac382204a46f7cf7cb098b301562e908270ffbbeff"
 
-URI_x86_64_v2_papers-thumbnailer = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/papers-thumbnailer-48.7-3.el10.x86_64_v2.rpm;name=x86_64_v2_papers-thumbnailer;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_papers-thumbnailer}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/papers-thumbnailer-48.7-3.el10.x86_64_v2.rpm;name=x86_64_v2_papers-thumbnailer;unpack=0"
 SRC_URI[x86_64_v2_papers-thumbnailer.sha256sum] = "0d89ee085dc1a4c35f69990d9abff839ac6dd57b492a2d153de83876501a2c88"
 
-URI_aarch64_papers = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/papers-48.7-3.el10.aarch64.rpm;name=aarch64_papers;unpack=0"
-SRC_URI:append = " ${URI_aarch64_papers}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/papers-48.7-3.el10.aarch64.rpm;name=aarch64_papers;unpack=0"
 SRC_URI[aarch64_papers.sha256sum] = "dd31db90374d56b08211fb03de4b997400ff9cf2430e4380a8be9d548b6a6c91"
 
-URI_aarch64_papers-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/papers-devel-48.7-3.el10.aarch64.rpm;name=aarch64_papers-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_papers-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/papers-devel-48.7-3.el10.aarch64.rpm;name=aarch64_papers-devel;unpack=0"
 SRC_URI[aarch64_papers-devel.sha256sum] = "fa9f375475cd47dbbc3952d2f16ba71d42985b63bb7d3650a81e25a0dd100784"
 
-URI_aarch64_papers-libs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/papers-libs-48.7-3.el10.aarch64.rpm;name=aarch64_papers-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_papers-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/papers-libs-48.7-3.el10.aarch64.rpm;name=aarch64_papers-libs;unpack=0"
 SRC_URI[aarch64_papers-libs.sha256sum] = "63121c60e34a45b452b9c6ebb0295d546fc8f7f2959e4447dabcaf84714fe0f4"
 
-URI_aarch64_papers-nautilus = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/papers-nautilus-48.7-3.el10.aarch64.rpm;name=aarch64_papers-nautilus;unpack=0"
-SRC_URI:append = " ${URI_aarch64_papers-nautilus}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/papers-nautilus-48.7-3.el10.aarch64.rpm;name=aarch64_papers-nautilus;unpack=0"
 SRC_URI[aarch64_papers-nautilus.sha256sum] = "fa54492dce29c6fa8fd3919c4f39a7514159976a619eec04672f741b46e72254"
 
-URI_aarch64_papers-previewer = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/papers-previewer-48.7-3.el10.aarch64.rpm;name=aarch64_papers-previewer;unpack=0"
-SRC_URI:append = " ${URI_aarch64_papers-previewer}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/papers-previewer-48.7-3.el10.aarch64.rpm;name=aarch64_papers-previewer;unpack=0"
 SRC_URI[aarch64_papers-previewer.sha256sum] = "25fc1c771599e1d06c933e7c5e920d25082cfe9c90af6bb98e93ef2225dec2c9"
 
-URI_aarch64_papers-thumbnailer = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/papers-thumbnailer-48.7-3.el10.aarch64.rpm;name=aarch64_papers-thumbnailer;unpack=0"
-SRC_URI:append = " ${URI_aarch64_papers-thumbnailer}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/papers-thumbnailer-48.7-3.el10.aarch64.rpm;name=aarch64_papers-thumbnailer;unpack=0"
 SRC_URI[aarch64_papers-thumbnailer.sha256sum] = "856f0d090fe884c76d6cd2708f2f5a6258b81429f3ba9e72033ee1ab2b294d7b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/papers-48.7-3.el10.riscv64.rpm;name=riscv64_papers;unpack=0"
+SRC_URI[riscv64_papers.sha256sum] = "7e7f20f3699ad89dc55120418f57907a7e7a24691e92034eae4b581b6c52f7e1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/papers-devel-48.7-3.el10.riscv64.rpm;name=riscv64_papers-devel;unpack=0"
+SRC_URI[riscv64_papers-devel.sha256sum] = "04e16e53cccf141c1de51a45a30851b701f5c9a591bd560cd9d0ec196cd4992a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/papers-libs-48.7-3.el10.riscv64.rpm;name=riscv64_papers-libs;unpack=0"
+SRC_URI[riscv64_papers-libs.sha256sum] = "883b5284cd0a3eb7ccd18f2fe41a7151d4aa88a4ae88def6b2a2b61d3feb0a12"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/papers-nautilus-48.7-3.el10.riscv64.rpm;name=riscv64_papers-nautilus;unpack=0"
+SRC_URI[riscv64_papers-nautilus.sha256sum] = "c3dcee251b6f4e0ec91f0fe06be790cd8b3bc115d8ddaf7199633afa9833cd82"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/papers-previewer-48.7-3.el10.riscv64.rpm;name=riscv64_papers-previewer;unpack=0"
+SRC_URI[riscv64_papers-previewer.sha256sum] = "aed75e01890ef23b95caf1b4d317015dd262bc0f66ee81c59c80c6e2b2efb3c0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/papers-thumbnailer-48.7-3.el10.riscv64.rpm;name=riscv64_papers-thumbnailer;unpack=0"
+SRC_URI[riscv64_papers-thumbnailer.sha256sum] = "267138d7715db9f1463a45584e0c55281e650db6ae4fb5446a4b899a0b0e1bd7"
 
 RDEPENDS:papers = " \
  gdk-pixbuf2 \

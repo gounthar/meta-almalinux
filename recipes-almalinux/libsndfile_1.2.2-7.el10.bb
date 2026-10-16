@@ -11,33 +11,35 @@ PACKAGES = " \
  libsndfile-utils \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libsndfile-1.2.2-7.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libsndfile-1.2.2-7.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "68a8cd017ee0ed20eae5edc1a4664e17a6f69137846fd2bb51b0d9b5e6ef10b1"
 
-URI_x86_64_v2_libsndfile = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libsndfile-1.2.2-7.el10.x86_64_v2.rpm;name=x86_64_v2_libsndfile;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libsndfile}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libsndfile-1.2.2-7.el10.x86_64_v2.rpm;name=x86_64_v2_libsndfile;unpack=0"
 SRC_URI[x86_64_v2_libsndfile.sha256sum] = "891a5ea4f49ae1573b242658444e79b6f52dcaffd42320fdf42f51dd902855fc"
 
-URI_x86_64_v2_libsndfile-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libsndfile-devel-1.2.2-7.el10.x86_64_v2.rpm;name=x86_64_v2_libsndfile-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libsndfile-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libsndfile-devel-1.2.2-7.el10.x86_64_v2.rpm;name=x86_64_v2_libsndfile-devel;unpack=0"
 SRC_URI[x86_64_v2_libsndfile-devel.sha256sum] = "cd687bf58468c8f3ae4c1ce3521f569944ed7c67e43e69cb8098a2aeda44ecf6"
 
-URI_x86_64_v2_libsndfile-utils = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libsndfile-utils-1.2.2-7.el10.x86_64_v2.rpm;name=x86_64_v2_libsndfile-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libsndfile-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libsndfile-utils-1.2.2-7.el10.x86_64_v2.rpm;name=x86_64_v2_libsndfile-utils;unpack=0"
 SRC_URI[x86_64_v2_libsndfile-utils.sha256sum] = "90e32d9d99af8eef5cc53e37dce90e39bb2ec0db86054533acdaab07169ab05e"
 
-URI_aarch64_libsndfile = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libsndfile-1.2.2-7.el10.aarch64.rpm;name=aarch64_libsndfile;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libsndfile}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libsndfile-1.2.2-7.el10.aarch64.rpm;name=aarch64_libsndfile;unpack=0"
 SRC_URI[aarch64_libsndfile.sha256sum] = "dc76483f34106f33b5ccee065f7a900045f716c3d3fbc134f906954f3a3fbb18"
 
-URI_aarch64_libsndfile-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libsndfile-devel-1.2.2-7.el10.aarch64.rpm;name=aarch64_libsndfile-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libsndfile-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libsndfile-devel-1.2.2-7.el10.aarch64.rpm;name=aarch64_libsndfile-devel;unpack=0"
 SRC_URI[aarch64_libsndfile-devel.sha256sum] = "83c2b2a8015fd53cfe8903b64f0c4465de2d132ea40dd457af788cda8e277298"
 
-URI_aarch64_libsndfile-utils = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libsndfile-utils-1.2.2-7.el10.aarch64.rpm;name=aarch64_libsndfile-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libsndfile-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libsndfile-utils-1.2.2-7.el10.aarch64.rpm;name=aarch64_libsndfile-utils;unpack=0"
 SRC_URI[aarch64_libsndfile-utils.sha256sum] = "9f57e828ef7db36a84217df705d102a78c5946243623c995b2378652344f5bcd"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libsndfile-1.2.2-7.el10.riscv64.rpm;name=riscv64_libsndfile;unpack=0"
+SRC_URI[riscv64_libsndfile.sha256sum] = "25c037b5142d918586ff23155e9b1baba6bd9131c2a4868af639959a93d21934"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libsndfile-devel-1.2.2-7.el10.riscv64.rpm;name=riscv64_libsndfile-devel;unpack=0"
+SRC_URI[riscv64_libsndfile-devel.sha256sum] = "05040f17de980dfc4eee83ef6ea680c2eee0032bf975c64a6f75db06af73b2e3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libsndfile-utils-1.2.2-7.el10.riscv64.rpm;name=riscv64_libsndfile-utils;unpack=0"
+SRC_URI[riscv64_libsndfile-utils.sha256sum] = "35c18ac8877d45a939e415672a507f7ede6087305b261fa11896dcf3e73746fd"
 
 RDEPENDS:libsndfile = " \
  flac-libs \

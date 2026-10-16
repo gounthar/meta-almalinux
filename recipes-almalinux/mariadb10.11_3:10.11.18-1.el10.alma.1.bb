@@ -24,137 +24,152 @@ PACKAGES = " \
  mariadb-test \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/mariadb10.11-10.11.18-1.el10.alma.1.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/mariadb10.11-10.11.18-1.el10.alma.1.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "bef4cfc8ffbad23ab5f9b8aa01346c0efe5d09e3e291952d6046811d0aee8fee"
 
-URI_x86_64_v2_mariadb = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mariadb}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb;unpack=0"
 SRC_URI[x86_64_v2_mariadb.sha256sum] = "70cf90e2adbd62c5d66bc4e425ae61b99afff0b2b26f32b3cd769053704f8b80"
-RPROVIDES:mariadb:x86_64_v2 = "virtual//usr/bin/mariadb-dump virtual//usr/bin/mysqldump virtual/mysql-any_or_mariadb-any"
+RPROVIDES:mariadb:append:x86_64_v2 = " virtual//usr/bin/mariadb-dump virtual//usr/bin/mysqldump virtual/mysql-any_or_mariadb-any"
 
-URI_x86_64_v2_mariadb-backup = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-backup-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb-backup;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mariadb-backup}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-backup-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb-backup;unpack=0"
 SRC_URI[x86_64_v2_mariadb-backup.sha256sum] = "9f75f0487c7bb86e57c7430055f5bf562458f61f69f5f377e39f0a53198e8854"
-RPROVIDES:mariadb-backup:x86_64_v2 = "virtual//usr/bin/mariabackup"
+RPROVIDES:mariadb-backup:append:x86_64_v2 = " virtual//usr/bin/mariabackup"
 
-URI_x86_64_v2_mariadb-client-utils = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-client-utils-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb-client-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mariadb-client-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-client-utils-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb-client-utils;unpack=0"
 SRC_URI[x86_64_v2_mariadb-client-utils.sha256sum] = "6993a635a68673ad29431da3e9fa79e0427a309a83713118178cca0fcd6a5966"
 
-URI_x86_64_v2_mariadb-common = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-common-10.11.18-1.el10.alma.1.noarch.rpm;name=x86_64_v2_mariadb-common;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mariadb-common}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-common-10.11.18-1.el10.alma.1.noarch.rpm;name=x86_64_v2_mariadb-common;unpack=0"
 SRC_URI[x86_64_v2_mariadb-common.sha256sum] = "4e5eb9220ea81e61cc22ed4ff7707aa40c3eb8b1a98d6c9416bd10c4363eda42"
 
-URI_x86_64_v2_mariadb-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-devel-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mariadb-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-devel-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb-devel;unpack=0"
 SRC_URI[x86_64_v2_mariadb-devel.sha256sum] = "48b03c66988f3f4e10d2f29308f1629115ebcaea551186ea165ea25848add5cb"
 
-URI_x86_64_v2_mariadb-embedded = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-embedded-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb-embedded;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mariadb-embedded}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-embedded-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb-embedded;unpack=0"
 SRC_URI[x86_64_v2_mariadb-embedded.sha256sum] = "51c81388ca43c61498bf97bd8bbccfc1a71628a243db43f5623451d20cf056dc"
-RPROVIDES:mariadb-embedded:x86_64_v2 = "virtual/libmariadbd.so.19___64bit_"
+RPROVIDES:mariadb-embedded:append:x86_64_v2 = " virtual/libmariadbd.so.19___64bit_"
 
-URI_x86_64_v2_mariadb-embedded-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-embedded-devel-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb-embedded-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mariadb-embedded-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-embedded-devel-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb-embedded-devel;unpack=0"
 SRC_URI[x86_64_v2_mariadb-embedded-devel.sha256sum] = "1ae2572177c82173a3a7805f2f3333e9aeceaf661c013d03dd7d81a3ec562b40"
 
-URI_x86_64_v2_mariadb-errmsg = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-errmsg-10.11.18-1.el10.alma.1.noarch.rpm;name=x86_64_v2_mariadb-errmsg;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mariadb-errmsg}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-errmsg-10.11.18-1.el10.alma.1.noarch.rpm;name=x86_64_v2_mariadb-errmsg;unpack=0"
 SRC_URI[x86_64_v2_mariadb-errmsg.sha256sum] = "21d9ab425a2e18c6524bead6b4d14d71a30f19ef469b51358447883bc5679a94"
 
-URI_x86_64_v2_mariadb-gssapi-server = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-gssapi-server-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb-gssapi-server;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mariadb-gssapi-server}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-gssapi-server-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb-gssapi-server;unpack=0"
 SRC_URI[x86_64_v2_mariadb-gssapi-server.sha256sum] = "6147a530b95e2886668344e579c2ae99275288706eedfed0b632879731e63332"
 
-URI_x86_64_v2_mariadb-oqgraph-engine = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-oqgraph-engine-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb-oqgraph-engine;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mariadb-oqgraph-engine}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-oqgraph-engine-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb-oqgraph-engine;unpack=0"
 SRC_URI[x86_64_v2_mariadb-oqgraph-engine.sha256sum] = "ef3c3ebf4af62700b958923c1cdada62683bd9f63908e816fb5f73f8f2a30870"
 
-URI_x86_64_v2_mariadb-pam = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-pam-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb-pam;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mariadb-pam}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-pam-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb-pam;unpack=0"
 SRC_URI[x86_64_v2_mariadb-pam.sha256sum] = "232254d3d8f55e0029133ab9f9f7dda21e83ee457bd9e33675bcdb5b8c61cc87"
 
-URI_x86_64_v2_mariadb-server = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-server-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb-server;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mariadb-server}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-server-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb-server;unpack=0"
 SRC_URI[x86_64_v2_mariadb-server.sha256sum] = "c3be1941ad532e2d3415821dcde440b74480a44bacb387baa98d21bb2ab1e500"
-RPROVIDES:mariadb-server:x86_64_v2 = "virtual/mariadb-server-any"
+RPROVIDES:mariadb-server:append:x86_64_v2 = " virtual/mariadb-server-any"
 
-URI_x86_64_v2_mariadb-server-galera = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-server-galera-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb-server-galera;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mariadb-server-galera}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-server-galera-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb-server-galera;unpack=0"
 SRC_URI[x86_64_v2_mariadb-server-galera.sha256sum] = "4230531675ca8481152cc3cb46d97cc39494158313afd0291b5509796ded096c"
 
-URI_x86_64_v2_mariadb-server-utils = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-server-utils-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb-server-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mariadb-server-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-server-utils-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb-server-utils;unpack=0"
 SRC_URI[x86_64_v2_mariadb-server-utils.sha256sum] = "ca48f5697961d910bc6d2e4bd74e1e45301983af8920582796604b7cfb2dce6b"
 
-URI_x86_64_v2_mariadb-test = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-test-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb-test;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mariadb-test}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mariadb-test-10.11.18-1.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_mariadb-test;unpack=0"
 SRC_URI[x86_64_v2_mariadb-test.sha256sum] = "def6b99a72a13f8e44a95e9962240714cd2bfcef80825037219e91999db60d44"
 
-URI_aarch64_mariadb = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mariadb}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb;unpack=0"
 SRC_URI[aarch64_mariadb.sha256sum] = "f55bc5e78e46326b1dfcae1629e6413fa6ba75e4e0ecb88bb26e53a48e68cd88"
-RPROVIDES:mariadb:aarch64 = "virtual//usr/bin/mariadb-dump virtual//usr/bin/mysqldump virtual/mysql-any_or_mariadb-any"
+RPROVIDES:mariadb:append:aarch64 = " virtual//usr/bin/mariadb-dump virtual//usr/bin/mysqldump virtual/mysql-any_or_mariadb-any"
 
-URI_aarch64_mariadb-backup = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-backup-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb-backup;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mariadb-backup}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-backup-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb-backup;unpack=0"
 SRC_URI[aarch64_mariadb-backup.sha256sum] = "6e8067bc085d2cb461ba478c7e1b2bafc1ceb00eccffeca49cb92a70bfc75618"
-RPROVIDES:mariadb-backup:aarch64 = "virtual//usr/bin/mariabackup"
+RPROVIDES:mariadb-backup:append:aarch64 = " virtual//usr/bin/mariabackup"
 
-URI_aarch64_mariadb-client-utils = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-client-utils-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb-client-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mariadb-client-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-client-utils-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb-client-utils;unpack=0"
 SRC_URI[aarch64_mariadb-client-utils.sha256sum] = "69def84a1b355dedafac3ab3999315276aca8e5caab51e93c8a1a0ba076a5569"
 
-URI_aarch64_mariadb-common = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-common-10.11.18-1.el10.alma.1.noarch.rpm;name=aarch64_mariadb-common;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mariadb-common}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-common-10.11.18-1.el10.alma.1.noarch.rpm;name=aarch64_mariadb-common;unpack=0"
 SRC_URI[aarch64_mariadb-common.sha256sum] = "4e5eb9220ea81e61cc22ed4ff7707aa40c3eb8b1a98d6c9416bd10c4363eda42"
 
-URI_aarch64_mariadb-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-devel-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mariadb-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-devel-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb-devel;unpack=0"
 SRC_URI[aarch64_mariadb-devel.sha256sum] = "9536dd8805ddd61dd56b5208bd69e2a086642eae5027609adeb07a8b52898e84"
 
-URI_aarch64_mariadb-embedded = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-embedded-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb-embedded;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mariadb-embedded}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-embedded-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb-embedded;unpack=0"
 SRC_URI[aarch64_mariadb-embedded.sha256sum] = "c2577acf38ad184fc59c90346320c18a864e9c75352fa9b6fd642f8be5fa68ad"
-RPROVIDES:mariadb-embedded:aarch64 = "virtual/libmariadbd.so.19___64bit_"
+RPROVIDES:mariadb-embedded:append:aarch64 = " virtual/libmariadbd.so.19___64bit_"
 
-URI_aarch64_mariadb-embedded-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-embedded-devel-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb-embedded-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mariadb-embedded-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-embedded-devel-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb-embedded-devel;unpack=0"
 SRC_URI[aarch64_mariadb-embedded-devel.sha256sum] = "3f5bd8be5389b399ef06e5a494c71173f3cc1a334a31576bf143e222d6cb3ed7"
 
-URI_aarch64_mariadb-errmsg = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-errmsg-10.11.18-1.el10.alma.1.noarch.rpm;name=aarch64_mariadb-errmsg;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mariadb-errmsg}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-errmsg-10.11.18-1.el10.alma.1.noarch.rpm;name=aarch64_mariadb-errmsg;unpack=0"
 SRC_URI[aarch64_mariadb-errmsg.sha256sum] = "21d9ab425a2e18c6524bead6b4d14d71a30f19ef469b51358447883bc5679a94"
 
-URI_aarch64_mariadb-gssapi-server = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-gssapi-server-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb-gssapi-server;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mariadb-gssapi-server}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-gssapi-server-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb-gssapi-server;unpack=0"
 SRC_URI[aarch64_mariadb-gssapi-server.sha256sum] = "930c01b055dfbbf579fe792e4476ef77db5c5eb3d2359f54b1824c0642b13986"
 
-URI_aarch64_mariadb-oqgraph-engine = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-oqgraph-engine-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb-oqgraph-engine;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mariadb-oqgraph-engine}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-oqgraph-engine-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb-oqgraph-engine;unpack=0"
 SRC_URI[aarch64_mariadb-oqgraph-engine.sha256sum] = "3e8404d335adec4bed8e372ec8c0c9b50bc52b980e3f6b7c50fe80b9306ddb3e"
 
-URI_aarch64_mariadb-pam = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-pam-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb-pam;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mariadb-pam}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-pam-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb-pam;unpack=0"
 SRC_URI[aarch64_mariadb-pam.sha256sum] = "dab769c759cd6a145b2ed91cfd16d805eac8b538e844a0e065d4926f33b565bd"
 
-URI_aarch64_mariadb-server = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-server-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb-server;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mariadb-server}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-server-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb-server;unpack=0"
 SRC_URI[aarch64_mariadb-server.sha256sum] = "e40ac945baeeb582a0b58705ddb5516574e364da9b36994224375666c831593f"
-RPROVIDES:mariadb-server:aarch64 = "virtual/mariadb-server-any"
+RPROVIDES:mariadb-server:append:aarch64 = " virtual/mariadb-server-any"
 
-URI_aarch64_mariadb-server-galera = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-server-galera-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb-server-galera;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mariadb-server-galera}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-server-galera-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb-server-galera;unpack=0"
 SRC_URI[aarch64_mariadb-server-galera.sha256sum] = "c4b120befbd0fe938a9ede8a83c66222bbf1ae6816e1d18a97307cee1f998d50"
 
-URI_aarch64_mariadb-server-utils = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-server-utils-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb-server-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mariadb-server-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-server-utils-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb-server-utils;unpack=0"
 SRC_URI[aarch64_mariadb-server-utils.sha256sum] = "6e4090e5ee55656dd1205d8047d8f60255c9aa055f54b6ca970fa6b1d7249149"
 
-URI_aarch64_mariadb-test = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-test-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb-test;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mariadb-test}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mariadb-test-10.11.18-1.el10.alma.1.aarch64.rpm;name=aarch64_mariadb-test;unpack=0"
 SRC_URI[aarch64_mariadb-test.sha256sum] = "eaaa82fecd8feb2fac26caa271204ef8735ee43e7792b82ab88a36602b97e96d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/mariadb-10.11.18-1.el10.alma.1.riscv64.rpm;name=riscv64_mariadb;unpack=0"
+SRC_URI[riscv64_mariadb.sha256sum] = "2dc1cd3a4dc1df037d5aff6fe78a3567618e1a13449c2c8041e731ef3e3c9391"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/mariadb-backup-10.11.18-1.el10.alma.1.riscv64.rpm;name=riscv64_mariadb-backup;unpack=0"
+SRC_URI[riscv64_mariadb-backup.sha256sum] = "490d4b5cc28eb306d6a90a6371255cef227cd956acf6350b45542a7a6683184f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/mariadb-client-utils-10.11.18-1.el10.alma.1.riscv64.rpm;name=riscv64_mariadb-client-utils;unpack=0"
+SRC_URI[riscv64_mariadb-client-utils.sha256sum] = "ad63c7de14e49c586a09c2162b11db9a45632196348a42753f24ac90ad4f7a7a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/mariadb-common-10.11.18-1.el10.alma.1.noarch.rpm;name=riscv64_mariadb-common;unpack=0"
+SRC_URI[riscv64_mariadb-common.sha256sum] = "4e5eb9220ea81e61cc22ed4ff7707aa40c3eb8b1a98d6c9416bd10c4363eda42"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/mariadb-devel-10.11.18-1.el10.alma.1.riscv64.rpm;name=riscv64_mariadb-devel;unpack=0"
+SRC_URI[riscv64_mariadb-devel.sha256sum] = "47650cd92a47ae4eb5cc8ad40291ae32a3e9d6e99fef5f8562bff9789d272b27"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/mariadb-embedded-10.11.18-1.el10.alma.1.riscv64.rpm;name=riscv64_mariadb-embedded;unpack=0"
+SRC_URI[riscv64_mariadb-embedded.sha256sum] = "11afc6b37247c96bfc6871b67a47dd256abee343196dc8437879a505b224da58"
+RPROVIDES:mariadb-embedded:append:riscv64 = " virtual/libmariadbd.so.19___64bit_"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/mariadb-embedded-devel-10.11.18-1.el10.alma.1.riscv64.rpm;name=riscv64_mariadb-embedded-devel;unpack=0"
+SRC_URI[riscv64_mariadb-embedded-devel.sha256sum] = "8d0753fed92b0c1070c217ce2426d1c37c3c9b8cc8b5b17a87bebb76acd539dc"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/mariadb-errmsg-10.11.18-1.el10.alma.1.noarch.rpm;name=riscv64_mariadb-errmsg;unpack=0"
+SRC_URI[riscv64_mariadb-errmsg.sha256sum] = "21d9ab425a2e18c6524bead6b4d14d71a30f19ef469b51358447883bc5679a94"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/mariadb-gssapi-server-10.11.18-1.el10.alma.1.riscv64.rpm;name=riscv64_mariadb-gssapi-server;unpack=0"
+SRC_URI[riscv64_mariadb-gssapi-server.sha256sum] = "f3785cfd70231fd8ac8b00746164daa1c8c97e6f042ed52cd9a946de018f57d1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/mariadb-oqgraph-engine-10.11.18-1.el10.alma.1.riscv64.rpm;name=riscv64_mariadb-oqgraph-engine;unpack=0"
+SRC_URI[riscv64_mariadb-oqgraph-engine.sha256sum] = "dfe90c269a7c0cd8ca30cb3e8041db8e04803a396d999168556f7d7e2214a749"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/mariadb-pam-10.11.18-1.el10.alma.1.riscv64.rpm;name=riscv64_mariadb-pam;unpack=0"
+SRC_URI[riscv64_mariadb-pam.sha256sum] = "41d0e61c19ca624f6fd9e354ca463640044d8934b41a4c989e418f71d7be1072"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/mariadb-server-10.11.18-1.el10.alma.1.riscv64.rpm;name=riscv64_mariadb-server;unpack=0"
+SRC_URI[riscv64_mariadb-server.sha256sum] = "1a43fdd093b77ba8d0681a58a0d62522391adf730ae6c550f31f9750c8f36163"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/mariadb-server-galera-10.11.18-1.el10.alma.1.riscv64.rpm;name=riscv64_mariadb-server-galera;unpack=0"
+SRC_URI[riscv64_mariadb-server-galera.sha256sum] = "7144d6c4ebab081d1348760dfd55362ff8fadcd23da6991e8ae7b94b7c7f9ec7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/mariadb-server-utils-10.11.18-1.el10.alma.1.riscv64.rpm;name=riscv64_mariadb-server-utils;unpack=0"
+SRC_URI[riscv64_mariadb-server-utils.sha256sum] = "7088dc6d0e3afb33b731a51a02d929cfb9e4ed8be680495d917e11f72e24cbbc"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/mariadb-test-10.11.18-1.el10.alma.1.riscv64.rpm;name=riscv64_mariadb-test;unpack=0"
+SRC_URI[riscv64_mariadb-test.sha256sum] = "9e5a575bf3808760b2eca7074eb2cd2bb1e5664d76ec8c57cc47b48ba4213045"
 
 RDEPENDS:mariadb = " \
  bash \
@@ -277,7 +292,7 @@ RDEPENDS:mariadb-server-galera = " \
  policycoreutils-python-utils \
  rsync \
  "
-RDEPENDS:mariadb-server-utils = " \
+RDEPENDS:mariadb-server-utils:x86_64_v2 = " \
  glibc \
  mariadb-server \
  perl-DBD-MariaDB \
@@ -293,7 +308,42 @@ RDEPENDS:mariadb-server-utils = " \
  perl-interpreter \
  perl-libs \
  perl-vars \
- "
+"
+RDEPENDS:mariadb-server-utils:aarch64 = " \
+ glibc \
+ mariadb-server \
+ perl-DBD-MariaDB \
+ perl-DBI \
+ perl-Data-Dumper \
+ perl-File-Basename \
+ perl-File-Copy \
+ perl-File-Path \
+ perl-File-Temp \
+ perl-Getopt-Long \
+ perl-POSIX \
+ perl-Sys-Hostname \
+ perl-interpreter \
+ perl-libs \
+ perl-vars \
+"
+RDEPENDS:mariadb-server-utils:riscv64 = " \
+ glibc \
+ libgcc \
+ mariadb-server \
+ perl-DBD-MariaDB \
+ perl-DBI \
+ perl-Data-Dumper \
+ perl-File-Basename \
+ perl-File-Copy \
+ perl-File-Path \
+ perl-File-Temp \
+ perl-Getopt-Long \
+ perl-POSIX \
+ perl-Sys-Hostname \
+ perl-interpreter \
+ perl-libs \
+ perl-vars \
+"
 RDEPENDS:mariadb-test = " \
  bash \
  glibc \
@@ -344,7 +394,3 @@ RDEPENDS:mariadb-test = " \
  perl-threads-shared \
  zlib-ng-compat \
  "
-
-PROVIDES:append:x86_64_v2 = " rpm/virtual//usr/bin/mariabackup rpm/virtual//usr/bin/mariadb-dump rpm/virtual//usr/bin/mysqldump rpm/virtual/libmariadbd.so.19___64bit_ rpm/virtual/mariadb-server-any rpm/virtual/mysql-any_or_mariadb-any"
-
-PROVIDES:append:aarch64 = " rpm/virtual//usr/bin/mariabackup rpm/virtual//usr/bin/mariadb-dump rpm/virtual//usr/bin/mysqldump rpm/virtual/libmariadbd.so.19___64bit_ rpm/virtual/mariadb-server-any rpm/virtual/mysql-any_or_mariadb-any"

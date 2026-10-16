@@ -11,35 +11,38 @@ PACKAGES = " \
  mutter-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/mutter-49.4-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/mutter-49.4-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "4ff17281a5beaf0b2ee27b0096587da566ad2f06af938bad00549b546faa5930"
 
-URI_x86_64_v2_mutter = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mutter-49.4-6.el10.x86_64_v2.rpm;name=x86_64_v2_mutter;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mutter}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mutter-49.4-6.el10.x86_64_v2.rpm;name=x86_64_v2_mutter;unpack=0"
 SRC_URI[x86_64_v2_mutter.sha256sum] = "ce7ed6cd80236ccedd4e4783e864ec7ecb4f0522cf36fe267881292ea09eaff8"
-RPROVIDES:mutter:x86_64_v2 = "virtual/weston_or_cage_or_kwin-wayland_or_mutter_or_gnome-kiosk"
+RPROVIDES:mutter:append:x86_64_v2 = " virtual/weston_or_cage_or_kwin-wayland_or_mutter_or_gnome-kiosk"
 
-URI_x86_64_v2_mutter-common = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mutter-common-49.4-6.el10.noarch.rpm;name=x86_64_v2_mutter-common;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mutter-common}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/mutter-common-49.4-6.el10.noarch.rpm;name=x86_64_v2_mutter-common;unpack=0"
 SRC_URI[x86_64_v2_mutter-common.sha256sum] = "8612bd79ccffe2082fc6778f84d8caf14580fdf9befc08bef15d7893c55e30b3"
 
-URI_x86_64_v2_mutter-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/mutter-devel-49.4-6.el10.x86_64_v2.rpm;name=x86_64_v2_mutter-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mutter-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/mutter-devel-49.4-6.el10.x86_64_v2.rpm;name=x86_64_v2_mutter-devel;unpack=0"
 SRC_URI[x86_64_v2_mutter-devel.sha256sum] = "f2a5e5ee1b1ae2bca6598b79cbcb39b6b6673ef6b9d505d9b6b79abe19384a94"
 
-URI_aarch64_mutter = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mutter-49.4-6.el10.aarch64.rpm;name=aarch64_mutter;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mutter}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mutter-49.4-6.el10.aarch64.rpm;name=aarch64_mutter;unpack=0"
 SRC_URI[aarch64_mutter.sha256sum] = "db6f675b21b4a21fc053dfb54641736d826d8833cec2a06b059e03fadcb8b3e7"
-RPROVIDES:mutter:aarch64 = "virtual/weston_or_cage_or_kwin-wayland_or_mutter_or_gnome-kiosk"
+RPROVIDES:mutter:append:aarch64 = " virtual/weston_or_cage_or_kwin-wayland_or_mutter_or_gnome-kiosk"
 
-URI_aarch64_mutter-common = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mutter-common-49.4-6.el10.noarch.rpm;name=aarch64_mutter-common;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mutter-common}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/mutter-common-49.4-6.el10.noarch.rpm;name=aarch64_mutter-common;unpack=0"
 SRC_URI[aarch64_mutter-common.sha256sum] = "8612bd79ccffe2082fc6778f84d8caf14580fdf9befc08bef15d7893c55e30b3"
 
-URI_aarch64_mutter-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/mutter-devel-49.4-6.el10.aarch64.rpm;name=aarch64_mutter-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mutter-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/mutter-devel-49.4-6.el10.aarch64.rpm;name=aarch64_mutter-devel;unpack=0"
 SRC_URI[aarch64_mutter-devel.sha256sum] = "40a8aa4efea4d4efae7fb66a8129b90c9e519ed0c6c8268c9ca572bf4b34d830"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/mutter-49.4-6.el10.riscv64.rpm;name=riscv64_mutter;unpack=0"
+SRC_URI[riscv64_mutter.sha256sum] = "1ed129d15010baca64d6225d70fd5b1c5af2d75327c92ab4f6e7140efcbaf84f"
+RPROVIDES:mutter:append:riscv64 = " virtual/weston_or_cage_or_kwin-wayland_or_mutter_or_gnome-kiosk"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/mutter-common-49.4-6.el10.noarch.rpm;name=riscv64_mutter-common;unpack=0"
+SRC_URI[riscv64_mutter-common.sha256sum] = "8612bd79ccffe2082fc6778f84d8caf14580fdf9befc08bef15d7893c55e30b3"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/mutter-devel-49.4-6.el10.riscv64.rpm;name=riscv64_mutter-devel;unpack=0"
+SRC_URI[riscv64_mutter-devel.sha256sum] = "f853af5533ce340493abe075305e611f9ed6e168246a994e0400a070d26a34ea"
 
 RDEPENDS:mutter = " \
  atk \
@@ -164,7 +167,3 @@ RDEPENDS:mutter-devel = " \
  systemd-devel \
  wayland-devel \
  "
-
-PROVIDES:append:x86_64_v2 = " rpm/virtual/weston_or_cage_or_kwin-wayland_or_mutter_or_gnome-kiosk"
-
-PROVIDES:append:aarch64 = " rpm/virtual/weston_or_cage_or_kwin-wayland_or_mutter_or_gnome-kiosk"

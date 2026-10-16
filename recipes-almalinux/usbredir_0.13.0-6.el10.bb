@@ -11,33 +11,35 @@ PACKAGES = " \
  usbredir-tools \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/usbredir-0.13.0-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/usbredir-0.13.0-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "2b3cd63a3540fd8f305cc8ddb2bd6f91d72f2fab56f34380e7bc7640d062111f"
 
-URI_x86_64_v2_usbredir = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/usbredir-0.13.0-6.el10.x86_64_v2.rpm;name=x86_64_v2_usbredir;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_usbredir}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/usbredir-0.13.0-6.el10.x86_64_v2.rpm;name=x86_64_v2_usbredir;unpack=0"
 SRC_URI[x86_64_v2_usbredir.sha256sum] = "a27c978a7bc82e2d16aedf4d938d7e5fec253600e3d0f87831fabb718fdcfa72"
 
-URI_x86_64_v2_usbredir-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/usbredir-devel-0.13.0-6.el10.x86_64_v2.rpm;name=x86_64_v2_usbredir-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_usbredir-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/usbredir-devel-0.13.0-6.el10.x86_64_v2.rpm;name=x86_64_v2_usbredir-devel;unpack=0"
 SRC_URI[x86_64_v2_usbredir-devel.sha256sum] = "ad7bd0b2420a878deb3452ac231bc16e7a6f6db0173b32a5374e8d4257e01526"
 
-URI_x86_64_v2_usbredir-tools = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/usbredir-tools-0.13.0-6.el10.x86_64_v2.rpm;name=x86_64_v2_usbredir-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_usbredir-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/usbredir-tools-0.13.0-6.el10.x86_64_v2.rpm;name=x86_64_v2_usbredir-tools;unpack=0"
 SRC_URI[x86_64_v2_usbredir-tools.sha256sum] = "7e22c484b0a20c56ca290d8160292c70c9f865b448027e6b6981fb7fe19888f2"
 
-URI_aarch64_usbredir = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/usbredir-0.13.0-6.el10.aarch64.rpm;name=aarch64_usbredir;unpack=0"
-SRC_URI:append = " ${URI_aarch64_usbredir}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/usbredir-0.13.0-6.el10.aarch64.rpm;name=aarch64_usbredir;unpack=0"
 SRC_URI[aarch64_usbredir.sha256sum] = "5f8701a52cd9f6b9e9ff483e024e60c39168b821dfbf04abb0046cd4735c84b5"
 
-URI_aarch64_usbredir-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/usbredir-devel-0.13.0-6.el10.aarch64.rpm;name=aarch64_usbredir-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_usbredir-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/usbredir-devel-0.13.0-6.el10.aarch64.rpm;name=aarch64_usbredir-devel;unpack=0"
 SRC_URI[aarch64_usbredir-devel.sha256sum] = "69b1324dd1b0e9bb64f8dc9e2376c82471add7d34dc9d342f3b16ea3e00c6832"
 
-URI_aarch64_usbredir-tools = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/usbredir-tools-0.13.0-6.el10.aarch64.rpm;name=aarch64_usbredir-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_usbredir-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/usbredir-tools-0.13.0-6.el10.aarch64.rpm;name=aarch64_usbredir-tools;unpack=0"
 SRC_URI[aarch64_usbredir-tools.sha256sum] = "38fb2413513fa6e6ed55b145b29f4d0ee693dfe2e45a1e40441e7234e2947ac8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/usbredir-0.13.0-6.el10.riscv64.rpm;name=riscv64_usbredir;unpack=0"
+SRC_URI[riscv64_usbredir.sha256sum] = "566277ee3e3580761919958e44a5f5dfb990ee1ce0116439a08fb296de5c0748"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/usbredir-devel-0.13.0-6.el10.riscv64.rpm;name=riscv64_usbredir-devel;unpack=0"
+SRC_URI[riscv64_usbredir-devel.sha256sum] = "be989152985858dc6408515ae32c269b9859b4d84f6498e0c22de0b18d061a58"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/usbredir-tools-0.13.0-6.el10.riscv64.rpm;name=riscv64_usbredir-tools;unpack=0"
+SRC_URI[riscv64_usbredir-tools.sha256sum] = "223e8b0f135c87c8a9d9043607542c012af2735ef4c74cb332f60712475980d9"
 
 RDEPENDS:usbredir = " \
  glibc \

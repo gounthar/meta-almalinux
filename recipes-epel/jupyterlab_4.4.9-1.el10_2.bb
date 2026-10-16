@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "jupyterlab"
 PV = "4.4.9"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  jupyterlab \
- "
+"
+PACKAGES:aarch64 = " \
+ jupyterlab \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/j/jupyterlab-4.4.9-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/j/jupyterlab-4.4.9-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "67fd2ff8f6140dd15ba5e5ed6d0e1e03988ee7f0c6a0912feece0e850223eb5c"
 
-URI_x86_64_v2_jupyterlab = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/jupyterlab-4.4.9-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_jupyterlab;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_jupyterlab}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/jupyterlab-4.4.9-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_jupyterlab;unpack=0"
 SRC_URI[x86_64_v2_jupyterlab.sha256sum] = "7d566d6c7366e638b081d83b5885f4e9f6b38c09163c5d65a1d3df2f822b2a25"
 
-URI_aarch64_jupyterlab = "${EPEL_MIRROR}/aarch64/Packages/j/jupyterlab-4.4.9-1.el10_2.noarch.rpm;name=aarch64_jupyterlab;unpack=0"
-SRC_URI:append = " ${URI_aarch64_jupyterlab}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/j/jupyterlab-4.4.9-1.el10_2.noarch.rpm;name=aarch64_jupyterlab;unpack=0"
 SRC_URI[aarch64_jupyterlab.sha256sum] = "e99353c8e08e0d0dbefbf4222a90dc750885cb1eba3c86c7ac46583a9b88e30d"
 
 RDEPENDS:jupyterlab = " \

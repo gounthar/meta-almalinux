@@ -10,25 +10,26 @@ PACKAGES = " \
  python3.14-psycopg2-tests \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python3.14-psycopg2-2.9.10-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python3.14-psycopg2-2.9.10-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e87adcf12c54d691b75fdcb7957503692c9eeb6c7d0ad01df372c76d1725bd9b"
 
-URI_x86_64_v2_python3.14-psycopg2 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3.14-psycopg2-2.9.10-3.el10.x86_64_v2.rpm;name=x86_64_v2_python3.14-psycopg2;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3.14-psycopg2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3.14-psycopg2-2.9.10-3.el10.x86_64_v2.rpm;name=x86_64_v2_python3.14-psycopg2;unpack=0"
 SRC_URI[x86_64_v2_python3.14-psycopg2.sha256sum] = "9ca5e4c87a8400dcf3ab18974bebaacad39c245a631438bc230a3bbbf5dca20d"
 
-URI_x86_64_v2_python3.14-psycopg2-tests = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3.14-psycopg2-tests-2.9.10-3.el10.x86_64_v2.rpm;name=x86_64_v2_python3.14-psycopg2-tests;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3.14-psycopg2-tests}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3.14-psycopg2-tests-2.9.10-3.el10.x86_64_v2.rpm;name=x86_64_v2_python3.14-psycopg2-tests;unpack=0"
 SRC_URI[x86_64_v2_python3.14-psycopg2-tests.sha256sum] = "b94f2a7e42e7f7985f34d446a72d02eb24ea4742f1a418c6f4bedcdd78b603c4"
 
-URI_aarch64_python3.14-psycopg2 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3.14-psycopg2-2.9.10-3.el10.aarch64.rpm;name=aarch64_python3.14-psycopg2;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3.14-psycopg2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3.14-psycopg2-2.9.10-3.el10.aarch64.rpm;name=aarch64_python3.14-psycopg2;unpack=0"
 SRC_URI[aarch64_python3.14-psycopg2.sha256sum] = "3cf123a71081f72039094e41d81f0a142feb15ea655539d66c00ace9a0698bc6"
 
-URI_aarch64_python3.14-psycopg2-tests = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3.14-psycopg2-tests-2.9.10-3.el10.aarch64.rpm;name=aarch64_python3.14-psycopg2-tests;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3.14-psycopg2-tests}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3.14-psycopg2-tests-2.9.10-3.el10.aarch64.rpm;name=aarch64_python3.14-psycopg2-tests;unpack=0"
 SRC_URI[aarch64_python3.14-psycopg2-tests.sha256sum] = "d38c61a94cae1693ad95f81e62b90d1515b3ac01731fcb91fa8688099ee55a71"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3.14-psycopg2-2.9.10-3.el10.riscv64.rpm;name=riscv64_python3.14-psycopg2;unpack=0"
+SRC_URI[riscv64_python3.14-psycopg2.sha256sum] = "fb812cd3618073b43fa2a791a09ae894b15d5188b5119af0c7b47d6ea3352b90"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/python3.14-psycopg2-tests-2.9.10-3.el10.riscv64.rpm;name=riscv64_python3.14-psycopg2-tests;unpack=0"
+SRC_URI[riscv64_python3.14-psycopg2-tests.sha256sum] = "fca1ceb5a96b9cb7e2d7ac6a48253a00e913d539f2aca4b930ab5f87d6c10d46"
 
 RDEPENDS:python3.14-psycopg2 = " \
  glibc \

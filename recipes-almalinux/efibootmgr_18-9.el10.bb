@@ -9,17 +9,17 @@ PACKAGES = " \
  efibootmgr \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/efibootmgr-18-9.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/efibootmgr-18-9.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "bf394fe37352730faecdbb8b44891ad6c00cc4f943656ebfdaf1f8eb1acd804b"
 
-URI_x86_64_v2_efibootmgr = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/efibootmgr-18-9.el10.x86_64_v2.rpm;name=x86_64_v2_efibootmgr;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_efibootmgr}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/efibootmgr-18-9.el10.x86_64_v2.rpm;name=x86_64_v2_efibootmgr;unpack=0"
 SRC_URI[x86_64_v2_efibootmgr.sha256sum] = "b4d7c8d06eba8fa1b9c245598f736589da5ee1a6b6d1289cfd875b57d172a1a7"
 
-URI_aarch64_efibootmgr = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/efibootmgr-18-9.el10.aarch64.rpm;name=aarch64_efibootmgr;unpack=0"
-SRC_URI:append = " ${URI_aarch64_efibootmgr}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/efibootmgr-18-9.el10.aarch64.rpm;name=aarch64_efibootmgr;unpack=0"
 SRC_URI[aarch64_efibootmgr.sha256sum] = "ac944e6a0a8ed2b34a315db5bd4091f1478dad2b68efc82480a9ea712f6de8e9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/efibootmgr-18-9.el10.riscv64.rpm;name=riscv64_efibootmgr;unpack=0"
+SRC_URI[riscv64_efibootmgr.sha256sum] = "21e8ff5cdf223a84cfe5f73c60eca83de61223a5cfe0d70045a370ac840fb89e"
 
 RDEPENDS:efibootmgr = " \
  efi-filesystem \

@@ -18,45 +18,38 @@ PACKAGES:aarch64 = " \
  ghc-rpmbuild-order-prof \
  rpmbuild-order \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rpmbuild-order-0.4.13-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rpmbuild-order-0.4.13-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "2c170265d98ab4d10c42dd7ddbf79d20c129250c9859277439997e32e5322803"
 
-URI_x86_64_v2_ghc-rpmbuild-order = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-rpmbuild-order-0.4.13-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-rpmbuild-order;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-rpmbuild-order}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-rpmbuild-order-0.4.13-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-rpmbuild-order;unpack=0"
 SRC_URI[x86_64_v2_ghc-rpmbuild-order.sha256sum] = "34aac65287857b50083906cbcb8790e849ddcb1e28df0a50dcd5f302e44b914a"
 
-URI_x86_64_v2_ghc-rpmbuild-order-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-rpmbuild-order-devel-0.4.13-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-rpmbuild-order-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-rpmbuild-order-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-rpmbuild-order-devel-0.4.13-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_ghc-rpmbuild-order-devel;unpack=0"
 SRC_URI[x86_64_v2_ghc-rpmbuild-order-devel.sha256sum] = "00c28fed0dae694cf75deabca5a670fd85513210a90ceb857142262649218953"
 
-URI_x86_64_v2_ghc-rpmbuild-order-doc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-rpmbuild-order-doc-0.4.13-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_ghc-rpmbuild-order-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ghc-rpmbuild-order-doc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/ghc-rpmbuild-order-doc-0.4.13-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_ghc-rpmbuild-order-doc;unpack=0"
 SRC_URI[x86_64_v2_ghc-rpmbuild-order-doc.sha256sum] = "27ee0d5272a7e818ccedee221fcbca3d90f665c1cc87f1a7ac0bbc9d487274cd"
 
-URI_x86_64_v2_rpmbuild-order = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rpmbuild-order-0.4.13-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rpmbuild-order;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rpmbuild-order}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rpmbuild-order-0.4.13-1.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_rpmbuild-order;unpack=0"
 SRC_URI[x86_64_v2_rpmbuild-order.sha256sum] = "2100fc2316b4ee6b873b59bcfb358bd5acc7fd886d021a4ba0f1b06eac29e8e5"
 
-URI_aarch64_ghc-rpmbuild-order = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-rpmbuild-order-0.4.13-1.el10_2.aarch64.rpm;name=aarch64_ghc-rpmbuild-order;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-rpmbuild-order}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-rpmbuild-order-0.4.13-1.el10_2.aarch64.rpm;name=aarch64_ghc-rpmbuild-order;unpack=0"
 SRC_URI[aarch64_ghc-rpmbuild-order.sha256sum] = "29e65d4292d29f6dffa4fe572ea765202bf4c3d0dee30457c30e430a740db357"
 
-URI_aarch64_ghc-rpmbuild-order-devel = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-rpmbuild-order-devel-0.4.13-1.el10_2.aarch64.rpm;name=aarch64_ghc-rpmbuild-order-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-rpmbuild-order-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-rpmbuild-order-devel-0.4.13-1.el10_2.aarch64.rpm;name=aarch64_ghc-rpmbuild-order-devel;unpack=0"
 SRC_URI[aarch64_ghc-rpmbuild-order-devel.sha256sum] = "d14fcae9ad0e2cd9e9c126e46f7be24a7874fb721119686424d14b9d9ba8f756"
 
-URI_aarch64_ghc-rpmbuild-order-doc = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-rpmbuild-order-doc-0.4.13-1.el10_2.noarch.rpm;name=aarch64_ghc-rpmbuild-order-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-rpmbuild-order-doc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-rpmbuild-order-doc-0.4.13-1.el10_2.noarch.rpm;name=aarch64_ghc-rpmbuild-order-doc;unpack=0"
 SRC_URI[aarch64_ghc-rpmbuild-order-doc.sha256sum] = "6dbb034a895dcd9d1731c161be980d5c8e0fc55a467a9f4db6e98f166714b690"
 
-URI_aarch64_ghc-rpmbuild-order-prof = "${EPEL_MIRROR}/aarch64/Packages/g/ghc-rpmbuild-order-prof-0.4.13-1.el10_2.aarch64.rpm;name=aarch64_ghc-rpmbuild-order-prof;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ghc-rpmbuild-order-prof}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/ghc-rpmbuild-order-prof-0.4.13-1.el10_2.aarch64.rpm;name=aarch64_ghc-rpmbuild-order-prof;unpack=0"
 SRC_URI[aarch64_ghc-rpmbuild-order-prof.sha256sum] = "c9296f593e4a052709077a9085404689797f9dc929631a34cf500d2372ec3fb6"
 
-URI_aarch64_rpmbuild-order = "${EPEL_MIRROR}/aarch64/Packages/r/rpmbuild-order-0.4.13-1.el10_2.aarch64.rpm;name=aarch64_rpmbuild-order;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rpmbuild-order}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rpmbuild-order-0.4.13-1.el10_2.aarch64.rpm;name=aarch64_rpmbuild-order;unpack=0"
 SRC_URI[aarch64_rpmbuild-order.sha256sum] = "f0ff76acba117c51ea17ccc3e41704559e184d24e5361849c859ef46607cd4a7"
 
 RDEPENDS:ghc-rpmbuild-order = " \

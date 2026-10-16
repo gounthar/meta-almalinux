@@ -9,17 +9,17 @@ PACKAGES = " \
  pcsc-lite-ccid \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/pcsc-lite-ccid-1.6.0-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/pcsc-lite-ccid-1.6.0-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6a3e331735ec8f6efd8ccbfc14d83d49ec9cae13a3107b21212b0550c4c48ded"
 
-URI_x86_64_v2_pcsc-lite-ccid = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/pcsc-lite-ccid-1.6.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_pcsc-lite-ccid;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pcsc-lite-ccid}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/pcsc-lite-ccid-1.6.0-2.el10.x86_64_v2.rpm;name=x86_64_v2_pcsc-lite-ccid;unpack=0"
 SRC_URI[x86_64_v2_pcsc-lite-ccid.sha256sum] = "28ad3539ba221601cf2033306d9c8cf1ce69fea984cb4c22b807691c92b9eed5"
 
-URI_aarch64_pcsc-lite-ccid = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/pcsc-lite-ccid-1.6.0-2.el10.aarch64.rpm;name=aarch64_pcsc-lite-ccid;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pcsc-lite-ccid}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/pcsc-lite-ccid-1.6.0-2.el10.aarch64.rpm;name=aarch64_pcsc-lite-ccid;unpack=0"
 SRC_URI[aarch64_pcsc-lite-ccid.sha256sum] = "20bee05be863de25fce775dbd5f694b269691c5123296985b9eca0870de9bbeb"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/pcsc-lite-ccid-1.6.0-2.el10.riscv64.rpm;name=riscv64_pcsc-lite-ccid;unpack=0"
+SRC_URI[riscv64_pcsc-lite-ccid.sha256sum] = "a7b8a7f6c0c4bdf62d981cdb8fd1ec3e0651945ca40a9b20bbadde70415cd9c6"
 
 RDEPENDS:pcsc-lite-ccid = " \
  bash \

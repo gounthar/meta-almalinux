@@ -5,21 +5,31 @@ inherit dnf-bridge
 PN = "php-zstd"
 PV = "0.18.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  php-zstd \
  php-zstd-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ php-zstd \
+ php-zstd-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/php-zstd-0.18.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/php-zstd-0.18.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b7604c80355e6be812a1aceae93213b08db6764675c18e94b583d2589d6e51cf"
 
-URI_aarch64_php-zstd = "${EPEL_MIRROR}/aarch64/Packages/p/php-zstd-0.18.0-1.el10_3.aarch64.rpm;name=aarch64_php-zstd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_php-zstd}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/php-zstd-0.18.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_php-zstd;unpack=0"
+SRC_URI[x86_64_v2_php-zstd.sha256sum] = "0a475c9acfffb72a82342f852f242951f88dc8d26213e6d157e56f13d7943fa2"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/php-zstd-devel-0.18.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_php-zstd-devel;unpack=0"
+SRC_URI[x86_64_v2_php-zstd-devel.sha256sum] = "4a1fc835d380a48426704baaa8f3693081f86d5bc1edd3e9b361204c48c6d7fb"
+
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/php-zstd-0.18.0-1.el10_3.aarch64.rpm;name=aarch64_php-zstd;unpack=0"
 SRC_URI[aarch64_php-zstd.sha256sum] = "fe028787ac62a3917ded108ebc7fe59687e6f21860db5133a07bf9d419524ef5"
 
-URI_aarch64_php-zstd-devel = "${EPEL_MIRROR}/aarch64/Packages/p/php-zstd-devel-0.18.0-1.el10_3.aarch64.rpm;name=aarch64_php-zstd-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_php-zstd-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/php-zstd-devel-0.18.0-1.el10_3.aarch64.rpm;name=aarch64_php-zstd-devel;unpack=0"
 SRC_URI[aarch64_php-zstd-devel.sha256sum] = "807a0a6aeabbfab4d29d4cacbc46f8958a550b3e158579cf04b539c039dd91e9"
 
 RDEPENDS:php-zstd = " \

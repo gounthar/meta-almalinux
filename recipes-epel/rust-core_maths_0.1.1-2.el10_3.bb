@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-core_maths"
 PV = "0.1.1"
 PR = "2.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-core_maths+default-devel \
  rust-core_maths-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-core_maths+default-devel \
+ rust-core_maths-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-core_maths-0.1.1-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-core_maths-0.1.1-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "ca1ef08dadba0b24ed272ffdd9afab0ec4b002d4e52013794c9fd4adeaa3c58a"
 
-URI_x86_64_v2_rust-core_maths+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-core_maths+default-devel-0.1.1-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-core_maths+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-core_maths+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-core_maths+default-devel-0.1.1-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-core_maths+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-core_maths+default-devel.sha256sum] = "bee7de5c31893c3eb6247f037ecab501031a8cc1a787685a9220ec01e3f72add"
 
-URI_x86_64_v2_rust-core_maths-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-core_maths-devel-0.1.1-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-core_maths-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-core_maths-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-core_maths-devel-0.1.1-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-core_maths-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-core_maths-devel.sha256sum] = "8eef0b5321482c37feb71276e0e4bc4960847bb564bcb65c6985e53d45f14458"
 
-URI_aarch64_rust-core_maths+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-core_maths+default-devel-0.1.1-2.el10_3.noarch.rpm;name=aarch64_rust-core_maths+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-core_maths+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-core_maths+default-devel-0.1.1-2.el10_3.noarch.rpm;name=aarch64_rust-core_maths+default-devel;unpack=0"
 SRC_URI[aarch64_rust-core_maths+default-devel.sha256sum] = "5ab4f0455049db4c4124de9f62c1c965267f6498e1990396221d69ab2bf3904a"
 
-URI_aarch64_rust-core_maths-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-core_maths-devel-0.1.1-2.el10_3.noarch.rpm;name=aarch64_rust-core_maths-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-core_maths-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-core_maths-devel-0.1.1-2.el10_3.noarch.rpm;name=aarch64_rust-core_maths-devel;unpack=0"
 SRC_URI[aarch64_rust-core_maths-devel.sha256sum] = "1e861fb1ea7d80c477761fc8d1121b986d614fd6e9e0aa2c43273785bab77de5"
 
 RDEPENDS:rust-core_maths+default-devel = " \

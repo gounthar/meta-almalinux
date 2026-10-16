@@ -10,33 +10,49 @@ PACKAGES = " \
  qt6-qtquicktimeline-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtquicktimeline-6.10.1-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/qt6-qtquicktimeline-6.10.1-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1acf34ebb0122044f4fb07741bad03b8ea0c1b1b81f8e90e48470dc7c7602503"
 
-URI_x86_64_v2_qt6-qtquicktimeline = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtquicktimeline-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtquicktimeline;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtquicktimeline}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtquicktimeline-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtquicktimeline;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtquicktimeline.sha256sum] = "4a77c37446e41034d8b692bf440a9f0826665353452ff5e49969a317bd183666"
 
-URI_x86_64_v2_qt6-qtquicktimeline-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtquicktimeline-devel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtquicktimeline-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_qt6-qtquicktimeline-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/qt6-qtquicktimeline-devel-6.10.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_qt6-qtquicktimeline-devel;unpack=0"
 SRC_URI[x86_64_v2_qt6-qtquicktimeline-devel.sha256sum] = "845deaf8e7d9153c331cda169c399dc26da509bce45888453e25d064a5b583be"
 
-URI_aarch64_qt6-qtquicktimeline = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtquicktimeline-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtquicktimeline;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtquicktimeline}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtquicktimeline-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtquicktimeline;unpack=0"
 SRC_URI[aarch64_qt6-qtquicktimeline.sha256sum] = "3b51883126556f7d6733996c66f6e587ad18914ca4b95964e0051b6578dc721f"
 
-URI_aarch64_qt6-qtquicktimeline-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtquicktimeline-devel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtquicktimeline-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt6-qtquicktimeline-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/qt6-qtquicktimeline-devel-6.10.1-1.el10.aarch64.rpm;name=aarch64_qt6-qtquicktimeline-devel;unpack=0"
 SRC_URI[aarch64_qt6-qtquicktimeline-devel.sha256sum] = "344122f16131186be774fcf4f097a80f326f9527cc88a3cdadfd1261986a0577"
 
-RDEPENDS:qt6-qtquicktimeline = " \
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtquicktimeline-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtquicktimeline;unpack=0"
+SRC_URI[riscv64_qt6-qtquicktimeline.sha256sum] = "ccd2c5e2a3a3fa56e8e9d8abe21841b8a418ae7d72967432ca5a79880994e26d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/qt6-qtquicktimeline-devel-6.10.1-1.el10.riscv64.rpm;name=riscv64_qt6-qtquicktimeline-devel;unpack=0"
+SRC_URI[riscv64_qt6-qtquicktimeline-devel.sha256sum] = "836f3598ec42399a6da5aa8429fb1700df9a614ba26276b16bc7faf4f2af6e2c"
+
+RDEPENDS:qt6-qtquicktimeline:x86_64_v2 = " \
  glibc \
  libstdc++ \
  qt6-qtbase \
  qt6-qtbase-gui \
  qt6-qtdeclarative \
- "
+"
+RDEPENDS:qt6-qtquicktimeline:aarch64 = " \
+ glibc \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtbase-gui \
+ qt6-qtdeclarative \
+"
+RDEPENDS:qt6-qtquicktimeline:riscv64 = " \
+ glibc \
+ libgcc \
+ libstdc++ \
+ qt6-qtbase \
+ qt6-qtbase-gui \
+ qt6-qtdeclarative \
+"
 RDEPENDS:qt6-qtquicktimeline-devel = " \
  cmake-filesystem \
  pkgconf-pkg-config \

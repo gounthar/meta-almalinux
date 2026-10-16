@@ -9,17 +9,17 @@ PACKAGES = " \
  virt-viewer \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/virt-viewer-11.0-10.el10.alma.1.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/virt-viewer-11.0-10.el10.alma.1.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "692b91303cff9cc4f8840289a2bf979f1b49a0e13f73e598ed2e8b89eaa3bfc1"
 
-URI_x86_64_v2_virt-viewer = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/virt-viewer-11.0-10.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_virt-viewer;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_virt-viewer}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/virt-viewer-11.0-10.el10.alma.1.x86_64_v2.rpm;name=x86_64_v2_virt-viewer;unpack=0"
 SRC_URI[x86_64_v2_virt-viewer.sha256sum] = "7a0cba2930ba963220be2a570791c26db1b98ee075a4a05bc379b879117d2efb"
 
-URI_aarch64_virt-viewer = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/virt-viewer-11.0-10.el10.alma.1.aarch64.rpm;name=aarch64_virt-viewer;unpack=0"
-SRC_URI:append = " ${URI_aarch64_virt-viewer}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/virt-viewer-11.0-10.el10.alma.1.aarch64.rpm;name=aarch64_virt-viewer;unpack=0"
 SRC_URI[aarch64_virt-viewer.sha256sum] = "6d11fa8a572f322597c59b323f0e4b1ba3c7deab2b7ecffc0b2767a11efddc77"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/virt-viewer-11.0-10.el10.alma.1.riscv64.rpm;name=riscv64_virt-viewer;unpack=0"
+SRC_URI[riscv64_virt-viewer.sha256sum] = "07fa9881d72c212ce5c3cdfbf32879e372af4d00666c214d7c9805a18ee5f34f"
 
 RDEPENDS:virt-viewer = " \
  gdk-pixbuf2 \

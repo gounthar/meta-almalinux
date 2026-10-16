@@ -6,20 +6,23 @@ PN = "python-azure-identity"
 PE = "1"
 PV = "1.17.1"
 PR = "5.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-azure-identity \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-azure-identity \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-azure-identity-1.17.1-5.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-azure-identity-1.17.1-5.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e3883b2c79f331b7175f5fdeee3d46bf4a5097317c96ed5eddfb038b2d0f3cd0"
 
-URI_x86_64_v2_python3-azure-identity = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-azure-identity-1.17.1-5.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-azure-identity;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-azure-identity}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-azure-identity-1.17.1-5.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-azure-identity;unpack=0"
 SRC_URI[x86_64_v2_python3-azure-identity.sha256sum] = "c92b3fc60596bdf63199ba8cad3885f9162df4086cd07c7ed0276f699c60af49"
 
-URI_aarch64_python3-azure-identity = "${EPEL_MIRROR}/aarch64/Packages/p/python3-azure-identity-1.17.1-5.el10_2.noarch.rpm;name=aarch64_python3-azure-identity;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-azure-identity}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-azure-identity-1.17.1-5.el10_2.noarch.rpm;name=aarch64_python3-azure-identity;unpack=0"
 SRC_URI[aarch64_python3-azure-identity.sha256sum] = "3d5bba41ca84904f62080e218a490ff284cb6c690d8830493171a02375f392e8"
 
 RDEPENDS:python3-azure-identity = " \

@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-lz4"
 PV = "1.28.1"
 PR = "7.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-lz4+default-devel \
  rust-lz4-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-lz4+default-devel \
+ rust-lz4-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-lz4-1.28.1-7.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-lz4-1.28.1-7.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "7f2fba6fa66656bf2e9e6c9f68a51ee6393883b541f7e61b133f3590f685488a"
 
-URI_x86_64_v2_rust-lz4+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-lz4+default-devel-1.28.1-7.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-lz4+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-lz4+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-lz4+default-devel-1.28.1-7.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-lz4+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-lz4+default-devel.sha256sum] = "42be513108091893905620333533ce7cb42765dd9117b8a63a3fb6f82b559a4c"
 
-URI_x86_64_v2_rust-lz4-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-lz4-devel-1.28.1-7.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-lz4-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-lz4-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-lz4-devel-1.28.1-7.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-lz4-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-lz4-devel.sha256sum] = "be1f04fc42893dd967c45cf4441728822ba85452a392f42e5cf2ff19f52b3b99"
 
-URI_aarch64_rust-lz4+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-lz4+default-devel-1.28.1-7.el10_3.noarch.rpm;name=aarch64_rust-lz4+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-lz4+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-lz4+default-devel-1.28.1-7.el10_3.noarch.rpm;name=aarch64_rust-lz4+default-devel;unpack=0"
 SRC_URI[aarch64_rust-lz4+default-devel.sha256sum] = "ca810462f88ed4d0d5bf7c4deb164c221d6dbec9da47c44d0d500200d2eed3cf"
 
-URI_aarch64_rust-lz4-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-lz4-devel-1.28.1-7.el10_3.noarch.rpm;name=aarch64_rust-lz4-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-lz4-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-lz4-devel-1.28.1-7.el10_3.noarch.rpm;name=aarch64_rust-lz4-devel;unpack=0"
 SRC_URI[aarch64_rust-lz4-devel.sha256sum] = "8c7632dc500828d02fb41fba89e0d5e495e7bb139f99f490d0388588ccfbb4da"
 
 RDEPENDS:rust-lz4+default-devel = " \

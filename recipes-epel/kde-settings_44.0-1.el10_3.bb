@@ -5,7 +5,7 @@ inherit dnf-bridge
 PN = "kde-settings"
 PV = "44.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  initial-setup-gui-wayland-plasma \
  kde-settings \
  kde-settings-plasma \
@@ -13,39 +13,65 @@ PACKAGES = " \
  kde-settings-pulseaudio \
  kde-settings-sddm \
  qt-settings \
- "
+"
+PACKAGES:aarch64 = " \
+ initial-setup-gui-wayland-plasma \
+ kde-settings \
+ kde-settings-plasma \
+ kde-settings-plasmalogin \
+ kde-settings-pulseaudio \
+ kde-settings-sddm \
+ qt-settings \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/k/kde-settings-44.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/k/kde-settings-44.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3d5e61c868008b7a94e9b76077dd4f774091d35fea9c84eb6c3a496495373db7"
 
-URI_aarch64_initial-setup-gui-wayland-plasma = "${EPEL_MIRROR}/aarch64/Packages/i/initial-setup-gui-wayland-plasma-44.0-1.el10_3.noarch.rpm;name=aarch64_initial-setup-gui-wayland-plasma;unpack=0"
-SRC_URI:append = " ${URI_aarch64_initial-setup-gui-wayland-plasma}"
-SRC_URI[aarch64_initial-setup-gui-wayland-plasma.sha256sum] = "5fb1be43b4383e154bfa9e18b7ddca70118e6db1a34f205da41060c3d643df07"
-RPROVIDES:initial-setup-gui-wayland-plasma:aarch64 = "virtual/firstboot_gui-backend_"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/initial-setup-gui-wayland-plasma-44.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_initial-setup-gui-wayland-plasma;unpack=0"
+SRC_URI[x86_64_v2_initial-setup-gui-wayland-plasma.sha256sum] = "98dc354885126034661be27fd93870c33a182e8eb1172693578d340c99be8df5"
+RPROVIDES:initial-setup-gui-wayland-plasma:append:x86_64_v2 = " virtual/firstboot_gui-backend_"
 
-URI_aarch64_kde-settings = "${EPEL_MIRROR}/aarch64/Packages/k/kde-settings-44.0-1.el10_3.noarch.rpm;name=aarch64_kde-settings;unpack=0"
-SRC_URI:append = " ${URI_aarch64_kde-settings}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/kde-settings-44.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_kde-settings;unpack=0"
+SRC_URI[x86_64_v2_kde-settings.sha256sum] = "fcdef96e4ac3130dea23742e9a2fced84600f25adeeb70cb67d78e94fefa06c8"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/kde-settings-plasma-44.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_kde-settings-plasma;unpack=0"
+SRC_URI[x86_64_v2_kde-settings-plasma.sha256sum] = "8b93dfd3a9c5f71847d090a722d7b70e567ae5f2b8aaa18a09b1006a0ad8b531"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/kde-settings-plasmalogin-44.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_kde-settings-plasmalogin;unpack=0"
+SRC_URI[x86_64_v2_kde-settings-plasmalogin.sha256sum] = "df553546da7d7c9027e8a0aae080306918c7424393b374551e46cd0e1c5f3661"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/kde-settings-pulseaudio-44.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_kde-settings-pulseaudio;unpack=0"
+SRC_URI[x86_64_v2_kde-settings-pulseaudio.sha256sum] = "d53b1678272ba49dc0cb6ded899fa5239b79bcbfc338603fa59d843a33e2519b"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/kde-settings-sddm-44.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_kde-settings-sddm;unpack=0"
+SRC_URI[x86_64_v2_kde-settings-sddm.sha256sum] = "e480e66901ce43d0c579a3e37d881413ed7144c5600201893e1c1bfe1a54de10"
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/qt-settings-44.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_qt-settings;unpack=0"
+SRC_URI[x86_64_v2_qt-settings.sha256sum] = "7a0c8a9fd77dd8f17dd1c6f412520dde9213291bc6a0a5a25bc552bbfb5692a6"
+
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/i/initial-setup-gui-wayland-plasma-44.0-1.el10_3.noarch.rpm;name=aarch64_initial-setup-gui-wayland-plasma;unpack=0"
+SRC_URI[aarch64_initial-setup-gui-wayland-plasma.sha256sum] = "5fb1be43b4383e154bfa9e18b7ddca70118e6db1a34f205da41060c3d643df07"
+RPROVIDES:initial-setup-gui-wayland-plasma:append:aarch64 = " virtual/firstboot_gui-backend_"
+
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/k/kde-settings-44.0-1.el10_3.noarch.rpm;name=aarch64_kde-settings;unpack=0"
 SRC_URI[aarch64_kde-settings.sha256sum] = "1fdcf621d03e0218a691bf95d3efdb330be74611164e86ca141eec236b72890a"
 
-URI_aarch64_kde-settings-plasma = "${EPEL_MIRROR}/aarch64/Packages/k/kde-settings-plasma-44.0-1.el10_3.noarch.rpm;name=aarch64_kde-settings-plasma;unpack=0"
-SRC_URI:append = " ${URI_aarch64_kde-settings-plasma}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/k/kde-settings-plasma-44.0-1.el10_3.noarch.rpm;name=aarch64_kde-settings-plasma;unpack=0"
 SRC_URI[aarch64_kde-settings-plasma.sha256sum] = "9fada9826370d7546997564b372eed7b630d65c5674604434bbc439d5e0c3ca9"
 
-URI_aarch64_kde-settings-plasmalogin = "${EPEL_MIRROR}/aarch64/Packages/k/kde-settings-plasmalogin-44.0-1.el10_3.noarch.rpm;name=aarch64_kde-settings-plasmalogin;unpack=0"
-SRC_URI:append = " ${URI_aarch64_kde-settings-plasmalogin}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/k/kde-settings-plasmalogin-44.0-1.el10_3.noarch.rpm;name=aarch64_kde-settings-plasmalogin;unpack=0"
 SRC_URI[aarch64_kde-settings-plasmalogin.sha256sum] = "ad5b75f6d1a02b5c7e6905e2e779bcb37fa7595884000151445a6696a2b67a5f"
 
-URI_aarch64_kde-settings-pulseaudio = "${EPEL_MIRROR}/aarch64/Packages/k/kde-settings-pulseaudio-44.0-1.el10_3.noarch.rpm;name=aarch64_kde-settings-pulseaudio;unpack=0"
-SRC_URI:append = " ${URI_aarch64_kde-settings-pulseaudio}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/k/kde-settings-pulseaudio-44.0-1.el10_3.noarch.rpm;name=aarch64_kde-settings-pulseaudio;unpack=0"
 SRC_URI[aarch64_kde-settings-pulseaudio.sha256sum] = "d75a53380bd93bc764c0ad27b19aa5e4c2b5358d716b1c8bd63a17d560776c9a"
 
-URI_aarch64_kde-settings-sddm = "${EPEL_MIRROR}/aarch64/Packages/k/kde-settings-sddm-44.0-1.el10_3.noarch.rpm;name=aarch64_kde-settings-sddm;unpack=0"
-SRC_URI:append = " ${URI_aarch64_kde-settings-sddm}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/k/kde-settings-sddm-44.0-1.el10_3.noarch.rpm;name=aarch64_kde-settings-sddm;unpack=0"
 SRC_URI[aarch64_kde-settings-sddm.sha256sum] = "c2850ac28846f051b7b4ec6d42ea0fed7ccc508f789ce8af0ba059ca29c0857a"
 
-URI_aarch64_qt-settings = "${EPEL_MIRROR}/aarch64/Packages/q/qt-settings-44.0-1.el10_3.noarch.rpm;name=aarch64_qt-settings;unpack=0"
-SRC_URI:append = " ${URI_aarch64_qt-settings}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/q/qt-settings-44.0-1.el10_3.noarch.rpm;name=aarch64_qt-settings;unpack=0"
 SRC_URI[aarch64_qt-settings.sha256sum] = "125c4ea1f4c411cc86c22c347a4081873ef92eda84b851fb9ad74d3a8b2463ea"
 
 RDEPENDS:initial-setup-gui-wayland-plasma = " \
@@ -85,5 +111,3 @@ RDEPENDS:kde-settings-sddm = " \
  "
 RDEPENDS:qt-settings = " \
  "
-
-PROVIDES:append:aarch64 = " rpm/virtual/firstboot_gui-backend_"

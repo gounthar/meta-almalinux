@@ -10,25 +10,26 @@ PACKAGES = " \
  libfabric-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libfabric-2.5.1-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libfabric-2.5.1-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f9f9b1560c665616b6ef6f22c1aadeee75822827c3914d9ccfd7dadb120f1330"
 
-URI_x86_64_v2_libfabric = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libfabric-2.5.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_libfabric;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libfabric}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libfabric-2.5.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_libfabric;unpack=0"
 SRC_URI[x86_64_v2_libfabric.sha256sum] = "d98768be188a19c83305e06c5c45a005a489e7bb62bd23f510cdfd154c74229f"
 
-URI_x86_64_v2_libfabric-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libfabric-devel-2.5.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_libfabric-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libfabric-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libfabric-devel-2.5.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_libfabric-devel;unpack=0"
 SRC_URI[x86_64_v2_libfabric-devel.sha256sum] = "2a4aafe4dcff4be1be29c12008193adbd437e42b974ae600b65d0f1dd575af3a"
 
-URI_aarch64_libfabric = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libfabric-2.5.1-1.el10.aarch64.rpm;name=aarch64_libfabric;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libfabric}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libfabric-2.5.1-1.el10.aarch64.rpm;name=aarch64_libfabric;unpack=0"
 SRC_URI[aarch64_libfabric.sha256sum] = "5ab63e7133f4b423544cc314f75f96d5bf246f609aa7b480fb11d799e4572d98"
 
-URI_aarch64_libfabric-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libfabric-devel-2.5.1-1.el10.aarch64.rpm;name=aarch64_libfabric-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libfabric-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libfabric-devel-2.5.1-1.el10.aarch64.rpm;name=aarch64_libfabric-devel;unpack=0"
 SRC_URI[aarch64_libfabric-devel.sha256sum] = "f8fc620fb1114399c228c37f6c9c57af6e2b538cb903526019f882d80fd9c3fe"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libfabric-2.5.1-1.el10.riscv64.rpm;name=riscv64_libfabric;unpack=0"
+SRC_URI[riscv64_libfabric.sha256sum] = "b30fa313801ae308e19f74a3fb0c12c9137e4ee6a7b3cc1f11eea19a9de96b84"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libfabric-devel-2.5.1-1.el10.riscv64.rpm;name=riscv64_libfabric-devel;unpack=0"
+SRC_URI[riscv64_libfabric-devel.sha256sum] = "b6cdcaa576f00f7d8d04926ade8fd53d3b350c03a9899d19da1d36edd36d5a3f"
 
 RDEPENDS:libfabric:x86_64_v2 = " \
  glibc \
@@ -37,6 +38,13 @@ RDEPENDS:libfabric:x86_64_v2 = " \
  librdmacm \
 "
 RDEPENDS:libfabric:aarch64 = " \
+ glibc \
+ libatomic \
+ libibverbs \
+ libnl3 \
+ librdmacm \
+"
+RDEPENDS:libfabric:riscv64 = " \
  glibc \
  libatomic \
  libibverbs \

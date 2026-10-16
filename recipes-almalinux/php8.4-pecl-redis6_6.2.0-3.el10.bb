@@ -9,19 +9,19 @@ PACKAGES = " \
  php8.4-pecl-redis6 \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/php8.4-pecl-redis6-6.2.0-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/php8.4-pecl-redis6-6.2.0-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6434c2f4e0a7b5fc7459da86635d661dffbf8eb07884d16ae32c68c8c6cfd746"
 
-URI_x86_64_v2_php8.4-pecl-redis6 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/php8.4-pecl-redis6-6.2.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_php8.4-pecl-redis6;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_php8.4-pecl-redis6}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/php8.4-pecl-redis6-6.2.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_php8.4-pecl-redis6;unpack=0"
 SRC_URI[x86_64_v2_php8.4-pecl-redis6.sha256sum] = "d261fdda2a36af3857ceec608b865c4846762e5157e024583ef8c20c5b87e19e"
-RPROVIDES:php8.4-pecl-redis6:x86_64_v2 = "virtual/php-pecl-redis6_or_php-pecl-redis5"
+RPROVIDES:php8.4-pecl-redis6:append:x86_64_v2 = " virtual/php-pecl-redis6_or_php-pecl-redis5"
 
-URI_aarch64_php8.4-pecl-redis6 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/php8.4-pecl-redis6-6.2.0-3.el10.aarch64.rpm;name=aarch64_php8.4-pecl-redis6;unpack=0"
-SRC_URI:append = " ${URI_aarch64_php8.4-pecl-redis6}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/php8.4-pecl-redis6-6.2.0-3.el10.aarch64.rpm;name=aarch64_php8.4-pecl-redis6;unpack=0"
 SRC_URI[aarch64_php8.4-pecl-redis6.sha256sum] = "9a74bab04d09edff8b39a07d50a1ccf4602df37ff2f0be626f5b5a4c2788ad27"
-RPROVIDES:php8.4-pecl-redis6:aarch64 = "virtual/php-pecl-redis6_or_php-pecl-redis5"
+RPROVIDES:php8.4-pecl-redis6:append:aarch64 = " virtual/php-pecl-redis6_or_php-pecl-redis5"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/php8.4-pecl-redis6-6.2.0-3.el10.riscv64.rpm;name=riscv64_php8.4-pecl-redis6;unpack=0"
+SRC_URI[riscv64_php8.4-pecl-redis6.sha256sum] = "17fa30d61debfb0ac0b3397983993df9a1aee795fb1abfb4242dfde6dbc181c0"
 
 RDEPENDS:php8.4-pecl-redis6 = " \
  glibc \
@@ -29,7 +29,3 @@ RDEPENDS:php8.4-pecl-redis6 = " \
  lz4-libs \
  php8.4-common \
  "
-
-PROVIDES:append:x86_64_v2 = " rpm/virtual/php-pecl-redis6_or_php-pecl-redis5"
-
-PROVIDES:append:aarch64 = " rpm/virtual/php-pecl-redis6_or_php-pecl-redis5"

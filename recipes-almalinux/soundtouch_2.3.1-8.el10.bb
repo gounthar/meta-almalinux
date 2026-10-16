@@ -10,25 +10,26 @@ PACKAGES = " \
  soundtouch-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/soundtouch-2.3.1-8.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/soundtouch-2.3.1-8.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "204ccbeeda9421e227c92ca764a5e0d9ff93a662bffca450c6f286946031adf2"
 
-URI_x86_64_v2_soundtouch = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/soundtouch-2.3.1-8.el10.x86_64_v2.rpm;name=x86_64_v2_soundtouch;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_soundtouch}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/soundtouch-2.3.1-8.el10.x86_64_v2.rpm;name=x86_64_v2_soundtouch;unpack=0"
 SRC_URI[x86_64_v2_soundtouch.sha256sum] = "2225d0f262ac05065b36b06879bfddaaef8da620f7cb91c32ff54d3c246a33d0"
 
-URI_x86_64_v2_soundtouch-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/soundtouch-devel-2.3.1-8.el10.x86_64_v2.rpm;name=x86_64_v2_soundtouch-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_soundtouch-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/soundtouch-devel-2.3.1-8.el10.x86_64_v2.rpm;name=x86_64_v2_soundtouch-devel;unpack=0"
 SRC_URI[x86_64_v2_soundtouch-devel.sha256sum] = "5a85a0d06a49db14101e998d298a8edb7230e104791fde70c517728bc6469067"
 
-URI_aarch64_soundtouch = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/soundtouch-2.3.1-8.el10.aarch64.rpm;name=aarch64_soundtouch;unpack=0"
-SRC_URI:append = " ${URI_aarch64_soundtouch}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/soundtouch-2.3.1-8.el10.aarch64.rpm;name=aarch64_soundtouch;unpack=0"
 SRC_URI[aarch64_soundtouch.sha256sum] = "7b6090790d334116812f83b0dc8bdcd120d3c7cc35ca5723757a63b9a0b47aa2"
 
-URI_aarch64_soundtouch-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/soundtouch-devel-2.3.1-8.el10.aarch64.rpm;name=aarch64_soundtouch-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_soundtouch-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/soundtouch-devel-2.3.1-8.el10.aarch64.rpm;name=aarch64_soundtouch-devel;unpack=0"
 SRC_URI[aarch64_soundtouch-devel.sha256sum] = "9c2aef601b3acede6b9915f18d7f24c580c5c548932b7e6012d94901e10adad1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/soundtouch-2.3.1-8.el10.riscv64.rpm;name=riscv64_soundtouch;unpack=0"
+SRC_URI[riscv64_soundtouch.sha256sum] = "40a55d2da653ab92c3e6a81a33d0fa0a78f199ad672d62170436c7f2f0d40d6d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/soundtouch-devel-2.3.1-8.el10.riscv64.rpm;name=riscv64_soundtouch-devel;unpack=0"
+SRC_URI[riscv64_soundtouch-devel.sha256sum] = "75c0b4a72c5740dde8a3a170318435f20ed5ba8db5bc6d682833f1d9eb7d996e"
 
 RDEPENDS:soundtouch = " \
  glibc \

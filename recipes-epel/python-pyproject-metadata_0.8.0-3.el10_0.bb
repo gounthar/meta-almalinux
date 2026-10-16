@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-pyproject-metadata"
 PV = "0.8.0"
 PR = "3.el10_0"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-pyproject-metadata \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-pyproject-metadata \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-pyproject-metadata-0.8.0-3.el10_0.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-pyproject-metadata-0.8.0-3.el10_0.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "9a30713704136802010db6fabbb0c6b3d6f353e6a574b01809d298c2765939d8"
 
-URI_x86_64_v2_python3-pyproject-metadata = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-pyproject-metadata-0.8.0-3.el10_0.alma_altarch.noarch.rpm;name=x86_64_v2_python3-pyproject-metadata;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-pyproject-metadata}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-pyproject-metadata-0.8.0-3.el10_0.alma_altarch.noarch.rpm;name=x86_64_v2_python3-pyproject-metadata;unpack=0"
 SRC_URI[x86_64_v2_python3-pyproject-metadata.sha256sum] = "82bba3e0dd4102c1902f39441ebfcb5cac50b3c9ae68d548126595dc7333e04b"
 
-URI_aarch64_python3-pyproject-metadata = "${EPEL_MIRROR}/aarch64/Packages/p/python3-pyproject-metadata-0.8.0-3.el10_0.noarch.rpm;name=aarch64_python3-pyproject-metadata;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-pyproject-metadata}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-pyproject-metadata-0.8.0-3.el10_0.noarch.rpm;name=aarch64_python3-pyproject-metadata;unpack=0"
 SRC_URI[aarch64_python3-pyproject-metadata.sha256sum] = "708639bdbd6b61d54ae16e06773ca4d800327773691823930f91e2384ccec4b0"
 
 RDEPENDS:python3-pyproject-metadata = " \

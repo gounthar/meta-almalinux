@@ -10,25 +10,26 @@ PACKAGES = " \
  libqmi-utils \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libqmi-1.34.0-9.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libqmi-1.34.0-9.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "905f9321b19862d7a519658cff4da3ea6b93b964f82b553cbf2450851d6e0333"
 
-URI_x86_64_v2_libqmi = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libqmi-1.34.0-9.el10.x86_64_v2.rpm;name=x86_64_v2_libqmi;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libqmi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libqmi-1.34.0-9.el10.x86_64_v2.rpm;name=x86_64_v2_libqmi;unpack=0"
 SRC_URI[x86_64_v2_libqmi.sha256sum] = "07a98973bc51827ff949d93865721b590b47ca2e57e864833feb41edf1ebd6c9"
 
-URI_x86_64_v2_libqmi-utils = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libqmi-utils-1.34.0-9.el10.x86_64_v2.rpm;name=x86_64_v2_libqmi-utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libqmi-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libqmi-utils-1.34.0-9.el10.x86_64_v2.rpm;name=x86_64_v2_libqmi-utils;unpack=0"
 SRC_URI[x86_64_v2_libqmi-utils.sha256sum] = "2e9510b88b0c34d208cc7edabf243a46897617bff6bbfc614d681ebae890ab45"
 
-URI_aarch64_libqmi = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libqmi-1.34.0-9.el10.aarch64.rpm;name=aarch64_libqmi;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libqmi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libqmi-1.34.0-9.el10.aarch64.rpm;name=aarch64_libqmi;unpack=0"
 SRC_URI[aarch64_libqmi.sha256sum] = "6388edca9f50c17843f5dbedab8843d5f9074046b9901178530e4910e4738034"
 
-URI_aarch64_libqmi-utils = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libqmi-utils-1.34.0-9.el10.aarch64.rpm;name=aarch64_libqmi-utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libqmi-utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libqmi-utils-1.34.0-9.el10.aarch64.rpm;name=aarch64_libqmi-utils;unpack=0"
 SRC_URI[aarch64_libqmi-utils.sha256sum] = "e880afcf29b3a318d9f5f265be2c91ee2f65476317abdb945a510b6483dbbc73"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libqmi-1.34.0-9.el10.riscv64.rpm;name=riscv64_libqmi;unpack=0"
+SRC_URI[riscv64_libqmi.sha256sum] = "5de03ad8bf68b6ea06207f08b0341994636f9888b19a5f95c09fb3492bd168c1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libqmi-utils-1.34.0-9.el10.riscv64.rpm;name=riscv64_libqmi-utils;unpack=0"
+SRC_URI[riscv64_libqmi-utils.sha256sum] = "afc907f7c3888d8fae35f9fea6f1b65c62a54a59399205c581434a8aedef1bcf"
 
 RDEPENDS:libqmi = " \
  glib2 \

@@ -9,17 +9,17 @@ PACKAGES = " \
  docbook-style-dsssl \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/docbook-style-dsssl-1.79-45.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/docbook-style-dsssl-1.79-45.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6d818d2025afcdccc8ac9b035c18e4922b5dcff2e0ea11790e6c90772e626481"
 
-URI_x86_64_v2_docbook-style-dsssl = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/docbook-style-dsssl-1.79-45.el10.noarch.rpm;name=x86_64_v2_docbook-style-dsssl;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_docbook-style-dsssl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/docbook-style-dsssl-1.79-45.el10.noarch.rpm;name=x86_64_v2_docbook-style-dsssl;unpack=0"
 SRC_URI[x86_64_v2_docbook-style-dsssl.sha256sum] = "b2b6f7dc76fce3543d84b54835863065149f5d1cc90b921a1fccfe84f2d96644"
 
-URI_aarch64_docbook-style-dsssl = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/docbook-style-dsssl-1.79-45.el10.noarch.rpm;name=aarch64_docbook-style-dsssl;unpack=0"
-SRC_URI:append = " ${URI_aarch64_docbook-style-dsssl}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/docbook-style-dsssl-1.79-45.el10.noarch.rpm;name=aarch64_docbook-style-dsssl;unpack=0"
 SRC_URI[aarch64_docbook-style-dsssl.sha256sum] = "b2b6f7dc76fce3543d84b54835863065149f5d1cc90b921a1fccfe84f2d96644"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/docbook-style-dsssl-1.79-45.el10.noarch.rpm;name=riscv64_docbook-style-dsssl;unpack=0"
+SRC_URI[riscv64_docbook-style-dsssl.sha256sum] = "b2b6f7dc76fce3543d84b54835863065149f5d1cc90b921a1fccfe84f2d96644"
 
 RDEPENDS:docbook-style-dsssl = " \
  bash \

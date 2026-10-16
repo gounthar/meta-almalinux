@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-astral-tl"
 PV = "0.7.11"
 PR = "3.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-astral-tl+default-devel \
  rust-astral-tl-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-astral-tl+default-devel \
+ rust-astral-tl-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-astral-tl-0.7.11-3.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-astral-tl-0.7.11-3.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e19141c0d9384592aa7bfdbeafadeeae3debfea43e9ba4f1525f3b2e456ee7e9"
 
-URI_x86_64_v2_rust-astral-tl+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-astral-tl+default-devel-0.7.11-3.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-astral-tl+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-astral-tl+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-astral-tl+default-devel-0.7.11-3.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-astral-tl+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-astral-tl+default-devel.sha256sum] = "fa476577ba9c1ce36914f7ff1b03c8cb3d2cd53de49f3a2329274eea7681f239"
 
-URI_x86_64_v2_rust-astral-tl-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-astral-tl-devel-0.7.11-3.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-astral-tl-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-astral-tl-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-astral-tl-devel-0.7.11-3.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-astral-tl-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-astral-tl-devel.sha256sum] = "04d022909b0a0c12e6001375275295ec5aeb9c1e867f11f288ef02cc0cd1e29d"
 
-URI_aarch64_rust-astral-tl+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-astral-tl+default-devel-0.7.11-3.el10_2.noarch.rpm;name=aarch64_rust-astral-tl+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-astral-tl+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-astral-tl+default-devel-0.7.11-3.el10_2.noarch.rpm;name=aarch64_rust-astral-tl+default-devel;unpack=0"
 SRC_URI[aarch64_rust-astral-tl+default-devel.sha256sum] = "c1486e2a3b81aebb1600875e4f3c84fb28a49e8a5fef571a54a0cc8575700a35"
 
-URI_aarch64_rust-astral-tl-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-astral-tl-devel-0.7.11-3.el10_2.noarch.rpm;name=aarch64_rust-astral-tl-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-astral-tl-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-astral-tl-devel-0.7.11-3.el10_2.noarch.rpm;name=aarch64_rust-astral-tl-devel;unpack=0"
 SRC_URI[aarch64_rust-astral-tl-devel.sha256sum] = "fd71ccb82c00c9e686038adbce3befdae8f32278dcb79d626f3a40e1da08d896"
 
 RDEPENDS:rust-astral-tl+default-devel = " \

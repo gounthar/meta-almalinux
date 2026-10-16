@@ -5,7 +5,7 @@ inherit dnf-bridge
 PN = "rust-icu_segmenter"
 PV = "2.2.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-icu_segmenter+auto-devel \
  rust-icu_segmenter+compiled_data-devel \
  rust-icu_segmenter+datagen-devel \
@@ -13,66 +13,63 @@ PACKAGES = " \
  rust-icu_segmenter+lstm-devel \
  rust-icu_segmenter+serde-devel \
  rust-icu_segmenter-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-icu_segmenter+auto-devel \
+ rust-icu_segmenter+compiled_data-devel \
+ rust-icu_segmenter+datagen-devel \
+ rust-icu_segmenter+default-devel \
+ rust-icu_segmenter+lstm-devel \
+ rust-icu_segmenter+serde-devel \
+ rust-icu_segmenter-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-icu_segmenter-2.2.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-icu_segmenter-2.2.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8df62fd4123a37bd65c19d7b1b55c9fe37e0e75bcfc867cbe4cfc0806b298c47"
 
-URI_x86_64_v2_rust-icu_segmenter+auto-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-icu_segmenter+auto-devel-2.2.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-icu_segmenter+auto-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-icu_segmenter+auto-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-icu_segmenter+auto-devel-2.2.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-icu_segmenter+auto-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-icu_segmenter+auto-devel.sha256sum] = "4bc2ae5edd9c963d8df11ad00db2100cfa48b3de4e377a83fa0de035b1dca61c"
 
-URI_x86_64_v2_rust-icu_segmenter+compiled_data-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-icu_segmenter+compiled_data-devel-2.2.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-icu_segmenter+compiled_data-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-icu_segmenter+compiled_data-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-icu_segmenter+compiled_data-devel-2.2.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-icu_segmenter+compiled_data-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-icu_segmenter+compiled_data-devel.sha256sum] = "4ac9cb885762f1d25b1f092804044f354199ed6fbd3e661cbcb838046ca0534f"
 
-URI_x86_64_v2_rust-icu_segmenter+datagen-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-icu_segmenter+datagen-devel-2.2.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-icu_segmenter+datagen-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-icu_segmenter+datagen-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-icu_segmenter+datagen-devel-2.2.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-icu_segmenter+datagen-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-icu_segmenter+datagen-devel.sha256sum] = "5607b7ba342916aae211131182953b46f857a1ea429705b928e59a6b33fe667c"
 
-URI_x86_64_v2_rust-icu_segmenter+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-icu_segmenter+default-devel-2.2.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-icu_segmenter+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-icu_segmenter+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-icu_segmenter+default-devel-2.2.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-icu_segmenter+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-icu_segmenter+default-devel.sha256sum] = "0ae948c2997a6f194141612fa0d96cf57bdc410503647b0031342791295cd200"
 
-URI_x86_64_v2_rust-icu_segmenter+lstm-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-icu_segmenter+lstm-devel-2.2.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-icu_segmenter+lstm-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-icu_segmenter+lstm-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-icu_segmenter+lstm-devel-2.2.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-icu_segmenter+lstm-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-icu_segmenter+lstm-devel.sha256sum] = "64911136ce2b93e20671b140995ed8a9454fbcb61e65b866dffca02c3fdb1df9"
 
-URI_x86_64_v2_rust-icu_segmenter+serde-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-icu_segmenter+serde-devel-2.2.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-icu_segmenter+serde-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-icu_segmenter+serde-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-icu_segmenter+serde-devel-2.2.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-icu_segmenter+serde-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-icu_segmenter+serde-devel.sha256sum] = "d913348134fe46437f82658a33d0b5d01bee1563671ecbba68d9689ba489a414"
 
-URI_x86_64_v2_rust-icu_segmenter-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-icu_segmenter-devel-2.2.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-icu_segmenter-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-icu_segmenter-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-icu_segmenter-devel-2.2.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-icu_segmenter-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-icu_segmenter-devel.sha256sum] = "703e0be310331fc5aa297b2d2fcf6b68d50435ff045e66ee0d0d385bbadb678f"
 
-URI_aarch64_rust-icu_segmenter+auto-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-icu_segmenter+auto-devel-2.2.0-1.el10_3.noarch.rpm;name=aarch64_rust-icu_segmenter+auto-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-icu_segmenter+auto-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-icu_segmenter+auto-devel-2.2.0-1.el10_3.noarch.rpm;name=aarch64_rust-icu_segmenter+auto-devel;unpack=0"
 SRC_URI[aarch64_rust-icu_segmenter+auto-devel.sha256sum] = "dcb6364034011c1785d8378485bd4194d66d6f36cde15a8f20e1e5169ac9f48d"
 
-URI_aarch64_rust-icu_segmenter+compiled_data-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-icu_segmenter+compiled_data-devel-2.2.0-1.el10_3.noarch.rpm;name=aarch64_rust-icu_segmenter+compiled_data-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-icu_segmenter+compiled_data-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-icu_segmenter+compiled_data-devel-2.2.0-1.el10_3.noarch.rpm;name=aarch64_rust-icu_segmenter+compiled_data-devel;unpack=0"
 SRC_URI[aarch64_rust-icu_segmenter+compiled_data-devel.sha256sum] = "502583a679df10d71584368022298dbf1d3e3d77ea8e9190667c9a8de280a90e"
 
-URI_aarch64_rust-icu_segmenter+datagen-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-icu_segmenter+datagen-devel-2.2.0-1.el10_3.noarch.rpm;name=aarch64_rust-icu_segmenter+datagen-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-icu_segmenter+datagen-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-icu_segmenter+datagen-devel-2.2.0-1.el10_3.noarch.rpm;name=aarch64_rust-icu_segmenter+datagen-devel;unpack=0"
 SRC_URI[aarch64_rust-icu_segmenter+datagen-devel.sha256sum] = "b9178d807a19e67095740a3b691b8f8a7b5d9616b797c674066e00d041051e9f"
 
-URI_aarch64_rust-icu_segmenter+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-icu_segmenter+default-devel-2.2.0-1.el10_3.noarch.rpm;name=aarch64_rust-icu_segmenter+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-icu_segmenter+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-icu_segmenter+default-devel-2.2.0-1.el10_3.noarch.rpm;name=aarch64_rust-icu_segmenter+default-devel;unpack=0"
 SRC_URI[aarch64_rust-icu_segmenter+default-devel.sha256sum] = "7e15e4659d77e27fd1495a2ae648a82c643cd616f4b0163b73f828f743462234"
 
-URI_aarch64_rust-icu_segmenter+lstm-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-icu_segmenter+lstm-devel-2.2.0-1.el10_3.noarch.rpm;name=aarch64_rust-icu_segmenter+lstm-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-icu_segmenter+lstm-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-icu_segmenter+lstm-devel-2.2.0-1.el10_3.noarch.rpm;name=aarch64_rust-icu_segmenter+lstm-devel;unpack=0"
 SRC_URI[aarch64_rust-icu_segmenter+lstm-devel.sha256sum] = "25f97917e2ceb31c2a96f8dd3c9f0cb36b1f09f158aa6b4c16338e1cf755f41b"
 
-URI_aarch64_rust-icu_segmenter+serde-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-icu_segmenter+serde-devel-2.2.0-1.el10_3.noarch.rpm;name=aarch64_rust-icu_segmenter+serde-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-icu_segmenter+serde-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-icu_segmenter+serde-devel-2.2.0-1.el10_3.noarch.rpm;name=aarch64_rust-icu_segmenter+serde-devel;unpack=0"
 SRC_URI[aarch64_rust-icu_segmenter+serde-devel.sha256sum] = "d23272dc6e8b32bdfcdcc4ddd011bd7f870ea98c3c852b14b91c821a9ef38dd3"
 
-URI_aarch64_rust-icu_segmenter-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-icu_segmenter-devel-2.2.0-1.el10_3.noarch.rpm;name=aarch64_rust-icu_segmenter-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-icu_segmenter-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-icu_segmenter-devel-2.2.0-1.el10_3.noarch.rpm;name=aarch64_rust-icu_segmenter-devel;unpack=0"
 SRC_URI[aarch64_rust-icu_segmenter-devel.sha256sum] = "97ccbd8c2fd21c095fcfaafb876d78426afa8e0118149c136feca3a836f201d6"
 
 RDEPENDS:rust-icu_segmenter+auto-devel = " \

@@ -12,41 +12,44 @@ PACKAGES = " \
  python3-file-magic \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/file-5.45-12.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/file-5.45-12.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "28e9c5182043b8f2c3db6adbd1f15d8e6699615846c8194c9de4bd155c9b54a0"
 
-URI_x86_64_v2_file = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/file-5.45-12.el10.x86_64_v2.rpm;name=x86_64_v2_file;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_file}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/file-5.45-12.el10.x86_64_v2.rpm;name=x86_64_v2_file;unpack=0"
 SRC_URI[x86_64_v2_file.sha256sum] = "47164bc6bc555901792a0ad61afc1e693b1b998f00999da83b5ea462d68a11e6"
 
-URI_x86_64_v2_file-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/file-devel-5.45-12.el10.x86_64_v2.rpm;name=x86_64_v2_file-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_file-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/file-devel-5.45-12.el10.x86_64_v2.rpm;name=x86_64_v2_file-devel;unpack=0"
 SRC_URI[x86_64_v2_file-devel.sha256sum] = "d6ef2450a2abff1a902ecbe7db5abec419955dc98d11b98906b81a0a079b23ec"
 
-URI_x86_64_v2_file-libs = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/file-libs-5.45-12.el10.x86_64_v2.rpm;name=x86_64_v2_file-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_file-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/file-libs-5.45-12.el10.x86_64_v2.rpm;name=x86_64_v2_file-libs;unpack=0"
 SRC_URI[x86_64_v2_file-libs.sha256sum] = "61ce0e4adba2acbc5f6498c5e8a4043949b452b09977b7f69e5d2228dc5993ff"
 
-URI_x86_64_v2_python3-file-magic = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-file-magic-5.45-12.el10.noarch.rpm;name=x86_64_v2_python3-file-magic;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-file-magic}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-file-magic-5.45-12.el10.noarch.rpm;name=x86_64_v2_python3-file-magic;unpack=0"
 SRC_URI[x86_64_v2_python3-file-magic.sha256sum] = "fa7d87e1e8c862719181b6a60445a31fbe6bb7dcce83c3eef1bb372c28261d66"
 
-URI_aarch64_file = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/file-5.45-12.el10.aarch64.rpm;name=aarch64_file;unpack=0"
-SRC_URI:append = " ${URI_aarch64_file}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/file-5.45-12.el10.aarch64.rpm;name=aarch64_file;unpack=0"
 SRC_URI[aarch64_file.sha256sum] = "00a72f2cf62090dcb795bb316465045b9593bb0fed11c895cf2038bdb58bc12f"
 
-URI_aarch64_file-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/file-devel-5.45-12.el10.aarch64.rpm;name=aarch64_file-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_file-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/file-devel-5.45-12.el10.aarch64.rpm;name=aarch64_file-devel;unpack=0"
 SRC_URI[aarch64_file-devel.sha256sum] = "70da4a35e8b187663ec1c5d78a30dbec0ed221f13643231b789a3d2d6bc83f9d"
 
-URI_aarch64_file-libs = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/file-libs-5.45-12.el10.aarch64.rpm;name=aarch64_file-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_file-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/file-libs-5.45-12.el10.aarch64.rpm;name=aarch64_file-libs;unpack=0"
 SRC_URI[aarch64_file-libs.sha256sum] = "88842cad895f3114401c5e367d6be61466da9bd12f01b9810b9e2c7d46e60888"
 
-URI_aarch64_python3-file-magic = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-file-magic-5.45-12.el10.noarch.rpm;name=aarch64_python3-file-magic;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-file-magic}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-file-magic-5.45-12.el10.noarch.rpm;name=aarch64_python3-file-magic;unpack=0"
 SRC_URI[aarch64_python3-file-magic.sha256sum] = "fa7d87e1e8c862719181b6a60445a31fbe6bb7dcce83c3eef1bb372c28261d66"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/file-5.45-12.el10.riscv64.rpm;name=riscv64_file;unpack=0"
+SRC_URI[riscv64_file.sha256sum] = "df408f39d04a7c259bbdd5883ed389b8a8b39383296f766c20a6dd0325540165"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/file-devel-5.45-12.el10.riscv64.rpm;name=riscv64_file-devel;unpack=0"
+SRC_URI[riscv64_file-devel.sha256sum] = "005a539972940ae338b31497d3cafc0f3bb4dd3ad94f43ba8f214340fe954e9b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/file-libs-5.45-12.el10.riscv64.rpm;name=riscv64_file-libs;unpack=0"
+SRC_URI[riscv64_file-libs.sha256sum] = "32babd8741edd9e3baf84cf737df9647fc9b0617eae26c4cfd6cbf776797b3f2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-file-magic-5.45-12.el10.noarch.rpm;name=riscv64_python3-file-magic;unpack=0"
+SRC_URI[riscv64_python3-file-magic.sha256sum] = "fa7d87e1e8c862719181b6a60445a31fbe6bb7dcce83c3eef1bb372c28261d66"
 
 RDEPENDS:file = " \
  file-libs \

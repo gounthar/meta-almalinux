@@ -9,17 +9,17 @@ PACKAGES = " \
  hostapd \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/hostapd-2.11-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/hostapd-2.11-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f452754062ab54acf58a65bab753390c01c4eec2cd1cde6c05c1b9c11014b4e6"
 
-URI_x86_64_v2_hostapd = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/hostapd-2.11-2.el10.x86_64_v2.rpm;name=x86_64_v2_hostapd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_hostapd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/hostapd-2.11-2.el10.x86_64_v2.rpm;name=x86_64_v2_hostapd;unpack=0"
 SRC_URI[x86_64_v2_hostapd.sha256sum] = "8d3c715826cff17fb700e9c2d2e76bcf5b096326e1a044a86ed2f2d0691f66f9"
 
-URI_aarch64_hostapd = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/hostapd-2.11-2.el10.aarch64.rpm;name=aarch64_hostapd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_hostapd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/hostapd-2.11-2.el10.aarch64.rpm;name=aarch64_hostapd;unpack=0"
 SRC_URI[aarch64_hostapd.sha256sum] = "d0dae4bc4817c3fdc709e36a095806856fe1fc4efc7b9cc1ce5830fb588b9b06"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/hostapd-2.11-2.el10.riscv64.rpm;name=riscv64_hostapd;unpack=0"
+SRC_URI[riscv64_hostapd.sha256sum] = "3c161c7908c18c9d4eb8438f457f087c9ede0ce23d5fbc2317104e6abc3ec361"
 
 RDEPENDS:hostapd = " \
  bash \

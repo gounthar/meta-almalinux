@@ -12,17 +12,17 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/m/miopen-7.2.1-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/m/miopen-7.2.1-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "2cf24d6b4a4a17962452bd49493f74941cd3e665e9475c991e9b47309a262d8c"
 
-URI_x86_64_v2_miopen = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/miopen-7.2.1-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_miopen;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_miopen}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/miopen-7.2.1-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_miopen;unpack=0"
 SRC_URI[x86_64_v2_miopen.sha256sum] = "5e2e92158fe45340a5ebf932d82764864196edfa5a7d1b15a94cb6a6b932c0d7"
 
-URI_x86_64_v2_miopen-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/miopen-devel-7.2.1-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_miopen-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_miopen-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/miopen-devel-7.2.1-2.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_miopen-devel;unpack=0"
 SRC_URI[x86_64_v2_miopen-devel.sha256sum] = "1f2746c466942595453bff979b4b1e8cd1b236b357837b8ba4b3c2626b5da637"
 
 RDEPENDS:miopen = " \

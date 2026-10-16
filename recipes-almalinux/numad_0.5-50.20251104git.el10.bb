@@ -9,17 +9,17 @@ PACKAGES = " \
  numad \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/numad-0.5-50.20251104git.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/numad-0.5-50.20251104git.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "07aaa5a3eb7f5c7c8ac1fb41db989b58b83a4b247c36157a5f575164277b05c5"
 
-URI_x86_64_v2_numad = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/numad-0.5-50.20251104git.el10.x86_64_v2.rpm;name=x86_64_v2_numad;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_numad}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/numad-0.5-50.20251104git.el10.x86_64_v2.rpm;name=x86_64_v2_numad;unpack=0"
 SRC_URI[x86_64_v2_numad.sha256sum] = "100f702c4db8b7febaf232163ceb8806550abe7672513641de943dc821ca5157"
 
-URI_aarch64_numad = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/numad-0.5-50.20251104git.el10.aarch64.rpm;name=aarch64_numad;unpack=0"
-SRC_URI:append = " ${URI_aarch64_numad}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/numad-0.5-50.20251104git.el10.aarch64.rpm;name=aarch64_numad;unpack=0"
 SRC_URI[aarch64_numad.sha256sum] = "82a3288673a673edd9a6439e2d057d13cac622386dbb31c0bce55b07ba6744d4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/numad-0.5-50.20251104git.el10.riscv64.rpm;name=riscv64_numad;unpack=0"
+SRC_URI[riscv64_numad.sha256sum] = "93ff3d939657e73e825b8f8ff50e1c3a06b044d647c16b15c8eb56359a1aab4b"
 
 RDEPENDS:numad = " \
  bash \

@@ -9,17 +9,17 @@ PACKAGES = " \
  libtpms \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libtpms-0.9.6-11.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libtpms-0.9.6-11.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "937718dfa8a5bc13a8dcccc70ad7006f6ff26e05961831d79d31001d3313ac0e"
 
-URI_x86_64_v2_libtpms = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libtpms-0.9.6-11.el10.x86_64_v2.rpm;name=x86_64_v2_libtpms;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libtpms}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libtpms-0.9.6-11.el10.x86_64_v2.rpm;name=x86_64_v2_libtpms;unpack=0"
 SRC_URI[x86_64_v2_libtpms.sha256sum] = "0fac3c49567a9c942c1cad72872d6a300d1b1034adbf90e64a6e4ab7f0ca729f"
 
-URI_aarch64_libtpms = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libtpms-0.9.6-11.el10.aarch64.rpm;name=aarch64_libtpms;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libtpms}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libtpms-0.9.6-11.el10.aarch64.rpm;name=aarch64_libtpms;unpack=0"
 SRC_URI[aarch64_libtpms.sha256sum] = "81e85fa208b70d2b729ba9b46ad19a8d1e1a695f74c5246287da0cd9228a3ad5"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libtpms-0.9.6-11.el10.riscv64.rpm;name=riscv64_libtpms;unpack=0"
+SRC_URI[riscv64_libtpms.sha256sum] = "11524f01cf983a0e7c0225471a4fe7a49e46d63a1f75804d541825fc18fab679"
 
 RDEPENDS:libtpms = " \
  glibc \

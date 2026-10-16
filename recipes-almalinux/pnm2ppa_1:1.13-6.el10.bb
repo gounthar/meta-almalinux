@@ -10,17 +10,17 @@ PACKAGES = " \
  pnm2ppa \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/pnm2ppa-1.13-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/pnm2ppa-1.13-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c05a08b1997cd8708f46ab19351f38dcbf1f0cb68be3631c0542f3d88d22d1bf"
 
-URI_x86_64_v2_pnm2ppa = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/pnm2ppa-1.13-6.el10.x86_64_v2.rpm;name=x86_64_v2_pnm2ppa;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pnm2ppa}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/pnm2ppa-1.13-6.el10.x86_64_v2.rpm;name=x86_64_v2_pnm2ppa;unpack=0"
 SRC_URI[x86_64_v2_pnm2ppa.sha256sum] = "40faea3932983a9155ac372ffa1f0e138f2e2140a57d44d335aaf561f85ccb05"
 
-URI_aarch64_pnm2ppa = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/pnm2ppa-1.13-6.el10.aarch64.rpm;name=aarch64_pnm2ppa;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pnm2ppa}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/pnm2ppa-1.13-6.el10.aarch64.rpm;name=aarch64_pnm2ppa;unpack=0"
 SRC_URI[aarch64_pnm2ppa.sha256sum] = "b5d503a18984e050ed5ab53663f4c50cf2504517142563543fda0b46e392a096"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/pnm2ppa-1.13-6.el10.riscv64.rpm;name=riscv64_pnm2ppa;unpack=0"
+SRC_URI[riscv64_pnm2ppa.sha256sum] = "322ba6812a487730ff2abe98ba1a124191199de74f8d105e0e05e132f680be53"
 
 RDEPENDS:pnm2ppa = " \
  bash \

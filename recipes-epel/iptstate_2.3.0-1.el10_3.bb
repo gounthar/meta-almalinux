@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "iptstate"
 PV = "2.3.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  iptstate \
- "
+"
+PACKAGES:aarch64 = " \
+ iptstate \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/i/iptstate-2.3.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/i/iptstate-2.3.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6384fde6053c5b403edfa609fffacc0aefcce86e4694f88feee1048c84683da3"
 
-URI_x86_64_v2_iptstate = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/iptstate-2.3.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_iptstate;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_iptstate}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/iptstate-2.3.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_iptstate;unpack=0"
 SRC_URI[x86_64_v2_iptstate.sha256sum] = "dbfef97e0ea9c18732b4dd680183fc806533409db851e5b4b62bb7daa134bf17"
 
-URI_aarch64_iptstate = "${EPEL_MIRROR}/aarch64/Packages/i/iptstate-2.3.0-1.el10_3.aarch64.rpm;name=aarch64_iptstate;unpack=0"
-SRC_URI:append = " ${URI_aarch64_iptstate}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/i/iptstate-2.3.0-1.el10_3.aarch64.rpm;name=aarch64_iptstate;unpack=0"
 SRC_URI[aarch64_iptstate.sha256sum] = "6ccaebf94c86ea6626b25e2b933224afcd26478d0a281c57e556c23996df3ec3"
 
 RDEPENDS:iptstate = " \

@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "python-execnet"
 PV = "2.1.2"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  python3-execnet \
- "
+"
+PACKAGES:aarch64 = " \
+ python3-execnet \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/python-execnet-2.1.2-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/python-execnet-2.1.2-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "076350c28bdebccead3eb311891a54973fafb725fb26ae6b285655ac0171489a"
 
-URI_x86_64_v2_python3-execnet = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-execnet-2.1.2-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-execnet;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-execnet}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-execnet-2.1.2-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_python3-execnet;unpack=0"
 SRC_URI[x86_64_v2_python3-execnet.sha256sum] = "c60f4b5cb6d4ad3c1ecf5869c1d703bd8a73f82d84a46a63f6a0560a1d42b39f"
 
-URI_aarch64_python3-execnet = "${EPEL_MIRROR}/aarch64/Packages/p/python3-execnet-2.1.2-1.el10_2.noarch.rpm;name=aarch64_python3-execnet;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-execnet}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-execnet-2.1.2-1.el10_2.noarch.rpm;name=aarch64_python3-execnet;unpack=0"
 SRC_URI[aarch64_python3-execnet.sha256sum] = "184712c2f87dde9b1fde4b27b3be5461d93c1ee4d9726b17ea515bc10f89ef0c"
 
 RDEPENDS:python3-execnet = " \

@@ -10,25 +10,26 @@ PACKAGES = " \
  libgcrypt-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libgcrypt-1.11.0-7.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libgcrypt-1.11.0-7.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d01a3b37a7708d0dd993755ccbc11cbe6812da90109b38427ac6608b00cba60f"
 
-URI_x86_64_v2_libgcrypt = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libgcrypt-1.11.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_libgcrypt;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libgcrypt}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libgcrypt-1.11.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_libgcrypt;unpack=0"
 SRC_URI[x86_64_v2_libgcrypt.sha256sum] = "b221139df53dc34f3a64f15f21f16932399c91a0da3ffc0ce79836c9d9960720"
 
-URI_x86_64_v2_libgcrypt-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libgcrypt-devel-1.11.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_libgcrypt-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libgcrypt-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libgcrypt-devel-1.11.0-7.el10.x86_64_v2.rpm;name=x86_64_v2_libgcrypt-devel;unpack=0"
 SRC_URI[x86_64_v2_libgcrypt-devel.sha256sum] = "f1b0866a74d27edc3b603c8605a4f8d59ae0628be0d309cef05c8edba2b1ca40"
 
-URI_aarch64_libgcrypt = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libgcrypt-1.11.0-7.el10.aarch64.rpm;name=aarch64_libgcrypt;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libgcrypt}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libgcrypt-1.11.0-7.el10.aarch64.rpm;name=aarch64_libgcrypt;unpack=0"
 SRC_URI[aarch64_libgcrypt.sha256sum] = "615d3a83d95d6232315cddbfeb857ee9461fa46bcd08619ec51b2036d6bfd3cb"
 
-URI_aarch64_libgcrypt-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libgcrypt-devel-1.11.0-7.el10.aarch64.rpm;name=aarch64_libgcrypt-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libgcrypt-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libgcrypt-devel-1.11.0-7.el10.aarch64.rpm;name=aarch64_libgcrypt-devel;unpack=0"
 SRC_URI[aarch64_libgcrypt-devel.sha256sum] = "04d78c3feb8c448a3812ee158632075b9b388f33392a14c875391454350fd422"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libgcrypt-1.11.0-7.el10.riscv64.rpm;name=riscv64_libgcrypt;unpack=0"
+SRC_URI[riscv64_libgcrypt.sha256sum] = "1981528768432779eb844ce8aca427e9d88e5f73a3e6282783f689116f962c5d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libgcrypt-devel-1.11.0-7.el10.riscv64.rpm;name=riscv64_libgcrypt-devel;unpack=0"
+SRC_URI[riscv64_libgcrypt-devel.sha256sum] = "a197523c912a1dfdc2b65252936e37a47f312d16235b00326ce966dcdcec0499"
 
 RDEPENDS:libgcrypt = " \
  glibc \

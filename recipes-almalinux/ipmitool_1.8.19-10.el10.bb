@@ -12,41 +12,44 @@ PACKAGES = " \
  ipmitool \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/ipmitool-1.8.19-10.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/ipmitool-1.8.19-10.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "27f08ce89901b8a01a9eeb7b3d01e4fc56e98d6b2725a7eb227c6e6cc795fd7e"
 
-URI_x86_64_v2_bmc-snmp-proxy = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/bmc-snmp-proxy-1.8.19-10.el10.noarch.rpm;name=x86_64_v2_bmc-snmp-proxy;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_bmc-snmp-proxy}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/bmc-snmp-proxy-1.8.19-10.el10.noarch.rpm;name=x86_64_v2_bmc-snmp-proxy;unpack=0"
 SRC_URI[x86_64_v2_bmc-snmp-proxy.sha256sum] = "f9472d47f136a745c25fdf0bd943ef0d9e653cfb7a0b04cb8eaadc6b0fd9c0fb"
 
-URI_x86_64_v2_exchange-bmc-os-info = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/exchange-bmc-os-info-1.8.19-10.el10.noarch.rpm;name=x86_64_v2_exchange-bmc-os-info;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_exchange-bmc-os-info}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/exchange-bmc-os-info-1.8.19-10.el10.noarch.rpm;name=x86_64_v2_exchange-bmc-os-info;unpack=0"
 SRC_URI[x86_64_v2_exchange-bmc-os-info.sha256sum] = "73d4d8b76f47fb0a58f680065b485aef061e996a8bdb29a16eebc3c5b581ba0c"
 
-URI_x86_64_v2_ipmievd = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ipmievd-1.8.19-10.el10.x86_64_v2.rpm;name=x86_64_v2_ipmievd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ipmievd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ipmievd-1.8.19-10.el10.x86_64_v2.rpm;name=x86_64_v2_ipmievd;unpack=0"
 SRC_URI[x86_64_v2_ipmievd.sha256sum] = "d2906e8f90f2cc042a461d41a124b067f90a5f5586eb38dce95f34543d200af8"
 
-URI_x86_64_v2_ipmitool = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ipmitool-1.8.19-10.el10.x86_64_v2.rpm;name=x86_64_v2_ipmitool;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ipmitool}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ipmitool-1.8.19-10.el10.x86_64_v2.rpm;name=x86_64_v2_ipmitool;unpack=0"
 SRC_URI[x86_64_v2_ipmitool.sha256sum] = "2593c71b90b5a8be85acca855ff13a330ae19a6e83bd8507fa5e4c6cbf1bb973"
 
-URI_aarch64_bmc-snmp-proxy = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/bmc-snmp-proxy-1.8.19-10.el10.noarch.rpm;name=aarch64_bmc-snmp-proxy;unpack=0"
-SRC_URI:append = " ${URI_aarch64_bmc-snmp-proxy}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/bmc-snmp-proxy-1.8.19-10.el10.noarch.rpm;name=aarch64_bmc-snmp-proxy;unpack=0"
 SRC_URI[aarch64_bmc-snmp-proxy.sha256sum] = "f9472d47f136a745c25fdf0bd943ef0d9e653cfb7a0b04cb8eaadc6b0fd9c0fb"
 
-URI_aarch64_exchange-bmc-os-info = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/exchange-bmc-os-info-1.8.19-10.el10.noarch.rpm;name=aarch64_exchange-bmc-os-info;unpack=0"
-SRC_URI:append = " ${URI_aarch64_exchange-bmc-os-info}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/exchange-bmc-os-info-1.8.19-10.el10.noarch.rpm;name=aarch64_exchange-bmc-os-info;unpack=0"
 SRC_URI[aarch64_exchange-bmc-os-info.sha256sum] = "73d4d8b76f47fb0a58f680065b485aef061e996a8bdb29a16eebc3c5b581ba0c"
 
-URI_aarch64_ipmievd = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ipmievd-1.8.19-10.el10.aarch64.rpm;name=aarch64_ipmievd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ipmievd}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ipmievd-1.8.19-10.el10.aarch64.rpm;name=aarch64_ipmievd;unpack=0"
 SRC_URI[aarch64_ipmievd.sha256sum] = "a608beae4f1fd55480cce99656af98b81a03303f07a255d410e6731e1d140e4f"
 
-URI_aarch64_ipmitool = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ipmitool-1.8.19-10.el10.aarch64.rpm;name=aarch64_ipmitool;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ipmitool}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ipmitool-1.8.19-10.el10.aarch64.rpm;name=aarch64_ipmitool;unpack=0"
 SRC_URI[aarch64_ipmitool.sha256sum] = "d9ab9a6a058512af48b35b1efab3df268b746d2d34f1ee7ec9e7c1ff594ea0ce"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/bmc-snmp-proxy-1.8.19-10.el10.noarch.rpm;name=riscv64_bmc-snmp-proxy;unpack=0"
+SRC_URI[riscv64_bmc-snmp-proxy.sha256sum] = "f9472d47f136a745c25fdf0bd943ef0d9e653cfb7a0b04cb8eaadc6b0fd9c0fb"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/exchange-bmc-os-info-1.8.19-10.el10.noarch.rpm;name=riscv64_exchange-bmc-os-info;unpack=0"
+SRC_URI[riscv64_exchange-bmc-os-info.sha256sum] = "73d4d8b76f47fb0a58f680065b485aef061e996a8bdb29a16eebc3c5b581ba0c"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/ipmievd-1.8.19-10.el10.riscv64.rpm;name=riscv64_ipmievd;unpack=0"
+SRC_URI[riscv64_ipmievd.sha256sum] = "c42f77254d9b9298d150f4e1e617310e4255926228c64d0c4b61a10d343aef63"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/ipmitool-1.8.19-10.el10.riscv64.rpm;name=riscv64_ipmitool;unpack=0"
+SRC_URI[riscv64_ipmitool.sha256sum] = "0e9749eeb2853d79e797854d9cceff98559619de7fd0c1cadb696650883aaa57"
 
 RDEPENDS:bmc-snmp-proxy = " \
  bash \

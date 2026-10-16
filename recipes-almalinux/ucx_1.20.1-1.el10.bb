@@ -13,49 +13,53 @@ PACKAGES = " \
  ucx-rdmacm \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/ucx-1.20.1-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/ucx-1.20.1-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "cb63bb50fae93ca42d6725319c79cec3dd8585463311a78ea97b93ff8a6b928a"
 
-URI_x86_64_v2_ucx = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ucx-1.20.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_ucx;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ucx}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ucx-1.20.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_ucx;unpack=0"
 SRC_URI[x86_64_v2_ucx.sha256sum] = "9731e6611409b2be907ea508f02be86ee72a79d750362dcad39881eeeedfb954"
 
-URI_x86_64_v2_ucx-cma = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ucx-cma-1.20.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_ucx-cma;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ucx-cma}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ucx-cma-1.20.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_ucx-cma;unpack=0"
 SRC_URI[x86_64_v2_ucx-cma.sha256sum] = "a3770d4dadbc3a07c45c94f54214089ae6f80a8e41a0f44aa560026c617df566"
 
-URI_x86_64_v2_ucx-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ucx-devel-1.20.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_ucx-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ucx-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ucx-devel-1.20.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_ucx-devel;unpack=0"
 SRC_URI[x86_64_v2_ucx-devel.sha256sum] = "d8fb9ddc8c5af9824e327adaa0581c4c6ca13b1e8ea7fc7ebfb568ad8b03c300"
 
-URI_x86_64_v2_ucx-ib = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ucx-ib-1.20.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_ucx-ib;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ucx-ib}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ucx-ib-1.20.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_ucx-ib;unpack=0"
 SRC_URI[x86_64_v2_ucx-ib.sha256sum] = "ccec78d27800d548ffaa2af8fde02e0b22e83fd53da0af17c3dc5891b18a6cac"
 
-URI_x86_64_v2_ucx-rdmacm = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ucx-rdmacm-1.20.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_ucx-rdmacm;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_ucx-rdmacm}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/ucx-rdmacm-1.20.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_ucx-rdmacm;unpack=0"
 SRC_URI[x86_64_v2_ucx-rdmacm.sha256sum] = "7265323dbbf6dd891080f6425dc052df4e33aa493c30f36e2eccdf8a55d0ae03"
 
-URI_aarch64_ucx = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ucx-1.20.1-1.el10.aarch64.rpm;name=aarch64_ucx;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ucx}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ucx-1.20.1-1.el10.aarch64.rpm;name=aarch64_ucx;unpack=0"
 SRC_URI[aarch64_ucx.sha256sum] = "29beef4395fd4efea250fbec2fba0ddbe2964c579f6d7dc8dea5c45bf007c1f2"
 
-URI_aarch64_ucx-cma = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ucx-cma-1.20.1-1.el10.aarch64.rpm;name=aarch64_ucx-cma;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ucx-cma}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ucx-cma-1.20.1-1.el10.aarch64.rpm;name=aarch64_ucx-cma;unpack=0"
 SRC_URI[aarch64_ucx-cma.sha256sum] = "f71a839c0a8434ac5e2f704fd3ceb51f489616b59f65ad43ac72d46d5d9f4f1c"
 
-URI_aarch64_ucx-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ucx-devel-1.20.1-1.el10.aarch64.rpm;name=aarch64_ucx-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ucx-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ucx-devel-1.20.1-1.el10.aarch64.rpm;name=aarch64_ucx-devel;unpack=0"
 SRC_URI[aarch64_ucx-devel.sha256sum] = "eaf68e800eeef10c85d38f386e42502489e26a53a1d1520c4a5ac885476aa1ca"
 
-URI_aarch64_ucx-ib = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ucx-ib-1.20.1-1.el10.aarch64.rpm;name=aarch64_ucx-ib;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ucx-ib}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ucx-ib-1.20.1-1.el10.aarch64.rpm;name=aarch64_ucx-ib;unpack=0"
 SRC_URI[aarch64_ucx-ib.sha256sum] = "cae65760513cbaf8be9bde0520f98adfb773a80f3b9ebb3c7d09e6c90ef0fadf"
 
-URI_aarch64_ucx-rdmacm = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ucx-rdmacm-1.20.1-1.el10.aarch64.rpm;name=aarch64_ucx-rdmacm;unpack=0"
-SRC_URI:append = " ${URI_aarch64_ucx-rdmacm}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/ucx-rdmacm-1.20.1-1.el10.aarch64.rpm;name=aarch64_ucx-rdmacm;unpack=0"
 SRC_URI[aarch64_ucx-rdmacm.sha256sum] = "bc0c2fb349f314aea54fecd3d77169cc0f49bb2bdf2b239949d69e92393850a8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/ucx-1.20.1-1.el10.riscv64.rpm;name=riscv64_ucx;unpack=0"
+SRC_URI[riscv64_ucx.sha256sum] = "2691951808227b213886341a5d2f2b8e0a6592a3998f0bca5e45307b949f011f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/ucx-cma-1.20.1-1.el10.riscv64.rpm;name=riscv64_ucx-cma;unpack=0"
+SRC_URI[riscv64_ucx-cma.sha256sum] = "402c2c15b713c169673755d5ed8233d3bea259f2d8b943522ea6fe30e72d3344"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/ucx-devel-1.20.1-1.el10.riscv64.rpm;name=riscv64_ucx-devel;unpack=0"
+SRC_URI[riscv64_ucx-devel.sha256sum] = "634e35c43bb860ceb7412dcdade3c4117951162fa0607b0dfcc4a92d2904d504"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/ucx-ib-1.20.1-1.el10.riscv64.rpm;name=riscv64_ucx-ib;unpack=0"
+SRC_URI[riscv64_ucx-ib.sha256sum] = "1ea53243398ddb883c11a1f3d79ab7cdc14d7c45bcc4f235d2ae9fff1f25da9b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/ucx-rdmacm-1.20.1-1.el10.riscv64.rpm;name=riscv64_ucx-rdmacm;unpack=0"
+SRC_URI[riscv64_ucx-rdmacm.sha256sum] = "ecfbc2710dd8a4f5ef35fdc02bc8e5e0d817eb464ccf680e4da2b6d68a4d282b"
 
 RDEPENDS:ucx = " \
  glibc \

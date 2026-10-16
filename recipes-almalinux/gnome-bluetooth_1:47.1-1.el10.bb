@@ -12,33 +12,35 @@ PACKAGES = " \
  gnome-bluetooth-libs-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gnome-bluetooth-47.1-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/gnome-bluetooth-47.1-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "975dd5aee7b33ca13f1b129f2c75aa986684de18e04c90320211762ff291cc9e"
 
-URI_x86_64_v2_gnome-bluetooth = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gnome-bluetooth-47.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_gnome-bluetooth;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gnome-bluetooth}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gnome-bluetooth-47.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_gnome-bluetooth;unpack=0"
 SRC_URI[x86_64_v2_gnome-bluetooth.sha256sum] = "bdf80325cf01c79b8fa410d1956c01e39046b53edc2cae7f5e7d629ee22d673a"
 
-URI_x86_64_v2_gnome-bluetooth-libs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gnome-bluetooth-libs-47.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_gnome-bluetooth-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gnome-bluetooth-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/gnome-bluetooth-libs-47.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_gnome-bluetooth-libs;unpack=0"
 SRC_URI[x86_64_v2_gnome-bluetooth-libs.sha256sum] = "309e172d91f17bf9555ae5a6a9b91f9a1664d986a775570621a9eb62412b0801"
 
-URI_x86_64_v2_gnome-bluetooth-libs-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/gnome-bluetooth-libs-devel-47.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_gnome-bluetooth-libs-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gnome-bluetooth-libs-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/gnome-bluetooth-libs-devel-47.1-1.el10.x86_64_v2.rpm;name=x86_64_v2_gnome-bluetooth-libs-devel;unpack=0"
 SRC_URI[x86_64_v2_gnome-bluetooth-libs-devel.sha256sum] = "3df7934228d0b7b4f95b754b66083de2360e4482fe4cbea644332eea4fa092f2"
 
-URI_aarch64_gnome-bluetooth = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gnome-bluetooth-47.1-1.el10.aarch64.rpm;name=aarch64_gnome-bluetooth;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gnome-bluetooth}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gnome-bluetooth-47.1-1.el10.aarch64.rpm;name=aarch64_gnome-bluetooth;unpack=0"
 SRC_URI[aarch64_gnome-bluetooth.sha256sum] = "baae9992346a7130b28c482b476ec0fe50c52e9692706d61d07eb97e316af690"
 
-URI_aarch64_gnome-bluetooth-libs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gnome-bluetooth-libs-47.1-1.el10.aarch64.rpm;name=aarch64_gnome-bluetooth-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gnome-bluetooth-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/gnome-bluetooth-libs-47.1-1.el10.aarch64.rpm;name=aarch64_gnome-bluetooth-libs;unpack=0"
 SRC_URI[aarch64_gnome-bluetooth-libs.sha256sum] = "ba015851c492626760e47e4befb6a4e9b9402c0c4d764634061ea0740cf5a92f"
 
-URI_aarch64_gnome-bluetooth-libs-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/gnome-bluetooth-libs-devel-47.1-1.el10.aarch64.rpm;name=aarch64_gnome-bluetooth-libs-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gnome-bluetooth-libs-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/gnome-bluetooth-libs-devel-47.1-1.el10.aarch64.rpm;name=aarch64_gnome-bluetooth-libs-devel;unpack=0"
 SRC_URI[aarch64_gnome-bluetooth-libs-devel.sha256sum] = "9e6674c2e2f0a8f91ef13b3419e148ebdda32ca42e64dfa97507b1aeff9105e6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gnome-bluetooth-47.1-1.el10.riscv64.rpm;name=riscv64_gnome-bluetooth;unpack=0"
+SRC_URI[riscv64_gnome-bluetooth.sha256sum] = "72c46c61cf3457659f8f3564f1c9417859d22935446ccbc7a27a01b9e6725e32"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/gnome-bluetooth-libs-47.1-1.el10.riscv64.rpm;name=riscv64_gnome-bluetooth-libs;unpack=0"
+SRC_URI[riscv64_gnome-bluetooth-libs.sha256sum] = "8576937034d24b7a88d95144fabba3887adaf8dfe71b6e9d9576e8d1987ea5c0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/gnome-bluetooth-libs-devel-47.1-1.el10.riscv64.rpm;name=riscv64_gnome-bluetooth-libs-devel;unpack=0"
+SRC_URI[riscv64_gnome-bluetooth-libs-devel.sha256sum] = "15b441a8bf6ddf4c8a9a8af0076a1654b070a8c9d405b0542e056752ed45ba02"
 
 RDEPENDS:gnome-bluetooth = " \
  bluez \

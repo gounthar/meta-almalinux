@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "phpMyAdmin"
 PV = "5.2.3"
 PR = "1.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  phpMyAdmin \
- "
+"
+PACKAGES:aarch64 = " \
+ phpMyAdmin \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/phpMyAdmin-5.2.3-1.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/phpMyAdmin-5.2.3-1.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1c98d5374481b32859b86da5c38cd310b15bcb8b7bfdb8ff460fa637b43a0d41"
 
-URI_x86_64_v2_phpMyAdmin = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/phpMyAdmin-5.2.3-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_phpMyAdmin;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_phpMyAdmin}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/phpMyAdmin-5.2.3-1.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_phpMyAdmin;unpack=0"
 SRC_URI[x86_64_v2_phpMyAdmin.sha256sum] = "91f10e09dae66c209ca1f41a82d051ba062cf308e25a875de40fb65dc3b47172"
 
-URI_aarch64_phpMyAdmin = "${EPEL_MIRROR}/aarch64/Packages/p/phpMyAdmin-5.2.3-1.el10_2.noarch.rpm;name=aarch64_phpMyAdmin;unpack=0"
-SRC_URI:append = " ${URI_aarch64_phpMyAdmin}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/phpMyAdmin-5.2.3-1.el10_2.noarch.rpm;name=aarch64_phpMyAdmin;unpack=0"
 SRC_URI[aarch64_phpMyAdmin.sha256sum] = "9f7e4fad8e4ba2e703127211eef5ee075791673e1335a0cf354c93917719d8ea"
 
 RDEPENDS:phpMyAdmin = " \

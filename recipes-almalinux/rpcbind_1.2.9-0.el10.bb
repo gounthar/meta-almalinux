@@ -9,17 +9,17 @@ PACKAGES = " \
  rpcbind \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/rpcbind-1.2.9-0.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/rpcbind-1.2.9-0.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a6d63380b697b63294ddce977b5b9107f34114c7c2494997fd19085442a24941"
 
-URI_x86_64_v2_rpcbind = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/rpcbind-1.2.9-0.el10.x86_64_v2.rpm;name=x86_64_v2_rpcbind;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rpcbind}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/rpcbind-1.2.9-0.el10.x86_64_v2.rpm;name=x86_64_v2_rpcbind;unpack=0"
 SRC_URI[x86_64_v2_rpcbind.sha256sum] = "66f5905d9a1a4f8ea0f4f6cfc367813eb9c0a45d508ea5566b745375e3a8795d"
 
-URI_aarch64_rpcbind = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/rpcbind-1.2.9-0.el10.aarch64.rpm;name=aarch64_rpcbind;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rpcbind}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/rpcbind-1.2.9-0.el10.aarch64.rpm;name=aarch64_rpcbind;unpack=0"
 SRC_URI[aarch64_rpcbind.sha256sum] = "471c49f8b0afecee3a7c2ba3ef17ba2685f6ae09b9e665e6bc145d0fff963b0e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/rpcbind-1.2.9-0.el10.riscv64.rpm;name=riscv64_rpcbind;unpack=0"
+SRC_URI[riscv64_rpcbind.sha256sum] = "9edbb6ad269fc2cf57316cd0705f1f1f2c6cde7c405f5c588aa310a08135e710"
 
 RDEPENDS:rpcbind = " \
  bash \

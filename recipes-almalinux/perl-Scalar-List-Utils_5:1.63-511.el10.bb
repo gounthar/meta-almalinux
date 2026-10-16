@@ -10,17 +10,17 @@ PACKAGES = " \
  perl-Scalar-List-Utils \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/perl-Scalar-List-Utils-1.63-511.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/perl-Scalar-List-Utils-1.63-511.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "fddc7ceedcca0da74dfb25f133cca3cda91139842f9aafa9c45fdf866d144c67"
 
-URI_x86_64_v2_perl-Scalar-List-Utils = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/perl-Scalar-List-Utils-1.63-511.el10.x86_64_v2.rpm;name=x86_64_v2_perl-Scalar-List-Utils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Scalar-List-Utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/perl-Scalar-List-Utils-1.63-511.el10.x86_64_v2.rpm;name=x86_64_v2_perl-Scalar-List-Utils;unpack=0"
 SRC_URI[x86_64_v2_perl-Scalar-List-Utils.sha256sum] = "f570882d80e86a70a99163f34ccdf0c7120fff6359be9d74bcf47dac76717974"
 
-URI_aarch64_perl-Scalar-List-Utils = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/perl-Scalar-List-Utils-1.63-511.el10.aarch64.rpm;name=aarch64_perl-Scalar-List-Utils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Scalar-List-Utils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/perl-Scalar-List-Utils-1.63-511.el10.aarch64.rpm;name=aarch64_perl-Scalar-List-Utils;unpack=0"
 SRC_URI[aarch64_perl-Scalar-List-Utils.sha256sum] = "7b465a1852e465c70261319fca7f0b2587a3e1f830fd7d6ae65b5f413fa84743"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/perl-Scalar-List-Utils-1.63-511.el10.riscv64.rpm;name=riscv64_perl-Scalar-List-Utils;unpack=0"
+SRC_URI[riscv64_perl-Scalar-List-Utils.sha256sum] = "a3a4d9f5fb133ac0b4a7f375ff9b9403f706b353b3e5de20ca2147fbe6febc4b"
 
 RDEPENDS:perl-Scalar-List-Utils = " \
  glibc \

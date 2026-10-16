@@ -9,20 +9,23 @@ PACKAGES = " \
  bubblewrap \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/bubblewrap-0.10.0-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/bubblewrap-0.10.0-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "84b21b8f7c98f19a85e0d6507671a07e8e5b892bef833328d3bb698e29e8cd61"
 
 ## Requires (aarch64) that were seen as not satisfiable in original repo:
 # - bubblewrap: libcap.so.2()(64bit)
 
-URI_x86_64_v2_bubblewrap = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/bubblewrap-0.10.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_bubblewrap;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_bubblewrap}"
+## Requires (riscv64) that were seen as not satisfiable in original repo:
+# - bubblewrap: libcap.so.2()(64bit)
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/bubblewrap-0.10.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_bubblewrap;unpack=0"
 SRC_URI[x86_64_v2_bubblewrap.sha256sum] = "51aec01bc88a9fe8162c0cda4979492cf53a8f392a8eee99828164a269011104"
 
-URI_aarch64_bubblewrap = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/bubblewrap-0.10.0-3.el10.aarch64.rpm;name=aarch64_bubblewrap;unpack=0"
-SRC_URI:append = " ${URI_aarch64_bubblewrap}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/bubblewrap-0.10.0-3.el10.aarch64.rpm;name=aarch64_bubblewrap;unpack=0"
 SRC_URI[aarch64_bubblewrap.sha256sum] = "e5379cd43fb36f5dcf253c117d5cba86a624c8b6d90c364c07ce81fd92b902a1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/bubblewrap-0.10.0-3.el10.riscv64.rpm;name=riscv64_bubblewrap;unpack=0"
+SRC_URI[riscv64_bubblewrap.sha256sum] = "3366dd5d820685822065325c4c36b09e1265accde6dacf95f025fe9b8abd05c4"
 
 RDEPENDS:bubblewrap:x86_64_v2 = " \
  glibc \
@@ -31,6 +34,11 @@ RDEPENDS:bubblewrap:x86_64_v2 = " \
  libselinux \
 "
 RDEPENDS:bubblewrap:aarch64 = " \
+ glibc \
+ libgcc \
+ libselinux \
+"
+RDEPENDS:bubblewrap:riscv64 = " \
  glibc \
  libgcc \
  libselinux \

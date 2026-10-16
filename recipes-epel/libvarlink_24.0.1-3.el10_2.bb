@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "libvarlink"
 PV = "24.0.1"
 PR = "3.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  libvarlink \
  libvarlink-devel \
  libvarlink-util \
- "
+"
+PACKAGES:aarch64 = " \
+ libvarlink \
+ libvarlink-devel \
+ libvarlink-util \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/l/libvarlink-24.0.1-3.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/l/libvarlink-24.0.1-3.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "24b5d34f0ea117e36c5ac43e92543897409226116d04cb825d4dc46ed44363de"
 
-URI_x86_64_v2_libvarlink = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libvarlink-24.0.1-3.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libvarlink;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libvarlink}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libvarlink-24.0.1-3.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libvarlink;unpack=0"
 SRC_URI[x86_64_v2_libvarlink.sha256sum] = "3b44c91392379be8ae0fcd512be79d14cf4b2713595abc6f7630a385e63a7c78"
 
-URI_x86_64_v2_libvarlink-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libvarlink-devel-24.0.1-3.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libvarlink-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libvarlink-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libvarlink-devel-24.0.1-3.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libvarlink-devel;unpack=0"
 SRC_URI[x86_64_v2_libvarlink-devel.sha256sum] = "807d74598251621c2252645b14a4afd8725ac6712d81fbd8a9b3cccd911cf25d"
 
-URI_x86_64_v2_libvarlink-util = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libvarlink-util-24.0.1-3.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libvarlink-util;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libvarlink-util}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/libvarlink-util-24.0.1-3.el10_2.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_libvarlink-util;unpack=0"
 SRC_URI[x86_64_v2_libvarlink-util.sha256sum] = "645cb43bf6a918cb589fe4fa808e568818fd373ff7226adfe547ec2851d7a8c7"
 
-URI_aarch64_libvarlink = "${EPEL_MIRROR}/aarch64/Packages/l/libvarlink-24.0.1-3.el10_2.aarch64.rpm;name=aarch64_libvarlink;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libvarlink}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/libvarlink-24.0.1-3.el10_2.aarch64.rpm;name=aarch64_libvarlink;unpack=0"
 SRC_URI[aarch64_libvarlink.sha256sum] = "ea46f5f8aac61cc52f6fccd85d8d6d3fd62878259c13ac5a17bcfc0bbd30adc3"
 
-URI_aarch64_libvarlink-devel = "${EPEL_MIRROR}/aarch64/Packages/l/libvarlink-devel-24.0.1-3.el10_2.aarch64.rpm;name=aarch64_libvarlink-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libvarlink-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/libvarlink-devel-24.0.1-3.el10_2.aarch64.rpm;name=aarch64_libvarlink-devel;unpack=0"
 SRC_URI[aarch64_libvarlink-devel.sha256sum] = "61b0e28708587fc4224c442e6ecb08254cf26d660687fd7baff9d7e6aabccaa7"
 
-URI_aarch64_libvarlink-util = "${EPEL_MIRROR}/aarch64/Packages/l/libvarlink-util-24.0.1-3.el10_2.aarch64.rpm;name=aarch64_libvarlink-util;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libvarlink-util}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/l/libvarlink-util-24.0.1-3.el10_2.aarch64.rpm;name=aarch64_libvarlink-util;unpack=0"
 SRC_URI[aarch64_libvarlink-util.sha256sum] = "907aa95828c1da96c26d12afdb0e3916b574d59e00e0f71f81b1e8d911ba2773"
 
 RDEPENDS:libvarlink = " \

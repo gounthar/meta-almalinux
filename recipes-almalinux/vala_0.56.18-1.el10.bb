@@ -14,8 +14,7 @@ PACKAGES = " \
  valadoc-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/vala-0.56.18-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/vala-0.56.18-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "11a487dbc31ed2239f8072793384c7710cdc3aca17793872c6fdb3a1d70d5913"
 
 ## Requires (aarch64) that were seen as not satisfiable in original repo:
@@ -24,53 +23,65 @@ SRC_URI[src.sha256sum] = "11a487dbc31ed2239f8072793384c7710cdc3aca17793872c6fdb3
 # - valadoc: libcgraph.so.6()(64bit)
 # - valadoc: libgvc.so.6()(64bit)
 
-URI_x86_64_v2_libvala = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libvala-0.56.18-1.el10.x86_64_v2.rpm;name=x86_64_v2_libvala;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libvala}"
+## Requires (riscv64) that were seen as not satisfiable in original repo:
+# - valadoc-devel: pkgconfig(libgvc)
+# - valadoc: libcdt.so.5()(64bit)
+# - valadoc: libcgraph.so.6()(64bit)
+# - valadoc: libgvc.so.6()(64bit)
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libvala-0.56.18-1.el10.x86_64_v2.rpm;name=x86_64_v2_libvala;unpack=0"
 SRC_URI[x86_64_v2_libvala.sha256sum] = "5a974aeef1412b0e3c96f72d5a2f58f22a45e11b2494ab64fe84a9fbebdb7f1a"
 
-URI_x86_64_v2_libvala-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libvala-devel-0.56.18-1.el10.x86_64_v2.rpm;name=x86_64_v2_libvala-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libvala-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libvala-devel-0.56.18-1.el10.x86_64_v2.rpm;name=x86_64_v2_libvala-devel;unpack=0"
 SRC_URI[x86_64_v2_libvala-devel.sha256sum] = "dd17a912e28e485dd10c0f71cb189a562c74d3a864969bc229f703eb91a56271"
 
-URI_x86_64_v2_vala = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/vala-0.56.18-1.el10.x86_64_v2.rpm;name=x86_64_v2_vala;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_vala}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/vala-0.56.18-1.el10.x86_64_v2.rpm;name=x86_64_v2_vala;unpack=0"
 SRC_URI[x86_64_v2_vala.sha256sum] = "e31df475bcd0603267e9ed078d887546011a79c456361247d3f9f123d3cf102b"
 
-URI_x86_64_v2_vala-doc = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/vala-doc-0.56.18-1.el10.noarch.rpm;name=x86_64_v2_vala-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_vala-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/vala-doc-0.56.18-1.el10.noarch.rpm;name=x86_64_v2_vala-doc;unpack=0"
 SRC_URI[x86_64_v2_vala-doc.sha256sum] = "e39b11b83d6f5faacb262fb94a57585498536aa57b4e03d2f45cdead9625ccbc"
 
-URI_x86_64_v2_valadoc = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/valadoc-0.56.18-1.el10.x86_64_v2.rpm;name=x86_64_v2_valadoc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_valadoc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/valadoc-0.56.18-1.el10.x86_64_v2.rpm;name=x86_64_v2_valadoc;unpack=0"
 SRC_URI[x86_64_v2_valadoc.sha256sum] = "a253e999f88b318c3d841f5c4994e5e6941c8f796a86c7483c239f032173e685"
 
-URI_x86_64_v2_valadoc-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/valadoc-devel-0.56.18-1.el10.x86_64_v2.rpm;name=x86_64_v2_valadoc-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_valadoc-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/valadoc-devel-0.56.18-1.el10.x86_64_v2.rpm;name=x86_64_v2_valadoc-devel;unpack=0"
 SRC_URI[x86_64_v2_valadoc-devel.sha256sum] = "95eb0ba71b2de59f753fdfc523f8ba5038bc9a585a9791c21d5bd128469d7514"
 
-URI_aarch64_libvala = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libvala-0.56.18-1.el10.aarch64.rpm;name=aarch64_libvala;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libvala}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libvala-0.56.18-1.el10.aarch64.rpm;name=aarch64_libvala;unpack=0"
 SRC_URI[aarch64_libvala.sha256sum] = "74cbe0621539917ad50b46dca9d9bad8345bd18dc17492b5e254d1892d4eacc1"
 
-URI_aarch64_libvala-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libvala-devel-0.56.18-1.el10.aarch64.rpm;name=aarch64_libvala-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libvala-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libvala-devel-0.56.18-1.el10.aarch64.rpm;name=aarch64_libvala-devel;unpack=0"
 SRC_URI[aarch64_libvala-devel.sha256sum] = "5fcd2b0a1154d92a5a370d2d9f719935864839020de0e0c123aff2ac1c5938fa"
 
-URI_aarch64_vala = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/vala-0.56.18-1.el10.aarch64.rpm;name=aarch64_vala;unpack=0"
-SRC_URI:append = " ${URI_aarch64_vala}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/vala-0.56.18-1.el10.aarch64.rpm;name=aarch64_vala;unpack=0"
 SRC_URI[aarch64_vala.sha256sum] = "7fb8d695072fd82afcdd35e0baf7ff2dda422ce51c6bbcdc9a7855fec6ae134c"
 
-URI_aarch64_vala-doc = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/vala-doc-0.56.18-1.el10.noarch.rpm;name=aarch64_vala-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_vala-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/vala-doc-0.56.18-1.el10.noarch.rpm;name=aarch64_vala-doc;unpack=0"
 SRC_URI[aarch64_vala-doc.sha256sum] = "e39b11b83d6f5faacb262fb94a57585498536aa57b4e03d2f45cdead9625ccbc"
 
-URI_aarch64_valadoc = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/valadoc-0.56.18-1.el10.aarch64.rpm;name=aarch64_valadoc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_valadoc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/valadoc-0.56.18-1.el10.aarch64.rpm;name=aarch64_valadoc;unpack=0"
 SRC_URI[aarch64_valadoc.sha256sum] = "57e97220c54a8df1feaaefd8a8aa6fe66e970eca72e62a090bbd45300f2341f4"
 
-URI_aarch64_valadoc-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/valadoc-devel-0.56.18-1.el10.aarch64.rpm;name=aarch64_valadoc-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_valadoc-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/valadoc-devel-0.56.18-1.el10.aarch64.rpm;name=aarch64_valadoc-devel;unpack=0"
 SRC_URI[aarch64_valadoc-devel.sha256sum] = "644a1e9129da9cffbaebdb2fe015f2d3a672dca3a6652327cf1d71a771686f7a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libvala-0.56.18-1.el10.riscv64.rpm;name=riscv64_libvala;unpack=0"
+SRC_URI[riscv64_libvala.sha256sum] = "1ada9d564274785ad179c317f91a22beb1699d24adc7354c94f4e59ea39e6262"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libvala-devel-0.56.18-1.el10.riscv64.rpm;name=riscv64_libvala-devel;unpack=0"
+SRC_URI[riscv64_libvala-devel.sha256sum] = "6b21b72e6c8af18c6378999b0abc7a3c43ce2d67d72a8183d4b143b012da618b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/vala-0.56.18-1.el10.riscv64.rpm;name=riscv64_vala;unpack=0"
+SRC_URI[riscv64_vala.sha256sum] = "16fdac725f7adc703b8ce6dd7a74dfc8e898ef00a37b886a03789539fff87ecd"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/vala-doc-0.56.18-1.el10.noarch.rpm;name=riscv64_vala-doc;unpack=0"
+SRC_URI[riscv64_vala-doc.sha256sum] = "e39b11b83d6f5faacb262fb94a57585498536aa57b4e03d2f45cdead9625ccbc"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/valadoc-0.56.18-1.el10.riscv64.rpm;name=riscv64_valadoc;unpack=0"
+SRC_URI[riscv64_valadoc.sha256sum] = "3c700b495a3aa86165c97098ff7f08de49f5a241fc3f7721ac261440af695da5"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/valadoc-devel-0.56.18-1.el10.riscv64.rpm;name=riscv64_valadoc-devel;unpack=0"
+SRC_URI[riscv64_valadoc-devel.sha256sum] = "90b2ded4e14544743869b7bf41687c033a74adcd55a8c187e5b819bfaa894cda"
 
 RDEPENDS:libvala = " \
  glib2 \
@@ -106,6 +117,12 @@ RDEPENDS:valadoc:aarch64 = " \
  libvala \
  vala \
 "
+RDEPENDS:valadoc:riscv64 = " \
+ glib2 \
+ glibc \
+ libvala \
+ vala \
+"
 RDEPENDS:valadoc-devel:x86_64_v2 = " \
  glib2-devel \
  graphviz-devel \
@@ -114,6 +131,12 @@ RDEPENDS:valadoc-devel:x86_64_v2 = " \
  valadoc \
 "
 RDEPENDS:valadoc-devel:aarch64 = " \
+ glib2-devel \
+ libvala-devel \
+ pkgconf-pkg-config \
+ valadoc \
+"
+RDEPENDS:valadoc-devel:riscv64 = " \
  glib2-devel \
  libvala-devel \
  pkgconf-pkg-config \

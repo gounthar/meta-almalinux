@@ -9,17 +9,17 @@ PACKAGES = " \
  bolt \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/bolt-0.9.10-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/bolt-0.9.10-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f89a465249a326f0c7d226501265ab6a93b5441d98a4a5dba3b015e3ba84b285"
 
-URI_x86_64_v2_bolt = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/bolt-0.9.10-1.el10.x86_64_v2.rpm;name=x86_64_v2_bolt;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_bolt}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/bolt-0.9.10-1.el10.x86_64_v2.rpm;name=x86_64_v2_bolt;unpack=0"
 SRC_URI[x86_64_v2_bolt.sha256sum] = "a288b9a6cb6d1b9740ec6a40fd287d0857ef7063589e99e3db670c8cb524a628"
 
-URI_aarch64_bolt = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/bolt-0.9.10-1.el10.aarch64.rpm;name=aarch64_bolt;unpack=0"
-SRC_URI:append = " ${URI_aarch64_bolt}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/bolt-0.9.10-1.el10.aarch64.rpm;name=aarch64_bolt;unpack=0"
 SRC_URI[aarch64_bolt.sha256sum] = "94a218debb267fe70b325fc0bf5583225360575452e56659f0bfaab7622d5605"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/bolt-0.9.10-1.el10.riscv64.rpm;name=riscv64_bolt;unpack=0"
+SRC_URI[riscv64_bolt.sha256sum] = "3bc821a930214adc38cc6b7eeca72cf69824c0895a32fef9ff8ee26b8e1fb023"
 
 RDEPENDS:bolt = " \
  bash \

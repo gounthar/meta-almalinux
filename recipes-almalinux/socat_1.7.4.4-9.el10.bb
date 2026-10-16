@@ -9,17 +9,17 @@ PACKAGES = " \
  socat \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/socat-1.7.4.4-9.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/socat-1.7.4.4-9.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c8d711325047711391547b096b3d083f433f83be81f33410515396bc2a895993"
 
-URI_x86_64_v2_socat = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/socat-1.7.4.4-9.el10.x86_64_v2.rpm;name=x86_64_v2_socat;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_socat}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/socat-1.7.4.4-9.el10.x86_64_v2.rpm;name=x86_64_v2_socat;unpack=0"
 SRC_URI[x86_64_v2_socat.sha256sum] = "f8c88ea017544f0f438e26ebb8e936273df6bd856adb2ae879258b36590cfccf"
 
-URI_aarch64_socat = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/socat-1.7.4.4-9.el10.aarch64.rpm;name=aarch64_socat;unpack=0"
-SRC_URI:append = " ${URI_aarch64_socat}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/socat-1.7.4.4-9.el10.aarch64.rpm;name=aarch64_socat;unpack=0"
 SRC_URI[aarch64_socat.sha256sum] = "b34887984cd65311345e85da890b17a01777ad86f043ce0f7711bdad60af913f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/socat-1.7.4.4-9.el10.riscv64.rpm;name=riscv64_socat;unpack=0"
+SRC_URI[riscv64_socat.sha256sum] = "a234ff1102956f3cf7945c8a127a319f22fface2f2b29077f809c4e7cd422a9f"
 
 RDEPENDS:socat = " \
  glibc \

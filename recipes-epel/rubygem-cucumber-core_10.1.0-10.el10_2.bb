@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rubygem-cucumber-core"
 PV = "10.1.0"
 PR = "10.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rubygem-cucumber-core \
  rubygem-cucumber-core-doc \
- "
+"
+PACKAGES:aarch64 = " \
+ rubygem-cucumber-core \
+ rubygem-cucumber-core-doc \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rubygem-cucumber-core-10.1.0-10.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rubygem-cucumber-core-10.1.0-10.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "0abedf300d777e475ee8bfee5ff4f7b6cd66866449cbf9afac255112da07aca1"
 
-URI_x86_64_v2_rubygem-cucumber-core = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rubygem-cucumber-core-10.1.0-10.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rubygem-cucumber-core;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rubygem-cucumber-core}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rubygem-cucumber-core-10.1.0-10.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rubygem-cucumber-core;unpack=0"
 SRC_URI[x86_64_v2_rubygem-cucumber-core.sha256sum] = "04ee9da89bc64604b3245b6615f96a0f0b0515bff475dad2bc1dc3d7f051f732"
 
-URI_x86_64_v2_rubygem-cucumber-core-doc = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rubygem-cucumber-core-doc-10.1.0-10.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rubygem-cucumber-core-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rubygem-cucumber-core-doc}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rubygem-cucumber-core-doc-10.1.0-10.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rubygem-cucumber-core-doc;unpack=0"
 SRC_URI[x86_64_v2_rubygem-cucumber-core-doc.sha256sum] = "3c1387a0ff38b8fb29e0a4707ca563c57086de8f4544b0da692cec887750f7e4"
 
-URI_aarch64_rubygem-cucumber-core = "${EPEL_MIRROR}/aarch64/Packages/r/rubygem-cucumber-core-10.1.0-10.el10_2.noarch.rpm;name=aarch64_rubygem-cucumber-core;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rubygem-cucumber-core}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rubygem-cucumber-core-10.1.0-10.el10_2.noarch.rpm;name=aarch64_rubygem-cucumber-core;unpack=0"
 SRC_URI[aarch64_rubygem-cucumber-core.sha256sum] = "413b8b4811a8ce248e816f9ce9b2e31f1656f09561845ef62fc2e1406a018652"
 
-URI_aarch64_rubygem-cucumber-core-doc = "${EPEL_MIRROR}/aarch64/Packages/r/rubygem-cucumber-core-doc-10.1.0-10.el10_2.noarch.rpm;name=aarch64_rubygem-cucumber-core-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rubygem-cucumber-core-doc}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rubygem-cucumber-core-doc-10.1.0-10.el10_2.noarch.rpm;name=aarch64_rubygem-cucumber-core-doc;unpack=0"
 SRC_URI[aarch64_rubygem-cucumber-core-doc.sha256sum] = "733fbc359a42e615693efe080173cbc384a18f5e07c81c36c242acc606e5bdca"
 
 RDEPENDS:rubygem-cucumber-core = " \

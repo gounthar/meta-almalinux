@@ -9,20 +9,23 @@ PACKAGES = " \
  bpftool \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/bpftool-7.7.0-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/bpftool-7.7.0-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3afe7985670fbcc6fb8b5adaca9628dd2100f3c8292307d667a16d12cae27935"
 
 ## Requires (aarch64) that were seen as not satisfiable in original repo:
 # - bpftool: libcap.so.2()(64bit)
 
-URI_x86_64_v2_bpftool = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/bpftool-7.7.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_bpftool;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_bpftool}"
+## Requires (riscv64) that were seen as not satisfiable in original repo:
+# - bpftool: libcap.so.2()(64bit)
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/bpftool-7.7.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_bpftool;unpack=0"
 SRC_URI[x86_64_v2_bpftool.sha256sum] = "c0ab1bda7d2b99ff06ad015bea05f3c8b6a4207906560051998f558889005b2b"
 
-URI_aarch64_bpftool = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/bpftool-7.7.0-3.el10.aarch64.rpm;name=aarch64_bpftool;unpack=0"
-SRC_URI:append = " ${URI_aarch64_bpftool}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/bpftool-7.7.0-3.el10.aarch64.rpm;name=aarch64_bpftool;unpack=0"
 SRC_URI[aarch64_bpftool.sha256sum] = "ffbbbf14f45715f0959ce0a7dea2f11d07dfba37743bb1f9a42d4c2a53052350"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/bpftool-7.7.0-3.el10.riscv64.rpm;name=riscv64_bpftool;unpack=0"
+SRC_URI[riscv64_bpftool.sha256sum] = "3f69c5fd124451b6ea3d6e11d598e0aa718e8119e3665fa1cecdc8e32327dc5a"
 
 RDEPENDS:bpftool:x86_64_v2 = " \
  elfutils-libelf \
@@ -33,6 +36,13 @@ RDEPENDS:bpftool:x86_64_v2 = " \
  zlib-ng-compat \
 "
 RDEPENDS:bpftool:aarch64 = " \
+ elfutils-libelf \
+ glibc \
+ llvm-libs \
+ openssl-libs \
+ zlib-ng-compat \
+"
+RDEPENDS:bpftool:riscv64 = " \
  elfutils-libelf \
  glibc \
  llvm-libs \

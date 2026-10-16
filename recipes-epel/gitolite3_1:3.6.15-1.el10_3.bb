@@ -6,20 +6,23 @@ PN = "gitolite3"
 PE = "1"
 PV = "3.6.15"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  gitolite3 \
- "
+"
+PACKAGES:aarch64 = " \
+ gitolite3 \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/g/gitolite3-3.6.15-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/g/gitolite3-3.6.15-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "0b85bf7e7e05251ef2b05a1096e592e3a1ea65620ca5cf9fae7a63b9e3a8cf37"
 
-URI_x86_64_v2_gitolite3 = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gitolite3-3.6.15-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_gitolite3;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gitolite3}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/gitolite3-3.6.15-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_gitolite3;unpack=0"
 SRC_URI[x86_64_v2_gitolite3.sha256sum] = "36a2dcf0594cfe115ff828753cf2cd8cd0c25173ac31a5ae283f41d0df58570a"
 
-URI_aarch64_gitolite3 = "${EPEL_MIRROR}/aarch64/Packages/g/gitolite3-3.6.15-1.el10_3.noarch.rpm;name=aarch64_gitolite3;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gitolite3}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/g/gitolite3-3.6.15-1.el10_3.noarch.rpm;name=aarch64_gitolite3;unpack=0"
 SRC_URI[aarch64_gitolite3.sha256sum] = "4053c762eb94d6b12ec13c92010e616c03bab47c750e93fd96e668021c53984d"
 
 RDEPENDS:gitolite3 = " \

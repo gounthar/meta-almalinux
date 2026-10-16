@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-Eval-WithLexicals"
 PV = "1.003006"
 PR = "26.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-Eval-WithLexicals \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-Eval-WithLexicals \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-Eval-WithLexicals-1.003006-26.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-Eval-WithLexicals-1.003006-26.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "4d9896e2c3bae11fcc7863535088c6304d710953ccb1e405dfdda1a278efba2b"
 
-URI_x86_64_v2_perl-Eval-WithLexicals = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Eval-WithLexicals-1.003006-26.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Eval-WithLexicals;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Eval-WithLexicals}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Eval-WithLexicals-1.003006-26.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Eval-WithLexicals;unpack=0"
 SRC_URI[x86_64_v2_perl-Eval-WithLexicals.sha256sum] = "4f65478ed9d594da969d650d7e9345eb7e08455993c6dc0b8acb4aac622600c5"
 
-URI_aarch64_perl-Eval-WithLexicals = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Eval-WithLexicals-1.003006-26.el10_3.noarch.rpm;name=aarch64_perl-Eval-WithLexicals;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Eval-WithLexicals}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Eval-WithLexicals-1.003006-26.el10_3.noarch.rpm;name=aarch64_perl-Eval-WithLexicals;unpack=0"
 SRC_URI[aarch64_perl-Eval-WithLexicals.sha256sum] = "14a2ab1514c9e9ffe586deaa21c5baa04638a623537d7c4db2d2cad9e18a5ec1"
 
 RDEPENDS:perl-Eval-WithLexicals = " \

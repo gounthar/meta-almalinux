@@ -6,48 +6,59 @@ PN = "openmpi"
 PE = "2"
 PV = "5.0.2"
 PR = "5.el10"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  openmpi \
  openmpi-devel \
  openmpi-java \
  python3-openmpi \
- "
+"
+PACKAGES:aarch64 = " \
+ openmpi \
+ openmpi-devel \
+ openmpi-java \
+ python3-openmpi \
+"
+PACKAGES:riscv64 = " \
+ openmpi \
+ openmpi-devel \
+ python3-openmpi \
+"
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/openmpi-5.0.2-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/openmpi-5.0.2-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a882da33c66460da6dc0506790a40815aa58ca3f26b3b7620416e942f12af750"
 
-URI_x86_64_v2_openmpi = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/openmpi-5.0.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_openmpi;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_openmpi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/openmpi-5.0.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_openmpi;unpack=0"
 SRC_URI[x86_64_v2_openmpi.sha256sum] = "d9cb9ec915d64eb082bd73d830025c97cc758ac734f70a89c00056f2c5aa5407"
 
-URI_x86_64_v2_openmpi-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/openmpi-devel-5.0.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_openmpi-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_openmpi-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/openmpi-devel-5.0.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_openmpi-devel;unpack=0"
 SRC_URI[x86_64_v2_openmpi-devel.sha256sum] = "94943e79a9578177241bd971b19a8f4097c0ba8d57e7bfd2b0e87f6933737152"
 
-URI_x86_64_v2_openmpi-java = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/openmpi-java-5.0.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_openmpi-java;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_openmpi-java}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/openmpi-java-5.0.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_openmpi-java;unpack=0"
 SRC_URI[x86_64_v2_openmpi-java.sha256sum] = "149e838f9575ea30ac02576c34e06370b23c42dd43f9600943724315069d27f1"
 
-URI_x86_64_v2_python3-openmpi = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3-openmpi-5.0.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_python3-openmpi;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-openmpi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3-openmpi-5.0.2-5.el10.x86_64_v2.rpm;name=x86_64_v2_python3-openmpi;unpack=0"
 SRC_URI[x86_64_v2_python3-openmpi.sha256sum] = "8b3f577e3ce015b59bdcc1398e75d55f688f19106f5605461ae1888f4283fa80"
 
-URI_aarch64_openmpi = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/openmpi-5.0.2-5.el10.aarch64.rpm;name=aarch64_openmpi;unpack=0"
-SRC_URI:append = " ${URI_aarch64_openmpi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/openmpi-5.0.2-5.el10.aarch64.rpm;name=aarch64_openmpi;unpack=0"
 SRC_URI[aarch64_openmpi.sha256sum] = "460b4d614fa0a4f9333f197ac5694e42f70128730d1f429aadc8e2233b2c168c"
 
-URI_aarch64_openmpi-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/openmpi-devel-5.0.2-5.el10.aarch64.rpm;name=aarch64_openmpi-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_openmpi-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/openmpi-devel-5.0.2-5.el10.aarch64.rpm;name=aarch64_openmpi-devel;unpack=0"
 SRC_URI[aarch64_openmpi-devel.sha256sum] = "bdb07ff4863d4e6621fb6a61eb993e07a45d7cf30a74cff2fe1d0f468580ed50"
 
-URI_aarch64_openmpi-java = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/openmpi-java-5.0.2-5.el10.aarch64.rpm;name=aarch64_openmpi-java;unpack=0"
-SRC_URI:append = " ${URI_aarch64_openmpi-java}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/openmpi-java-5.0.2-5.el10.aarch64.rpm;name=aarch64_openmpi-java;unpack=0"
 SRC_URI[aarch64_openmpi-java.sha256sum] = "ab2b58b2f8cf65d53c382c3095b0ecad64fc038aa8eeb5ba8b31aa29759a3322"
 
-URI_aarch64_python3-openmpi = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3-openmpi-5.0.2-5.el10.aarch64.rpm;name=aarch64_python3-openmpi;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-openmpi}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3-openmpi-5.0.2-5.el10.aarch64.rpm;name=aarch64_python3-openmpi;unpack=0"
 SRC_URI[aarch64_python3-openmpi.sha256sum] = "cf9c6033a5ea96d5ae38c8b6928f1d95a467a59a916ce28b0318f994dc3b15bc"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/openmpi-5.0.2-5.el10.riscv64.rpm;name=riscv64_openmpi;unpack=0"
+SRC_URI[riscv64_openmpi.sha256sum] = "78b68b90d551ef588fb81706e79242cf662a5f71960f1634351c8e8bde1d42b0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/openmpi-devel-5.0.2-5.el10.riscv64.rpm;name=riscv64_openmpi-devel;unpack=0"
+SRC_URI[riscv64_openmpi-devel.sha256sum] = "dd5da96783b815341112b03a47d663a71725abb173262a2eb81dc32485a45590"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/python3-openmpi-5.0.2-5.el10.riscv64.rpm;name=riscv64_python3-openmpi;unpack=0"
+SRC_URI[riscv64_python3-openmpi.sha256sum] = "b9d9ce8e64603a39b9e451a361ea3a960374edaefe063f4a54cae3037fe30aae"
 
 RDEPENDS:openmpi:x86_64_v2 = " \
  glibc \
@@ -75,6 +86,18 @@ RDEPENDS:openmpi:aarch64 = " \
  prrte \
  ucx \
  virtual/environment_modules_ \
+"
+RDEPENDS:openmpi:riscv64 = " \
+ environment-modules \
+ glibc \
+ hwloc-libs \
+ libevent \
+ libfabric \
+ libgcc \
+ libgfortran \
+ openssh-clients \
+ pmix \
+ prrte \
 "
 RDEPENDS:openmpi-devel = " \
  gcc-gfortran \

@@ -9,17 +9,17 @@ PACKAGES = " \
  rasdaemon \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/rasdaemon-0.8.0-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/rasdaemon-0.8.0-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "ae64e691193e455a7a786bea18928eb0ff5d693a407021b1c343f0d6b365e23a"
 
-URI_x86_64_v2_rasdaemon = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/rasdaemon-0.8.0-6.el10.x86_64_v2.rpm;name=x86_64_v2_rasdaemon;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rasdaemon}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/rasdaemon-0.8.0-6.el10.x86_64_v2.rpm;name=x86_64_v2_rasdaemon;unpack=0"
 SRC_URI[x86_64_v2_rasdaemon.sha256sum] = "cff3631234faa967a2bca66e3068976067e1d6f6a1127b5e7257261bbb0c5fee"
 
-URI_aarch64_rasdaemon = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/rasdaemon-0.8.0-6.el10.aarch64.rpm;name=aarch64_rasdaemon;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rasdaemon}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/rasdaemon-0.8.0-6.el10.aarch64.rpm;name=aarch64_rasdaemon;unpack=0"
 SRC_URI[aarch64_rasdaemon.sha256sum] = "d55293221a7e7a93871b6fa7244034562850270c6f55f1d264f1b96095274d78"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/rasdaemon-0.8.0-6.el10.riscv64.rpm;name=riscv64_rasdaemon;unpack=0"
+SRC_URI[riscv64_rasdaemon.sha256sum] = "01095ff4395885fe6e282cecfe2c5ac274a58e230852c25de20b2ba9514d6b6c"
 
 RDEPENDS:rasdaemon:x86_64_v2 = " \
  dmidecode \
@@ -38,6 +38,21 @@ RDEPENDS:rasdaemon:x86_64_v2 = " \
  systemd \
 "
 RDEPENDS:rasdaemon:aarch64 = " \
+ glibc \
+ hwdata \
+ libtraceevent \
+ perl-DBD-SQLite \
+ perl-File-Basename \
+ perl-File-Find \
+ perl-Getopt-Long \
+ perl-POSIX \
+ perl-constant \
+ perl-interpreter \
+ perl-libs \
+ sqlite-libs \
+ systemd \
+"
+RDEPENDS:rasdaemon:riscv64 = " \
  glibc \
  hwdata \
  libtraceevent \

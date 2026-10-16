@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-uu_sync"
 PV = "0.7.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-uu_sync+default-devel \
  rust-uu_sync-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-uu_sync+default-devel \
+ rust-uu_sync-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-uu_sync-0.7.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-uu_sync-0.7.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "33c33ae15604193bd6aea754fe5a30aaa139cea82df159a0fdc5b093808bcc21"
 
-URI_x86_64_v2_rust-uu_sync+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_sync+default-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_sync+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_sync+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_sync+default-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_sync+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_sync+default-devel.sha256sum] = "e6d06e9b93f4da5446fbf0233337679d3bca372e05a57636ae066b11959ab14c"
 
-URI_x86_64_v2_rust-uu_sync-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_sync-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_sync-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-uu_sync-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-uu_sync-devel-0.7.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-uu_sync-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-uu_sync-devel.sha256sum] = "65681dc72e634bee3b28a36c7e9cf63b964a2d207670a9376aecd32e77606201"
 
-URI_aarch64_rust-uu_sync+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_sync+default-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_sync+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_sync+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_sync+default-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_sync+default-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_sync+default-devel.sha256sum] = "f9f88083b62d3b4ea74821f779bfc7726fa71e79fe0b4d6169b77aee7602660b"
 
-URI_aarch64_rust-uu_sync-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_sync-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_sync-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-uu_sync-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-uu_sync-devel-0.7.0-1.el10_3.noarch.rpm;name=aarch64_rust-uu_sync-devel;unpack=0"
 SRC_URI[aarch64_rust-uu_sync-devel.sha256sum] = "7caea351d0c145cc8f152867e86f28a137e1f8d7f5e470a4cf100799d4009656"
 
 RDEPENDS:rust-uu_sync+default-devel = " \

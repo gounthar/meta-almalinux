@@ -10,25 +10,26 @@ PACKAGES = " \
  libkdumpfile-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libkdumpfile-0.5.5-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libkdumpfile-0.5.5-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "9c676971e8472e11799388c8af9f4aedf0173d779625e77c3ea5c56bf2656350"
 
-URI_x86_64_v2_libkdumpfile = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libkdumpfile-0.5.5-1.el10.x86_64_v2.rpm;name=x86_64_v2_libkdumpfile;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libkdumpfile}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libkdumpfile-0.5.5-1.el10.x86_64_v2.rpm;name=x86_64_v2_libkdumpfile;unpack=0"
 SRC_URI[x86_64_v2_libkdumpfile.sha256sum] = "508c504f28bad3276a3e5b86e75cb9c8de438e05d1bd231103fdf21bdff2d675"
 
-URI_x86_64_v2_libkdumpfile-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libkdumpfile-devel-0.5.5-1.el10.x86_64_v2.rpm;name=x86_64_v2_libkdumpfile-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libkdumpfile-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libkdumpfile-devel-0.5.5-1.el10.x86_64_v2.rpm;name=x86_64_v2_libkdumpfile-devel;unpack=0"
 SRC_URI[x86_64_v2_libkdumpfile-devel.sha256sum] = "c67af0a6b6b525ad1ac61a601c97ab74d9be66f981dfaa636d3dea93ef931a24"
 
-URI_aarch64_libkdumpfile = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libkdumpfile-0.5.5-1.el10.aarch64.rpm;name=aarch64_libkdumpfile;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libkdumpfile}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libkdumpfile-0.5.5-1.el10.aarch64.rpm;name=aarch64_libkdumpfile;unpack=0"
 SRC_URI[aarch64_libkdumpfile.sha256sum] = "3c6b8f431b9a477fe8426d9a2f39f4254200a6811257d44c4e55381623d3ff42"
 
-URI_aarch64_libkdumpfile-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libkdumpfile-devel-0.5.5-1.el10.aarch64.rpm;name=aarch64_libkdumpfile-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libkdumpfile-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libkdumpfile-devel-0.5.5-1.el10.aarch64.rpm;name=aarch64_libkdumpfile-devel;unpack=0"
 SRC_URI[aarch64_libkdumpfile-devel.sha256sum] = "18e27f9f6708aa3fb38217f9bf8487759a87654771b7851674de756ed5c01849"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libkdumpfile-0.5.5-1.el10.riscv64.rpm;name=riscv64_libkdumpfile;unpack=0"
+SRC_URI[riscv64_libkdumpfile.sha256sum] = "1219326fb837cda4b952d0c85e87eaa24096d5bd0f0edac45ed6a20be007cb1a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libkdumpfile-devel-0.5.5-1.el10.riscv64.rpm;name=riscv64_libkdumpfile-devel;unpack=0"
+SRC_URI[riscv64_libkdumpfile-devel.sha256sum] = "dc82a83c693cac4303b566f5f00d948dc433d0c1fe728381943b8a53dbd05180"
 
 RDEPENDS:libkdumpfile = " \
  glibc \

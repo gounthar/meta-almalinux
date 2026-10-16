@@ -12,41 +12,44 @@ PACKAGES = " \
  geoclue2-libs \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/geoclue2-2.7.2-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/geoclue2-2.7.2-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "20568fe4510485b6a2799f977d404487f21a32de9865f923787c7975218d57a9"
 
-URI_x86_64_v2_geoclue2 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/geoclue2-2.7.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_geoclue2;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_geoclue2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/geoclue2-2.7.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_geoclue2;unpack=0"
 SRC_URI[x86_64_v2_geoclue2.sha256sum] = "eba96720c743f5ac7a6d9fcda592d1ef52a2dc8f91f4c25368af9d5e1356912d"
 
-URI_x86_64_v2_geoclue2-demos = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/geoclue2-demos-2.7.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_geoclue2-demos;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_geoclue2-demos}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/geoclue2-demos-2.7.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_geoclue2-demos;unpack=0"
 SRC_URI[x86_64_v2_geoclue2-demos.sha256sum] = "127766ea4f31ae6c2b51b966014fceffa341fe799c17f345a52fcd02287a3e57"
 
-URI_x86_64_v2_geoclue2-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/geoclue2-devel-2.7.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_geoclue2-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_geoclue2-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/geoclue2-devel-2.7.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_geoclue2-devel;unpack=0"
 SRC_URI[x86_64_v2_geoclue2-devel.sha256sum] = "2fa8d84b2f4863d7e70b09225b9285820a610dd3a0c6cb88626b2d76b306bd80"
 
-URI_x86_64_v2_geoclue2-libs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/geoclue2-libs-2.7.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_geoclue2-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_geoclue2-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/geoclue2-libs-2.7.2-1.el10.x86_64_v2.rpm;name=x86_64_v2_geoclue2-libs;unpack=0"
 SRC_URI[x86_64_v2_geoclue2-libs.sha256sum] = "ebcb0925e8d71e72c30a0bffe2e63f904d99884ced757e0a6d76a7618beb6752"
 
-URI_aarch64_geoclue2 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/geoclue2-2.7.2-1.el10.aarch64.rpm;name=aarch64_geoclue2;unpack=0"
-SRC_URI:append = " ${URI_aarch64_geoclue2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/geoclue2-2.7.2-1.el10.aarch64.rpm;name=aarch64_geoclue2;unpack=0"
 SRC_URI[aarch64_geoclue2.sha256sum] = "2eff8e19af30c054c30934bd6ab2cfb68acf0a6b0483d1a2db357feac51a5f7e"
 
-URI_aarch64_geoclue2-demos = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/geoclue2-demos-2.7.2-1.el10.aarch64.rpm;name=aarch64_geoclue2-demos;unpack=0"
-SRC_URI:append = " ${URI_aarch64_geoclue2-demos}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/geoclue2-demos-2.7.2-1.el10.aarch64.rpm;name=aarch64_geoclue2-demos;unpack=0"
 SRC_URI[aarch64_geoclue2-demos.sha256sum] = "24c5441479f0fa8533ce68650a644376ecf85fd028895808be492db042a0e5fd"
 
-URI_aarch64_geoclue2-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/geoclue2-devel-2.7.2-1.el10.aarch64.rpm;name=aarch64_geoclue2-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_geoclue2-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/geoclue2-devel-2.7.2-1.el10.aarch64.rpm;name=aarch64_geoclue2-devel;unpack=0"
 SRC_URI[aarch64_geoclue2-devel.sha256sum] = "e3e98a202eec967ed4db33ad44c6dab31332ed238a0b0c8e09b8da8b3838878a"
 
-URI_aarch64_geoclue2-libs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/geoclue2-libs-2.7.2-1.el10.aarch64.rpm;name=aarch64_geoclue2-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_geoclue2-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/geoclue2-libs-2.7.2-1.el10.aarch64.rpm;name=aarch64_geoclue2-libs;unpack=0"
 SRC_URI[aarch64_geoclue2-libs.sha256sum] = "6e0920f21cc4491cb71a571aaa2505fb7a033d1fb34c6676dc8d8e33badcdff6"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/geoclue2-2.7.2-1.el10.riscv64.rpm;name=riscv64_geoclue2;unpack=0"
+SRC_URI[riscv64_geoclue2.sha256sum] = "c30cfe40ab6c04fcc56af7c6ae52b51cdb4d550dbccbc98db87d3d6cb4c14324"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/geoclue2-demos-2.7.2-1.el10.riscv64.rpm;name=riscv64_geoclue2-demos;unpack=0"
+SRC_URI[riscv64_geoclue2-demos.sha256sum] = "558b979cc44c5a22fe7fd845a8d44b1dd6f362583a9e541bf756268fe268f2cf"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/geoclue2-devel-2.7.2-1.el10.riscv64.rpm;name=riscv64_geoclue2-devel;unpack=0"
+SRC_URI[riscv64_geoclue2-devel.sha256sum] = "62f01c667875525070639c803d335988d2cb26c9f814e3c3b4411055d6a288c0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/geoclue2-libs-2.7.2-1.el10.riscv64.rpm;name=riscv64_geoclue2-libs;unpack=0"
+SRC_URI[riscv64_geoclue2-libs.sha256sum] = "f2c6350b1b8792ec302198b9cd8c175cd358660a760d3e8e484497d95bf523d8"
 
 RDEPENDS:geoclue2 = " \
  ModemManager-glib \

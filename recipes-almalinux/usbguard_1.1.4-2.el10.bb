@@ -13,49 +13,53 @@ PACKAGES = " \
  usbguard-tools \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/usbguard-1.1.4-2.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/usbguard-1.1.4-2.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8a5655a9a8aaf40cc7de25d079803a6fc741d63fcdb1601e7bdf82276dcfd79e"
 
-URI_x86_64_v2_usbguard = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/usbguard-1.1.4-2.el10.x86_64_v2.rpm;name=x86_64_v2_usbguard;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_usbguard}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/usbguard-1.1.4-2.el10.x86_64_v2.rpm;name=x86_64_v2_usbguard;unpack=0"
 SRC_URI[x86_64_v2_usbguard.sha256sum] = "d0b19b3f3fc1b45f10378176f1946d7e15b3bdb5b13720dc3ca484dd3c5242b2"
 
-URI_x86_64_v2_usbguard-dbus = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/usbguard-dbus-1.1.4-2.el10.x86_64_v2.rpm;name=x86_64_v2_usbguard-dbus;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_usbguard-dbus}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/usbguard-dbus-1.1.4-2.el10.x86_64_v2.rpm;name=x86_64_v2_usbguard-dbus;unpack=0"
 SRC_URI[x86_64_v2_usbguard-dbus.sha256sum] = "c2147408a0e2059fe7cefac2c962a880e5cf4ef04a6c8aad646f8703fbeefb11"
 
-URI_x86_64_v2_usbguard-notifier = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/usbguard-notifier-1.1.4-2.el10.x86_64_v2.rpm;name=x86_64_v2_usbguard-notifier;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_usbguard-notifier}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/usbguard-notifier-1.1.4-2.el10.x86_64_v2.rpm;name=x86_64_v2_usbguard-notifier;unpack=0"
 SRC_URI[x86_64_v2_usbguard-notifier.sha256sum] = "4d684c256a13052f11281443ea98f52d1a57602451823a24276b0e44c3237371"
 
-URI_x86_64_v2_usbguard-selinux = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/usbguard-selinux-1.1.4-2.el10.noarch.rpm;name=x86_64_v2_usbguard-selinux;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_usbguard-selinux}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/usbguard-selinux-1.1.4-2.el10.noarch.rpm;name=x86_64_v2_usbguard-selinux;unpack=0"
 SRC_URI[x86_64_v2_usbguard-selinux.sha256sum] = "7191cc0446788367f611b987cbe9d083c33ace569cdc9ae51621b18a10e63302"
 
-URI_x86_64_v2_usbguard-tools = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/usbguard-tools-1.1.4-2.el10.x86_64_v2.rpm;name=x86_64_v2_usbguard-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_usbguard-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/usbguard-tools-1.1.4-2.el10.x86_64_v2.rpm;name=x86_64_v2_usbguard-tools;unpack=0"
 SRC_URI[x86_64_v2_usbguard-tools.sha256sum] = "4bab8c0b55961d1f0666a708f05878cb2567ed9550d1101975277d6578b2800a"
 
-URI_aarch64_usbguard = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/usbguard-1.1.4-2.el10.aarch64.rpm;name=aarch64_usbguard;unpack=0"
-SRC_URI:append = " ${URI_aarch64_usbguard}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/usbguard-1.1.4-2.el10.aarch64.rpm;name=aarch64_usbguard;unpack=0"
 SRC_URI[aarch64_usbguard.sha256sum] = "f3c82bee5b9855324196b26f83f7d881e34be27c385ae1a1c8130b3e7a2cb951"
 
-URI_aarch64_usbguard-dbus = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/usbguard-dbus-1.1.4-2.el10.aarch64.rpm;name=aarch64_usbguard-dbus;unpack=0"
-SRC_URI:append = " ${URI_aarch64_usbguard-dbus}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/usbguard-dbus-1.1.4-2.el10.aarch64.rpm;name=aarch64_usbguard-dbus;unpack=0"
 SRC_URI[aarch64_usbguard-dbus.sha256sum] = "e1d8ca627aa1ab0df6637b2833264a4f3b0cec83d00b60f52ab3fe2f93b09bd1"
 
-URI_aarch64_usbguard-notifier = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/usbguard-notifier-1.1.4-2.el10.aarch64.rpm;name=aarch64_usbguard-notifier;unpack=0"
-SRC_URI:append = " ${URI_aarch64_usbguard-notifier}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/usbguard-notifier-1.1.4-2.el10.aarch64.rpm;name=aarch64_usbguard-notifier;unpack=0"
 SRC_URI[aarch64_usbguard-notifier.sha256sum] = "f6bea1050147d6b6f7e08b6f7e7eaeab076bdd7482733b39063885965b0f1faa"
 
-URI_aarch64_usbguard-selinux = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/usbguard-selinux-1.1.4-2.el10.noarch.rpm;name=aarch64_usbguard-selinux;unpack=0"
-SRC_URI:append = " ${URI_aarch64_usbguard-selinux}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/usbguard-selinux-1.1.4-2.el10.noarch.rpm;name=aarch64_usbguard-selinux;unpack=0"
 SRC_URI[aarch64_usbguard-selinux.sha256sum] = "7191cc0446788367f611b987cbe9d083c33ace569cdc9ae51621b18a10e63302"
 
-URI_aarch64_usbguard-tools = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/usbguard-tools-1.1.4-2.el10.aarch64.rpm;name=aarch64_usbguard-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_usbguard-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/usbguard-tools-1.1.4-2.el10.aarch64.rpm;name=aarch64_usbguard-tools;unpack=0"
 SRC_URI[aarch64_usbguard-tools.sha256sum] = "a262278c54608a15fff0a5e934b6e60dca9bd614532f0e87deafe8e94e60bc9f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/usbguard-1.1.4-2.el10.riscv64.rpm;name=riscv64_usbguard;unpack=0"
+SRC_URI[riscv64_usbguard.sha256sum] = "aa16c335acadcf335ea2a62e13cf6d11b00cc66ea22967dfc6502a04a7164338"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/usbguard-dbus-1.1.4-2.el10.riscv64.rpm;name=riscv64_usbguard-dbus;unpack=0"
+SRC_URI[riscv64_usbguard-dbus.sha256sum] = "cc58c8632be7e7c1f88e3dc6ab5b238f1cb52afd4daaee523f0119977fbf893f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/usbguard-notifier-1.1.4-2.el10.riscv64.rpm;name=riscv64_usbguard-notifier;unpack=0"
+SRC_URI[riscv64_usbguard-notifier.sha256sum] = "3230b6edc03bc8686f7f8dd1386eba55cffddbd68a6ebe8966599a6c5a7f3904"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/usbguard-selinux-1.1.4-2.el10.noarch.rpm;name=riscv64_usbguard-selinux;unpack=0"
+SRC_URI[riscv64_usbguard-selinux.sha256sum] = "7191cc0446788367f611b987cbe9d083c33ace569cdc9ae51621b18a10e63302"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/usbguard-tools-1.1.4-2.el10.riscv64.rpm;name=riscv64_usbguard-tools;unpack=0"
+SRC_URI[riscv64_usbguard-tools.sha256sum] = "2cf1aa76be1b7aa73d64459af6a03c6ee2b7e2aeb76787c0f6bde6e65d081b35"
 
 RDEPENDS:usbguard = " \
  audit-libs \

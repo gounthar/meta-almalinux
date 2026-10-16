@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "yad"
 PV = "9.3"
 PR = "9.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  yad \
- "
+"
+PACKAGES:aarch64 = " \
+ yad \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/y/yad-9.3-9.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/y/yad-9.3-9.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a3b6f1c6e85c634765b6710d07f414e6c47053f7e2bb3a965a94137fe64b218d"
 
-URI_x86_64_v2_yad = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/yad-9.3-9.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_yad;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_yad}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/yad-9.3-9.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_yad;unpack=0"
 SRC_URI[x86_64_v2_yad.sha256sum] = "da0240b73ea14f5ebb99ec864fcbefea89e0e3b7667e292f2e93286353cf24e5"
 
-URI_aarch64_yad = "${EPEL_MIRROR}/aarch64/Packages/y/yad-9.3-9.el10_3.aarch64.rpm;name=aarch64_yad;unpack=0"
-SRC_URI:append = " ${URI_aarch64_yad}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/y/yad-9.3-9.el10_3.aarch64.rpm;name=aarch64_yad;unpack=0"
 SRC_URI[aarch64_yad.sha256sum] = "8507628acd5376bb4a366b4f17b8a443e0b37e179e0f1dd73543527c7e72d814"
 
 RDEPENDS:yad = " \

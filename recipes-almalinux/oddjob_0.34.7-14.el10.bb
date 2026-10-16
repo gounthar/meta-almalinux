@@ -10,25 +10,26 @@ PACKAGES = " \
  oddjob-mkhomedir \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/oddjob-0.34.7-14.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/oddjob-0.34.7-14.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b97fde5e82ebf060825bf527c18d7137af01f8608b88315a55415c3c9454f5b1"
 
-URI_x86_64_v2_oddjob = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/oddjob-0.34.7-14.el10.x86_64_v2.rpm;name=x86_64_v2_oddjob;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_oddjob}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/oddjob-0.34.7-14.el10.x86_64_v2.rpm;name=x86_64_v2_oddjob;unpack=0"
 SRC_URI[x86_64_v2_oddjob.sha256sum] = "90fcf857ea2dd6f521c589ea0e5c26219c3fe28d47951f4493a87656fe326b7f"
 
-URI_x86_64_v2_oddjob-mkhomedir = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/oddjob-mkhomedir-0.34.7-14.el10.x86_64_v2.rpm;name=x86_64_v2_oddjob-mkhomedir;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_oddjob-mkhomedir}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/oddjob-mkhomedir-0.34.7-14.el10.x86_64_v2.rpm;name=x86_64_v2_oddjob-mkhomedir;unpack=0"
 SRC_URI[x86_64_v2_oddjob-mkhomedir.sha256sum] = "a096c2d86aa4d26c0665a6cdcf7a4e951446b45e98f3531563b656a31a0ae99a"
 
-URI_aarch64_oddjob = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/oddjob-0.34.7-14.el10.aarch64.rpm;name=aarch64_oddjob;unpack=0"
-SRC_URI:append = " ${URI_aarch64_oddjob}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/oddjob-0.34.7-14.el10.aarch64.rpm;name=aarch64_oddjob;unpack=0"
 SRC_URI[aarch64_oddjob.sha256sum] = "3dd054c6beb8d31f7d29468ccd2e2eab19eb6e40650c011715fbe75baa8e2914"
 
-URI_aarch64_oddjob-mkhomedir = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/oddjob-mkhomedir-0.34.7-14.el10.aarch64.rpm;name=aarch64_oddjob-mkhomedir;unpack=0"
-SRC_URI:append = " ${URI_aarch64_oddjob-mkhomedir}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/oddjob-mkhomedir-0.34.7-14.el10.aarch64.rpm;name=aarch64_oddjob-mkhomedir;unpack=0"
 SRC_URI[aarch64_oddjob-mkhomedir.sha256sum] = "a12c9a953c2316263346574b046d6eeed63959d07290ce0131c131aa11f88b96"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/oddjob-0.34.7-14.el10.riscv64.rpm;name=riscv64_oddjob;unpack=0"
+SRC_URI[riscv64_oddjob.sha256sum] = "b318e2e504ef343f03776e94c4ccb740e9debede6edc7472bfbbee3998939227"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/oddjob-mkhomedir-0.34.7-14.el10.riscv64.rpm;name=riscv64_oddjob-mkhomedir;unpack=0"
+SRC_URI[riscv64_oddjob-mkhomedir.sha256sum] = "efd9e558b3125241be0f8494b1152aeb8739c7a7670b5f8cdc6c0a7242dd4c8e"
 
 RDEPENDS:oddjob = " \
  bash \

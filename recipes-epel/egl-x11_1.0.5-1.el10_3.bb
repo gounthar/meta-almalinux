@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "egl-x11"
 PV = "1.0.5"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  egl-x11 \
- "
+"
+PACKAGES:aarch64 = " \
+ egl-x11 \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/e/egl-x11-1.0.5-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/e/egl-x11-1.0.5-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "1938fc195f5cef8cac0e54ce1bac67b64b32cb6bac9cf8e304ddad6279ac0466"
 
-URI_x86_64_v2_egl-x11 = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/egl-x11-1.0.5-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_egl-x11;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_egl-x11}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/egl-x11-1.0.5-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_egl-x11;unpack=0"
 SRC_URI[x86_64_v2_egl-x11.sha256sum] = "c7cbe7b8011b4bf80021a3d4d8eb0a8a4f258af1c7340024ce7f4c9cf0b27ed5"
 
-URI_aarch64_egl-x11 = "${EPEL_MIRROR}/aarch64/Packages/e/egl-x11-1.0.5-1.el10_3.aarch64.rpm;name=aarch64_egl-x11;unpack=0"
-SRC_URI:append = " ${URI_aarch64_egl-x11}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/e/egl-x11-1.0.5-1.el10_3.aarch64.rpm;name=aarch64_egl-x11;unpack=0"
 SRC_URI[aarch64_egl-x11.sha256sum] = "f6c6f8c56bf37f484f4d97d4e6254240b7f92ccadb998336fa55e0677d087aa0"
 
 RDEPENDS:egl-x11 = " \

@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "diskimage-builder"
 PV = "3.40.2"
 PR = "2.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  diskimage-builder \
- "
+"
+PACKAGES:aarch64 = " \
+ diskimage-builder \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/d/diskimage-builder-3.40.2-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/d/diskimage-builder-3.40.2-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "13335c9f1c3f25205498eb980f154cc6774b9dfe5e199c279e8f9b1e366ddac6"
 
-URI_x86_64_v2_diskimage-builder = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/diskimage-builder-3.40.2-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_diskimage-builder;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_diskimage-builder}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/diskimage-builder-3.40.2-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_diskimage-builder;unpack=0"
 SRC_URI[x86_64_v2_diskimage-builder.sha256sum] = "f05ad2878a55215e319b475182abc5975086d6c4fee04b1169605931b8cb65e2"
 
-URI_aarch64_diskimage-builder = "${EPEL_MIRROR}/aarch64/Packages/d/diskimage-builder-3.40.2-2.el10_3.noarch.rpm;name=aarch64_diskimage-builder;unpack=0"
-SRC_URI:append = " ${URI_aarch64_diskimage-builder}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/d/diskimage-builder-3.40.2-2.el10_3.noarch.rpm;name=aarch64_diskimage-builder;unpack=0"
 SRC_URI[aarch64_diskimage-builder.sha256sum] = "e557402054a704c596d017628b194d566755ea3fa19af8cefe4847eca277df4e"
 
 RDEPENDS:diskimage-builder = " \

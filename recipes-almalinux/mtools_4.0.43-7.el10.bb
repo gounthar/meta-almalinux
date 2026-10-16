@@ -9,17 +9,17 @@ PACKAGES = " \
  mtools \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/mtools-4.0.43-7.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/mtools-4.0.43-7.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "8a32960e9a08ee4b209eb9b13f9dd9eec5176740ae72120c366673bc2e8bca68"
 
-URI_x86_64_v2_mtools = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/mtools-4.0.43-7.el10.x86_64_v2.rpm;name=x86_64_v2_mtools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mtools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/mtools-4.0.43-7.el10.x86_64_v2.rpm;name=x86_64_v2_mtools;unpack=0"
 SRC_URI[x86_64_v2_mtools.sha256sum] = "2675ebb8333b9c1746d09af7b69c614912094cfcf08d6fa22fb2f339f06d6935"
 
-URI_aarch64_mtools = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/mtools-4.0.43-7.el10.aarch64.rpm;name=aarch64_mtools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_mtools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/mtools-4.0.43-7.el10.aarch64.rpm;name=aarch64_mtools;unpack=0"
 SRC_URI[aarch64_mtools.sha256sum] = "d677a15fd40522c59dfef1ae2bff47386f4e3d8b53d0657cff0380550a88e784"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/mtools-4.0.43-7.el10.riscv64.rpm;name=riscv64_mtools;unpack=0"
+SRC_URI[riscv64_mtools.sha256sum] = "9c31a592aee5a78ebce7cdc5ebfedbe7212691795dd17c1737e17b0bdb7ab790"
 
 RDEPENDS:mtools = " \
  bash \

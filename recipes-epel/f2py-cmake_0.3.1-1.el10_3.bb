@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "f2py-cmake"
 PV = "0.3.1"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  f2py-cmake \
  python3-f2py-cmake \
- "
+"
+PACKAGES:aarch64 = " \
+ f2py-cmake \
+ python3-f2py-cmake \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/f/f2py-cmake-0.3.1-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/f/f2py-cmake-0.3.1-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "30e6749afe87be84919aa7cf2ef149b029823b8ff6c5b3443967f142533fc456"
 
-URI_x86_64_v2_f2py-cmake = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/f2py-cmake-0.3.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_f2py-cmake;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_f2py-cmake}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/f2py-cmake-0.3.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_f2py-cmake;unpack=0"
 SRC_URI[x86_64_v2_f2py-cmake.sha256sum] = "d93c414a2a1498a666efe4904ff1dc20c25845fc66f67dd5a289419f130ecd57"
 
-URI_x86_64_v2_python3-f2py-cmake = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-f2py-cmake-0.3.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-f2py-cmake;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-f2py-cmake}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/python3-f2py-cmake-0.3.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_python3-f2py-cmake;unpack=0"
 SRC_URI[x86_64_v2_python3-f2py-cmake.sha256sum] = "cceb973f095bebb85ff8f1ce1bde9d78d410e5906998292caf09eb4b8cb5b437"
 
-URI_aarch64_f2py-cmake = "${EPEL_MIRROR}/aarch64/Packages/f/f2py-cmake-0.3.1-1.el10_3.noarch.rpm;name=aarch64_f2py-cmake;unpack=0"
-SRC_URI:append = " ${URI_aarch64_f2py-cmake}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/f/f2py-cmake-0.3.1-1.el10_3.noarch.rpm;name=aarch64_f2py-cmake;unpack=0"
 SRC_URI[aarch64_f2py-cmake.sha256sum] = "46f11766cde0c8b63c38927906eece32e3251e4736a7623d06c86d88b9befc49"
 
-URI_aarch64_python3-f2py-cmake = "${EPEL_MIRROR}/aarch64/Packages/p/python3-f2py-cmake-0.3.1-1.el10_3.noarch.rpm;name=aarch64_python3-f2py-cmake;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-f2py-cmake}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/python3-f2py-cmake-0.3.1-1.el10_3.noarch.rpm;name=aarch64_python3-f2py-cmake;unpack=0"
 SRC_URI[aarch64_python3-f2py-cmake.sha256sum] = "b7982254626aaaf9dae000de19e2611f61f2f5a8aa11b4cffcce58bc88e08da4"
 
 RDEPENDS:f2py-cmake = " \

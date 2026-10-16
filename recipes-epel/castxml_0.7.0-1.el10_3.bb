@@ -5,35 +5,40 @@ inherit dnf-bridge
 PN = "castxml"
 PV = "0.7.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  castxml \
- "
+"
+PACKAGES:aarch64 = " \
+ castxml \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/c/castxml-0.7.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/c/castxml-0.7.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b944c3d5a61d62799aed5d0c83f5b2899b800daab4b8845a472ef3f10037b582"
 
-URI_x86_64_v2_castxml = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/castxml-0.7.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_castxml;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_castxml}"
+## Requires (x86_64_v2) that were seen as not satisfiable in original repo:
+# - castxml: libLLVM.so.21.1()(64bit)
+# - castxml: libLLVM.so.21.1(LLVM_21.1)(64bit)
+# - castxml: libclang-cpp.so.21.1()(64bit)
+# - castxml: libclang-cpp.so.21.1(LLVM_21.1)(64bit)
+
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/castxml-0.7.0-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_castxml;unpack=0"
 SRC_URI[x86_64_v2_castxml.sha256sum] = "9a448e6d7001ea9a984c20b0bad2c4bc3318d4dc1def76ddf682fa49adbcf4f0"
 
-URI_aarch64_castxml = "${EPEL_MIRROR}/aarch64/Packages/c/castxml-0.7.0-1.el10_3.aarch64.rpm;name=aarch64_castxml;unpack=0"
-SRC_URI:append = " ${URI_aarch64_castxml}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/c/castxml-0.7.0-1.el10_3.aarch64.rpm;name=aarch64_castxml;unpack=0"
 SRC_URI[aarch64_castxml.sha256sum] = "87bb114f4fc8369022ac023ad6e8f9ef08d9a6afb10fabe11ca862e3a72ffe34"
 
 RDEPENDS:castxml:x86_64_v2 = " \
- clang-libs \
  glibc \
  libgcc \
  libstdc++ \
- llvm-libs \
 "
 RDEPENDS:castxml:aarch64 = " \
+ clang21-libs \
  glibc \
  libgcc \
  libstdc++ \
- virtual/libLLVM.so.21.1_LLVM_21.1__64bit_ \
- virtual/libLLVM.so.21.1___64bit_ \
- virtual/libclang-cpp.so.21.1_LLVM_21.1__64bit_ \
- virtual/libclang-cpp.so.21.1___64bit_ \
+ llvm21-libs \
 "

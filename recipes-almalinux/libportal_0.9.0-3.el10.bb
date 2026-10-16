@@ -17,81 +17,89 @@ PACKAGES = " \
  libportal-qt6-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libportal-0.9.0-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libportal-0.9.0-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "968c33a6ae3a90c8a7dcd2a45ebaf803bd42d15088f46a674602979b8c6fa9ec"
 
-URI_x86_64_v2_libportal = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libportal-0.9.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libportal;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libportal}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libportal-0.9.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libportal;unpack=0"
 SRC_URI[x86_64_v2_libportal.sha256sum] = "3fed804444a36072dcfba5cf898c79b7c0f41d2a199d6ce8f5a8ae14f6e56a84"
 
-URI_x86_64_v2_libportal-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libportal-devel-0.9.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libportal-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libportal-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libportal-devel-0.9.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libportal-devel;unpack=0"
 SRC_URI[x86_64_v2_libportal-devel.sha256sum] = "a26301f99887bf20aa14b6c11d3ba20a3af35a51701ac2da5e47fded50d6c3e4"
 
-URI_x86_64_v2_libportal-devel-doc = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libportal-devel-doc-0.9.0-3.el10.noarch.rpm;name=x86_64_v2_libportal-devel-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libportal-devel-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libportal-devel-doc-0.9.0-3.el10.noarch.rpm;name=x86_64_v2_libportal-devel-doc;unpack=0"
 SRC_URI[x86_64_v2_libportal-devel-doc.sha256sum] = "f934df1f2da39687987586d88448efbbdc5fe794e5981e9ff6c5516cc896ee8d"
 
-URI_x86_64_v2_libportal-gtk3 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libportal-gtk3-0.9.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libportal-gtk3;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libportal-gtk3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libportal-gtk3-0.9.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libportal-gtk3;unpack=0"
 SRC_URI[x86_64_v2_libportal-gtk3.sha256sum] = "ce34dd22124e447868dfec80e3cb8e014abfa4f9a3b445e347a2f9faacb02ba4"
 
-URI_x86_64_v2_libportal-gtk3-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libportal-gtk3-devel-0.9.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libportal-gtk3-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libportal-gtk3-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libportal-gtk3-devel-0.9.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libportal-gtk3-devel;unpack=0"
 SRC_URI[x86_64_v2_libportal-gtk3-devel.sha256sum] = "acab45525b8af57a40d93765c225054434e61982ee14fcf8c2e58a74e681ab52"
 
-URI_x86_64_v2_libportal-gtk4 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libportal-gtk4-0.9.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libportal-gtk4;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libportal-gtk4}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libportal-gtk4-0.9.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libportal-gtk4;unpack=0"
 SRC_URI[x86_64_v2_libportal-gtk4.sha256sum] = "e052eff0d2fd026f0c104617f7db5cefdd78a62790d2e69212d3657ca9f81075"
 
-URI_x86_64_v2_libportal-gtk4-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libportal-gtk4-devel-0.9.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libportal-gtk4-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libportal-gtk4-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libportal-gtk4-devel-0.9.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libportal-gtk4-devel;unpack=0"
 SRC_URI[x86_64_v2_libportal-gtk4-devel.sha256sum] = "241a36fdf5ebb7763d15b6344e515a6598cd2a9907f44d74958aac8a11f9bec5"
 
-URI_x86_64_v2_libportal-qt6 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libportal-qt6-0.9.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libportal-qt6;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libportal-qt6}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libportal-qt6-0.9.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libportal-qt6;unpack=0"
 SRC_URI[x86_64_v2_libportal-qt6.sha256sum] = "50601204087266591008221e4765c1bc255e84e7e95dedac0487bcb278d1bc5c"
 
-URI_x86_64_v2_libportal-qt6-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libportal-qt6-devel-0.9.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libportal-qt6-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libportal-qt6-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libportal-qt6-devel-0.9.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libportal-qt6-devel;unpack=0"
 SRC_URI[x86_64_v2_libportal-qt6-devel.sha256sum] = "bd960fe996f0b46330cdf0d42b12017e7c121b830f08d88a1d73ac759d91b11e"
 
-URI_aarch64_libportal = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libportal-0.9.0-3.el10.aarch64.rpm;name=aarch64_libportal;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libportal}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libportal-0.9.0-3.el10.aarch64.rpm;name=aarch64_libportal;unpack=0"
 SRC_URI[aarch64_libportal.sha256sum] = "f1db5b5618aa23e99e978754c2fc8ae37edb4aae6ebc77945f70d69862af74d9"
 
-URI_aarch64_libportal-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libportal-devel-0.9.0-3.el10.aarch64.rpm;name=aarch64_libportal-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libportal-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libportal-devel-0.9.0-3.el10.aarch64.rpm;name=aarch64_libportal-devel;unpack=0"
 SRC_URI[aarch64_libportal-devel.sha256sum] = "21da82e5926f4372ef7b28894d095006e5c7e7a842b935c31ff3ba8398fd93a8"
 
-URI_aarch64_libportal-devel-doc = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libportal-devel-doc-0.9.0-3.el10.noarch.rpm;name=aarch64_libportal-devel-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libportal-devel-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libportal-devel-doc-0.9.0-3.el10.noarch.rpm;name=aarch64_libportal-devel-doc;unpack=0"
 SRC_URI[aarch64_libportal-devel-doc.sha256sum] = "f934df1f2da39687987586d88448efbbdc5fe794e5981e9ff6c5516cc896ee8d"
 
-URI_aarch64_libportal-gtk3 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libportal-gtk3-0.9.0-3.el10.aarch64.rpm;name=aarch64_libportal-gtk3;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libportal-gtk3}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libportal-gtk3-0.9.0-3.el10.aarch64.rpm;name=aarch64_libportal-gtk3;unpack=0"
 SRC_URI[aarch64_libportal-gtk3.sha256sum] = "b6b0ff7dde2d16c1df506a1e70f60a7418e3f24520ded9925f0ffa5f4e1472ab"
 
-URI_aarch64_libportal-gtk3-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libportal-gtk3-devel-0.9.0-3.el10.aarch64.rpm;name=aarch64_libportal-gtk3-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libportal-gtk3-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libportal-gtk3-devel-0.9.0-3.el10.aarch64.rpm;name=aarch64_libportal-gtk3-devel;unpack=0"
 SRC_URI[aarch64_libportal-gtk3-devel.sha256sum] = "b7504fe52aa84ad809713f1302c5b0660df8d2cf1483344de64947f5ab111830"
 
-URI_aarch64_libportal-gtk4 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libportal-gtk4-0.9.0-3.el10.aarch64.rpm;name=aarch64_libportal-gtk4;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libportal-gtk4}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libportal-gtk4-0.9.0-3.el10.aarch64.rpm;name=aarch64_libportal-gtk4;unpack=0"
 SRC_URI[aarch64_libportal-gtk4.sha256sum] = "facf9fde0121a363d51202e8fffc9aa5a92efb507d4a6e5fa2e19ee524650692"
 
-URI_aarch64_libportal-gtk4-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libportal-gtk4-devel-0.9.0-3.el10.aarch64.rpm;name=aarch64_libportal-gtk4-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libportal-gtk4-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libportal-gtk4-devel-0.9.0-3.el10.aarch64.rpm;name=aarch64_libportal-gtk4-devel;unpack=0"
 SRC_URI[aarch64_libportal-gtk4-devel.sha256sum] = "4cbf8b80ed141364741e12f9acff8b9c928a5198b5dcd79d80f2a2f973f6ca53"
 
-URI_aarch64_libportal-qt6 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libportal-qt6-0.9.0-3.el10.aarch64.rpm;name=aarch64_libportal-qt6;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libportal-qt6}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libportal-qt6-0.9.0-3.el10.aarch64.rpm;name=aarch64_libportal-qt6;unpack=0"
 SRC_URI[aarch64_libportal-qt6.sha256sum] = "f2a89aab6eae84303cb3e7976facb4e7b3f587f5f13e3fe50e6c33f5207513a1"
 
-URI_aarch64_libportal-qt6-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libportal-qt6-devel-0.9.0-3.el10.aarch64.rpm;name=aarch64_libportal-qt6-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libportal-qt6-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libportal-qt6-devel-0.9.0-3.el10.aarch64.rpm;name=aarch64_libportal-qt6-devel;unpack=0"
 SRC_URI[aarch64_libportal-qt6-devel.sha256sum] = "f8bbfd40f43dfec195d0977f54c680005ece3bf9f5040bc25102864ca0020ca0"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libportal-0.9.0-3.el10.riscv64.rpm;name=riscv64_libportal;unpack=0"
+SRC_URI[riscv64_libportal.sha256sum] = "e6aef7b81e5b83adc7bcc9509a666c56a55b38623085fc731cf625d097837cc5"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libportal-devel-0.9.0-3.el10.riscv64.rpm;name=riscv64_libportal-devel;unpack=0"
+SRC_URI[riscv64_libportal-devel.sha256sum] = "0e7750b4c2200d240f3d1b37e7c3ca25d7abca06da3dd4765cafc7bebb4138da"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libportal-devel-doc-0.9.0-3.el10.noarch.rpm;name=riscv64_libportal-devel-doc;unpack=0"
+SRC_URI[riscv64_libportal-devel-doc.sha256sum] = "f934df1f2da39687987586d88448efbbdc5fe794e5981e9ff6c5516cc896ee8d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libportal-gtk3-0.9.0-3.el10.riscv64.rpm;name=riscv64_libportal-gtk3;unpack=0"
+SRC_URI[riscv64_libportal-gtk3.sha256sum] = "6baaa2741aa73955a3799d6451f7f986e675830e9780e9f809802bf917ba5485"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libportal-gtk3-devel-0.9.0-3.el10.riscv64.rpm;name=riscv64_libportal-gtk3-devel;unpack=0"
+SRC_URI[riscv64_libportal-gtk3-devel.sha256sum] = "eb9d6912a016cd6ff5b8d55e0f634ed64080bb06f62a57e84602e9dcc1fe1b9d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libportal-gtk4-0.9.0-3.el10.riscv64.rpm;name=riscv64_libportal-gtk4;unpack=0"
+SRC_URI[riscv64_libportal-gtk4.sha256sum] = "c2ab9a2edcf0935a69c4d3b6b5b569dc62be8cee858aa7763c2a1b86466d32d7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libportal-gtk4-devel-0.9.0-3.el10.riscv64.rpm;name=riscv64_libportal-gtk4-devel;unpack=0"
+SRC_URI[riscv64_libportal-gtk4-devel.sha256sum] = "468702ef02983c362ce92ce2b4f8e7be8b3b1cf7c2f19f86edfbe58baa343485"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libportal-qt6-0.9.0-3.el10.riscv64.rpm;name=riscv64_libportal-qt6;unpack=0"
+SRC_URI[riscv64_libportal-qt6.sha256sum] = "8d041796196f2f70ce795c7860dba985ee8dbd4e8b553af19ae7bd2c33039bb8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libportal-qt6-devel-0.9.0-3.el10.riscv64.rpm;name=riscv64_libportal-qt6-devel;unpack=0"
+SRC_URI[riscv64_libportal-qt6-devel.sha256sum] = "e5c7952b880f8280631bf8ac3f27bfa9c27822a8bd067cded1c8b92c26378dee"
 
 RDEPENDS:libportal = " \
  glib2 \

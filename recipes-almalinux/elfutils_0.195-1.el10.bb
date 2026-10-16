@@ -17,81 +17,89 @@ PACKAGES = " \
  elfutils-libs \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/elfutils-0.195-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/elfutils-0.195-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e3baafaa0d589a5b31574180f7c753005949fbbfaff765a4a789e9d6959f2dcc"
 
-URI_x86_64_v2_elfutils = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/elfutils-0.195-1.el10.x86_64_v2.rpm;name=x86_64_v2_elfutils;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_elfutils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/elfutils-0.195-1.el10.x86_64_v2.rpm;name=x86_64_v2_elfutils;unpack=0"
 SRC_URI[x86_64_v2_elfutils.sha256sum] = "d5bccd4fd628a011e8368b9bea881f82d835e5202d9a3594ee96da18daffafca"
 
-URI_x86_64_v2_elfutils-debuginfod = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/elfutils-debuginfod-0.195-1.el10.x86_64_v2.rpm;name=x86_64_v2_elfutils-debuginfod;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_elfutils-debuginfod}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/elfutils-debuginfod-0.195-1.el10.x86_64_v2.rpm;name=x86_64_v2_elfutils-debuginfod;unpack=0"
 SRC_URI[x86_64_v2_elfutils-debuginfod.sha256sum] = "5d1b2df5e5e7624635ceb0d88c50779fde2c2f8a667f7ec6739e2736b22cc574"
 
-URI_x86_64_v2_elfutils-debuginfod-client = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/elfutils-debuginfod-client-0.195-1.el10.x86_64_v2.rpm;name=x86_64_v2_elfutils-debuginfod-client;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_elfutils-debuginfod-client}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/elfutils-debuginfod-client-0.195-1.el10.x86_64_v2.rpm;name=x86_64_v2_elfutils-debuginfod-client;unpack=0"
 SRC_URI[x86_64_v2_elfutils-debuginfod-client.sha256sum] = "93d25ea5ea2327b09c3cf7ac22ce54f2dffefccf9094d80009ef585cf8c5f129"
 
-URI_x86_64_v2_elfutils-debuginfod-client-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/elfutils-debuginfod-client-devel-0.195-1.el10.x86_64_v2.rpm;name=x86_64_v2_elfutils-debuginfod-client-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_elfutils-debuginfod-client-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/elfutils-debuginfod-client-devel-0.195-1.el10.x86_64_v2.rpm;name=x86_64_v2_elfutils-debuginfod-client-devel;unpack=0"
 SRC_URI[x86_64_v2_elfutils-debuginfod-client-devel.sha256sum] = "0f48347af458dce2d2e43628bd6fad3d451457b952ecb632ccacdea885a023ea"
 
-URI_x86_64_v2_elfutils-default-yama-scope = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/elfutils-default-yama-scope-0.195-1.el10.noarch.rpm;name=x86_64_v2_elfutils-default-yama-scope;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_elfutils-default-yama-scope}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/elfutils-default-yama-scope-0.195-1.el10.noarch.rpm;name=x86_64_v2_elfutils-default-yama-scope;unpack=0"
 SRC_URI[x86_64_v2_elfutils-default-yama-scope.sha256sum] = "226f77f16718b5064e0f473e298140bccdbe8b7ab227dec4e8f50f4ab45f70ec"
 
-URI_x86_64_v2_elfutils-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/elfutils-devel-0.195-1.el10.x86_64_v2.rpm;name=x86_64_v2_elfutils-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_elfutils-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/elfutils-devel-0.195-1.el10.x86_64_v2.rpm;name=x86_64_v2_elfutils-devel;unpack=0"
 SRC_URI[x86_64_v2_elfutils-devel.sha256sum] = "2e3e95fa41f4880cba14c3582b52867e85f2a08a37d53918b4e5c164d253dbe5"
 
-URI_x86_64_v2_elfutils-libelf = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/elfutils-libelf-0.195-1.el10.x86_64_v2.rpm;name=x86_64_v2_elfutils-libelf;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_elfutils-libelf}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/elfutils-libelf-0.195-1.el10.x86_64_v2.rpm;name=x86_64_v2_elfutils-libelf;unpack=0"
 SRC_URI[x86_64_v2_elfutils-libelf.sha256sum] = "2232e8e6c1a894c88fb3e834e72efcd87253d7b8334e6d2bd1e2046beac7c023"
 
-URI_x86_64_v2_elfutils-libelf-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/elfutils-libelf-devel-0.195-1.el10.x86_64_v2.rpm;name=x86_64_v2_elfutils-libelf-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_elfutils-libelf-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/elfutils-libelf-devel-0.195-1.el10.x86_64_v2.rpm;name=x86_64_v2_elfutils-libelf-devel;unpack=0"
 SRC_URI[x86_64_v2_elfutils-libelf-devel.sha256sum] = "5cac343e253522e75000c6e5224cd41b6423c0bdafc95bc4d18ecf80dacd7e71"
 
-URI_x86_64_v2_elfutils-libs = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/elfutils-libs-0.195-1.el10.x86_64_v2.rpm;name=x86_64_v2_elfutils-libs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_elfutils-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/elfutils-libs-0.195-1.el10.x86_64_v2.rpm;name=x86_64_v2_elfutils-libs;unpack=0"
 SRC_URI[x86_64_v2_elfutils-libs.sha256sum] = "bc7832728323a9f40908c3208f54d1b2b237ec715a109b64477ddfe6670cfaf0"
 
-URI_aarch64_elfutils = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/elfutils-0.195-1.el10.aarch64.rpm;name=aarch64_elfutils;unpack=0"
-SRC_URI:append = " ${URI_aarch64_elfutils}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/elfutils-0.195-1.el10.aarch64.rpm;name=aarch64_elfutils;unpack=0"
 SRC_URI[aarch64_elfutils.sha256sum] = "5bb63a4d93cd30db3d80f3f947fe0e9309ec5df7a3d4c5b6481a81d5cf2d07b6"
 
-URI_aarch64_elfutils-debuginfod = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/elfutils-debuginfod-0.195-1.el10.aarch64.rpm;name=aarch64_elfutils-debuginfod;unpack=0"
-SRC_URI:append = " ${URI_aarch64_elfutils-debuginfod}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/elfutils-debuginfod-0.195-1.el10.aarch64.rpm;name=aarch64_elfutils-debuginfod;unpack=0"
 SRC_URI[aarch64_elfutils-debuginfod.sha256sum] = "8b2201c8aa3a37391262fa96648e6f96a93c451842b82b16795ffe95bf2ad449"
 
-URI_aarch64_elfutils-debuginfod-client = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/elfutils-debuginfod-client-0.195-1.el10.aarch64.rpm;name=aarch64_elfutils-debuginfod-client;unpack=0"
-SRC_URI:append = " ${URI_aarch64_elfutils-debuginfod-client}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/elfutils-debuginfod-client-0.195-1.el10.aarch64.rpm;name=aarch64_elfutils-debuginfod-client;unpack=0"
 SRC_URI[aarch64_elfutils-debuginfod-client.sha256sum] = "7895a0016b9fe3ea9448d2e8a02885fa3d6a8660e33d3061dda098a735c6710d"
 
-URI_aarch64_elfutils-debuginfod-client-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/elfutils-debuginfod-client-devel-0.195-1.el10.aarch64.rpm;name=aarch64_elfutils-debuginfod-client-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_elfutils-debuginfod-client-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/elfutils-debuginfod-client-devel-0.195-1.el10.aarch64.rpm;name=aarch64_elfutils-debuginfod-client-devel;unpack=0"
 SRC_URI[aarch64_elfutils-debuginfod-client-devel.sha256sum] = "9a9aeeab843d11c0358f50c2fd1aa5bd4cb34c0a2ec9f793671c0d3924cb9b78"
 
-URI_aarch64_elfutils-default-yama-scope = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/elfutils-default-yama-scope-0.195-1.el10.noarch.rpm;name=aarch64_elfutils-default-yama-scope;unpack=0"
-SRC_URI:append = " ${URI_aarch64_elfutils-default-yama-scope}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/elfutils-default-yama-scope-0.195-1.el10.noarch.rpm;name=aarch64_elfutils-default-yama-scope;unpack=0"
 SRC_URI[aarch64_elfutils-default-yama-scope.sha256sum] = "226f77f16718b5064e0f473e298140bccdbe8b7ab227dec4e8f50f4ab45f70ec"
 
-URI_aarch64_elfutils-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/elfutils-devel-0.195-1.el10.aarch64.rpm;name=aarch64_elfutils-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_elfutils-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/elfutils-devel-0.195-1.el10.aarch64.rpm;name=aarch64_elfutils-devel;unpack=0"
 SRC_URI[aarch64_elfutils-devel.sha256sum] = "8840af60200b8546b55724b6846979761e04415d8cf17fadfcf6fd949e185145"
 
-URI_aarch64_elfutils-libelf = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/elfutils-libelf-0.195-1.el10.aarch64.rpm;name=aarch64_elfutils-libelf;unpack=0"
-SRC_URI:append = " ${URI_aarch64_elfutils-libelf}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/elfutils-libelf-0.195-1.el10.aarch64.rpm;name=aarch64_elfutils-libelf;unpack=0"
 SRC_URI[aarch64_elfutils-libelf.sha256sum] = "f83106d5db54ff95e5780c31d0f67ddce2aaa538be99a2d3d52a7920e7f5e306"
 
-URI_aarch64_elfutils-libelf-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/elfutils-libelf-devel-0.195-1.el10.aarch64.rpm;name=aarch64_elfutils-libelf-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_elfutils-libelf-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/elfutils-libelf-devel-0.195-1.el10.aarch64.rpm;name=aarch64_elfutils-libelf-devel;unpack=0"
 SRC_URI[aarch64_elfutils-libelf-devel.sha256sum] = "1d01af0de8777dd6522034be4bfe89d5fece9a8760652da9be1a365c644bc009"
 
-URI_aarch64_elfutils-libs = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/elfutils-libs-0.195-1.el10.aarch64.rpm;name=aarch64_elfutils-libs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_elfutils-libs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/elfutils-libs-0.195-1.el10.aarch64.rpm;name=aarch64_elfutils-libs;unpack=0"
 SRC_URI[aarch64_elfutils-libs.sha256sum] = "de728bf983bdccebe1749239695582b858371dc0dbf79bb2e05c279ab0f262d1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/elfutils-0.195-1.el10.riscv64.rpm;name=riscv64_elfutils;unpack=0"
+SRC_URI[riscv64_elfutils.sha256sum] = "ed1a6dc8c088a31ce45643e64caaa9065ec79effcdd8d02106e33f2129943ae4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/elfutils-debuginfod-0.195-1.el10.riscv64.rpm;name=riscv64_elfutils-debuginfod;unpack=0"
+SRC_URI[riscv64_elfutils-debuginfod.sha256sum] = "cf222e5b8d4cc872fd890a241aa2c57dbaae9280c95cea741818a784c75ccbd9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/elfutils-debuginfod-client-0.195-1.el10.riscv64.rpm;name=riscv64_elfutils-debuginfod-client;unpack=0"
+SRC_URI[riscv64_elfutils-debuginfod-client.sha256sum] = "cb81c1ab2fda23ae5776d61cbaec15229592b9e6cc970982d07bb719a2377fae"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/elfutils-debuginfod-client-devel-0.195-1.el10.riscv64.rpm;name=riscv64_elfutils-debuginfod-client-devel;unpack=0"
+SRC_URI[riscv64_elfutils-debuginfod-client-devel.sha256sum] = "a03d66590df39f2752cbff60795b06428ff9aa834f841388e189bcdb7225b356"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/elfutils-default-yama-scope-0.195-1.el10.noarch.rpm;name=riscv64_elfutils-default-yama-scope;unpack=0"
+SRC_URI[riscv64_elfutils-default-yama-scope.sha256sum] = "226f77f16718b5064e0f473e298140bccdbe8b7ab227dec4e8f50f4ab45f70ec"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/elfutils-devel-0.195-1.el10.riscv64.rpm;name=riscv64_elfutils-devel;unpack=0"
+SRC_URI[riscv64_elfutils-devel.sha256sum] = "efd2d3f61c62bb06794354d48b298a59ff45b571ca0eb191a31278bd830fc26a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/elfutils-libelf-0.195-1.el10.riscv64.rpm;name=riscv64_elfutils-libelf;unpack=0"
+SRC_URI[riscv64_elfutils-libelf.sha256sum] = "458935b405beb16d245021188d30f1fe29efebc04a7df45396dde8ecbd979609"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/elfutils-libelf-devel-0.195-1.el10.riscv64.rpm;name=riscv64_elfutils-libelf-devel;unpack=0"
+SRC_URI[riscv64_elfutils-libelf-devel.sha256sum] = "d1174e95c61287331223463fdfcc8d85008f7b0f98ee5211807fd6b005614d3e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/elfutils-libs-0.195-1.el10.riscv64.rpm;name=riscv64_elfutils-libs;unpack=0"
+SRC_URI[riscv64_elfutils-libs.sha256sum] = "ff0a48d8a96d168cec124c5c8ff8031777457839a2177ca5f06758a58f9fcdc4"
 
 RDEPENDS:elfutils = " \
  bash \

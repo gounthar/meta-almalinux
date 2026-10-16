@@ -12,17 +12,17 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/h/hipfft-7.2.0-4.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/h/hipfft-7.2.0-4.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "2c8d2f77ebadeceee77360c5a453b73738ea32076a10502dfa630e7169dc866c"
 
-URI_x86_64_v2_hipfft = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/hipfft-7.2.0-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_hipfft;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_hipfft}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/hipfft-7.2.0-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_hipfft;unpack=0"
 SRC_URI[x86_64_v2_hipfft.sha256sum] = "96c09a8040563183d3dc37e2d5d2c975aaabb9ec379feb54e6d267faafccbb56"
 
-URI_x86_64_v2_hipfft-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/hipfft-devel-7.2.0-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_hipfft-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_hipfft-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/hipfft-devel-7.2.0-4.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_hipfft-devel;unpack=0"
 SRC_URI[x86_64_v2_hipfft-devel.sha256sum] = "59ffe4caf5a4127c1942c849cf10f33a6712f93bbdaee2c670c45c87cabfbd65"
 
 RDEPENDS:hipfft = " \

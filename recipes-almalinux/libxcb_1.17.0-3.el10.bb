@@ -10,25 +10,26 @@ PACKAGES = " \
  libxcb-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libxcb-1.17.0-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libxcb-1.17.0-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "c8bc3ee753dd5200894fa19ed34c77dbbe450b6984fcbb1313b9d40417762632"
 
-URI_x86_64_v2_libxcb = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libxcb-1.17.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libxcb;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libxcb}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libxcb-1.17.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libxcb;unpack=0"
 SRC_URI[x86_64_v2_libxcb.sha256sum] = "81285982958b61c7b937e07153cd70f50d673b2e784b93bbcebc63bf1c8b1d22"
 
-URI_x86_64_v2_libxcb-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libxcb-devel-1.17.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libxcb-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libxcb-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libxcb-devel-1.17.0-3.el10.x86_64_v2.rpm;name=x86_64_v2_libxcb-devel;unpack=0"
 SRC_URI[x86_64_v2_libxcb-devel.sha256sum] = "e0ff560cc6311817c913fe7bf072750f4d78cb4d0ad3326798b55c14222cc19c"
 
-URI_aarch64_libxcb = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libxcb-1.17.0-3.el10.aarch64.rpm;name=aarch64_libxcb;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libxcb}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libxcb-1.17.0-3.el10.aarch64.rpm;name=aarch64_libxcb;unpack=0"
 SRC_URI[aarch64_libxcb.sha256sum] = "23f2dd096d4715885352b601cfced37c6e3e0a1b6d43cfe9ed2acdc5f875c7aa"
 
-URI_aarch64_libxcb-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libxcb-devel-1.17.0-3.el10.aarch64.rpm;name=aarch64_libxcb-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libxcb-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libxcb-devel-1.17.0-3.el10.aarch64.rpm;name=aarch64_libxcb-devel;unpack=0"
 SRC_URI[aarch64_libxcb-devel.sha256sum] = "366a574b4485d0256f2667dd25793e6829c0c56a2e36c1a58dd0dbfebb63e9a4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libxcb-1.17.0-3.el10.riscv64.rpm;name=riscv64_libxcb;unpack=0"
+SRC_URI[riscv64_libxcb.sha256sum] = "c6f43f37542af2c925d978e6866f456bb1f78200e2b8c5aa5b1d65f8536f3baf"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libxcb-devel-1.17.0-3.el10.riscv64.rpm;name=riscv64_libxcb-devel;unpack=0"
+SRC_URI[riscv64_libxcb-devel.sha256sum] = "a06ec5c15df2b1f7164cfce8c3ba3dc5dd6d3c225b1d4b9a0699f4b0365cc761"
 
 RDEPENDS:libxcb = " \
  glibc \

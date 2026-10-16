@@ -9,17 +9,17 @@ PACKAGES = " \
  butane \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/butane-0.29.0-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/butane-0.29.0-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f9c93f978aa63d6cee14386bf92b073aedb18e806775c4195d8dadb926b916d6"
 
-URI_x86_64_v2_butane = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/butane-0.29.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_butane;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_butane}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/butane-0.29.0-1.el10.x86_64_v2.rpm;name=x86_64_v2_butane;unpack=0"
 SRC_URI[x86_64_v2_butane.sha256sum] = "51dda520aaf4118e9225e56fd8a30d5ae5e9428b61e7d156202eca0e9d430213"
 
-URI_aarch64_butane = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/butane-0.29.0-1.el10.aarch64.rpm;name=aarch64_butane;unpack=0"
-SRC_URI:append = " ${URI_aarch64_butane}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/butane-0.29.0-1.el10.aarch64.rpm;name=aarch64_butane;unpack=0"
 SRC_URI[aarch64_butane.sha256sum] = "95a277fd3cf41c73cfc4ea15ef7f77b9c1129245d8a978de442e01494a6f28b9"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/butane-0.29.0-1.el10.riscv64.rpm;name=riscv64_butane;unpack=0"
+SRC_URI[riscv64_butane.sha256sum] = "2b679396ca09a6e17049e760c421d72660f1a5a9321584b569d334c51dd2a651"
 
 RDEPENDS:butane = " \
  glibc \

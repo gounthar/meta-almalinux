@@ -5,28 +5,27 @@ inherit dnf-bridge
 PN = "picocom"
 PV = "2024.07"
 PR = "3.el10_1"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  picocom \
- "
+"
+PACKAGES:aarch64 = " \
+ picocom \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/picocom-2024.07-3.el10_1.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/picocom-2024.07-3.el10_1.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "ac2cb513c3bf69ae8a6497d844dec7712c8f99c1207b2f1d2b86d57cbcae3254"
 
-URI_x86_64_v2_picocom = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/picocom-2024.07-3.el10_1.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_picocom;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_picocom}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/picocom-2024.07-3.el10_1.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_picocom;unpack=0"
 SRC_URI[x86_64_v2_picocom.sha256sum] = "5d1d30aedd7c53488f16425754b65da8db5e3354182a1e0a35f3b6b3d1dc95bc"
-RPROVIDES:picocom:x86_64_v2 = "virtual/group_dialout_"
+RPROVIDES:picocom:append:x86_64_v2 = " virtual/group_dialout_"
 
-URI_aarch64_picocom = "${EPEL_MIRROR}/aarch64/Packages/p/picocom-2024.07-3.el10_1.aarch64.rpm;name=aarch64_picocom;unpack=0"
-SRC_URI:append = " ${URI_aarch64_picocom}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/picocom-2024.07-3.el10_1.aarch64.rpm;name=aarch64_picocom;unpack=0"
 SRC_URI[aarch64_picocom.sha256sum] = "fe18b7720f4316437d2a05ad72872b724634134d0553999ebae0c97fb39c1ebb"
-RPROVIDES:picocom:aarch64 = "virtual/group_dialout_"
+RPROVIDES:picocom:append:aarch64 = " virtual/group_dialout_"
 
 RDEPENDS:picocom = " \
  glibc \
  "
-
-PROVIDES:append:x86_64_v2 = " rpm/virtual/group_dialout_"
-
-PROVIDES:append:aarch64 = " rpm/virtual/group_dialout_"

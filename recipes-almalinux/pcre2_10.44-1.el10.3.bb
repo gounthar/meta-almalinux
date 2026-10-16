@@ -15,65 +15,71 @@ PACKAGES = " \
  pcre2-utf32 \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/pcre2-10.44-1.el10.3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/pcre2-10.44-1.el10.3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "fd146047014814af463edb813aa001efb38d969f856c09052256ffe5f6ed9b7f"
 
-URI_x86_64_v2_pcre2 = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/pcre2-10.44-1.el10.3.x86_64_v2.rpm;name=x86_64_v2_pcre2;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pcre2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/pcre2-10.44-1.el10.3.x86_64_v2.rpm;name=x86_64_v2_pcre2;unpack=0"
 SRC_URI[x86_64_v2_pcre2.sha256sum] = "c6ec12b1f6071c5a8943cd3a99c23a85f7ff5ada8c1fad31342cc210c08330dd"
 
-URI_x86_64_v2_pcre2-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/pcre2-devel-10.44-1.el10.3.x86_64_v2.rpm;name=x86_64_v2_pcre2-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pcre2-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/pcre2-devel-10.44-1.el10.3.x86_64_v2.rpm;name=x86_64_v2_pcre2-devel;unpack=0"
 SRC_URI[x86_64_v2_pcre2-devel.sha256sum] = "fe6c3c486115bf50c7f7fa00ab9b16d7c60f5cf3b116d2c7f3da258ec9f4dda7"
 
-URI_x86_64_v2_pcre2-static = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/pcre2-static-10.44-1.el10.3.x86_64_v2.rpm;name=x86_64_v2_pcre2-static;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pcre2-static}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/pcre2-static-10.44-1.el10.3.x86_64_v2.rpm;name=x86_64_v2_pcre2-static;unpack=0"
 SRC_URI[x86_64_v2_pcre2-static.sha256sum] = "fee72dbf13149fde7317c832ea3e0b90a07c3b6f935857df6af7985d062f81a3"
 
-URI_x86_64_v2_pcre2-syntax = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/pcre2-syntax-10.44-1.el10.3.noarch.rpm;name=x86_64_v2_pcre2-syntax;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pcre2-syntax}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/pcre2-syntax-10.44-1.el10.3.noarch.rpm;name=x86_64_v2_pcre2-syntax;unpack=0"
 SRC_URI[x86_64_v2_pcre2-syntax.sha256sum] = "19c69f01525569ff4fc2b5c51eaee0e3a8733be7863e0fdc06446bc828581c1e"
 
-URI_x86_64_v2_pcre2-tools = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/pcre2-tools-10.44-1.el10.3.x86_64_v2.rpm;name=x86_64_v2_pcre2-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pcre2-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/pcre2-tools-10.44-1.el10.3.x86_64_v2.rpm;name=x86_64_v2_pcre2-tools;unpack=0"
 SRC_URI[x86_64_v2_pcre2-tools.sha256sum] = "c1534eba8b101caba8da4aabf5c68cc6437368384b92b7347e86352c70e7a5b1"
 
-URI_x86_64_v2_pcre2-utf16 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/pcre2-utf16-10.44-1.el10.3.x86_64_v2.rpm;name=x86_64_v2_pcre2-utf16;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pcre2-utf16}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/pcre2-utf16-10.44-1.el10.3.x86_64_v2.rpm;name=x86_64_v2_pcre2-utf16;unpack=0"
 SRC_URI[x86_64_v2_pcre2-utf16.sha256sum] = "50f939b51212dcffb0901ecb7986de963f5b5cc398b1a470c9868cd0bc77bcf3"
 
-URI_x86_64_v2_pcre2-utf32 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/pcre2-utf32-10.44-1.el10.3.x86_64_v2.rpm;name=x86_64_v2_pcre2-utf32;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_pcre2-utf32}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/pcre2-utf32-10.44-1.el10.3.x86_64_v2.rpm;name=x86_64_v2_pcre2-utf32;unpack=0"
 SRC_URI[x86_64_v2_pcre2-utf32.sha256sum] = "60b51475dd496f7755461dad2b6f89b11d63547bce14c74b3795aa4c7a8c6c43"
 
-URI_aarch64_pcre2 = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/pcre2-10.44-1.el10.3.aarch64.rpm;name=aarch64_pcre2;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pcre2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/pcre2-10.44-1.el10.3.aarch64.rpm;name=aarch64_pcre2;unpack=0"
 SRC_URI[aarch64_pcre2.sha256sum] = "4e07935dcd84a612d200a041bf9b52ecdf0946f7e3d715719b9d6c6da0eccee5"
 
-URI_aarch64_pcre2-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/pcre2-devel-10.44-1.el10.3.aarch64.rpm;name=aarch64_pcre2-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pcre2-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/pcre2-devel-10.44-1.el10.3.aarch64.rpm;name=aarch64_pcre2-devel;unpack=0"
 SRC_URI[aarch64_pcre2-devel.sha256sum] = "8d1d512d64bd372631c21dc2a26fd345c51e42069f30b0e0478a8415374e62d2"
 
-URI_aarch64_pcre2-static = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/pcre2-static-10.44-1.el10.3.aarch64.rpm;name=aarch64_pcre2-static;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pcre2-static}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/pcre2-static-10.44-1.el10.3.aarch64.rpm;name=aarch64_pcre2-static;unpack=0"
 SRC_URI[aarch64_pcre2-static.sha256sum] = "def8296a22ad031d1843fbd04df1e3091f74132e997abdaca8561c8fd1bcabd7"
 
-URI_aarch64_pcre2-syntax = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/pcre2-syntax-10.44-1.el10.3.noarch.rpm;name=aarch64_pcre2-syntax;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pcre2-syntax}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/pcre2-syntax-10.44-1.el10.3.noarch.rpm;name=aarch64_pcre2-syntax;unpack=0"
 SRC_URI[aarch64_pcre2-syntax.sha256sum] = "19c69f01525569ff4fc2b5c51eaee0e3a8733be7863e0fdc06446bc828581c1e"
 
-URI_aarch64_pcre2-tools = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/pcre2-tools-10.44-1.el10.3.aarch64.rpm;name=aarch64_pcre2-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pcre2-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/pcre2-tools-10.44-1.el10.3.aarch64.rpm;name=aarch64_pcre2-tools;unpack=0"
 SRC_URI[aarch64_pcre2-tools.sha256sum] = "b5d2e1f4622a92a145d8db9e73cfecc3fd8989d8e7227c3c541cc2bf6680f5ca"
 
-URI_aarch64_pcre2-utf16 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/pcre2-utf16-10.44-1.el10.3.aarch64.rpm;name=aarch64_pcre2-utf16;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pcre2-utf16}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/pcre2-utf16-10.44-1.el10.3.aarch64.rpm;name=aarch64_pcre2-utf16;unpack=0"
 SRC_URI[aarch64_pcre2-utf16.sha256sum] = "e73b84f3b6902a50cabb703c772e76f7e8f7fca13a92a598d94728e3af031123"
 
-URI_aarch64_pcre2-utf32 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/pcre2-utf32-10.44-1.el10.3.aarch64.rpm;name=aarch64_pcre2-utf32;unpack=0"
-SRC_URI:append = " ${URI_aarch64_pcre2-utf32}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/pcre2-utf32-10.44-1.el10.3.aarch64.rpm;name=aarch64_pcre2-utf32;unpack=0"
 SRC_URI[aarch64_pcre2-utf32.sha256sum] = "b216c5648a46410532362e0ba4e724f66aad67b1541201625e9a718c4cacb3f8"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/pcre2-10.44-1.el10.3.riscv64.rpm;name=riscv64_pcre2;unpack=0"
+SRC_URI[riscv64_pcre2.sha256sum] = "992f1d369ab9b5a334bdcdc384719d134152b26d3272c0f6c2aa6ae690ac8447"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/pcre2-devel-10.44-1.el10.3.riscv64.rpm;name=riscv64_pcre2-devel;unpack=0"
+SRC_URI[riscv64_pcre2-devel.sha256sum] = "3acf07381152883674f7038798ae40cc3a3b13bf3cf34952eb322c26148bda58"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/pcre2-static-10.44-1.el10.3.riscv64.rpm;name=riscv64_pcre2-static;unpack=0"
+SRC_URI[riscv64_pcre2-static.sha256sum] = "22c4df7b6a26608755dafadcea18e69c8b62c755acce7fcd6b8f364efdb24d78"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/pcre2-syntax-10.44-1.el10.3.noarch.rpm;name=riscv64_pcre2-syntax;unpack=0"
+SRC_URI[riscv64_pcre2-syntax.sha256sum] = "19c69f01525569ff4fc2b5c51eaee0e3a8733be7863e0fdc06446bc828581c1e"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/pcre2-tools-10.44-1.el10.3.riscv64.rpm;name=riscv64_pcre2-tools;unpack=0"
+SRC_URI[riscv64_pcre2-tools.sha256sum] = "3d15fc9d2d0f593bd85e4a6199b637c449c6eb5a50e92904a7b9b0fb98b41ff1"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/pcre2-utf16-10.44-1.el10.3.riscv64.rpm;name=riscv64_pcre2-utf16;unpack=0"
+SRC_URI[riscv64_pcre2-utf16.sha256sum] = "e60ad515a18056960e589cb85365a7df46bad5e883c85dd0789327a7d7b09322"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/pcre2-utf32-10.44-1.el10.3.riscv64.rpm;name=riscv64_pcre2-utf32;unpack=0"
+SRC_URI[riscv64_pcre2-utf32.sha256sum] = "7d14b7335477c966594584bfaea13a816d2b20325ac2d48afdbd4aca55ba9dd8"
 
 RDEPENDS:pcre2 = " \
  glibc \

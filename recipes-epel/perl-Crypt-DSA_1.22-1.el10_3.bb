@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-Crypt-DSA"
 PV = "1.22"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-Crypt-DSA \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-Crypt-DSA \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-Crypt-DSA-1.22-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-Crypt-DSA-1.22-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "02061d61ba03bd6617875d4f7fd20be6990ba6c0201d230555fc64e2050fd9e8"
 
-URI_x86_64_v2_perl-Crypt-DSA = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Crypt-DSA-1.22-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Crypt-DSA;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Crypt-DSA}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Crypt-DSA-1.22-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Crypt-DSA;unpack=0"
 SRC_URI[x86_64_v2_perl-Crypt-DSA.sha256sum] = "37fe6126ec433d26250eb72315ecd9ff5239abff5530912bd34d26665a11bcc2"
 
-URI_aarch64_perl-Crypt-DSA = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Crypt-DSA-1.22-1.el10_3.noarch.rpm;name=aarch64_perl-Crypt-DSA;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Crypt-DSA}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Crypt-DSA-1.22-1.el10_3.noarch.rpm;name=aarch64_perl-Crypt-DSA;unpack=0"
 SRC_URI[aarch64_perl-Crypt-DSA.sha256sum] = "ec2e8ce1cde6df39f97215cf555dc4e0a42dc97877429990c989e64229808f3c"
 
 RDEPENDS:perl-Crypt-DSA = " \

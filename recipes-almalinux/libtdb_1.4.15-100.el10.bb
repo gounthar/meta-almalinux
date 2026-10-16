@@ -12,41 +12,44 @@ PACKAGES = " \
  tdb-tools \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libtdb-1.4.15-100.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/libtdb-1.4.15-100.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d3df53c9e163554aedc654f9215ab21494ee4c14c65d5df50557f9c67a1ea938"
 
-URI_x86_64_v2_libtdb = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libtdb-1.4.15-100.el10.x86_64_v2.rpm;name=x86_64_v2_libtdb;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libtdb}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/libtdb-1.4.15-100.el10.x86_64_v2.rpm;name=x86_64_v2_libtdb;unpack=0"
 SRC_URI[x86_64_v2_libtdb.sha256sum] = "2c113004f3f9790bfd4cdb8369d29171039cf45a8e289127ab390d09d5248d03"
 
-URI_x86_64_v2_libtdb-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libtdb-devel-1.4.15-100.el10.x86_64_v2.rpm;name=x86_64_v2_libtdb-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libtdb-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libtdb-devel-1.4.15-100.el10.x86_64_v2.rpm;name=x86_64_v2_libtdb-devel;unpack=0"
 SRC_URI[x86_64_v2_libtdb-devel.sha256sum] = "9f468d0013b852a7c7fc27fe61c3c3e6069774827ecc7df8a5391dc80acdcd77"
 
-URI_x86_64_v2_python3-tdb = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/python3-tdb-1.4.15-100.el10.x86_64_v2.rpm;name=x86_64_v2_python3-tdb;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-tdb}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/python3-tdb-1.4.15-100.el10.x86_64_v2.rpm;name=x86_64_v2_python3-tdb;unpack=0"
 SRC_URI[x86_64_v2_python3-tdb.sha256sum] = "93a28d42fc178abd5f8923102be69e1780864c2aea9571c2996f7ddfca1ff260"
 
-URI_x86_64_v2_tdb-tools = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/tdb-tools-1.4.15-100.el10.x86_64_v2.rpm;name=x86_64_v2_tdb-tools;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_tdb-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/tdb-tools-1.4.15-100.el10.x86_64_v2.rpm;name=x86_64_v2_tdb-tools;unpack=0"
 SRC_URI[x86_64_v2_tdb-tools.sha256sum] = "3b8dd382195d05c8240ab02b88d5e92a6be377fbdad667f91fbdaa227dbee147"
 
-URI_aarch64_libtdb = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libtdb-1.4.15-100.el10.aarch64.rpm;name=aarch64_libtdb;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libtdb}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/libtdb-1.4.15-100.el10.aarch64.rpm;name=aarch64_libtdb;unpack=0"
 SRC_URI[aarch64_libtdb.sha256sum] = "fb8d5adcdf8f80bda274cdbe4667728a188e4a4bb5046466738612353c1cb8e3"
 
-URI_aarch64_libtdb-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libtdb-devel-1.4.15-100.el10.aarch64.rpm;name=aarch64_libtdb-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libtdb-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libtdb-devel-1.4.15-100.el10.aarch64.rpm;name=aarch64_libtdb-devel;unpack=0"
 SRC_URI[aarch64_libtdb-devel.sha256sum] = "6a05d50e7a7bcc1fb9482134a2d05c4a7c8add8179484f82fbf8adc31d0ac2ee"
 
-URI_aarch64_python3-tdb = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/python3-tdb-1.4.15-100.el10.aarch64.rpm;name=aarch64_python3-tdb;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-tdb}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/python3-tdb-1.4.15-100.el10.aarch64.rpm;name=aarch64_python3-tdb;unpack=0"
 SRC_URI[aarch64_python3-tdb.sha256sum] = "c1edfe2723944d09ed55f9b80f7ca11bb8e8d488a71dd3b6940b8a3a8f1bd4cc"
 
-URI_aarch64_tdb-tools = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/tdb-tools-1.4.15-100.el10.aarch64.rpm;name=aarch64_tdb-tools;unpack=0"
-SRC_URI:append = " ${URI_aarch64_tdb-tools}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/tdb-tools-1.4.15-100.el10.aarch64.rpm;name=aarch64_tdb-tools;unpack=0"
 SRC_URI[aarch64_tdb-tools.sha256sum] = "94c2ecb786e0da2f79ed9b5fb30dc6422a396b630016a08432f8bdba4133cb50"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/libtdb-1.4.15-100.el10.riscv64.rpm;name=riscv64_libtdb;unpack=0"
+SRC_URI[riscv64_libtdb.sha256sum] = "b21a43b03acc4ec0da61210b508a8022508ae41f3106864e36648734b50f9b15"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libtdb-devel-1.4.15-100.el10.riscv64.rpm;name=riscv64_libtdb-devel;unpack=0"
+SRC_URI[riscv64_libtdb-devel.sha256sum] = "313a7939fe74d30d2a31542a4227f47a320251979f14a793461d4bfb92a47cc4"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/python3-tdb-1.4.15-100.el10.riscv64.rpm;name=riscv64_python3-tdb;unpack=0"
+SRC_URI[riscv64_python3-tdb.sha256sum] = "4bd03e06705c49db9886013fad5193a7464560ea21b918019b26c683c928def2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/tdb-tools-1.4.15-100.el10.riscv64.rpm;name=riscv64_tdb-tools;unpack=0"
+SRC_URI[riscv64_tdb-tools.sha256sum] = "958544728264942b080807e7843d419cff52dcf43ccdc8196eeedf28d018c161"
 
 RDEPENDS:libtdb = " \
  glibc \

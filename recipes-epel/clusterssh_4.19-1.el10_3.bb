@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "clusterssh"
 PV = "4.19"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  clusterssh \
- "
+"
+PACKAGES:aarch64 = " \
+ clusterssh \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/c/clusterssh-4.19-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/c/clusterssh-4.19-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "9d8472a2977383676a132ae56eddd1288cf9cd5abe0bc1397c523b184e97382e"
 
-URI_x86_64_v2_clusterssh = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/clusterssh-4.19-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_clusterssh;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_clusterssh}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/clusterssh-4.19-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_clusterssh;unpack=0"
 SRC_URI[x86_64_v2_clusterssh.sha256sum] = "94f506d017fdbb089ae929de2ed87798af868eb4115bbbef6b61d1b6917781f1"
 
-URI_aarch64_clusterssh = "${EPEL_MIRROR}/aarch64/Packages/c/clusterssh-4.19-1.el10_3.noarch.rpm;name=aarch64_clusterssh;unpack=0"
-SRC_URI:append = " ${URI_aarch64_clusterssh}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/c/clusterssh-4.19-1.el10_3.noarch.rpm;name=aarch64_clusterssh;unpack=0"
 SRC_URI[aarch64_clusterssh.sha256sum] = "9600f73ad00f27a0b118e3de5c5473222620aae25b9d276843bb285adbe9970b"
 
 RDEPENDS:clusterssh = " \

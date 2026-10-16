@@ -10,25 +10,26 @@ PACKAGES = " \
  python3-psutil-tests \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python-psutil-5.9.8-6.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/python-psutil-5.9.8-6.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "813fe7c9fa7ffba1839128bcd20abfe8edb94b34d9fdc06424a9c7a15d59afc3"
 
-URI_x86_64_v2_python3-psutil = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-psutil-5.9.8-6.el10.x86_64_v2.rpm;name=x86_64_v2_python3-psutil;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-psutil}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/python3-psutil-5.9.8-6.el10.x86_64_v2.rpm;name=x86_64_v2_python3-psutil;unpack=0"
 SRC_URI[x86_64_v2_python3-psutil.sha256sum] = "71bdb4c27da796494f5b83005e3978f80a7e16df69ae8b44075e8a36b117e33f"
 
-URI_x86_64_v2_python3-psutil-tests = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3-psutil-tests-5.9.8-6.el10.x86_64_v2.rpm;name=x86_64_v2_python3-psutil-tests;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_python3-psutil-tests}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/python3-psutil-tests-5.9.8-6.el10.x86_64_v2.rpm;name=x86_64_v2_python3-psutil-tests;unpack=0"
 SRC_URI[x86_64_v2_python3-psutil-tests.sha256sum] = "e2c081abc01d92c0530b29096a0caa5ba1e83f2545e610c0f771b6e1af9271d9"
 
-URI_aarch64_python3-psutil = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-psutil-5.9.8-6.el10.aarch64.rpm;name=aarch64_python3-psutil;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-psutil}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/python3-psutil-5.9.8-6.el10.aarch64.rpm;name=aarch64_python3-psutil;unpack=0"
 SRC_URI[aarch64_python3-psutil.sha256sum] = "143cb0fef4eb2366c1e0f4a6a4cc0dcefa32702ed5d5c8fb9d1faa5840f3c6d1"
 
-URI_aarch64_python3-psutil-tests = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3-psutil-tests-5.9.8-6.el10.aarch64.rpm;name=aarch64_python3-psutil-tests;unpack=0"
-SRC_URI:append = " ${URI_aarch64_python3-psutil-tests}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/python3-psutil-tests-5.9.8-6.el10.aarch64.rpm;name=aarch64_python3-psutil-tests;unpack=0"
 SRC_URI[aarch64_python3-psutil-tests.sha256sum] = "1f132c4e056b93840a9a4e238e0c0894bc9af5cc6533f47b2e75e87a2ef7eb2f"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/python3-psutil-5.9.8-6.el10.riscv64.rpm;name=riscv64_python3-psutil;unpack=0"
+SRC_URI[riscv64_python3-psutil.sha256sum] = "91d8b6a4e6c1e0bc73e87a7088481a4bdbfd5d17842857dbfa98cd3b1a760ad2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/python3-psutil-tests-5.9.8-6.el10.riscv64.rpm;name=riscv64_python3-psutil-tests;unpack=0"
+SRC_URI[riscv64_python3-psutil-tests.sha256sum] = "03fe53680022813ae6f1a860422487ab9cf79f1594206b2c95e24effa258c957"
 
 RDEPENDS:python3-psutil = " \
  glibc \

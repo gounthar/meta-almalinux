@@ -12,13 +12,14 @@ PACKAGES:x86_64_v2 = " \
 PACKAGES:aarch64 = " \
   \
 "
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/mcelog-210-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/mcelog-210-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "26975af91888b940a1f514dd7e6df11774e7d5fe9846fae815875aa9633e104a"
 
-URI_x86_64_v2_mcelog = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/mcelog-210-1.el10.x86_64_v2.rpm;name=x86_64_v2_mcelog;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_mcelog}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/mcelog-210-1.el10.x86_64_v2.rpm;name=x86_64_v2_mcelog;unpack=0"
 SRC_URI[x86_64_v2_mcelog.sha256sum] = "5e7408b64504b8325a2dda2646c372cea2493e0524d0d6132163d6ef5a4a73a6"
 
 RDEPENDS:mcelog = " \

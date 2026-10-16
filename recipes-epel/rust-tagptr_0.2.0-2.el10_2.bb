@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-tagptr"
 PV = "0.2.0"
 PR = "2.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-tagptr+default-devel \
  rust-tagptr-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-tagptr+default-devel \
+ rust-tagptr-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-tagptr-0.2.0-2.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-tagptr-0.2.0-2.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "9803ce4e7cf633da25a7af7e52aae11515300afdf152a72799f2b6e86522d8f2"
 
-URI_x86_64_v2_rust-tagptr+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-tagptr+default-devel-0.2.0-2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-tagptr+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-tagptr+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-tagptr+default-devel-0.2.0-2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-tagptr+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-tagptr+default-devel.sha256sum] = "140f0bc0e2c6b184b50ea1e45e9013ff72b0c35dcbfa926dbe17497f9e6274f7"
 
-URI_x86_64_v2_rust-tagptr-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-tagptr-devel-0.2.0-2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-tagptr-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-tagptr-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-tagptr-devel-0.2.0-2.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rust-tagptr-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-tagptr-devel.sha256sum] = "120ea8e434dfb7ba4a0f5c8b25c7ddd960cbea4131cc830529a7217d7c67e0e8"
 
-URI_aarch64_rust-tagptr+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-tagptr+default-devel-0.2.0-2.el10_2.noarch.rpm;name=aarch64_rust-tagptr+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-tagptr+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-tagptr+default-devel-0.2.0-2.el10_2.noarch.rpm;name=aarch64_rust-tagptr+default-devel;unpack=0"
 SRC_URI[aarch64_rust-tagptr+default-devel.sha256sum] = "d5bd09d7f6fe942e7530e6f44e2573707c2cddde81f81456c489b1bcb545eb50"
 
-URI_aarch64_rust-tagptr-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-tagptr-devel-0.2.0-2.el10_2.noarch.rpm;name=aarch64_rust-tagptr-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-tagptr-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-tagptr-devel-0.2.0-2.el10_2.noarch.rpm;name=aarch64_rust-tagptr-devel;unpack=0"
 SRC_URI[aarch64_rust-tagptr-devel.sha256sum] = "870a6d842e70624f5c8bc584bcb71192acd3443acc7eb0b3c3e1ef39e5e0f890"
 
 RDEPENDS:rust-tagptr+default-devel = " \

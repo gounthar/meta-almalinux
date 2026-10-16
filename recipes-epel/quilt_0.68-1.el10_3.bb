@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "quilt"
 PV = "0.68"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  quilt \
- "
+"
+PACKAGES:aarch64 = " \
+ quilt \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/q/quilt-0.68-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/q/quilt-0.68-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "252288596e3162a7b0a8e4a5e254410a9d5e9cbeda9c16e4103451f3fbfba243"
 
-URI_x86_64_v2_quilt = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/quilt-0.68-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_quilt;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_quilt}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/quilt-0.68-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_quilt;unpack=0"
 SRC_URI[x86_64_v2_quilt.sha256sum] = "6e491b0c1c6d57e4bc05df3cfa901f6786322168b6a1d5f4c94ac8227b3f1243"
 
-URI_aarch64_quilt = "${EPEL_MIRROR}/aarch64/Packages/q/quilt-0.68-1.el10_3.noarch.rpm;name=aarch64_quilt;unpack=0"
-SRC_URI:append = " ${URI_aarch64_quilt}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/q/quilt-0.68-1.el10_3.noarch.rpm;name=aarch64_quilt;unpack=0"
 SRC_URI[aarch64_quilt.sha256sum] = "67b518052ca7dc99225dc4a9844617152fecd14115d6f2af13bf1572688be8ed"
 
 RDEPENDS:quilt = " \

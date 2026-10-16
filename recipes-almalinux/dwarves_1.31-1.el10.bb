@@ -10,25 +10,26 @@ PACKAGES = " \
  libdwarves1 \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/dwarves-1.31-1.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/dwarves-1.31-1.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f3a4d13a38ad8239e190b1a1ead2b5c5a1fcd67f1ab9182c9678d312ce7ffb91"
 
-URI_x86_64_v2_dwarves = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/dwarves-1.31-1.el10.x86_64_v2.rpm;name=x86_64_v2_dwarves;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_dwarves}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/dwarves-1.31-1.el10.x86_64_v2.rpm;name=x86_64_v2_dwarves;unpack=0"
 SRC_URI[x86_64_v2_dwarves.sha256sum] = "5307b252650b258af6a538d43d682869236f486ab69ed9254f870cc44821c5f1"
 
-URI_x86_64_v2_libdwarves1 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libdwarves1-1.31-1.el10.x86_64_v2.rpm;name=x86_64_v2_libdwarves1;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libdwarves1}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libdwarves1-1.31-1.el10.x86_64_v2.rpm;name=x86_64_v2_libdwarves1;unpack=0"
 SRC_URI[x86_64_v2_libdwarves1.sha256sum] = "72f7e5ae2f6ce9b85030417eb36d03ff11969780508ff89699c84a2cbb8042c3"
 
-URI_aarch64_dwarves = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/dwarves-1.31-1.el10.aarch64.rpm;name=aarch64_dwarves;unpack=0"
-SRC_URI:append = " ${URI_aarch64_dwarves}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/dwarves-1.31-1.el10.aarch64.rpm;name=aarch64_dwarves;unpack=0"
 SRC_URI[aarch64_dwarves.sha256sum] = "b88df123127b5eb0d00bacf8e636ded134d9925bbd3ccba7ad7948c89c170e73"
 
-URI_aarch64_libdwarves1 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libdwarves1-1.31-1.el10.aarch64.rpm;name=aarch64_libdwarves1;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libdwarves1}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libdwarves1-1.31-1.el10.aarch64.rpm;name=aarch64_libdwarves1;unpack=0"
 SRC_URI[aarch64_libdwarves1.sha256sum] = "894ce20519d34737a73774cc13d3a29f19f814ca1a167936a7949bd54f72c375"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/dwarves-1.31-1.el10.riscv64.rpm;name=riscv64_dwarves;unpack=0"
+SRC_URI[riscv64_dwarves.sha256sum] = "33debc327de12127012e715f5e3c06bb993b19fb13de6f569305bc8d73208fba"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libdwarves1-1.31-1.el10.riscv64.rpm;name=riscv64_libdwarves1;unpack=0"
+SRC_URI[riscv64_libdwarves1.sha256sum] = "df789c77e5349cb793f42fff76aef51157cff153aab84cda2af63b253570e88f"
 
 RDEPENDS:dwarves = " \
  bash \

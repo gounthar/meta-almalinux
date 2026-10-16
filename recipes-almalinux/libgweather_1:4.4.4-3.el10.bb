@@ -12,33 +12,35 @@ PACKAGES = " \
  libgweather-doc \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libgweather-4.4.4-3.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libgweather-4.4.4-3.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "e9c4470fc2d9cb7747456ba62b68bf73d868e9fdbc700b28d0d9c08cbf1be3d3"
 
-URI_x86_64_v2_libgweather = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libgweather-4.4.4-3.el10.x86_64_v2.rpm;name=x86_64_v2_libgweather;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libgweather}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libgweather-4.4.4-3.el10.x86_64_v2.rpm;name=x86_64_v2_libgweather;unpack=0"
 SRC_URI[x86_64_v2_libgweather.sha256sum] = "12865defc2c10055edae7fed6978e5ab8e915fd4a797b122c1f793e45144ef58"
 
-URI_x86_64_v2_libgweather-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libgweather-devel-4.4.4-3.el10.x86_64_v2.rpm;name=x86_64_v2_libgweather-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libgweather-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libgweather-devel-4.4.4-3.el10.x86_64_v2.rpm;name=x86_64_v2_libgweather-devel;unpack=0"
 SRC_URI[x86_64_v2_libgweather-devel.sha256sum] = "a714a0bcebf74b0cd5bcfe7cc4f1b8346fea7cd105d2c6148fc894fbe56af9d4"
 
-URI_x86_64_v2_libgweather-doc = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libgweather-doc-4.4.4-3.el10.x86_64_v2.rpm;name=x86_64_v2_libgweather-doc;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libgweather-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libgweather-doc-4.4.4-3.el10.x86_64_v2.rpm;name=x86_64_v2_libgweather-doc;unpack=0"
 SRC_URI[x86_64_v2_libgweather-doc.sha256sum] = "5e6edace54ff6e13cd32b37b421b2d5d75dca3b42a6b1fb75e419ea5c5e4e4fb"
 
-URI_aarch64_libgweather = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libgweather-4.4.4-3.el10.aarch64.rpm;name=aarch64_libgweather;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libgweather}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libgweather-4.4.4-3.el10.aarch64.rpm;name=aarch64_libgweather;unpack=0"
 SRC_URI[aarch64_libgweather.sha256sum] = "4cf6bec6480789381ba5e3f87c2cee597eae89bb923cb344769f742bca48af66"
 
-URI_aarch64_libgweather-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libgweather-devel-4.4.4-3.el10.aarch64.rpm;name=aarch64_libgweather-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libgweather-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libgweather-devel-4.4.4-3.el10.aarch64.rpm;name=aarch64_libgweather-devel;unpack=0"
 SRC_URI[aarch64_libgweather-devel.sha256sum] = "465314d92851dce2d4a67cf5ed4d2a82e036b17af737a3e195c4e59a6c1c715c"
 
-URI_aarch64_libgweather-doc = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libgweather-doc-4.4.4-3.el10.aarch64.rpm;name=aarch64_libgweather-doc;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libgweather-doc}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libgweather-doc-4.4.4-3.el10.aarch64.rpm;name=aarch64_libgweather-doc;unpack=0"
 SRC_URI[aarch64_libgweather-doc.sha256sum] = "fb45806ad2951e98a477ede7716446a96613e8301f63debbbbf69d8f40aad458"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libgweather-4.4.4-3.el10.riscv64.rpm;name=riscv64_libgweather;unpack=0"
+SRC_URI[riscv64_libgweather.sha256sum] = "592c81e99c1ca94904ee15aae2386a803dc315128528ce717838ea70f0d4acae"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libgweather-devel-4.4.4-3.el10.riscv64.rpm;name=riscv64_libgweather-devel;unpack=0"
+SRC_URI[riscv64_libgweather-devel.sha256sum] = "77cba7554b0a0f00a00776c9d08071651a0028c99ff60c43e9b7bef82ea285cc"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libgweather-doc-4.4.4-3.el10.riscv64.rpm;name=riscv64_libgweather-doc;unpack=0"
+SRC_URI[riscv64_libgweather-doc.sha256sum] = "0611a07a9dc876d68d4a20de3184fe186a85cecbe3784b14744f79c9b576bfdb"
 
 RDEPENDS:libgweather = " \
  geocode-glib \

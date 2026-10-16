@@ -9,17 +9,17 @@ PACKAGES = " \
  gnome-desktop-testing \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/gnome-desktop-testing-2018.1-21.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/gnome-desktop-testing-2018.1-21.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "474ca172029ebf8b6e2a7e77908a55e3fbeefd9643ca0da0651302a47dc9fb46"
 
-URI_x86_64_v2_gnome-desktop-testing = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/gnome-desktop-testing-2018.1-21.el10.x86_64_v2.rpm;name=x86_64_v2_gnome-desktop-testing;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_gnome-desktop-testing}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/gnome-desktop-testing-2018.1-21.el10.x86_64_v2.rpm;name=x86_64_v2_gnome-desktop-testing;unpack=0"
 SRC_URI[x86_64_v2_gnome-desktop-testing.sha256sum] = "67c8a35ca32e2eddbd7115265bd8c28b55fd5894525ebfe4ab2288138cea6af6"
 
-URI_aarch64_gnome-desktop-testing = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/gnome-desktop-testing-2018.1-21.el10.aarch64.rpm;name=aarch64_gnome-desktop-testing;unpack=0"
-SRC_URI:append = " ${URI_aarch64_gnome-desktop-testing}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/gnome-desktop-testing-2018.1-21.el10.aarch64.rpm;name=aarch64_gnome-desktop-testing;unpack=0"
 SRC_URI[aarch64_gnome-desktop-testing.sha256sum] = "92726554f357b9d5b8d6aba30627c76512f39194ebcdbd43dd3fae6f5cf755e2"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/gnome-desktop-testing-2018.1-21.el10.riscv64.rpm;name=riscv64_gnome-desktop-testing;unpack=0"
+SRC_URI[riscv64_gnome-desktop-testing.sha256sum] = "5371a3b0f26519803c1d4a9ca3ef37fc5df5794b65c212ddb8a8d1dd9119c64b"
 
 RDEPENDS:gnome-desktop-testing = " \
  glib2 \

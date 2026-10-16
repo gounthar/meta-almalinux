@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "rkhunter"
 PV = "1.4.6"
 PR = "31.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rkhunter \
- "
+"
+PACKAGES:aarch64 = " \
+ rkhunter \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rkhunter-1.4.6-31.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rkhunter-1.4.6-31.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "d8e37ba524426a498e94ae02f62439b892c8eaeaa41d9a74873d4d47566a2227"
 
-URI_x86_64_v2_rkhunter = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rkhunter-1.4.6-31.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rkhunter;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rkhunter}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rkhunter-1.4.6-31.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_rkhunter;unpack=0"
 SRC_URI[x86_64_v2_rkhunter.sha256sum] = "0c7645a6ba02835751ab7bde4b26f1e96c924d20393150ee38b3cd28c0500a51"
 
-URI_aarch64_rkhunter = "${EPEL_MIRROR}/aarch64/Packages/r/rkhunter-1.4.6-31.el10_2.noarch.rpm;name=aarch64_rkhunter;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rkhunter}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rkhunter-1.4.6-31.el10_2.noarch.rpm;name=aarch64_rkhunter;unpack=0"
 SRC_URI[aarch64_rkhunter.sha256sum] = "101531894e8e7e8db4877022c066218cde3b3efaf41df988aada88f5d57f3cb7"
 
 RDEPENDS:rkhunter = " \

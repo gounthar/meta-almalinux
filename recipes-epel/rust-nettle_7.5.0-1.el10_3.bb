@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-nettle"
 PV = "7.5.0"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-nettle+default-devel \
  rust-nettle-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-nettle+default-devel \
+ rust-nettle-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-nettle-7.5.0-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-nettle-7.5.0-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6c879a12224e587353995b17bc3746d68d7c847e78441404cf42d40e87cd48e0"
 
-URI_x86_64_v2_rust-nettle+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-nettle+default-devel-7.5.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-nettle+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-nettle+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-nettle+default-devel-7.5.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-nettle+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-nettle+default-devel.sha256sum] = "35eb41819a8d36d99dc1cec5947bc91c444fa48cbb819a3e2d77a3c7456f9a63"
 
-URI_x86_64_v2_rust-nettle-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-nettle-devel-7.5.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-nettle-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-nettle-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-nettle-devel-7.5.0-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-nettle-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-nettle-devel.sha256sum] = "75dad2f42465120c384137faccf1a5547e1e039c9beea629e0cb7c651cdd7845"
 
-URI_aarch64_rust-nettle+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-nettle+default-devel-7.5.0-1.el10_3.noarch.rpm;name=aarch64_rust-nettle+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-nettle+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-nettle+default-devel-7.5.0-1.el10_3.noarch.rpm;name=aarch64_rust-nettle+default-devel;unpack=0"
 SRC_URI[aarch64_rust-nettle+default-devel.sha256sum] = "676f6cff23fcc1db7cf5e327324a8fb2932b9bec80d0376e6bc582fe72c1f460"
 
-URI_aarch64_rust-nettle-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-nettle-devel-7.5.0-1.el10_3.noarch.rpm;name=aarch64_rust-nettle-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-nettle-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-nettle-devel-7.5.0-1.el10_3.noarch.rpm;name=aarch64_rust-nettle-devel;unpack=0"
 SRC_URI[aarch64_rust-nettle-devel.sha256sum] = "ecd6af58fc5888b1130f02cf3a786cfe14d2dfc68a04905b1725611b80ba353c"
 
 RDEPENDS:rust-nettle+default-devel = " \

@@ -9,17 +9,17 @@ PACKAGES = " \
  lrzsz \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/lrzsz-0.12.20-66.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/lrzsz-0.12.20-66.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f477b49427cd7309663ca057c2bb69ad85f535b65efb105c2f9910a22be9ba78"
 
-URI_x86_64_v2_lrzsz = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/lrzsz-0.12.20-66.el10.x86_64_v2.rpm;name=x86_64_v2_lrzsz;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_lrzsz}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/lrzsz-0.12.20-66.el10.x86_64_v2.rpm;name=x86_64_v2_lrzsz;unpack=0"
 SRC_URI[x86_64_v2_lrzsz.sha256sum] = "278ef0474e697ef6fdf61e99cf714266dfdc35bc1716b324d51a360600a94fdf"
 
-URI_aarch64_lrzsz = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/lrzsz-0.12.20-66.el10.aarch64.rpm;name=aarch64_lrzsz;unpack=0"
-SRC_URI:append = " ${URI_aarch64_lrzsz}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/lrzsz-0.12.20-66.el10.aarch64.rpm;name=aarch64_lrzsz;unpack=0"
 SRC_URI[aarch64_lrzsz.sha256sum] = "5eceed865d883dea3571e7cb8a4d1a59fd95e682aa855b3680f28bcafe5ad556"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/lrzsz-0.12.20-66.el10.riscv64.rpm;name=riscv64_lrzsz;unpack=0"
+SRC_URI[riscv64_lrzsz.sha256sum] = "7c5a032469c941160742e88029110f6405b59419c1511a722ff8bcd6cb1c56d7"
 
 RDEPENDS:lrzsz = " \
  glibc \

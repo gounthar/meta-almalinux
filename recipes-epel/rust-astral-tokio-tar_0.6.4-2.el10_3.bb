@@ -5,38 +5,39 @@ inherit dnf-bridge
 PN = "rust-astral-tokio-tar"
 PV = "0.6.4"
 PR = "2.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-astral-tokio-tar+default-devel \
  rust-astral-tokio-tar+xattr-devel \
  rust-astral-tokio-tar-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-astral-tokio-tar+default-devel \
+ rust-astral-tokio-tar+xattr-devel \
+ rust-astral-tokio-tar-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-astral-tokio-tar-0.6.4-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-astral-tokio-tar-0.6.4-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "6936a2b40da7df0af75524cdbfa831193317d8e9039ae92a9381e20c48e4de18"
 
-URI_x86_64_v2_rust-astral-tokio-tar+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-astral-tokio-tar+default-devel-0.6.4-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-astral-tokio-tar+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-astral-tokio-tar+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-astral-tokio-tar+default-devel-0.6.4-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-astral-tokio-tar+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-astral-tokio-tar+default-devel.sha256sum] = "a12a2a177ef591465a2ca7c337818ca93d344a7caf825003321ada7dbf57c5c4"
 
-URI_x86_64_v2_rust-astral-tokio-tar+xattr-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-astral-tokio-tar+xattr-devel-0.6.4-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-astral-tokio-tar+xattr-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-astral-tokio-tar+xattr-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-astral-tokio-tar+xattr-devel-0.6.4-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-astral-tokio-tar+xattr-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-astral-tokio-tar+xattr-devel.sha256sum] = "578bd9aea7fed4b468a3455ea3839101ab2556b56a1e7b84e2b18d62b6bc70b2"
 
-URI_x86_64_v2_rust-astral-tokio-tar-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-astral-tokio-tar-devel-0.6.4-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-astral-tokio-tar-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-astral-tokio-tar-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-astral-tokio-tar-devel-0.6.4-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-astral-tokio-tar-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-astral-tokio-tar-devel.sha256sum] = "5eba6113bd2074a873aa1308bf4ce2b12808d7a87fd1f2a4f773906f045d02e7"
 
-URI_aarch64_rust-astral-tokio-tar+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-astral-tokio-tar+default-devel-0.6.4-2.el10_3.noarch.rpm;name=aarch64_rust-astral-tokio-tar+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-astral-tokio-tar+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-astral-tokio-tar+default-devel-0.6.4-2.el10_3.noarch.rpm;name=aarch64_rust-astral-tokio-tar+default-devel;unpack=0"
 SRC_URI[aarch64_rust-astral-tokio-tar+default-devel.sha256sum] = "38632c7ab0af7d84a059c1e52111b886b5ebad2accb6f0cb640a9996a69f17b5"
 
-URI_aarch64_rust-astral-tokio-tar+xattr-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-astral-tokio-tar+xattr-devel-0.6.4-2.el10_3.noarch.rpm;name=aarch64_rust-astral-tokio-tar+xattr-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-astral-tokio-tar+xattr-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-astral-tokio-tar+xattr-devel-0.6.4-2.el10_3.noarch.rpm;name=aarch64_rust-astral-tokio-tar+xattr-devel;unpack=0"
 SRC_URI[aarch64_rust-astral-tokio-tar+xattr-devel.sha256sum] = "1fe5990921948001cc5be78faaacda5e4f6a6ac39b7844d95d4a7030c3a25e6a"
 
-URI_aarch64_rust-astral-tokio-tar-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-astral-tokio-tar-devel-0.6.4-2.el10_3.noarch.rpm;name=aarch64_rust-astral-tokio-tar-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-astral-tokio-tar-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-astral-tokio-tar-devel-0.6.4-2.el10_3.noarch.rpm;name=aarch64_rust-astral-tokio-tar-devel;unpack=0"
 SRC_URI[aarch64_rust-astral-tokio-tar-devel.sha256sum] = "928b4c97380d1dfbd5a80e44585be7c6ca372a31ff1ac67b057ede86345e72de"
 
 RDEPENDS:rust-astral-tokio-tar+default-devel = " \

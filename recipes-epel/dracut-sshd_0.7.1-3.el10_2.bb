@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "dracut-sshd"
 PV = "0.7.1"
 PR = "3.el10_2"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  dracut-sshd \
- "
+"
+PACKAGES:aarch64 = " \
+ dracut-sshd \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/d/dracut-sshd-0.7.1-3.el10_2.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/d/dracut-sshd-0.7.1-3.el10_2.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "3c66424da6927fed624cdeddffe0cff9028bb22c6098b68194199bb251ae26b2"
 
-URI_x86_64_v2_dracut-sshd = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/dracut-sshd-0.7.1-3.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_dracut-sshd;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_dracut-sshd}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/dracut-sshd-0.7.1-3.el10_2.alma_altarch.noarch.rpm;name=x86_64_v2_dracut-sshd;unpack=0"
 SRC_URI[x86_64_v2_dracut-sshd.sha256sum] = "8b7757e8e7e95cec71358860056eb4bb2caaba46502defb0d6dddd71c0fdce43"
 
-URI_aarch64_dracut-sshd = "${EPEL_MIRROR}/aarch64/Packages/d/dracut-sshd-0.7.1-3.el10_2.noarch.rpm;name=aarch64_dracut-sshd;unpack=0"
-SRC_URI:append = " ${URI_aarch64_dracut-sshd}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/d/dracut-sshd-0.7.1-3.el10_2.noarch.rpm;name=aarch64_dracut-sshd;unpack=0"
 SRC_URI[aarch64_dracut-sshd.sha256sum] = "7ffb06ac037f79fda533ab3301865a70f53c75c767f3f29abb93b00435653fb8"
 
 RDEPENDS:dracut-sshd = " \

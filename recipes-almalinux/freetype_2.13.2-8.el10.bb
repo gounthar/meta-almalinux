@@ -11,33 +11,35 @@ PACKAGES = " \
  freetype-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/freetype-2.13.2-8.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/BaseOS/Source/Packages/freetype-2.13.2-8.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "f46ec2dfa3d3a54142825d294e24a4d4dab79b7ae5447dfb248ce912e625699b"
 
-URI_x86_64_v2_freetype = "${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/freetype-2.13.2-8.el10.x86_64_v2.rpm;name=x86_64_v2_freetype;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_freetype}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/x86_64_v2/os/Packages/freetype-2.13.2-8.el10.x86_64_v2.rpm;name=x86_64_v2_freetype;unpack=0"
 SRC_URI[x86_64_v2_freetype.sha256sum] = "7f6f20fce68c15df7068b895663ac4f7b4605bb9d20c555a4712810b8b37dd38"
 
-URI_x86_64_v2_freetype-demos = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/freetype-demos-2.13.2-8.el10.x86_64_v2.rpm;name=x86_64_v2_freetype-demos;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_freetype-demos}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/freetype-demos-2.13.2-8.el10.x86_64_v2.rpm;name=x86_64_v2_freetype-demos;unpack=0"
 SRC_URI[x86_64_v2_freetype-demos.sha256sum] = "160db2ca48f4808a77b693b1673d6c2933d924b57d3841f8b41fb8e453658f8b"
 
-URI_x86_64_v2_freetype-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/freetype-devel-2.13.2-8.el10.x86_64_v2.rpm;name=x86_64_v2_freetype-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_freetype-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/freetype-devel-2.13.2-8.el10.x86_64_v2.rpm;name=x86_64_v2_freetype-devel;unpack=0"
 SRC_URI[x86_64_v2_freetype-devel.sha256sum] = "379c936541d99640de3703a3c9de404796afc71feaeb501ff2a741dc100b4cb8"
 
-URI_aarch64_freetype = "${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/freetype-2.13.2-8.el10.aarch64.rpm;name=aarch64_freetype;unpack=0"
-SRC_URI:append = " ${URI_aarch64_freetype}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/aarch64/os/Packages/freetype-2.13.2-8.el10.aarch64.rpm;name=aarch64_freetype;unpack=0"
 SRC_URI[aarch64_freetype.sha256sum] = "1e717bc6502d00cfe9e7655236860d93bb2aa02ccdfceb1de294c86c3dfbe1c8"
 
-URI_aarch64_freetype-demos = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/freetype-demos-2.13.2-8.el10.aarch64.rpm;name=aarch64_freetype-demos;unpack=0"
-SRC_URI:append = " ${URI_aarch64_freetype-demos}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/freetype-demos-2.13.2-8.el10.aarch64.rpm;name=aarch64_freetype-demos;unpack=0"
 SRC_URI[aarch64_freetype-demos.sha256sum] = "6743c6096731e0cad961a6a311f2d0890a5f0c10a6a9e9adaf7488300d9d1187"
 
-URI_aarch64_freetype-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/freetype-devel-2.13.2-8.el10.aarch64.rpm;name=aarch64_freetype-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_freetype-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/freetype-devel-2.13.2-8.el10.aarch64.rpm;name=aarch64_freetype-devel;unpack=0"
 SRC_URI[aarch64_freetype-devel.sha256sum] = "213f25d0ef224f3f877ba9b7c3e120f38d1f837151775d79550547af21d4d3d7"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/BaseOS/riscv64/os/Packages/freetype-2.13.2-8.el10.riscv64.rpm;name=riscv64_freetype;unpack=0"
+SRC_URI[riscv64_freetype.sha256sum] = "e0e5233ce5f08ed14decbb44329754ff0bacf8ff1d43a29dee3628176255972b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/freetype-demos-2.13.2-8.el10.riscv64.rpm;name=riscv64_freetype-demos;unpack=0"
+SRC_URI[riscv64_freetype-demos.sha256sum] = "3020de44ee1f37a4dd619332449b7c26dba269d2f3de27e51ed626af6c85f42b"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/freetype-devel-2.13.2-8.el10.riscv64.rpm;name=riscv64_freetype-devel;unpack=0"
+SRC_URI[riscv64_freetype-devel.sha256sum] = "0436e3eb8c5871ccf30e64870b79428d139b47ba6276072b9a13cb37e892e336"
 
 RDEPENDS:freetype = " \
  bash \

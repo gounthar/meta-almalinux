@@ -10,25 +10,26 @@ PACKAGES = " \
  libgphoto2-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libgphoto2-2.5.30-10.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libgphoto2-2.5.30-10.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a96bb41d5c83586e7a033d02b3e5b6e9fdd24701d59a2b1cd88b11a271d170ba"
 
-URI_x86_64_v2_libgphoto2 = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libgphoto2-2.5.30-10.el10.x86_64_v2.rpm;name=x86_64_v2_libgphoto2;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libgphoto2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libgphoto2-2.5.30-10.el10.x86_64_v2.rpm;name=x86_64_v2_libgphoto2;unpack=0"
 SRC_URI[x86_64_v2_libgphoto2.sha256sum] = "e4ef2dd8d6ec018e22e09d17e55b317c7aed6f4385227d109b98922fd0bc7c22"
 
-URI_x86_64_v2_libgphoto2-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libgphoto2-devel-2.5.30-10.el10.x86_64_v2.rpm;name=x86_64_v2_libgphoto2-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libgphoto2-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/libgphoto2-devel-2.5.30-10.el10.x86_64_v2.rpm;name=x86_64_v2_libgphoto2-devel;unpack=0"
 SRC_URI[x86_64_v2_libgphoto2-devel.sha256sum] = "c361cc511daf3cc76078537edcb1c175da694cbf6eb4dfe3a23d4dd2f92471a1"
 
-URI_aarch64_libgphoto2 = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libgphoto2-2.5.30-10.el10.aarch64.rpm;name=aarch64_libgphoto2;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libgphoto2}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libgphoto2-2.5.30-10.el10.aarch64.rpm;name=aarch64_libgphoto2;unpack=0"
 SRC_URI[aarch64_libgphoto2.sha256sum] = "5c44fe8ed25d046f8b4e91c732e1d7fc96dcace6f7584af739da749081c7ad4e"
 
-URI_aarch64_libgphoto2-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libgphoto2-devel-2.5.30-10.el10.aarch64.rpm;name=aarch64_libgphoto2-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libgphoto2-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/libgphoto2-devel-2.5.30-10.el10.aarch64.rpm;name=aarch64_libgphoto2-devel;unpack=0"
 SRC_URI[aarch64_libgphoto2-devel.sha256sum] = "4feecf81c88fdef3b5d582c403ba952627a118f644a575bcbe4333098414c2bd"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libgphoto2-2.5.30-10.el10.riscv64.rpm;name=riscv64_libgphoto2;unpack=0"
+SRC_URI[riscv64_libgphoto2.sha256sum] = "d8f8f59ef1401074a26922a6ff83c9b76640385d67538ef8969f5e4bdcdd1015"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/libgphoto2-devel-2.5.30-10.el10.riscv64.rpm;name=riscv64_libgphoto2-devel;unpack=0"
+SRC_URI[riscv64_libgphoto2-devel.sha256sum] = "c1a48d19296566b5acc0dbe38e957fc354aeac75c50ccf081a5911117bef8d71"
 
 RDEPENDS:libgphoto2 = " \
  bash \

@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "workrave"
 PV = "1.11.1"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  workrave \
  workrave-common \
- "
+"
+PACKAGES:aarch64 = " \
+ workrave \
+ workrave-common \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/w/workrave-1.11.1-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/w/workrave-1.11.1-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "98280c7cdeb85b750781ba8723525ed7a5381d17425830d8bfd711fa77c2742c"
 
-URI_x86_64_v2_workrave = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/workrave-1.11.1-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_workrave;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_workrave}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/workrave-1.11.1-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_workrave;unpack=0"
 SRC_URI[x86_64_v2_workrave.sha256sum] = "8924a6d68564d6b51a73e9e06b7d0295737fa2c1b4cf3e3d4764fb710cbc0d3e"
 
-URI_x86_64_v2_workrave-common = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/workrave-common-1.11.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_workrave-common;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_workrave-common}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/workrave-common-1.11.1-1.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_workrave-common;unpack=0"
 SRC_URI[x86_64_v2_workrave-common.sha256sum] = "cf6ff6ec61393ee9930ac0170ef14665de11317747d115e54eff4f19e0f245a8"
 
-URI_aarch64_workrave = "${EPEL_MIRROR}/aarch64/Packages/w/workrave-1.11.1-1.el10_3.aarch64.rpm;name=aarch64_workrave;unpack=0"
-SRC_URI:append = " ${URI_aarch64_workrave}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/w/workrave-1.11.1-1.el10_3.aarch64.rpm;name=aarch64_workrave;unpack=0"
 SRC_URI[aarch64_workrave.sha256sum] = "97ccf835ad9e91a72582dc0de77e2ae9693f40713385ed318bc1c0bd53bbe271"
 
-URI_aarch64_workrave-common = "${EPEL_MIRROR}/aarch64/Packages/w/workrave-common-1.11.1-1.el10_3.noarch.rpm;name=aarch64_workrave-common;unpack=0"
-SRC_URI:append = " ${URI_aarch64_workrave-common}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/w/workrave-common-1.11.1-1.el10_3.noarch.rpm;name=aarch64_workrave-common;unpack=0"
 SRC_URI[aarch64_workrave-common.sha256sum] = "ee03858f64d8b4df2181b55ea8b47524366d373cb345594c16fe28e69b96e9ed"
 
 RDEPENDS:workrave = " \

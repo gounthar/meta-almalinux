@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "perl-Tie-Cycle"
 PV = "1.231"
 PR = "3.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  perl-Tie-Cycle \
- "
+"
+PACKAGES:aarch64 = " \
+ perl-Tie-Cycle \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/p/perl-Tie-Cycle-1.231-3.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/p/perl-Tie-Cycle-1.231-3.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "0e6a70c138a6e6575fc53874ec66836ea7b396c07e6ea64ffe6f446abe86dec9"
 
-URI_x86_64_v2_perl-Tie-Cycle = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Tie-Cycle-1.231-3.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Tie-Cycle;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_perl-Tie-Cycle}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/perl-Tie-Cycle-1.231-3.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_perl-Tie-Cycle;unpack=0"
 SRC_URI[x86_64_v2_perl-Tie-Cycle.sha256sum] = "90d993b0206566158209d0b381640daae4144374883f887fd7c1c0e5ec57c16d"
 
-URI_aarch64_perl-Tie-Cycle = "${EPEL_MIRROR}/aarch64/Packages/p/perl-Tie-Cycle-1.231-3.el10_3.noarch.rpm;name=aarch64_perl-Tie-Cycle;unpack=0"
-SRC_URI:append = " ${URI_aarch64_perl-Tie-Cycle}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/p/perl-Tie-Cycle-1.231-3.el10_3.noarch.rpm;name=aarch64_perl-Tie-Cycle;unpack=0"
 SRC_URI[aarch64_perl-Tie-Cycle.sha256sum] = "b5a95861f4c2d8cb2abbe57c430b7e3d6f3bb040551ba8aa6d37a10c39da2511"
 
 RDEPENDS:perl-Tie-Cycle = " \

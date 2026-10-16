@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "fastnetmon"
 PV = "1.2.9"
 PR = "1.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  fastnetmon \
- "
+"
+PACKAGES:aarch64 = " \
+ fastnetmon \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/f/fastnetmon-1.2.9-1.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/f/fastnetmon-1.2.9-1.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "986f7887438e9fa8e76f2e3cb9c2adb67326b3377091d45c3a8a567b3de176cf"
 
-URI_x86_64_v2_fastnetmon = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/fastnetmon-1.2.9-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_fastnetmon;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_fastnetmon}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/fastnetmon-1.2.9-1.el10_3.alma_altarch.x86_64_v2.rpm;name=x86_64_v2_fastnetmon;unpack=0"
 SRC_URI[x86_64_v2_fastnetmon.sha256sum] = "ac42df065a3155abb6f3a8d409cdc8c50b578afd0a8faf6887252d84079d7f90"
 
-URI_aarch64_fastnetmon = "${EPEL_MIRROR}/aarch64/Packages/f/fastnetmon-1.2.9-1.el10_3.aarch64.rpm;name=aarch64_fastnetmon;unpack=0"
-SRC_URI:append = " ${URI_aarch64_fastnetmon}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/f/fastnetmon-1.2.9-1.el10_3.aarch64.rpm;name=aarch64_fastnetmon;unpack=0"
 SRC_URI[aarch64_fastnetmon.sha256sum] = "248a1393e92ca549c69f312392f4922c01817846d43d1ef99c59dd1d520d4315"
 
 RDEPENDS:fastnetmon = " \

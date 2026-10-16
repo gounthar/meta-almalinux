@@ -10,25 +10,26 @@ PACKAGES = " \
  uchardet-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/uchardet-0.0.8-7.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/CRB/Source/Packages/uchardet-0.0.8-7.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "a0d17b111a08714e557bf857021af1ac9cbcb25ff5980c31918c0f5e5adf68da"
 
-URI_x86_64_v2_uchardet = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/uchardet-0.0.8-7.el10.x86_64_v2.rpm;name=x86_64_v2_uchardet;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_uchardet}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/uchardet-0.0.8-7.el10.x86_64_v2.rpm;name=x86_64_v2_uchardet;unpack=0"
 SRC_URI[x86_64_v2_uchardet.sha256sum] = "877ff6ef7ee620a238717775823d18ffc9599df551d6ac3baf2a179f94067480"
 
-URI_x86_64_v2_uchardet-devel = "${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/uchardet-devel-0.0.8-7.el10.x86_64_v2.rpm;name=x86_64_v2_uchardet-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_uchardet-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/x86_64_v2/os/Packages/uchardet-devel-0.0.8-7.el10.x86_64_v2.rpm;name=x86_64_v2_uchardet-devel;unpack=0"
 SRC_URI[x86_64_v2_uchardet-devel.sha256sum] = "794c744210779d7cb642482427afbb7b2ce5c4d31187d6ff83a00724d5fbfbfc"
 
-URI_aarch64_uchardet = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/uchardet-0.0.8-7.el10.aarch64.rpm;name=aarch64_uchardet;unpack=0"
-SRC_URI:append = " ${URI_aarch64_uchardet}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/uchardet-0.0.8-7.el10.aarch64.rpm;name=aarch64_uchardet;unpack=0"
 SRC_URI[aarch64_uchardet.sha256sum] = "b7baa7551ea5f5ae50ccd8672a918d09f777821142f774db1572a585bf20fd0e"
 
-URI_aarch64_uchardet-devel = "${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/uchardet-devel-0.0.8-7.el10.aarch64.rpm;name=aarch64_uchardet-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_uchardet-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/aarch64/os/Packages/uchardet-devel-0.0.8-7.el10.aarch64.rpm;name=aarch64_uchardet-devel;unpack=0"
 SRC_URI[aarch64_uchardet-devel.sha256sum] = "4634484cecb16b261943ca7b21c16e46790a06881eb9021f61e103504da22759"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/uchardet-0.0.8-7.el10.riscv64.rpm;name=riscv64_uchardet;unpack=0"
+SRC_URI[riscv64_uchardet.sha256sum] = "186b9b707d3e295a4d27baab8288cfb95ca9eba33f31cfa542a27e4c8fb1214a"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/CRB/riscv64/os/Packages/uchardet-devel-0.0.8-7.el10.riscv64.rpm;name=riscv64_uchardet-devel;unpack=0"
+SRC_URI[riscv64_uchardet-devel.sha256sum] = "bdbb043b357801b6c85de84711c38652983b0068c860eec60c11fd5759fb0789"
 
 RDEPENDS:uchardet = " \
  glibc \

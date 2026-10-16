@@ -10,25 +10,26 @@ PACKAGES = " \
  libXdamage-devel \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libXdamage-1.1.6-5.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/libXdamage-1.1.6-5.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "aeb960b35f959fc8b14e1bfebb7c1a7e211d08d82719a930544b6ed346dc1002"
 
-URI_x86_64_v2_libXdamage = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXdamage-1.1.6-5.el10.x86_64_v2.rpm;name=x86_64_v2_libXdamage;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libXdamage}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXdamage-1.1.6-5.el10.x86_64_v2.rpm;name=x86_64_v2_libXdamage;unpack=0"
 SRC_URI[x86_64_v2_libXdamage.sha256sum] = "c388e8fcd564bac273b11d690cbf3064e82643d2051ed28d65a82ec0eccff2c2"
 
-URI_x86_64_v2_libXdamage-devel = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXdamage-devel-1.1.6-5.el10.x86_64_v2.rpm;name=x86_64_v2_libXdamage-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_libXdamage-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/libXdamage-devel-1.1.6-5.el10.x86_64_v2.rpm;name=x86_64_v2_libXdamage-devel;unpack=0"
 SRC_URI[x86_64_v2_libXdamage-devel.sha256sum] = "8c32c1e1e9689728fd7ca464d7dc535b85c59aa0672576f93c7468666ae631a8"
 
-URI_aarch64_libXdamage = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXdamage-1.1.6-5.el10.aarch64.rpm;name=aarch64_libXdamage;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libXdamage}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXdamage-1.1.6-5.el10.aarch64.rpm;name=aarch64_libXdamage;unpack=0"
 SRC_URI[aarch64_libXdamage.sha256sum] = "ee4e2382860aa634096dd14533655553640fd5a6de9eebaf9ae8dd9895378c99"
 
-URI_aarch64_libXdamage-devel = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXdamage-devel-1.1.6-5.el10.aarch64.rpm;name=aarch64_libXdamage-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_libXdamage-devel}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/libXdamage-devel-1.1.6-5.el10.aarch64.rpm;name=aarch64_libXdamage-devel;unpack=0"
 SRC_URI[aarch64_libXdamage-devel.sha256sum] = "ff63abf65be1ff2d922f7f0f2d1af5793837656880bb2c7b2487a86e8331dc1d"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libXdamage-1.1.6-5.el10.riscv64.rpm;name=riscv64_libXdamage;unpack=0"
+SRC_URI[riscv64_libXdamage.sha256sum] = "ec7da93d9257792d1d8773e193749418ba7f837aa85614e87af9feeb27307f00"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/libXdamage-devel-1.1.6-5.el10.riscv64.rpm;name=riscv64_libXdamage-devel;unpack=0"
+SRC_URI[riscv64_libXdamage-devel.sha256sum] = "4b06f21a5f683b5f13b878d20b67a25b65636ee118ccc2486c7fadd4110ae829"
 
 RDEPENDS:libXdamage = " \
  glibc \

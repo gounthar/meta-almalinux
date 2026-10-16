@@ -5,29 +5,31 @@ inherit dnf-bridge
 PN = "rust-box_drawing"
 PV = "0.1.2"
 PR = "15.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  rust-box_drawing+default-devel \
  rust-box_drawing-devel \
- "
+"
+PACKAGES:aarch64 = " \
+ rust-box_drawing+default-devel \
+ rust-box_drawing-devel \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/r/rust-box_drawing-0.1.2-15.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/r/rust-box_drawing-0.1.2-15.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "60dd17d6329302de1dd10e5f22cf17b414ff37d8e79127faf0a767f7cd01ac29"
 
-URI_x86_64_v2_rust-box_drawing+default-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-box_drawing+default-devel-0.1.2-15.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-box_drawing+default-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-box_drawing+default-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-box_drawing+default-devel-0.1.2-15.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-box_drawing+default-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-box_drawing+default-devel.sha256sum] = "bd679c375432b320eed917531b8d12361f1a73f1867ed70e500360d332c4c265"
 
-URI_x86_64_v2_rust-box_drawing-devel = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-box_drawing-devel-0.1.2-15.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-box_drawing-devel;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_rust-box_drawing-devel}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/rust-box_drawing-devel-0.1.2-15.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_rust-box_drawing-devel;unpack=0"
 SRC_URI[x86_64_v2_rust-box_drawing-devel.sha256sum] = "1dc6b04373a8c115a77cdecec3d459c4c3313635e7ba75b108bc185d7d2e2eab"
 
-URI_aarch64_rust-box_drawing+default-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-box_drawing+default-devel-0.1.2-15.el10_3.noarch.rpm;name=aarch64_rust-box_drawing+default-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-box_drawing+default-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-box_drawing+default-devel-0.1.2-15.el10_3.noarch.rpm;name=aarch64_rust-box_drawing+default-devel;unpack=0"
 SRC_URI[aarch64_rust-box_drawing+default-devel.sha256sum] = "d4ffa17d34db5674fcf2f9845d468a58f7c6834d617dd873e4331b1dacc5bf28"
 
-URI_aarch64_rust-box_drawing-devel = "${EPEL_MIRROR}/aarch64/Packages/r/rust-box_drawing-devel-0.1.2-15.el10_3.noarch.rpm;name=aarch64_rust-box_drawing-devel;unpack=0"
-SRC_URI:append = " ${URI_aarch64_rust-box_drawing-devel}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/r/rust-box_drawing-devel-0.1.2-15.el10_3.noarch.rpm;name=aarch64_rust-box_drawing-devel;unpack=0"
 SRC_URI[aarch64_rust-box_drawing-devel.sha256sum] = "8d577fba929d9c6c8acc0364889c82baa54c4f8dbecd3690b05fe4ed2c00fce1"
 
 RDEPENDS:rust-box_drawing+default-devel = " \

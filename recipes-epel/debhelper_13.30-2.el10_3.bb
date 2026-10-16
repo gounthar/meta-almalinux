@@ -5,20 +5,23 @@ inherit dnf-bridge
 PN = "debhelper"
 PV = "13.30"
 PR = "2.el10_3"
-PACKAGES = " \
+PACKAGES:x86_64_v2 = " \
  debhelper \
- "
+"
+PACKAGES:aarch64 = " \
+ debhelper \
+"
+PACKAGES:riscv64 = " \
+  \
+"
 
-URI_src = "${EPELSRC_MIRROR}/Packages/d/debhelper-13.30-2.el10_3.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${EPELSRC_MIRROR}/Packages/d/debhelper-13.30-2.el10_3.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "b318cd3117bbb7d6d1439f2319a0f2f84a0eaaa316a77f1c95e5dd05489bc954"
 
-URI_x86_64_v2_debhelper = "${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/debhelper-13.30-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_debhelper;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_debhelper}"
+SRC_URI:append = " ${EPEL_ALTARCH_MIRROR}/x86_64_v2/Packages/debhelper-13.30-2.el10_3.alma_altarch.noarch.rpm;name=x86_64_v2_debhelper;unpack=0"
 SRC_URI[x86_64_v2_debhelper.sha256sum] = "a2fda7cfc99316c83da34e5bebaf5257d79b390001b540bc0ffdd53f61554545"
 
-URI_aarch64_debhelper = "${EPEL_MIRROR}/aarch64/Packages/d/debhelper-13.30-2.el10_3.noarch.rpm;name=aarch64_debhelper;unpack=0"
-SRC_URI:append = " ${URI_aarch64_debhelper}"
+SRC_URI:append = " ${EPEL_MIRROR}/aarch64/Packages/d/debhelper-13.30-2.el10_3.noarch.rpm;name=aarch64_debhelper;unpack=0"
 SRC_URI[aarch64_debhelper.sha256sum] = "c8c1e8db760ab7ffbbc1d337cae0c3af77be3fed2f8ca055a19dfb03adfca319"
 
 RDEPENDS:debhelper = " \

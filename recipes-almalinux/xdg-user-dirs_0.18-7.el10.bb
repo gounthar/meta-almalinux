@@ -9,17 +9,17 @@ PACKAGES = " \
  xdg-user-dirs \
  "
 
-URI_src = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/xdg-user-dirs-0.18-7.el10.src.rpm;name=src;unpack=0"
-SRC_URI = "${URI_src}"
+SRC_URI = "${ALMALINUXSRC_MIRROR}/AppStream/Source/Packages/xdg-user-dirs-0.18-7.el10.src.rpm;name=src;unpack=0"
 SRC_URI[src.sha256sum] = "85d73ae59187662bb942b2bb0002bf1c0515d9a51e6119817b0860c4b4c330ec"
 
-URI_x86_64_v2_xdg-user-dirs = "${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/xdg-user-dirs-0.18-7.el10.x86_64_v2.rpm;name=x86_64_v2_xdg-user-dirs;unpack=0"
-SRC_URI:append = " ${URI_x86_64_v2_xdg-user-dirs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/x86_64_v2/os/Packages/xdg-user-dirs-0.18-7.el10.x86_64_v2.rpm;name=x86_64_v2_xdg-user-dirs;unpack=0"
 SRC_URI[x86_64_v2_xdg-user-dirs.sha256sum] = "a46bf5e9dc9926ebd3ed52ede7c0fa5aec3da2aca08946d881c1cf558a46d430"
 
-URI_aarch64_xdg-user-dirs = "${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/xdg-user-dirs-0.18-7.el10.aarch64.rpm;name=aarch64_xdg-user-dirs;unpack=0"
-SRC_URI:append = " ${URI_aarch64_xdg-user-dirs}"
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/aarch64/os/Packages/xdg-user-dirs-0.18-7.el10.aarch64.rpm;name=aarch64_xdg-user-dirs;unpack=0"
 SRC_URI[aarch64_xdg-user-dirs.sha256sum] = "23e9e209889e36ca9102b989452f826fe62c97a69a84209cd8c7f63af16c8387"
+
+SRC_URI:append = " ${ALMALINUX_MIRROR}/AppStream/riscv64/os/Packages/xdg-user-dirs-0.18-7.el10.riscv64.rpm;name=riscv64_xdg-user-dirs;unpack=0"
+SRC_URI[riscv64_xdg-user-dirs.sha256sum] = "308ff7695bd50864ee00f834c9c116f00156ae58ae155176814a2e01d765d0ba"
 
 RDEPENDS:xdg-user-dirs = " \
  bash \
